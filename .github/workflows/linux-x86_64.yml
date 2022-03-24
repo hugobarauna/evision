@@ -2,6 +2,21 @@ name: linux-x86_64
 
 on:
   pull_request:
+    paths-ignore:
+      - '**/README.md'
+      - 'examples/**'
+      - 'nerves/**'
+      - 'Makefile.win'
+      - '.github/FUNDING.yml'
+      - '.github/workflows/nerves-*'
+      - '.github/workflows/macos-*'
+      - '.github/workflows/windows-*'
+      - '.github/workflows/test-*.yml'
+      - '.github/workflows/linux-arm64.yml'
+      - '.github/workflows/linux-armv7.yml'
+      - '.github/workflows/linux-ppc64le.yml'
+      - '.github/workflows/linux-s390x.yml'
+      - '.github/workflows/linux-precompile.yml'
   push:
     branches:
       - main
@@ -13,14 +28,17 @@ on:
       - '**/README.md'
       - 'examples/**'
       - 'nerves/**'
+      - 'Makefile.win'
       - '.github/FUNDING.yml'
       - '.github/workflows/nerves-*'
       - '.github/workflows/macos-*'
+      - '.github/workflows/windows-*'
+      - '.github/workflows/test-*.yml'
       - '.github/workflows/linux-arm64.yml'
       - '.github/workflows/linux-armv7.yml'
       - '.github/workflows/linux-ppc64le.yml'
       - '.github/workflows/linux-s390x.yml'
-      - '.github/workflows/test-*.yml'
+      - '.github/workflows/linux-precompile.yml'
   workflow_dispatch:
 
 jobs:
@@ -29,41 +47,25 @@ jobs:
     env:
       MIX_ENV: test
 
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - pair:
-              elixir: 1.12.3
-              otp: 24.1.5
-              opencv_ver: 4.5.4
-          - pair:
-              elixir: 1.12.3
-              otp: 24.1.5
-              opencv_ver: 4.5.5
-
     steps:
       - uses: actions/checkout@v2
       
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: ${{matrix.pair.otp}}
-          elixir-version: ${{matrix.pair.elixir}}
-      
+          otp-version: 24.2
+          elixir-version: 1.13.3
+
       - name: Install system dependecies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential automake autoconf pkg-config bc m4 unzip zip curl git libssl-dev libncurses5-dev erlang-inets erlang-os-mon erlang-runtime-tools erlang-ssl erlang-dev python3 ca-certificates
+          sudo apt-get install -y build-essential automake autoconf pkg-config bc m4 unzip zip curl git libssl-dev gzip libncurses5-dev erlang-inets erlang-os-mon erlang-runtime-tools erlang-ssl erlang-dev python3 ca-certificates
           sudo apt-get install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavresample-dev ffmpeg
 
       - name: Mix Compile
         run: |
-          export OPENCV_VER=${{ matrix.pair.opencv_ver }}
-          export MIX_ENV=test
           mix deps.get
-          MAKE_BUILD_FLAGS="-j$(nproc)" mix compile
+          mix compile
 
       - name: Mix Test
         run: |
-          export OPENCV_VER=${{ matrix.pair.opencv_ver }}
-          mix test --include dnn --include video
+          mix test --include require_downloading --include require_ffmpeg

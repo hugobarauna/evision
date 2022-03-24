@@ -7,17 +7,19 @@
 ```elixir
 # a quick fix for the free tier livebook session
 ## allocate 2GB swap
-System.cmd("fallocate", ["-l", "2G", "/swap"])
-System.cmd("chmod", ["400", "/swap"])
-System.cmd("mkswap", ["/swap"])
-System.cmd("swapon", ["/swap"])
+# System.cmd("fallocate", ["-l", "2G", "/swap"])
+# System.cmd("chmod", ["400", "/swap"])
+# System.cmd("mkswap", ["/swap"])
+# System.cmd("swapon", ["/swap"])
 ## need unzip to unzip the source code
-System.cmd("apt", ["update"])
-System.cmd("apt", ["install", "-y", "unzip", "python3"])
+# System.cmd("apt", ["update"])
+# System.cmd("apt", ["install", "-y", "unzip", "python3"])
 
+# If you are using the pre-built nerves firmware
+# you can comment out the following installation step
 Mix.install([
   {:evision, "~> 0.1.0-dev", github: "cocoa-xu/evision", branch: "main"},
-  {:kino, "~> 0.3.1"}
+  {:kino, "~> 0.5.1"}
 ])
 ```
 
@@ -55,6 +57,14 @@ File.cd!(__DIR__)
 Helper.download!("https://raw.githubusercontent.com/opencv/opencv_extra/master/testdata/stitching/a1.png", "a1.png")
 Helper.download!("https://raw.githubusercontent.com/opencv/opencv_extra/master/testdata/stitching/a2.png", "a2.png")
 Helper.download!("https://raw.githubusercontent.com/opencv/opencv_extra/master/testdata/stitching/a3.png", "a3.png")
+```
+
+## alias
+```elixir
+# alias Evision as OpenCV
+# please see the Namespace section in the README.md for reasons/motivations
+# (in the root directory of the source code)
+alias Evision, as: OpenCV
 ```
 
 ## Stitching

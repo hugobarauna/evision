@@ -1,0 +1,74 @@
+name: windows-x86_64
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**/README.md'
+      - 'examples/**'
+      - 'nerves/**'
+      - 'Makefile'
+      - '.github/FUNDING.yml'
+      - '.github/workflows/nerves-*.yml'
+      - '.github/workflows/linux-*.yml'
+      - '.github/workflows/macos-*.yml'
+      - '.github/workflows/test-*.yml'
+  push:
+    branches:
+      - main
+      - test-*
+    paths-ignore:
+      - '**/README.md'
+      - 'examples/**'
+      - 'nerves/**'
+      - 'Makefile'
+      - '.github/FUNDING.yml'
+      - '.github/workflows/nerves-*.yml'
+      - '.github/workflows/linux-*.yml'
+      - '.github/workflows/macos-*.yml'
+      - '.github/workflows/test-*.yml'
+  workflow_dispatch:
+
+jobs:
+  mix_test:
+    runs-on: windows-latest
+    env:
+      MIX_ENV: test
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pair:
+              elixir: 1.13.2
+              otp: 24.2
+              opencv_ver: 4.5.4
+          - pair:
+              elixir: 1.13.2
+              otp: 24.2
+              opencv_ver: 4.5.5
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{matrix.pair.otp}}
+          elixir-version: ${{matrix.pair.elixir}}
+
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Mix Compile
+        run: |
+          $Env:OPENCV_VER = "${{ matrix.pair.opencv_ver }}"
+          $Env:MAKE = "nmake"
+          mix deps.get
+          Remove-Item Makefile
+          mix compile
+
+      - name: Mix Test
+        run: |
+          $Env:OPENCV_VER = "${{ matrix.pair.opencv_ver }}"
+          $Env:MAKE = "nmake"
+          mix test --include require_downloading --include require_ffmpeg

@@ -1,16 +1,17 @@
 # evision [WIP]
 
-| OS               | arch    | Build Status |
-|------------------|---------|--------------|
-| Ubuntu 20.04     | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml) |
-| macOS 11 Big Sur | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml) |
+| OS               | arch    | Build Status | Has Precompiled Library |
+|------------------|---------|--------------|-------------------------|
+| Ubuntu 20.04     | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml) | Yes |
+| Ubuntu 20.04     | arm64   | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml) | Yes |
+| Ubuntu 20.04     | armv7   | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml) | Yes |
+| macOS 11 Big Sur | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml) | Yes |
+| macOS 11 Big Sur | arm64   | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml) | Yes |
+| Windows 2019     | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml) | Not yet |
 
 `ppc64le` and `s390x` emulators are too slow. Let's focus on x86_64, arm64 and armv7 for now. Furthermore, nerves workflow
 will compile evision to arm64, armv7 and armv6, therefore, `linux-arm64.yml` and `linux-armv7.yml` will now be triggered 
 manually only.
-
-Apple Silicon M1-series are supported, actually I coded and tested this project on my M1 Max MacBook Pro, but M1 GitHub 
-Action runners are not yet available. 
 
 ## Nerves Support
 
@@ -29,28 +30,29 @@ project.
 
 The default password of the livebook is `nerves` (as the time of writing, if it does not work, please check the nerves_livebook project). 
 
-## Interact with elixir-nx
-### OpenCV.Mat to Nx.tensor
-`OpenCV.Nx` module detects whether you have `:nx` available or not, if yes, then `OpenCV.Nx.to_nx/1` will try to convert
-`OpenCV.Mat` to `Nx.tensor`; otherwise, it returns `{:error, ":nx is missing"}`.
+## Integration with Nx
+
+`Evision.Nx` module converts `Evision.Mat` to `Nx.tensor`:
 
 ```elixir
-{:ok, mat} = OpenCV.imread("/path/to/image.png")
-t = OpenCV.Nx.to_nx(mat)
+{:ok, mat} = Evision.imread("/path/to/image.png")
+# Or you can use the !(bang) version, but if the image cannot be read by OpenCV for whatever reason
+# the bang version will raise a RuntimeError exception
+mat = Evision.imread!("/path/to/image.png")
+t = Evision.Nx.to_nx(mat)
 ```
 
-### Nx.tensor to OpenCV.Mat
-Similarly, we have
+and vice-versa:
 
 ```elixir
-{:ok, mat} = OpenCV.imread("/path/to/image.png")
-t = OpenCV.Nx.to_nx(mat)
+{:ok, mat} = Evision.imread("/path/to/image.png")
+t = Evision.Nx.to_nx(mat)
 # convert a tensor to a mat
-{:ok, mat_from_tensor} = OpenCV.Nx.to_mat(t)
+{:ok, mat_from_tensor} = Evision.Nx.to_mat(t)
 
 # and it works for tensors with any shapes
 t = Nx.iota({2, 3, 2, 3, 2, 3}, type: {:s, 32})
-{:ok, mat} = OpenCV.Nx.to_mat(t)
+{:ok, mat} = Evision.Nx.to_mat(t)
 ```
 
 ## Description
@@ -69,16 +71,45 @@ Compatible OpenCV versions:
 by compatible, it means these versions can compile successfully, and I tested a small range of functions. Tons of tests
 should be written, and then we can have a list for tested OpenCV versions.
 
+### Use Precompiled Library
+To use precompiled Evision library, the following environment variables should be set
+
+```shell
+# required if prefer to use precompiled library
+export EVISION_PREFER_PRECOMPILED=true
+
+# optional. 
+## currently only "0.1.0-dev" is valid
+export EVISION_PRECOMPILED_VERSION="0.1.0-dev"
+## set the cache directory for the precompiled archive file
+export EVISION_PRECOMPILED_CACHE_DIR="$(pwd)/.cache"
+```
+
+Note that using precompiled library requires installing FFmpeg libraries. See the end of [Available Modules](#available-modules) for more information.
+
+### Compile OpenCV from Sources
+To obtain and compile OpenCV's source code from official releases, the following environment variables can affect the build
+
+```shell
+# optional.
+## set OpenCV version
+export OPENCV_VER="4.5.5"
+```
+
+### Compile OpenCV from Git Repo
 To obtain and compile OpenCV's source code from git, set the following environment variables
 
 ```shell
-# required
+# required if compile OpenCV from git
 export OPENCV_USE_GIT_HEAD=true
 export OPENCV_USE_GIT_BRANCH=4.x
-# optional. set this if you want to use to your/other fork/mirrors
+
+# optional.
+## set this if you want to use to your/other fork/mirrors
 export OPENCV_GIT_REPO="https://github.com/opencv/opencv.git"
 ```
 
+### Available modules
 Current available modules:
 - calib3d
 - core
@@ -95,16 +126,24 @@ Current available modules:
 - video 
 - videoio
 
-Note 1, edit `config/config.exs` to enable/disable OpenCV modules and image coders.
+Note 1: to open video files, FFmpeg related libraries should be installed, e.g., on Debian/Ubuntu
 
-Note 2, to open video files, FFmpeg related libraries should be installed, e.g., on Debian/Ubuntu
+Note 2: FFmpeg 5 is not supported by OpenCV yet
 
 ```shell
 sudo apt install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavresample-dev ffmpeg
 ```
 
+on macOS
+```shell
+brew install ffmpeg@4
+brew link ffmpeg@4
+```
+
 ## Dependencies
+
 ### Required
+
 - Python3 (Only during the compilation, to generate binding files)
 
   Tested Python verisons (on `ubuntu:20.04`, see [workflow file](https://github.com/cocoa-xu/evision/blob/main/.github/workflows/test-python-compatibility.yml)):
@@ -113,16 +152,27 @@ sudo apt install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev 
   - 3.8.12
   - 3.9.9
   - 3.10.1
-- [CMake](https://cmake.org/) >= 3.12
+- [CMake](https://cmake.org/) >= 3.1 (for this project)
+
+  The minimal version required by OpenCV can vary between versions.
+
+  OpenCV 4.5.5 requires at least CMake 3.5.1.
 - Erlang development library/headers. Tested on OTP/24.
 
+#### Extra Notes for Windows
+Evision on Windows uses `nmake` to handle the `Makefile.win` at the moment. And we also need `powershell` for now. `nmake`
+should be included in Microsoft Visual Studio, and `powershell` should be included in almost all recent version (it was 
+first released in 2007).
+
+If `ninja` can be found in `%PATH%`, then we will prefer using `ninja` to build everything as it allows parallel building.
+
+Evision is NOT tested in MSYS2, Cygwin, or WSL/WSL2. 
+
 ### Optional
-- curl/wget. To download OpenCV source zip file. 
-  
-  Optional if you put the source zip file to `3rd_party/cache/opencv-${OPENCV_VER}.zip`.
-- unzip. To unzip the OpenCV source zip file.
-  
-  Optional if you supply OpenCV source code at `3rd_party/opencv/opencv-${OPENCV_VER}`.
+
+To skip the download process, you can put the source zip file at `3rd_party/cache/opencv-${OPENCV_VER}.zip`.
+
+Or you could supply OpenCV source code at `3rd_party/opencv/opencv-${OPENCV_VER}`.
 
 ## Installation
 
@@ -142,61 +192,195 @@ def deps do
 end
 ```
 
-### Notes
-- Set environment variable `OPENCV_EVISION_DEBUG` to `1` to enable debug logging in the bindings (print to stderr).
-- Use `MAKE_BUILD_FLAGS="-j$(nproc)"` environment variable to set number of jobs for compiling.
-  
-  Default value: `"-j#{System.schedulers_online()}"`. In `mix.exs`.
+### Configuration
 
-- Use `CMAKE_TOOLCHAIN_FILE="/path/to/toolchain.cmake"` to set your own toolchain.
-
-  Default value: `""`.
-
-- Edit `config/config.exs` to enable/disable OpenCV modules and image coders.
-
-- Some useful commands
-
-  ```bash
-  MIX_ENV=dev
-  OPENCV_VER=4.5.5
-  MIX_TARGET=rpi4
-  
-  # delete OpenCV related CMake build caches.
-  rm -rf "_build/${MIX_ENV}/lib/evision/cmake_opencv_${OPENCV_VER}"
-  ## for nerves
-  rm -rf "_build/${MIX_TARGET}_${MIX_ENV}/lib/evision/cmake_opencv_${OPENCV_VER}"
-  
-  # remove downloaded OpenCV source zip file.
-  rm -f "3rd_party/cache/opencv-${OPENCV_VER}"
-  
-  # delete evision.so (so that `make` can rebuild it, useful when you manually modified C/C++ source code)
-  rm -f "_build/${MIX_ENV}/lib/evision/priv/evision.so"
-  ## for nerves
-  rm -rf "_build/${MIX_TARGET}_${MIX_ENV}/lib/evision/priv/evision.so"
-  
-  # comment out the following lines in CMakeLists.txt
-  # if you would like to manually modified the generated .ex files and/or .h files
-  # otherwise, your editing will be overwritten by the gen2.py
-  #
-  # execute_process(COMMAND bash -c "rm -rf ${GENERATED_ELIXIR_SRC_DIR} && mkdir -p ${GENERATED_ELIXIR_SRC_DIR}")
-  # message("enabled modules: ${ENABLED_CV_MODULES}")
-  # execute_process(COMMAND bash -c "python3 ${PY_SRC}/gen2.py ${C_SRC} ${GENERATED_ELIXIR_SRC_DIR} ${C_SRC}/headers.txt ${ENABLED_CV_MODULES}" RESULT_VARIABLE STATUS)
-  # if(STATUS STREQUAL "0")
-  #   message("Successfully generated Erlang/Elixir bindings")
-  # else()
-  #   message(FATAL_ERROR "Failed to generate Erlang/Elixir bindings")
-  # endif()
-
-  # delete evision related CMake build caches.
-  rm -rf "_build/${MIX_ENV}/lib/evision/cmake_evision"
-  ## for nerves
-  rm -rf "_build/${MIX_TARGET}_${MIX_ENV}/lib/evision/cmake_evision"
-  ```
-
-### Current Status
-Some tiny examples
+`evision` will compile a subset of OpenCV functionality. You can configure the enabled modules in your `config` files:
 
 ```elixir
+config :evision, enabled_modules: [
+  :calib3d,
+  :core,
+  :features2d,
+  :flann,
+  :highgui,
+  :imgcodecs,
+  :imgproc,
+  :ml,
+  :photo,
+  :stitching,
+  :ts,
+  :video,
+  :videoio,
+  :dnn
+]
+```
+
+If a module is not specified in `:enabled_modules`, it may still be compiled if all requirements are present in your machine.
+You can enforce only the `:enabled_modules` to be compiled by changing the compilation mode:
+
+```elixir
+config :evision, :compile_mode, :only_enabled_modules
+```
+
+You can also configure the list of image codecs used:
+
+```elixir
+config :evision, enabled_img_codecs: [
+  :png,
+  :jpeg,
+  :tiff,
+  :webp,
+  :openjpeg,
+  :jasper,
+  :openexr
+]
+```
+
+### Notes 
+
+#### Compile-time related
+
+- How do I specify which OpenCV version to compile?
+    ```shell
+    # e.g., use OpenCV 4.5.4
+    # current, evision uses 4.5.5 by default 
+    export OPENCV_VER=4.5.4
+    ```
+
+- How do I use my own OpenCV source code on my local disk?
+
+    ```shell
+    export OPENCV_DIR=/path/to/your/opencv/source/root
+    ```
+
+- How do I use my own OpenCV source code on my git?
+
+    ```shell
+    # use branch
+    export OPENCV_USE_GIT_BRANCH="branch_name"
+    export OPENCV_GIT_REPO="https://github.com/username/opencv.git"
+  
+    # use HEAD
+    export OPENCV_USE_GIT_HEAD=true
+    export OPENCV_GIT_REPO="https://github.com/username/opencv.git"
+    ```
+
+- How do I set the number of jobs for compiling?
+    ```shell
+    # use all logical cores, by default
+    # `"-j#{System.schedulers_online()}"`. In `mix.exs`.
+    export MAKE_BUILD_FLAGS="-j$(nproc)"
+    
+    # use 2 cores
+    export MAKE_BUILD_FLAGS="-j2"
+    ```
+
+- How do I set up for cross-compile or specify the toolchain?
+    ```shell
+    export CMAKE_TOOLCHAIN_FILE="/path/to/toolchain.cmake"
+    ```
+
+- How do I make my own adjustments to the OpenCV CMake options?
+    ```shell
+    export CMAKE_OPENCV_OPTIONS="YOUR CMAKE OPTIONS FOR OPENCV"
+    ```
+
+- Which ones of OpenCV options are supposed to be specified in `config/config.exs`?
+  1. Enabled and disabled OpenCV modules
+  2. Image codecs (if you enabled related OpenCV modules).
+
+#### Debug related
+
+Say you have the following MIX environment variables:
+
+```shell
+# set by MIX
+MIX_ENV=dev
+# set by evision or you
+OPENCV_VER=4.5.5
+# set by yourself if you're compiling evision to a nerves firmware
+MIX_TARGET=rpi4
+```
+
+- How do I delete OpenCV related CMake build caches?
+    ```shell
+    # delete OpenCV related CMake build caches.
+    rm -rf "_build/${MIX_ENV}/lib/evision/cmake_opencv_${OPENCV_VER}"
+    ## for nerves
+    rm -rf "_build/${MIX_TARGET}_${MIX_ENV}/lib/evision/cmake_opencv_${OPENCV_VER}"
+    ```
+  
+- How do I remove downloaded OpenCV source zip file.
+    ```shell
+    rm -f "3rd_party/cache/opencv-${OPENCV_VER}"
+    ```
+
+- Can I manually edit the generated files and compile them?
+  1. First, delete evision.so (so that `cmake` can rebuild it)  
+      ```shell
+      # 
+      rm -f "_build/${MIX_ENV}/lib/evision/priv/evision.so"
+      ## if you're building with nerves,
+      ## use this path instead
+      rm -rf "_build/${MIX_TARGET}_${MIX_ENV}/lib/evision/priv/evision.so"
+      ```
+
+  2. Secondly, comment out the following lines in the CMakeLists.txt  
+
+      otherwise, your editing will be overwritten by the `py_src/gen2.py`
+  
+    ```cmake
+    execute_process(COMMAND bash -c "rm -rf ${GENERATED_ELIXIR_SRC_DIR} && mkdir -p ${GENERATED_ELIXIR_SRC_DIR}")
+    message("enabled modules: ${ENABLED_CV_MODULES}")
+    execute_process(COMMAND bash -c "python3 ${PY_SRC}/gen2.py ${C_SRC} ${GENERATED_ELIXIR_SRC_DIR} ${C_SRC}/headers.txt ${ENABLED_CV_MODULES}" RESULT_VARIABLE STATUS)
+    if(STATUS STREQUAL "0")
+      message("Successfully generated Erlang/Elixir bindings")
+    else()
+      message(FATAL_ERROR "Failed to generate Erlang/Elixir bindings")
+    endif()
+    ```  
+
+  3. Lastly, you can edit the source files and recompile the project.
+    ```shell
+    mix compile
+    ```
+
+#### Runtime related
+
+- How do I enable debug logging for OpenCV (prints to stderr).
+    ```shell
+    export OPENCV_EVISION_DEBUG=1
+    ```
+
+### Namespace
+`:evision` is just one possible OpenCV-Elixir bindings, and that means I didn't write ANY actual algorithms here. As for
+the reason why I chose `OpenCV` as the namespace in previous commits, that's because I don't want to give a feeling to 
+users that all these functions/algorithms come from `:evision`.
+
+However, as there are more people get interested in this project, I have to think about this question carefully. And after
+various considerations, I decided to use `Evision` as the root namespace for this project. The reasons are
+
+1. The `app` name of this project is `:evision`, therefore, I should use `Evision` so that it's consistent. 
+2. `:evision` is one possible OpenCV-Elixir bindings, so it is better to use `Evision` as the namespace.
+3. Using `OpenCV` as the namespace could be misleading at times if something went wrong in `:evision`'s code.
+4. This leaves the choice to users to choose whether if they would like to alias `Evision` as `OpenCV` or any other names.
+
+Please note that although everything now will be under the `Evision` namespace, the actual algorithms/functions come from
+the OpenCV project.
+
+```elixir
+alias Evision, as: OpenCV
+# Or
+# alias Evision, as: CV
+```
+
+### Current Status
+
+Some tiny examples:
+
+```elixir
+alias Evision, as: OpenCV
+
 ## read image, process image and write image
 {:ok, gray_mat} = OpenCV.imread("/path/to/img.png", flags: OpenCV.cv_IMREAD_GRAYSCALE)
 {:ok, gray_blur_mat} = OpenCV.blur(gray_mat, [10,10], anchor: [1,1])

@@ -1,9 +1,11 @@
-defmodule OpenCV.VideoCapture.Test do
+defmodule Evision.VideoCapture.Test do
+  alias Evision, as: OpenCV
   use ExUnit.Case
 
   @moduletag timeout: 120_000
 
   @tag :video
+  @tag :require_ffmpeg
   test "open a video file and read one frame" do
     ret =
       Path.join(__DIR__, "videocapture_test.mp4")

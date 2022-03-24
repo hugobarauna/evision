@@ -1,4 +1,4 @@
-defmodule OpenCV.Nx do
+defmodule Evision.Nx do
   @moduledoc """
   OpenCV mat to Nx tensor. 
 
@@ -7,74 +7,65 @@ defmodule OpenCV.Nx do
   list.
   """
 
+  import Evision.Errorize
+
+  unless Code.ensure_loaded?(Nx) do
+    @compile {:no_warn_undefined, Nx}
+  end
+
   @doc """
-  Transform an OpenCV.Mat `#Reference` to `#Nx.tensor`
+  Transform an `Evision.Mat` reference to `Nx.tensor`.
+
+  The resulting tensor is in the shape `{height, width, channels}`.
+
   ### Example
+
   ```elixir
-  {:ok, mat} = OpenCV.imread("/path/to/exist/img.png")
-  nx_tensor = OpenCV.Nx.to_nx(mat)
-   #Nx.Tensor<
-      u8[1080][1920][3]
-      [[ ... pixel data ... ]]
-   >
+  iex> {:ok, mat} = Evision.imread("/path/to/exist/img.png")
+  iex> nx_tensor = Evision.Nx.to_nx(mat)
+  ...> #Nx.Tensor<
+  ...>    u8[1080][1920][3]
+  ...>    [[ ... pixel data ... ]]
+  ...> >
   ```
   """
   @doc namespace: :external
-  @spec to_mat(reference()) :: {:ok, reference()} | {:error, String.t()}
+  @spec to_nx(reference()) :: {:ok, reference()} | {:error, String.t()}
   def to_nx(mat) do
-    if Code.ensure_loaded?(Nx) do
-      {:ok, mat_type} = OpenCV.Mat.type(mat)
-      {:ok, mat_shape} = OpenCV.Mat.shape(mat)
-
-      case OpenCV.Mat.to_binary(mat) do
-        {:ok, bin} ->
-          bin
-          |> Nx.from_binary(mat_type)
-          |> Nx.reshape(mat_shape)
-
-        {:error, reason} ->
-          {:error, List.to_string(reason)}
-
-        _ ->
-          {:error, "unknown error"}
-      end
+    with {:ok, mat_type} <- Evision.Mat.type(mat),
+         {:ok, mat_shape} <- Evision.Mat.shape(mat),
+         {:ok, bin} <- Evision.Mat.to_binary(mat) do
+      bin
+      |> Nx.from_binary(mat_type)
+      |> Nx.reshape(mat_shape)
     else
-      {:error, ":nx is missing"}
+      {:error, reason} ->
+        {:error, reason}
     end
   end
+
+  deferror(to_nx(mat))
 
   @doc """
   Converts a tensor of `Nx` to `Mat` of evision (OpenCV).
+
+  If the tensor has three dimensions, it is expected
+  to have shape`{height, width, channels}`.
   """
   @doc namespace: :external
   @spec to_mat(Nx.t()) :: {:ok, reference()} | {:error, String.t()}
-  def to_mat(nil, _), do: {:error, "tensor is nil"}
+  def to_mat(t) when is_struct(t, Nx.Tensor) do
+    case Nx.shape(t) do
+      {height, width, channels} ->
+        to_mat(Nx.to_binary(t), Nx.type(t), height, width, channels)
 
-  def to_mat(t) do
-    if Code.ensure_loaded?(Nx) do
-      shape = Nx.shape(t)
-      l_shape = Tuple.to_list(shape)
-      if Enum.count(l_shape) == 3 do
-        {rows, cols, channels} = shape
-        to_mat(Nx.to_binary(t), Nx.type(t), cols, rows, channels)
-      else
-        case OpenCV.Mat.from_binary_by_shape(Nx.to_binary(t), Nx.type(t), Nx.shape(t)) do
-          {:ok, mat} ->
-            {:ok, mat}
-
-          {:error, reason} ->
-            {:error, List.to_string(reason)}
-
-          _ ->
-            {:error, "unknown error"}
-        end
-      end
-    else
-      {:error, ":nx is missing"}
+      shape ->
+        Evision.Mat.from_binary_by_shape(Nx.to_binary(t), Nx.type(t), shape)
     end
   end
 
-  @doc false
+  deferror(to_mat(t))
+
   @spec to_mat(
           binary(),
           {atom(), pos_integer()},
@@ -82,16 +73,7 @@ defmodule OpenCV.Nx do
           pos_integer(),
           pos_integer()
         ) :: {:ok, reference()} | {:error, charlist()}
-  def to_mat(binary, type, cols, rows, channels) do
-    case OpenCV.Mat.from_binary(binary, type, cols, rows, channels) do
-      {:ok, mat} ->
-        {:ok, mat}
-
-      {:error, reason} ->
-        {:error, List.to_string(reason)}
-
-      _ ->
-        {:error, "unknown error"}
-    end
+  defp to_mat(binary, type, rows, cols, channels) do
+    Evision.Mat.from_binary(binary, type, rows, cols, channels)
   end
 end

@@ -1,6 +1,7 @@
-defmodule OpenCV.DNN.Test do
+defmodule Evision.DNN.Test do
   use ExUnit.Case
   import ExUnit.CaptureIO
+  alias Evision, as: OpenCV
 
   @moduletag timeout: 600_000
 
@@ -151,15 +152,19 @@ defmodule OpenCV.DNN.Test do
         |> Path.join("coco_names.txt")
 
       OpenCV.TestHelper.download!(
-        "https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names",
+        "https://raw.githubusercontent.com/cocoa-xu/evision/main/test/models/coco_names.txt",
         model_class_list
       )
 
+      File.mkdir_p!(Path.join([__DIR__, "models", "ssd_mobilenet_v2_coco_2018_03_29"]))
+
       model_graph_pb =
-        __DIR__
-        |> Path.join("models")
-        |> Path.join("ssd_mobilenet_v2_coco_2018_03_29")
-        |> Path.join("frozen_inference_graph.pb")
+        Path.join([
+          __DIR__,
+          "models",
+          "ssd_mobilenet_v2_coco_2018_03_29",
+          "frozen_inference_graph.pb"
+        ])
 
       model_tar =
         __DIR__
@@ -168,31 +173,25 @@ defmodule OpenCV.DNN.Test do
 
       test_setup =
         if not File.exists?(model_graph_pb) do
-          tar = System.find_executable("tar")
+          OpenCV.TestHelper.download!(
+            "http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz",
+            model_tar
+          )
 
-          if is_binary(tar) do
-            OpenCV.TestHelper.download!(
-              "http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz",
-              model_tar
-            )
-
-            {stdout, status} =
-              System.cmd("tar", [
-                "-x",
-                "--directory",
-                Path.join(__DIR__, "models"),
-                "-f",
-                model_tar
-              ])
-
-            if status != 0 do
-              {:error, stdout}
-            else
-              :ok
-            end
-          else
-            {:error, "cannot find tar executable"}
-          end
+          model_tar
+          |> File.read!()
+          |> :zlib.gunzip()
+          |> then(&:erl_tar.extract({:binary, &1}, [:memory, :compressed]))
+          |> elem(1)
+          |> Enum.map(fn {filename, content} -> {List.to_string(filename), content} end)
+          |> Enum.reject(
+            &(elem(&1, 0) != "ssd_mobilenet_v2_coco_2018_03_29/frozen_inference_graph.pb")
+          )
+          |> Enum.at(0)
+          |> then(fn {_, content} ->
+            File.write!(model_graph_pb, content)
+            :ok
+          end)
         else
           :ok
         end
@@ -225,6 +224,7 @@ defmodule OpenCV.DNN.Test do
   end
 
   @tag :dnn
+  @tag :require_downloading
   test "load ssd_mobilenet_v2 and do inference" do
     io =
       capture_io(fn ->

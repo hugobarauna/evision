@@ -5,21 +5,23 @@
 ## Install deps
 
 ```elixir
-# a quick fix for the free tier livebook session
-## allocate 2GB swap
-System.cmd("fallocate", ["-l", "2G", "/swap"])
-System.cmd("chmod", ["400", "/swap"])
-System.cmd("mkswap", ["/swap"])
-System.cmd("swapon", ["/swap"])
+# # a quick fix for the free tier livebook session
+# ## allocate 2GB swap
+# System.cmd("fallocate", ["-l", "2G", "/swap"])
+# System.cmd("chmod", ["400", "/swap"])
+# System.cmd("mkswap", ["/swap"])
+# System.cmd("swapon", ["/swap"])
 ## need unzip to unzip the source code
-System.cmd("apt", ["update"])
-System.cmd("apt", ["install", "-y", "unzip", "python3"])
+# System.cmd("apt", ["update"])
+# System.cmd("apt", ["install", "-y", "unzip", "python3"])
 
+# If you are using the pre-built nerves firmware
+# you can comment out the following installation step
 Mix.install([
   {:torchx, "~> 0.1.0-dev", github: "elixir-nx/nx", sparse: "torchx"},
   {:nx, "~> 0.1.0-dev", github: "elixir-nx/nx", sparse: "nx", override: true},
   {:evision, "~> 0.1.0-dev", github: "cocoa-xu/evision", branch: "main"},
-  {:kino, "~> 0.3.1"},
+  {:kino, "~> 0.5.1"},
   {:scidata, "~> 0.1.1"}
 ])
 ```
@@ -63,6 +65,14 @@ end
 Helper.download!("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg", "cat.jpg")
 ```
 
+## alias
+```elixir
+# alias Evision as OpenCV
+# please see the Namespace section in the README.md for reasons/motivations
+# (in the root directory of the source code)
+alias Evision, as: OpenCV
+```
+
 ## Get input from OpenCV
 
 ```elixir
@@ -80,8 +90,11 @@ OpenCV.imencode(".png", resized_img)
 ## Demo
 
 ```elixir
-# use LibTorch backend
-Nx.default_backend(Torchx.Backend)
+# by default we don't have the LibTorch backend
+# but if you listed :torchx as a dependency
+# then please uncomment the following line to use the LibTorch backend
+# Similarly for the EXLA backend
+# Nx.default_backend(Torchx.Backend)
 ```
 
 ```elixir
@@ -99,10 +112,8 @@ defmodule CIFAR10Dataset do
   end
 
   def fetch(backend \\ Torchx.Backend) do
-    Scidata.CIFAR10.download(
-      transform_images: &transform_images(&1, backend),
-      transform_labels: &transform_labels(&1, backend)
-    )
+    {images, labels} = Scidata.CIFAR10.download()
+    {transform_images(images, backend), transform_labels(labels, backend)}
   end
 end
 ```
@@ -214,12 +225,12 @@ defmodule DenseNN do
         epoch_avg_loss =
           epoch_avg_loss
           |> Nx.backend_transfer()
-          |> Nx.to_scalar()
+          |> Nx.to_number()
 
         epoch_avg_acc =
           epoch_avg_acc
           |> Nx.backend_transfer()
-          |> Nx.to_scalar()
+          |> Nx.to_number()
 
         IO.puts(
           "Epoch #{epoch} Time: #{time / 1_000_000}s, loss: #{Float.round(epoch_avg_loss, 3)}, acc: #{Float.round(epoch_avg_acc, 3)}"
@@ -359,7 +370,7 @@ pred =
   params
   |> DenseNN.predict(input_tensor)
   |> Nx.argmax()
-  |> Nx.to_scalar()
+  |> Nx.to_number()
 
 Enum.at(classes, pred)
 ```
