@@ -1,0 +1,128 @@
+name: linux-precompile-gnu
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  mix_test:
+    runs-on: ubuntu-20.04
+    env:
+      OPENCV_VER: "4.6.0"
+      MIX_ENV: prod
+      OTP_VERSION: "25.0.4"
+      ELIXIR_VERSION: "1.14.0"
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pair:
+              arch: x86_64-linux-gnu
+              cmake_toolchain_file: ""
+              c_compiler: gcc
+              cpp_compiler: g++
+          - pair:
+              arch: aarch64-linux-gnu
+              cmake_toolchain_file: cc_toolchain/aarch64-linux-gnu.cmake
+              c_compiler: gcc-aarch64-linux-gnu
+              cpp_compiler: g++-aarch64-linux-gnu
+          - pair:
+              arch: armv7l-linux-gnueabihf
+              cmake_toolchain_file: cc_toolchain/armv7l-linux-gnueabihf.cmake
+              c_compiler: gcc-arm-linux-gnueabihf
+              cpp_compiler: g++-arm-linux-gnueabihf
+          - pair:
+              arch: ppc64le-linux-gnu
+              cmake_toolchain_file: cc_toolchain/ppc64le-linux-gnu.cmake
+              c_compiler: gcc-powerpc64le-linux-gnu
+              cpp_compiler: g++-powerpc64le-linux-gnu
+          - pair:
+              arch: s390x-linux-gnu
+              cmake_toolchain_file: cc_toolchain/s390x-linux-gnu.cmake
+              c_compiler: gcc-s390x-linux-gnu
+              cpp_compiler: g++-s390x-linux-gnu
+          - pair:
+              arch: riscv64-linux-gnu
+              cmake_toolchain_file: cc_toolchain/riscv64-linux-gnu.cmake
+              c_compiler: gcc-riscv64-linux-gnu
+              cpp_compiler: g++-riscv64-linux-gnu
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ env.OTP_VERSION }}
+          elixir-version: ${{ env.ELIXIR_VERSION }}
+
+      - name: Install system dependecies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential automake autoconf pkg-config bc m4 unzip zip curl git libssl-dev gzip libncurses5-dev python3 ca-certificates ${{ matrix.pair.c_compiler }} ${{ matrix.pair.cpp_compiler }}
+      
+      - name: Cache mix packages
+        id: cache-mix-deps
+        uses: actions/cache@v3
+        with:
+          key: deps-${{ hashFiles('mix.lock') }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}
+          path: |
+            ./deps
+
+      - name: Get mix deps
+        if: steps.cache-mix-deps.outputs.cache-hit != 'true'
+        run: |
+          mix deps.get
+
+      - name: Cache OpenCV
+        id: cache-opencv
+        uses: actions/cache@v3
+        with:
+          key: opencv-${{ env.OPENCV_VER }}
+          path: |
+            ./3rd_party
+
+      - name: Download OpenCV
+        if: steps.cache-opencv.outputs.cache-hit != 'true'
+        run: |
+          bash scripts/download_opencv.sh ${OPENCV_VER} 3rd_party/cache 3rd_party/opencv/
+
+      - name: Cache compiled OpenCV
+        id: cache-mix-compile
+        uses: actions/cache@v3
+        with:
+          key: precompile-${{ env.MIX_ENV }}-${{ runner.os }}-${{ matrix.pair.arch }}-${{ hashFiles('cc_toolchain/**') }}-${{ hashFiles('c_src/**') }}-${{ hashFiles('CMakeLists.txt') }}-${{ hashFiles('Makefile') }}-${{ env.OPENCV_VER }}--${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}
+          path: |
+            ./_build
+            ./c_src/headers.txt
+            ./c_src/configuration.private.hpp
+            ./lib
+            ./src
+
+      - name: Mix compile
+        if: steps.cache-mix-compile.outputs.cache-hit != 'true'
+        run: |
+          if [ "${{ matrix.pair.cmake_toolchain_file }}" != "" ]; then
+            export CMAKE_TOOLCHAIN_FILE="$(pwd)/${{ matrix.pair.cmake_toolchain_file }}"
+          fi
+          echo "CMAKE_TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}"
+          rm -f _build/${MIX_ENV}/lib/evision/priv/evision.so
+          mix deps.get
+          mix compile
+
+      - name: Create precompiled library
+        run: |
+          export PKG_NAME=evision-${{ matrix.pair.arch }}-${GITHUB_REF##*/v}
+          mkdir -p "${PKG_NAME}"
+          cp -a _build/${MIX_ENV}/lib/evision/priv "${PKG_NAME}"
+          cp -a lib/generated "${PKG_NAME}/elixir_generated"
+          cp -a src/generated "${PKG_NAME}/erlang_generated"
+          tar -czf "${PKG_NAME}.tar.gz" "${PKG_NAME}"
+          rm -rf "${PKG_NAME}"
+          ls -lah "${PKG_NAME}.tar.gz"
+          mkdir -p artifacts
+          mv "${PKG_NAME}.tar.gz" artifacts
+
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: artifacts/*.tar.gz

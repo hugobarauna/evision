@@ -3,10 +3,13 @@ name: macos-x86_64
 on:
   pull_request:
     paths-ignore:
-      - '**/README.md'
+      - '*.md'
+      - '**/*.md'
+      - 'LICENSE*'
       - 'examples/**'
       - 'nerves/**'
       - 'Makefile.win'
+      - 'cc_toolchain/**'
       - '.github/FUNDING.yml'
       - '.github/workflows/nerves-*.yml'
       - '.github/workflows/linux-*.yml'
@@ -18,10 +21,13 @@ on:
       - main
       - test-*
     paths-ignore:
-      - '**/README.md'
+      - '*.md'
+      - '**/*.md'
+      - 'LICENSE*'
       - 'examples/**'
       - 'nerves/**'
       - 'Makefile.win'
+      - 'cc_toolchain/**'
       - '.github/FUNDING.yml'
       - '.github/workflows/nerves-*.yml'
       - '.github/workflows/linux-*.yml'
@@ -33,9 +39,12 @@ on:
 jobs:
   mix_test:
     runs-on: macos-11
+    env:
+      OPENCV_VER: "4.6.0"
+      MIX_ENV: "test"
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install Erlang and Elixir
         run: |
@@ -46,10 +55,48 @@ jobs:
           mix local.hex --force
           mix local.rebar --force
 
-      - name: Mix Compile
+      - name: Cache mix packages
+        id: cache-mix-deps
+        uses: actions/cache@v3
+        with:
+          key: deps-${{ hashFiles('mix.lock') }}
+          path: |
+            ./deps
+
+      - name: Get mix deps
+        if: steps.cache-mix-deps.outputs.cache-hit != 'true'
         run: |
-          export MIX_ENV=test
           mix deps.get
+
+      - name: Cache OpenCV
+        id: cache-opencv
+        uses: actions/cache@v3
+        with:
+          key: opencv-${{ env.OPENCV_VER }}
+          path: |
+            ./3rd_party
+
+      - name: Download OpenCV
+        if: steps.cache-opencv.outputs.cache-hit != 'true'
+        run: |
+          bash scripts/download_opencv.sh ${OPENCV_VER} 3rd_party/cache 3rd_party/opencv/
+
+      - name: Cache compiled OpenCV
+        id: cache-mix-compile
+        uses: actions/cache@v3
+        with:
+          key: compile-ffmpeg-${{ runner.os }}-${{ hashFiles('cc_toolchain/**') }}-${{ hashFiles('c_src/**') }}-${{ hashFiles('CMakeLists.txt') }}-${{ hashFiles('Makefile') }}-${{ env.OPENCV_VER }}
+          path: |
+            ./_build
+            ./c_src/headers.txt
+            ./c_src/configuration.private.hpp
+            ./lib
+            ./src
+
+      - name: Mix Compile
+        if: steps.cache-mix-compile.outputs.cache-hit != 'true'
+        run: |
+          rm -f _build/dev/lib/evision/priv/evision.so
           mix compile
 
       - name: Mix Test

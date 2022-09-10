@@ -3,23 +3,31 @@ name: nerves-build
 on:
   pull_request:
     paths-ignore:
-      - '**/README.md'
+      - '*.md'
+      - '**/*.md'
+      - 'LICENSE*'
       - 'examples/**'
       - 'test/**'
       - 'Makefile.win'
+      - 'cc_toolchain/**'
       - '.github/FUNDING.yml'
       - '.github/workflows/linux-*'
       - '.github/workflows/macos-*'
       - '.github/workflows/windows-*'
       - '.github/workflows/test-*.yml'
   push:
+    tags:
+      - 'v*'
     branches:
       - main
       - nerves-*
     paths-ignore:
-      - '**/README.md'
+      - '*.md'
+      - '**/*.md'
+      - 'LICENSE*'
       - 'examples/**'
       - 'Makefile.win'
+      - 'cc_toolchain/**'
       - '.github/FUNDING.yml'
       - '.github/workflows/linux-*'
       - '.github/workflows/macos-*'
@@ -33,19 +41,21 @@ jobs:
     env:
       MIX_ENV: prod
       NERVES_PROJ_NAME: nerves_evision
-      OPENCV_VER: "4.5.5"
-      NERVES_LIVEBOOK_VER: "v0.5.0"
+      OPENCV_VER: "4.6.0"
+      NERVES_LIVEBOOK_VER: "v0.6.5"
+      OTP_VERSION: "25.0.4"
+      ELIXIR_VERSION: "1.14.0"
 
     strategy:
       matrix:
-        target: [rpi4, rpi3a, rpi3, rpi2, rpi0, rpi, bbb, osd32mp1, npi_imx6ull]
+        target: [rpi4, rpi3a, rpi3, rpi2, rpi0, rpi, bbb, osd32mp1, npi_imx6ull, grisp2, mangopi_mq_pro]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: "24.2"
-          elixir-version: "1.13.2"
+          otp-version: ${{ env.OTP_VERSION }}
+          elixir-version: ${{ env.ELIXIR_VERSION }}
 
       - name: Install nerves and system dependecies
         run: |
@@ -54,25 +64,54 @@ jobs:
           sudo apt-get update && sudo apt-get install -y build-essential automake autoconf pkg-config bc m4 unzip zip curl git libssl-dev libncurses5-dev python3 ca-certificates squashfs-tools ssh-askpass libmnl-dev
           mix local.hex --force
           mix local.rebar --force
-          mix archive.install hex nerves_bootstrap --force || true
-          wget -k https://github.com/fwup-home/fwup/releases/download/v1.9.0/fwup_1.9.0_amd64.deb -O fwup_1.9.0_amd64.deb
-          sudo dpkg -i fwup_1.9.0_amd64.deb
+      
+      - name: Cache mix packages
+        id: cache-mix-deps
+        uses: actions/cache@v3
+        with:
+          key: deps-${{ hashFiles('mix.lock') }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}
+          path: |
+            ./deps
+
+      - name: Get mix deps
+        if: steps.cache-mix-deps.outputs.cache-hit != 'true'
+        run: |
+          mix deps.get
+
+      - name: Cache OpenCV
+        id: cache-opencv
+        uses: actions/cache@v3
+        with:
+          key: opencv-${{ env.OPENCV_VER }}
+          path: |
+            ./3rd_party
+
+      - name: Download OpenCV
+        if: steps.cache-opencv.outputs.cache-hit != 'true'
+        run: |
+          bash scripts/download_opencv.sh ${OPENCV_VER} 3rd_party/cache 3rd_party/opencv/
 
       - name: Make a nerves project
         run: |
+          mix archive.install hex nerves_bootstrap --force || true
+          wget -k https://github.com/fwup-home/fwup/releases/download/v1.9.1/fwup_1.9.1_amd64.deb -O ./fwup_1.9.1_amd64.deb
+          sudo dpkg -i ./fwup_1.9.1_amd64.deb
           cd ../
           git clone https://github.com/livebook-dev/nerves_livebook.git
           cd nerves_livebook
           git checkout "${NERVES_LIVEBOOK_VER}"
+          git checkout mix.exs
           LINE="$(grep -n 'toolshed' mix.exs | awk -F: '{print $1+1}')"
           head -n "${LINE}" mix.exs > mix.exs.tmp
-          echo '      {:evision, "~> 0.1.0-dev", path: "../evision"},' >> mix.exs.tmp
+          echo '      {:evision, path: "../evision"},' >> mix.exs.tmp
           tail -n "+${LINE}" mix.exs >> mix.exs.tmp
           mv mix.exs.tmp mix.exs
           cat mix.exs
           export MIX_TARGET=${{ matrix.target }}
-          mix deps.get 1>/dev/null 2>&1
-          cp -a ../evision/examples                        ./priv/evision_examples
+          sed -i 's/nx, "~> 0.2.0/nx, "~> 0.3/g' mix.exs
+          mix deps.get
+          mix deps.update nx
+          cp -a ../evision/examples ./priv/evision_examples
           sed -i 's/"welcome.livemd"\,/"welcome.livemd"\, "evision_examples",/g' lib/nerves_livebook/application.ex
           export MAKE_BUILD_FLAGS="-j$(nproc)"
           mix deps.compile
@@ -85,3 +124,8 @@ jobs:
         with:
           name: ${{ env.NERVES_PROJ_NAME }}_${{ matrix.target }}_${{ env.MIX_ENV }}.fw
           path: /tmp/firmware/${{ env.NERVES_PROJ_NAME }}_${{ matrix.target }}_${{ env.MIX_ENV }}.fw
+      
+      - uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: /tmp/firmware/${{ env.NERVES_PROJ_NAME }}_${{ matrix.target }}_${{ env.MIX_ENV }}.fw

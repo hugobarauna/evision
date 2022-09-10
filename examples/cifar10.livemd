@@ -5,24 +5,16 @@
 ## Install deps
 
 ```elixir
-# # a quick fix for the free tier livebook session
-# ## allocate 2GB swap
-# System.cmd("fallocate", ["-l", "2G", "/swap"])
-# System.cmd("chmod", ["400", "/swap"])
-# System.cmd("mkswap", ["/swap"])
-# System.cmd("swapon", ["/swap"])
-## need unzip to unzip the source code
-# System.cmd("apt", ["update"])
-# System.cmd("apt", ["install", "-y", "unzip", "python3"])
+# remove the following line (or set to `false`) to compile evision from source
+# note that to compile from source, you may need at least 1GB RAM
+System.put_env("EVISION_PREFER_PRECOMPILED", "true")
 
-# If you are using the pre-built nerves firmware
-# you can comment out the following installation step
 Mix.install([
-  {:torchx, "~> 0.1.0-dev", github: "elixir-nx/nx", sparse: "torchx"},
-  {:nx, "~> 0.1.0-dev", github: "elixir-nx/nx", sparse: "nx", override: true},
-  {:evision, "~> 0.1.0-dev", github: "cocoa-xu/evision", branch: "main"},
-  {:kino, "~> 0.5.1"},
-  {:scidata, "~> 0.1.1"}
+  {:evision, "~> 0.1", github: "cocoa-xu/evision", tag: "v0.1.4"},
+  {:torchx, "~> 0.3"},
+  {:nx, "~> 0.3", override: true},
+  {:kino, "~> 0.6"},
+  {:scidata, "~> 0.1"}
 ])
 ```
 
@@ -67,10 +59,7 @@ Helper.download!("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat0
 
 ## alias
 ```elixir
-# alias Evision as OpenCV
-# please see the Namespace section in the README.md for reasons/motivations
-# (in the root directory of the source code)
-alias Evision, as: OpenCV
+alias Evision, as: Cv
 ```
 
 ## Get input from OpenCV
@@ -78,10 +67,10 @@ alias Evision, as: OpenCV
 ```elixir
 # in real-life use cases, the input source might be a camera
 # instead of downloading a file and reading it
-{:ok, img} = OpenCV.imread("cat.jpg", flags: OpenCV.cv_IMREAD_ANYCOLOR())
-{:ok, resized_img} = OpenCV.resize(img, [128, 128])
+{:ok, img} = Cv.imread("cat.jpg", flags: Cv.cv_IMREAD_ANYCOLOR())
+{:ok, resized_img} = Cv.resize(img, [128, 128])
 
-OpenCV.imencode(".png", resized_img)
+Cv.imencode(".png", resized_img)
 |> elem(1)
 |> IO.iodata_to_binary()
 |> Kino.Image.new(:png)
@@ -301,13 +290,13 @@ defmodule Demo do
       |> Nx.as_type({:f, 32})
       # flatten
       |> Nx.reshape({:auto, 3072})
-      |> Nx.to_batched_list(batch_size)
+      |> Nx.to_batched(batch_size)
 
     y_training_batched =
       y_training
       |> Helper.to_onehot(unique_classes)
       |> Nx.as_type({:f, 32})
-      |> Nx.to_batched_list(batch_size)
+      |> Nx.to_batched(batch_size)
 
     {x_training_batched, y_training_batched}
   end
@@ -347,9 +336,9 @@ params = Demo.run(backend: Torchx.Backend, epochs: 50)
 ## Test
 
 ```elixir
-{:ok, resized_img} = OpenCV.resize(img, [128, 128])
+{:ok, resized_img} = Cv.resize(img, [128, 128])
 
-OpenCV.imencode(".png", resized_img)
+Cv.imencode(".png", resized_img)
 |> then(fn {:ok, val} -> val end)
 |> IO.iodata_to_binary()
 |> Kino.Image.new(:png)
@@ -360,9 +349,9 @@ classes = [:airplane, :automobile, :bird, :cat, :deer, :dog, :frog, :horse, :shi
 
 input_tensor =
   img
-  |> OpenCV.resize([32, 32])
+  |> Cv.resize([32, 32])
   |> then(fn {:ok, val} -> val end)
-  |> OpenCV.Nx.to_nx()
+  |> Cv.Nx.to_nx()
   |> Nx.backend_transfer(Torchx.Backend)
   |> Nx.flatten()
 

@@ -3,29 +3,37 @@ name: windows-x86_64
 on:
   pull_request:
     paths-ignore:
-      - '**/README.md'
+      - '*.md'
+      - '**/*.md'
+      - 'LICENSE*'
       - 'examples/**'
       - 'nerves/**'
       - 'Makefile'
+      - 'cc_toolchain/**'
       - '.github/FUNDING.yml'
       - '.github/workflows/nerves-*.yml'
       - '.github/workflows/linux-*.yml'
       - '.github/workflows/macos-*.yml'
       - '.github/workflows/test-*.yml'
+      - '.github/workflows/windows-precompile.yml'
   push:
     branches:
       - main
       - test-*
     paths-ignore:
-      - '**/README.md'
+      - '*.md'
+      - '**/*.md'
+      - 'LICENSE*'
       - 'examples/**'
       - 'nerves/**'
       - 'Makefile'
+      - 'cc_toolchain/**'
       - '.github/FUNDING.yml'
       - '.github/workflows/nerves-*.yml'
       - '.github/workflows/linux-*.yml'
       - '.github/workflows/macos-*.yml'
       - '.github/workflows/test-*.yml'
+      - '.github/workflows/windows-precompile.yml'
   workflow_dispatch:
 
 jobs:
@@ -33,42 +41,72 @@ jobs:
     runs-on: windows-latest
     env:
       MIX_ENV: test
-
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - pair:
-              elixir: 1.13.2
-              otp: 24.2
-              opencv_ver: 4.5.4
-          - pair:
-              elixir: 1.13.2
-              otp: 24.2
-              opencv_ver: 4.5.5
+      OPENCV_VER: "4.6.0"
+      OTP_VERSION: "25.0.4"
+      ELIXIR_VERSION: "1.14.0"
 
     steps:
       - uses: actions/checkout@v2
       
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: ${{matrix.pair.otp}}
-          elixir-version: ${{matrix.pair.elixir}}
+          otp-version: ${{ env.OTP_VERSION }}
+          elixir-version: ${{ env.ELIXIR_VERSION }}
 
       - uses: ilammy/msvc-dev-cmd@v1
         with:
           arch: x64
 
-      - name: Mix Compile
+      - name: Cache mix packages
+        id: cache-mix-deps
+        uses: actions/cache@v3
+        with:
+          key: deps-${{ hashFiles('mix.lock') }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}
+          path: |
+            ./deps
+
+      - name: Get mix deps
+        if: steps.cache-mix-deps.outputs.cache-hit != 'true'
+        shell: bash
         run: |
-          $Env:OPENCV_VER = "${{ matrix.pair.opencv_ver }}"
-          $Env:MAKE = "nmake"
           mix deps.get
+
+      - name: Cache OpenCV
+        id: cache-opencv
+        uses: actions/cache@v3
+        with:
+          key: opencv-${{ env.OPENCV_VER }}
+          path: |
+            ./3rd_party
+
+      - name: Download OpenCV
+        if: steps.cache-opencv.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          bash scripts/download_opencv.sh ${OPENCV_VER} 3rd_party/cache 3rd_party/opencv/
+
+      - name: Cache compiled OpenCV
+        id: cache-mix-compile
+        uses: actions/cache@v3
+        with:
+          key: compile-test-${{ runner.os }}-${{ hashFiles('cc_toolchain/**') }}-${{ hashFiles('c_src/**') }}-${{ hashFiles('CMakeLists.txt') }}-${{ hashFiles('Makefile.win') }}-${{ env.OPENCV_VER }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}
+          path: |
+            ./_build
+            ./c_src/headers.txt
+            ./c_src/configuration.private.hpp
+            ./lib
+            ./src
+
+      - name: Mix Compile
+        if: steps.cache-mix-compile.outputs.cache-hit != 'true'
+        run: |
+          $Env:MAKE = "nmake"
           Remove-Item Makefile
+          if (Test-Path "_build/dev/lib/evision/priv/evision.dll") { Remove-Item _build/dev/lib/evision/priv/evision.dll }
           mix compile
 
       - name: Mix Test
+        shell: bash
         run: |
-          $Env:OPENCV_VER = "${{ matrix.pair.opencv_ver }}"
-          $Env:MAKE = "nmake"
+          rm -rf _build/test/lib/castore
           mix test --include require_downloading --include require_ffmpeg

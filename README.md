@@ -1,17 +1,24 @@
 # evision [WIP]
 
-| OS               | arch    | Build Status | Has Precompiled Library |
-|------------------|---------|--------------|-------------------------|
-| Ubuntu 20.04     | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml) | Yes |
-| Ubuntu 20.04     | arm64   | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml) | Yes |
-| Ubuntu 20.04     | armv7   | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile.yml) | Yes |
-| macOS 11 Big Sur | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml) | Yes |
-| macOS 11 Big Sur | arm64   | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml) | Yes |
-| Windows 2019     | x86_64  | [![CI](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml) | Not yet |
+| OS               | Arch           | ABI  | Build Status | Has Precompiled Library |
+|------------------|----------------|------|--------------|-------------------------|
+| Linux            | x86_64         | gnu  |[![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml) | Yes |
+| Linux            | x86_64         | musl |[![CI](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml) | Yes |
+| Linux            | arm64          | gnu  |[![linux-precompile](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml) | Yes |
+| Linux            | arm64          | musl |[![linux-precompile](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml) | Yes |
+| Linux            | armv7l (armhf) | gnueabihf |[![linux-precompile](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml) | Yes |
+| Linux            | ppc64le        | gnu  |[![linux-precompile](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml) | Yes |
+| Linux            | s390x          | gnu  |[![linux-precompile](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml) | Yes |
+| Linux            | riscv64        | gnu  |[![linux-precompile](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml) | Yes |
+| Linux            | riscv64        | musl |[![linux-precompile](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml) | Yes |
+| macOS 11 Big Sur | x86_64         | darwin |[![CI](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml) | Yes |
+| macOS 11 Big Sur | arm64          | darwin |[![macos-precompile](https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml/badge.svg?branch=v0.1.1)](https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml) | Yes |
+| Windows 2019     | x86_64         | msvc |[![CI](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml) | Yes |
 
-`ppc64le` and `s390x` emulators are too slow. Let's focus on x86_64, arm64 and armv7 for now. Furthermore, nerves workflow
-will compile evision to arm64, armv7 and armv6, therefore, `linux-arm64.yml` and `linux-armv7.yml` will now be triggered 
-manually only.
+## Docs
+Online docs is available here, [https://cocoa-xu.github.io/evision](https://cocoa-xu.github.io/evision/doc/OpenCV.html).
+
+Will be available on hex.pm once we reach to the first release.
 
 ## Nerves Support
 
@@ -67,46 +74,118 @@ Compatible OpenCV versions:
 - 4.5.3
 - 4.5.4
 - 4.5.5
+- 4.6.0
 
 by compatible, it means these versions can compile successfully, and I tested a small range of functions. Tons of tests
 should be written, and then we can have a list for tested OpenCV versions.
+
+## Usage
+In general, you can add `evision` to `deps` with the following settings.
+
+```elixir
+def deps do
+  [
+    {:evision, "~> 0.1.4", github: "cocoa-xu/evision", tag: "v0.1.4"}
+  ]
+end
+```
+
+Early versions (v0.1.x) of `evision` will be available on hex.pm soon.
 
 ### Use Precompiled Library
 To use precompiled Evision library, the following environment variables should be set
 
 ```shell
-# required if prefer to use precompiled library
+# required 
+# set this to true if prefer to use precompiled library
+#
+# currently "0.1.1" to "0.1.4" are available
+# the version is implied by the tag in deps:
+#   {:evision, "~> 0.1.4", github: "cocoa-xu/evision", tag: "v0.1.4"}
+# for other available versions, please check the GitHub release page
+# https://github.com/cocoa-xu/evision/releases
 export EVISION_PREFER_PRECOMPILED=true
 
-# optional. 
-## currently only "0.1.0-dev" is valid
-export EVISION_PRECOMPILED_VERSION="0.1.0-dev"
+# optional.
 ## set the cache directory for the precompiled archive file
 export EVISION_PRECOMPILED_CACHE_DIR="$(pwd)/.cache"
+
+# optional.
+## for linux system with musl libc only:
+## for nerves project, this environment variable is set by nerves
+export TARGET_ABI=musl
+## (for armv7l which uses hard-float ABI (armhf))
+export TARGET_ABI=musleabihf
 ```
 
-Note that using precompiled library requires installing FFmpeg libraries. See the end of [Available Modules](#available-modules) for more information.
+The default value for the `TARGET_ABI` env var is set using the following elixir code
+
+```elixir
+target_abi = List.last(String.split(to_string(:erlang.system_info(:system_architecture)), "-"))
+target_abi =
+  case target_abi do
+    "darwin" <> _ -> "darwin"
+    "win32" ->
+      {compiler_id, _} = :erlang.system_info(:c_compiler_used)
+      case compiler_id do
+        :msc -> "msvc"
+        _ -> to_string(compiler_id)
+      end
+    _ -> target_abi
+  end
+```
+
+Note 1: Precompiled binaries does not use FFmpeg. If you'd like to use FFmpeg, please compile from source and set corresponding environment variables.
+
+Note 2: by default, Evision will compile from source as it's WIP at the moment.
+
+Note 3: a copy of OpenCV's license file can be found at `LICENSE-OpenCV`.
 
 ### Compile OpenCV from Sources
 To obtain and compile OpenCV's source code from official releases, the following environment variables can affect the build
 
 ```shell
-# optional.
+# optional
 ## set OpenCV version
-export OPENCV_VER="4.5.5"
+##   the corresponding license file should be available at https://github.com/opencv/opencv/blob/${OPENCV_VER}/LICENSE
+export OPENCV_VER="4.6.0"
+
+# optional
+## Use Debug build
+export CMAKE_BUILD_TYPE=Debug
+
+# optional
+## enable FFmpeg
+##   this will allow cmake to auto-detect FFmpeg libraries installed on the host
+##   on Windows, OpenCV will download prebuilt FFmpeg libraries
+##   for more information, please visit https://github.com/opencv/opencv/tree/4.x/3rdparty/ffmpeg
+export CMAKE_OPENCV_OPTIONS="-D WITH_FFMPEG=ON"
+## or disable FFmpeg
+export CMAKE_OPENCV_OPTIONS="-D WITH_FFMPEG=OFF"
 ```
 
 ### Compile OpenCV from Git Repo
 To obtain and compile OpenCV's source code from git, set the following environment variables
 
 ```shell
-# required if compile OpenCV from git
+# required 
+# set those variables if you'd like to compile OpenCV from git
+##   the corresponding license file should be available at https://github.com/opencv/opencv/blob/${OPENCV_USE_GIT_BRANCH}/LICENSE
 export OPENCV_USE_GIT_HEAD=true
 export OPENCV_USE_GIT_BRANCH=4.x
 
 # optional.
 ## set this if you want to use to your/other fork/mirrors
 export OPENCV_GIT_REPO="https://github.com/opencv/opencv.git"
+
+## enable FFmpeg
+##   this will allow cmake to auto-detect FFmpeg libraries installed on the host
+##   on Windows, OpenCV will download prebuilt FFmpeg libraries
+##   for more information, please visit https://github.com/opencv/opencv/tree/4.x/3rdparty/ffmpeg
+export CMAKE_OPENCV_OPTIONS="-D WITH_FFMPEG=ON"
+
+## disable FFmpeg
+export CMAKE_OPENCV_OPTIONS="-D WITH_FFMPEG=OFF"
 ```
 
 ### Available modules
@@ -126,9 +205,11 @@ Current available modules:
 - video 
 - videoio
 
-Note 1: to open video files, FFmpeg related libraries should be installed, e.g., on Debian/Ubuntu
+Note 1: to be able to encode/decode more video formats, you may compile OpenCV with FFmpeg enabled. 
 
-Note 2: FFmpeg 5 is not supported by OpenCV yet
+However, you should be aware of the license of the FFmpeg components you selected as they could be licensed by LGPL/GPL or other licenses.
+
+Note 2: FFmpeg 5 is not supported by OpenCV yet.
 
 ```shell
 sudo apt install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavresample-dev ffmpeg
@@ -187,7 +268,7 @@ Then you can add `evision` as dependency in your `mix.exs`. At the moment you wi
 ```elixir
 def deps do
   [
-    {:evision, "~> 0.1.0-dev", github: "cocoa-xu/evision", branch: "main"}
+    {:evision, "~> 0.1.4", github: "cocoa-xu/evision", tag: "v0.1.4"}
   ]
 end
 ```
@@ -236,15 +317,38 @@ config :evision, enabled_img_codecs: [
 ]
 ```
 
+#### Unsupported Type Map
+As OpenCV does not support the following types
+
+- `{:s, 64}`
+- `{:u, 32}`
+- `{:u, 64}`
+
+Although it's possible to *store* values with those types using custom types, the resulting Mat/tensor will be 
+incompatible with most existing functions in OpenCV.
+
+Moreover, it's somewhat inconvinient to explicitly specify the type each time using them. Therefore, Evision allows to 
+set a map for those unsupported types. 
+
+```elixir
+config :evision, unsupported_type_map: %{
+  {:s, 64} => {:f, 64},
+  {:u, 64} => {:f, 64},
+  {:u, 32} => {:f, 32}
+}
+```
+
+The `key` of this `unsupported_type_map` is the unsupported type, and the value is the replacement type for it.
+
 ### Notes 
 
 #### Compile-time related
 
 - How do I specify which OpenCV version to compile?
     ```shell
-    # e.g., use OpenCV 4.5.4
-    # current, evision uses 4.5.5 by default 
-    export OPENCV_VER=4.5.4
+    # e.g., use OpenCV 4.5.5
+    # current, evision uses 4.6.0 by default 
+    export OPENCV_VER=4.5.5
     ```
 
 - How do I use my own OpenCV source code on my local disk?
@@ -297,7 +401,7 @@ Say you have the following MIX environment variables:
 # set by MIX
 MIX_ENV=dev
 # set by evision or you
-OPENCV_VER=4.5.5
+OPENCV_VER=4.6.0
 # set by yourself if you're compiling evision to a nerves firmware
 MIX_TARGET=rpi4
 ```
@@ -369,9 +473,7 @@ Please note that although everything now will be under the `Evision` namespace, 
 the OpenCV project.
 
 ```elixir
-alias Evision, as: OpenCV
-# Or
-# alias Evision, as: CV
+alias Evision, as: Cv
 ```
 
 ### Current Status
@@ -379,209 +481,31 @@ alias Evision, as: OpenCV
 Some tiny examples:
 
 ```elixir
-alias Evision, as: OpenCV
+alias Evision, as: Cv
 
 ## read image, process image and write image
-{:ok, gray_mat} = OpenCV.imread("/path/to/img.png", flags: OpenCV.cv_IMREAD_GRAYSCALE)
-{:ok, gray_blur_mat} = OpenCV.blur(gray_mat, [10,10], anchor: [1,1])
-{:ok, colour_mat} = OpenCV.imread("/path/to/img.png")
-{:ok, colour_blur_mat} = OpenCV.blur(colour_mat, [10,10], anchor: [1,1])
-:ok = OpenCV.imwrite("/path/to/img-gray-and-blur.png", gray_blur_mat)
-:ok = OpenCV.imwrite("/path/to/img-colour-and-blur.png", colour_blur_mat)
+gray_mat = Cv.imread!("/path/to/img.png", flags: Cv.cv_IMREAD_GRAYSCALE)
+gray_blur_mat = Cv.blur!(gray_mat, [10,10], anchor: [1,1])
+colour_mat = Cv.imread!("/path/to/img.png")
+colour_blur_mat = Cv.blur!(colour_mat, [10,10], anchor: [1,1])
+:ok = Cv.imwrite("/path/to/img-gray-and-blur.png", gray_blur_mat)
+:ok = Cv.imwrite("/path/to/img-colour-and-blur.png", colour_blur_mat)
 
 ## capture from video file/camera
-{:ok, cap} = OpenCV.VideoCapture.videoCapture(0)
-{:ok, cap_mat} = OpenCV.VideoCapture.read(cap)
-:ok = OpenCV.imwrite("/path/exists/capture-mat.png", cap_mat)
-:error = OpenCV.imwrite("/path/not/exists/capture-mat.png", cap_mat)
+cap = Cv.VideoCapture.videoCapture!(0)
+cap_mat = Cv.VideoCapture.read!(cap)
+:ok = Cv.imwrite("/path/exists/capture-mat.png", cap_mat)
+:error = Cv.imwrite("/path/not/exists/capture-mat.png", cap_mat)
 
 ## to_binary/from_binary
-{:ok, mat} = OpenCV.imread("/path/to/img.jpg")
-{:ok, type} = OpenCV.Mat.type(mat)
-{:ok, {rows, cols, channels}} = OpenCV.Mat.shape(mat)
-{:ok, binary_data} = OpenCV.Mat.to_binary(mat)
-OpenCV.Mat.from_binary(binary_data, type, cols, rows, channels)
+mat = Cv.imread!("/path/to/img.jpg")
+type = Cv.Mat.type!(mat)
+{rows, cols, channels} = Cv.Mat.shape!(mat)
+binary_data = Cv.Mat.to_binary!(mat)
+Cv.Mat.from_binary(binary_data, type, cols, rows, channels)
 ```
 
 Some other [examples](https://github.com/cocoa-xu/evision/tree/main/examples).
-
-### Todo
-
-- [x] Update `.py` files in `py_src` so that they output header files for Erlang bindings.
-- [x] Automatically generate `erl_cv_nif.ex`.
-- [x] Automatically generate `opencv_*.ex` files using Python.
-- [x] Automatically convert enum constants in C++ to "constants" in Elixir
-- [x] When a C++ function's return value's type is `bool`, map `true` to `:ok` and `false` to `:error`.
-
-   ```elixir
-   # not this
-   {:ok, true} = OpenCV.imwrite("/path/to/save.png", mat, [])
-   # but this
-   :ok = OpenCV.imwrite("/path/to/save.png", mat, [])
-   ```
-- [x] Make optional parameters truly optional.
-
-   ```elixir
-   # not this
-   {:ok, cap} = OpenCV.VideoCapture.videoCapture(0, [])
-   # but this
-   {:ok, cap} = OpenCV.VideoCapture.videoCapture(0)
-   # this also changes the above example to
-   :ok = OpenCV.imwrite("/path/to/save.png", mat)
-   ```
-- [x] Nerves support (rpi4 for now).
-- [x] Add `OpenCV.Mat` module.
-
-   ```elixir
-   {:ok, type} = OpenCV.Mat.type(mat)
-   {:ok, {:u, 8}}
-   
-   {:ok, {height, weight, channel}} = OpenCV.Mat.shape(mat)
-   {:ok, {1080, 1920, 3}}
-   {:ok, {height, weight}} = OpenCV.Mat.shape(gray_mat)
-   {:ok, {1080, 1920}}
-  
-   {:ok, bin_data} = OpenCV.Mat.to_binary(mat)
-   {:ok, << ... binary data ... >>}
-   ```
-- [x] Edit `config/config.exs` to enable/disable OpenCV modules and image coders.
-- [x] Make function names more readable/friendly. (expect **breaking** changes after this)
-
-   Will be using **smallCamelCase** for almost all OpenCV functions.
-
-   The reasons why I chose **smallCamelCase** are that
-
-   1. it transforms much fewer function names as a large portion of them in OpenCV are starting with lowercase letter.
-   2. avoid converting abbreviations to lowercase spellings, which can be quite tricky sometimes.
-   3. make the APIs look similar to their corresponding C++/Python ones.
-   4. This could also help when the user wants to search for existing examples/usage online.
-
-- [ ] Add more [examples](https://github.com/cocoa-xu/evision/tree/main/examples) (perhaps as livebook).
-- [ ] Add support for `dnn`. Halfway done? Tons of functions haven't been tested yet. 
-- [ ] Add support for `gapi`? Perhaps not. See [#22](https://github.com/cocoa-xu/evision/issues/22).
-- [ ] Add tests.
-
-### How does this work?
-
-1. This project will first pull OpenCV source code from git (as git submodules).
-2. Inside the OpenCV project, there is an `opencv-python` module, `3rd_party/opencv/modules/python`. If the
-   `opencv-python` module is enabled,
-
-   ```bash
-   cmake ...
-       -D PYTHON3_EXECUTABLE=$(PYTHON3_EXECUTABLE) \
-       ...
-   ```
-
-   It will generate files for `opencv-python` bindings in cmake build dir, `cmake_build_dir/modules/python_bindings_generator`. 
-
-   We are interested in the `headers.txt` file as it tells us which headers should we parse (this header list changes
-   based on the enabled modules).
-
-   We also need to check another file, `pyopencv_custom_headers.h`. This file includes pyopencv compatible headers from 
-   modules that need special handlings to enable interactions with Python. We will talk about this later.
-3. Originally, the `headers.txt` file will be passed to `3rd_party/opencv/modules/python/src2/gen2.py` and that Python script
-   will then generate `pyopencv_*.h` in `cmake_build_dir/modules/python_bindings_generator`. Here we copy that Python
-   script and modify it so that it outputs `c_src/evision_*.h` files which use `c_src/erlcompat.hpp` and `c_src/nif_utils.hpp`
-   to make everything compatible with Erlang.
-4. `c_src/opencv.cpp` includes almost all specialised and generic `evision_to` and `evision_from` functions. They are
-   used for making conversions between Erlang and C++. Some conversion functions are defined in module custom headers.
-5. This is where we need to make some changes to `pyopencv_custom_headers.h`. We first copy it to `c_src/evision_custom_headers.h`
-   and copy every file it includes to `c_src/evision_custom_headers/`. Then we make corresponding changes to `c_src/evision_custom_headers/*.hpp`
-   files so that these types can be converted from and to Erlang terms. The header include path in `c_src/evision_custom_headers.h`
-   should be changed correspondingly.
-6. However, it is hard to do step 5 automatically. We can try to create a PR which puts these changed files to the
-   original OpenCV repo's `{module_name}/mics/erlang/` directory. Now we just manually save them in `c_src/evision_custom_headers`.
-   Note that step 5 and 6 are done manually, calling `py_src/gen2.py` will not have effect on `c_src/evision_custom_headers.h`
-   and `*.hpp` files in `c_src/evision_custom_headers`.
-7. Another catch is that, while function overloading is easy in C++ and optional arguments is simple in Python, they are not
-   quite friendly to Erlang/Elixir. There is basically no function overloading in Erlang/Elixir. Although Erlang/Elixir support
-   optional argument (default argument), it also affects the function's arity and that can be very tricky to deal with. For
-   example,
-
-   ```elixir
-   defmodule OpenCV.VideoCapture do
-     def open(self, camera_index, opts \\ []), do: :nil
-     def open(self, filename), do: :nil
-     # ... other functions ...
-   end
-   ```
-
-   In this case, `def open(self, camera_index, opts \\ []), do: :nil` will define `open/3` and `open/2` at the same time.
-   This will cause conflicts with `def open(self, filename), do: :nil` which defines `open/2`.
-
-   So we cannot use default arguments. Now, say we have
-
-   ```elixir
-   defmodule OpenCV.VideoCapture do
-     def open(self, camera_index, opts), do: :nil
-     def open(self, filename, opt), do: :nil
-   end
-   ```
-
-   Function overloading in C++ is relatively simple as compiler does that for us. In this project, we have to do this ourselves in the Erlang/Elixir way.
-   For the example above, we can use `guards`.
-
-   ```elixir
-   defmodule OpenCV.VideoCapture do
-     def open(self, camera_index, opts) when is_integer(camera_index) do
-       # do something
-     end
-     def open(self, filename, opt) when is_binary(filename) do
-       # do something
-     end
-   end
-   ```
-
-   But there are some cases we cannot distinguish the argument type in Erlang/Elixir becauase they are resources 
-   (instance of a certain C++ class).
-
-   ```elixir
-   defmodule OpenCV.SomeModule do
-     # @param mat: Mat
-     def func_name(mat) do
-       # do something
-     end
-   
-     # @param mat: UMat
-     def func_name(mat) do
-       # do something
-     end
-   end
-   ```
-   
-   In such cases, we only keep one definition. The overloading will be done in `c_src/opencv.cpp` (by `evision_to`).
-8. Enum handling. Originally, `PythonWrapperGenerator.add_const` in `py_src/gen2.py` will be used to handle those enum constants. They will be saved to a map with the enum's string representation as the key, and, of course, enum's value as the value. In Python, when a user uses the enum, say `cv2.COLOR_RGB2BGR`, it will perform a dynamic lookup which ends up calling corresponding `evision_[to|from]`. `evision_[to|from]` will take the responsibility to convert between the enum's string representation and its value.
-   Although in Erlang/Elixir we do have the ability to both create atoms and do the similar lookups dynamically, the problem is that, if an enum is used as one of the arguments in a C++ function, it may be written as `void func(int enum)` instead of `void func(ENUM_TYPE_NAME enum)`. 
-   However, to distinguish between overloaded functions, some types (int, bool, string, char, vector) will be used for guards. For example, `void func(int enum)` will be translated to `def func(enum) when is_integer(enum), do: :nil`. Adding these guardians help us to make some differences amongst overloaded functions in step 7. However, that prevents us froming passing an atom to `def func(enum) when is_integer(enum), do: :nil`. 
-   Technically, we can add one more variant `def func(enum) when is_atom(enum), do: :nil` for this specific example, but there are tons of functions has one or more `int`s as their input arguments, which means the number of variants in Erlang will increase expoentially (for each `int` in a C++ function, it can be either a real `int` or an `enum`). 
-   Another way is just allow it to be either an integer or an atom:
-   
-   ```elixir
-   def func(enum) when is_integer(enum) or is_atom(enum) do
-     :nil
-   end
-   ```
-   
-   But in this way, atoms are created on-the-fly, users cannot get code completion feature for enums from their IDE. But, finally, we have a good news that, in Erlang/Elixir, when a function has zero arguments, you can write its name without explictly calling it, i.e., 
-   
-   ```elixir
-   defmodule M do
-     def enum_name(), do: 1
-   end
-   
-   1 = M.enum_name
-   1 = M.enum_name()
-   ```
-   
-   So, in this project, every enum is actually transformed to a function that has zero input arguments.
-
-### How do I make it compatible with more OpenCV modules?
-
-Because of the reason in step 6, when you enable more modules, if that module has specialised custom header for python
-bindings, the custom headers will be added to `cmake_build_dir/modules/python_bindings_generator/pyopencv_custom_headers.h`.
-Then you can manually copy corresponding specialised custom headers to `c_src/evision_custom_headers` and modify these
-conversion functions in them.
 
 ### Acknowledgements
 - `gen2.py`, `hdr_parser.py` and `c_src/erlcompat.hpp` were directly copied from the `python` module in the [OpenCV repo](https://github.com/opencv/opencv). Changes applied.
