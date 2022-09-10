@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.5-dev">
+
+    <title>Evision.DNN.Net — Evision v0.1.5-dev</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+
+    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+
+
+  </head>
+  <body data-type="modules">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
+Evision
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.5-dev
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">Evision.DNN.Net</span> 
+  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+
+</h1>
+
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#connect!/3" translate="no">connect!(self, outPin, inpPin)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#connect/3"><code class="inline">connect/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#connect/3" translate="no">connect(self, outPin, inpPin)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dump!/1" translate="no">dump!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dump/1"><code class="inline">dump/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dump/1" translate="no">dump(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dumpToFile!/2" translate="no">dumpToFile!(self, path)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dumpToFile/2"><code class="inline">dumpToFile/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dumpToFile/2" translate="no">dumpToFile(self, path)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#empty!/1" translate="no">empty!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#empty/1"><code class="inline">empty/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#empty/1" translate="no">empty(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#enableFusion!/2" translate="no">enableFusion!(self, fusion)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#enableFusion/2"><code class="inline">enableFusion/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#enableFusion/2" translate="no">enableFusion(self, fusion)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#forward!/2" translate="no">forward!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#forward/2"><code class="inline">forward/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#forward/2" translate="no">forward(self, opts \\ [])</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#forwardAndRetrieve!/2" translate="no">forwardAndRetrieve!(self, outBlobNames)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#forwardAndRetrieve/2"><code class="inline">forwardAndRetrieve/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#forwardAndRetrieve/2" translate="no">forwardAndRetrieve(self, outBlobNames)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#forwardAsync!/1" translate="no">forwardAsync!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#forwardAsync/1"><code class="inline">forwardAsync/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#forwardAsync/1" translate="no">forwardAsync(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getFLOPS!/2" translate="no">getFLOPS!(self, netInputShape)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getFLOPS/2"><code class="inline">getFLOPS/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getFLOPS!/3" translate="no">getFLOPS!(self, layerId, netInputShape)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getFLOPS/3"><code class="inline">getFLOPS/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getFLOPS/2" translate="no">getFLOPS(self, netInputShape)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getFLOPS/3" translate="no">getFLOPS(self, layerId, netInputShape)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getInputDetails!/1" translate="no">getInputDetails!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getInputDetails/1"><code class="inline">getInputDetails/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getInputDetails/1" translate="no">getInputDetails(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayer!/2" translate="no">getLayer!(self, layerName)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLayer/2"><code class="inline">getLayer/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayer/2" translate="no">getLayer(self, layerName)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerId!/2" translate="no">getLayerId!(self, layer)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLayerId/2"><code class="inline">getLayerId/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerId/2" translate="no">getLayerId(self, layer)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerNames!/1" translate="no">getLayerNames!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLayerNames/1"><code class="inline">getLayerNames/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerNames/1" translate="no">getLayerNames(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerShapes!/2" translate="no">getLayerShapes!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLayerShapes/2"><code class="inline">getLayerShapes/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerShapes/2" translate="no">getLayerShapes(self, opts \\ [])</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayersCount!/2" translate="no">getLayersCount!(self, layerType)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLayersCount/2"><code class="inline">getLayersCount/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayersCount/2" translate="no">getLayersCount(self, layerType)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayersShapes!/2" translate="no">getLayersShapes!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLayersShapes/2"><code class="inline">getLayersShapes/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayersShapes/2" translate="no">getLayersShapes(self, opts \\ [])</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerTypes!/1" translate="no">getLayerTypes!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLayerTypes/1"><code class="inline">getLayerTypes/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLayerTypes/1" translate="no">getLayerTypes(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMemoryConsumption!/2" translate="no">getMemoryConsumption!(self, netInputShape)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getMemoryConsumption/2"><code class="inline">getMemoryConsumption/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMemoryConsumption!/3" translate="no">getMemoryConsumption!(self, layerId, netInputShape)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getMemoryConsumption/3"><code class="inline">getMemoryConsumption/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMemoryConsumption/2" translate="no">getMemoryConsumption(self, netInputShape)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMemoryConsumption/3" translate="no">getMemoryConsumption(self, layerId, netInputShape)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getOutputDetails!/1" translate="no">getOutputDetails!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getOutputDetails/1"><code class="inline">getOutputDetails/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getOutputDetails/1" translate="no">getOutputDetails(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getParam!/2" translate="no">getParam!(self, layerName)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getParam/2"><code class="inline">getParam/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getParam!/3" translate="no">getParam!(self, layerName, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getParam/3"><code class="inline">getParam/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getParam/2" translate="no">getParam(self, layerName)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getParam/3" translate="no">getParam(self, layerName, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><ul><li><strong>numParam</strong> : int</li></ul><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getPerfProfile!/1" translate="no">getPerfProfile!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getPerfProfile/1"><code class="inline">getPerfProfile/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getPerfProfile/1" translate="no">getPerfProfile(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getUnconnectedOutLayers!/1" translate="no">getUnconnectedOutLayers!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getUnconnectedOutLayers/1"><code class="inline">getUnconnectedOutLayers/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getUnconnectedOutLayers/1" translate="no">getUnconnectedOutLayers(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getUnconnectedOutLayersNames!/1" translate="no">getUnconnectedOutLayersNames!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getUnconnectedOutLayersNames/1"><code class="inline">getUnconnectedOutLayersNames/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getUnconnectedOutLayersNames/1" translate="no">getUnconnectedOutLayersNames(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#net!/0" translate="no">net!()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#net/0"><code class="inline">net/0</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#net/0" translate="no">net()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#quantize!/4" translate="no">quantize!(self, calibData, inputsDtype, outputsDtype)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#quantize/4"><code class="inline">quantize/4</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#quantize/4" translate="no">quantize(self, calibData, inputsDtype, outputsDtype)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readFromModelOptimizer!/2" translate="no">readFromModelOptimizer!(bufferModelConfig, bufferWeights)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readFromModelOptimizer/2"><code class="inline">readFromModelOptimizer/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readFromModelOptimizer/2" translate="no">readFromModelOptimizer(bufferModelConfig, bufferWeights)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setHalideScheduler!/2" translate="no">setHalideScheduler!(self, scheduler)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setHalideScheduler/2"><code class="inline">setHalideScheduler/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setHalideScheduler/2" translate="no">setHalideScheduler(self, scheduler)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInput!/2" translate="no">setInput!(self, blob)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setInput/2"><code class="inline">setInput/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInput!/3" translate="no">setInput!(self, blob, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setInput/3"><code class="inline">setInput/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInput/2" translate="no">setInput(self, blob)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInput/3" translate="no">setInput(self, blob, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Sets the new input value for the network</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInputShape!/3" translate="no">setInputShape!(self, inputName, shape)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setInputShape/3"><code class="inline">setInputShape/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInputShape/3" translate="no">setInputShape(self, inputName, shape)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInputsNames!/2" translate="no">setInputsNames!(self, inputBlobNames)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setInputsNames/2"><code class="inline">setInputsNames/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setInputsNames/2" translate="no">setInputsNames(self, inputBlobNames)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setParam!/4" translate="no">setParam!(self, layerName, numParam, blob)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setParam/4"><code class="inline">setParam/4</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setParam/4" translate="no">setParam(self, layerName, numParam, blob)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setPreferableBackend!/2" translate="no">setPreferableBackend!(self, backendId)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setPreferableBackend/2"><code class="inline">setPreferableBackend/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setPreferableBackend/2" translate="no">setPreferableBackend(self, backendId)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setPreferableTarget!/2" translate="no">setPreferableTarget!(self, targetId)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setPreferableTarget/2"><code class="inline">setPreferableTarget/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setPreferableTarget/2" translate="no">setPreferableTarget(self, targetId)</a>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="connect!/3">
+
+  <div class="detail-header">
+    <a href="#connect!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">connect!(self, outPin, inpPin)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L20" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#connect/3"><code class="inline">connect/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="connect/3">
+
+  <div class="detail-header">
+    <a href="#connect/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">connect(self, outPin, inpPin)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L12" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="dump!/1">
+
+  <div class="detail-header">
+    <a href="#dump!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dump!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L27" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dump/1"><code class="inline">dump/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dump/1">
+
+  <div class="detail-header">
+    <a href="#dump/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dump(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="dumpToFile!/2">
+
+  <div class="detail-header">
+    <a href="#dumpToFile!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dumpToFile!(self, path)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L36" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dumpToFile/2"><code class="inline">dumpToFile/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dumpToFile/2">
+
+  <div class="detail-header">
+    <a href="#dumpToFile/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dumpToFile(self, path)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L29" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="empty!/1">
+
+  <div class="detail-header">
+    <a href="#empty!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">empty!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L43" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#empty/1"><code class="inline">empty/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="empty/1">
+
+  <div class="detail-header">
+    <a href="#empty/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">empty(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="enableFusion!/2">
+
+  <div class="detail-header">
+    <a href="#enableFusion!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">enableFusion!(self, fusion)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L52" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#enableFusion/2"><code class="inline">enableFusion/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="enableFusion/2">
+
+  <div class="detail-header">
+    <a href="#enableFusion/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">enableFusion(self, fusion)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L45" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="forward!/2">
+
+  <div class="detail-header">
+    <a href="#forward!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">forward!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L68" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#forward/2"><code class="inline">forward/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="forward/2">
+
+    <span id="forward/1"></span>
+
+  <div class="detail-header">
+    <a href="#forward/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">forward(self, opts \\ [])</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L65" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p><ul><li><strong>outputBlobs</strong>.</li><li><strong>outBlobNames</strong>.</li><li><strong>outputBlobs</strong> : vector_UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">forward</span><span class="p" data-group-id="3856628835-1">(</span><span class="n">outBlobNames</span><span class="p" data-group-id="3856628835-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputBlobs</span><span class="p" data-group-id="3856628835-2">]</span><span class="p" data-group-id="3856628835-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputBlobs</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="forwardAndRetrieve!/2">
+
+  <div class="detail-header">
+    <a href="#forwardAndRetrieve!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">forwardAndRetrieve!(self, outBlobNames)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L77" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#forwardAndRetrieve/2"><code class="inline">forwardAndRetrieve/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="forwardAndRetrieve/2">
+
+  <div class="detail-header">
+    <a href="#forwardAndRetrieve/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">forwardAndRetrieve(self, outBlobNames)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L70" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="forwardAsync!/1">
+
+  <div class="detail-header">
+    <a href="#forwardAsync!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">forwardAsync!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L84" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#forwardAsync/1"><code class="inline">forwardAsync/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="forwardAsync/1">
+
+  <div class="detail-header">
+    <a href="#forwardAsync/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">forwardAsync(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L79" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getFLOPS!/2">
+
+  <div class="detail-header">
+    <a href="#getFLOPS!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getFLOPS!(self, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L93" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getFLOPS/2"><code class="inline">getFLOPS/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getFLOPS!/3">
+
+  <div class="detail-header">
+    <a href="#getFLOPS!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getFLOPS!(self, layerId, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L111" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getFLOPS/3"><code class="inline">getFLOPS/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getFLOPS/2">
+
+  <div class="detail-header">
+    <a href="#getFLOPS/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getFLOPS(self, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L86" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getFLOPS/3">
+
+  <div class="detail-header">
+    <a href="#getFLOPS/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getFLOPS(self, layerId, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L103" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getInputDetails!/1">
+
+  <div class="detail-header">
+    <a href="#getInputDetails!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getInputDetails!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L127" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getInputDetails/1"><code class="inline">getInputDetails/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getInputDetails/1">
+
+  <div class="detail-header">
+    <a href="#getInputDetails/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getInputDetails(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L122" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getLayer!/2">
+
+  <div class="detail-header">
+    <a href="#getLayer!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayer!(self, layerName)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L136" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLayer/2"><code class="inline">getLayer/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLayer/2">
+
+  <div class="detail-header">
+    <a href="#getLayer/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayer(self, layerName)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L129" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getLayerId!/2">
+
+  <div class="detail-header">
+    <a href="#getLayerId!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerId!(self, layer)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L160" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLayerId/2"><code class="inline">getLayerId/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLayerId/2">
+
+  <div class="detail-header">
+    <a href="#getLayerId/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerId(self, layer)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L153" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getLayerNames!/1">
+
+  <div class="detail-header">
+    <a href="#getLayerNames!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerNames!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L167" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLayerNames/1"><code class="inline">getLayerNames/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLayerNames/1">
+
+  <div class="detail-header">
+    <a href="#getLayerNames/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerNames(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L162" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getLayerShapes!/2">
+
+  <div class="detail-header">
+    <a href="#getLayerShapes!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerShapes!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L181" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLayerShapes/2"><code class="inline">getLayerShapes/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLayerShapes/2">
+
+    <span id="getLayerShapes/1"></span>
+
+  <div class="detail-header">
+    <a href="#getLayerShapes/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerShapes(self, opts \\ [])</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L178" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayerShapes</span><span class="p" data-group-id="3258000508-1">(</span><span class="n">netInputShapes</span><span class="p">,</span><span class="w"> </span><span class="n">layerId</span><span class="p" data-group-id="3258000508-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">inLayerShapes</span><span class="p">,</span><span class="w"> </span><span class="n">outLayerShapes</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="getLayersCount!/2">
+
+  <div class="detail-header">
+    <a href="#getLayersCount!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayersCount!(self, layerType)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L197" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLayersCount/2"><code class="inline">getLayersCount/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLayersCount/2">
+
+  <div class="detail-header">
+    <a href="#getLayersCount/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayersCount(self, layerType)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L190" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getLayersShapes!/2">
+
+  <div class="detail-header">
+    <a href="#getLayersShapes!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayersShapes!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L211" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLayersShapes/2"><code class="inline">getLayersShapes/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLayersShapes/2">
+
+    <span id="getLayersShapes/1"></span>
+
+  <div class="detail-header">
+    <a href="#getLayersShapes/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayersShapes(self, opts \\ [])</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L208" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayersShapes</span><span class="p" data-group-id="1931621854-1">(</span><span class="n">netInputShape</span><span class="p" data-group-id="1931621854-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">layersIds</span><span class="p">,</span><span class="w"> </span><span class="n">inLayersShapes</span><span class="p">,</span><span class="w"> </span><span class="n">outLayersShapes</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="getLayerTypes!/1">
+
+  <div class="detail-header">
+    <a href="#getLayerTypes!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerTypes!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L188" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLayerTypes/1"><code class="inline">getLayerTypes/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLayerTypes/1">
+
+  <div class="detail-header">
+    <a href="#getLayerTypes/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLayerTypes(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L183" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getMemoryConsumption!/2">
+
+  <div class="detail-header">
+    <a href="#getMemoryConsumption!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMemoryConsumption!(self, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L220" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getMemoryConsumption/2"><code class="inline">getMemoryConsumption/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getMemoryConsumption!/3">
+
+  <div class="detail-header">
+    <a href="#getMemoryConsumption!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMemoryConsumption!(self, layerId, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L230" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getMemoryConsumption/3"><code class="inline">getMemoryConsumption/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getMemoryConsumption/2">
+
+  <div class="detail-header">
+    <a href="#getMemoryConsumption/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMemoryConsumption(self, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L213" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getMemoryConsumption/3">
+
+  <div class="detail-header">
+    <a href="#getMemoryConsumption/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMemoryConsumption(self, layerId, netInputShape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L222" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getOutputDetails!/1">
+
+  <div class="detail-header">
+    <a href="#getOutputDetails!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getOutputDetails!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L246" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getOutputDetails/1"><code class="inline">getOutputDetails/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getOutputDetails/1">
+
+  <div class="detail-header">
+    <a href="#getOutputDetails/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getOutputDetails(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L241" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getParam!/2">
+
+  <div class="detail-header">
+    <a href="#getParam!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getParam!(self, layerName)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L272" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getParam/2"><code class="inline">getParam/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getParam!/3">
+
+  <div class="detail-header">
+    <a href="#getParam!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getParam!(self, layerName, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L263" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getParam/3"><code class="inline">getParam/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getParam/2">
+
+  <div class="detail-header">
+    <a href="#getParam/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getParam(self, layerName)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L265" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getParam/3">
+
+  <div class="detail-header">
+    <a href="#getParam/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getParam(self, layerName, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L256" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<ul><li><strong>numParam</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getParam</span><span class="p" data-group-id="0095456274-1">(</span><span class="n">layerName</span><span class="p" data-group-id="0095456274-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">numParam</span><span class="p" data-group-id="0095456274-2">]</span><span class="p" data-group-id="0095456274-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="getPerfProfile!/1">
+
+  <div class="detail-header">
+    <a href="#getPerfProfile!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getPerfProfile!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L304" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getPerfProfile/1"><code class="inline">getPerfProfile/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getPerfProfile/1">
+
+  <div class="detail-header">
+    <a href="#getPerfProfile/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getPerfProfile(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L299" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getUnconnectedOutLayers!/1">
+
+  <div class="detail-header">
+    <a href="#getUnconnectedOutLayers!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getUnconnectedOutLayers!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L311" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getUnconnectedOutLayers/1"><code class="inline">getUnconnectedOutLayers/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getUnconnectedOutLayers/1">
+
+  <div class="detail-header">
+    <a href="#getUnconnectedOutLayers/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getUnconnectedOutLayers(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L306" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getUnconnectedOutLayersNames!/1">
+
+  <div class="detail-header">
+    <a href="#getUnconnectedOutLayersNames!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getUnconnectedOutLayersNames!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L318" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getUnconnectedOutLayersNames/1"><code class="inline">getUnconnectedOutLayersNames/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getUnconnectedOutLayersNames/1">
+
+  <div class="detail-header">
+    <a href="#getUnconnectedOutLayersNames/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getUnconnectedOutLayersNames(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L313" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="net!/0">
+
+  <div class="detail-header">
+    <a href="#net!/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">net!()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L10" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#net/0"><code class="inline">net/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="net/0">
+
+  <div class="detail-header">
+    <a href="#net/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">net()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L5" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="quantize!/4">
+
+  <div class="detail-header">
+    <a href="#quantize!/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">quantize!(self, calibData, inputsDtype, outputsDtype)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L329" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#quantize/4"><code class="inline">quantize/4</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="quantize/4">
+
+  <div class="detail-header">
+    <a href="#quantize/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">quantize(self, calibData, inputsDtype, outputsDtype)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L320" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readFromModelOptimizer!/2">
+
+  <div class="detail-header">
+    <a href="#readFromModelOptimizer!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readFromModelOptimizer!(bufferModelConfig, bufferWeights)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L339" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readFromModelOptimizer/2"><code class="inline">readFromModelOptimizer/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readFromModelOptimizer/2">
+
+  <div class="detail-header">
+    <a href="#readFromModelOptimizer/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readFromModelOptimizer(bufferModelConfig, bufferWeights)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L331" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setHalideScheduler!/2">
+
+  <div class="detail-header">
+    <a href="#setHalideScheduler!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setHalideScheduler!(self, scheduler)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L357" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setHalideScheduler/2"><code class="inline">setHalideScheduler/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setHalideScheduler/2">
+
+  <div class="detail-header">
+    <a href="#setHalideScheduler/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setHalideScheduler(self, scheduler)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L350" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setInput!/2">
+
+  <div class="detail-header">
+    <a href="#setInput!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInput!(self, blob)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L394" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setInput/2"><code class="inline">setInput/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setInput!/3">
+
+  <div class="detail-header">
+    <a href="#setInput!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInput!(self, blob, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L385" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setInput/3"><code class="inline">setInput/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setInput/2">
+
+  <div class="detail-header">
+    <a href="#setInput/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInput(self, blob)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L387" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setInput/3">
+
+  <div class="detail-header">
+    <a href="#setInput/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInput(self, blob, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L378" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Sets the new input value for the network</p><ul><li><strong>blob</strong>.</li><li><strong>name</strong>.</li><li><strong>scalefactor</strong>.</li><li><strong>mean</strong>.
+@see connect(String, String) to know format of the descriptor.
+  If scale or mean values are specified, a final input blob is computed
+  as:
+ \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f]</li><li><strong>name</strong> : String</li><li><strong>scalefactor</strong> : double</li><li><strong>mean</strong> : Scalar</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInput</span><span class="p" data-group-id="2286317745-1">(</span><span class="n">blob</span><span class="p" data-group-id="2286317745-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="2286317745-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">scalefactor</span><span class="p" data-group-id="2286317745-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p" data-group-id="2286317745-4">]</span><span class="p" data-group-id="2286317745-3">]</span><span class="p" data-group-id="2286317745-2">]</span><span class="p" data-group-id="2286317745-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="setInputShape!/3">
+
+  <div class="detail-header">
+    <a href="#setInputShape!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInputShape!(self, inputName, shape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L404" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setInputShape/3"><code class="inline">setInputShape/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setInputShape/3">
+
+  <div class="detail-header">
+    <a href="#setInputShape/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInputShape(self, inputName, shape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L396" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setInputsNames!/2">
+
+  <div class="detail-header">
+    <a href="#setInputsNames!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInputsNames!(self, inputBlobNames)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L413" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setInputsNames/2"><code class="inline">setInputsNames/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setInputsNames/2">
+
+  <div class="detail-header">
+    <a href="#setInputsNames/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setInputsNames(self, inputBlobNames)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L406" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setParam!/4">
+
+  <div class="detail-header">
+    <a href="#setParam!/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setParam!(self, layerName, numParam, blob)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L424" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setParam/4"><code class="inline">setParam/4</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setParam/4">
+
+  <div class="detail-header">
+    <a href="#setParam/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setParam(self, layerName, numParam, blob)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L415" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setPreferableBackend!/2">
+
+  <div class="detail-header">
+    <a href="#setPreferableBackend!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setPreferableBackend!(self, backendId)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L443" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setPreferableBackend/2"><code class="inline">setPreferableBackend/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setPreferableBackend/2">
+
+  <div class="detail-header">
+    <a href="#setPreferableBackend/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setPreferableBackend(self, backendId)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L436" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setPreferableTarget!/2">
+
+  <div class="detail-header">
+    <a href="#setPreferableTarget!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setPreferableTarget!(self, targetId)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L452" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setPreferableTarget/2"><code class="inline">setPreferableTarget/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setPreferableTarget/2">
+
+  <div class="detail-header">
+    <a href="#setPreferableTarget/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setPreferableTarget(self, targetId)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_net.ex#L445" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn_net.ex">(current file)</a>
+
+            </span>
+
+            <button class="line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["\\f$", "\\f$"]],
+            displayMath: [["\\f[", "\\f]"]],
+            skipTags: ["script", "noscript", "style", "textarea"],
+            processEnvironments: false
+        },
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+    });
+    //<![CDATA[
+    MathJax.Hub.Config(
+    {
+        TeX: {
+            Macros: {
+                matTT: ["\\[ \\left|\\begin{array}{ccc} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{array}\\right| \\]", 9],
+                fork: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ \\end{array} \\right.", 4],
+                forkthree: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ \\end{array} \\right.", 6],
+                forkfour: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ #7 & \\mbox{#8}\\\\ \\end{array} \\right.", 8],
+                vecthree: ["\\begin{bmatrix} #1\\\\ #2\\\\ #3 \\end{bmatrix}", 3],
+                vecthreethree: ["\\begin{bmatrix} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{bmatrix}", 9],
+                cameramatrix: ["#1 = \\begin{bmatrix} f_x & 0 & c_x\\\\ 0 & f_y & c_y\\\\ 0 & 0 & 1 \\end{bmatrix}", 1],
+                distcoeffs: ["(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]]) \\text{ of 4, 5, 8, 12 or 14 elements}"],
+                distcoeffsfisheye: ["(k_1, k_2, k_3, k_4)"],
+                hdotsfor: ["\\dots", 1],
+                mathbbm: ["\\mathbb{#1}", 1],
+                bordermatrix: ["\\matrix{#1}", 1]
+            }
+        }
+    }
+    );
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
+    
+  </body>
+</html>

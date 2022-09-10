@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.5-dev">
+
+    <title>Evision.UsacParams — Evision v0.1.5-dev</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+
+    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+
+
+  </head>
+  <body data-type="modules">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
+Evision
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.5-dev
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">Evision.UsacParams</span> 
+  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+
+</h1>
+
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-cv summary">
+    <h2>
+      <a href="#cv">cv</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#usacParams/0" translate="no">usacParams()</a>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_confidence!/1" translate="no">get_confidence!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_confidence/1"><code class="inline">get_confidence/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_confidence/1" translate="no">get_confidence(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_isParallel!/1" translate="no">get_isParallel!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_isParallel/1"><code class="inline">get_isParallel/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_isParallel/1" translate="no">get_isParallel(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_loIterations!/1" translate="no">get_loIterations!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_loIterations/1"><code class="inline">get_loIterations/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_loIterations/1" translate="no">get_loIterations(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_loMethod!/1" translate="no">get_loMethod!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_loMethod/1"><code class="inline">get_loMethod/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_loMethod/1" translate="no">get_loMethod(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_loSampleSize!/1" translate="no">get_loSampleSize!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_loSampleSize/1"><code class="inline">get_loSampleSize/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_loSampleSize/1" translate="no">get_loSampleSize(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_maxIterations!/1" translate="no">get_maxIterations!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_maxIterations/1"><code class="inline">get_maxIterations/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_maxIterations/1" translate="no">get_maxIterations(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_neighborsSearch!/1" translate="no">get_neighborsSearch!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_neighborsSearch/1"><code class="inline">get_neighborsSearch/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_neighborsSearch/1" translate="no">get_neighborsSearch(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_randomGeneratorState!/1" translate="no">get_randomGeneratorState!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_randomGeneratorState/1"><code class="inline">get_randomGeneratorState/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_randomGeneratorState/1" translate="no">get_randomGeneratorState(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_sampler!/1" translate="no">get_sampler!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_sampler/1"><code class="inline">get_sampler/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_sampler/1" translate="no">get_sampler(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_score!/1" translate="no">get_score!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_score/1"><code class="inline">get_score/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_score/1" translate="no">get_score(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_threshold!/1" translate="no">get_threshold!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#get_threshold/1"><code class="inline">get_threshold/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#get_threshold/1" translate="no">get_threshold(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_confidence!/2" translate="no">set_confidence!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_confidence/2"><code class="inline">set_confidence/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_confidence/2" translate="no">set_confidence(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_isParallel!/2" translate="no">set_isParallel!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_isParallel/2"><code class="inline">set_isParallel/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_isParallel/2" translate="no">set_isParallel(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_loIterations!/2" translate="no">set_loIterations!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_loIterations/2"><code class="inline">set_loIterations/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_loIterations/2" translate="no">set_loIterations(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_loMethod!/2" translate="no">set_loMethod!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_loMethod/2"><code class="inline">set_loMethod/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_loMethod/2" translate="no">set_loMethod(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_loSampleSize!/2" translate="no">set_loSampleSize!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_loSampleSize/2"><code class="inline">set_loSampleSize/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_loSampleSize/2" translate="no">set_loSampleSize(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_maxIterations!/2" translate="no">set_maxIterations!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_maxIterations/2"><code class="inline">set_maxIterations/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_maxIterations/2" translate="no">set_maxIterations(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_neighborsSearch!/2" translate="no">set_neighborsSearch!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_neighborsSearch/2"><code class="inline">set_neighborsSearch/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_neighborsSearch/2" translate="no">set_neighborsSearch(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_randomGeneratorState!/2" translate="no">set_randomGeneratorState!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_randomGeneratorState/2"><code class="inline">set_randomGeneratorState/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_randomGeneratorState/2" translate="no">set_randomGeneratorState(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_sampler!/2" translate="no">set_sampler!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_sampler/2"><code class="inline">set_sampler/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_sampler/2" translate="no">set_sampler(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_score!/2" translate="no">set_score!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_score/2"><code class="inline">set_score/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_score/2" translate="no">set_score(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_threshold!/2" translate="no">set_threshold!(self, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#set_threshold/2"><code class="inline">set_threshold/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#set_threshold/2" translate="no">set_threshold(self, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#usacParams!/0" translate="no">usacParams!()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#usacParams/0"><code class="inline">usacParams/0</code></a>.</p></div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="cv" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#cv">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+cv
+    </h1>
+    <div class="cv-list">
+<section class="detail" id="usacParams/0">
+
+  <div class="detail-header">
+    <a href="#usacParams/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">usacParams()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L5" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="get_confidence!/1">
+
+  <div class="detail-header">
+    <a href="#get_confidence!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_confidence!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L14" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_confidence/1"><code class="inline">get_confidence/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_confidence/1">
+
+  <div class="detail-header">
+    <a href="#get_confidence/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_confidence(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L11" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_isParallel!/1">
+
+  <div class="detail-header">
+    <a href="#get_isParallel!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_isParallel!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_isParallel/1"><code class="inline">get_isParallel/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_isParallel/1">
+
+  <div class="detail-header">
+    <a href="#get_isParallel/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_isParallel(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L19" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_loIterations!/1">
+
+  <div class="detail-header">
+    <a href="#get_loIterations!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_loIterations!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L30" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_loIterations/1"><code class="inline">get_loIterations/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_loIterations/1">
+
+  <div class="detail-header">
+    <a href="#get_loIterations/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_loIterations(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L27" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_loMethod!/1">
+
+  <div class="detail-header">
+    <a href="#get_loMethod!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_loMethod!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_loMethod/1"><code class="inline">get_loMethod/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_loMethod/1">
+
+  <div class="detail-header">
+    <a href="#get_loMethod/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_loMethod(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L35" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_loSampleSize!/1">
+
+  <div class="detail-header">
+    <a href="#get_loSampleSize!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_loSampleSize!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L46" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_loSampleSize/1"><code class="inline">get_loSampleSize/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_loSampleSize/1">
+
+  <div class="detail-header">
+    <a href="#get_loSampleSize/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_loSampleSize(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L43" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_maxIterations!/1">
+
+  <div class="detail-header">
+    <a href="#get_maxIterations!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_maxIterations!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L54" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_maxIterations/1"><code class="inline">get_maxIterations/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_maxIterations/1">
+
+  <div class="detail-header">
+    <a href="#get_maxIterations/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_maxIterations(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L51" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_neighborsSearch!/1">
+
+  <div class="detail-header">
+    <a href="#get_neighborsSearch!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_neighborsSearch!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L62" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_neighborsSearch/1"><code class="inline">get_neighborsSearch/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_neighborsSearch/1">
+
+  <div class="detail-header">
+    <a href="#get_neighborsSearch/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_neighborsSearch(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L59" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_randomGeneratorState!/1">
+
+  <div class="detail-header">
+    <a href="#get_randomGeneratorState!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_randomGeneratorState!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L70" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_randomGeneratorState/1"><code class="inline">get_randomGeneratorState/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_randomGeneratorState/1">
+
+  <div class="detail-header">
+    <a href="#get_randomGeneratorState/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_randomGeneratorState(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L67" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_sampler!/1">
+
+  <div class="detail-header">
+    <a href="#get_sampler!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_sampler!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L78" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_sampler/1"><code class="inline">get_sampler/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_sampler/1">
+
+  <div class="detail-header">
+    <a href="#get_sampler/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_sampler(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L75" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_score!/1">
+
+  <div class="detail-header">
+    <a href="#get_score!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_score!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L86" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_score/1"><code class="inline">get_score/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_score/1">
+
+  <div class="detail-header">
+    <a href="#get_score/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_score(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L83" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_threshold!/1">
+
+  <div class="detail-header">
+    <a href="#get_threshold!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_threshold!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L94" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#get_threshold/1"><code class="inline">get_threshold/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="get_threshold/1">
+
+  <div class="detail-header">
+    <a href="#get_threshold/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_threshold(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L91" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_confidence!/2">
+
+  <div class="detail-header">
+    <a href="#set_confidence!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_confidence!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L18" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_confidence/2"><code class="inline">set_confidence/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_confidence/2">
+
+  <div class="detail-header">
+    <a href="#set_confidence/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_confidence(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L15" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_isParallel!/2">
+
+  <div class="detail-header">
+    <a href="#set_isParallel!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_isParallel!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L26" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_isParallel/2"><code class="inline">set_isParallel/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_isParallel/2">
+
+  <div class="detail-header">
+    <a href="#set_isParallel/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_isParallel(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L23" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_loIterations!/2">
+
+  <div class="detail-header">
+    <a href="#set_loIterations!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_loIterations!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L34" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_loIterations/2"><code class="inline">set_loIterations/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_loIterations/2">
+
+  <div class="detail-header">
+    <a href="#set_loIterations/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_loIterations(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L31" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_loMethod!/2">
+
+  <div class="detail-header">
+    <a href="#set_loMethod!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_loMethod!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L42" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_loMethod/2"><code class="inline">set_loMethod/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_loMethod/2">
+
+  <div class="detail-header">
+    <a href="#set_loMethod/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_loMethod(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L39" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_loSampleSize!/2">
+
+  <div class="detail-header">
+    <a href="#set_loSampleSize!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_loSampleSize!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L50" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_loSampleSize/2"><code class="inline">set_loSampleSize/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_loSampleSize/2">
+
+  <div class="detail-header">
+    <a href="#set_loSampleSize/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_loSampleSize(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L47" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_maxIterations!/2">
+
+  <div class="detail-header">
+    <a href="#set_maxIterations!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_maxIterations!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L58" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_maxIterations/2"><code class="inline">set_maxIterations/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_maxIterations/2">
+
+  <div class="detail-header">
+    <a href="#set_maxIterations/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_maxIterations(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L55" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_neighborsSearch!/2">
+
+  <div class="detail-header">
+    <a href="#set_neighborsSearch!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_neighborsSearch!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L66" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_neighborsSearch/2"><code class="inline">set_neighborsSearch/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_neighborsSearch/2">
+
+  <div class="detail-header">
+    <a href="#set_neighborsSearch/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_neighborsSearch(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L63" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_randomGeneratorState!/2">
+
+  <div class="detail-header">
+    <a href="#set_randomGeneratorState!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_randomGeneratorState!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L74" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_randomGeneratorState/2"><code class="inline">set_randomGeneratorState/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_randomGeneratorState/2">
+
+  <div class="detail-header">
+    <a href="#set_randomGeneratorState/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_randomGeneratorState(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L71" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_sampler!/2">
+
+  <div class="detail-header">
+    <a href="#set_sampler!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_sampler!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L82" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_sampler/2"><code class="inline">set_sampler/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_sampler/2">
+
+  <div class="detail-header">
+    <a href="#set_sampler/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_sampler(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L79" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_score!/2">
+
+  <div class="detail-header">
+    <a href="#set_score!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_score!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L90" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_score/2"><code class="inline">set_score/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_score/2">
+
+  <div class="detail-header">
+    <a href="#set_score/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_score(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L87" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="set_threshold!/2">
+
+  <div class="detail-header">
+    <a href="#set_threshold!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_threshold!(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L98" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#set_threshold/2"><code class="inline">set_threshold/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="set_threshold/2">
+
+  <div class="detail-header">
+    <a href="#set_threshold/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">set_threshold(self, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L95" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="usacParams!/0">
+
+  <div class="detail-header">
+    <a href="#usacParams!/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">usacParams!()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_usacparams.ex#L10" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#usacParams/0"><code class="inline">usacParams/0</code></a>.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_usacparams.ex">(current file)</a>
+
+            </span>
+
+            <button class="line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["\\f$", "\\f$"]],
+            displayMath: [["\\f[", "\\f]"]],
+            skipTags: ["script", "noscript", "style", "textarea"],
+            processEnvironments: false
+        },
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+    });
+    //<![CDATA[
+    MathJax.Hub.Config(
+    {
+        TeX: {
+            Macros: {
+                matTT: ["\\[ \\left|\\begin{array}{ccc} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{array}\\right| \\]", 9],
+                fork: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ \\end{array} \\right.", 4],
+                forkthree: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ \\end{array} \\right.", 6],
+                forkfour: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ #7 & \\mbox{#8}\\\\ \\end{array} \\right.", 8],
+                vecthree: ["\\begin{bmatrix} #1\\\\ #2\\\\ #3 \\end{bmatrix}", 3],
+                vecthreethree: ["\\begin{bmatrix} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{bmatrix}", 9],
+                cameramatrix: ["#1 = \\begin{bmatrix} f_x & 0 & c_x\\\\ 0 & f_y & c_y\\\\ 0 & 0 & 1 \\end{bmatrix}", 1],
+                distcoeffs: ["(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]]) \\text{ of 4, 5, 8, 12 or 14 elements}"],
+                distcoeffsfisheye: ["(k_1, k_2, k_3, k_4)"],
+                hdotsfor: ["\\dots", 1],
+                mathbbm: ["\\mathbb{#1}", 1],
+                bordermatrix: ["\\matrix{#1}", 1]
+            }
+        }
+    }
+    );
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
+    
+  </body>
+</html>

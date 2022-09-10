@@ -1,0 +1,3826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.5-dev">
+
+    <title>Evision.CUDA.DeviceInfo — Evision v0.1.5-dev</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+
+    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+
+
+  </head>
+  <body data-type="modules">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
+Evision
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.5-dev
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">Evision.CUDA.DeviceInfo</span> 
+  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+
+</h1>
+
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-cv-cuda summary">
+    <h2>
+      <a href="#cv-cuda">cv.cuda</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#asyncEngineCount/1" translate="no">asyncEngineCount(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#canMapHostMemory/1" translate="no">canMapHostMemory(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#clockRate/1" translate="no">clockRate(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#computeMode/1" translate="no">computeMode(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#concurrentKernels/1" translate="no">concurrentKernels(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#deviceID/1" translate="no">deviceID(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#deviceInfo/0" translate="no">deviceInfo()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#deviceInfo/1" translate="no">deviceInfo(device_id)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#eccEnabled/1" translate="no">eccEnabled(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#freeMemory/1" translate="no">freeMemory(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#integrated/1" translate="no">integrated(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#isCompatible/1" translate="no">isCompatible(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#kernelExecTimeoutEnabled/1" translate="no">kernelExecTimeoutEnabled(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#l2CacheSize/1" translate="no">l2CacheSize(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#majorVersion/1" translate="no">majorVersion(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxGridSize/1" translate="no">maxGridSize(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface1D/1" translate="no">maxSurface1D(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface1DLayered/1" translate="no">maxSurface1DLayered(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface2D/1" translate="no">maxSurface2D(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface2DLayered/1" translate="no">maxSurface2DLayered(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface3D/1" translate="no">maxSurface3D(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurfaceCubemap/1" translate="no">maxSurfaceCubemap(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurfaceCubemapLayered/1" translate="no">maxSurfaceCubemapLayered(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1D/1" translate="no">maxTexture1D(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1DLayered/1" translate="no">maxTexture1DLayered(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1DLinear/1" translate="no">maxTexture1DLinear(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1DMipmap/1" translate="no">maxTexture1DMipmap(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2D/1" translate="no">maxTexture2D(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DGather/1" translate="no">maxTexture2DGather(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DLayered/1" translate="no">maxTexture2DLayered(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DLinear/1" translate="no">maxTexture2DLinear(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DMipmap/1" translate="no">maxTexture2DMipmap(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture3D/1" translate="no">maxTexture3D(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTextureCubemap/1" translate="no">maxTextureCubemap(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTextureCubemapLayered/1" translate="no">maxTextureCubemapLayered(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxThreadsDim/1" translate="no">maxThreadsDim(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxThreadsPerBlock/1" translate="no">maxThreadsPerBlock(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxThreadsPerMultiProcessor/1" translate="no">maxThreadsPerMultiProcessor(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#memoryBusWidth/1" translate="no">memoryBusWidth(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#memoryClockRate/1" translate="no">memoryClockRate(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#memPitch/1" translate="no">memPitch(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#minorVersion/1" translate="no">minorVersion(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#multiProcessorCount/1" translate="no">multiProcessorCount(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#pciBusID/1" translate="no">pciBusID(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#pciDeviceID/1" translate="no">pciDeviceID(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#pciDomainID/1" translate="no">pciDomainID(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#queryMemory/3" translate="no">queryMemory(self, totalMemory, freeMemory)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#regsPerBlock/1" translate="no">regsPerBlock(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#sharedMemPerBlock/1" translate="no">sharedMemPerBlock(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#surfaceAlignment/1" translate="no">surfaceAlignment(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#tccDriver/1" translate="no">tccDriver(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#textureAlignment/1" translate="no">textureAlignment(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#texturePitchAlignment/1" translate="no">texturePitchAlignment(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#totalConstMem/1" translate="no">totalConstMem(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#totalGlobalMem/1" translate="no">totalGlobalMem(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#totalMemory/1" translate="no">totalMemory(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#unifiedAddressing/1" translate="no">unifiedAddressing(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#warpSize/1" translate="no">warpSize(self)</a>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#asyncEngineCount!/1" translate="no">asyncEngineCount!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#asyncEngineCount/1"><code class="inline">asyncEngineCount/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#canMapHostMemory!/1" translate="no">canMapHostMemory!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#canMapHostMemory/1"><code class="inline">canMapHostMemory/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#clockRate!/1" translate="no">clockRate!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#clockRate/1"><code class="inline">clockRate/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#computeMode!/1" translate="no">computeMode!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#computeMode/1"><code class="inline">computeMode/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#concurrentKernels!/1" translate="no">concurrentKernels!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#concurrentKernels/1"><code class="inline">concurrentKernels/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#deviceID!/1" translate="no">deviceID!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#deviceID/1"><code class="inline">deviceID/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#deviceInfo!/0" translate="no">deviceInfo!()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#deviceInfo/0"><code class="inline">deviceInfo/0</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#deviceInfo!/1" translate="no">deviceInfo!(device_id)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#deviceInfo/1"><code class="inline">deviceInfo/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#eccEnabled!/1" translate="no">eccEnabled!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#eccEnabled/1"><code class="inline">eccEnabled/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#freeMemory!/1" translate="no">freeMemory!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#freeMemory/1"><code class="inline">freeMemory/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#integrated!/1" translate="no">integrated!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#integrated/1"><code class="inline">integrated/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#isCompatible!/1" translate="no">isCompatible!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#isCompatible/1"><code class="inline">isCompatible/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#kernelExecTimeoutEnabled!/1" translate="no">kernelExecTimeoutEnabled!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#kernelExecTimeoutEnabled/1"><code class="inline">kernelExecTimeoutEnabled/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#l2CacheSize!/1" translate="no">l2CacheSize!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#l2CacheSize/1"><code class="inline">l2CacheSize/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#majorVersion!/1" translate="no">majorVersion!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#majorVersion/1"><code class="inline">majorVersion/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxGridSize!/1" translate="no">maxGridSize!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxGridSize/1"><code class="inline">maxGridSize/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface1D!/1" translate="no">maxSurface1D!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxSurface1D/1"><code class="inline">maxSurface1D/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface1DLayered!/1" translate="no">maxSurface1DLayered!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxSurface1DLayered/1"><code class="inline">maxSurface1DLayered/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface2D!/1" translate="no">maxSurface2D!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxSurface2D/1"><code class="inline">maxSurface2D/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface2DLayered!/1" translate="no">maxSurface2DLayered!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxSurface2DLayered/1"><code class="inline">maxSurface2DLayered/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurface3D!/1" translate="no">maxSurface3D!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxSurface3D/1"><code class="inline">maxSurface3D/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurfaceCubemap!/1" translate="no">maxSurfaceCubemap!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxSurfaceCubemap/1"><code class="inline">maxSurfaceCubemap/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxSurfaceCubemapLayered!/1" translate="no">maxSurfaceCubemapLayered!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxSurfaceCubemapLayered/1"><code class="inline">maxSurfaceCubemapLayered/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1D!/1" translate="no">maxTexture1D!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture1D/1"><code class="inline">maxTexture1D/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1DLayered!/1" translate="no">maxTexture1DLayered!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture1DLayered/1"><code class="inline">maxTexture1DLayered/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1DLinear!/1" translate="no">maxTexture1DLinear!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture1DLinear/1"><code class="inline">maxTexture1DLinear/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture1DMipmap!/1" translate="no">maxTexture1DMipmap!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture1DMipmap/1"><code class="inline">maxTexture1DMipmap/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2D!/1" translate="no">maxTexture2D!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture2D/1"><code class="inline">maxTexture2D/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DGather!/1" translate="no">maxTexture2DGather!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture2DGather/1"><code class="inline">maxTexture2DGather/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DLayered!/1" translate="no">maxTexture2DLayered!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture2DLayered/1"><code class="inline">maxTexture2DLayered/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DLinear!/1" translate="no">maxTexture2DLinear!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture2DLinear/1"><code class="inline">maxTexture2DLinear/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture2DMipmap!/1" translate="no">maxTexture2DMipmap!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture2DMipmap/1"><code class="inline">maxTexture2DMipmap/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTexture3D!/1" translate="no">maxTexture3D!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTexture3D/1"><code class="inline">maxTexture3D/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTextureCubemap!/1" translate="no">maxTextureCubemap!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTextureCubemap/1"><code class="inline">maxTextureCubemap/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxTextureCubemapLayered!/1" translate="no">maxTextureCubemapLayered!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxTextureCubemapLayered/1"><code class="inline">maxTextureCubemapLayered/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxThreadsDim!/1" translate="no">maxThreadsDim!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxThreadsDim/1"><code class="inline">maxThreadsDim/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxThreadsPerBlock!/1" translate="no">maxThreadsPerBlock!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxThreadsPerBlock/1"><code class="inline">maxThreadsPerBlock/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#maxThreadsPerMultiProcessor!/1" translate="no">maxThreadsPerMultiProcessor!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#maxThreadsPerMultiProcessor/1"><code class="inline">maxThreadsPerMultiProcessor/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#memoryBusWidth!/1" translate="no">memoryBusWidth!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#memoryBusWidth/1"><code class="inline">memoryBusWidth/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#memoryClockRate!/1" translate="no">memoryClockRate!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#memoryClockRate/1"><code class="inline">memoryClockRate/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#memPitch!/1" translate="no">memPitch!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#memPitch/1"><code class="inline">memPitch/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#minorVersion!/1" translate="no">minorVersion!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#minorVersion/1"><code class="inline">minorVersion/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#multiProcessorCount!/1" translate="no">multiProcessorCount!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#multiProcessorCount/1"><code class="inline">multiProcessorCount/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#pciBusID!/1" translate="no">pciBusID!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#pciBusID/1"><code class="inline">pciBusID/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#pciDeviceID!/1" translate="no">pciDeviceID!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#pciDeviceID/1"><code class="inline">pciDeviceID/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#pciDomainID!/1" translate="no">pciDomainID!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#pciDomainID/1"><code class="inline">pciDomainID/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#queryMemory!/3" translate="no">queryMemory!(self, totalMemory, freeMemory)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#queryMemory/3"><code class="inline">queryMemory/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#regsPerBlock!/1" translate="no">regsPerBlock!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#regsPerBlock/1"><code class="inline">regsPerBlock/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#sharedMemPerBlock!/1" translate="no">sharedMemPerBlock!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#sharedMemPerBlock/1"><code class="inline">sharedMemPerBlock/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#surfaceAlignment!/1" translate="no">surfaceAlignment!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#surfaceAlignment/1"><code class="inline">surfaceAlignment/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#tccDriver!/1" translate="no">tccDriver!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#tccDriver/1"><code class="inline">tccDriver/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#textureAlignment!/1" translate="no">textureAlignment!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#textureAlignment/1"><code class="inline">textureAlignment/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#texturePitchAlignment!/1" translate="no">texturePitchAlignment!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#texturePitchAlignment/1"><code class="inline">texturePitchAlignment/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#totalConstMem!/1" translate="no">totalConstMem!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#totalConstMem/1"><code class="inline">totalConstMem/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#totalGlobalMem!/1" translate="no">totalGlobalMem!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#totalGlobalMem/1"><code class="inline">totalGlobalMem/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#totalMemory!/1" translate="no">totalMemory!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#totalMemory/1"><code class="inline">totalMemory/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#unifiedAddressing!/1" translate="no">unifiedAddressing!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#unifiedAddressing/1"><code class="inline">unifiedAddressing/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#warpSize!/1" translate="no">warpSize!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#warpSize/1"><code class="inline">warpSize/1</code></a>.</p></div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="cv-cuda" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#cv-cuda">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+cv.cuda
+    </h1>
+    <div class="cv-cuda-list">
+<section class="detail" id="asyncEngineCount/1">
+
+  <div class="detail-header">
+    <a href="#asyncEngineCount/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">asyncEngineCount(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L28" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="canMapHostMemory/1">
+
+  <div class="detail-header">
+    <a href="#canMapHostMemory/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">canMapHostMemory(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L35" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="clockRate/1">
+
+  <div class="detail-header">
+    <a href="#clockRate/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">clockRate(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L42" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="computeMode/1">
+
+  <div class="detail-header">
+    <a href="#computeMode/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">computeMode(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L49" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="concurrentKernels/1">
+
+  <div class="detail-header">
+    <a href="#concurrentKernels/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">concurrentKernels(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L56" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="deviceID/1">
+
+  <div class="detail-header">
+    <a href="#deviceID/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">deviceID(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L63" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="deviceInfo/0">
+
+  <div class="detail-header">
+    <a href="#deviceInfo/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">deviceInfo()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L5" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="deviceInfo/1">
+
+  <div class="detail-header">
+    <a href="#deviceInfo/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">deviceInfo(device_id)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L12" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="eccEnabled/1">
+
+  <div class="detail-header">
+    <a href="#eccEnabled/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">eccEnabled(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L21" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="freeMemory/1">
+
+  <div class="detail-header">
+    <a href="#freeMemory/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">freeMemory(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L70" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="integrated/1">
+
+  <div class="detail-header">
+    <a href="#integrated/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">integrated(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L77" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="isCompatible/1">
+
+  <div class="detail-header">
+    <a href="#isCompatible/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">isCompatible(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L84" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="kernelExecTimeoutEnabled/1">
+
+  <div class="detail-header">
+    <a href="#kernelExecTimeoutEnabled/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">kernelExecTimeoutEnabled(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L91" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="l2CacheSize/1">
+
+  <div class="detail-header">
+    <a href="#l2CacheSize/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">l2CacheSize(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L98" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="majorVersion/1">
+
+  <div class="detail-header">
+    <a href="#majorVersion/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">majorVersion(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L105" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxGridSize/1">
+
+  <div class="detail-header">
+    <a href="#maxGridSize/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxGridSize(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L112" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxSurface1D/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface1D/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface1D(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L119" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxSurface1DLayered/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface1DLayered/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface1DLayered(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L126" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxSurface2D/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface2D/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface2D(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L133" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxSurface2DLayered/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface2DLayered/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface2DLayered(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L140" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxSurface3D/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface3D/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface3D(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L147" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxSurfaceCubemap/1">
+
+  <div class="detail-header">
+    <a href="#maxSurfaceCubemap/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurfaceCubemap(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L154" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxSurfaceCubemapLayered/1">
+
+  <div class="detail-header">
+    <a href="#maxSurfaceCubemapLayered/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurfaceCubemapLayered(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L161" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture1D/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1D/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1D(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L168" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture1DLayered/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1DLayered/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1DLayered(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L175" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture1DLinear/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1DLinear/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1DLinear(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L182" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture1DMipmap/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1DMipmap/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1DMipmap(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L189" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture2D/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2D/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2D(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L196" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture2DGather/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DGather/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DGather(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L203" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture2DLayered/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DLayered/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DLayered(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L210" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture2DLinear/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DLinear/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DLinear(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L217" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture2DMipmap/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DMipmap/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DMipmap(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L224" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTexture3D/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture3D/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture3D(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L231" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTextureCubemap/1">
+
+  <div class="detail-header">
+    <a href="#maxTextureCubemap/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTextureCubemap(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L238" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxTextureCubemapLayered/1">
+
+  <div class="detail-header">
+    <a href="#maxTextureCubemapLayered/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTextureCubemapLayered(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L245" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxThreadsDim/1">
+
+  <div class="detail-header">
+    <a href="#maxThreadsDim/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxThreadsDim(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L252" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxThreadsPerBlock/1">
+
+  <div class="detail-header">
+    <a href="#maxThreadsPerBlock/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxThreadsPerBlock(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L259" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maxThreadsPerMultiProcessor/1">
+
+  <div class="detail-header">
+    <a href="#maxThreadsPerMultiProcessor/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxThreadsPerMultiProcessor(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L266" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="memoryBusWidth/1">
+
+  <div class="detail-header">
+    <a href="#memoryBusWidth/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">memoryBusWidth(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L280" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="memoryClockRate/1">
+
+  <div class="detail-header">
+    <a href="#memoryClockRate/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">memoryClockRate(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L287" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="memPitch/1">
+
+  <div class="detail-header">
+    <a href="#memPitch/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">memPitch(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L273" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="minorVersion/1">
+
+  <div class="detail-header">
+    <a href="#minorVersion/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">minorVersion(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L294" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="multiProcessorCount/1">
+
+  <div class="detail-header">
+    <a href="#multiProcessorCount/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">multiProcessorCount(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L301" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="pciBusID/1">
+
+  <div class="detail-header">
+    <a href="#pciBusID/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">pciBusID(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L308" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="pciDeviceID/1">
+
+  <div class="detail-header">
+    <a href="#pciDeviceID/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">pciDeviceID(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L315" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="pciDomainID/1">
+
+  <div class="detail-header">
+    <a href="#pciDomainID/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">pciDomainID(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L322" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="queryMemory/3">
+
+  <div class="detail-header">
+    <a href="#queryMemory/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">queryMemory(self, totalMemory, freeMemory)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L329" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="regsPerBlock/1">
+
+  <div class="detail-header">
+    <a href="#regsPerBlock/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">regsPerBlock(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L339" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="sharedMemPerBlock/1">
+
+  <div class="detail-header">
+    <a href="#sharedMemPerBlock/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">sharedMemPerBlock(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L346" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="surfaceAlignment/1">
+
+  <div class="detail-header">
+    <a href="#surfaceAlignment/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">surfaceAlignment(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L353" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="tccDriver/1">
+
+  <div class="detail-header">
+    <a href="#tccDriver/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">tccDriver(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L360" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="textureAlignment/1">
+
+  <div class="detail-header">
+    <a href="#textureAlignment/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">textureAlignment(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L367" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="texturePitchAlignment/1">
+
+  <div class="detail-header">
+    <a href="#texturePitchAlignment/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">texturePitchAlignment(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L374" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="totalConstMem/1">
+
+  <div class="detail-header">
+    <a href="#totalConstMem/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">totalConstMem(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L381" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="totalGlobalMem/1">
+
+  <div class="detail-header">
+    <a href="#totalGlobalMem/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">totalGlobalMem(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L388" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="totalMemory/1">
+
+  <div class="detail-header">
+    <a href="#totalMemory/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">totalMemory(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L395" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="unifiedAddressing/1">
+
+  <div class="detail-header">
+    <a href="#unifiedAddressing/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">unifiedAddressing(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L402" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="warpSize/1">
+
+  <div class="detail-header">
+    <a href="#warpSize/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">warpSize(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L409" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="asyncEngineCount!/1">
+
+  <div class="detail-header">
+    <a href="#asyncEngineCount!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">asyncEngineCount!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L33" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#asyncEngineCount/1"><code class="inline">asyncEngineCount/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="canMapHostMemory!/1">
+
+  <div class="detail-header">
+    <a href="#canMapHostMemory!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">canMapHostMemory!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L40" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#canMapHostMemory/1"><code class="inline">canMapHostMemory/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="clockRate!/1">
+
+  <div class="detail-header">
+    <a href="#clockRate!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">clockRate!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L47" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#clockRate/1"><code class="inline">clockRate/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="computeMode!/1">
+
+  <div class="detail-header">
+    <a href="#computeMode!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">computeMode!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L54" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#computeMode/1"><code class="inline">computeMode/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="concurrentKernels!/1">
+
+  <div class="detail-header">
+    <a href="#concurrentKernels!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">concurrentKernels!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L61" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#concurrentKernels/1"><code class="inline">concurrentKernels/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="deviceID!/1">
+
+  <div class="detail-header">
+    <a href="#deviceID!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">deviceID!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L68" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#deviceID/1"><code class="inline">deviceID/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="deviceInfo!/0">
+
+  <div class="detail-header">
+    <a href="#deviceInfo!/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">deviceInfo!()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L10" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#deviceInfo/0"><code class="inline">deviceInfo/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="deviceInfo!/1">
+
+  <div class="detail-header">
+    <a href="#deviceInfo!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">deviceInfo!(device_id)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L19" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#deviceInfo/1"><code class="inline">deviceInfo/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="eccEnabled!/1">
+
+  <div class="detail-header">
+    <a href="#eccEnabled!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">eccEnabled!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L26" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#eccEnabled/1"><code class="inline">eccEnabled/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="freeMemory!/1">
+
+  <div class="detail-header">
+    <a href="#freeMemory!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">freeMemory!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L75" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#freeMemory/1"><code class="inline">freeMemory/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="integrated!/1">
+
+  <div class="detail-header">
+    <a href="#integrated!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">integrated!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L82" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#integrated/1"><code class="inline">integrated/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="isCompatible!/1">
+
+  <div class="detail-header">
+    <a href="#isCompatible!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">isCompatible!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L89" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#isCompatible/1"><code class="inline">isCompatible/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="kernelExecTimeoutEnabled!/1">
+
+  <div class="detail-header">
+    <a href="#kernelExecTimeoutEnabled!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">kernelExecTimeoutEnabled!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L96" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#kernelExecTimeoutEnabled/1"><code class="inline">kernelExecTimeoutEnabled/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="l2CacheSize!/1">
+
+  <div class="detail-header">
+    <a href="#l2CacheSize!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">l2CacheSize!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L103" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#l2CacheSize/1"><code class="inline">l2CacheSize/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="majorVersion!/1">
+
+  <div class="detail-header">
+    <a href="#majorVersion!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">majorVersion!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L110" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#majorVersion/1"><code class="inline">majorVersion/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxGridSize!/1">
+
+  <div class="detail-header">
+    <a href="#maxGridSize!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxGridSize!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L117" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxGridSize/1"><code class="inline">maxGridSize/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxSurface1D!/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface1D!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface1D!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L124" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxSurface1D/1"><code class="inline">maxSurface1D/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxSurface1DLayered!/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface1DLayered!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface1DLayered!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L131" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxSurface1DLayered/1"><code class="inline">maxSurface1DLayered/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxSurface2D!/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface2D!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface2D!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L138" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxSurface2D/1"><code class="inline">maxSurface2D/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxSurface2DLayered!/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface2DLayered!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface2DLayered!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L145" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxSurface2DLayered/1"><code class="inline">maxSurface2DLayered/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxSurface3D!/1">
+
+  <div class="detail-header">
+    <a href="#maxSurface3D!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurface3D!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L152" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxSurface3D/1"><code class="inline">maxSurface3D/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxSurfaceCubemap!/1">
+
+  <div class="detail-header">
+    <a href="#maxSurfaceCubemap!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurfaceCubemap!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L159" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxSurfaceCubemap/1"><code class="inline">maxSurfaceCubemap/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxSurfaceCubemapLayered!/1">
+
+  <div class="detail-header">
+    <a href="#maxSurfaceCubemapLayered!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxSurfaceCubemapLayered!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L166" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxSurfaceCubemapLayered/1"><code class="inline">maxSurfaceCubemapLayered/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture1D!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1D!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1D!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L173" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture1D/1"><code class="inline">maxTexture1D/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture1DLayered!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1DLayered!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1DLayered!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L180" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture1DLayered/1"><code class="inline">maxTexture1DLayered/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture1DLinear!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1DLinear!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1DLinear!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L187" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture1DLinear/1"><code class="inline">maxTexture1DLinear/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture1DMipmap!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture1DMipmap!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture1DMipmap!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L194" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture1DMipmap/1"><code class="inline">maxTexture1DMipmap/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture2D!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2D!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2D!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L201" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture2D/1"><code class="inline">maxTexture2D/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture2DGather!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DGather!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DGather!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L208" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture2DGather/1"><code class="inline">maxTexture2DGather/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture2DLayered!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DLayered!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DLayered!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L215" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture2DLayered/1"><code class="inline">maxTexture2DLayered/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture2DLinear!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DLinear!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DLinear!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L222" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture2DLinear/1"><code class="inline">maxTexture2DLinear/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture2DMipmap!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture2DMipmap!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture2DMipmap!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L229" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture2DMipmap/1"><code class="inline">maxTexture2DMipmap/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTexture3D!/1">
+
+  <div class="detail-header">
+    <a href="#maxTexture3D!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTexture3D!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L236" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTexture3D/1"><code class="inline">maxTexture3D/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTextureCubemap!/1">
+
+  <div class="detail-header">
+    <a href="#maxTextureCubemap!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTextureCubemap!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L243" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTextureCubemap/1"><code class="inline">maxTextureCubemap/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxTextureCubemapLayered!/1">
+
+  <div class="detail-header">
+    <a href="#maxTextureCubemapLayered!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxTextureCubemapLayered!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L250" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxTextureCubemapLayered/1"><code class="inline">maxTextureCubemapLayered/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxThreadsDim!/1">
+
+  <div class="detail-header">
+    <a href="#maxThreadsDim!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxThreadsDim!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L257" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxThreadsDim/1"><code class="inline">maxThreadsDim/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxThreadsPerBlock!/1">
+
+  <div class="detail-header">
+    <a href="#maxThreadsPerBlock!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxThreadsPerBlock!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L264" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxThreadsPerBlock/1"><code class="inline">maxThreadsPerBlock/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="maxThreadsPerMultiProcessor!/1">
+
+  <div class="detail-header">
+    <a href="#maxThreadsPerMultiProcessor!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maxThreadsPerMultiProcessor!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L271" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#maxThreadsPerMultiProcessor/1"><code class="inline">maxThreadsPerMultiProcessor/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="memoryBusWidth!/1">
+
+  <div class="detail-header">
+    <a href="#memoryBusWidth!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">memoryBusWidth!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L285" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#memoryBusWidth/1"><code class="inline">memoryBusWidth/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="memoryClockRate!/1">
+
+  <div class="detail-header">
+    <a href="#memoryClockRate!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">memoryClockRate!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L292" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#memoryClockRate/1"><code class="inline">memoryClockRate/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="memPitch!/1">
+
+  <div class="detail-header">
+    <a href="#memPitch!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">memPitch!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L278" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#memPitch/1"><code class="inline">memPitch/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="minorVersion!/1">
+
+  <div class="detail-header">
+    <a href="#minorVersion!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">minorVersion!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L299" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#minorVersion/1"><code class="inline">minorVersion/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="multiProcessorCount!/1">
+
+  <div class="detail-header">
+    <a href="#multiProcessorCount!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">multiProcessorCount!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L306" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#multiProcessorCount/1"><code class="inline">multiProcessorCount/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="pciBusID!/1">
+
+  <div class="detail-header">
+    <a href="#pciBusID!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">pciBusID!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L313" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#pciBusID/1"><code class="inline">pciBusID/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="pciDeviceID!/1">
+
+  <div class="detail-header">
+    <a href="#pciDeviceID!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">pciDeviceID!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L320" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#pciDeviceID/1"><code class="inline">pciDeviceID/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="pciDomainID!/1">
+
+  <div class="detail-header">
+    <a href="#pciDomainID!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">pciDomainID!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L327" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#pciDomainID/1"><code class="inline">pciDomainID/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="queryMemory!/3">
+
+  <div class="detail-header">
+    <a href="#queryMemory!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">queryMemory!(self, totalMemory, freeMemory)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L337" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#queryMemory/3"><code class="inline">queryMemory/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="regsPerBlock!/1">
+
+  <div class="detail-header">
+    <a href="#regsPerBlock!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">regsPerBlock!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L344" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#regsPerBlock/1"><code class="inline">regsPerBlock/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="sharedMemPerBlock!/1">
+
+  <div class="detail-header">
+    <a href="#sharedMemPerBlock!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">sharedMemPerBlock!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L351" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#sharedMemPerBlock/1"><code class="inline">sharedMemPerBlock/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="surfaceAlignment!/1">
+
+  <div class="detail-header">
+    <a href="#surfaceAlignment!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">surfaceAlignment!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L358" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#surfaceAlignment/1"><code class="inline">surfaceAlignment/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="tccDriver!/1">
+
+  <div class="detail-header">
+    <a href="#tccDriver!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">tccDriver!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L365" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#tccDriver/1"><code class="inline">tccDriver/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="textureAlignment!/1">
+
+  <div class="detail-header">
+    <a href="#textureAlignment!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">textureAlignment!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L372" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#textureAlignment/1"><code class="inline">textureAlignment/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="texturePitchAlignment!/1">
+
+  <div class="detail-header">
+    <a href="#texturePitchAlignment!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">texturePitchAlignment!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L379" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#texturePitchAlignment/1"><code class="inline">texturePitchAlignment/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="totalConstMem!/1">
+
+  <div class="detail-header">
+    <a href="#totalConstMem!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">totalConstMem!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L386" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#totalConstMem/1"><code class="inline">totalConstMem/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="totalGlobalMem!/1">
+
+  <div class="detail-header">
+    <a href="#totalGlobalMem!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">totalGlobalMem!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L393" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#totalGlobalMem/1"><code class="inline">totalGlobalMem/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="totalMemory!/1">
+
+  <div class="detail-header">
+    <a href="#totalMemory!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">totalMemory!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L400" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#totalMemory/1"><code class="inline">totalMemory/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="unifiedAddressing!/1">
+
+  <div class="detail-header">
+    <a href="#unifiedAddressing!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">unifiedAddressing!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L407" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#unifiedAddressing/1"><code class="inline">unifiedAddressing/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="warpSize!/1">
+
+  <div class="detail-header">
+    <a href="#warpSize!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">warpSize!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L414" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#warpSize/1"><code class="inline">warpSize/1</code></a>.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_cuda_deviceinfo.ex">(current file)</a>
+
+            </span>
+
+            <button class="line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["\\f$", "\\f$"]],
+            displayMath: [["\\f[", "\\f]"]],
+            skipTags: ["script", "noscript", "style", "textarea"],
+            processEnvironments: false
+        },
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+    });
+    //<![CDATA[
+    MathJax.Hub.Config(
+    {
+        TeX: {
+            Macros: {
+                matTT: ["\\[ \\left|\\begin{array}{ccc} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{array}\\right| \\]", 9],
+                fork: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ \\end{array} \\right.", 4],
+                forkthree: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ \\end{array} \\right.", 6],
+                forkfour: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ #7 & \\mbox{#8}\\\\ \\end{array} \\right.", 8],
+                vecthree: ["\\begin{bmatrix} #1\\\\ #2\\\\ #3 \\end{bmatrix}", 3],
+                vecthreethree: ["\\begin{bmatrix} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{bmatrix}", 9],
+                cameramatrix: ["#1 = \\begin{bmatrix} f_x & 0 & c_x\\\\ 0 & f_y & c_y\\\\ 0 & 0 & 1 \\end{bmatrix}", 1],
+                distcoeffs: ["(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]]) \\text{ of 4, 5, 8, 12 or 14 elements}"],
+                distcoeffsfisheye: ["(k_1, k_2, k_3, k_4)"],
+                hdotsfor: ["\\dots", 1],
+                mathbbm: ["\\mathbb{#1}", 1],
+                bordermatrix: ["\\matrix{#1}", 1]
+            }
+        }
+    }
+    );
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
+    
+  </body>
+</html>

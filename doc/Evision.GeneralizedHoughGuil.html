@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.5-dev">
+
+    <title>Evision.GeneralizedHoughGuil — Evision v0.1.5-dev</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+
+    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+
+
+  </head>
+  <body data-type="modules">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
+Evision
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.5-dev
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">Evision.GeneralizedHoughGuil</span> 
+  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+
+</h1>
+
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-cv summary">
+    <h2>
+      <a href="#cv">cv</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAngleEpsilon/1" translate="no">getAngleEpsilon(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAngleStep/1" translate="no">getAngleStep(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAngleThresh/1" translate="no">getAngleThresh(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLevels/1" translate="no">getLevels(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMaxAngle/1" translate="no">getMaxAngle(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMaxScale/1" translate="no">getMaxScale(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMinAngle/1" translate="no">getMinAngle(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMinScale/1" translate="no">getMinScale(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getPosThresh/1" translate="no">getPosThresh(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getScaleStep/1" translate="no">getScaleStep(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getScaleThresh/1" translate="no">getScaleThresh(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getXi/1" translate="no">getXi(self)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setAngleEpsilon/2" translate="no">setAngleEpsilon(self, angleEpsilon)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setAngleStep/2" translate="no">setAngleStep(self, angleStep)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setAngleThresh/2" translate="no">setAngleThresh(self, angleThresh)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setLevels/2" translate="no">setLevels(self, levels)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMaxAngle/2" translate="no">setMaxAngle(self, maxAngle)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMaxScale/2" translate="no">setMaxScale(self, maxScale)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMinAngle/2" translate="no">setMinAngle(self, minAngle)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMinScale/2" translate="no">setMinScale(self, minScale)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setPosThresh/2" translate="no">setPosThresh(self, posThresh)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setScaleStep/2" translate="no">setScaleStep(self, scaleStep)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setScaleThresh/2" translate="no">setScaleThresh(self, scaleThresh)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setXi/2" translate="no">setXi(self, xi)</a>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAngleEpsilon!/1" translate="no">getAngleEpsilon!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getAngleEpsilon/1"><code class="inline">getAngleEpsilon/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAngleStep!/1" translate="no">getAngleStep!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getAngleStep/1"><code class="inline">getAngleStep/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAngleThresh!/1" translate="no">getAngleThresh!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getAngleThresh/1"><code class="inline">getAngleThresh/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLevels!/1" translate="no">getLevels!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getLevels/1"><code class="inline">getLevels/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMaxAngle!/1" translate="no">getMaxAngle!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getMaxAngle/1"><code class="inline">getMaxAngle/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMaxScale!/1" translate="no">getMaxScale!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getMaxScale/1"><code class="inline">getMaxScale/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMinAngle!/1" translate="no">getMinAngle!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getMinAngle/1"><code class="inline">getMinAngle/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getMinScale!/1" translate="no">getMinScale!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getMinScale/1"><code class="inline">getMinScale/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getPosThresh!/1" translate="no">getPosThresh!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getPosThresh/1"><code class="inline">getPosThresh/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getScaleStep!/1" translate="no">getScaleStep!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getScaleStep/1"><code class="inline">getScaleStep/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getScaleThresh!/1" translate="no">getScaleThresh!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getScaleThresh/1"><code class="inline">getScaleThresh/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getXi!/1" translate="no">getXi!(self)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getXi/1"><code class="inline">getXi/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setAngleEpsilon!/2" translate="no">setAngleEpsilon!(self, angleEpsilon)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setAngleEpsilon/2"><code class="inline">setAngleEpsilon/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setAngleStep!/2" translate="no">setAngleStep!(self, angleStep)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setAngleStep/2"><code class="inline">setAngleStep/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setAngleThresh!/2" translate="no">setAngleThresh!(self, angleThresh)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setAngleThresh/2"><code class="inline">setAngleThresh/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setLevels!/2" translate="no">setLevels!(self, levels)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setLevels/2"><code class="inline">setLevels/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMaxAngle!/2" translate="no">setMaxAngle!(self, maxAngle)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setMaxAngle/2"><code class="inline">setMaxAngle/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMaxScale!/2" translate="no">setMaxScale!(self, maxScale)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setMaxScale/2"><code class="inline">setMaxScale/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMinAngle!/2" translate="no">setMinAngle!(self, minAngle)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setMinAngle/2"><code class="inline">setMinAngle/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setMinScale!/2" translate="no">setMinScale!(self, minScale)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setMinScale/2"><code class="inline">setMinScale/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setPosThresh!/2" translate="no">setPosThresh!(self, posThresh)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setPosThresh/2"><code class="inline">setPosThresh/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setScaleStep!/2" translate="no">setScaleStep!(self, scaleStep)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setScaleStep/2"><code class="inline">setScaleStep/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setScaleThresh!/2" translate="no">setScaleThresh!(self, scaleThresh)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setScaleThresh/2"><code class="inline">setScaleThresh/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#setXi!/2" translate="no">setXi!(self, xi)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#setXi/2"><code class="inline">setXi/2</code></a>.</p></div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="cv" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#cv">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+cv
+    </h1>
+    <div class="cv-list">
+<section class="detail" id="getAngleEpsilon/1">
+
+  <div class="detail-header">
+    <a href="#getAngleEpsilon/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAngleEpsilon(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L5" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getAngleStep/1">
+
+  <div class="detail-header">
+    <a href="#getAngleStep/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAngleStep(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L12" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getAngleThresh/1">
+
+  <div class="detail-header">
+    <a href="#getAngleThresh/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAngleThresh(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L19" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getLevels/1">
+
+  <div class="detail-header">
+    <a href="#getLevels/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLevels(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L26" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getMaxAngle/1">
+
+  <div class="detail-header">
+    <a href="#getMaxAngle/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMaxAngle(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L33" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getMaxScale/1">
+
+  <div class="detail-header">
+    <a href="#getMaxScale/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMaxScale(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L40" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getMinAngle/1">
+
+  <div class="detail-header">
+    <a href="#getMinAngle/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMinAngle(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L47" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getMinScale/1">
+
+  <div class="detail-header">
+    <a href="#getMinScale/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMinScale(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L54" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getPosThresh/1">
+
+  <div class="detail-header">
+    <a href="#getPosThresh/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getPosThresh(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L61" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getScaleStep/1">
+
+  <div class="detail-header">
+    <a href="#getScaleStep/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getScaleStep(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L68" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getScaleThresh/1">
+
+  <div class="detail-header">
+    <a href="#getScaleThresh/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getScaleThresh(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L75" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="getXi/1">
+
+  <div class="detail-header">
+    <a href="#getXi/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getXi(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L82" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setAngleEpsilon/2">
+
+  <div class="detail-header">
+    <a href="#setAngleEpsilon/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setAngleEpsilon(self, angleEpsilon)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L89" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setAngleStep/2">
+
+  <div class="detail-header">
+    <a href="#setAngleStep/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setAngleStep(self, angleStep)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L98" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setAngleThresh/2">
+
+  <div class="detail-header">
+    <a href="#setAngleThresh/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setAngleThresh(self, angleThresh)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L107" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setLevels/2">
+
+  <div class="detail-header">
+    <a href="#setLevels/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setLevels(self, levels)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L116" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setMaxAngle/2">
+
+  <div class="detail-header">
+    <a href="#setMaxAngle/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMaxAngle(self, maxAngle)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L125" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setMaxScale/2">
+
+  <div class="detail-header">
+    <a href="#setMaxScale/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMaxScale(self, maxScale)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L134" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setMinAngle/2">
+
+  <div class="detail-header">
+    <a href="#setMinAngle/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMinAngle(self, minAngle)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L143" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setMinScale/2">
+
+  <div class="detail-header">
+    <a href="#setMinScale/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMinScale(self, minScale)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L152" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setPosThresh/2">
+
+  <div class="detail-header">
+    <a href="#setPosThresh/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setPosThresh(self, posThresh)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L161" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setScaleStep/2">
+
+  <div class="detail-header">
+    <a href="#setScaleStep/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setScaleStep(self, scaleStep)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L170" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setScaleThresh/2">
+
+  <div class="detail-header">
+    <a href="#setScaleThresh/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setScaleThresh(self, scaleThresh)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L179" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="setXi/2">
+
+  <div class="detail-header">
+    <a href="#setXi/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setXi(self, xi)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L188" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="getAngleEpsilon!/1">
+
+  <div class="detail-header">
+    <a href="#getAngleEpsilon!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAngleEpsilon!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L10" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getAngleEpsilon/1"><code class="inline">getAngleEpsilon/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getAngleStep!/1">
+
+  <div class="detail-header">
+    <a href="#getAngleStep!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAngleStep!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L17" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getAngleStep/1"><code class="inline">getAngleStep/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getAngleThresh!/1">
+
+  <div class="detail-header">
+    <a href="#getAngleThresh!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAngleThresh!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L24" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getAngleThresh/1"><code class="inline">getAngleThresh/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getLevels!/1">
+
+  <div class="detail-header">
+    <a href="#getLevels!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLevels!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L31" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getLevels/1"><code class="inline">getLevels/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getMaxAngle!/1">
+
+  <div class="detail-header">
+    <a href="#getMaxAngle!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMaxAngle!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getMaxAngle/1"><code class="inline">getMaxAngle/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getMaxScale!/1">
+
+  <div class="detail-header">
+    <a href="#getMaxScale!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMaxScale!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L45" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getMaxScale/1"><code class="inline">getMaxScale/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getMinAngle!/1">
+
+  <div class="detail-header">
+    <a href="#getMinAngle!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMinAngle!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L52" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getMinAngle/1"><code class="inline">getMinAngle/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getMinScale!/1">
+
+  <div class="detail-header">
+    <a href="#getMinScale!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getMinScale!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L59" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getMinScale/1"><code class="inline">getMinScale/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getPosThresh!/1">
+
+  <div class="detail-header">
+    <a href="#getPosThresh!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getPosThresh!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L66" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getPosThresh/1"><code class="inline">getPosThresh/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getScaleStep!/1">
+
+  <div class="detail-header">
+    <a href="#getScaleStep!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getScaleStep!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L73" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getScaleStep/1"><code class="inline">getScaleStep/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getScaleThresh!/1">
+
+  <div class="detail-header">
+    <a href="#getScaleThresh!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getScaleThresh!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L80" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getScaleThresh/1"><code class="inline">getScaleThresh/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getXi!/1">
+
+  <div class="detail-header">
+    <a href="#getXi!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getXi!(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L87" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getXi/1"><code class="inline">getXi/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setAngleEpsilon!/2">
+
+  <div class="detail-header">
+    <a href="#setAngleEpsilon!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setAngleEpsilon!(self, angleEpsilon)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L96" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setAngleEpsilon/2"><code class="inline">setAngleEpsilon/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setAngleStep!/2">
+
+  <div class="detail-header">
+    <a href="#setAngleStep!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setAngleStep!(self, angleStep)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L105" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setAngleStep/2"><code class="inline">setAngleStep/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setAngleThresh!/2">
+
+  <div class="detail-header">
+    <a href="#setAngleThresh!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setAngleThresh!(self, angleThresh)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L114" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setAngleThresh/2"><code class="inline">setAngleThresh/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setLevels!/2">
+
+  <div class="detail-header">
+    <a href="#setLevels!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setLevels!(self, levels)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L123" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setLevels/2"><code class="inline">setLevels/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setMaxAngle!/2">
+
+  <div class="detail-header">
+    <a href="#setMaxAngle!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMaxAngle!(self, maxAngle)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L132" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setMaxAngle/2"><code class="inline">setMaxAngle/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setMaxScale!/2">
+
+  <div class="detail-header">
+    <a href="#setMaxScale!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMaxScale!(self, maxScale)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L141" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setMaxScale/2"><code class="inline">setMaxScale/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setMinAngle!/2">
+
+  <div class="detail-header">
+    <a href="#setMinAngle!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMinAngle!(self, minAngle)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L150" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setMinAngle/2"><code class="inline">setMinAngle/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setMinScale!/2">
+
+  <div class="detail-header">
+    <a href="#setMinScale!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setMinScale!(self, minScale)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L159" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setMinScale/2"><code class="inline">setMinScale/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setPosThresh!/2">
+
+  <div class="detail-header">
+    <a href="#setPosThresh!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setPosThresh!(self, posThresh)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L168" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setPosThresh/2"><code class="inline">setPosThresh/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setScaleStep!/2">
+
+  <div class="detail-header">
+    <a href="#setScaleStep!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setScaleStep!(self, scaleStep)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L177" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setScaleStep/2"><code class="inline">setScaleStep/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setScaleThresh!/2">
+
+  <div class="detail-header">
+    <a href="#setScaleThresh!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setScaleThresh!(self, scaleThresh)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L186" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setScaleThresh/2"><code class="inline">setScaleThresh/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="setXi!/2">
+
+  <div class="detail-header">
+    <a href="#setXi!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">setXi!(self, xi)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_generalizedhoughguil.ex#L195" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#setXi/2"><code class="inline">setXi/2</code></a>.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_generalizedhoughguil.ex">(current file)</a>
+
+            </span>
+
+            <button class="line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["\\f$", "\\f$"]],
+            displayMath: [["\\f[", "\\f]"]],
+            skipTags: ["script", "noscript", "style", "textarea"],
+            processEnvironments: false
+        },
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+    });
+    //<![CDATA[
+    MathJax.Hub.Config(
+    {
+        TeX: {
+            Macros: {
+                matTT: ["\\[ \\left|\\begin{array}{ccc} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{array}\\right| \\]", 9],
+                fork: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ \\end{array} \\right.", 4],
+                forkthree: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ \\end{array} \\right.", 6],
+                forkfour: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ #7 & \\mbox{#8}\\\\ \\end{array} \\right.", 8],
+                vecthree: ["\\begin{bmatrix} #1\\\\ #2\\\\ #3 \\end{bmatrix}", 3],
+                vecthreethree: ["\\begin{bmatrix} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{bmatrix}", 9],
+                cameramatrix: ["#1 = \\begin{bmatrix} f_x & 0 & c_x\\\\ 0 & f_y & c_y\\\\ 0 & 0 & 1 \\end{bmatrix}", 1],
+                distcoeffs: ["(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]]) \\text{ of 4, 5, 8, 12 or 14 elements}"],
+                distcoeffsfisheye: ["(k_1, k_2, k_3, k_4)"],
+                hdotsfor: ["\\dots", 1],
+                mathbbm: ["\\mathbb{#1}", 1],
+                bordermatrix: ["\\matrix{#1}", 1]
+            }
+        }
+    }
+    );
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
+    
+  </body>
+</html>

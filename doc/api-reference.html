@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.27.3">
-    <meta name="project" content="Evision v0.1.0-dev">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.5-dev">
 
-    <title>API Reference — Evision v0.1.0-dev</title>
-    <link rel="stylesheet" href="dist/elixir-784c12ef29cae13371ff.css" />
+    <title>API Reference — Evision v0.1.5-dev</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-754e5ab271.js"></script>
+    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/app-38f5da25bdde1981e2f0.js"></script>
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
 
 
   </head>
@@ -22,19 +22,25 @@
     <script>
 
       try {
-        if (localStorage.getItem('night-mode') === 'true') {
-          document.body.classList.add('night-mode');
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
         }
       } catch (error) { }
     </script>
 
 <div class="main">
 
-<button class="sidebar-button sidebar-toggle">
-  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
-</button>
 
 <section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
   <form class="sidebar-search" action="search.html">
     <button type="submit" class="search-button" aria-label="Submit Search">
       <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
@@ -43,6 +49,7 @@
       <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
     </button>
     <label class="search-label">
+      <p class="sr-only">Search</p>
       <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
     </label>
   </form>
@@ -55,11 +62,11 @@
   <div class="sidebar-header">
 
     <div class="sidebar-projectDetails">
-      <a href="OpenCV.html" class="sidebar-projectName" translate="no">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.0-dev
+        v0.1.5-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -76,6 +83,7 @@ Evision
 </section>
 
 <section class="content">
+  <output role="status" id="toast"></output>
   <div class="content-outer">
     <div id="content" class="content-inner">
 
@@ -86,692 +94,708 @@ Evision
 </button>
 
 
-  <span>API Reference <small class="app-vsn">Evision v0.1.0-dev</small></span>
+  <span>API Reference <small class="app-vsn">Evision v0.1.5-dev</small></span>
 </h1>
 
 
   <section class="details-list">
     <h2 id="modules" class="section-heading">
-  <a href="#modules" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a>
+  <a href="#modules" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">modules</p>
+  </a>
   Modules
 </h2>
 
     <div class="summary">
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.html" translate="no">OpenCV</a>
+    <a href="Evision.html" translate="no">Evision</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.AKAZE.html" translate="no">OpenCV.AKAZE</a>
+    <a href="Evision.AKAZE.html" translate="no">Evision.AKAZE</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.AffineFeature.html" translate="no">OpenCV.AffineFeature</a>
+    <a href="Evision.AffineFeature.html" translate="no">Evision.AffineFeature</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.AgastFeatureDetector.html" translate="no">OpenCV.AgastFeatureDetector</a>
+    <a href="Evision.AgastFeatureDetector.html" translate="no">Evision.AgastFeatureDetector</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Algorithm.html" translate="no">OpenCV.Algorithm</a>
+    <a href="Evision.Algorithm.html" translate="no">Evision.Algorithm</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.AlignExposures.html" translate="no">OpenCV.AlignExposures</a>
+    <a href="Evision.AlignExposures.html" translate="no">Evision.AlignExposures</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.AlignMTB.html" translate="no">OpenCV.AlignMTB</a>
+    <a href="Evision.AlignMTB.html" translate="no">Evision.AlignMTB</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.AsyncArray.html" translate="no">OpenCV.AsyncArray</a>
+    <a href="Evision.AsyncArray.html" translate="no">Evision.AsyncArray</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BFMatcher.html" translate="no">OpenCV.BFMatcher</a>
+    <a href="Evision.BFMatcher.html" translate="no">Evision.BFMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BOWImgDescriptorExtractor.html" translate="no">OpenCV.BOWImgDescriptorExtractor</a>
+    <a href="Evision.BOWImgDescriptorExtractor.html" translate="no">Evision.BOWImgDescriptorExtractor</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BOWKMeansTrainer.html" translate="no">OpenCV.BOWKMeansTrainer</a>
+    <a href="Evision.BOWKMeansTrainer.html" translate="no">Evision.BOWKMeansTrainer</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BOWTrainer.html" translate="no">OpenCV.BOWTrainer</a>
+    <a href="Evision.BOWTrainer.html" translate="no">Evision.BOWTrainer</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BRISK.html" translate="no">OpenCV.BRISK</a>
+    <a href="Evision.BRISK.html" translate="no">Evision.BRISK</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BackgroundSubtractor.html" translate="no">OpenCV.BackgroundSubtractor</a>
+    <a href="Evision.Backend.html" translate="no">Evision.Backend</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BackgroundSubtractorKNN.html" translate="no">OpenCV.BackgroundSubtractorKNN</a>
+    <a href="Evision.BackgroundSubtractor.html" translate="no">Evision.BackgroundSubtractor</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.BackgroundSubtractorMOG2.html" translate="no">OpenCV.BackgroundSubtractorMOG2</a>
+    <a href="Evision.BackgroundSubtractorKNN.html" translate="no">Evision.BackgroundSubtractorKNN</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CLAHE.html" translate="no">OpenCV.CLAHE</a>
+    <a href="Evision.BackgroundSubtractorMOG2.html" translate="no">Evision.BackgroundSubtractorMOG2</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.html" translate="no">OpenCV.CUDA</a>
+    <a href="Evision.CLAHE.html" translate="no">Evision.CLAHE</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.BufferPool.html" translate="no">OpenCV.CUDA.BufferPool</a>
+    <a href="Evision.CUDA.html" translate="no">Evision.CUDA</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.DeviceInfo.html" translate="no">OpenCV.CUDA.DeviceInfo</a>
+    <a href="Evision.CUDA.BufferPool.html" translate="no">Evision.CUDA.BufferPool</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.Event.html" translate="no">OpenCV.CUDA.Event</a>
+    <a href="Evision.CUDA.DeviceInfo.html" translate="no">Evision.CUDA.DeviceInfo</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.GpuMat.html" translate="no">OpenCV.CUDA.GpuMat</a>
+    <a href="Evision.CUDA.Event.html" translate="no">Evision.CUDA.Event</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.HostMem.html" translate="no">OpenCV.CUDA.HostMem</a>
+    <a href="Evision.CUDA.GpuMat.html" translate="no">Evision.CUDA.GpuMat</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.Stream.html" translate="no">OpenCV.CUDA.Stream</a>
+    <a href="Evision.CUDA.HostMem.html" translate="no">Evision.CUDA.HostMem</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CUDA.TargetArchs.html" translate="no">OpenCV.CUDA.TargetArchs</a>
+    <a href="Evision.CUDA.Stream.html" translate="no">Evision.CUDA.Stream</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CalibrateCRF.html" translate="no">OpenCV.CalibrateCRF</a>
+    <a href="Evision.CUDA.TargetArchs.html" translate="no">Evision.CUDA.TargetArchs</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CalibrateDebevec.html" translate="no">OpenCV.CalibrateDebevec</a>
+    <a href="Evision.CalibrateCRF.html" translate="no">Evision.CalibrateCRF</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CalibrateRobertson.html" translate="no">OpenCV.CalibrateRobertson</a>
+    <a href="Evision.CalibrateDebevec.html" translate="no">Evision.CalibrateDebevec</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CascadeClassifier.html" translate="no">OpenCV.CascadeClassifier</a>
+    <a href="Evision.CalibrateRobertson.html" translate="no">Evision.CalibrateRobertson</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.CirclesGridFinderParameters.html" translate="no">OpenCV.CirclesGridFinderParameters</a>
+    <a href="Evision.CascadeClassifier.html" translate="no">Evision.CascadeClassifier</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DISOpticalFlow.html" translate="no">OpenCV.DISOpticalFlow</a>
+    <a href="Evision.CirclesGridFinderParameters.html" translate="no">Evision.CirclesGridFinderParameters</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DMatch.html" translate="no">OpenCV.DMatch</a>
+    <a href="Evision.DISOpticalFlow.html" translate="no">Evision.DISOpticalFlow</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.html" translate="no">OpenCV.DNN</a>
+    <a href="Evision.DMatch.html" translate="no">Evision.DMatch</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.ClassificationModel.html" translate="no">OpenCV.DNN.ClassificationModel</a>
+    <a href="Evision.DNN.html" translate="no">Evision.DNN</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.DetectionModel.html" translate="no">OpenCV.DNN.DetectionModel</a>
+    <a href="Evision.DNN.ClassificationModel.html" translate="no">Evision.DNN.ClassificationModel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.DictValue.html" translate="no">OpenCV.DNN.DictValue</a>
+    <a href="Evision.DNN.DetectionModel.html" translate="no">Evision.DNN.DetectionModel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.KeypointsModel.html" translate="no">OpenCV.DNN.KeypointsModel</a>
+    <a href="Evision.DNN.DictValue.html" translate="no">Evision.DNN.DictValue</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.Layer.html" translate="no">OpenCV.DNN.Layer</a>
+    <a href="Evision.DNN.KeypointsModel.html" translate="no">Evision.DNN.KeypointsModel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.Model.html" translate="no">OpenCV.DNN.Model</a>
+    <a href="Evision.DNN.Layer.html" translate="no">Evision.DNN.Layer</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.Net.html" translate="no">OpenCV.DNN.Net</a>
+    <a href="Evision.DNN.Model.html" translate="no">Evision.DNN.Model</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.SegmentationModel.html" translate="no">OpenCV.DNN.SegmentationModel</a>
+    <a href="Evision.DNN.Net.html" translate="no">Evision.DNN.Net</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.TextDetectionModel.html" translate="no">OpenCV.DNN.TextDetectionModel</a>
+    <a href="Evision.DNN.SegmentationModel.html" translate="no">Evision.DNN.SegmentationModel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.TextDetectionModelDB.html" translate="no">OpenCV.DNN.TextDetectionModelDB</a>
+    <a href="Evision.DNN.TextDetectionModel.html" translate="no">Evision.DNN.TextDetectionModel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.TextDetectionModelEAST.html" translate="no">OpenCV.DNN.TextDetectionModelEAST</a>
+    <a href="Evision.DNN.TextDetectionModelDB.html" translate="no">Evision.DNN.TextDetectionModelDB</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DNN.TextRecognitionModel.html" translate="no">OpenCV.DNN.TextRecognitionModel</a>
+    <a href="Evision.DNN.TextDetectionModelEAST.html" translate="no">Evision.DNN.TextDetectionModelEAST</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DenseOpticalFlow.html" translate="no">OpenCV.DenseOpticalFlow</a>
+    <a href="Evision.DNN.TextRecognitionModel.html" translate="no">Evision.DNN.TextRecognitionModel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.DescriptorMatcher.html" translate="no">OpenCV.DescriptorMatcher</a>
+    <a href="Evision.DenseOpticalFlow.html" translate="no">Evision.DenseOpticalFlow</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.html" translate="no">OpenCV.Detail</a>
+    <a href="Evision.DescriptorMatcher.html" translate="no">Evision.DescriptorMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.AffineBasedEstimator.html" translate="no">OpenCV.Detail.AffineBasedEstimator</a>
+    <a href="Evision.Detail.html" translate="no">Evision.Detail</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.AffineBestOf2NearestMatcher.html" translate="no">OpenCV.Detail.AffineBestOf2NearestMatcher</a>
+    <a href="Evision.Detail.AffineBasedEstimator.html" translate="no">Evision.Detail.AffineBasedEstimator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BestOf2NearestMatcher.html" translate="no">OpenCV.Detail.BestOf2NearestMatcher</a>
+    <a href="Evision.Detail.AffineBestOf2NearestMatcher.html" translate="no">Evision.Detail.AffineBestOf2NearestMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BestOf2NearestRangeMatcher.html" translate="no">OpenCV.Detail.BestOf2NearestRangeMatcher</a>
+    <a href="Evision.Detail.BestOf2NearestMatcher.html" translate="no">Evision.Detail.BestOf2NearestMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.Blender.html" translate="no">OpenCV.Detail.Blender</a>
+    <a href="Evision.Detail.BestOf2NearestRangeMatcher.html" translate="no">Evision.Detail.BestOf2NearestRangeMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BlocksChannelsCompensator.html" translate="no">OpenCV.Detail.BlocksChannelsCompensator</a>
+    <a href="Evision.Detail.Blender.html" translate="no">Evision.Detail.Blender</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BlocksCompensator.html" translate="no">OpenCV.Detail.BlocksCompensator</a>
+    <a href="Evision.Detail.BlocksChannelsCompensator.html" translate="no">Evision.Detail.BlocksChannelsCompensator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BlocksGainCompensator.html" translate="no">OpenCV.Detail.BlocksGainCompensator</a>
+    <a href="Evision.Detail.BlocksCompensator.html" translate="no">Evision.Detail.BlocksCompensator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BundleAdjusterAffine.html" translate="no">OpenCV.Detail.BundleAdjusterAffine</a>
+    <a href="Evision.Detail.BlocksGainCompensator.html" translate="no">Evision.Detail.BlocksGainCompensator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BundleAdjusterAffinePartial.html" translate="no">OpenCV.Detail.BundleAdjusterAffinePartial</a>
+    <a href="Evision.Detail.BundleAdjusterAffine.html" translate="no">Evision.Detail.BundleAdjusterAffine</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BundleAdjusterBase.html" translate="no">OpenCV.Detail.BundleAdjusterBase</a>
+    <a href="Evision.Detail.BundleAdjusterAffinePartial.html" translate="no">Evision.Detail.BundleAdjusterAffinePartial</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BundleAdjusterRay.html" translate="no">OpenCV.Detail.BundleAdjusterRay</a>
+    <a href="Evision.Detail.BundleAdjusterBase.html" translate="no">Evision.Detail.BundleAdjusterBase</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.BundleAdjusterReproj.html" translate="no">OpenCV.Detail.BundleAdjusterReproj</a>
+    <a href="Evision.Detail.BundleAdjusterRay.html" translate="no">Evision.Detail.BundleAdjusterRay</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.CameraParams.html" translate="no">OpenCV.Detail.CameraParams</a>
+    <a href="Evision.Detail.BundleAdjusterReproj.html" translate="no">Evision.Detail.BundleAdjusterReproj</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.ChannelsCompensator.html" translate="no">OpenCV.Detail.ChannelsCompensator</a>
+    <a href="Evision.Detail.CameraParams.html" translate="no">Evision.Detail.CameraParams</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.DpSeamFinder.html" translate="no">OpenCV.Detail.DpSeamFinder</a>
+    <a href="Evision.Detail.ChannelsCompensator.html" translate="no">Evision.Detail.ChannelsCompensator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.Estimator.html" translate="no">OpenCV.Detail.Estimator</a>
+    <a href="Evision.Detail.DpSeamFinder.html" translate="no">Evision.Detail.DpSeamFinder</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.ExposureCompensator.html" translate="no">OpenCV.Detail.ExposureCompensator</a>
+    <a href="Evision.Detail.Estimator.html" translate="no">Evision.Detail.Estimator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.FeatherBlender.html" translate="no">OpenCV.Detail.FeatherBlender</a>
+    <a href="Evision.Detail.ExposureCompensator.html" translate="no">Evision.Detail.ExposureCompensator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.FeaturesMatcher.html" translate="no">OpenCV.Detail.FeaturesMatcher</a>
+    <a href="Evision.Detail.FeatherBlender.html" translate="no">Evision.Detail.FeatherBlender</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.GainCompensator.html" translate="no">OpenCV.Detail.GainCompensator</a>
+    <a href="Evision.Detail.FeaturesMatcher.html" translate="no">Evision.Detail.FeaturesMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.GraphCutSeamFinder.html" translate="no">OpenCV.Detail.GraphCutSeamFinder</a>
+    <a href="Evision.Detail.GainCompensator.html" translate="no">Evision.Detail.GainCompensator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.HomographyBasedEstimator.html" translate="no">OpenCV.Detail.HomographyBasedEstimator</a>
+    <a href="Evision.Detail.GraphCutSeamFinder.html" translate="no">Evision.Detail.GraphCutSeamFinder</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.ImageFeatures.html" translate="no">OpenCV.Detail.ImageFeatures</a>
+    <a href="Evision.Detail.HomographyBasedEstimator.html" translate="no">Evision.Detail.HomographyBasedEstimator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.MatchesInfo.html" translate="no">OpenCV.Detail.MatchesInfo</a>
+    <a href="Evision.Detail.ImageFeatures.html" translate="no">Evision.Detail.ImageFeatures</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.MultiBandBlender.html" translate="no">OpenCV.Detail.MultiBandBlender</a>
+    <a href="Evision.Detail.MatchesInfo.html" translate="no">Evision.Detail.MatchesInfo</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.NoBundleAdjuster.html" translate="no">OpenCV.Detail.NoBundleAdjuster</a>
+    <a href="Evision.Detail.MultiBandBlender.html" translate="no">Evision.Detail.MultiBandBlender</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.NoExposureCompensator.html" translate="no">OpenCV.Detail.NoExposureCompensator</a>
+    <a href="Evision.Detail.NoBundleAdjuster.html" translate="no">Evision.Detail.NoBundleAdjuster</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.NoSeamFinder.html" translate="no">OpenCV.Detail.NoSeamFinder</a>
+    <a href="Evision.Detail.NoExposureCompensator.html" translate="no">Evision.Detail.NoExposureCompensator</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.PairwiseSeamFinder.html" translate="no">OpenCV.Detail.PairwiseSeamFinder</a>
+    <a href="Evision.Detail.NoSeamFinder.html" translate="no">Evision.Detail.NoSeamFinder</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.SeamFinder.html" translate="no">OpenCV.Detail.SeamFinder</a>
+    <a href="Evision.Detail.PairwiseSeamFinder.html" translate="no">Evision.Detail.PairwiseSeamFinder</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.SphericalProjector.html" translate="no">OpenCV.Detail.SphericalProjector</a>
+    <a href="Evision.Detail.SeamFinder.html" translate="no">Evision.Detail.SeamFinder</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.Timelapser.html" translate="no">OpenCV.Detail.Timelapser</a>
+    <a href="Evision.Detail.SphericalProjector.html" translate="no">Evision.Detail.SphericalProjector</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Detail.VoronoiSeamFinder.html" translate="no">OpenCV.Detail.VoronoiSeamFinder</a>
+    <a href="Evision.Detail.Timelapser.html" translate="no">Evision.Detail.Timelapser</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FaceDetectorYN.html" translate="no">OpenCV.FaceDetectorYN</a>
+    <a href="Evision.Detail.VoronoiSeamFinder.html" translate="no">Evision.Detail.VoronoiSeamFinder</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FaceRecognizerSF.html" translate="no">OpenCV.FaceRecognizerSF</a>
+    <a href="Evision.FaceDetectorYN.html" translate="no">Evision.FaceDetectorYN</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FarnebackOpticalFlow.html" translate="no">OpenCV.FarnebackOpticalFlow</a>
+    <a href="Evision.FaceRecognizerSF.html" translate="no">Evision.FaceRecognizerSF</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FastFeatureDetector.html" translate="no">OpenCV.FastFeatureDetector</a>
+    <a href="Evision.FarnebackOpticalFlow.html" translate="no">Evision.FarnebackOpticalFlow</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Feature2D.html" translate="no">OpenCV.Feature2D</a>
+    <a href="Evision.FastFeatureDetector.html" translate="no">Evision.FastFeatureDetector</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FileNode.html" translate="no">OpenCV.FileNode</a>
+    <a href="Evision.Feature2D.html" translate="no">Evision.Feature2D</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FileStorage.html" translate="no">OpenCV.FileStorage</a>
+    <a href="Evision.FileNode.html" translate="no">Evision.FileNode</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FishEye.html" translate="no">OpenCV.FishEye</a>
+    <a href="Evision.FileStorage.html" translate="no">Evision.FileStorage</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Flann.Index.html" translate="no">OpenCV.Flann.Index</a>
+    <a href="Evision.FishEye.html" translate="no">Evision.FishEye</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.FlannBasedMatcher.html" translate="no">OpenCV.FlannBasedMatcher</a>
+    <a href="Evision.Flann.Index.html" translate="no">Evision.Flann.Index</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.GFTTDetector.html" translate="no">OpenCV.GFTTDetector</a>
+    <a href="Evision.FlannBasedMatcher.html" translate="no">Evision.FlannBasedMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.GeneralizedHough.html" translate="no">OpenCV.GeneralizedHough</a>
+    <a href="Evision.GFTTDetector.html" translate="no">Evision.GFTTDetector</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.GeneralizedHoughBallard.html" translate="no">OpenCV.GeneralizedHoughBallard</a>
+    <a href="Evision.GeneralizedHough.html" translate="no">Evision.GeneralizedHough</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.GeneralizedHoughGuil.html" translate="no">OpenCV.GeneralizedHoughGuil</a>
+    <a href="Evision.GeneralizedHoughBallard.html" translate="no">Evision.GeneralizedHoughBallard</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Gui.html" translate="no">OpenCV.Gui</a>
+    <a href="Evision.GeneralizedHoughGuil.html" translate="no">Evision.GeneralizedHoughGuil</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Evision.HOGDescriptor.html" translate="no">Evision.HOGDescriptor</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Evision.HighGui.html" translate="no">Evision.HighGui</a>
 
   </div>
 
@@ -780,154 +804,147 @@ Evision
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.HOGDescriptor.html" translate="no">OpenCV.HOGDescriptor</a>
+    <a href="Evision.IPP.html" translate="no">Evision.IPP</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.IPP.html" translate="no">OpenCV.IPP</a>
+    <a href="Evision.KAZE.html" translate="no">Evision.KAZE</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.KAZE.html" translate="no">OpenCV.KAZE</a>
+    <a href="Evision.KalmanFilter.html" translate="no">Evision.KalmanFilter</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.KalmanFilter.html" translate="no">OpenCV.KalmanFilter</a>
+    <a href="Evision.KeyPoint.html" translate="no">Evision.KeyPoint</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.KeyPoint.html" translate="no">OpenCV.KeyPoint</a>
+    <a href="Evision.LineSegmentDetector.html" translate="no">Evision.LineSegmentDetector</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.LineSegmentDetector.html" translate="no">OpenCV.LineSegmentDetector</a>
+    <a href="Evision.ML.html" translate="no">Evision.ML</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.html" translate="no">OpenCV.ML</a>
+    <a href="Evision.ML.ANNMLP.html" translate="no">Evision.ML.ANNMLP</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.ANNMLP.html" translate="no">OpenCV.ML.ANNMLP</a>
+    <a href="Evision.ML.Boost.html" translate="no">Evision.ML.Boost</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.Boost.html" translate="no">OpenCV.ML.Boost</a>
+    <a href="Evision.ML.DTrees.html" translate="no">Evision.ML.DTrees</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.DTrees.html" translate="no">OpenCV.ML.DTrees</a>
+    <a href="Evision.ML.EM.html" translate="no">Evision.ML.EM</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.EM.html" translate="no">OpenCV.ML.EM</a>
+    <a href="Evision.ML.KNearest.html" translate="no">Evision.ML.KNearest</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.KNearest.html" translate="no">OpenCV.ML.KNearest</a>
+    <a href="Evision.ML.LogisticRegression.html" translate="no">Evision.ML.LogisticRegression</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.LogisticRegression.html" translate="no">OpenCV.ML.LogisticRegression</a>
+    <a href="Evision.ML.NormalBayesClassifier.html" translate="no">Evision.ML.NormalBayesClassifier</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.NormalBayesClassifier.html" translate="no">OpenCV.ML.NormalBayesClassifier</a>
+    <a href="Evision.ML.ParamGrid.html" translate="no">Evision.ML.ParamGrid</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.ParamGrid.html" translate="no">OpenCV.ML.ParamGrid</a>
+    <a href="Evision.ML.RTrees.html" translate="no">Evision.ML.RTrees</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.RTrees.html" translate="no">OpenCV.ML.RTrees</a>
+    <a href="Evision.ML.SVM.html" translate="no">Evision.ML.SVM</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.SVM.html" translate="no">OpenCV.ML.SVM</a>
+    <a href="Evision.ML.SVMSGD.html" translate="no">Evision.ML.SVMSGD</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.SVMSGD.html" translate="no">OpenCV.ML.SVMSGD</a>
+    <a href="Evision.ML.StatModel.html" translate="no">Evision.ML.StatModel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.StatModel.html" translate="no">OpenCV.ML.StatModel</a>
+    <a href="Evision.ML.TrainData.html" translate="no">Evision.ML.TrainData</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ML.TrainData.html" translate="no">OpenCV.ML.TrainData</a>
+    <a href="Evision.MSER.html" translate="no">Evision.MSER</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.MSER.html" translate="no">OpenCV.MSER</a>
-
-  </div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="OpenCV.Mat.html" translate="no">OpenCV.Mat</a>
+    <a href="Evision.Mat.html" translate="no">Evision.Mat</a>
 
   </div>
 
@@ -936,317 +953,338 @@ Evision
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.MergeDebevec.html" translate="no">OpenCV.MergeDebevec</a>
+    <a href="Evision.MergeDebevec.html" translate="no">Evision.MergeDebevec</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.MergeExposures.html" translate="no">OpenCV.MergeExposures</a>
+    <a href="Evision.MergeExposures.html" translate="no">Evision.MergeExposures</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.MergeMertens.html" translate="no">OpenCV.MergeMertens</a>
+    <a href="Evision.MergeMertens.html" translate="no">Evision.MergeMertens</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.MergeRobertson.html" translate="no">OpenCV.MergeRobertson</a>
+    <a href="Evision.MergeRobertson.html" translate="no">Evision.MergeRobertson</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Nx.html" translate="no">OpenCV.Nx</a>
+    <a href="Evision.Nx.html" translate="no">Evision.Nx</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>OpenCV mat to Nx tensor. </p></div>
+    <div class="summary-synopsis"><p>OpenCV's cv::mat to Nx tensor.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.OCL.html" translate="no">OpenCV.OCL</a>
-
-  </div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="OpenCV.OCL.Device.html" translate="no">OpenCV.OCL.Device</a>
+    <a href="Evision.OCL.html" translate="no">Evision.OCL</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.ORB.html" translate="no">OpenCV.ORB</a>
+    <a href="Evision.OCL.Device.html" translate="no">Evision.OCL.Device</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Parallel.html" translate="no">OpenCV.Parallel</a>
+    <a href="Evision.ORB.html" translate="no">Evision.ORB</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.PyRotationWarper.html" translate="no">OpenCV.PyRotationWarper</a>
+    <a href="Evision.Parallel.html" translate="no">Evision.Parallel</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.QRCodeDetector.html" translate="no">OpenCV.QRCodeDetector</a>
+    <a href="Evision.PyRotationWarper.html" translate="no">Evision.PyRotationWarper</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.QRCodeEncoder.html" translate="no">OpenCV.QRCodeEncoder</a>
+    <a href="Evision.QRCodeDetector.html" translate="no">Evision.QRCodeDetector</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.QRCodeEncoder.Params.html" translate="no">OpenCV.QRCodeEncoder.Params</a>
+    <a href="Evision.QRCodeEncoder.html" translate="no">Evision.QRCodeEncoder</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.SIFT.html" translate="no">OpenCV.SIFT</a>
+    <a href="Evision.QRCodeEncoder.Params.html" translate="no">Evision.QRCodeEncoder.Params</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Samples.html" translate="no">OpenCV.Samples</a>
+    <a href="Evision.SIFT.html" translate="no">Evision.SIFT</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Segmentation.IntelligentScissorsMB.html" translate="no">OpenCV.Segmentation.IntelligentScissorsMB</a>
+    <a href="Evision.Samples.html" translate="no">Evision.Samples</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.SimpleBlobDetector.html" translate="no">OpenCV.SimpleBlobDetector</a>
+    <a href="Evision.Segmentation.IntelligentScissorsMB.html" translate="no">Evision.Segmentation.IntelligentScissorsMB</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.SimpleBlobDetector.Params.html" translate="no">OpenCV.SimpleBlobDetector.Params</a>
+    <a href="Evision.SimpleBlobDetector.html" translate="no">Evision.SimpleBlobDetector</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.SparseOpticalFlow.html" translate="no">OpenCV.SparseOpticalFlow</a>
+    <a href="Evision.SimpleBlobDetector.Params.html" translate="no">Evision.SimpleBlobDetector.Params</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.SparsePyrLKOpticalFlow.html" translate="no">OpenCV.SparsePyrLKOpticalFlow</a>
+    <a href="Evision.SparseOpticalFlow.html" translate="no">Evision.SparseOpticalFlow</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.StereoBM.html" translate="no">OpenCV.StereoBM</a>
+    <a href="Evision.SparsePyrLKOpticalFlow.html" translate="no">Evision.SparsePyrLKOpticalFlow</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.StereoMatcher.html" translate="no">OpenCV.StereoMatcher</a>
+    <a href="Evision.StereoBM.html" translate="no">Evision.StereoBM</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.StereoSGBM.html" translate="no">OpenCV.StereoSGBM</a>
+    <a href="Evision.StereoMatcher.html" translate="no">Evision.StereoMatcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Stitcher.html" translate="no">OpenCV.Stitcher</a>
+    <a href="Evision.StereoSGBM.html" translate="no">Evision.StereoSGBM</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Subdiv2D.html" translate="no">OpenCV.Subdiv2D</a>
+    <a href="Evision.Stitcher.html" translate="no">Evision.Stitcher</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TickMeter.html" translate="no">OpenCV.TickMeter</a>
+    <a href="Evision.Subdiv2D.html" translate="no">Evision.Subdiv2D</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Tonemap.html" translate="no">OpenCV.Tonemap</a>
+    <a href="Evision.TickMeter.html" translate="no">Evision.TickMeter</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TonemapDrago.html" translate="no">OpenCV.TonemapDrago</a>
+    <a href="Evision.Tonemap.html" translate="no">Evision.Tonemap</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TonemapMantiuk.html" translate="no">OpenCV.TonemapMantiuk</a>
+    <a href="Evision.TonemapDrago.html" translate="no">Evision.TonemapDrago</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TonemapReinhard.html" translate="no">OpenCV.TonemapReinhard</a>
+    <a href="Evision.TonemapMantiuk.html" translate="no">Evision.TonemapMantiuk</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Tracker.html" translate="no">OpenCV.Tracker</a>
+    <a href="Evision.TonemapReinhard.html" translate="no">Evision.TonemapReinhard</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TrackerDaSiamRPN.html" translate="no">OpenCV.TrackerDaSiamRPN</a>
+    <a href="Evision.Tracker.html" translate="no">Evision.Tracker</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TrackerDaSiamRPN.Params.html" translate="no">OpenCV.TrackerDaSiamRPN.Params</a>
+    <a href="Evision.TrackerDaSiamRPN.html" translate="no">Evision.TrackerDaSiamRPN</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TrackerGOTURN.html" translate="no">OpenCV.TrackerGOTURN</a>
+    <a href="Evision.TrackerDaSiamRPN.Params.html" translate="no">Evision.TrackerDaSiamRPN.Params</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TrackerGOTURN.Params.html" translate="no">OpenCV.TrackerGOTURN.Params</a>
+    <a href="Evision.TrackerGOTURN.html" translate="no">Evision.TrackerGOTURN</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TrackerMIL.html" translate="no">OpenCV.TrackerMIL</a>
+    <a href="Evision.TrackerGOTURN.Params.html" translate="no">Evision.TrackerGOTURN.Params</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.TrackerMIL.Params.html" translate="no">OpenCV.TrackerMIL.Params</a>
+    <a href="Evision.TrackerMIL.html" translate="no">Evision.TrackerMIL</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.UMat.html" translate="no">OpenCV.UMat</a>
+    <a href="Evision.TrackerMIL.Params.html" translate="no">Evision.TrackerMIL.Params</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.UsacParams.html" translate="no">OpenCV.UsacParams</a>
+    <a href="Evision.UMat.html" translate="no">Evision.UMat</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.Utils.html" translate="no">OpenCV.Utils</a>
+    <a href="Evision.UsacParams.html" translate="no">Evision.UsacParams</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.UtilsFS.html" translate="no">OpenCV.UtilsFS</a>
+    <a href="Evision.Utils.html" translate="no">Evision.Utils</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.VariationalRefinement.html" translate="no">OpenCV.VariationalRefinement</a>
+    <a href="Evision.Utils.Nested.OriginalClassName.html" translate="no">Evision.Utils.Nested.OriginalClassName</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.VideoCapture.html" translate="no">OpenCV.VideoCapture</a>
+    <a href="Evision.Utils.Nested.OriginalClassName.Params.html" translate="no">Evision.Utils.Nested.OriginalClassName.Params</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.VideoIORegistry.html" translate="no">OpenCV.VideoIORegistry</a>
+    <a href="Evision.UtilsFS.html" translate="no">Evision.UtilsFS</a>
 
   </div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="OpenCV.VideoWriter.html" translate="no">OpenCV.VideoWriter</a>
+    <a href="Evision.Utilsnested.html" translate="no">Evision.Utilsnested</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Evision.VariationalRefinement.html" translate="no">Evision.VariationalRefinement</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Evision.VideoCapture.html" translate="no">Evision.VideoCapture</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Evision.VideoIORegistry.html" translate="no">Evision.VideoIORegistry</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Evision.VideoWriter.html" translate="no">Evision.VideoWriter</a>
 
   </div>
 
@@ -1271,8 +1309,8 @@ Evision
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.0-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.0-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
 
             </span>
 
@@ -1283,8 +1321,10 @@ Evision
 
         <p>
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.27.3) for the
-          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
         </p>
       </footer>
     </div>

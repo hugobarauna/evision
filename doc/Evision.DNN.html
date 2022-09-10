@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.5-dev">
+
+    <title>Evision.DNN — Evision v0.1.5-dev</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+
+    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+
+
+  </head>
+  <body data-type="modules">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
+Evision
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.5-dev
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">Evision.DNN</span> 
+  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+
+</h1>
+
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImage!/1" translate="no">blobFromImage!(image)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#blobFromImage/1"><code class="inline">blobFromImage/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImage!/2" translate="no">blobFromImage!(image, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#blobFromImage/2"><code class="inline">blobFromImage/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImage/1" translate="no">blobFromImage(image)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImage/2" translate="no">blobFromImage(image, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Creates 4-dimensional blob from image. Optionally resizes and crops @p image from center,</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImages!/1" translate="no">blobFromImages!(images)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#blobFromImages/1"><code class="inline">blobFromImages/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImages!/2" translate="no">blobFromImages!(images, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#blobFromImages/2"><code class="inline">blobFromImages/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImages/1" translate="no">blobFromImages(images)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#blobFromImages/2" translate="no">blobFromImages(images, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Creates 4-dimensional blob from series of images. Optionally resizes and</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAvailableTargets!/1" translate="no">getAvailableTargets!(be)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#getAvailableTargets/1"><code class="inline">getAvailableTargets/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getAvailableTargets/1" translate="no">getAvailableTargets(be)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#imagesFromBlob!/1" translate="no">imagesFromBlob!(blob_)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#imagesFromBlob/1"><code class="inline">imagesFromBlob/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#imagesFromBlob!/2" translate="no">imagesFromBlob!(blob_, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#imagesFromBlob/2"><code class="inline">imagesFromBlob/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#imagesFromBlob/1" translate="no">imagesFromBlob(blob_)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#imagesFromBlob/2" translate="no">imagesFromBlob(blob_, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Parse a 4D blob and output the images it contains as 2D arrays through a simpler data structure</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxes!/4" translate="no">nmsBoxes!(bboxes, scores, score_threshold, nms_threshold)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#nmsBoxes/4"><code class="inline">nmsBoxes/4</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxes!/5" translate="no">nmsBoxes!(bboxes, scores, score_threshold, nms_threshold, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#nmsBoxes/5"><code class="inline">nmsBoxes/5</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxes/4" translate="no">nmsBoxes(bboxes, scores, score_threshold, nms_threshold)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxes/5" translate="no">nmsBoxes(bboxes, scores, score_threshold, nms_threshold, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Performs non maximum suppression given boxes and corresponding scores.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxesRotated!/4" translate="no">nmsBoxesRotated!(bboxes, scores, score_threshold, nms_threshold)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#nmsBoxesRotated/4"><code class="inline">nmsBoxesRotated/4</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxesRotated!/5" translate="no">nmsBoxesRotated!(bboxes, scores, score_threshold, nms_threshold, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#nmsBoxesRotated/5"><code class="inline">nmsBoxesRotated/5</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxesRotated/4" translate="no">nmsBoxesRotated(bboxes, scores, score_threshold, nms_threshold)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#nmsBoxesRotated/5" translate="no">nmsBoxesRotated(bboxes, scores, score_threshold, nms_threshold, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><ul><li><strong>eta</strong> : float</li><li><strong>top_k</strong> : int</li></ul><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNet!/1" translate="no">readNet!(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNet/1"><code class="inline">readNet/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNet!/2" translate="no">readNet!(framework, bufferModel)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNet/2"><code class="inline">readNet/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNet!/3" translate="no">readNet!(framework, bufferModel, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNet/3"><code class="inline">readNet/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNet/1" translate="no">readNet(model)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNet/2" translate="no">readNet(model, opts)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNet/3" translate="no">readNet(framework, bufferModel, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Read deep learning network represented in one of the supported formats.
+@details This is an overloaded member function, provided for convenience.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromCaffe!/1" translate="no">readNetFromCaffe!(bufferProto)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromCaffe/1"><code class="inline">readNetFromCaffe/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromCaffe!/2" translate="no">readNetFromCaffe!(bufferProto, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromCaffe/2"><code class="inline">readNetFromCaffe/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromCaffe/1" translate="no">readNetFromCaffe(bufferProto)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromCaffe/2" translate="no">readNetFromCaffe(bufferProto, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Reads a network model stored in Caffe model in memory.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromDarknet!/1" translate="no">readNetFromDarknet!(bufferCfg)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromDarknet/1"><code class="inline">readNetFromDarknet/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromDarknet!/2" translate="no">readNetFromDarknet!(bufferCfg, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromDarknet/2"><code class="inline">readNetFromDarknet/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromDarknet/1" translate="no">readNetFromDarknet(bufferCfg)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromDarknet/2" translate="no">readNetFromDarknet(bufferCfg, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Reads a network model stored in &lt;a href=&quot;<a href="https://pjreddie.com/darknet/%22">https://pjreddie.com/darknet/&quot;</a>&gt;Darknet&lt;/a&gt; model files.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromModelOptimizer!/2" translate="no">readNetFromModelOptimizer!(bufferModelConfig, bufferWeights)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromModelOptimizer/2"><code class="inline">readNetFromModelOptimizer/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromModelOptimizer/2" translate="no">readNetFromModelOptimizer(bufferModelConfig, bufferWeights)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromONNX!/1" translate="no">readNetFromONNX!(buffer)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromONNX/1"><code class="inline">readNetFromONNX/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromONNX/1" translate="no">readNetFromONNX(buffer)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTensorflow!/1" translate="no">readNetFromTensorflow!(bufferModel)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromTensorflow/1"><code class="inline">readNetFromTensorflow/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTensorflow!/2" translate="no">readNetFromTensorflow!(bufferModel, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromTensorflow/2"><code class="inline">readNetFromTensorflow/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTensorflow/1" translate="no">readNetFromTensorflow(bufferModel)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTensorflow/2" translate="no">readNetFromTensorflow(bufferModel, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Reads a network model stored in &lt;a href=&quot;<a href="https://www.tensorflow.org/%22">https://www.tensorflow.org/&quot;</a>&gt;TensorFlow&lt;/a&gt; framework's format.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTorch!/1" translate="no">readNetFromTorch!(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromTorch/1"><code class="inline">readNetFromTorch/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTorch!/2" translate="no">readNetFromTorch!(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readNetFromTorch/2"><code class="inline">readNetFromTorch/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTorch/1" translate="no">readNetFromTorch(model)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readNetFromTorch/2" translate="no">readNetFromTorch(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Reads a network model stored in &lt;a href=&quot;<a href="http://torch.ch%22">http://torch.ch&quot;</a>&gt;Torch7&lt;/a&gt; framework's format.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readTensorFromONNX!/1" translate="no">readTensorFromONNX!(path)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readTensorFromONNX/1"><code class="inline">readTensorFromONNX/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readTensorFromONNX/1" translate="no">readTensorFromONNX(path)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readTorchBlob!/1" translate="no">readTorchBlob!(filename)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readTorchBlob/1"><code class="inline">readTorchBlob/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readTorchBlob!/2" translate="no">readTorchBlob!(filename, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#readTorchBlob/2"><code class="inline">readTorchBlob/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readTorchBlob/1" translate="no">readTorchBlob(filename)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#readTorchBlob/2" translate="no">readTorchBlob(filename, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Loads blob which was serialized as torch.Tensor object of Torch7 framework.
+@warning This function has the same limitations as readNetFromTorch().</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#shrinkCaffeModel!/2" translate="no">shrinkCaffeModel!(src, dst)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#shrinkCaffeModel/2"><code class="inline">shrinkCaffeModel/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#shrinkCaffeModel!/3" translate="no">shrinkCaffeModel!(src, dst, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#shrinkCaffeModel/3"><code class="inline">shrinkCaffeModel/3</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#shrinkCaffeModel/2" translate="no">shrinkCaffeModel(src, dst)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#shrinkCaffeModel/3" translate="no">shrinkCaffeModel(src, dst, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Convert all weights of Caffe network to half precision floating point.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#softNMSBoxes!/4" translate="no">softNMSBoxes!(bboxes, scores, score_threshold, nms_threshold)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#softNMSBoxes/4"><code class="inline">softNMSBoxes/4</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#softNMSBoxes!/5" translate="no">softNMSBoxes!(bboxes, scores, score_threshold, nms_threshold, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#softNMSBoxes/5"><code class="inline">softNMSBoxes/5</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#softNMSBoxes/4" translate="no">softNMSBoxes(bboxes, scores, score_threshold, nms_threshold)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#softNMSBoxes/5" translate="no">softNMSBoxes(bboxes, scores, score_threshold, nms_threshold, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Performs soft non maximum suppression given boxes and corresponding scores.
+   Reference: <a href="https://arxiv.org/abs/1704.04503">https://arxiv.org/abs/1704.04503</a></p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#writeTextGraph!/2" translate="no">writeTextGraph!(model, output)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#writeTextGraph/2"><code class="inline">writeTextGraph/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#writeTextGraph/2" translate="no">writeTextGraph(model, output)</a>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="blobFromImage!/1">
+
+  <div class="detail-header">
+    <a href="#blobFromImage!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImage!(image)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L123" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#blobFromImage/1"><code class="inline">blobFromImage/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="blobFromImage!/2">
+
+  <div class="detail-header">
+    <a href="#blobFromImage!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImage!(image, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L114" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#blobFromImage/2"><code class="inline">blobFromImage/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="blobFromImage/1">
+
+  <div class="detail-header">
+    <a href="#blobFromImage/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImage(image)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L116" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="blobFromImage/2">
+
+  <div class="detail-header">
+    <a href="#blobFromImage/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImage(image, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L107" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Creates 4-dimensional blob from image. Optionally resizes and crops @p image from center,</p><pre><code class="makeup elixir" translate="no"><span class="n">subtract</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">scalefactor</span><span class="p">,</span><span class="w"> </span><span class="n">swap</span><span class="w"> </span><span class="nc">Blue</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Red</span><span class="w"> </span><span class="n">channels</span><span class="o">.</span></code></pre><ul><li><strong>image</strong>.</li><li><strong>size</strong>.</li><li><strong>mean</strong>.<pre><code class="makeup elixir" translate="no"><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="p" data-group-id="5499549901-1">(</span><span class="n">mean</span><span class="o">-</span><span class="nc">R</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="o">-</span><span class="nc">G</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="o">-</span><span class="nc">B</span><span class="p" data-group-id="5499549901-1">)</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="nc">BGR</span><span class="w"> </span><span class="n">ordering</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">swapRB</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="o">.</span></code></pre></li><li><strong>scalefactor</strong>.</li><li><strong>swapRB</strong>.<pre><code class="makeup elixir" translate="no"><span class="ow">in</span><span class="w"> </span><span class="mi">3</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">necessary</span><span class="o">.</span></code></pre></li><li><strong>crop</strong>.</li><li><strong>ddepth</strong>.
+@details if @p crop is true, input image is resized so one side after resize is equal to corresponding
+  dimension in @p size and another one is equal or larger. Then, crop from the center is performed.
+  If @p crop is false, direct resize without cropping and preserving aspect ratio is performed.
+@returns 4-dimensional Mat with NCHW dimensions order.</li><li><strong>scalefactor</strong> : double</li><li><strong>size</strong> : Size</li><li><strong>mean</strong> : Scalar</li><li><strong>swapRB</strong> : bool</li><li><strong>crop</strong> : bool</li><li><strong>ddepth</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">blobFromImage</span><span class="p" data-group-id="1108734780-1">(</span><span class="n">image</span><span class="p" data-group-id="1108734780-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">scalefactor</span><span class="p" data-group-id="1108734780-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="1108734780-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p" data-group-id="1108734780-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">swapRB</span><span class="p" data-group-id="1108734780-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">crop</span><span class="p" data-group-id="1108734780-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">ddepth</span><span class="p" data-group-id="1108734780-7">]</span><span class="p" data-group-id="1108734780-6">]</span><span class="p" data-group-id="1108734780-5">]</span><span class="p" data-group-id="1108734780-4">]</span><span class="p" data-group-id="1108734780-3">]</span><span class="p" data-group-id="1108734780-2">]</span><span class="p" data-group-id="1108734780-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="blobFromImages!/1">
+
+  <div class="detail-header">
+    <a href="#blobFromImages!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImages!(images)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L170" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#blobFromImages/1"><code class="inline">blobFromImages/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="blobFromImages!/2">
+
+  <div class="detail-header">
+    <a href="#blobFromImages!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImages!(images, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L161" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#blobFromImages/2"><code class="inline">blobFromImages/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="blobFromImages/1">
+
+  <div class="detail-header">
+    <a href="#blobFromImages/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImages(images)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L163" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="blobFromImages/2">
+
+  <div class="detail-header">
+    <a href="#blobFromImages/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">blobFromImages(images, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L154" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Creates 4-dimensional blob from series of images. Optionally resizes and</p><pre><code class="makeup elixir" translate="no"><span class="n">crops</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">images</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">center</span><span class="p">,</span><span class="w"> </span><span class="n">subtract</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">scalefactor</span><span class="p">,</span><span class="w">
+</span><span class="n">swap</span><span class="w"> </span><span class="nc">Blue</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Red</span><span class="w"> </span><span class="n">channels</span><span class="o">.</span></code></pre><ul><li><strong>images</strong>.</li><li><strong>size</strong>.</li><li><strong>mean</strong>.<pre><code class="makeup elixir" translate="no"><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="p" data-group-id="4756842567-1">(</span><span class="n">mean</span><span class="o">-</span><span class="nc">R</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="o">-</span><span class="nc">G</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="o">-</span><span class="nc">B</span><span class="p" data-group-id="4756842567-1">)</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="nc">BGR</span><span class="w"> </span><span class="n">ordering</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">swapRB</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="o">.</span></code></pre></li><li><strong>scalefactor</strong>.</li><li><strong>swapRB</strong>.<pre><code class="makeup elixir" translate="no"><span class="ow">in</span><span class="w"> </span><span class="mi">3</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">necessary</span><span class="o">.</span></code></pre></li><li><strong>crop</strong>.</li><li><strong>ddepth</strong>.
+@details if @p crop is true, input image is resized so one side after resize is equal to corresponding
+  dimension in @p size and another one is equal or larger. Then, crop from the center is performed.
+  If @p crop is false, direct resize without cropping and preserving aspect ratio is performed.
+@returns 4-dimensional Mat with NCHW dimensions order.</li><li><strong>scalefactor</strong> : double</li><li><strong>size</strong> : Size</li><li><strong>mean</strong> : Scalar</li><li><strong>swapRB</strong> : bool</li><li><strong>crop</strong> : bool</li><li><strong>ddepth</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">blobFromImages</span><span class="p" data-group-id="4778453270-1">(</span><span class="n">images</span><span class="p" data-group-id="4778453270-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">scalefactor</span><span class="p" data-group-id="4778453270-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="4778453270-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p" data-group-id="4778453270-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">swapRB</span><span class="p" data-group-id="4778453270-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">crop</span><span class="p" data-group-id="4778453270-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">ddepth</span><span class="p" data-group-id="4778453270-7">]</span><span class="p" data-group-id="4778453270-6">]</span><span class="p" data-group-id="4778453270-5">]</span><span class="p" data-group-id="4778453270-4">]</span><span class="p" data-group-id="4778453270-3">]</span><span class="p" data-group-id="4778453270-2">]</span><span class="p" data-group-id="4778453270-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="getAvailableTargets!/1">
+
+  <div class="detail-header">
+    <a href="#getAvailableTargets!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAvailableTargets!(be)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L179" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#getAvailableTargets/1"><code class="inline">getAvailableTargets/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="getAvailableTargets/1">
+
+  <div class="detail-header">
+    <a href="#getAvailableTargets/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getAvailableTargets(be)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L172" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="imagesFromBlob!/1">
+
+  <div class="detail-header">
+    <a href="#imagesFromBlob!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">imagesFromBlob!(blob_)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L212" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#imagesFromBlob/1"><code class="inline">imagesFromBlob/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="imagesFromBlob!/2">
+
+  <div class="detail-header">
+    <a href="#imagesFromBlob!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">imagesFromBlob!(blob_, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L203" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#imagesFromBlob/2"><code class="inline">imagesFromBlob/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="imagesFromBlob/1">
+
+  <div class="detail-header">
+    <a href="#imagesFromBlob/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">imagesFromBlob(blob_)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L205" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="imagesFromBlob/2">
+
+  <div class="detail-header">
+    <a href="#imagesFromBlob/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">imagesFromBlob(blob_, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L196" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Parse a 4D blob and output the images it contains as 2D arrays through a simpler data structure</p><pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="4089427861-1">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cv</span><span class="o">::</span><span class="nc">Mat</span><span class="o">&gt;</span><span class="p" data-group-id="4089427861-1">)</span><span class="o">.</span></code></pre><ul><li><strong>blob_</strong>.<pre><code class="makeup elixir" translate="no"><span class="n">which</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">extract</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">images</span><span class="o">.</span></code></pre></li><li><strong>images_</strong>.<pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="1306055096-1">(</span><span class="nc">CV_32F</span><span class="p" data-group-id="1306055096-1">)</span><span class="o">.</span><span class="w"> </span><span class="nc">They</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">non</span><span class="w"> </span><span class="n">normalized</span><span class="w"> </span><span class="n">neither</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="n">added</span><span class="o">.</span><span class="w"> </span><span class="nc">The</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">returned</span><span class="w"> </span><span class="n">images</span><span class="w"> </span><span class="n">equals</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">dimension</span><span class="w">
+</span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">blob</span><span class="w"> </span><span class="p" data-group-id="1306055096-2">(</span><span class="n">batch</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="1306055096-2">)</span><span class="o">.</span><span class="w"> </span><span class="nc">Every</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">channels</span><span class="w"> </span><span class="n">equals</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">dimension</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">blob</span><span class="w"> </span><span class="p" data-group-id="1306055096-3">(</span><span class="n">depth</span><span class="p" data-group-id="1306055096-3">)</span><span class="o">.</span></code></pre></li><li><strong>images_</strong> : vector_UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">imagesFromBlob</span><span class="p" data-group-id="0975699873-1">(</span><span class="n">blob_</span><span class="p" data-group-id="0975699873-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">images_</span><span class="p" data-group-id="0975699873-2">]</span><span class="p" data-group-id="0975699873-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">images_</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="nmsBoxes!/4">
+
+  <div class="detail-header">
+    <a href="#nmsBoxes!/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxes!(bboxes, scores, score_threshold, nms_threshold)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L44" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#nmsBoxes/4"><code class="inline">nmsBoxes/4</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="nmsBoxes!/5">
+
+  <div class="detail-header">
+    <a href="#nmsBoxes!/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxes!(bboxes, scores, score_threshold, nms_threshold, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L32" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#nmsBoxes/5"><code class="inline">nmsBoxes/5</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="nmsBoxes/4">
+
+  <div class="detail-header">
+    <a href="#nmsBoxes/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxes(bboxes, scores, score_threshold, nms_threshold)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L34" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="nmsBoxes/5">
+
+  <div class="detail-header">
+    <a href="#nmsBoxes/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxes(bboxes, scores, score_threshold, nms_threshold, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Performs non maximum suppression given boxes and corresponding scores.</p><ul><li><strong>bboxes</strong>.</li><li><strong>scores</strong>.</li><li><strong>score_threshold</strong>.</li><li><strong>nms_threshold</strong>.</li><li><strong>indices</strong>.</li><li><strong>eta</strong>.</li><li><strong>top_k</strong>.</li><li><strong>eta</strong> : float</li><li><strong>top_k</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">NMSBoxes</span><span class="p" data-group-id="9102053642-1">(</span><span class="n">bboxes</span><span class="p">,</span><span class="w"> </span><span class="n">scores</span><span class="p">,</span><span class="w"> </span><span class="n">score_threshold</span><span class="p">,</span><span class="w"> </span><span class="n">nms_threshold</span><span class="p" data-group-id="9102053642-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">eta</span><span class="p" data-group-id="9102053642-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">top_k</span><span class="p" data-group-id="9102053642-3">]</span><span class="p" data-group-id="9102053642-2">]</span><span class="p" data-group-id="9102053642-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">indices</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="nmsBoxesRotated!/4">
+
+  <div class="detail-header">
+    <a href="#nmsBoxesRotated!/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxesRotated!(bboxes, scores, score_threshold, nms_threshold)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L77" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#nmsBoxesRotated/4"><code class="inline">nmsBoxesRotated/4</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="nmsBoxesRotated!/5">
+
+  <div class="detail-header">
+    <a href="#nmsBoxesRotated!/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxesRotated!(bboxes, scores, score_threshold, nms_threshold, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L65" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#nmsBoxesRotated/5"><code class="inline">nmsBoxesRotated/5</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="nmsBoxesRotated/4">
+
+  <div class="detail-header">
+    <a href="#nmsBoxesRotated/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxesRotated(bboxes, scores, score_threshold, nms_threshold)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L67" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="nmsBoxesRotated/5">
+
+  <div class="detail-header">
+    <a href="#nmsBoxesRotated/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">nmsBoxesRotated(bboxes, scores, score_threshold, nms_threshold, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L55" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<ul><li><strong>eta</strong> : float</li><li><strong>top_k</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">NMSBoxesRotated</span><span class="p" data-group-id="3735816552-1">(</span><span class="n">bboxes</span><span class="p">,</span><span class="w"> </span><span class="n">scores</span><span class="p">,</span><span class="w"> </span><span class="n">score_threshold</span><span class="p">,</span><span class="w"> </span><span class="n">nms_threshold</span><span class="p" data-group-id="3735816552-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">eta</span><span class="p" data-group-id="3735816552-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">top_k</span><span class="p" data-group-id="3735816552-3">]</span><span class="p" data-group-id="3735816552-2">]</span><span class="p" data-group-id="3735816552-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">indices</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="readNet!/1">
+
+  <div class="detail-header">
+    <a href="#readNet!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNet!(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L257" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNet/1"><code class="inline">readNet/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNet!/2">
+
+  <div class="detail-header">
+    <a href="#readNet!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNet!(framework, bufferModel)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L292" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNet/2"><code class="inline">readNet/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNet!/3">
+
+  <div class="detail-header">
+    <a href="#readNet!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNet!(framework, bufferModel, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L282" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNet/3"><code class="inline">readNet/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNet/1">
+
+  <div class="detail-header">
+    <a href="#readNet/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNet(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L250" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNet/2">
+
+  <div class="detail-header">
+    <a href="#readNet/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNet(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L242" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNet/3">
+
+  <div class="detail-header">
+    <a href="#readNet/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNet(framework, bufferModel, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L274" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Read deep learning network represented in one of the supported formats.
+@details This is an overloaded member function, provided for convenience.</p><pre><code class="makeup elixir" translate="no"><span class="w">        </span><span class="nc">It</span><span class="w"> </span><span class="n">differs</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">argument</span><span class="p" data-group-id="9502498752-1">(</span><span class="n">s</span><span class="p" data-group-id="9502498752-1">)</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">accepts</span><span class="o">.</span></code></pre><ul><li><strong>framework</strong>.</li><li><strong>bufferModel</strong>.</li><li><strong>bufferConfig</strong>.
+@returns Net object.</li><li><strong>bufferConfig</strong> : vector_uchar</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readNet</span><span class="p" data-group-id="0400778169-1">(</span><span class="n">framework</span><span class="p">,</span><span class="w"> </span><span class="n">bufferModel</span><span class="p" data-group-id="0400778169-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">bufferConfig</span><span class="p" data-group-id="0400778169-2">]</span><span class="p" data-group-id="0400778169-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="readNetFromCaffe!/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromCaffe!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromCaffe!(bufferProto)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L322" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromCaffe/1"><code class="inline">readNetFromCaffe/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromCaffe!/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromCaffe!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromCaffe!(bufferProto, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L313" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromCaffe/2"><code class="inline">readNetFromCaffe/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromCaffe/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromCaffe/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromCaffe(bufferProto)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L315" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNetFromCaffe/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromCaffe/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromCaffe(bufferProto, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L306" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Reads a network model stored in Caffe model in memory.</p><ul><li><strong>bufferProto</strong>.</li><li><strong>bufferModel</strong>.
+@returns Net object.</li><li><strong>bufferModel</strong> : vector_uchar</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readNetFromCaffe</span><span class="p" data-group-id="8077610762-1">(</span><span class="n">bufferProto</span><span class="p" data-group-id="8077610762-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">bufferModel</span><span class="p" data-group-id="8077610762-2">]</span><span class="p" data-group-id="8077610762-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="readNetFromDarknet!/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromDarknet!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromDarknet!(bufferCfg)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L377" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromDarknet/1"><code class="inline">readNetFromDarknet/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromDarknet!/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromDarknet!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromDarknet!(bufferCfg, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L368" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromDarknet/2"><code class="inline">readNetFromDarknet/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromDarknet/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromDarknet/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromDarknet(bufferCfg)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L370" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNetFromDarknet/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromDarknet/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromDarknet(bufferCfg, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L361" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Reads a network model stored in &lt;a href=&quot;<a href="https://pjreddie.com/darknet/%22">https://pjreddie.com/darknet/&quot;</a>&gt;Darknet&lt;/a&gt; model files.</p><ul><li><strong>bufferCfg</strong>.</li><li><strong>bufferModel</strong>.
+@returns Net object.</li><li><strong>bufferModel</strong> : vector_uchar</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readNetFromDarknet</span><span class="p" data-group-id="4199199496-1">(</span><span class="n">bufferCfg</span><span class="p" data-group-id="4199199496-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">bufferModel</span><span class="p" data-group-id="4199199496-2">]</span><span class="p" data-group-id="4199199496-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="readNetFromModelOptimizer!/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromModelOptimizer!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromModelOptimizer!(bufferModelConfig, bufferWeights)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L413" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromModelOptimizer/2"><code class="inline">readNetFromModelOptimizer/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromModelOptimizer/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromModelOptimizer/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromModelOptimizer(bufferModelConfig, bufferWeights)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L405" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNetFromONNX!/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromONNX!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromONNX!(buffer)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L431" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromONNX/1"><code class="inline">readNetFromONNX/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromONNX/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromONNX/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromONNX(buffer)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L424" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNetFromTensorflow!/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromTensorflow!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTensorflow!(bufferModel)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L469" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromTensorflow/1"><code class="inline">readNetFromTensorflow/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromTensorflow!/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromTensorflow!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTensorflow!(bufferModel, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L460" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromTensorflow/2"><code class="inline">readNetFromTensorflow/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromTensorflow/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromTensorflow/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTensorflow(bufferModel)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L462" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNetFromTensorflow/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromTensorflow/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTensorflow(bufferModel, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L453" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Reads a network model stored in &lt;a href=&quot;<a href="https://www.tensorflow.org/%22">https://www.tensorflow.org/&quot;</a>&gt;TensorFlow&lt;/a&gt; framework's format.</p><ul><li><strong>bufferModel</strong>.</li><li><strong>bufferConfig</strong>.
+@returns Net object.</li><li><strong>bufferConfig</strong> : vector_uchar</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readNetFromTensorflow</span><span class="p" data-group-id="1532328136-1">(</span><span class="n">bufferModel</span><span class="p" data-group-id="1532328136-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">bufferConfig</span><span class="p" data-group-id="1532328136-2">]</span><span class="p" data-group-id="1532328136-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="readNetFromTorch!/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromTorch!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTorch!(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L543" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromTorch/1"><code class="inline">readNetFromTorch/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromTorch!/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromTorch!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTorch!(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L534" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readNetFromTorch/2"><code class="inline">readNetFromTorch/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readNetFromTorch/1">
+
+  <div class="detail-header">
+    <a href="#readNetFromTorch/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTorch(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L536" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readNetFromTorch/2">
+
+  <div class="detail-header">
+    <a href="#readNetFromTorch/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readNetFromTorch(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L527" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Reads a network model stored in &lt;a href=&quot;<a href="http://torch.ch%22">http://torch.ch&quot;</a>&gt;Torch7&lt;/a&gt; framework's format.</p><ul><li><strong>model</strong>.</li><li><strong>isBinary</strong>.</li><li><strong>evaluate</strong>.
+@returns Net object.
+<strong>Note</strong>: Ascii mode of Torch serializer is more preferable, because binary mode extensively use <code class="inline">long</code> type of C language,
+  which has various bit-length on different systems.
+ The loading file must contain serialized &lt;a href=&quot;<a href="https://github.com/torch/nn/blob/master/doc/module.md%22">https://github.com/torch/nn/blob/master/doc/module.md&quot;</a>&gt;nn.Module&lt;/a&gt; object
+ with importing network. Try to eliminate a custom objects from serialazing data to avoid importing errors.
+ List of supported layers (i.e. object instances derived from Torch nn.Module class):<ul><li>nn.Sequential</li><li>nn.Parallel</li><li>nn.Concat</li><li>nn.Linear</li><li>nn.SpatialConvolution</li><li>nn.SpatialMaxPooling, nn.SpatialAveragePooling</li><li>nn.ReLU, nn.TanH, nn.Sigmoid</li><li>nn.Reshape</li><li>nn.SoftMax, nn.LogSoftMax
+Also some equivalents of these classes from cunn, cudnn, and fbcunn may be successfully imported.</li></ul></li><li><strong>isBinary</strong> : bool</li><li><strong>evaluate</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readNetFromTorch</span><span class="p" data-group-id="9894576704-1">(</span><span class="n">model</span><span class="p" data-group-id="9894576704-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">isBinary</span><span class="p" data-group-id="9894576704-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">evaluate</span><span class="p" data-group-id="9894576704-3">]</span><span class="p" data-group-id="9894576704-2">]</span><span class="p" data-group-id="9894576704-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="readTensorFromONNX!/1">
+
+  <div class="detail-header">
+    <a href="#readTensorFromONNX!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readTensorFromONNX!(path)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L552" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readTensorFromONNX/1"><code class="inline">readTensorFromONNX/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readTensorFromONNX/1">
+
+  <div class="detail-header">
+    <a href="#readTensorFromONNX/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readTensorFromONNX(path)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L545" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readTorchBlob!/1">
+
+  <div class="detail-header">
+    <a href="#readTorchBlob!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readTorchBlob!(filename)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L580" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readTorchBlob/1"><code class="inline">readTorchBlob/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readTorchBlob!/2">
+
+  <div class="detail-header">
+    <a href="#readTorchBlob!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readTorchBlob!(filename, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L571" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#readTorchBlob/2"><code class="inline">readTorchBlob/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="readTorchBlob/1">
+
+  <div class="detail-header">
+    <a href="#readTorchBlob/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readTorchBlob(filename)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L573" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="readTorchBlob/2">
+
+  <div class="detail-header">
+    <a href="#readTorchBlob/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">readTorchBlob(filename, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L564" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Loads blob which was serialized as torch.Tensor object of Torch7 framework.
+@warning This function has the same limitations as readNetFromTorch().</p><ul><li><strong>isBinary</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readTorchBlob</span><span class="p" data-group-id="3432638253-1">(</span><span class="n">filename</span><span class="p" data-group-id="3432638253-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">isBinary</span><span class="p" data-group-id="3432638253-2">]</span><span class="p" data-group-id="3432638253-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="shrinkCaffeModel!/2">
+
+  <div class="detail-header">
+    <a href="#shrinkCaffeModel!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">shrinkCaffeModel!(src, dst)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L619" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#shrinkCaffeModel/2"><code class="inline">shrinkCaffeModel/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="shrinkCaffeModel!/3">
+
+  <div class="detail-header">
+    <a href="#shrinkCaffeModel!/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">shrinkCaffeModel!(src, dst, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L609" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#shrinkCaffeModel/3"><code class="inline">shrinkCaffeModel/3</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="shrinkCaffeModel/2">
+
+  <div class="detail-header">
+    <a href="#shrinkCaffeModel/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">shrinkCaffeModel(src, dst)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L611" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="shrinkCaffeModel/3">
+
+  <div class="detail-header">
+    <a href="#shrinkCaffeModel/3" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">shrinkCaffeModel(src, dst, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L601" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Convert all weights of Caffe network to half precision floating point.</p><ul><li><strong>src</strong>.<pre><code class="makeup elixir" translate="no"><span class="w">          </span><span class="n">precision</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">weights</span><span class="w"> </span><span class="p" data-group-id="9483205949-1">(</span><span class="n">usually</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">`</span><span class="o">.</span><span class="n">caffemodel</span><span class="err">`</span><span class="w"> </span><span class="n">extension</span><span class="p" data-group-id="9483205949-1">)</span><span class="o">.</span></code></pre></li><li><strong>dst</strong>.</li><li><strong>layersTypes</strong>.<pre><code class="makeup elixir" translate="no"><span class="w">                  </span><span class="nc">By</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w"> </span><span class="n">converts</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="nc">Convolutional</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">Fully</span><span class="o">-</span><span class="nc">Connected</span><span class="w"> </span><span class="n">layers</span><span class="err">&#39;</span><span class="w">
+                  </span><span class="n">weights</span><span class="o">.</span></code></pre><strong>Note</strong>: Shrinked model has no origin float32 weights so it can't be used<pre><code class="makeup elixir" translate="no"><span class="w">   </span><span class="ow">in</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="nc">Caffe</span><span class="w"> </span><span class="n">framework</span><span class="w"> </span><span class="n">anymore</span><span class="o">.</span><span class="w"> </span><span class="nc">However</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">structure</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">data</span><span class="w">
+   </span><span class="n">is</span><span class="w"> </span><span class="n">taken</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="nc">NVidia</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="nc">Caffe</span><span class="w"> </span><span class="ss">fork</span><span class="p">:</span><span class="w"> </span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="nc">NVIDIA</span><span class="o">/</span><span class="n">caffe</span><span class="o">.</span><span class="w">
+   </span><span class="nc">So</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">resulting</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">there</span><span class="o">.</span></code></pre></li><li><strong>layersTypes</strong> : vector_String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">shrinkCaffeModel</span><span class="p" data-group-id="1181416289-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="1181416289-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">layersTypes</span><span class="p" data-group-id="1181416289-2">]</span><span class="p" data-group-id="1181416289-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="softNMSBoxes!/4">
+
+  <div class="detail-header">
+    <a href="#softNMSBoxes!/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">softNMSBoxes!(bboxes, scores, score_threshold, nms_threshold)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L665" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#softNMSBoxes/4"><code class="inline">softNMSBoxes/4</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="softNMSBoxes!/5">
+
+  <div class="detail-header">
+    <a href="#softNMSBoxes!/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">softNMSBoxes!(bboxes, scores, score_threshold, nms_threshold, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L653" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#softNMSBoxes/5"><code class="inline">softNMSBoxes/5</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="softNMSBoxes/4">
+
+  <div class="detail-header">
+    <a href="#softNMSBoxes/4" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">softNMSBoxes(bboxes, scores, score_threshold, nms_threshold)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L655" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="softNMSBoxes/5">
+
+  <div class="detail-header">
+    <a href="#softNMSBoxes/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">softNMSBoxes(bboxes, scores, score_threshold, nms_threshold, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L643" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Performs soft non maximum suppression given boxes and corresponding scores.
+   Reference: <a href="https://arxiv.org/abs/1704.04503">https://arxiv.org/abs/1704.04503</a></p><ul><li><strong>bboxes</strong>.</li><li><strong>scores</strong>.</li><li><strong>updated_scores</strong>.</li><li><strong>score_threshold</strong>.</li><li><strong>nms_threshold</strong>.</li><li><strong>indices</strong>.</li><li><strong>top_k</strong>.</li><li><strong>sigma</strong>.</li><li><strong>method</strong>.
+@see SoftNMSMethod</li><li><strong>top_k</strong> : size_t</li><li><strong>sigma</strong> : float</li><li><strong>method</strong> : SoftNMSMethod</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">softNMSBoxes</span><span class="p" data-group-id="2234311141-1">(</span><span class="n">bboxes</span><span class="p">,</span><span class="w"> </span><span class="n">scores</span><span class="p">,</span><span class="w"> </span><span class="n">score_threshold</span><span class="p">,</span><span class="w"> </span><span class="n">nms_threshold</span><span class="p" data-group-id="2234311141-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">top_k</span><span class="p" data-group-id="2234311141-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">sigma</span><span class="p" data-group-id="2234311141-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="p" data-group-id="2234311141-4">]</span><span class="p" data-group-id="2234311141-3">]</span><span class="p" data-group-id="2234311141-2">]</span><span class="p" data-group-id="2234311141-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">updated_scores</span><span class="p">,</span><span class="w"> </span><span class="n">indices</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="writeTextGraph!/2">
+
+  <div class="detail-header">
+    <a href="#writeTextGraph!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">writeTextGraph!(model, output)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L675" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#writeTextGraph/2"><code class="inline">writeTextGraph/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="writeTextGraph/2">
+
+  <div class="detail-header">
+    <a href="#writeTextGraph/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">writeTextGraph(model, output)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn.ex#L667" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn.ex">(current file)</a>
+
+            </span>
+
+            <button class="line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["\\f$", "\\f$"]],
+            displayMath: [["\\f[", "\\f]"]],
+            skipTags: ["script", "noscript", "style", "textarea"],
+            processEnvironments: false
+        },
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+    });
+    //<![CDATA[
+    MathJax.Hub.Config(
+    {
+        TeX: {
+            Macros: {
+                matTT: ["\\[ \\left|\\begin{array}{ccc} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{array}\\right| \\]", 9],
+                fork: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ \\end{array} \\right.", 4],
+                forkthree: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ \\end{array} \\right.", 6],
+                forkfour: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ #7 & \\mbox{#8}\\\\ \\end{array} \\right.", 8],
+                vecthree: ["\\begin{bmatrix} #1\\\\ #2\\\\ #3 \\end{bmatrix}", 3],
+                vecthreethree: ["\\begin{bmatrix} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{bmatrix}", 9],
+                cameramatrix: ["#1 = \\begin{bmatrix} f_x & 0 & c_x\\\\ 0 & f_y & c_y\\\\ 0 & 0 & 1 \\end{bmatrix}", 1],
+                distcoeffs: ["(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]]) \\text{ of 4, 5, 8, 12 or 14 elements}"],
+                distcoeffsfisheye: ["(k_1, k_2, k_3, k_4)"],
+                hdotsfor: ["\\dots", 1],
+                mathbbm: ["\\mathbb{#1}", 1],
+                bordermatrix: ["\\matrix{#1}", 1]
+            }
+        }
+    }
+    );
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
+    
+  </body>
+</html>
