@@ -126,7 +126,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>image</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p></div>
 
       </div>
 
@@ -136,7 +136,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>image</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p></div>
 
       </div>
 
@@ -146,7 +146,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>backgroundImage</strong>: UMat.</li></ul><p>Computes a background image.
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>backgroundImage</strong>: UMat.</li></ul><p>Computes a background image.
 <strong>Note</strong>: Sometimes the background image can be very blurry, as it contain the average background
   statistics.</p></div>
 
@@ -222,21 +222,9 @@ cv
 
   <section class="docstring">
 
-<h3 id="apply/2-positional-arguments" class="section-heading">
-  <a href="#apply/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>image</strong>: UMat. </li></ul><h3 id="apply/2-keyword-arguments" class="section-heading">
-  <a href="#apply/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p><pre><code class="makeup elixir" translate="no"><span class="n">learnt</span><span class="o">.</span><span class="w"> </span><span class="nc">Negative</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="n">learning</span><span class="w">
+<h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p><pre><code class="makeup elixir" translate="no"><span class="n">learnt</span><span class="o">.</span><span class="w"> </span><span class="nc">Negative</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="n">learning</span><span class="w">
 </span><span class="n">rate</span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w">
-</span><span class="n">is</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">reinitialized</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">frame</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="2189948802-1">(</span><span class="n">image</span><span class="p" data-group-id="2189948802-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">fgmask</span><span class="p" data-group-id="2189948802-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">learningRate</span><span class="p" data-group-id="2189948802-3">]</span><span class="p" data-group-id="2189948802-2">]</span><span class="p" data-group-id="2189948802-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">fgmask</span></code></pre>
+</span><span class="n">is</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">reinitialized</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">frame</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="3066766841-1">(</span><span class="n">image</span><span class="p" data-group-id="3066766841-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">fgmask</span><span class="p" data-group-id="3066766841-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">learningRate</span><span class="p" data-group-id="3066766841-3">]</span><span class="p" data-group-id="3066766841-2">]</span><span class="p" data-group-id="3066766841-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">fgmask</span></code></pre>
   </section>
 </section>
 <section class="detail" id="apply/3">
@@ -258,21 +246,9 @@ cv
 
   <section class="docstring">
 
-<h3 id="apply/3-positional-arguments" class="section-heading">
-  <a href="#apply/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>image</strong>: UMat. </li></ul><h3 id="apply/3-keyword-arguments" class="section-heading">
-  <a href="#apply/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p><pre><code class="makeup elixir" translate="no"><span class="n">learnt</span><span class="o">.</span><span class="w"> </span><span class="nc">Negative</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="n">learning</span><span class="w">
+<h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p><pre><code class="makeup elixir" translate="no"><span class="n">learnt</span><span class="o">.</span><span class="w"> </span><span class="nc">Negative</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="n">learning</span><span class="w">
 </span><span class="n">rate</span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w">
-</span><span class="n">is</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">reinitialized</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">frame</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="3692662330-1">(</span><span class="n">image</span><span class="p" data-group-id="3692662330-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">fgmask</span><span class="p" data-group-id="3692662330-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">learningRate</span><span class="p" data-group-id="3692662330-3">]</span><span class="p" data-group-id="3692662330-2">]</span><span class="p" data-group-id="3692662330-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">fgmask</span></code></pre>
+</span><span class="n">is</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">reinitialized</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">frame</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="5916173972-1">(</span><span class="n">image</span><span class="p" data-group-id="5916173972-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">fgmask</span><span class="p" data-group-id="5916173972-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">learningRate</span><span class="p" data-group-id="5916173972-3">]</span><span class="p" data-group-id="5916173972-2">]</span><span class="p" data-group-id="5916173972-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">fgmask</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getBackgroundImage/1">
@@ -294,21 +270,9 @@ cv
 
   <section class="docstring">
 
-<h3 id="getBackgroundImage/1-positional-arguments" class="section-heading">
-  <a href="#getBackgroundImage/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<h3 id="getBackgroundImage/1-keyword-arguments" class="section-heading">
-  <a href="#getBackgroundImage/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>backgroundImage</strong>: UMat.</li></ul><p>Computes a background image.
+<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>backgroundImage</strong>: UMat.</li></ul><p>Computes a background image.
 <strong>Note</strong>: Sometimes the background image can be very blurry, as it contain the average background
-  statistics.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackgroundImage</span><span class="p" data-group-id="7174338860-1">(</span><span class="p" data-group-id="7174338860-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">backgroundImage</span><span class="p" data-group-id="7174338860-2">]</span><span class="p" data-group-id="7174338860-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">backgroundImage</span></code></pre>
+  statistics.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackgroundImage</span><span class="p" data-group-id="8979060914-1">(</span><span class="p" data-group-id="8979060914-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">backgroundImage</span><span class="p" data-group-id="8979060914-2">]</span><span class="p" data-group-id="8979060914-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">backgroundImage</span></code></pre>
   </section>
 </section>
 

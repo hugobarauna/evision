@@ -360,7 +360,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns backend API name or &quot;UnknownVideoAPI(xxx)&quot;</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackendName</span><span class="p" data-group-id="5039870428-1">(</span><span class="n">api</span><span class="p" data-group-id="5039870428-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns backend API name or &quot;UnknownVideoAPI(xxx)&quot;</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackendName</span><span class="p" data-group-id="4961722262-1">(</span><span class="n">api</span><span class="p" data-group-id="4961722262-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getBackends/0">
@@ -382,7 +382,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns list of all available backends</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackends</span><span class="p" data-group-id="1130404434-1">(</span><span class="p" data-group-id="1130404434-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns list of all available backends</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackends</span><span class="p" data-group-id="3546994152-1">(</span><span class="p" data-group-id="3546994152-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCameraBackendPluginVersion/1">
@@ -404,7 +404,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns description and ABI/API version of videoio plugin's camera interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCameraBackendPluginVersion</span><span class="p" data-group-id="1418160158-1">(</span><span class="n">api</span><span class="p" data-group-id="1418160158-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
+<p>Returns description and ABI/API version of videoio plugin's camera interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCameraBackendPluginVersion</span><span class="p" data-group-id="0513119174-1">(</span><span class="n">api</span><span class="p" data-group-id="0513119174-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCameraBackends/0">
@@ -426,7 +426,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(int index)</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCameraBackends</span><span class="p" data-group-id="4458255997-1">(</span><span class="p" data-group-id="4458255997-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(int index)</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCameraBackends</span><span class="p" data-group-id="7759697495-1">(</span><span class="p" data-group-id="7759697495-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getStreamBackendPluginVersion/1">
@@ -448,7 +448,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns description and ABI/API version of videoio plugin's stream capture interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getStreamBackendPluginVersion</span><span class="p" data-group-id="3818620024-1">(</span><span class="n">api</span><span class="p" data-group-id="3818620024-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
+<p>Returns description and ABI/API version of videoio plugin's stream capture interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getStreamBackendPluginVersion</span><span class="p" data-group-id="3180700414-1">(</span><span class="n">api</span><span class="p" data-group-id="3180700414-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getStreamBackends/0">
@@ -470,7 +470,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(filename)</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getStreamBackends</span><span class="p" data-group-id="7100692695-1">(</span><span class="p" data-group-id="7100692695-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(filename)</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getStreamBackends</span><span class="p" data-group-id="5218375157-1">(</span><span class="p" data-group-id="5218375157-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getWriterBackendPluginVersion/1">
@@ -492,7 +492,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns description and ABI/API version of videoio plugin's writer interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWriterBackendPluginVersion</span><span class="p" data-group-id="2348691655-1">(</span><span class="n">api</span><span class="p" data-group-id="2348691655-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
+<p>Returns description and ABI/API version of videoio plugin's writer interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWriterBackendPluginVersion</span><span class="p" data-group-id="8921374717-1">(</span><span class="n">api</span><span class="p" data-group-id="8921374717-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getWriterBackends/0">
@@ -514,7 +514,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns list of available backends which works via <code class="inline">cv::VideoWriter()</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWriterBackends</span><span class="p" data-group-id="7580608896-1">(</span><span class="p" data-group-id="7580608896-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns list of available backends which works via <code class="inline">cv::VideoWriter()</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWriterBackends</span><span class="p" data-group-id="6462834300-1">(</span><span class="p" data-group-id="6462834300-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="hasBackend/1">
@@ -536,7 +536,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns true if backend is available</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">hasBackend</span><span class="p" data-group-id="7969163912-1">(</span><span class="n">api</span><span class="p" data-group-id="7969163912-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if backend is available</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">hasBackend</span><span class="p" data-group-id="8440004142-1">(</span><span class="n">api</span><span class="p" data-group-id="8440004142-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isBackendBuiltIn/1">
@@ -558,7 +558,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-<p>Returns true if backend is built in (false if backend is used as plugin)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isBackendBuiltIn</span><span class="p" data-group-id="3993248431-1">(</span><span class="n">api</span><span class="p" data-group-id="3993248431-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if backend is built in (false if backend is used as plugin)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isBackendBuiltIn</span><span class="p" data-group-id="5103814507-1">(</span><span class="n">api</span><span class="p" data-group-id="5103814507-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 

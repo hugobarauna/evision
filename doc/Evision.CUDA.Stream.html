@@ -136,7 +136,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>creates a new Stream using the cudaFlags argument to determine the behaviors of the stream
+          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>creates a new Stream using the cudaFlags argument to determine the behaviors of the stream
 <strong>Note</strong>: The cudaFlags parameter is passed to the underlying api cudaStreamCreateWithFlags() and
   supports the same parameter values.</p></div>
 
@@ -307,7 +307,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="2532871881-1">(</span><span class="p" data-group-id="2532871881-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="2858612807-1">(</span><span class="p" data-group-id="2858612807-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="cuda_Stream/1">
@@ -329,23 +329,11 @@ cv.cuda
 
   <section class="docstring">
 
-<h2 id="cuda_Stream/1-variaint-1" class="section-heading">
-  <a href="#cuda_Stream/1-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-1</p>
-  </a>
-  Variaint 1:
-</h2>
-<p>creates a new Stream using the cudaFlags argument to determine the behaviors of the stream
+<h4>Variaint 1:</h4><p>creates a new Stream using the cudaFlags argument to determine the behaviors of the stream
 <strong>Note</strong>: The cudaFlags parameter is passed to the underlying api cudaStreamCreateWithFlags() and
   supports the same parameter values.</p><pre><code class="makeup elixir" translate="no"><span class="o">//</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="nc">OpenCV</span><span class="w"> </span><span class="n">cuda</span><span class="o">::</span><span class="nc">Stream</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">manages</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">asynchronous</span><span class="p">,</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">blocking</span><span class="p">,</span><span class="w">
 </span><span class="o">//</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">default</span><span class="w"> </span><span class="nc">CUDA</span><span class="w"> </span><span class="n">stream</span><span class="w">
-</span><span class="n">cv</span><span class="o">::</span><span class="n">cuda</span><span class="o">::</span><span class="nc">Stream</span><span class="w"> </span><span class="n">cvStream</span><span class="p" data-group-id="2319947417-1">(</span><span class="n">cudaStreamNonBlocking</span><span class="p" data-group-id="2319947417-1">)</span><span class="p">;</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="5992396218-1">(</span><span class="n">cudaFlags</span><span class="p" data-group-id="5992396218-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h2 id="cuda_Stream/1-variaint-2" class="section-heading">
-  <a href="#cuda_Stream/1-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-2</p>
-  </a>
-  Variaint 2:
-</h2>
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="4740067947-1">(</span><span class="n">allocator</span><span class="p" data-group-id="4740067947-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+</span><span class="n">cv</span><span class="o">::</span><span class="n">cuda</span><span class="o">::</span><span class="nc">Stream</span><span class="w"> </span><span class="n">cvStream</span><span class="p" data-group-id="9164488198-1">(</span><span class="n">cudaStreamNonBlocking</span><span class="p" data-group-id="9164488198-1">)</span><span class="p">;</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="6464260374-1">(</span><span class="n">cudaFlags</span><span class="p" data-group-id="6464260374-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h4>Variaint 2:</h4><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="2769326982-1">(</span><span class="n">allocator</span><span class="p" data-group-id="2769326982-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="cudaPtr/1">
@@ -367,7 +355,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">cudaPtr</span><span class="p" data-group-id="5367828204-1">(</span><span class="p" data-group-id="5367828204-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">cudaPtr</span><span class="p" data-group-id="1861691667-1">(</span><span class="p" data-group-id="1861691667-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="null/0">
@@ -394,7 +382,7 @@ cv.cuda
 <strong>Note</strong>: Callbacks must not make any CUDA API calls. Callbacks must not perform any synchronization
   that may depend on outstanding device work or other callbacks that are not mandated to run earlier.
   Callbacks without a mandated order (in independent streams) execute in undefined order and may be
-  serialized.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Null</span><span class="p" data-group-id="3873499902-1">(</span><span class="p" data-group-id="3873499902-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  serialized.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Null</span><span class="p" data-group-id="8898964024-1">(</span><span class="p" data-group-id="8898964024-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="queryIfComplete/1">
@@ -416,7 +404,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Returns true if the current stream queue is finished. Otherwise, it returns false.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">queryIfComplete</span><span class="p" data-group-id="1752543222-1">(</span><span class="p" data-group-id="1752543222-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if the current stream queue is finished. Otherwise, it returns false.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">queryIfComplete</span><span class="p" data-group-id="4210873603-1">(</span><span class="p" data-group-id="4210873603-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="waitEvent/2">
@@ -438,7 +426,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Makes a compute stream wait on an event.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waitEvent</span><span class="p" data-group-id="2178590024-1">(</span><span class="n">event</span><span class="p" data-group-id="2178590024-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Makes a compute stream wait on an event.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waitEvent</span><span class="p" data-group-id="7800338519-1">(</span><span class="n">event</span><span class="p" data-group-id="7800338519-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="waitForCompletion/1">
@@ -460,7 +448,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Blocks the current CPU thread until all operations in the stream are complete.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waitForCompletion</span><span class="p" data-group-id="9529908667-1">(</span><span class="p" data-group-id="9529908667-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Blocks the current CPU thread until all operations in the stream are complete.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waitForCompletion</span><span class="p" data-group-id="7949276777-1">(</span><span class="p" data-group-id="7949276777-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 

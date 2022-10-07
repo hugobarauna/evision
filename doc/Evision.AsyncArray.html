@@ -136,7 +136,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><p><strong>dst</strong>: UMat.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><p><strong>dst</strong>: UMat.</p></div>
 
       </div>
 
@@ -146,7 +146,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>timeoutNs</strong>: double. </li></ul><h3>Keyword Arguments</h3><ul><li><p><strong>dst</strong>: UMat.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>timeoutNs</strong>: double. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>dst</strong>: UMat.</p></div>
 
       </div>
 
@@ -156,7 +156,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>timeoutNs</strong>: double. </li></ul><h3>Keyword Arguments</h3><ul><li><p><strong>dst</strong>: UMat.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>timeoutNs</strong>: double. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>dst</strong>: UMat.</p></div>
 
       </div>
 
@@ -300,7 +300,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">AsyncArray</span><span class="p" data-group-id="4425808353-1">(</span><span class="p" data-group-id="4425808353-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">AsyncArray</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">AsyncArray</span><span class="p" data-group-id="8934044758-1">(</span><span class="p" data-group-id="8934044758-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">AsyncArray</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="get/1">
@@ -322,22 +322,10 @@ cv
 
   <section class="docstring">
 
-<h3 id="get/1-positional-arguments" class="section-heading">
-  <a href="#get/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<h3 id="get/1-keyword-arguments" class="section-heading">
-  <a href="#get/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><p><strong>dst</strong>: UMat.</p><p>Fetch the result.
+<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><p><strong>dst</strong>: UMat.</p><p>Fetch the result.
 Waits for result until container has valid result.
 Throws exception if exception was stored as a result.
-Throws exception on invalid container state.</p></li></ul><p><strong>Note</strong>: Result or stored exception can be fetched only once.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="2396759318-1">(</span><span class="p" data-group-id="2396759318-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="2396759318-2">]</span><span class="p" data-group-id="2396759318-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
+Throws exception on invalid container state.</p></li></ul><p><strong>Note</strong>: Result or stored exception can be fetched only once.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="3719709418-1">(</span><span class="p" data-group-id="3719709418-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="3719709418-2">]</span><span class="p" data-group-id="3719709418-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
   </section>
 </section>
 <section class="detail" id="get/2">
@@ -359,20 +347,8 @@ Throws exception on invalid container state.</p></li></ul><p><strong>Note</stron
 
   <section class="docstring">
 
-<h3 id="get/2-positional-arguments" class="section-heading">
-  <a href="#get/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>timeoutNs</strong>: double. </li></ul><h3 id="get/2-keyword-arguments" class="section-heading">
-  <a href="#get/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><p><strong>dst</strong>: UMat.</p><p>Retrieving the result with timeout</p></li></ul><p>@returns true if result is ready, false if the timeout has expired
-<strong>Note</strong>: Result or stored exception can be fetched only once.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="4682143124-1">(</span><span class="n">timeoutNs</span><span class="p" data-group-id="4682143124-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="4682143124-2">]</span><span class="p" data-group-id="4682143124-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>timeoutNs</strong>: double. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>dst</strong>: UMat.</p><p>Retrieving the result with timeout</p></li></ul><p>@returns true if result is ready, false if the timeout has expired
+<strong>Note</strong>: Result or stored exception can be fetched only once.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="9869256835-1">(</span><span class="n">timeoutNs</span><span class="p" data-group-id="9869256835-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="9869256835-2">]</span><span class="p" data-group-id="9869256835-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span></code></pre>
   </section>
 </section>
 <section class="detail" id="get/3">
@@ -394,20 +370,8 @@ Throws exception on invalid container state.</p></li></ul><p><strong>Note</stron
 
   <section class="docstring">
 
-<h3 id="get/3-positional-arguments" class="section-heading">
-  <a href="#get/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>timeoutNs</strong>: double. </li></ul><h3 id="get/3-keyword-arguments" class="section-heading">
-  <a href="#get/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><p><strong>dst</strong>: UMat.</p><p>Retrieving the result with timeout</p></li></ul><p>@returns true if result is ready, false if the timeout has expired
-<strong>Note</strong>: Result or stored exception can be fetched only once.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="5700281837-1">(</span><span class="n">timeoutNs</span><span class="p" data-group-id="5700281837-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="5700281837-2">]</span><span class="p" data-group-id="5700281837-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>timeoutNs</strong>: double. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>dst</strong>: UMat.</p><p>Retrieving the result with timeout</p></li></ul><p>@returns true if result is ready, false if the timeout has expired
+<strong>Note</strong>: Result or stored exception can be fetched only once.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="2880017916-1">(</span><span class="n">timeoutNs</span><span class="p" data-group-id="2880017916-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="2880017916-2">]</span><span class="p" data-group-id="2880017916-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span></code></pre>
   </section>
 </section>
 <section class="detail" id="release/1">
@@ -429,7 +393,7 @@ Throws exception on invalid container state.</p></li></ul><p><strong>Note</stron
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">release</span><span class="p" data-group-id="8546970011-1">(</span><span class="p" data-group-id="8546970011-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">release</span><span class="p" data-group-id="5821488801-1">(</span><span class="p" data-group-id="5821488801-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="valid/1">
@@ -451,7 +415,7 @@ Throws exception on invalid container state.</p></li></ul><p><strong>Note</stron
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">valid</span><span class="p" data-group-id="3826981080-1">(</span><span class="p" data-group-id="3826981080-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">valid</span><span class="p" data-group-id="1053731345-1">(</span><span class="p" data-group-id="1053731345-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="wait_for/2">
@@ -473,7 +437,7 @@ Throws exception on invalid container state.</p></li></ul><p><strong>Note</stron
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">wait_for</span><span class="p" data-group-id="4552249243-1">(</span><span class="n">timeoutNs</span><span class="p" data-group-id="4552249243-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">wait_for</span><span class="p" data-group-id="9215167563-1">(</span><span class="n">timeoutNs</span><span class="p" data-group-id="9215167563-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 

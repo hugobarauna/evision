@@ -191,7 +191,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>index</strong>: int</li></ul><h3>Keyword Arguments</h3><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
+          <div class="summary-synopsis"><h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
 Has overloading in C++</p></div>
 
       </div>
@@ -202,7 +202,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>index</strong>: int</li></ul><h3>Keyword Arguments</h3><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
+          <div class="summary-synopsis"><h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
 Has overloading in C++</p></div>
 
       </div>
@@ -213,7 +213,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>Opens a camera for video capturing with API Preference and parameters
+          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Opens a camera for video capturing with API Preference and parameters
 Has overloading in C++</p></div>
 
       </div>
@@ -224,7 +224,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>image</strong>: UMat.</li></ul><p>Grabs, decodes and returns the next video frame.
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>image</strong>: UMat.</li></ul><p>Grabs, decodes and returns the next video frame.
 @return <code class="inline">false</code> if no frames has been grabbed
   The method/function combines VideoCapture::grab() and VideoCapture::retrieve() in one call. This is the
   most convenient method for reading video files or capturing data from decode and returns the just
@@ -255,7 +255,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>image</strong>: UMat.</li><li><strong>flag</strong>: int.</li></ul><p>Decodes and returns the grabbed video frame.
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>image</strong>: UMat.</li><li><strong>flag</strong>: int.</li></ul><p>Decodes and returns the grabbed video frame.
 @return <code class="inline">false</code> if no frames has been grabbed
   The method decodes and returns the just grabbed frame. If no frames has been grabbed
   (camera has been disconnected, or there are no more frames in video file), the method returns false
@@ -307,7 +307,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>index</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -317,7 +317,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>index</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -327,7 +327,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -546,7 +546,7 @@ cv
 <strong>Note</strong>: Reading / writing properties involves many layers. Some unexpected result might happens
   along this chain.</p><pre><code class="txt">VideoCapture -&gt; API Backend -&gt; Operating System -&gt; Device Driver -&gt; Device Hardware</code></pre><p>  The returned value might be different from what really used by the device or it could be encoded
   using device dependent rules (eg. steps or percentage). Effective behaviour depends from device
-  driver and API Backend</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="0369580823-1">(</span><span class="n">propId</span><span class="p" data-group-id="0369580823-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  driver and API Backend</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get</span><span class="p" data-group-id="0902989188-1">(</span><span class="n">propId</span><span class="p" data-group-id="0902989188-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getBackendName/1">
@@ -569,7 +569,7 @@ cv
   <section class="docstring">
 
 <p>Returns used backend API name
-<strong>Note</strong>: Stream should be opened.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackendName</span><span class="p" data-group-id="4832729189-1">(</span><span class="p" data-group-id="4832729189-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<strong>Note</strong>: Stream should be opened.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackendName</span><span class="p" data-group-id="8247199624-1">(</span><span class="p" data-group-id="8247199624-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getExceptionMode/1">
@@ -591,7 +591,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getExceptionMode</span><span class="p" data-group-id="1775420868-1">(</span><span class="p" data-group-id="1775420868-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getExceptionMode</span><span class="p" data-group-id="1736421322-1">(</span><span class="p" data-group-id="1736421322-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="grab/1">
@@ -625,7 +625,7 @@ cv
   Also, when a connected camera is multi-head (for example, a stereo camera or a Kinect device), the
   correct way of retrieving data from it is to call VideoCapture::grab() first and then call
   VideoCapture::retrieve() one or more times with different values of the channel parameter.
-@ref tutorial_kinect_openni</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">grab</span><span class="p" data-group-id="8553203196-1">(</span><span class="p" data-group-id="8553203196-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+@ref tutorial_kinect_openni</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">grab</span><span class="p" data-group-id="2168980291-1">(</span><span class="p" data-group-id="2168980291-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isOpened/1">
@@ -649,7 +649,7 @@ cv
 
 <p>Returns true if video capturing has been initialized already.
   If the previous call to VideoCapture constructor or VideoCapture::open() succeeded, the method returns
-  true.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isOpened</span><span class="p" data-group-id="1730780852-1">(</span><span class="p" data-group-id="1730780852-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  true.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isOpened</span><span class="p" data-group-id="7129358425-1">(</span><span class="p" data-group-id="7129358425-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="open/2">
@@ -671,49 +671,13 @@ cv
 
   <section class="docstring">
 
-<h2 id="open/2-variaint-1" class="section-heading">
-  <a href="#open/2-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-1</p>
-  </a>
-  Variaint 1:
-</h2>
-<h3 id="open/2-positional-arguments" class="section-heading">
-  <a href="#open/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>index</strong>: int</li></ul><h3 id="open/2-keyword-arguments" class="section-heading">
-  <a href="#open/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
+<h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
 Has overloading in C++</p><p>  Parameters are same as the constructor VideoCapture(int index, int apiPreference = CAP_ANY)
 @return <code class="inline">true</code> if the camera has been successfully opened.
-  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="4070774496-1">(</span><span class="n">index</span><span class="p" data-group-id="4070774496-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="4070774496-2">]</span><span class="p" data-group-id="4070774496-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h2 id="open/2-variaint-2" class="section-heading">
-  <a href="#open/2-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-2</p>
-  </a>
-  Variaint 2:
-</h2>
-<h3 id="open/2-positional-arguments-1" class="section-heading">
-  <a href="#open/2-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments-1</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>filename</strong>: String</li></ul><h3 id="open/2-keyword-arguments-1" class="section-heading">
-  <a href="#open/2-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments-1</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a video file or a capturing device or an IP video stream for video capturing.
+  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="2264120134-1">(</span><span class="n">index</span><span class="p" data-group-id="2264120134-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="2264120134-2">]</span><span class="p" data-group-id="2264120134-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><h5>Positional Arguments</h5><ul><li><strong>filename</strong>: String</li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a video file or a capturing device or an IP video stream for video capturing.
 Has overloading in C++</p><p>  Parameters are same as the constructor VideoCapture(const String&amp; filename, int apiPreference = CAP_ANY)
 @return <code class="inline">true</code> if the file has been successfully opened
-  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="7694807674-1">(</span><span class="n">filename</span><span class="p" data-group-id="7694807674-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="7694807674-2">]</span><span class="p" data-group-id="7694807674-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="7908909101-1">(</span><span class="n">filename</span><span class="p" data-group-id="7908909101-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="7908909101-2">]</span><span class="p" data-group-id="7908909101-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="open/3">
@@ -735,49 +699,13 @@ Has overloading in C++</p><p>  Parameters are same as the constructor VideoCaptu
 
   <section class="docstring">
 
-<h2 id="open/3-variaint-1" class="section-heading">
-  <a href="#open/3-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-1</p>
-  </a>
-  Variaint 1:
-</h2>
-<h3 id="open/3-positional-arguments" class="section-heading">
-  <a href="#open/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>index</strong>: int</li></ul><h3 id="open/3-keyword-arguments" class="section-heading">
-  <a href="#open/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
+<h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a camera for video capturing
 Has overloading in C++</p><p>  Parameters are same as the constructor VideoCapture(int index, int apiPreference = CAP_ANY)
 @return <code class="inline">true</code> if the camera has been successfully opened.
-  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="9045692423-1">(</span><span class="n">index</span><span class="p" data-group-id="9045692423-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="9045692423-2">]</span><span class="p" data-group-id="9045692423-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h2 id="open/3-variaint-2" class="section-heading">
-  <a href="#open/3-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-2</p>
-  </a>
-  Variaint 2:
-</h2>
-<h3 id="open/3-positional-arguments-1" class="section-heading">
-  <a href="#open/3-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments-1</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>filename</strong>: String</li></ul><h3 id="open/3-keyword-arguments-1" class="section-heading">
-  <a href="#open/3-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments-1</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a video file or a capturing device or an IP video stream for video capturing.
+  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="9449658092-1">(</span><span class="n">index</span><span class="p" data-group-id="9449658092-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="9449658092-2">]</span><span class="p" data-group-id="9449658092-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><h5>Positional Arguments</h5><ul><li><strong>filename</strong>: String</li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Opens a video file or a capturing device or an IP video stream for video capturing.
 Has overloading in C++</p><p>  Parameters are same as the constructor VideoCapture(const String&amp; filename, int apiPreference = CAP_ANY)
 @return <code class="inline">true</code> if the file has been successfully opened
-  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="8424183307-1">(</span><span class="n">filename</span><span class="p" data-group-id="8424183307-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="8424183307-2">]</span><span class="p" data-group-id="8424183307-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="9267571980-1">(</span><span class="n">filename</span><span class="p" data-group-id="9267571980-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="9267571980-2">]</span><span class="p" data-group-id="9267571980-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="open/4">
@@ -799,27 +727,15 @@ Has overloading in C++</p><p>  Parameters are same as the constructor VideoCaptu
 
   <section class="docstring">
 
-<h2 id="open/4-variaint-1" class="section-heading">
-  <a href="#open/4-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-1</p>
-  </a>
-  Variaint 1:
-</h2>
-<p>Opens a camera for video capturing with API Preference and parameters
+<h4>Variaint 1:</h4><p>Opens a camera for video capturing with API Preference and parameters
 Has overloading in C++</p><p>  The <code class="inline">params</code> parameter allows to specify extra parameters encoded as pairs <code class="inline">(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)</code>.
   See cv::VideoCaptureProperties
 @return <code class="inline">true</code> if the camera has been successfully opened.
-  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="8372799070-1">(</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="8372799070-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h2 id="open/4-variaint-2" class="section-heading">
-  <a href="#open/4-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-2</p>
-  </a>
-  Variaint 2:
-</h2>
-<p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference and parameters
+  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="0012531635-1">(</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="0012531635-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference and parameters
 Has overloading in C++</p><p>  The <code class="inline">params</code> parameter allows to specify extra parameters encoded as pairs <code class="inline">(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)</code>.
   See cv::VideoCaptureProperties
 @return <code class="inline">true</code> if the file has been successfully opened
-  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="3224634699-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="3224634699-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  The method first calls VideoCapture::release to close the already opened file or camera.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="8891720490-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="8891720490-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/1">
@@ -841,19 +757,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 
   <section class="docstring">
 
-<h3 id="read/1-positional-arguments" class="section-heading">
-  <a href="#read/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<h3 id="read/1-keyword-arguments" class="section-heading">
-  <a href="#read/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>image</strong>: UMat.</li></ul><p>Grabs, decodes and returns the next video frame.
+<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>image</strong>: UMat.</li></ul><p>Grabs, decodes and returns the next video frame.
 @return <code class="inline">false</code> if no frames has been grabbed
   The method/function combines VideoCapture::grab() and VideoCapture::retrieve() in one call. This is the
   most convenient method for reading video files or capturing data from decode and returns the just
@@ -861,7 +765,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
   frames in video file), the method returns false and the function returns empty image (with %cv::Mat, test it with Mat::empty()).
 <strong>Note</strong>: In @ref videoio_c &quot;C API&quot;, functions cvRetrieveFrame() and cv.RetrieveFrame() return image stored inside the video
   capturing structure. It is not allowed to modify or release the image! You can copy the frame using
-  cvCloneImage and then do whatever you want with the copy.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="5394472306-1">(</span><span class="p" data-group-id="5394472306-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p" data-group-id="5394472306-2">]</span><span class="p" data-group-id="5394472306-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">image</span></code></pre>
+  cvCloneImage and then do whatever you want with the copy.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="4144005708-1">(</span><span class="p" data-group-id="4144005708-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p" data-group-id="4144005708-2">]</span><span class="p" data-group-id="4144005708-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">image</span></code></pre>
   </section>
 </section>
 <section class="detail" id="release/1">
@@ -886,7 +790,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 <p>Closes video file or capturing device.
   The method is automatically called by subsequent VideoCapture::open and by VideoCapture
   destructor.
-  The C function also deallocates memory and clears *capture pointer.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">release</span><span class="p" data-group-id="4161973403-1">(</span><span class="p" data-group-id="4161973403-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+  The C function also deallocates memory and clears *capture pointer.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">release</span><span class="p" data-group-id="2690414337-1">(</span><span class="p" data-group-id="2690414337-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="retrieve/1">
@@ -908,19 +812,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 
   <section class="docstring">
 
-<h3 id="retrieve/1-positional-arguments" class="section-heading">
-  <a href="#retrieve/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<h3 id="retrieve/1-keyword-arguments" class="section-heading">
-  <a href="#retrieve/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>image</strong>: UMat.</li><li><strong>flag</strong>: int.</li></ul><p>Decodes and returns the grabbed video frame.
+<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>image</strong>: UMat.</li><li><strong>flag</strong>: int.</li></ul><p>Decodes and returns the grabbed video frame.
 @return <code class="inline">false</code> if no frames has been grabbed
   The method decodes and returns the just grabbed frame. If no frames has been grabbed
   (camera has been disconnected, or there are no more frames in video file), the method returns false
@@ -928,7 +820,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 @sa read()
 <strong>Note</strong>: In @ref videoio_c &quot;C API&quot;, functions cvRetrieveFrame() and cv.RetrieveFrame() return image stored inside the video
   capturing structure. It is not allowed to modify or release the image! You can copy the frame using
-  cvCloneImage and then do whatever you want with the copy.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">retrieve</span><span class="p" data-group-id="8482291289-1">(</span><span class="p" data-group-id="8482291289-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p" data-group-id="8482291289-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flag</span><span class="p" data-group-id="8482291289-3">]</span><span class="p" data-group-id="8482291289-2">]</span><span class="p" data-group-id="8482291289-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">image</span></code></pre>
+  cvCloneImage and then do whatever you want with the copy.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">retrieve</span><span class="p" data-group-id="2694884586-1">(</span><span class="p" data-group-id="2694884586-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p" data-group-id="2694884586-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flag</span><span class="p" data-group-id="2694884586-3">]</span><span class="p" data-group-id="2694884586-2">]</span><span class="p" data-group-id="2694884586-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">image</span></code></pre>
   </section>
 </section>
 <section class="detail" id="set/3">
@@ -952,7 +844,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 
 <p>Sets a property in the VideoCapture.</p><pre><code class="makeup elixir" translate="no"><span class="ow">or</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="na">@ref</span><span class="w"> </span><span class="n">videoio_flags_others</span></code></pre><p>@return <code class="inline">true</code> if the property is supported by backend used by the VideoCapture instance.
 <strong>Note</strong>: Even if it returns <code class="inline">true</code> this doesn't ensure that the property
-  value has been accepted by the capture device. See note in VideoCapture::get()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">set</span><span class="p" data-group-id="9527169795-1">(</span><span class="n">propId</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="9527169795-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  value has been accepted by the capture device. See note in VideoCapture::get()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">set</span><span class="p" data-group-id="2533516561-1">(</span><span class="n">propId</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="2533516561-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setExceptionMode/2">
@@ -975,7 +867,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
   <section class="docstring">
 
 <p>  Switches exceptions mode
-   methods raise exceptions if not successful instead of returning an error code</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setExceptionMode</span><span class="p" data-group-id="4991745037-1">(</span><span class="n">enable</span><span class="p" data-group-id="4991745037-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+   methods raise exceptions if not successful instead of returning an error code</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setExceptionMode</span><span class="p" data-group-id="2504790865-1">(</span><span class="n">enable</span><span class="p" data-group-id="2504790865-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="videoCapture/0">
@@ -1000,7 +892,7 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 <p>Default constructor
 <strong>Note</strong>: In @ref videoio_c &quot;C API&quot;, when you finished working with video, release CvCapture structure with
   cvReleaseCapture(), or use Ptr\&lt;CvCapture&gt; that calls cvReleaseCapture() automatically in the
-  destructor.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="4656593753-1">(</span><span class="p" data-group-id="4656593753-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  destructor.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="2354911140-1">(</span><span class="p" data-group-id="2354911140-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="videoCapture/1">
@@ -1022,50 +914,14 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 
   <section class="docstring">
 
-<h2 id="videoCapture/1-variaint-1" class="section-heading">
-  <a href="#videoCapture/1-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-1</p>
-  </a>
-  Variaint 1:
-</h2>
-<h3 id="videoCapture/1-positional-arguments" class="section-heading">
-  <a href="#videoCapture/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>index</strong>: int. </li></ul><h3 id="videoCapture/1-keyword-arguments" class="section-heading">
-  <a href="#videoCapture/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a camera for video capturing</p><pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="3908315516-1">(</span><span class="n">to</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="n">compatibility</span><span class="w"> </span><span class="n">usage</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">camera_id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">domain_offset</span><span class="w"> </span><span class="p" data-group-id="3908315516-2">(</span><span class="nc">CAP_</span><span class="o">*</span><span class="p" data-group-id="3908315516-2">)</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">apiPreference</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="nc">CAP_ANY</span><span class="p" data-group-id="3908315516-1">)</span><span class="w">
-</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_MSMF</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_V4L</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="2158590987-1">(</span><span class="n">index</span><span class="p" data-group-id="2158590987-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="2158590987-2">]</span><span class="p" data-group-id="2158590987-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h2 id="videoCapture/1-variaint-2" class="section-heading">
-  <a href="#videoCapture/1-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-2</p>
-  </a>
-  Variaint 2:
-</h2>
-<h3 id="videoCapture/1-positional-arguments-1" class="section-heading">
-  <a href="#videoCapture/1-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments-1</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>filename</strong>: String. </li></ul><h3 id="videoCapture/1-keyword-arguments-1" class="section-heading">
-  <a href="#videoCapture/1-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments-1</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference</p><pre><code class="makeup elixir" translate="no"><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="p" data-group-id="1505267147-1">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">video</span><span class="o">.</span><span class="n">avi</span><span class="err">`</span><span class="p" data-group-id="1505267147-1">)</span><span class="w">
-</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="p" data-group-id="1505267147-2">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">img_</span><span class="p">%</span><span class="mi">02</span><span class="n">d</span><span class="o">.</span><span class="n">jpg</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">samples</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">`</span><span class="n">img_00</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_01</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_02</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="err">`</span><span class="p" data-group-id="1505267147-2">)</span><span class="w">
-</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">URL</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="p" data-group-id="1505267147-3">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">protocol</span><span class="ss">://</span><span class="n">host</span><span class="ss">:port</span><span class="o">/</span><span class="n">script_name?</span><span class="n">script_params</span><span class="o">|</span><span class="n">auth</span><span class="err">`</span><span class="p" data-group-id="1505267147-3">)</span><span class="w">
+<h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a camera for video capturing</p><pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="2105909283-1">(</span><span class="n">to</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="n">compatibility</span><span class="w"> </span><span class="n">usage</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">camera_id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">domain_offset</span><span class="w"> </span><span class="p" data-group-id="2105909283-2">(</span><span class="nc">CAP_</span><span class="o">*</span><span class="p" data-group-id="2105909283-2">)</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">apiPreference</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="nc">CAP_ANY</span><span class="p" data-group-id="2105909283-1">)</span><span class="w">
+</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_MSMF</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_V4L</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="9988395479-1">(</span><span class="n">index</span><span class="p" data-group-id="9988395479-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="9988395479-2">]</span><span class="p" data-group-id="9988395479-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h4>Variaint 2:</h4><h5>Positional Arguments</h5><ul><li><strong>filename</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference</p><pre><code class="makeup elixir" translate="no"><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="p" data-group-id="0716560719-1">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">video</span><span class="o">.</span><span class="n">avi</span><span class="err">`</span><span class="p" data-group-id="0716560719-1">)</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="p" data-group-id="0716560719-2">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">img_</span><span class="p">%</span><span class="mi">02</span><span class="n">d</span><span class="o">.</span><span class="n">jpg</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">samples</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">`</span><span class="n">img_00</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_01</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_02</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="err">`</span><span class="p" data-group-id="0716560719-2">)</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">URL</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="p" data-group-id="0716560719-3">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">protocol</span><span class="ss">://</span><span class="n">host</span><span class="ss">:port</span><span class="o">/</span><span class="n">script_name?</span><span class="n">script_params</span><span class="o">|</span><span class="n">auth</span><span class="err">`</span><span class="p" data-group-id="0716560719-3">)</span><span class="w">
 </span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">GStreamer</span><span class="w"> </span><span class="n">pipeline</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">gst</span><span class="o">-</span><span class="n">launch</span><span class="w"> </span><span class="n">tool</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nc">GStreamer</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">backend</span><span class="w">
 </span><span class="nc">Note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">IP</span><span class="w"> </span><span class="n">camera</span><span class="w"> </span><span class="n">feed</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">own</span><span class="w"> </span><span class="nc">URL</span><span class="w"> </span><span class="n">scheme</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">refer</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w">
 </span><span class="n">documentation</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">know</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="nc">URL</span><span class="o">.</span><span class="w">
-</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_FFMPEG</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_IMAGES</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="8604760639-1">(</span><span class="n">filename</span><span class="p" data-group-id="8604760639-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="8604760639-2">]</span><span class="p" data-group-id="8604760639-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_FFMPEG</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_IMAGES</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="3898877891-1">(</span><span class="n">filename</span><span class="p" data-group-id="3898877891-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="3898877891-2">]</span><span class="p" data-group-id="3898877891-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="videoCapture/2">
@@ -1087,50 +943,14 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 
   <section class="docstring">
 
-<h2 id="videoCapture/2-variaint-1" class="section-heading">
-  <a href="#videoCapture/2-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-1</p>
-  </a>
-  Variaint 1:
-</h2>
-<h3 id="videoCapture/2-positional-arguments" class="section-heading">
-  <a href="#videoCapture/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>index</strong>: int. </li></ul><h3 id="videoCapture/2-keyword-arguments" class="section-heading">
-  <a href="#videoCapture/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a camera for video capturing</p><pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="5672749962-1">(</span><span class="n">to</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="n">compatibility</span><span class="w"> </span><span class="n">usage</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">camera_id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">domain_offset</span><span class="w"> </span><span class="p" data-group-id="5672749962-2">(</span><span class="nc">CAP_</span><span class="o">*</span><span class="p" data-group-id="5672749962-2">)</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">apiPreference</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="nc">CAP_ANY</span><span class="p" data-group-id="5672749962-1">)</span><span class="w">
-</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_MSMF</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_V4L</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="8297750701-1">(</span><span class="n">index</span><span class="p" data-group-id="8297750701-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="8297750701-2">]</span><span class="p" data-group-id="8297750701-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h2 id="videoCapture/2-variaint-2" class="section-heading">
-  <a href="#videoCapture/2-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-2</p>
-  </a>
-  Variaint 2:
-</h2>
-<h3 id="videoCapture/2-positional-arguments-1" class="section-heading">
-  <a href="#videoCapture/2-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">positional-arguments-1</p>
-  </a>
-  Positional Arguments
-</h3>
-<ul><li><strong>filename</strong>: String. </li></ul><h3 id="videoCapture/2-keyword-arguments-1" class="section-heading">
-  <a href="#videoCapture/2-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">keyword-arguments-1</p>
-  </a>
-  Keyword Arguments
-</h3>
-<ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference</p><pre><code class="makeup elixir" translate="no"><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="p" data-group-id="9494035316-1">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">video</span><span class="o">.</span><span class="n">avi</span><span class="err">`</span><span class="p" data-group-id="9494035316-1">)</span><span class="w">
-</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="p" data-group-id="9494035316-2">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">img_</span><span class="p">%</span><span class="mi">02</span><span class="n">d</span><span class="o">.</span><span class="n">jpg</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">samples</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">`</span><span class="n">img_00</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_01</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_02</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="err">`</span><span class="p" data-group-id="9494035316-2">)</span><span class="w">
-</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">URL</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="p" data-group-id="9494035316-3">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">protocol</span><span class="ss">://</span><span class="n">host</span><span class="ss">:port</span><span class="o">/</span><span class="n">script_name?</span><span class="n">script_params</span><span class="o">|</span><span class="n">auth</span><span class="err">`</span><span class="p" data-group-id="9494035316-3">)</span><span class="w">
+<h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>index</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a camera for video capturing</p><pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="4969400246-1">(</span><span class="n">to</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="n">compatibility</span><span class="w"> </span><span class="n">usage</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">camera_id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">domain_offset</span><span class="w"> </span><span class="p" data-group-id="4969400246-2">(</span><span class="nc">CAP_</span><span class="o">*</span><span class="p" data-group-id="4969400246-2">)</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">apiPreference</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="nc">CAP_ANY</span><span class="p" data-group-id="4969400246-1">)</span><span class="w">
+</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_MSMF</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_V4L</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="7322108869-1">(</span><span class="n">index</span><span class="p" data-group-id="7322108869-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="7322108869-2">]</span><span class="p" data-group-id="7322108869-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h4>Variaint 2:</h4><h5>Positional Arguments</h5><ul><li><strong>filename</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>apiPreference</strong>: int.</li></ul><p>Has overloading in C++</p><p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference</p><pre><code class="makeup elixir" translate="no"><span class="o">-</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="p" data-group-id="7498360487-1">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">video</span><span class="o">.</span><span class="n">avi</span><span class="err">`</span><span class="p" data-group-id="7498360487-1">)</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="p" data-group-id="7498360487-2">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">img_</span><span class="p">%</span><span class="mi">02</span><span class="n">d</span><span class="o">.</span><span class="n">jpg</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">samples</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">`</span><span class="n">img_00</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_01</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">img_02</span><span class="o">.</span><span class="n">jpg</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="err">`</span><span class="p" data-group-id="7498360487-2">)</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">URL</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="p" data-group-id="7498360487-3">(</span><span class="n">eg</span><span class="o">.</span><span class="w"> </span><span class="err">`</span><span class="n">protocol</span><span class="ss">://</span><span class="n">host</span><span class="ss">:port</span><span class="o">/</span><span class="n">script_name?</span><span class="n">script_params</span><span class="o">|</span><span class="n">auth</span><span class="err">`</span><span class="p" data-group-id="7498360487-3">)</span><span class="w">
 </span><span class="o">-</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">GStreamer</span><span class="w"> </span><span class="n">pipeline</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">gst</span><span class="o">-</span><span class="n">launch</span><span class="w"> </span><span class="n">tool</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nc">GStreamer</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">backend</span><span class="w">
 </span><span class="nc">Note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">IP</span><span class="w"> </span><span class="n">camera</span><span class="w"> </span><span class="n">feed</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">own</span><span class="w"> </span><span class="nc">URL</span><span class="w"> </span><span class="n">scheme</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">refer</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w">
 </span><span class="n">documentation</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">know</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="nc">URL</span><span class="o">.</span><span class="w">
-</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_FFMPEG</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_IMAGES</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="8880259159-1">(</span><span class="n">filename</span><span class="p" data-group-id="8880259159-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="8880259159-2">]</span><span class="p" data-group-id="8880259159-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+</span><span class="n">implementation</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">available</span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_FFMPEG</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_IMAGES</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="nc">CAP_DSHOW</span><span class="o">.</span></code></pre><p>@sa cv::VideoCaptureAPIs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="9970138289-1">(</span><span class="n">filename</span><span class="p" data-group-id="9970138289-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p" data-group-id="9970138289-2">]</span><span class="p" data-group-id="9970138289-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="videoCapture/3">
@@ -1152,23 +972,11 @@ Has overloading in C++</p><p>  The <code class="inline">params</code> parameter 
 
   <section class="docstring">
 
-<h2 id="videoCapture/3-variaint-1" class="section-heading">
-  <a href="#videoCapture/3-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-1</p>
-  </a>
-  Variaint 1:
-</h2>
-<p>Has overloading in C++</p><p>Opens a camera for video capturing with API Preference and parameters
+<h4>Variaint 1:</h4><p>Has overloading in C++</p><p>Opens a camera for video capturing with API Preference and parameters
   The <code class="inline">params</code> parameter allows to specify extra parameters encoded as pairs <code class="inline">(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)</code>.
-  See cv::VideoCaptureProperties</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="2852758757-1">(</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="2852758757-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h2 id="videoCapture/3-variaint-2" class="section-heading">
-  <a href="#videoCapture/3-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">variaint-2</p>
-  </a>
-  Variaint 2:
-</h2>
-<p>Has overloading in C++</p><p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference and parameters
+  See cv::VideoCaptureProperties</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="7239466431-1">(</span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="7239466431-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h4>Variaint 2:</h4><p>Has overloading in C++</p><p>Opens a video file or a capturing device or an IP video stream for video capturing with API Preference and parameters
   The <code class="inline">params</code> parameter allows to specify extra parameters encoded as pairs <code class="inline">(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)</code>.
-  See cv::VideoCaptureProperties</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="1713164827-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="1713164827-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  See cv::VideoCaptureProperties</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">VideoCapture</span><span class="p" data-group-id="4713155172-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">apiPreference</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p" data-group-id="4713155172-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">VideoCapture</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 
