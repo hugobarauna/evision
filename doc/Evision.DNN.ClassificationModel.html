@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.DNN.ClassificationModel — Evision v0.1.5-dev</title>
+    <title>Evision.DNN.ClassificationModel — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.ClassificationModel</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,42 +122,6 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#classificationModel!/1" translate="no">classificationModel!(network)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#classificationModel/1"><code class="inline">classificationModel/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#classificationModel!/2" translate="no">classificationModel!(model, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#classificationModel/2"><code class="inline">classificationModel/2</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#classificationModel/1" translate="no">classificationModel(network)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#classificationModel/2" translate="no">classificationModel(model, opts)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
           <a href="#classify!/2" translate="no">classify!(self, frame)</a>
 
         </div>
@@ -171,6 +135,49 @@ Evision
           <a href="#classify/2" translate="no">classify(self, frame)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_ClassificationModel!/1" translate="no">dnn_ClassificationModel!(network)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_ClassificationModel/1"><code class="inline">dnn_ClassificationModel/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_ClassificationModel!/2" translate="no">dnn_ClassificationModel!(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_ClassificationModel/2"><code class="inline">dnn_ClassificationModel/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_ClassificationModel/1" translate="no">dnn_ClassificationModel(network)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>Create model from deep learning network.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_ClassificationModel/2" translate="no">dnn_ClassificationModel(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: String.</li></ul><p>Create classification model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p></div>
 
       </div>
 
@@ -190,6 +197,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Get enable/disable softmax post processing option.
+   This option defaults to false, softmax post processing is not applied within the classify() function.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -208,6 +218,12 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Set enable/disable softmax post processing option.
+   If this option is true, softmax is applied after forward inference within the classify() function
+   to convert the confidences range to [0.0-1.0].
+   This function allows you to toggle this behavior.
+   Please turn true when not contain softmax layer in model.</p></div>
+
       </div>
 
   </div>
@@ -224,94 +240,6 @@ Evision
 Functions
     </h1>
     <div class="functions-list">
-<section class="detail" id="classificationModel!/1">
-
-  <div class="detail-header">
-    <a href="#classificationModel!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">classificationModel!(network)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#classificationModel/1"><code class="inline">classificationModel/1</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="classificationModel!/2">
-
-  <div class="detail-header">
-    <a href="#classificationModel!/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">classificationModel!(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L30" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#classificationModel/2"><code class="inline">classificationModel/2</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="classificationModel/1">
-
-  <div class="detail-header">
-    <a href="#classificationModel/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">classificationModel(network)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L5" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="classificationModel/2">
-
-  <div class="detail-header">
-    <a href="#classificationModel/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">classificationModel(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L23" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
 <section class="detail" id="classify!/2">
 
   <div class="detail-header">
@@ -321,7 +249,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">classify!(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -343,7 +271,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">classify(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -353,7 +281,133 @@ Functions
 
   <section class="docstring">
 
+<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">classify</span><span class="p" data-group-id="8699846516-1">(</span><span class="n">frame</span><span class="p" data-group-id="8699846516-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="dnn_ClassificationModel!/1">
 
+  <div class="detail-header">
+    <a href="#dnn_ClassificationModel!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_ClassificationModel!(network)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L40" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_ClassificationModel/1"><code class="inline">dnn_ClassificationModel/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_ClassificationModel!/2">
+
+  <div class="detail-header">
+    <a href="#dnn_ClassificationModel!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_ClassificationModel!(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L76" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_ClassificationModel/2"><code class="inline">dnn_ClassificationModel/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_ClassificationModel/1">
+
+  <div class="detail-header">
+    <a href="#dnn_ClassificationModel/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_ClassificationModel(network)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L32" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h2 id="dnn_ClassificationModel/1-variaint-1" class="section-heading">
+  <a href="#dnn_ClassificationModel/1-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<p>Create model from deep learning network.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">ClassificationModel</span><span class="p" data-group-id="6388209644-1">(</span><span class="n">network</span><span class="p" data-group-id="6388209644-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_ClassificationModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h2 id="dnn_ClassificationModel/1-variaint-2" class="section-heading">
+  <a href="#dnn_ClassificationModel/1-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<h3 id="dnn_ClassificationModel/1-positional-arguments" class="section-heading">
+  <a href="#dnn_ClassificationModel/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: String. </li></ul><h3 id="dnn_ClassificationModel/1-keyword-arguments" class="section-heading">
+  <a href="#dnn_ClassificationModel/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: String.</li></ul><p>Create classification model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">ClassificationModel</span><span class="p" data-group-id="9689792759-1">(</span><span class="n">model</span><span class="p" data-group-id="9689792759-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="9689792759-2">]</span><span class="p" data-group-id="9689792759-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_ClassificationModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="dnn_ClassificationModel/2">
+
+  <div class="detail-header">
+    <a href="#dnn_ClassificationModel/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_ClassificationModel(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L68" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="dnn_ClassificationModel/2-positional-arguments" class="section-heading">
+  <a href="#dnn_ClassificationModel/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: String. </li></ul><h3 id="dnn_ClassificationModel/2-keyword-arguments" class="section-heading">
+  <a href="#dnn_ClassificationModel/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: String.</li></ul><p>Create classification model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">ClassificationModel</span><span class="p" data-group-id="0742715463-1">(</span><span class="n">model</span><span class="p" data-group-id="0742715463-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="0742715463-2">]</span><span class="p" data-group-id="0742715463-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_ClassificationModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getEnableSoftmaxPostProcessing!/1">
@@ -365,7 +419,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getEnableSoftmaxPostProcessing!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -387,7 +441,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getEnableSoftmaxPostProcessing(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -397,7 +451,8 @@ Functions
 
   <section class="docstring">
 
-
+<p>Get enable/disable softmax post processing option.
+   This option defaults to false, softmax post processing is not applied within the classify() function.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getEnableSoftmaxPostProcessing</span><span class="p" data-group-id="2988392645-1">(</span><span class="p" data-group-id="2988392645-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setEnableSoftmaxPostProcessing!/2">
@@ -409,7 +464,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEnableSoftmaxPostProcessing!(self, enable)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -431,7 +486,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEnableSoftmaxPostProcessing(self, enable)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_classificationmodel.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L135" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -441,7 +496,11 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set enable/disable softmax post processing option.
+   If this option is true, softmax is applied after forward inference within the classify() function
+   to convert the confidences range to [0.0-1.0].
+   This function allows you to toggle this behavior.
+   Please turn true when not contain softmax layer in model.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setEnableSoftmaxPostProcessing</span><span class="p" data-group-id="1924192558-1">(</span><span class="n">enable</span><span class="p" data-group-id="1924192558-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -454,10 +513,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn_classificationmodel.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_classificationmodel.ex">(current file)</a>
 
             </span>
 

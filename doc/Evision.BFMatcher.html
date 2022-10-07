@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.BFMatcher — Evision v0.1.5-dev</title>
+    <title>Evision.BFMatcher — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.BFMatcher</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Adds descriptors to train a CPU(trainDescCollectionis) or GPU(utrainDescCollectionis) descriptor
+  collection.
+  If the collection is not empty, the new descriptors are added to existing train descriptors.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +137,8 @@ Evision
           <a href="#bfMatcher/0" translate="no">bfMatcher()</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher constructor (obsolete). Please use BFMatcher.create()</p></div>
 
       </div>
 
@@ -142,7 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Brute-force matcher constructor (obsolete). Please use BFMatcher.create()</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher constructor (obsolete). Please use BFMatcher.create()</p></div>
 
       </div>
 
@@ -152,6 +158,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Clears the train descriptor collections.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -159,6 +167,8 @@ Evision
           <a href="#clone/1" translate="no">clone(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>emptyTrainData</strong>: bool.</li></ul><p>Clones the matcher.</p></div>
 
       </div>
 
@@ -168,6 +178,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher create method.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -176,7 +188,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Brute-force matcher create method.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher create method.</p></div>
 
       </div>
 
@@ -186,6 +198,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if there are no train descriptors in the both collections.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -193,6 +207,8 @@ Evision
           <a href="#getTrainDescriptors/1" translate="no">getTrainDescriptors(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns a constant link to the train descriptor collection trainDescCollection .</p></div>
 
       </div>
 
@@ -202,6 +218,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if the descriptor matcher supports masking permissible matches.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -209,6 +227,8 @@ Evision
           <a href="#knnMatch/3" translate="no">knnMatch(self, queryDescriptors, k)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>masks</strong>: vector_UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -218,6 +238,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Finds the k best matches for each descriptor from a query set.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -226,7 +248,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Finds the k best matches for each descriptor from a query set.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Finds the k best matches for each descriptor from a query set.</p></div>
 
       </div>
 
@@ -236,6 +258,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>masks</strong>: vector_UMat.</li></ul><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -243,6 +267,8 @@ Evision
           <a href="#match/3" translate="no">match(self, queryDescriptors, opts)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>mask</strong>: UMat.</li></ul><p>Finds the best match for each descriptor from a query set.</p></div>
 
       </div>
 
@@ -252,7 +278,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Finds the best match for each descriptor from a query set.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>mask</strong>: UMat.</li></ul><p>Finds the best match for each descriptor from a query set.</p></div>
 
       </div>
 
@@ -262,6 +288,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>maxDistance</strong>: float. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>masks</strong>: vector_UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -269,6 +297,8 @@ Evision
           <a href="#radiusMatch/4" translate="no">radiusMatch(self, queryDescriptors, maxDistance, opts)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>maxDistance</strong>: float. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>For each query descriptor, finds the training descriptors not farther than the specified distance.</p></div>
 
       </div>
 
@@ -278,7 +308,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>For each query descriptor, finds the training descriptors not farther than the specified distance.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>maxDistance</strong>: float. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>For each query descriptor, finds the training descriptors not farther than the specified distance.</p></div>
 
       </div>
 
@@ -288,6 +318,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -295,6 +327,12 @@ Evision
           <a href="#train/1" translate="no">train(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Trains a descriptor matcher
+  Trains a descriptor matcher (for example, the flann index). In all methods to match, the method
+  train() is run every time before matching. Some descriptor matchers (for example, BruteForceMatcher)
+  have an empty implementation of this method. Other matchers really train their inner structures (for
+  example, FlannBasedMatcher trains flann::Index ).</p></div>
 
       </div>
 
@@ -304,6 +342,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -312,7 +352,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -576,7 +616,7 @@ cv
     </a>
     <h1 class="signature" translate="no">add(self, descriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L69" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -586,7 +626,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Adds descriptors to train a CPU(trainDescCollectionis) or GPU(utrainDescCollectionis) descriptor
+  collection.
+  If the collection is not empty, the new descriptors are added to existing train descriptors.</p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="w"> </span><span class="n">image</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">add</span><span class="p" data-group-id="1965943035-1">(</span><span class="n">descriptors</span><span class="p" data-group-id="1965943035-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="bfMatcher/0">
@@ -598,7 +640,7 @@ cv
     </a>
     <h1 class="signature" translate="no">bfMatcher()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -608,7 +650,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="bfMatcher/0-positional-arguments" class="section-heading">
+  <a href="#bfMatcher/0-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="bfMatcher/0-keyword-arguments" class="section-heading">
+  <a href="#bfMatcher/0-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher constructor (obsolete). Please use BFMatcher.create()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">BFMatcher</span><span class="p" data-group-id="2017262968-1">(</span><span class="p" data-group-id="2017262968-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">normType</span><span class="p" data-group-id="2017262968-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">crossCheck</span><span class="p" data-group-id="2017262968-3">]</span><span class="p" data-group-id="2017262968-2">]</span><span class="p" data-group-id="2017262968-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">BFMatcher</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="bfMatcher/1">
@@ -620,7 +674,7 @@ cv
     </a>
     <h1 class="signature" translate="no">bfMatcher(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L21" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -630,7 +684,19 @@ cv
 
   <section class="docstring">
 
-<p>Brute-force matcher constructor (obsolete). Please use BFMatcher.create()</p><ul><li><strong>normType</strong> : int</li><li><strong>crossCheck</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">BFMatcher</span><span class="p" data-group-id="5491917998-1">(</span><span class="p" data-group-id="5491917998-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">normType</span><span class="p" data-group-id="5491917998-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">crossCheck</span><span class="p" data-group-id="5491917998-3">]</span><span class="p" data-group-id="5491917998-2">]</span><span class="p" data-group-id="5491917998-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">BFMatcher</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h3 id="bfMatcher/1-positional-arguments" class="section-heading">
+  <a href="#bfMatcher/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="bfMatcher/1-keyword-arguments" class="section-heading">
+  <a href="#bfMatcher/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher constructor (obsolete). Please use BFMatcher.create()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">BFMatcher</span><span class="p" data-group-id="9701624641-1">(</span><span class="p" data-group-id="9701624641-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">normType</span><span class="p" data-group-id="9701624641-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">crossCheck</span><span class="p" data-group-id="9701624641-3">]</span><span class="p" data-group-id="9701624641-2">]</span><span class="p" data-group-id="9701624641-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">BFMatcher</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="clear/1">
@@ -642,7 +708,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -652,7 +718,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Clears the train descriptor collections.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="9626302202-1">(</span><span class="p" data-group-id="9626302202-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="clone/1">
@@ -664,7 +730,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clone(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -674,7 +740,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="clone/1-positional-arguments" class="section-heading">
+  <a href="#clone/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="clone/1-keyword-arguments" class="section-heading">
+  <a href="#clone/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>emptyTrainData</strong>: bool.</li></ul><p>Clones the matcher.</p><pre><code class="makeup elixir" translate="no"><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="p">,</span><span class="w"> </span><span class="n">copies</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">emptyTrainData</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">an</span><span class="w">
+</span><span class="n">object</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">data</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clone</span><span class="p" data-group-id="5151464499-1">(</span><span class="p" data-group-id="5151464499-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">emptyTrainData</span><span class="p" data-group-id="5151464499-2">]</span><span class="p" data-group-id="5151464499-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -686,7 +765,7 @@ cv
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L183" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -696,7 +775,26 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="create/0-positional-arguments" class="section-heading">
+  <a href="#create/0-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="create/0-keyword-arguments" class="section-heading">
+  <a href="#create/0-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher create method.</p><pre><code class="makeup elixir" translate="no"><span class="n">preferable</span><span class="w"> </span><span class="n">choices</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nc">SIFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">SURF</span><span class="w"> </span><span class="n">descriptors</span><span class="p">,</span><span class="w"> </span><span class="nc">NORM_HAMMING</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">ORB</span><span class="p">,</span><span class="w"> </span><span class="nc">BRISK</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">BRIEF</span><span class="p">,</span><span class="w"> </span><span class="nc">NORM_HAMMING2</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">ORB</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="nc">WTA_K</span><span class="o">==</span><span class="mi">3</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p" data-group-id="4584102900-1">(</span><span class="n">see</span><span class="w"> </span><span class="nc">ORB</span><span class="o">::</span><span class="nc">ORB</span><span class="w"> </span><span class="n">constructor</span><span class="w">
+</span><span class="n">description</span><span class="p" data-group-id="4584102900-1">)</span><span class="o">.</span><span class="w">
+</span><span class="n">nearest</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptor</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">crossCheck</span><span class="o">==</span><span class="no">true</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">knnMatch</span><span class="p" data-group-id="4584102900-2">(</span><span class="p" data-group-id="4584102900-2">)</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="k">with</span><span class="w">
+</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">pairs</span><span class="w"> </span><span class="p" data-group-id="4584102900-3">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p" data-group-id="4584102900-3">)</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptor</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">descriptor</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w">
+</span><span class="n">matcher</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">collection</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">nearest</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">vice</span><span class="w"> </span><span class="n">versa</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">BFMatcher</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">consistent</span><span class="w">
+</span><span class="n">pairs</span><span class="o">.</span><span class="w"> </span><span class="nc">Such</span><span class="w"> </span><span class="n">technique</span><span class="w"> </span><span class="n">usually</span><span class="w"> </span><span class="n">produces</span><span class="w"> </span><span class="n">best</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">minimal</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">outliers</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">are</span><span class="w">
+</span><span class="n">enough</span><span class="w"> </span><span class="n">matches</span><span class="o">.</span><span class="w"> </span><span class="nc">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ratio</span><span class="w"> </span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="nc">D</span><span class="o">.</span><span class="w"> </span><span class="nc">Lowe</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nc">SIFT</span><span class="w"> </span><span class="n">paper</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="0677734313-1">(</span><span class="p" data-group-id="0677734313-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">normType</span><span class="p" data-group-id="0677734313-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">crossCheck</span><span class="p" data-group-id="0677734313-3">]</span><span class="p" data-group-id="0677734313-2">]</span><span class="p" data-group-id="0677734313-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/1">
@@ -708,7 +806,7 @@ cv
     </a>
     <h1 class="signature" translate="no">create(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -718,15 +816,26 @@ cv
 
   <section class="docstring">
 
-<p>Brute-force matcher create method.</p><ul><li><strong>normType</strong>.
-  preferable choices for SIFT and SURF descriptors, NORM_HAMMING should be used with ORB, BRISK and
-  BRIEF, NORM_HAMMING2 should be used with ORB when WTA_K==3 or 4 (see ORB::ORB constructor
-  description).</li><li><strong>crossCheck</strong>.
-  nearest neighbors for each query descriptor. If crossCheck==true, then the knnMatch() method with
-  k=1 will only return pairs (i,j) such that for i-th query descriptor the j-th descriptor in the
-  matcher's collection is the nearest and vice versa, i.e. the BFMatcher will only return consistent
-  pairs. Such technique usually produces best results with minimal number of outliers when there are
-  enough matches. This is alternative to the ratio test, used by D. Lowe in SIFT paper.</li><li><strong>normType</strong> : int</li><li><strong>crossCheck</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="4505325680-1">(</span><span class="p" data-group-id="4505325680-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">normType</span><span class="p" data-group-id="4505325680-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">crossCheck</span><span class="p" data-group-id="4505325680-3">]</span><span class="p" data-group-id="4505325680-2">]</span><span class="p" data-group-id="4505325680-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="create/1-positional-arguments" class="section-heading">
+  <a href="#create/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="create/1-keyword-arguments" class="section-heading">
+  <a href="#create/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>normType</strong>: int.</li><li><strong>crossCheck</strong>: bool.</li></ul><p>Brute-force matcher create method.</p><pre><code class="makeup elixir" translate="no"><span class="n">preferable</span><span class="w"> </span><span class="n">choices</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nc">SIFT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">SURF</span><span class="w"> </span><span class="n">descriptors</span><span class="p">,</span><span class="w"> </span><span class="nc">NORM_HAMMING</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">ORB</span><span class="p">,</span><span class="w"> </span><span class="nc">BRISK</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">BRIEF</span><span class="p">,</span><span class="w"> </span><span class="nc">NORM_HAMMING2</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">ORB</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="nc">WTA_K</span><span class="o">==</span><span class="mi">3</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p" data-group-id="6538910776-1">(</span><span class="n">see</span><span class="w"> </span><span class="nc">ORB</span><span class="o">::</span><span class="nc">ORB</span><span class="w"> </span><span class="n">constructor</span><span class="w">
+</span><span class="n">description</span><span class="p" data-group-id="6538910776-1">)</span><span class="o">.</span><span class="w">
+</span><span class="n">nearest</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptor</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">crossCheck</span><span class="o">==</span><span class="no">true</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">knnMatch</span><span class="p" data-group-id="6538910776-2">(</span><span class="p" data-group-id="6538910776-2">)</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="k">with</span><span class="w">
+</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">pairs</span><span class="w"> </span><span class="p" data-group-id="6538910776-3">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p" data-group-id="6538910776-3">)</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptor</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">descriptor</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w">
+</span><span class="n">matcher</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">collection</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">nearest</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">vice</span><span class="w"> </span><span class="n">versa</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">BFMatcher</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">consistent</span><span class="w">
+</span><span class="n">pairs</span><span class="o">.</span><span class="w"> </span><span class="nc">Such</span><span class="w"> </span><span class="n">technique</span><span class="w"> </span><span class="n">usually</span><span class="w"> </span><span class="n">produces</span><span class="w"> </span><span class="n">best</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">minimal</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">outliers</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">are</span><span class="w">
+</span><span class="n">enough</span><span class="w"> </span><span class="n">matches</span><span class="o">.</span><span class="w"> </span><span class="nc">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ratio</span><span class="w"> </span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="nc">D</span><span class="o">.</span><span class="w"> </span><span class="nc">Lowe</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nc">SIFT</span><span class="w"> </span><span class="n">paper</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="5268311053-1">(</span><span class="p" data-group-id="5268311053-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">normType</span><span class="p" data-group-id="5268311053-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">crossCheck</span><span class="p" data-group-id="5268311053-3">]</span><span class="p" data-group-id="5268311053-2">]</span><span class="p" data-group-id="5268311053-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -738,7 +847,7 @@ cv
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -748,7 +857,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns true if there are no train descriptors in the both collections.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="0959657124-1">(</span><span class="p" data-group-id="0959657124-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainDescriptors/1">
@@ -760,7 +869,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getTrainDescriptors(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L221" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -770,7 +879,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns a constant link to the train descriptor collection trainDescCollection .</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainDescriptors</span><span class="p" data-group-id="1913768831-1">(</span><span class="p" data-group-id="1913768831-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isMaskSupported/1">
@@ -782,7 +891,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isMaskSupported(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L240" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -792,7 +901,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns true if the descriptor matcher supports masking permissible matches.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isMaskSupported</span><span class="p" data-group-id="2858440824-1">(</span><span class="p" data-group-id="2858440824-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="knnMatch/3">
@@ -804,7 +913,7 @@ cv
     </a>
     <h1 class="signature" translate="no">knnMatch(self, queryDescriptors, k)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L384" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -814,7 +923,22 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="knnMatch/3-positional-arguments" class="section-heading">
+  <a href="#knnMatch/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h3 id="knnMatch/3-keyword-arguments" class="section-heading">
+  <a href="#knnMatch/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">total</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">trainDescCollection</span><span class="p" data-group-id="2855685802-1">[</span><span class="n">i</span><span class="p" data-group-id="2855685802-1">]</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">knnMatch</span><span class="p" data-group-id="7662665487-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p" data-group-id="7662665487-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="7662665487-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="7662665487-3">]</span><span class="p" data-group-id="7662665487-2">]</span><span class="p" data-group-id="7662665487-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="knnMatch/4">
@@ -826,7 +950,7 @@ cv
     </a>
     <h1 class="signature" translate="no">knnMatch(self, queryDescriptors, k, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L339" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -836,7 +960,52 @@ cv
 
   <section class="docstring">
 
-
+<h2 id="knnMatch/4-variaint-1" class="section-heading">
+  <a href="#knnMatch/4-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<h3 id="knnMatch/4-positional-arguments" class="section-heading">
+  <a href="#knnMatch/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h3 id="knnMatch/4-keyword-arguments" class="section-heading">
+  <a href="#knnMatch/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Finds the k best matches for each descriptor from a query set.</p><pre><code class="makeup elixir" translate="no"><span class="n">collection</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n">object</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="o">.</span><span class="w">
+</span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">total</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>  These extended variants of DescriptorMatcher::match methods find several best matches for each query
+  descriptor. The matches are returned in the distance increasing order. See DescriptorMatcher::match
+  for the details about query and train descriptors.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">knnMatch</span><span class="p" data-group-id="6440370208-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p" data-group-id="6440370208-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="6440370208-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="6440370208-3">]</span><span class="p" data-group-id="6440370208-2">]</span><span class="p" data-group-id="6440370208-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre><h2 id="knnMatch/4-variaint-2" class="section-heading">
+  <a href="#knnMatch/4-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<h3 id="knnMatch/4-positional-arguments-1" class="section-heading">
+  <a href="#knnMatch/4-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments-1</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h3 id="knnMatch/4-keyword-arguments-1" class="section-heading">
+  <a href="#knnMatch/4-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments-1</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">total</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">trainDescCollection</span><span class="p" data-group-id="0564080597-1">[</span><span class="n">i</span><span class="p" data-group-id="0564080597-1">]</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">knnMatch</span><span class="p" data-group-id="0042040045-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p" data-group-id="0042040045-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="0042040045-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="0042040045-3">]</span><span class="p" data-group-id="0042040045-2">]</span><span class="p" data-group-id="0042040045-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="knnMatch/5">
@@ -848,7 +1017,7 @@ cv
     </a>
     <h1 class="signature" translate="no">knnMatch(self, queryDescriptors, trainDescriptors, k, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L276" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -858,15 +1027,25 @@ cv
 
   <section class="docstring">
 
-<p>Finds the k best matches for each descriptor from a query set.</p><ul><li><strong>queryDescriptors</strong>.</li><li><strong>trainDescriptors</strong>.
-  collection stored in the class object.</li><li><strong>mask</strong>.
-  descriptors.</li><li><strong>matches</strong>.</li><li><strong>k</strong>.
-  less than k possible matches in total.</li><li><strong>compactResult</strong>.
-  false, the matches vector has the same size as queryDescriptors rows. If compactResult is true,
-  the matches vector does not contain matches for fully masked-out query descriptors.
-These extended variants of DescriptorMatcher::match methods find several best matches for each query
-descriptor. The matches are returned in the distance increasing order. See DescriptorMatcher::match
-for the details about query and train descriptors.</li><li><strong>mask</strong> : UMat</li><li><strong>compactResult</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">knnMatch</span><span class="p" data-group-id="9441458634-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p" data-group-id="9441458634-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="9441458634-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="9441458634-3">]</span><span class="p" data-group-id="9441458634-2">]</span><span class="p" data-group-id="9441458634-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
+<h3 id="knnMatch/5-positional-arguments" class="section-heading">
+  <a href="#knnMatch/5-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h3 id="knnMatch/5-keyword-arguments" class="section-heading">
+  <a href="#knnMatch/5-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Finds the k best matches for each descriptor from a query set.</p><pre><code class="makeup elixir" translate="no"><span class="n">collection</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n">object</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="o">.</span><span class="w">
+</span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">total</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>  These extended variants of DescriptorMatcher::match methods find several best matches for each query
+  descriptor. The matches are returned in the distance increasing order. See DescriptorMatcher::match
+  for the details about query and train descriptors.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">knnMatch</span><span class="p" data-group-id="1471206476-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p" data-group-id="1471206476-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="1471206476-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="1471206476-3">]</span><span class="p" data-group-id="1471206476-2">]</span><span class="p" data-group-id="1471206476-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="match/2">
@@ -878,7 +1057,7 @@ for the details about query and train descriptors.</li><li><strong>mask</strong>
     </a>
     <h1 class="signature" translate="no">match(self, queryDescriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L516" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -888,7 +1067,20 @@ for the details about query and train descriptors.</li><li><strong>mask</strong>
 
   <section class="docstring">
 
-
+<h3 id="match/2-positional-arguments" class="section-heading">
+  <a href="#match/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li></ul><h3 id="match/2-keyword-arguments" class="section-heading">
+  <a href="#match/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">descriptor</span><span class="o">.</span><span class="w"> </span><span class="nc">So</span><span class="p">,</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">smaller</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">count</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">trainDescCollection</span><span class="p" data-group-id="8575789675-1">[</span><span class="n">i</span><span class="p" data-group-id="8575789675-1">]</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">match</span><span class="p" data-group-id="2812675558-1">(</span><span class="n">queryDescriptors</span><span class="p" data-group-id="2812675558-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="2812675558-2">]</span><span class="p" data-group-id="2812675558-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="match/3">
@@ -900,7 +1092,7 @@ for the details about query and train descriptors.</li><li><strong>mask</strong>
     </a>
     <h1 class="signature" translate="no">match(self, queryDescriptors, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L477" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -910,7 +1102,50 @@ for the details about query and train descriptors.</li><li><strong>mask</strong>
 
   <section class="docstring">
 
-
+<h2 id="match/3-variaint-1" class="section-heading">
+  <a href="#match/3-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<h3 id="match/3-positional-arguments" class="section-heading">
+  <a href="#match/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li></ul><h3 id="match/3-keyword-arguments" class="section-heading">
+  <a href="#match/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mask</strong>: UMat.</li></ul><p>Finds the best match for each descriptor from a query set.</p><pre><code class="makeup elixir" translate="no"><span class="n">collection</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n">object</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptor</span><span class="o">.</span><span class="w"> </span><span class="nc">So</span><span class="p">,</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">smaller</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">count</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>  In the first variant of this method, the train descriptors are passed as an input argument. In the
+  second variant of the method, train descriptors collection that was set by DescriptorMatcher::add is
+  used. Optional mask (or masks) can be passed to specify which query and training descriptors can be
+  matched. Namely, queryDescriptors[i] can be matched with trainDescriptors[j] only if
+  mask.at\&lt;uchar&gt;(i,j) is non-zero.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">match</span><span class="p" data-group-id="4153494833-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p" data-group-id="4153494833-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="4153494833-2">]</span><span class="p" data-group-id="4153494833-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre><h2 id="match/3-variaint-2" class="section-heading">
+  <a href="#match/3-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<h3 id="match/3-positional-arguments-1" class="section-heading">
+  <a href="#match/3-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments-1</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li></ul><h3 id="match/3-keyword-arguments-1" class="section-heading">
+  <a href="#match/3-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments-1</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">descriptor</span><span class="o">.</span><span class="w"> </span><span class="nc">So</span><span class="p">,</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">smaller</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">count</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">trainDescCollection</span><span class="p" data-group-id="9343359484-1">[</span><span class="n">i</span><span class="p" data-group-id="9343359484-1">]</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">match</span><span class="p" data-group-id="0662372980-1">(</span><span class="n">queryDescriptors</span><span class="p" data-group-id="0662372980-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="0662372980-2">]</span><span class="p" data-group-id="0662372980-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="match/4">
@@ -922,7 +1157,7 @@ for the details about query and train descriptors.</li><li><strong>mask</strong>
     </a>
     <h1 class="signature" translate="no">match(self, queryDescriptors, trainDescriptors, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L239" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L421" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -932,15 +1167,25 @@ for the details about query and train descriptors.</li><li><strong>mask</strong>
 
   <section class="docstring">
 
-<p>Finds the best match for each descriptor from a query set.</p><ul><li><strong>queryDescriptors</strong>.</li><li><strong>trainDescriptors</strong>.
-  collection stored in the class object.</li><li><strong>matches</strong>.
-  descriptor. So, matches size may be smaller than the query descriptors count.</li><li><strong>mask</strong>.
-  descriptors.
-In the first variant of this method, the train descriptors are passed as an input argument. In the
-second variant of the method, train descriptors collection that was set by DescriptorMatcher::add is
-used. Optional mask (or masks) can be passed to specify which query and training descriptors can be
-matched. Namely, queryDescriptors[i] can be matched with trainDescriptors[j] only if
-mask.at\&lt;uchar&gt;(i,j) is non-zero.</li><li><strong>mask</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">match</span><span class="p" data-group-id="9340387568-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p" data-group-id="9340387568-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="9340387568-2">]</span><span class="p" data-group-id="9340387568-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
+<h3 id="match/4-positional-arguments" class="section-heading">
+  <a href="#match/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li></ul><h3 id="match/4-keyword-arguments" class="section-heading">
+  <a href="#match/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mask</strong>: UMat.</li></ul><p>Finds the best match for each descriptor from a query set.</p><pre><code class="makeup elixir" translate="no"><span class="n">collection</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n">object</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptor</span><span class="o">.</span><span class="w"> </span><span class="nc">So</span><span class="p">,</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">smaller</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">count</span><span class="o">.</span><span class="w">
+</span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>  In the first variant of this method, the train descriptors are passed as an input argument. In the
+  second variant of the method, train descriptors collection that was set by DescriptorMatcher::add is
+  used. Optional mask (or masks) can be passed to specify which query and training descriptors can be
+  matched. Namely, queryDescriptors[i] can be matched with trainDescriptors[j] only if
+  mask.at\&lt;uchar&gt;(i,j) is non-zero.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">match</span><span class="p" data-group-id="5556155388-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p" data-group-id="5556155388-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="5556155388-2">]</span><span class="p" data-group-id="5556155388-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="radiusMatch/3">
@@ -952,7 +1197,7 @@ mask.at\&lt;uchar&gt;(i,j) is non-zero.</li><li><strong>mask</strong> : UMat</li
     </a>
     <h1 class="signature" translate="no">radiusMatch(self, queryDescriptors, maxDistance)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L285" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L666" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -962,7 +1207,23 @@ mask.at\&lt;uchar&gt;(i,j) is non-zero.</li><li><strong>mask</strong> : UMat</li
 
   <section class="docstring">
 
-
+<h3 id="radiusMatch/3-positional-arguments" class="section-heading">
+  <a href="#radiusMatch/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>maxDistance</strong>: float. </li></ul><h3 id="radiusMatch/3-keyword-arguments" class="section-heading">
+  <a href="#radiusMatch/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">metric</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p" data-group-id="7459794389-1">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="nc">Hamming</span><span class="w"> </span><span class="n">distance</span><span class="p" data-group-id="7459794389-1">)</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">coordinates</span><span class="w"> </span><span class="p" data-group-id="7459794389-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">measured</span><span class="w">
+</span><span class="ow">in</span><span class="w"> </span><span class="nc">Pixels</span><span class="p" data-group-id="7459794389-2">)</span><span class="o">!</span><span class="w">
+</span><span class="n">descriptors</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">trainDescCollection</span><span class="p" data-group-id="7459794389-3">[</span><span class="n">i</span><span class="p" data-group-id="7459794389-3">]</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">radiusMatch</span><span class="p" data-group-id="4944501543-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">maxDistance</span><span class="p" data-group-id="4944501543-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="4944501543-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="4944501543-3">]</span><span class="p" data-group-id="4944501543-2">]</span><span class="p" data-group-id="4944501543-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="radiusMatch/4">
@@ -974,7 +1235,7 @@ mask.at\&lt;uchar&gt;(i,j) is non-zero.</li><li><strong>mask</strong> : UMat</li
     </a>
     <h1 class="signature" translate="no">radiusMatch(self, queryDescriptors, maxDistance, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L276" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L620" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -984,7 +1245,54 @@ mask.at\&lt;uchar&gt;(i,j) is non-zero.</li><li><strong>mask</strong> : UMat</li
 
   <section class="docstring">
 
-
+<h2 id="radiusMatch/4-variaint-1" class="section-heading">
+  <a href="#radiusMatch/4-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<h3 id="radiusMatch/4-positional-arguments" class="section-heading">
+  <a href="#radiusMatch/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>maxDistance</strong>: float. </li></ul><h3 id="radiusMatch/4-keyword-arguments" class="section-heading">
+  <a href="#radiusMatch/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>For each query descriptor, finds the training descriptors not farther than the specified distance.</p><pre><code class="makeup elixir" translate="no"><span class="n">collection</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n">object</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span><span class="w">
+</span><span class="n">metric</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p" data-group-id="6780158474-1">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="nc">Hamming</span><span class="w"> </span><span class="n">distance</span><span class="p" data-group-id="6780158474-1">)</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">coordinates</span><span class="w"> </span><span class="p" data-group-id="6780158474-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">measured</span><span class="w">
+</span><span class="ow">in</span><span class="w"> </span><span class="nc">Pixels</span><span class="p" data-group-id="6780158474-2">)</span><span class="o">!</span><span class="w">
+</span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>  For each query descriptor, the methods find such training descriptors that the distance between the
+  query descriptor and the training descriptor is equal or smaller than maxDistance. Found matches are
+  returned in the distance increasing order.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">radiusMatch</span><span class="p" data-group-id="2436189355-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">maxDistance</span><span class="p" data-group-id="2436189355-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="2436189355-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="2436189355-3">]</span><span class="p" data-group-id="2436189355-2">]</span><span class="p" data-group-id="2436189355-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre><h2 id="radiusMatch/4-variaint-2" class="section-heading">
+  <a href="#radiusMatch/4-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<h3 id="radiusMatch/4-positional-arguments-1" class="section-heading">
+  <a href="#radiusMatch/4-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments-1</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>maxDistance</strong>: float. </li></ul><h3 id="radiusMatch/4-keyword-arguments-1" class="section-heading">
+  <a href="#radiusMatch/4-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments-1</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">metric</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p" data-group-id="4969389537-1">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="nc">Hamming</span><span class="w"> </span><span class="n">distance</span><span class="p" data-group-id="4969389537-1">)</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">coordinates</span><span class="w"> </span><span class="p" data-group-id="4969389537-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">measured</span><span class="w">
+</span><span class="ow">in</span><span class="w"> </span><span class="nc">Pixels</span><span class="p" data-group-id="4969389537-2">)</span><span class="o">!</span><span class="w">
+</span><span class="n">descriptors</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">descriptors</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">trainDescCollection</span><span class="p" data-group-id="4969389537-3">[</span><span class="n">i</span><span class="p" data-group-id="4969389537-3">]</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">radiusMatch</span><span class="p" data-group-id="6109004254-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">maxDistance</span><span class="p" data-group-id="6109004254-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="6109004254-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="6109004254-3">]</span><span class="p" data-group-id="6109004254-2">]</span><span class="p" data-group-id="6109004254-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="radiusMatch/5">
@@ -996,7 +1304,7 @@ mask.at\&lt;uchar&gt;(i,j) is non-zero.</li><li><strong>mask</strong> : UMat</li
     </a>
     <h1 class="signature" translate="no">radiusMatch(self, queryDescriptors, trainDescriptors, maxDistance, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L320" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L555" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1006,16 +1314,26 @@ mask.at\&lt;uchar&gt;(i,j) is non-zero.</li><li><strong>mask</strong> : UMat</li
 
   <section class="docstring">
 
-<p>For each query descriptor, finds the training descriptors not farther than the specified distance.</p><ul><li><strong>queryDescriptors</strong>.</li><li><strong>trainDescriptors</strong>.
-  collection stored in the class object.</li><li><strong>matches</strong>.</li><li><strong>compactResult</strong>.
-  false, the matches vector has the same size as queryDescriptors rows. If compactResult is true,
-  the matches vector does not contain matches for fully masked-out query descriptors.</li><li><strong>maxDistance</strong>.
-  metric distance (e.g. Hamming distance), not the distance between coordinates (which is measured
-  in Pixels)!</li><li><strong>mask</strong>.
-  descriptors.
-For each query descriptor, the methods find such training descriptors that the distance between the
-query descriptor and the training descriptor is equal or smaller than maxDistance. Found matches are
-returned in the distance increasing order.</li><li><strong>mask</strong> : UMat</li><li><strong>compactResult</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">radiusMatch</span><span class="p" data-group-id="1650601020-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">maxDistance</span><span class="p" data-group-id="1650601020-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="1650601020-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="1650601020-3">]</span><span class="p" data-group-id="1650601020-2">]</span><span class="p" data-group-id="1650601020-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
+<h3 id="radiusMatch/5-positional-arguments" class="section-heading">
+  <a href="#radiusMatch/5-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>queryDescriptors</strong>: UMat. </li><li><strong>trainDescriptors</strong>: UMat. </li><li><strong>maxDistance</strong>: float. </li></ul><h3 id="radiusMatch/5-keyword-arguments" class="section-heading">
+  <a href="#radiusMatch/5-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mask</strong>: UMat.</li><li><strong>compactResult</strong>: bool.</li></ul><p>For each query descriptor, finds the training descriptors not farther than the specified distance.</p><pre><code class="makeup elixir" translate="no"><span class="n">collection</span><span class="w"> </span><span class="n">stored</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n">object</span><span class="o">.</span><span class="w">
+</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">queryDescriptors</span><span class="w"> </span><span class="n">rows</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">compactResult</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">fully</span><span class="w"> </span><span class="n">masked</span><span class="o">-</span><span class="n">out</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">descriptors</span><span class="o">.</span><span class="w">
+</span><span class="n">metric</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="p" data-group-id="8301301310-1">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="nc">Hamming</span><span class="w"> </span><span class="n">distance</span><span class="p" data-group-id="8301301310-1">)</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">coordinates</span><span class="w"> </span><span class="p" data-group-id="8301301310-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">measured</span><span class="w">
+</span><span class="ow">in</span><span class="w"> </span><span class="nc">Pixels</span><span class="p" data-group-id="8301301310-2">)</span><span class="o">!</span><span class="w">
+</span><span class="n">descriptors</span><span class="o">.</span></code></pre><p>  For each query descriptor, the methods find such training descriptors that the distance between the
+  query descriptor and the training descriptor is equal or smaller than maxDistance. Found matches are
+  returned in the distance increasing order.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">radiusMatch</span><span class="p" data-group-id="7716161485-1">(</span><span class="n">queryDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">trainDescriptors</span><span class="p">,</span><span class="w"> </span><span class="n">maxDistance</span><span class="p" data-group-id="7716161485-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="7716161485-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compactResult</span><span class="p" data-group-id="7716161485-3">]</span><span class="p" data-group-id="7716161485-2">]</span><span class="p" data-group-id="7716161485-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -1027,7 +1345,7 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
     </a>
     <h1 class="signature" translate="no">read(self, arg1)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L696" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1037,7 +1355,19 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
 
   <section class="docstring">
 
-
+<h2 id="read/2-variaint-1" class="section-heading">
+  <a href="#read/2-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="5515194018-1">(</span><span class="n">arg1</span><span class="p" data-group-id="5515194018-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre><h2 id="read/2-variaint-2" class="section-heading">
+  <a href="#read/2-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="9983018334-1">(</span><span class="n">fileName</span><span class="p" data-group-id="9983018334-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/1">
@@ -1049,7 +1379,7 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
     </a>
     <h1 class="signature" translate="no">train(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L359" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L729" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1059,7 +1389,11 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
 
   <section class="docstring">
 
-
+<p>Trains a descriptor matcher
+  Trains a descriptor matcher (for example, the flann index). In all methods to match, the method
+  train() is run every time before matching. Some descriptor matchers (for example, BruteForceMatcher)
+  have an empty implementation of this method. Other matchers really train their inner structures (for
+  example, FlannBasedMatcher trains flann::Index ).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="6846580112-1">(</span><span class="p" data-group-id="6846580112-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -1071,7 +1405,7 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L383" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L788" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1081,7 +1415,31 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
 
   <section class="docstring">
 
-
+<h2 id="write/2-variaint-1" class="section-heading">
+  <a href="#write/2-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<h3 id="write/2-positional-arguments" class="section-heading">
+  <a href="#write/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/2-keyword-arguments" class="section-heading">
+  <a href="#write/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="3528873004-1">(</span><span class="n">fs</span><span class="p" data-group-id="3528873004-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="3528873004-2">]</span><span class="p" data-group-id="3528873004-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre><h2 id="write/2-variaint-2" class="section-heading">
+  <a href="#write/2-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="5547509907-1">(</span><span class="n">fileName</span><span class="p" data-group-id="5547509907-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -1093,7 +1451,7 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L374" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L753" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1103,7 +1461,19 @@ returned in the distance increasing order.</li><li><strong>mask</strong> : UMat<
 
   <section class="docstring">
 
-<ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="4024396947-1">(</span><span class="n">fs</span><span class="p" data-group-id="4024396947-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="4024396947-2">]</span><span class="p" data-group-id="4024396947-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="write/3-positional-arguments" class="section-heading">
+  <a href="#write/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/3-keyword-arguments" class="section-heading">
+  <a href="#write/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="7108870244-1">(</span><span class="n">fs</span><span class="p" data-group-id="7108870244-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="7108870244-2">]</span><span class="p" data-group-id="7108870244-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -1128,7 +1498,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">add!(self, descriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L77" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1150,7 +1520,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">bfMatcher!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L53" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1172,7 +1542,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">bfMatcher!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L28" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1194,7 +1564,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1216,7 +1586,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clone!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L122" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1238,7 +1608,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L189" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1260,7 +1630,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1282,7 +1652,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1304,7 +1674,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainDescriptors!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L100" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1326,7 +1696,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isMaskSupported!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L246" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1348,7 +1718,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">knnMatch!(self, queryDescriptors, k)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1370,7 +1740,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">knnMatch!(self, queryDescriptors, trainDescriptors, k)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L188" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L358" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1392,7 +1762,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">knnMatch!(self, queryDescriptors, trainDescriptors, k, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L177" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L286" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1414,7 +1784,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">match!(self, queryDescriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L216" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L524" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1436,7 +1806,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">match!(self, queryDescriptors, trainDescriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L494" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1458,7 +1828,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">match!(self, queryDescriptors, trainDescriptors, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L247" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L430" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1480,7 +1850,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">radiusMatch!(self, queryDescriptors, maxDistance)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L293" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L675" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1502,7 +1872,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">radiusMatch!(self, queryDescriptors, trainDescriptors, maxDistance)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L340" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L639" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1524,7 +1894,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">radiusMatch!(self, queryDescriptors, trainDescriptors, maxDistance, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L329" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L565" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1546,7 +1916,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, arg1)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L349" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L704" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1568,7 +1938,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L364" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L735" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1590,7 +1960,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L390" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L796" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1612,7 +1982,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bfmatcher.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bfmatcher.ex#L761" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1635,10 +2005,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_bfmatcher.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_bfmatcher.ex">(current file)</a>
 
             </span>
 

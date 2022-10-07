@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.DNN.Layer — Evision v0.1.5-dev</title>
+    <title>Evision.DNN.Layer — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.Layer</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -146,6 +146,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>inputs</strong>: vector_UMat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outputs</strong>: vector_UMat.</li></ul><p>Computes and sets internal parameters according to inputs, outputs and blobs.
+   If this method is called after network has allocated all memory for input and output blobs
+   and before inferencing.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -154,7 +158,9 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes and sets internal parameters according to inputs, outputs and blobs.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>inputs</strong>: vector_UMat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outputs</strong>: vector_UMat.</li></ul><p>Computes and sets internal parameters according to inputs, outputs and blobs.
+   If this method is called after network has allocated all memory for input and output blobs
+   and before inferencing.</p></div>
 
       </div>
 
@@ -246,6 +252,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns index of output blob in output array.
+@see inputNameToIndex()</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -274,6 +283,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>inputs</strong>: vector_Mat</li><li><strong>internals</strong>: vector_Mat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outputs</strong>: vector_Mat.</li></ul><p>Allocates layer and computes output.
+@deprecated This method will be removed in the future release.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -282,14 +294,14 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Allocates layer and computes output.
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>inputs</strong>: vector_Mat</li><li><strong>internals</strong>: vector_Mat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outputs</strong>: vector_Mat.</li></ul><p>Allocates layer and computes output.
 @deprecated This method will be removed in the future release.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_blobs!/2" translate="no">set_blobs!(self, opts)</a>
+          <a href="#set_blobs!/2" translate="no">set_blobs!(self, prop)</a>
 
         </div>
 
@@ -299,7 +311,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_blobs/2" translate="no">set_blobs(self, opts)</a>
+          <a href="#set_blobs/2" translate="no">set_blobs(self, prop)</a>
 
         </div>
 
@@ -328,7 +340,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">finalize!(self, inputs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -350,7 +362,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">finalize!(self, inputs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -372,7 +384,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">finalize(self, inputs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L52" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -382,7 +394,21 @@ Functions
 
   <section class="docstring">
 
-
+<h3 id="finalize/2-positional-arguments" class="section-heading">
+  <a href="#finalize/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>inputs</strong>: vector_UMat</li></ul><h3 id="finalize/2-keyword-arguments" class="section-heading">
+  <a href="#finalize/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outputs</strong>: vector_UMat.</li></ul><p>Computes and sets internal parameters according to inputs, outputs and blobs.
+   If this method is called after network has allocated all memory for input and output blobs
+   and before inferencing.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">finalize</span><span class="p" data-group-id="5658640043-1">(</span><span class="n">inputs</span><span class="p" data-group-id="5658640043-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="5658640043-2">]</span><span class="p" data-group-id="5658640043-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="finalize/3">
@@ -394,7 +420,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">finalize(self, inputs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L23" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -404,9 +430,21 @@ Functions
 
   <section class="docstring">
 
-<p>Computes and sets internal parameters according to inputs, outputs and blobs.</p><ul><li><em>**</em>.</li><li><strong>outputs</strong>.
- If this method is called after network has allocated all memory for input and output blobs
- and before inferencing.</li><li><strong>outputs</strong> : vector_UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">finalize</span><span class="p" data-group-id="5985770136-1">(</span><span class="n">inputs</span><span class="p" data-group-id="5985770136-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="5985770136-2">]</span><span class="p" data-group-id="5985770136-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputs</span></code></pre>
+<h3 id="finalize/3-positional-arguments" class="section-heading">
+  <a href="#finalize/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>inputs</strong>: vector_UMat</li></ul><h3 id="finalize/3-keyword-arguments" class="section-heading">
+  <a href="#finalize/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outputs</strong>: vector_UMat.</li></ul><p>Computes and sets internal parameters according to inputs, outputs and blobs.
+   If this method is called after network has allocated all memory for input and output blobs
+   and before inferencing.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">finalize</span><span class="p" data-group-id="6068804474-1">(</span><span class="n">inputs</span><span class="p" data-group-id="6068804474-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="6068804474-2">]</span><span class="p" data-group-id="6068804474-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="get_blobs!/1">
@@ -418,7 +456,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_blobs!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -440,7 +478,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_blobs(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L144" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -462,7 +500,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_name!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L160" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -484,7 +522,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_name(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -506,7 +544,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_preferableTarget!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L166" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -528,7 +566,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_preferableTarget(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -550,7 +588,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_type!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -572,7 +610,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_type(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -594,7 +632,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">outputNameToIndex!(self, outputName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L82" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -616,7 +654,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">outputNameToIndex(self, outputName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -626,7 +664,8 @@ Functions
 
   <section class="docstring">
 
-
+<p>Returns index of output blob in output array.
+@see inputNameToIndex()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">outputNameToIndex</span><span class="p" data-group-id="0895781526-1">(</span><span class="n">outputName</span><span class="p" data-group-id="0895781526-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="run!/3">
@@ -638,7 +677,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">run!(self, inputs, internals)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -660,7 +699,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">run!(self, inputs, internals, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -682,7 +721,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">run(self, inputs, internals)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -692,7 +731,20 @@ Functions
 
   <section class="docstring">
 
-
+<h3 id="run/3-positional-arguments" class="section-heading">
+  <a href="#run/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>inputs</strong>: vector_Mat</li><li><strong>internals</strong>: vector_Mat</li></ul><h3 id="run/3-keyword-arguments" class="section-heading">
+  <a href="#run/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outputs</strong>: vector_Mat.</li></ul><p>Allocates layer and computes output.
+@deprecated This method will be removed in the future release.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">run</span><span class="p" data-group-id="4669636246-1">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">internals</span><span class="p" data-group-id="4669636246-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="4669636246-2">]</span><span class="p" data-group-id="4669636246-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputs</span><span class="p">,</span><span class="w"> </span><span class="n">internals</span></code></pre>
   </section>
 </section>
 <section class="detail" id="run/4">
@@ -704,7 +756,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">run(self, inputs, internals, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -714,8 +766,20 @@ Functions
 
   <section class="docstring">
 
-<p>Allocates layer and computes output.
-@deprecated This method will be removed in the future release.</p><ul><li><strong>outputs</strong> : vector_Mat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">run</span><span class="p" data-group-id="5412481162-1">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">internals</span><span class="p" data-group-id="5412481162-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="5412481162-2">]</span><span class="p" data-group-id="5412481162-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputs</span><span class="p">,</span><span class="w"> </span><span class="n">internals</span></code></pre>
+<h3 id="run/4-positional-arguments" class="section-heading">
+  <a href="#run/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>inputs</strong>: vector_Mat</li><li><strong>internals</strong>: vector_Mat</li></ul><h3 id="run/4-keyword-arguments" class="section-heading">
+  <a href="#run/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outputs</strong>: vector_Mat.</li></ul><p>Allocates layer and computes output.
+@deprecated This method will be removed in the future release.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">run</span><span class="p" data-group-id="4940685190-1">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">internals</span><span class="p" data-group-id="4940685190-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="4940685190-2">]</span><span class="p" data-group-id="4940685190-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputs</span><span class="p">,</span><span class="w"> </span><span class="n">internals</span></code></pre>
   </section>
 </section>
 <section class="detail" id="set_blobs!/2">
@@ -725,9 +789,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_blobs!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_blobs!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L154" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -747,9 +811,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_blobs(self, opts)</h1>
+    <h1 class="signature" translate="no">set_blobs(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_layer.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_layer.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -772,10 +836,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn_layer.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_layer.ex">(current file)</a>
 
             </span>
 

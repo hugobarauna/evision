@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.CUDA.Event — Evision v0.1.5-dev</title>
+    <title>Evision.CUDA.Event — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.CUDA.Event</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,27 +122,31 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#cuda_Event/0" translate="no">cuda_Event()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: Event_CreateFlags.</li></ul><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_Event/1" translate="no">cuda_Event(opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: Event_CreateFlags.</li></ul><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#elapsedTime/2" translate="no">elapsedTime(start, end_)</a>
 
         </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#event/0" translate="no">event()</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#event/1" translate="no">event(opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><ul><li><strong>flags</strong> : Event_CreateFlags</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -152,6 +156,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -160,6 +166,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>stream</strong>: Stream.</li></ul><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -167,6 +175,8 @@ Evision
           <a href="#waitForCompletion/1" translate="no">waitForCompletion(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -179,31 +189,31 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#cuda_Event!/0" translate="no">cuda_Event!()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#cuda_Event/0"><code class="inline">cuda_Event/0</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_Event!/1" translate="no">cuda_Event!(opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#cuda_Event/1"><code class="inline">cuda_Event/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#elapsedTime!/2" translate="no">elapsedTime!(start, end_)</a>
 
         </div>
 
           <div class="summary-synopsis"><p>Raising version of <a href="#elapsedTime/2"><code class="inline">elapsedTime/2</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#event!/0" translate="no">event!()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#event/0"><code class="inline">event/0</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#event!/1" translate="no">event!(opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#event/1"><code class="inline">event/1</code></a>.</p></div>
 
       </div>
 
@@ -251,6 +261,74 @@ Evision
 cv.cuda
     </h1>
     <div class="cv-cuda-list">
+<section class="detail" id="cuda_Event/0">
+
+  <div class="detail-header">
+    <a href="#cuda_Event/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_Event()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L43" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="cuda_Event/0-positional-arguments" class="section-heading">
+  <a href="#cuda_Event/0-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="cuda_Event/0-keyword-arguments" class="section-heading">
+  <a href="#cuda_Event/0-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: Event_CreateFlags.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Event</span><span class="p" data-group-id="0345695484-1">(</span><span class="p" data-group-id="0345695484-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="0345695484-2">]</span><span class="p" data-group-id="0345695484-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Event</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="cuda_Event/1">
+
+  <div class="detail-header">
+    <a href="#cuda_Event/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_Event(opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L19" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="cuda_Event/1-positional-arguments" class="section-heading">
+  <a href="#cuda_Event/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="cuda_Event/1-keyword-arguments" class="section-heading">
+  <a href="#cuda_Event/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: Event_CreateFlags.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Event</span><span class="p" data-group-id="3324130443-1">(</span><span class="p" data-group-id="3324130443-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="3324130443-2">]</span><span class="p" data-group-id="3324130443-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Event</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
 <section class="detail" id="elapsedTime/2">
 
   <div class="detail-header">
@@ -260,7 +338,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">elapsedTime(start, end_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -270,51 +348,7 @@ cv.cuda
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="event/0">
-
-  <div class="detail-header">
-    <a href="#event/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">event()</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L21" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="event/1">
-
-  <div class="detail-header">
-    <a href="#event/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">event(opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L13" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<ul><li><strong>flags</strong> : Event_CreateFlags</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Event</span><span class="p" data-group-id="8070415831-1">(</span><span class="p" data-group-id="8070415831-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="8070415831-2">]</span><span class="p" data-group-id="8070415831-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Event</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">elapsedTime</span><span class="p" data-group-id="6864307312-1">(</span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">end_</span><span class="p" data-group-id="6864307312-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="queryIfComplete/1">
@@ -326,7 +360,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">queryIfComplete(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L82" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -336,7 +370,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">queryIfComplete</span><span class="p" data-group-id="5761034491-1">(</span><span class="p" data-group-id="5761034491-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="record/1">
@@ -348,7 +382,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">record(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -358,7 +392,19 @@ cv.cuda
 
   <section class="docstring">
 
-
+<h3 id="record/1-positional-arguments" class="section-heading">
+  <a href="#record/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="record/1-keyword-arguments" class="section-heading">
+  <a href="#record/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>stream</strong>: Stream.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">record</span><span class="p" data-group-id="5410282707-1">(</span><span class="p" data-group-id="5410282707-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">stream</span><span class="p" data-group-id="5410282707-2">]</span><span class="p" data-group-id="5410282707-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="waitForCompletion/1">
@@ -370,7 +416,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">waitForCompletion(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L123" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -380,7 +426,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waitForCompletion</span><span class="p" data-group-id="7044744605-1">(</span><span class="p" data-group-id="7044744605-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -396,6 +442,50 @@ cv.cuda
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="cuda_Event!/0">
+
+  <div class="detail-header">
+    <a href="#cuda_Event!/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_Event!()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L49" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#cuda_Event/0"><code class="inline">cuda_Event/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="cuda_Event!/1">
+
+  <div class="detail-header">
+    <a href="#cuda_Event!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_Event!(opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L26" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#cuda_Event/1"><code class="inline">cuda_Event/1</code></a>.</p>
+  </section>
+</section>
 <section class="detail" id="elapsedTime!/2">
 
   <div class="detail-header">
@@ -405,7 +495,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">elapsedTime!(start, end_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L70" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -418,50 +508,6 @@ Functions
 <p>Raising version of <a href="#elapsedTime/2"><code class="inline">elapsedTime/2</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="event!/0">
-
-  <div class="detail-header">
-    <a href="#event!/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">event!()</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L26" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#event/0"><code class="inline">event/0</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="event!/1">
-
-  <div class="detail-header">
-    <a href="#event!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">event!(opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L19" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#event/1"><code class="inline">event/1</code></a>.</p>
-  </section>
-</section>
 <section class="detail" id="queryIfComplete!/1">
 
   <div class="detail-header">
@@ -471,7 +517,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">queryIfComplete!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L88" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -493,7 +539,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">record!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -515,7 +561,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">waitForCompletion!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_event.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_event.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -538,10 +584,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_cuda_event.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_cuda_event.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.CalibrateDebevec — Evision v0.1.5-dev</title>
+    <title>Evision.CalibrateDebevec — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.CalibrateDebevec</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Clears the algorithm state</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,8 @@ Evision
           <a href="#empty/1" translate="no">empty(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns true if the Algorithm is empty (e.g. in the very beginning or after unsuccessful read</p></div>
 
       </div>
 
@@ -142,6 +146,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +156,8 @@ Evision
           <a href="#getLambda/1" translate="no">getLambda(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -158,6 +167,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -165,6 +176,8 @@ Evision
           <a href="#getSamples/1" translate="no">getSamples(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -174,6 +187,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>src</strong>: vector_UMat. </li><li><strong>times</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>dst</strong>: UMat.</li></ul><p>Recovers inverse camera response.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -182,7 +197,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Recovers inverse camera response.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>src</strong>: vector_UMat. </li><li><strong>times</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>dst</strong>: UMat.</li></ul><p>Recovers inverse camera response.</p></div>
 
       </div>
 
@@ -192,6 +207,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Reads algorithm parameters from a file storage</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -199,6 +216,9 @@ Evision
           <a href="#save/2" translate="no">save(self, filename)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -208,6 +228,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -215,6 +237,8 @@ Evision
           <a href="#setRandom/2" translate="no">setRandom(self, random)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -224,6 +248,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -231,6 +257,9 @@ Evision
           <a href="#write/2" translate="no">write(self, fs)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p></div>
 
       </div>
 
@@ -240,7 +269,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>simplified API for language bindings
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
 Has overloading in C++</p></div>
 
       </div>
@@ -425,7 +454,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -435,7 +464,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="9253123411-1">(</span><span class="p" data-group-id="9253123411-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -447,7 +476,7 @@ cv
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -457,7 +486,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns true if the Algorithm is empty (e.g. in the very beginning or after unsuccessful read</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="6006821641-1">(</span><span class="p" data-group-id="6006821641-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -469,7 +498,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L54" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -479,7 +508,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="4810872995-1">(</span><span class="p" data-group-id="4810872995-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getLambda/1">
@@ -491,7 +521,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getLambda(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -501,7 +531,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLambda</span><span class="p" data-group-id="9867337913-1">(</span><span class="p" data-group-id="9867337913-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getRandom/1">
@@ -513,7 +543,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getRandom(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -523,7 +553,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRandom</span><span class="p" data-group-id="2446782786-1">(</span><span class="p" data-group-id="2446782786-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getSamples/1">
@@ -535,7 +565,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -545,7 +575,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSamples</span><span class="p" data-group-id="0167456356-1">(</span><span class="p" data-group-id="0167456356-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="process/3">
@@ -557,7 +587,7 @@ cv
     </a>
     <h1 class="signature" translate="no">process(self, src, times)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L163" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -567,7 +597,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="process/3-positional-arguments" class="section-heading">
+  <a href="#process/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>src</strong>: vector_UMat. </li><li><strong>times</strong>: UMat. </li></ul><h3 id="process/3-keyword-arguments" class="section-heading">
+  <a href="#process/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>dst</strong>: UMat.</li></ul><p>Recovers inverse camera response.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">process</span><span class="p" data-group-id="0833105312-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">times</span><span class="p" data-group-id="0833105312-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="0833105312-2">]</span><span class="p" data-group-id="0833105312-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
   </section>
 </section>
 <section class="detail" id="process/4">
@@ -579,7 +621,7 @@ cv
     </a>
     <h1 class="signature" translate="no">process(self, src, times, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L134" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -589,7 +631,19 @@ cv
 
   <section class="docstring">
 
-<p>Recovers inverse camera response.</p><ul><li><strong>src</strong>.</li><li><strong>dst</strong>.</li><li><strong>times</strong>.</li><li><strong>dst</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">process</span><span class="p" data-group-id="0176498288-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">times</span><span class="p" data-group-id="0176498288-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="0176498288-2">]</span><span class="p" data-group-id="0176498288-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
+<h3 id="process/4-positional-arguments" class="section-heading">
+  <a href="#process/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>src</strong>: vector_UMat. </li><li><strong>times</strong>: UMat. </li></ul><h3 id="process/4-keyword-arguments" class="section-heading">
+  <a href="#process/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>dst</strong>: UMat.</li></ul><p>Recovers inverse camera response.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">process</span><span class="p" data-group-id="4811808140-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">times</span><span class="p" data-group-id="4811808140-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="4811808140-2">]</span><span class="p" data-group-id="4811808140-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -601,7 +655,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L185" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -611,7 +665,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="9754449654-1">(</span><span class="n">fn_</span><span class="p" data-group-id="9754449654-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -623,7 +677,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L207" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -633,7 +687,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="6223889516-1">(</span><span class="n">filename</span><span class="p" data-group-id="6223889516-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setLambda/2">
@@ -645,7 +700,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setLambda(self, lambda)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -655,7 +710,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setLambda</span><span class="p" data-group-id="2614132001-1">(</span><span class="n">lambda</span><span class="p" data-group-id="2614132001-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRandom/2">
@@ -667,7 +722,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setRandom(self, random)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L247" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -677,7 +732,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRandom</span><span class="p" data-group-id="0263235519-1">(</span><span class="n">random</span><span class="p" data-group-id="0263235519-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setSamples/2">
@@ -689,7 +744,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setSamples(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -699,7 +754,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setSamples</span><span class="p" data-group-id="9363205632-1">(</span><span class="n">samples</span><span class="p" data-group-id="9363205632-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -711,7 +766,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L144" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L325" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -721,7 +776,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="write/2-positional-arguments" class="section-heading">
+  <a href="#write/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/2-keyword-arguments" class="section-heading">
+  <a href="#write/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="8381951473-1">(</span><span class="n">fs</span><span class="p" data-group-id="8381951473-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="8381951473-2">]</span><span class="p" data-group-id="8381951473-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -733,7 +801,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L296" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -743,8 +811,20 @@ cv
 
   <section class="docstring">
 
-<p>simplified API for language bindings
-Has overloading in C++</p><ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="8262890843-1">(</span><span class="n">fs</span><span class="p" data-group-id="8262890843-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="8262890843-2">]</span><span class="p" data-group-id="8262890843-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="write/3-positional-arguments" class="section-heading">
+  <a href="#write/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/3-keyword-arguments" class="section-heading">
+  <a href="#write/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="6311133032-1">(</span><span class="n">fs</span><span class="p" data-group-id="6311133032-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="6311133032-2">]</span><span class="p" data-group-id="6311133032-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -769,7 +849,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L21" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -791,7 +871,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -813,7 +893,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -835,7 +915,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getLambda!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -857,7 +937,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRandom!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -879,7 +959,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L114" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -901,7 +981,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">process!(self, src, times)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -923,7 +1003,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">process!(self, src, times, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -945,7 +1025,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L193" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -967,7 +1047,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L215" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -989,7 +1069,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setLambda!(self, lambda)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1011,7 +1091,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRandom!(self, random)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1033,7 +1113,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setSamples!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1055,7 +1135,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L333" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1077,7 +1157,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_calibratedebevec.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_calibratedebevec.ex#L304" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1100,10 +1180,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_calibratedebevec.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_calibratedebevec.ex">(current file)</a>
 
             </span>
 

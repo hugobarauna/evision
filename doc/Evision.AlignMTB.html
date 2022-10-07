@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.AlignMTB — Evision v0.1.5-dev</title>
+    <title>Evision.AlignMTB — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.AlignMTB</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Calculates shift between two images, i. e. how to shift the second image to correspond it with the
+  first.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +136,8 @@ Evision
           <a href="#computeBitmaps/2" translate="no">computeBitmaps(self, img)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>tb</strong>: UMat.</li><li><strong>eb</strong>: UMat.</li></ul><p>Computes median threshold and exclude bitmaps of given image.</p></div>
 
       </div>
 
@@ -142,7 +147,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes median threshold and exclude bitmaps of given image.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>tb</strong>: UMat.</li><li><strong>eb</strong>: UMat.</li></ul><p>Computes median threshold and exclude bitmaps of given image.</p></div>
 
       </div>
 
@@ -152,6 +157,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -159,6 +166,8 @@ Evision
           <a href="#getExcludeRange/1" translate="no">getExcludeRange(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -168,6 +177,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -175,6 +186,8 @@ Evision
           <a href="#process/3" translate="no">process(self, src, dst)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Short version of process, that doesn't take extra arguments.</p></div>
 
       </div>
 
@@ -184,6 +197,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -191,6 +206,8 @@ Evision
           <a href="#setCut/2" translate="no">setCut(self, value)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -200,6 +217,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -207,6 +226,8 @@ Evision
           <a href="#setMaxBits/2" translate="no">setMaxBits(self, max_bits)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -216,6 +237,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>src</strong>: UMat. </li><li><strong>shift</strong>: Point. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>dst</strong>: UMat.</li></ul><p>Helper function, that shift Mat filling new regions with zeros.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -224,7 +247,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Helper function, that shift Mat filling new regions with zeros.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>src</strong>: UMat. </li><li><strong>shift</strong>: Point. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>dst</strong>: UMat.</li></ul><p>Helper function, that shift Mat filling new regions with zeros.</p></div>
 
       </div>
 
@@ -388,7 +411,7 @@ cv
     </a>
     <h1 class="signature" translate="no">calculateShift(self, img0, img1)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -398,7 +421,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Calculates shift between two images, i. e. how to shift the second image to correspond it with the
+  first.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calculateShift</span><span class="p" data-group-id="0212615333-1">(</span><span class="n">img0</span><span class="p">,</span><span class="w"> </span><span class="n">img1</span><span class="p" data-group-id="0212615333-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="computeBitmaps/2">
@@ -410,7 +434,7 @@ cv
     </a>
     <h1 class="signature" translate="no">computeBitmaps(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L73" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -420,7 +444,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="computeBitmaps/2-positional-arguments" class="section-heading">
+  <a href="#computeBitmaps/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="computeBitmaps/2-keyword-arguments" class="section-heading">
+  <a href="#computeBitmaps/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>tb</strong>: UMat.</li><li><strong>eb</strong>: UMat.</li></ul><p>Computes median threshold and exclude bitmaps of given image.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">computeBitmaps</span><span class="p" data-group-id="2986335081-1">(</span><span class="n">img</span><span class="p" data-group-id="2986335081-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">tb</span><span class="p" data-group-id="2986335081-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">eb</span><span class="p" data-group-id="2986335081-3">]</span><span class="p" data-group-id="2986335081-2">]</span><span class="p" data-group-id="2986335081-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tb</span><span class="p">,</span><span class="w"> </span><span class="n">eb</span></code></pre>
   </section>
 </section>
 <section class="detail" id="computeBitmaps/3">
@@ -432,7 +468,7 @@ cv
     </a>
     <h1 class="signature" translate="no">computeBitmaps(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -442,7 +478,19 @@ cv
 
   <section class="docstring">
 
-<p>Computes median threshold and exclude bitmaps of given image.</p><ul><li><strong>img</strong>.</li><li><strong>tb</strong>.</li><li><strong>eb</strong>.</li><li><strong>tb</strong> : UMat</li><li><strong>eb</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">computeBitmaps</span><span class="p" data-group-id="6179324213-1">(</span><span class="n">img</span><span class="p" data-group-id="6179324213-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">tb</span><span class="p" data-group-id="6179324213-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">eb</span><span class="p" data-group-id="6179324213-3">]</span><span class="p" data-group-id="6179324213-2">]</span><span class="p" data-group-id="6179324213-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tb</span><span class="p">,</span><span class="w"> </span><span class="n">eb</span></code></pre>
+<h3 id="computeBitmaps/3-positional-arguments" class="section-heading">
+  <a href="#computeBitmaps/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="computeBitmaps/3-keyword-arguments" class="section-heading">
+  <a href="#computeBitmaps/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>tb</strong>: UMat.</li><li><strong>eb</strong>: UMat.</li></ul><p>Computes median threshold and exclude bitmaps of given image.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">computeBitmaps</span><span class="p" data-group-id="6922548666-1">(</span><span class="n">img</span><span class="p" data-group-id="6922548666-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">tb</span><span class="p" data-group-id="6922548666-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">eb</span><span class="p" data-group-id="6922548666-3">]</span><span class="p" data-group-id="6922548666-2">]</span><span class="p" data-group-id="6922548666-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tb</span><span class="p">,</span><span class="w"> </span><span class="n">eb</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCut/1">
@@ -454,7 +502,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getCut(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L93" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -464,7 +512,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCut</span><span class="p" data-group-id="6411220104-1">(</span><span class="p" data-group-id="6411220104-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getExcludeRange/1">
@@ -476,7 +524,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getExcludeRange(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -486,7 +534,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getExcludeRange</span><span class="p" data-group-id="8636923763-1">(</span><span class="p" data-group-id="8636923763-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getMaxBits/1">
@@ -498,7 +546,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getMaxBits(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -508,7 +556,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMaxBits</span><span class="p" data-group-id="2543095487-1">(</span><span class="p" data-group-id="2543095487-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="process/3">
@@ -520,7 +568,7 @@ cv
     </a>
     <h1 class="signature" translate="no">process(self, src, dst)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L171" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -530,7 +578,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Short version of process, that doesn't take extra arguments.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">process</span><span class="p" data-group-id="3236446831-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="3236446831-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="process/5">
@@ -542,7 +590,7 @@ cv
     </a>
     <h1 class="signature" translate="no">process(self, src, dst, times, response)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -552,7 +600,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">process</span><span class="p" data-group-id="0632604598-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p" data-group-id="0632604598-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setCut/2">
@@ -564,7 +612,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setCut(self, value)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L192" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -574,7 +622,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setCut</span><span class="p" data-group-id="5485981944-1">(</span><span class="n">value</span><span class="p" data-group-id="5485981944-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setExcludeRange/2">
@@ -586,7 +634,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setExcludeRange(self, exclude_range)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -596,7 +644,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setExcludeRange</span><span class="p" data-group-id="4938288928-1">(</span><span class="n">exclude_range</span><span class="p" data-group-id="4938288928-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setMaxBits/2">
@@ -608,7 +656,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setMaxBits(self, max_bits)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L232" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -618,7 +666,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMaxBits</span><span class="p" data-group-id="1811859977-1">(</span><span class="n">max_bits</span><span class="p" data-group-id="1811859977-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="shiftMat/3">
@@ -630,7 +678,7 @@ cv
     </a>
     <h1 class="signature" translate="no">shiftMat(self, src, shift)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L289" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -640,7 +688,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="shiftMat/3-positional-arguments" class="section-heading">
+  <a href="#shiftMat/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>src</strong>: UMat. </li><li><strong>shift</strong>: Point. </li></ul><h3 id="shiftMat/3-keyword-arguments" class="section-heading">
+  <a href="#shiftMat/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>dst</strong>: UMat.</li></ul><p>Helper function, that shift Mat filling new regions with zeros.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">shiftMat</span><span class="p" data-group-id="4047073943-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="p" data-group-id="4047073943-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="4047073943-2">]</span><span class="p" data-group-id="4047073943-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
   </section>
 </section>
 <section class="detail" id="shiftMat/4">
@@ -652,7 +712,7 @@ cv
     </a>
     <h1 class="signature" translate="no">shiftMat(self, src, shift, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -662,7 +722,19 @@ cv
 
   <section class="docstring">
 
-<p>Helper function, that shift Mat filling new regions with zeros.</p><ul><li><strong>src</strong>.</li><li><strong>dst</strong>.</li><li><strong>shift</strong>.</li><li><strong>dst</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">shiftMat</span><span class="p" data-group-id="2366027327-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="p" data-group-id="2366027327-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="2366027327-2">]</span><span class="p" data-group-id="2366027327-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
+<h3 id="shiftMat/4-positional-arguments" class="section-heading">
+  <a href="#shiftMat/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>src</strong>: UMat. </li><li><strong>shift</strong>: Point. </li></ul><h3 id="shiftMat/4-keyword-arguments" class="section-heading">
+  <a href="#shiftMat/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>dst</strong>: UMat.</li></ul><p>Helper function, that shift Mat filling new regions with zeros.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">shiftMat</span><span class="p" data-group-id="1623590529-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">shift</span><span class="p" data-group-id="1623590529-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="1623590529-2">]</span><span class="p" data-group-id="1623590529-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
   </section>
 </section>
 
@@ -687,7 +759,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calculateShift!(self, img0, img1)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -709,7 +781,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">computeBitmaps!(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L81" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -731,7 +803,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">computeBitmaps!(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L53" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -753,7 +825,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCut!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L99" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -775,7 +847,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getExcludeRange!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L117" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -797,7 +869,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMaxBits!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L135" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -819,7 +891,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">process!(self, src, dst)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L180" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -841,7 +913,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">process!(self, src, dst, times, response)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L158" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -863,7 +935,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setCut!(self, value)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L200" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -885,7 +957,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setExcludeRange!(self, exclude_range)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L220" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -907,7 +979,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMaxBits!(self, max_bits)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L240" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -929,7 +1001,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">shiftMat!(self, src, shift)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L298" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -951,7 +1023,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">shiftMat!(self, src, shift, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_alignmtb.ex#L136" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_alignmtb.ex#L269" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -974,10 +1046,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_alignmtb.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_alignmtb.ex">(current file)</a>
 
             </span>
 

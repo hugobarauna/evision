@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Subdiv2D — Evision v0.1.5-dev</title>
+    <title>Evision.Subdiv2D — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Subdiv2D</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns the edge destination.
+@returns vertex ID.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +136,9 @@ Evision
           <a href="#edgeOrg/2" translate="no">edgeOrg(self, edge)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns the edge origin.
+@returns vertex ID.</p></div>
 
       </div>
 
@@ -142,6 +148,13 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Finds the subdivision vertex closest to the given point.
+  The function is another function that locates the input point within the subdivision. It finds the
+  subdivision vertex that is the closest to the input point. It is not necessarily one of vertices
+  of the facet containing the input point, though the facet (located using locate() ) is used as a
+  starting point.
+@returns vertex ID.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +162,8 @@ Evision
           <a href="#getEdge/3" translate="no">getEdge(self, edge, nextEdgeType)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns one of the edges related to the given edge.</p></div>
 
       </div>
 
@@ -158,6 +173,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns a list of all edges.
+  The function gives each edge as a 4 numbers vector, where each two are one of the edge
+  vertices. i.e. org_x = v[0], org_y = v[1], dst_x = v[2], dst_y = v[3].</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -165,6 +184,9 @@ Evision
           <a href="#getLeadingEdgeList/1" translate="no">getLeadingEdgeList(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns a list of the leading edge ID connected to each triangle.
+  The function gives one edge ID for each triangle.</p></div>
 
       </div>
 
@@ -174,6 +196,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns a list of all triangles.
+  The function gives each triangle as a 6 numbers vector, where each two are one of the triangle
+  vertices. i.e. p1_x = v[0], p1_y = v[1], p2_x = v[2], p2_y = v[3], p3_x = v[4], p3_y = v[5].</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -181,6 +207,9 @@ Evision
           <a href="#getVertex/2" translate="no">getVertex(self, vertex)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns vertex location from vertex ID.
+@returns vertex (x,y)</p></div>
 
       </div>
 
@@ -190,6 +219,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns a list of all Voronoi facets.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -197,6 +228,8 @@ Evision
           <a href="#initDelaunay/2" translate="no">initDelaunay(self, rect)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Creates a new empty Delaunay subdivision</p></div>
 
       </div>
 
@@ -206,6 +239,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Insert multiple points into a Delaunay triangulation.
+  The function inserts a vector of points into a subdivision and modifies the subdivision topology
+  appropriately.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -213,6 +250,11 @@ Evision
           <a href="#locate/2" translate="no">locate(self, pt)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns the location of a point within a Delaunay triangulation.
+  The function locates the input point within the subdivision and gives one of the triangle edges
+  or vertices.
+@returns an integer which specify one of the following five cases for point location</p></div>
 
       </div>
 
@@ -222,6 +264,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns next edge around the edge origin.
+@returns an integer which is next edge ID around the edge origin: eOnext on the
+  picture above if e is the input edge).</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -229,6 +275,8 @@ Evision
           <a href="#rotateEdge/3" translate="no">rotateEdge(self, edge, rotate)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns another edge of the same quad-edge.</p></div>
 
       </div>
 
@@ -238,6 +286,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>  creates an empty Subdiv2D object.
+  To create a new empty Delaunay subdivision you need to use the #initDelaunay function.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -246,6 +297,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -253,6 +306,8 @@ Evision
           <a href="#symEdge/2" translate="no">symEdge(self, edge)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -456,7 +511,7 @@ cv
     </a>
     <h1 class="signature" translate="no">edgeDst(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -466,7 +521,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns the edge destination.
+@returns vertex ID.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">edgeDst</span><span class="p" data-group-id="5739435612-1">(</span><span class="n">edge</span><span class="p" data-group-id="5739435612-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">dstpt</span></code></pre>
   </section>
 </section>
 <section class="detail" id="edgeOrg/2">
@@ -478,7 +534,7 @@ cv
     </a>
     <h1 class="signature" translate="no">edgeOrg(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -488,7 +544,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns the edge origin.
+@returns vertex ID.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">edgeOrg</span><span class="p" data-group-id="1509014207-1">(</span><span class="n">edge</span><span class="p" data-group-id="1509014207-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">orgpt</span></code></pre>
   </section>
 </section>
 <section class="detail" id="findNearest/2">
@@ -500,7 +557,7 @@ cv
     </a>
     <h1 class="signature" translate="no">findNearest(self, pt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -510,7 +567,12 @@ cv
 
   <section class="docstring">
 
-
+<p>Finds the subdivision vertex closest to the given point.
+  The function is another function that locates the input point within the subdivision. It finds the
+  subdivision vertex that is the closest to the input point. It is not necessarily one of vertices
+  of the facet containing the input point, though the facet (located using locate() ) is used as a
+  starting point.
+@returns vertex ID.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findNearest</span><span class="p" data-group-id="1751262446-1">(</span><span class="n">pt</span><span class="p" data-group-id="1751262446-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">nearestPt</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getEdge/3">
@@ -522,7 +584,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getEdge(self, edge, nextEdgeType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L141" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -532,7 +594,16 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns one of the edges related to the given edge.</p><pre><code class="makeup elixir" translate="no"><span class="nc">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">possible</span><span class="p">:</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">NEXT_AROUND_ORG</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="p" data-group-id="6519385239-1">(</span><span class="w"> </span><span class="n">eOnext</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">picture</span><span class="w"> </span><span class="n">below</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">edge</span><span class="p" data-group-id="6519385239-1">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">NEXT_AROUND_DST</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="n">vertex</span><span class="w"> </span><span class="p" data-group-id="6519385239-2">(</span><span class="w"> </span><span class="n">eDnext</span><span class="w"> </span><span class="p" data-group-id="6519385239-2">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">PREV_AROUND_ORG</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="p" data-group-id="6519385239-3">(</span><span class="n">reversed</span><span class="w"> </span><span class="n">eRnext</span><span class="w"> </span><span class="p" data-group-id="6519385239-3">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">PREV_AROUND_DST</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="p" data-group-id="6519385239-4">(</span><span class="n">reversed</span><span class="w"> </span><span class="n">eLnext</span><span class="w"> </span><span class="p" data-group-id="6519385239-4">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">NEXT_AROUND_LEFT</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="n">facet</span><span class="w"> </span><span class="p" data-group-id="6519385239-5">(</span><span class="w"> </span><span class="n">eLnext</span><span class="w"> </span><span class="p" data-group-id="6519385239-5">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">NEXT_AROUND_RIGHT</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="n">facet</span><span class="w"> </span><span class="p" data-group-id="6519385239-6">(</span><span class="w"> </span><span class="n">eRnext</span><span class="w"> </span><span class="p" data-group-id="6519385239-6">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">PREV_AROUND_LEFT</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="n">facet</span><span class="w"> </span><span class="p" data-group-id="6519385239-7">(</span><span class="n">reversed</span><span class="w"> </span><span class="n">eOnext</span><span class="w"> </span><span class="p" data-group-id="6519385239-7">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="nc">PREV_AROUND_RIGHT</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="n">facet</span><span class="w"> </span><span class="p" data-group-id="6519385239-8">(</span><span class="n">reversed</span><span class="w"> </span><span class="n">eDnext</span><span class="w"> </span><span class="p" data-group-id="6519385239-8">)</span></code></pre><p>  <img src="pics/quadedge.png" alt="sample output"/>
+@returns edge ID related to the input edge.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getEdge</span><span class="p" data-group-id="3261657006-1">(</span><span class="n">edge</span><span class="p">,</span><span class="w"> </span><span class="n">nextEdgeType</span><span class="p" data-group-id="3261657006-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getEdgeList/1">
@@ -544,7 +615,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getEdgeList(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L165" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -554,7 +625,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns a list of all edges.
+  The function gives each edge as a 4 numbers vector, where each two are one of the edge
+  vertices. i.e. org_x = v[0], org_y = v[1], dst_x = v[2], dst_y = v[3].</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getEdgeList</span><span class="p" data-group-id="7146126444-1">(</span><span class="p" data-group-id="7146126444-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">edgeList</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getLeadingEdgeList/1">
@@ -566,7 +639,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getLeadingEdgeList(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L185" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -576,7 +649,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns a list of the leading edge ID connected to each triangle.
+  The function gives one edge ID for each triangle.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLeadingEdgeList</span><span class="p" data-group-id="8637679153-1">(</span><span class="p" data-group-id="8637679153-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">leadingEdgeList</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTriangleList/1">
@@ -588,7 +662,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getTriangleList(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -598,7 +672,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns a list of all triangles.
+  The function gives each triangle as a 6 numbers vector, where each two are one of the triangle
+  vertices. i.e. p1_x = v[0], p1_y = v[1], p2_x = v[2], p2_y = v[3], p3_x = v[4], p3_y = v[5].</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTriangleList</span><span class="p" data-group-id="8961561072-1">(</span><span class="p" data-group-id="8961561072-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">triangleList</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVertex/2">
@@ -610,7 +686,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVertex(self, vertex)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L226" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -620,7 +696,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns vertex location from vertex ID.
+@returns vertex (x,y)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVertex</span><span class="p" data-group-id="0549542731-1">(</span><span class="n">vertex</span><span class="p" data-group-id="0549542731-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">firstEdge</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVoronoiFacetList/2">
@@ -632,7 +709,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVoronoiFacetList(self, idx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L247" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -642,7 +719,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns a list of all Voronoi facets.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVoronoiFacetList</span><span class="p" data-group-id="7029369163-1">(</span><span class="n">idx</span><span class="p" data-group-id="7029369163-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">facetList</span><span class="p">,</span><span class="w"> </span><span class="n">facetCenters</span></code></pre>
   </section>
 </section>
 <section class="detail" id="initDelaunay/2">
@@ -654,7 +731,7 @@ cv
     </a>
     <h1 class="signature" translate="no">initDelaunay(self, rect)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L268" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -664,7 +741,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Creates a new empty Delaunay subdivision</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">initDelaunay</span><span class="p" data-group-id="2506477814-1">(</span><span class="n">rect</span><span class="p" data-group-id="2506477814-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="insert/2">
@@ -676,7 +753,7 @@ cv
     </a>
     <h1 class="signature" translate="no">insert(self, ptvec)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L291" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -686,7 +763,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Insert multiple points into a Delaunay triangulation.
+  The function inserts a vector of points into a subdivision and modifies the subdivision topology
+  appropriately.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">insert</span><span class="p" data-group-id="2254885399-1">(</span><span class="n">ptvec</span><span class="p" data-group-id="2254885399-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="locate/2">
@@ -698,7 +777,7 @@ cv
     </a>
     <h1 class="signature" translate="no">locate(self, pt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L324" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -708,7 +787,14 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns the location of a point within a Delaunay triangulation.
+  The function locates the input point within the subdivision and gives one of the triangle edges
+  or vertices.
+@returns an integer which specify one of the following five cases for point location:</p><ul><li> The point falls into some facet. The function returns #PTLOC_INSIDE and edge will contain one of
+edges of the facet.</li><li> The point falls onto the edge. The function returns #PTLOC_ON_EDGE and edge will contain this edge.</li><li> The point coincides with one of the subdivision vertices. The function returns #PTLOC_VERTEX and
+vertex will contain a pointer to the vertex.</li><li> The point is outside the subdivision reference rectangle. The function returns #PTLOC_OUTSIDE_RECT
+and no pointers are filled.</li><li> One of input arguments is invalid. A runtime error is raised or, if silent or &quot;parent&quot; error
+processing mode is selected, #PTLOC_ERROR is returned.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">locate</span><span class="p" data-group-id="2176285592-1">(</span><span class="n">pt</span><span class="p" data-group-id="2176285592-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">edge</span><span class="p">,</span><span class="w"> </span><span class="n">vertex</span></code></pre>
   </section>
 </section>
 <section class="detail" id="nextEdge/2">
@@ -720,7 +806,7 @@ cv
     </a>
     <h1 class="signature" translate="no">nextEdge(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L347" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -730,7 +816,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns next edge around the edge origin.
+@returns an integer which is next edge ID around the edge origin: eOnext on the
+  picture above if e is the input edge).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">nextEdge</span><span class="p" data-group-id="9760797279-1">(</span><span class="n">edge</span><span class="p" data-group-id="9760797279-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="rotateEdge/3">
@@ -742,7 +830,7 @@ cv
     </a>
     <h1 class="signature" translate="no">rotateEdge(self, edge, rotate)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L374" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -752,7 +840,11 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns another edge of the same quad-edge.</p><pre><code class="makeup elixir" translate="no"><span class="n">one</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">return</span><span class="o">.</span><span class="w"> </span><span class="nc">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ss">possible</span><span class="p">:</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="mi">0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="p" data-group-id="9599933890-1">(</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">picture</span><span class="w"> </span><span class="n">below</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">edge</span><span class="p" data-group-id="9599933890-1">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rotated</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="p" data-group-id="9599933890-2">(</span><span class="w"> </span><span class="n">eRot</span><span class="w"> </span><span class="p" data-group-id="9599933890-2">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">reversed</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="p" data-group-id="9599933890-3">(</span><span class="n">reversed</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p" data-group-id="9599933890-4">(</span><span class="ow">in</span><span class="w"> </span><span class="n">green</span><span class="p" data-group-id="9599933890-4">)</span><span class="p" data-group-id="9599933890-3">)</span><span class="w">
+</span><span class="o">-</span><span class="w">   </span><span class="mi">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">reversed</span><span class="w"> </span><span class="n">rotated</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="p" data-group-id="9599933890-5">(</span><span class="n">reversed</span><span class="w"> </span><span class="n">eRot</span><span class="w"> </span><span class="p" data-group-id="9599933890-6">(</span><span class="ow">in</span><span class="w"> </span><span class="n">green</span><span class="p" data-group-id="9599933890-6">)</span><span class="p" data-group-id="9599933890-5">)</span></code></pre><p>@returns one of the edges ID of the same quad-edge as the input edge.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">rotateEdge</span><span class="p" data-group-id="9399388156-1">(</span><span class="n">edge</span><span class="p">,</span><span class="w"> </span><span class="n">rotate</span><span class="p" data-group-id="9399388156-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="subdiv2D/0">
@@ -764,7 +856,7 @@ cv
     </a>
     <h1 class="signature" translate="no">subdiv2D()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L41" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -774,7 +866,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  creates an empty Subdiv2D object.
+  To create a new empty Delaunay subdivision you need to use the #initDelaunay function.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Subdiv2D</span><span class="p" data-group-id="9788458711-1">(</span><span class="p" data-group-id="9788458711-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">Subdiv2D</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="subdiv2D/1">
@@ -786,7 +879,7 @@ cv
     </a>
     <h1 class="signature" translate="no">subdiv2D(rect)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -796,7 +889,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Has overloading in C++</p><p>  The function creates an empty Delaunay subdivision where 2D points can be added using the function
+  insert() . All of the points to be added must be within the specified rectangle, otherwise a runtime
+  error is raised.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Subdiv2D</span><span class="p" data-group-id="2051291980-1">(</span><span class="n">rect</span><span class="p" data-group-id="2051291980-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">Subdiv2D</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="symEdge/2">
@@ -808,7 +903,7 @@ cv
     </a>
     <h1 class="signature" translate="no">symEdge(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L395" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -818,7 +913,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">symEdge</span><span class="p" data-group-id="6487714827-1">(</span><span class="n">edge</span><span class="p" data-group-id="6487714827-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -843,7 +938,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">edgeDst!(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L69" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -865,7 +960,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">edgeOrg!(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -887,7 +982,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">findNearest!(self, pt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L117" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -909,7 +1004,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getEdge!(self, edge, nextEdgeType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -931,7 +1026,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getEdgeList!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L171" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -953,7 +1048,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getLeadingEdgeList!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -975,7 +1070,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTriangleList!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -997,7 +1092,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVertex!(self, vertex)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L234" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1019,7 +1114,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVoronoiFacetList!(self, idx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1041,7 +1136,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">initDelaunay!(self, rect)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L276" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1063,7 +1158,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">insert!(self, ptvec)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L299" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1085,7 +1180,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">locate!(self, pt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L332" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1107,7 +1202,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">nextEdge!(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L355" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1129,7 +1224,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">rotateEdge!(self, edge, rotate)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L383" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1151,7 +1246,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">subdiv2D!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1173,7 +1268,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">subdiv2D!(rect)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L27" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1195,7 +1290,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">symEdge!(self, edge)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_subdiv2d.ex#L150" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_subdiv2d.ex#L403" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1218,10 +1313,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_subdiv2d.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_subdiv2d.ex">(current file)</a>
 
             </span>
 

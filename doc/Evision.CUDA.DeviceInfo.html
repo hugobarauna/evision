@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.CUDA.DeviceInfo — Evision v0.1.5-dev</title>
+    <title>Evision.CUDA.DeviceInfo — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.CUDA.DeviceInfo</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,8 @@ Evision
           <a href="#canMapHostMemory/1" translate="no">canMapHostMemory(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -142,6 +146,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +155,8 @@ Evision
           <a href="#computeMode/1" translate="no">computeMode(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -158,6 +166,30 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_DeviceInfo/0" translate="no">cuda_DeviceInfo()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_DeviceInfo/1" translate="no">cuda_DeviceInfo(device_id)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>The constructors.
+  Constructs the DeviceInfo object for the specified device. If device_id parameter is missed, it
+  constructs an object for the current device.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -166,21 +198,7 @@ Evision
 
         </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#deviceInfo/0" translate="no">deviceInfo()</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#deviceInfo/1" translate="no">deviceInfo(device_id)</a>
-
-        </div>
+          <div class="summary-synopsis"><p>Returns system index of the CUDA device starting with 0.</p></div>
 
       </div>
 
@@ -190,6 +208,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -197,6 +217,8 @@ Evision
           <a href="#freeMemory/1" translate="no">freeMemory(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -206,6 +228,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -213,6 +237,10 @@ Evision
           <a href="#isCompatible/1" translate="no">isCompatible(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Checks the CUDA module and device compatibility.
+  This function returns true if the CUDA module can be run on the specified device. Otherwise, it
+  returns false .</p></div>
 
       </div>
 
@@ -222,6 +250,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -229,6 +259,8 @@ Evision
           <a href="#l2CacheSize/1" translate="no">l2CacheSize(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -238,6 +270,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -245,6 +279,8 @@ Evision
           <a href="#maxGridSize/1" translate="no">maxGridSize(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -254,6 +290,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -261,6 +299,8 @@ Evision
           <a href="#maxSurface1DLayered/1" translate="no">maxSurface1DLayered(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -270,6 +310,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -277,6 +319,8 @@ Evision
           <a href="#maxSurface2DLayered/1" translate="no">maxSurface2DLayered(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -286,6 +330,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -293,6 +339,8 @@ Evision
           <a href="#maxSurfaceCubemap/1" translate="no">maxSurfaceCubemap(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -302,6 +350,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -309,6 +359,8 @@ Evision
           <a href="#maxTexture1D/1" translate="no">maxTexture1D(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -318,6 +370,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -325,6 +379,8 @@ Evision
           <a href="#maxTexture1DLinear/1" translate="no">maxTexture1DLinear(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -334,6 +390,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -341,6 +399,8 @@ Evision
           <a href="#maxTexture2D/1" translate="no">maxTexture2D(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -350,6 +410,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -357,6 +419,8 @@ Evision
           <a href="#maxTexture2DLayered/1" translate="no">maxTexture2DLayered(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -366,6 +430,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -373,6 +439,8 @@ Evision
           <a href="#maxTexture2DMipmap/1" translate="no">maxTexture2DMipmap(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -382,6 +450,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -389,6 +459,8 @@ Evision
           <a href="#maxTextureCubemap/1" translate="no">maxTextureCubemap(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -398,6 +470,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -405,6 +479,8 @@ Evision
           <a href="#maxThreadsDim/1" translate="no">maxThreadsDim(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -414,6 +490,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -421,6 +499,8 @@ Evision
           <a href="#maxThreadsPerMultiProcessor/1" translate="no">maxThreadsPerMultiProcessor(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -430,6 +510,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -437,6 +519,8 @@ Evision
           <a href="#memoryClockRate/1" translate="no">memoryClockRate(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -446,6 +530,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -453,6 +539,8 @@ Evision
           <a href="#minorVersion/1" translate="no">minorVersion(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -462,6 +550,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -469,6 +559,8 @@ Evision
           <a href="#pciBusID/1" translate="no">pciBusID(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -478,6 +570,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -485,6 +579,8 @@ Evision
           <a href="#pciDomainID/1" translate="no">pciDomainID(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -494,6 +590,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -501,6 +599,8 @@ Evision
           <a href="#regsPerBlock/1" translate="no">regsPerBlock(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -510,6 +610,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -517,6 +619,8 @@ Evision
           <a href="#surfaceAlignment/1" translate="no">surfaceAlignment(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -526,6 +630,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -533,6 +639,8 @@ Evision
           <a href="#textureAlignment/1" translate="no">textureAlignment(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -542,6 +650,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -549,6 +659,8 @@ Evision
           <a href="#totalConstMem/1" translate="no">totalConstMem(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -558,6 +670,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -565,6 +679,8 @@ Evision
           <a href="#totalMemory/1" translate="no">totalMemory(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -574,6 +690,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -581,6 +699,8 @@ Evision
           <a href="#warpSize/1" translate="no">warpSize(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -643,31 +763,31 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#cuda_DeviceInfo!/0" translate="no">cuda_DeviceInfo!()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#cuda_DeviceInfo/0"><code class="inline">cuda_DeviceInfo/0</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_DeviceInfo!/1" translate="no">cuda_DeviceInfo!(device_id)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#cuda_DeviceInfo/1"><code class="inline">cuda_DeviceInfo/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#deviceID!/1" translate="no">deviceID!(self)</a>
 
         </div>
 
           <div class="summary-synopsis"><p>Raising version of <a href="#deviceID/1"><code class="inline">deviceID/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#deviceInfo!/0" translate="no">deviceInfo!()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#deviceInfo/0"><code class="inline">deviceInfo/0</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#deviceInfo!/1" translate="no">deviceInfo!(device_id)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#deviceInfo/1"><code class="inline">deviceInfo/1</code></a>.</p></div>
 
       </div>
 
@@ -1194,7 +1314,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">asyncEngineCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L73" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1204,7 +1324,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">asyncEngineCount</span><span class="p" data-group-id="9256310536-1">(</span><span class="p" data-group-id="9256310536-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="canMapHostMemory/1">
@@ -1216,7 +1336,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">canMapHostMemory(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1226,7 +1346,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">canMapHostMemory</span><span class="p" data-group-id="3357712932-1">(</span><span class="p" data-group-id="3357712932-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="clockRate/1">
@@ -1238,7 +1358,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">clockRate(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L42" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1248,7 +1368,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clockRate</span><span class="p" data-group-id="5369792759-1">(</span><span class="p" data-group-id="5369792759-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="computeMode/1">
@@ -1260,7 +1380,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">computeMode(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L127" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1270,7 +1390,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">computeMode</span><span class="p" data-group-id="5965322260-1">(</span><span class="p" data-group-id="5965322260-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="concurrentKernels/1">
@@ -1282,7 +1402,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">concurrentKernels(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L145" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1292,7 +1412,53 @@ cv.cuda
 
   <section class="docstring">
 
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">concurrentKernels</span><span class="p" data-group-id="2865100409-1">(</span><span class="p" data-group-id="2865100409-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="cuda_DeviceInfo/0">
 
+  <div class="detail-header">
+    <a href="#cuda_DeviceInfo/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_DeviceInfo()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L37" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">DeviceInfo</span><span class="p" data-group-id="1286733354-1">(</span><span class="p" data-group-id="1286733354-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_DeviceInfo</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="cuda_DeviceInfo/1">
+
+  <div class="detail-header">
+    <a href="#cuda_DeviceInfo/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_DeviceInfo(device_id)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L17" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>The constructors.
+  Constructs the DeviceInfo object for the specified device. If device_id parameter is missed, it
+  constructs an object for the current device.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">DeviceInfo</span><span class="p" data-group-id="6716596527-1">(</span><span class="n">device_id</span><span class="p" data-group-id="6716596527-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_DeviceInfo</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="deviceID/1">
@@ -1304,7 +1470,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">deviceID(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L164" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1314,51 +1480,7 @@ cv.cuda
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="deviceInfo/0">
-
-  <div class="detail-header">
-    <a href="#deviceInfo/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">deviceInfo()</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L5" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="deviceInfo/1">
-
-  <div class="detail-header">
-    <a href="#deviceInfo/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">deviceInfo(device_id)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
+<p>Returns system index of the CUDA device starting with 0.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">deviceID</span><span class="p" data-group-id="6224522983-1">(</span><span class="p" data-group-id="6224522983-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="eccEnabled/1">
@@ -1370,7 +1492,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">eccEnabled(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1380,7 +1502,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">ECCEnabled</span><span class="p" data-group-id="0139139096-1">(</span><span class="p" data-group-id="0139139096-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="freeMemory/1">
@@ -1392,7 +1514,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">freeMemory(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L182" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1402,7 +1524,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">freeMemory</span><span class="p" data-group-id="3852785736-1">(</span><span class="p" data-group-id="3852785736-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="integrated/1">
@@ -1414,7 +1536,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">integrated(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L200" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1424,7 +1546,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">integrated</span><span class="p" data-group-id="5338679753-1">(</span><span class="p" data-group-id="5338679753-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isCompatible/1">
@@ -1436,7 +1558,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">isCompatible(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L84" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L221" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1446,7 +1568,9 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Checks the CUDA module and device compatibility.
+  This function returns true if the CUDA module can be run on the specified device. Otherwise, it
+  returns false .</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isCompatible</span><span class="p" data-group-id="7677400608-1">(</span><span class="p" data-group-id="7677400608-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="kernelExecTimeoutEnabled/1">
@@ -1458,7 +1582,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">kernelExecTimeoutEnabled(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L239" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1468,7 +1592,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">kernelExecTimeoutEnabled</span><span class="p" data-group-id="6240545641-1">(</span><span class="p" data-group-id="6240545641-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="l2CacheSize/1">
@@ -1480,7 +1604,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">l2CacheSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L257" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1490,7 +1614,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">l2CacheSize</span><span class="p" data-group-id="7318832934-1">(</span><span class="p" data-group-id="7318832934-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="majorVersion/1">
@@ -1502,7 +1626,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">majorVersion(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1512,7 +1636,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">majorVersion</span><span class="p" data-group-id="1966202734-1">(</span><span class="p" data-group-id="1966202734-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxGridSize/1">
@@ -1524,7 +1648,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxGridSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L293" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1534,7 +1658,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxGridSize</span><span class="p" data-group-id="3209644881-1">(</span><span class="p" data-group-id="3209644881-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxSurface1D/1">
@@ -1546,7 +1670,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxSurface1D(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L119" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L311" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1556,7 +1680,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxSurface1D</span><span class="p" data-group-id="8891559285-1">(</span><span class="p" data-group-id="8891559285-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxSurface1DLayered/1">
@@ -1568,7 +1692,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxSurface1DLayered(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L329" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1578,7 +1702,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxSurface1DLayered</span><span class="p" data-group-id="4258406976-1">(</span><span class="p" data-group-id="4258406976-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxSurface2D/1">
@@ -1590,7 +1714,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxSurface2D(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L347" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1600,7 +1724,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxSurface2D</span><span class="p" data-group-id="7942365476-1">(</span><span class="p" data-group-id="7942365476-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxSurface2DLayered/1">
@@ -1612,7 +1736,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxSurface2DLayered(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L365" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1622,7 +1746,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxSurface2DLayered</span><span class="p" data-group-id="8344186267-1">(</span><span class="p" data-group-id="8344186267-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxSurface3D/1">
@@ -1634,7 +1758,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxSurface3D(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L383" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1644,7 +1768,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxSurface3D</span><span class="p" data-group-id="2273809196-1">(</span><span class="p" data-group-id="2273809196-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxSurfaceCubemap/1">
@@ -1656,7 +1780,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxSurfaceCubemap(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L154" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L401" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1666,7 +1790,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxSurfaceCubemap</span><span class="p" data-group-id="0873683706-1">(</span><span class="p" data-group-id="0873683706-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxSurfaceCubemapLayered/1">
@@ -1678,7 +1802,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxSurfaceCubemapLayered(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L161" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L419" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1688,7 +1812,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxSurfaceCubemapLayered</span><span class="p" data-group-id="6806226200-1">(</span><span class="p" data-group-id="6806226200-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture1D/1">
@@ -1700,7 +1824,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture1D(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L437" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1710,7 +1834,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture1D</span><span class="p" data-group-id="3190072370-1">(</span><span class="p" data-group-id="3190072370-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture1DLayered/1">
@@ -1722,7 +1846,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture1DLayered(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L455" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1732,7 +1856,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture1DLayered</span><span class="p" data-group-id="3059684949-1">(</span><span class="p" data-group-id="3059684949-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture1DLinear/1">
@@ -1744,7 +1868,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture1DLinear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L182" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L473" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1754,7 +1878,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture1DLinear</span><span class="p" data-group-id="6253552205-1">(</span><span class="p" data-group-id="6253552205-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture1DMipmap/1">
@@ -1766,7 +1890,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture1DMipmap(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L491" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1776,7 +1900,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture1DMipmap</span><span class="p" data-group-id="5663848920-1">(</span><span class="p" data-group-id="5663848920-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture2D/1">
@@ -1788,7 +1912,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture2D(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L509" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1798,7 +1922,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture2D</span><span class="p" data-group-id="0383291388-1">(</span><span class="p" data-group-id="0383291388-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture2DGather/1">
@@ -1810,7 +1934,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture2DGather(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L203" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L527" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1820,7 +1944,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture2DGather</span><span class="p" data-group-id="3517394804-1">(</span><span class="p" data-group-id="3517394804-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture2DLayered/1">
@@ -1832,7 +1956,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture2DLayered(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L210" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L545" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1842,7 +1966,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture2DLayered</span><span class="p" data-group-id="1145075959-1">(</span><span class="p" data-group-id="1145075959-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture2DLinear/1">
@@ -1854,7 +1978,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture2DLinear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L563" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1864,7 +1988,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture2DLinear</span><span class="p" data-group-id="2648371325-1">(</span><span class="p" data-group-id="2648371325-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture2DMipmap/1">
@@ -1876,7 +2000,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture2DMipmap(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L581" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1886,7 +2010,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture2DMipmap</span><span class="p" data-group-id="2380264544-1">(</span><span class="p" data-group-id="2380264544-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTexture3D/1">
@@ -1898,7 +2022,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTexture3D(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L231" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L599" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1908,7 +2032,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTexture3D</span><span class="p" data-group-id="4827331912-1">(</span><span class="p" data-group-id="4827331912-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTextureCubemap/1">
@@ -1920,7 +2044,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTextureCubemap(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L238" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L617" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1930,7 +2054,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTextureCubemap</span><span class="p" data-group-id="3817721776-1">(</span><span class="p" data-group-id="3817721776-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxTextureCubemapLayered/1">
@@ -1942,7 +2066,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxTextureCubemapLayered(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L245" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L635" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1952,7 +2076,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxTextureCubemapLayered</span><span class="p" data-group-id="9074994434-1">(</span><span class="p" data-group-id="9074994434-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxThreadsDim/1">
@@ -1964,7 +2088,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxThreadsDim(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L252" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L653" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1974,7 +2098,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxThreadsDim</span><span class="p" data-group-id="4548481552-1">(</span><span class="p" data-group-id="4548481552-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxThreadsPerBlock/1">
@@ -1986,7 +2110,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxThreadsPerBlock(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L259" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L671" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1996,7 +2120,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxThreadsPerBlock</span><span class="p" data-group-id="4310353982-1">(</span><span class="p" data-group-id="4310353982-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="maxThreadsPerMultiProcessor/1">
@@ -2008,7 +2132,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">maxThreadsPerMultiProcessor(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L266" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L689" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2018,7 +2142,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">maxThreadsPerMultiProcessor</span><span class="p" data-group-id="1670814831-1">(</span><span class="p" data-group-id="1670814831-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="memoryBusWidth/1">
@@ -2030,7 +2154,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">memoryBusWidth(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L725" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2040,7 +2164,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">memoryBusWidth</span><span class="p" data-group-id="4752938074-1">(</span><span class="p" data-group-id="4752938074-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="memoryClockRate/1">
@@ -2052,7 +2176,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">memoryClockRate(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L287" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L743" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2062,7 +2186,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">memoryClockRate</span><span class="p" data-group-id="6263648441-1">(</span><span class="p" data-group-id="6263648441-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="memPitch/1">
@@ -2074,7 +2198,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">memPitch(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L273" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L707" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2084,7 +2208,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">memPitch</span><span class="p" data-group-id="9945316122-1">(</span><span class="p" data-group-id="9945316122-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="minorVersion/1">
@@ -2096,7 +2220,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">minorVersion(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L294" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L761" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2106,7 +2230,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">minorVersion</span><span class="p" data-group-id="4702812474-1">(</span><span class="p" data-group-id="4702812474-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="multiProcessorCount/1">
@@ -2118,7 +2242,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">multiProcessorCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L301" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L779" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2128,7 +2252,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">multiProcessorCount</span><span class="p" data-group-id="4680360337-1">(</span><span class="p" data-group-id="4680360337-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="pciBusID/1">
@@ -2140,7 +2264,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">pciBusID(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L308" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L797" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2150,7 +2274,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">pciBusID</span><span class="p" data-group-id="4570944384-1">(</span><span class="p" data-group-id="4570944384-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="pciDeviceID/1">
@@ -2162,7 +2286,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">pciDeviceID(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L315" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L815" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2172,7 +2296,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">pciDeviceID</span><span class="p" data-group-id="2125924609-1">(</span><span class="p" data-group-id="2125924609-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="pciDomainID/1">
@@ -2184,7 +2308,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">pciDomainID(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L322" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L833" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2194,7 +2318,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">pciDomainID</span><span class="p" data-group-id="8487036311-1">(</span><span class="p" data-group-id="8487036311-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="queryMemory/3">
@@ -2206,7 +2330,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">queryMemory(self, totalMemory, freeMemory)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L329" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L851" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2216,7 +2340,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">queryMemory</span><span class="p" data-group-id="8388469411-1">(</span><span class="n">totalMemory</span><span class="p">,</span><span class="w"> </span><span class="n">freeMemory</span><span class="p" data-group-id="8388469411-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="regsPerBlock/1">
@@ -2228,7 +2352,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">regsPerBlock(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L339" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L872" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2238,7 +2362,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">regsPerBlock</span><span class="p" data-group-id="9620123347-1">(</span><span class="p" data-group-id="9620123347-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="sharedMemPerBlock/1">
@@ -2250,7 +2374,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">sharedMemPerBlock(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L346" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L890" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2260,7 +2384,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">sharedMemPerBlock</span><span class="p" data-group-id="6049755192-1">(</span><span class="p" data-group-id="6049755192-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="surfaceAlignment/1">
@@ -2272,7 +2396,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">surfaceAlignment(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L353" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L908" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2282,7 +2406,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">surfaceAlignment</span><span class="p" data-group-id="5621845821-1">(</span><span class="p" data-group-id="5621845821-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="tccDriver/1">
@@ -2294,7 +2418,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">tccDriver(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L360" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L926" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2304,7 +2428,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">tccDriver</span><span class="p" data-group-id="3885493733-1">(</span><span class="p" data-group-id="3885493733-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="textureAlignment/1">
@@ -2316,7 +2440,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">textureAlignment(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L367" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L944" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2326,7 +2450,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">textureAlignment</span><span class="p" data-group-id="3071229557-1">(</span><span class="p" data-group-id="3071229557-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="texturePitchAlignment/1">
@@ -2338,7 +2462,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">texturePitchAlignment(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L374" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L962" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2348,7 +2472,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">texturePitchAlignment</span><span class="p" data-group-id="3852349568-1">(</span><span class="p" data-group-id="3852349568-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="totalConstMem/1">
@@ -2360,7 +2484,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">totalConstMem(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L980" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2370,7 +2494,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">totalConstMem</span><span class="p" data-group-id="4218353631-1">(</span><span class="p" data-group-id="4218353631-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="totalGlobalMem/1">
@@ -2382,7 +2506,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">totalGlobalMem(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L388" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L998" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2392,7 +2516,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">totalGlobalMem</span><span class="p" data-group-id="1901048682-1">(</span><span class="p" data-group-id="1901048682-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="totalMemory/1">
@@ -2404,7 +2528,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">totalMemory(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L395" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1016" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2414,7 +2538,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">totalMemory</span><span class="p" data-group-id="7943450574-1">(</span><span class="p" data-group-id="7943450574-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="unifiedAddressing/1">
@@ -2426,7 +2550,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">unifiedAddressing(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L402" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1034" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2436,7 +2560,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">unifiedAddressing</span><span class="p" data-group-id="9280363736-1">(</span><span class="p" data-group-id="9280363736-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="warpSize/1">
@@ -2448,7 +2572,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">warpSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L409" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1052" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2458,7 +2582,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">warpSize</span><span class="p" data-group-id="3852715380-1">(</span><span class="p" data-group-id="3852715380-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -2483,7 +2607,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">asyncEngineCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2505,7 +2629,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">canMapHostMemory!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L97" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2527,7 +2651,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clockRate!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2549,7 +2673,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">computeMode!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2571,7 +2695,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">concurrentKernels!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2584,6 +2708,50 @@ Functions
 <p>Raising version of <a href="#concurrentKernels/1"><code class="inline">concurrentKernels/1</code></a>.</p>
   </section>
 </section>
+<section class="detail" id="cuda_DeviceInfo!/0">
+
+  <div class="detail-header">
+    <a href="#cuda_DeviceInfo!/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_DeviceInfo!()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L43" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#cuda_DeviceInfo/0"><code class="inline">cuda_DeviceInfo/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="cuda_DeviceInfo!/1">
+
+  <div class="detail-header">
+    <a href="#cuda_DeviceInfo!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_DeviceInfo!(device_id)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L25" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#cuda_DeviceInfo/1"><code class="inline">cuda_DeviceInfo/1</code></a>.</p>
+  </section>
+</section>
 <section class="detail" id="deviceID!/1">
 
   <div class="detail-header">
@@ -2593,7 +2761,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">deviceID!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L170" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2606,50 +2774,6 @@ Functions
 <p>Raising version of <a href="#deviceID/1"><code class="inline">deviceID/1</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="deviceInfo!/0">
-
-  <div class="detail-header">
-    <a href="#deviceInfo!/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">deviceInfo!()</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L10" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#deviceInfo/0"><code class="inline">deviceInfo/0</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="deviceInfo!/1">
-
-  <div class="detail-header">
-    <a href="#deviceInfo!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">deviceInfo!(device_id)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L19" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#deviceInfo/1"><code class="inline">deviceInfo/1</code></a>.</p>
-  </section>
-</section>
 <section class="detail" id="eccEnabled!/1">
 
   <div class="detail-header">
@@ -2659,7 +2783,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">eccEnabled!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2681,7 +2805,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">freeMemory!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2703,7 +2827,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">integrated!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2725,7 +2849,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isCompatible!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2747,7 +2871,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">kernelExecTimeoutEnabled!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L245" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2769,7 +2893,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">l2CacheSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L103" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L263" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2791,7 +2915,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">majorVersion!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L281" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2813,7 +2937,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxGridSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L117" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L299" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2835,7 +2959,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxSurface1D!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L317" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2857,7 +2981,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxSurface1DLayered!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L335" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2879,7 +3003,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxSurface2D!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L353" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2901,7 +3025,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxSurface2DLayered!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L371" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2923,7 +3047,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxSurface3D!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L389" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2945,7 +3069,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxSurfaceCubemap!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L407" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2967,7 +3091,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxSurfaceCubemapLayered!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L166" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L425" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2989,7 +3113,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture1D!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L173" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L443" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3011,7 +3135,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture1DLayered!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L461" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3033,7 +3157,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture1DLinear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L479" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3055,7 +3179,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture1DMipmap!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L194" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L497" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3077,7 +3201,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture2D!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L515" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3099,7 +3223,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture2DGather!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L533" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3121,7 +3245,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture2DLayered!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L215" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L551" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3143,7 +3267,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture2DLinear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L222" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L569" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3165,7 +3289,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture2DMipmap!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L229" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L587" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3187,7 +3311,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTexture3D!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L236" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L605" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3209,7 +3333,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTextureCubemap!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L243" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L623" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3231,7 +3355,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxTextureCubemapLayered!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L250" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L641" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3253,7 +3377,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxThreadsDim!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L659" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3275,7 +3399,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxThreadsPerBlock!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L264" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L677" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3297,7 +3421,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">maxThreadsPerMultiProcessor!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L271" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L695" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3319,7 +3443,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">memoryBusWidth!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L285" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L731" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3341,7 +3465,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">memoryClockRate!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L292" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L749" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3363,7 +3487,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">memPitch!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L713" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3385,7 +3509,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">minorVersion!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L299" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L767" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3407,7 +3531,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">multiProcessorCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L306" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L785" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3429,7 +3553,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">pciBusID!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L313" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L803" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3451,7 +3575,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">pciDeviceID!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L320" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L821" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3473,7 +3597,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">pciDomainID!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L327" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L839" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3495,7 +3619,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">queryMemory!(self, totalMemory, freeMemory)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L337" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L860" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3517,7 +3641,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">regsPerBlock!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L344" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L878" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3539,7 +3663,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">sharedMemPerBlock!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L896" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3561,7 +3685,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">surfaceAlignment!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L358" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L914" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3583,7 +3707,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">tccDriver!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L365" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L932" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3605,7 +3729,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">textureAlignment!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L372" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L950" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3627,7 +3751,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">texturePitchAlignment!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L379" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L968" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3649,7 +3773,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">totalConstMem!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L386" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L986" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3671,7 +3795,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">totalGlobalMem!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L393" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1004" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3693,7 +3817,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">totalMemory!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L400" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1022" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3715,7 +3839,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">unifiedAddressing!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L407" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1040" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3737,7 +3861,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">warpSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_deviceinfo.ex#L414" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_deviceinfo.ex#L1058" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3760,10 +3884,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_cuda_deviceinfo.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_cuda_deviceinfo.ex">(current file)</a>
 
             </span>
 

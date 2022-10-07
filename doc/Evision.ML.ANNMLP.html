@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.ML.ANNMLP — Evision v0.1.5-dev</title>
+    <title>Evision.ML.ANNMLP — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.ANNMLP</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Clears the algorithm state</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,9 @@ Evision
           <a href="#getDefaultName/1" translate="no">getDefaultName(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -142,6 +147,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Reads algorithm parameters from a file storage</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +156,9 @@ Evision
           <a href="#save/2" translate="no">save(self, filename)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -158,6 +168,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -166,7 +179,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>simplified API for language bindings
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
 Has overloading in C++</p></div>
 
       </div>
@@ -184,6 +197,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -192,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -202,6 +217,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Creates empty model
+  Use StatModel::train to train the model, Algorithm::load\&lt;ANN_MLP&gt;(filename) to load the pre-trained model.
+  Note that the train method has optional flags: ANN_MLP::TrainFlags.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -209,6 +228,8 @@ Has overloading in C++</p></div>
           <a href="#empty/1" translate="no">empty(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -218,6 +239,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setAnnealCoolingRatio</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -225,6 +248,8 @@ Has overloading in C++</p></div>
           <a href="#getAnnealFinalT/1" translate="no">getAnnealFinalT(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setAnnealFinalT</p></div>
 
       </div>
 
@@ -234,6 +259,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setAnnealInitialT</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -241,6 +268,8 @@ Has overloading in C++</p></div>
           <a href="#getAnnealItePerStep/1" translate="no">getAnnealItePerStep(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setAnnealItePerStep</p></div>
 
       </div>
 
@@ -250,6 +279,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setBackpropMomentumScale</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -257,6 +288,8 @@ Has overloading in C++</p></div>
           <a href="#getBackpropWeightScale/1" translate="no">getBackpropWeightScale(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setBackpropWeightScale</p></div>
 
       </div>
 
@@ -266,6 +299,11 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>  Integer vector specifying the number of neurons in each layer including the input and output layers.
+  The very first element specifies the number of elements in the input layer.
+  The last element - number of elements in the output layer.
+@sa setLayerSizes</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -273,6 +311,8 @@ Has overloading in C++</p></div>
           <a href="#getRpropDW0/1" translate="no">getRpropDW0(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setRpropDW0</p></div>
 
       </div>
 
@@ -282,6 +322,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setRpropDWMax</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -289,6 +331,8 @@ Has overloading in C++</p></div>
           <a href="#getRpropDWMin/1" translate="no">getRpropDWMin(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setRpropDWMin</p></div>
 
       </div>
 
@@ -298,6 +342,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setRpropDWMinus</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -305,6 +351,8 @@ Has overloading in C++</p></div>
           <a href="#getRpropDWPlus/1" translate="no">getRpropDWPlus(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setRpropDWPlus</p></div>
 
       </div>
 
@@ -314,6 +362,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setTermCriteria</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -321,6 +371,8 @@ Has overloading in C++</p></div>
           <a href="#getTrainMethod/1" translate="no">getTrainMethod(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Returns current training method</p></div>
 
       </div>
 
@@ -330,6 +382,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns the number of variables in training samples</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -337,6 +391,8 @@ Has overloading in C++</p></div>
           <a href="#getWeights/2" translate="no">getWeights(self, layerIdx)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -346,6 +402,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if the model is classifier</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -353,6 +411,8 @@ Has overloading in C++</p></div>
           <a href="#isTrained/1" translate="no">isTrained(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns true if the model is trained</p></div>
 
       </div>
 
@@ -362,6 +422,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Loads and creates a serialized ANN from a file
+   Use ANN::save to serialize and store an ANN to disk.
+   Load the ANN from this file again, by calling this function with the path to the file.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -369,6 +433,8 @@ Has overloading in C++</p></div>
           <a href="#predict/2" translate="no">predict(self, samples)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -378,7 +444,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -388,6 +454,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>type</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><p><strong>param1</strong>: double.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -396,8 +464,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>  Initialize the activation function for each neuron.
-  Currently the default and the only fully supported activation function is ANN_MLP::SIGMOID_SYM.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>type</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><p><strong>param1</strong>: double.</p></div>
 
       </div>
 
@@ -407,6 +474,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getAnnealCoolingRatio @see getAnnealCoolingRatio</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -414,6 +483,8 @@ Has overloading in C++</p></div>
           <a href="#setAnnealFinalT/2" translate="no">setAnnealFinalT(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getAnnealFinalT @see getAnnealFinalT</p></div>
 
       </div>
 
@@ -423,6 +494,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getAnnealInitialT @see getAnnealInitialT</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -430,6 +503,8 @@ Has overloading in C++</p></div>
           <a href="#setAnnealItePerStep/2" translate="no">setAnnealItePerStep(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getAnnealItePerStep @see getAnnealItePerStep</p></div>
 
       </div>
 
@@ -439,6 +514,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getBackpropMomentumScale @see getBackpropMomentumScale</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -446,6 +523,8 @@ Has overloading in C++</p></div>
           <a href="#setBackpropWeightScale/2" translate="no">setBackpropWeightScale(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getBackpropWeightScale @see getBackpropWeightScale</p></div>
 
       </div>
 
@@ -455,6 +534,11 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>  Integer vector specifying the number of neurons in each layer including the input and output layers.
+  The very first element specifies the number of elements in the input layer.
+  The last element - number of elements in the output layer. Default value is empty Mat.
+@sa getLayerSizes</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -462,6 +546,8 @@ Has overloading in C++</p></div>
           <a href="#setRpropDW0/2" translate="no">setRpropDW0(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getRpropDW0 @see getRpropDW0</p></div>
 
       </div>
 
@@ -471,6 +557,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getRpropDWMax @see getRpropDWMax</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -478,6 +566,8 @@ Has overloading in C++</p></div>
           <a href="#setRpropDWMin/2" translate="no">setRpropDWMin(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getRpropDWMin @see getRpropDWMin</p></div>
 
       </div>
 
@@ -487,6 +577,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getRpropDWMinus @see getRpropDWMinus</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -494,6 +586,8 @@ Has overloading in C++</p></div>
           <a href="#setRpropDWPlus/2" translate="no">setRpropDWPlus(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getRpropDWPlus @see getRpropDWPlus</p></div>
 
       </div>
 
@@ -503,6 +597,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getTermCriteria @see getTermCriteria</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -510,6 +606,8 @@ Has overloading in C++</p></div>
           <a href="#setTrainMethod/2" translate="no">setTrainMethod(self, method)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>method</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><p><strong>param1</strong>: double.</p></div>
 
       </div>
 
@@ -519,7 +617,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>  Sets training method and common parameters.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>method</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><p><strong>param1</strong>: double.</p></div>
 
       </div>
 
@@ -529,6 +627,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -537,6 +637,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -544,6 +646,8 @@ Has overloading in C++</p></div>
           <a href="#train/4" translate="no">train(self, samples, layout, responses)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -1087,7 +1191,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1097,7 +1201,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="0825466027-1">(</span><span class="p" data-group-id="0825466027-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -1109,7 +1213,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L258" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1119,7 +1223,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="3600287758-1">(</span><span class="p" data-group-id="3600287758-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -1131,7 +1236,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L239" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L588" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1141,7 +1246,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="3829444816-1">(</span><span class="n">fn_</span><span class="p" data-group-id="3829444816-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -1153,7 +1258,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L248" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L610" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1163,7 +1268,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="3137973619-1">(</span><span class="n">filename</span><span class="p" data-group-id="3137973619-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -1175,7 +1281,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L497" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1139" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1185,7 +1291,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="write/2-positional-arguments" class="section-heading">
+  <a href="#write/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/2-keyword-arguments" class="section-heading">
+  <a href="#write/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="3076217766-1">(</span><span class="n">fs</span><span class="p" data-group-id="3076217766-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="3076217766-2">]</span><span class="p" data-group-id="3076217766-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -1197,7 +1316,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L488" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1110" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1207,8 +1326,20 @@ cv
 
   <section class="docstring">
 
-<p>simplified API for language bindings
-Has overloading in C++</p><ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="2234114772-1">(</span><span class="n">fs</span><span class="p" data-group-id="2234114772-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="2234114772-2">]</span><span class="p" data-group-id="2234114772-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="write/3-positional-arguments" class="section-heading">
+  <a href="#write/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/3-keyword-arguments" class="section-heading">
+  <a href="#write/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="7668932697-1">(</span><span class="n">fs</span><span class="p" data-group-id="7668932697-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="7668932697-2">]</span><span class="p" data-group-id="7668932697-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -1233,7 +1364,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1243,7 +1374,23 @@ cv.ml
 
   <section class="docstring">
 
-
+<h3 id="calcError/3-positional-arguments" class="section-heading">
+  <a href="#calcError/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/3-keyword-arguments" class="section-heading">
+  <a href="#calcError/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="6678546418-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="6678546418-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="6678546418-2">]</span><span class="p" data-group-id="6678546418-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -1255,7 +1402,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L28" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1265,13 +1412,23 @@ cv.ml
 
   <section class="docstring">
 
-<p>Computes error on the training or test dataset</p><ul><li><strong>data</strong>.</li><li><strong>test</strong>.
-  computed over the training subset of the data. Please note that if you loaded a completely
-  different dataset to evaluate already trained classifier, you will probably want not to set
-  the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
-  that the error is computed for the whole new set. Yes, this sounds a bit confusing.</li><li><strong>resp</strong>.
-The method uses StatModel::predict to compute the error. For regression models the error is
-computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</li><li><strong>resp</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="2107985964-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="2107985964-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="2107985964-2">]</span><span class="p" data-group-id="2107985964-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<h3 id="calcError/4-positional-arguments" class="section-heading">
+  <a href="#calcError/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/4-keyword-arguments" class="section-heading">
+  <a href="#calcError/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="2160262202-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="2160262202-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="2160262202-2">]</span><span class="p" data-group-id="2160262202-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -1283,7 +1440,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L106" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1293,7 +1450,9 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Creates empty model
+  Use StatModel::train to train the model, Algorithm::load\&lt;ANN_MLP&gt;(filename) to load the pre-trained model.
+  Note that the train method has optional flags: ANN_MLP::TrainFlags.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="3731597490-1">(</span><span class="p" data-group-id="3731597490-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -1305,7 +1464,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1315,7 +1474,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="6967761037-1">(</span><span class="p" data-group-id="6967761037-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getAnnealCoolingRatio/1">
@@ -1327,7 +1486,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getAnnealCoolingRatio(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1337,7 +1496,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setAnnealCoolingRatio</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getAnnealCoolingRatio</span><span class="p" data-group-id="4230027089-1">(</span><span class="p" data-group-id="4230027089-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getAnnealFinalT/1">
@@ -1349,7 +1508,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getAnnealFinalT(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1359,7 +1518,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setAnnealFinalT</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getAnnealFinalT</span><span class="p" data-group-id="7016517623-1">(</span><span class="p" data-group-id="7016517623-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getAnnealInitialT/1">
@@ -1371,7 +1530,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getAnnealInitialT(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1381,7 +1540,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setAnnealInitialT</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getAnnealInitialT</span><span class="p" data-group-id="6890423896-1">(</span><span class="p" data-group-id="6890423896-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getAnnealItePerStep/1">
@@ -1393,7 +1552,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getAnnealItePerStep(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L200" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1403,7 +1562,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setAnnealItePerStep</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getAnnealItePerStep</span><span class="p" data-group-id="4322846364-1">(</span><span class="p" data-group-id="4322846364-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getBackpropMomentumScale/1">
@@ -1415,7 +1574,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getBackpropMomentumScale(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L219" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1425,7 +1584,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setBackpropMomentumScale</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackpropMomentumScale</span><span class="p" data-group-id="1197819198-1">(</span><span class="p" data-group-id="1197819198-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getBackpropWeightScale/1">
@@ -1437,7 +1596,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getBackpropWeightScale(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L238" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1447,7 +1606,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setBackpropWeightScale</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackpropWeightScale</span><span class="p" data-group-id="5832754181-1">(</span><span class="p" data-group-id="5832754181-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getLayerSizes/1">
@@ -1459,7 +1618,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getLayerSizes(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1469,7 +1628,10 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>  Integer vector specifying the number of neurons in each layer including the input and output layers.
+  The very first element specifies the number of elements in the input layer.
+  The last element - number of elements in the output layer.
+@sa setLayerSizes</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayerSizes</span><span class="p" data-group-id="8279649726-1">(</span><span class="p" data-group-id="8279649726-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getRpropDW0/1">
@@ -1481,7 +1643,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getRpropDW0(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L299" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1491,7 +1653,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setRpropDW0</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRpropDW0</span><span class="p" data-group-id="1504415922-1">(</span><span class="p" data-group-id="1504415922-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getRpropDWMax/1">
@@ -1503,7 +1665,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getRpropDWMax(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L127" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L318" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1513,7 +1675,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setRpropDWMax</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRpropDWMax</span><span class="p" data-group-id="3909446487-1">(</span><span class="p" data-group-id="3909446487-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getRpropDWMin/1">
@@ -1525,7 +1687,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getRpropDWMin(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L337" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1535,7 +1697,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setRpropDWMin</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRpropDWMin</span><span class="p" data-group-id="6736575693-1">(</span><span class="p" data-group-id="6736575693-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getRpropDWMinus/1">
@@ -1547,7 +1709,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getRpropDWMinus(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L356" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1557,7 +1719,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setRpropDWMinus</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRpropDWMinus</span><span class="p" data-group-id="7330985144-1">(</span><span class="p" data-group-id="7330985144-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getRpropDWPlus/1">
@@ -1569,7 +1731,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getRpropDWPlus(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L375" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1579,7 +1741,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setRpropDWPlus</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRpropDWPlus</span><span class="p" data-group-id="7086199456-1">(</span><span class="p" data-group-id="7086199456-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTermCriteria/1">
@@ -1591,7 +1753,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getTermCriteria(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L155" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L394" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1601,7 +1763,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTermCriteria</span><span class="p" data-group-id="3604084391-1">(</span><span class="p" data-group-id="3604084391-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainMethod/1">
@@ -1613,7 +1775,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getTrainMethod(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L162" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L413" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1623,7 +1785,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>  Returns current training method</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainMethod</span><span class="p" data-group-id="6967337149-1">(</span><span class="p" data-group-id="6967337149-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -1635,7 +1797,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L432" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1645,7 +1807,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="4494454876-1">(</span><span class="p" data-group-id="4494454876-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getWeights/2">
@@ -1657,7 +1819,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getWeights(self, layerIdx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L450" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1667,7 +1829,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWeights</span><span class="p" data-group-id="7461546531-1">(</span><span class="n">layerIdx</span><span class="p" data-group-id="7461546531-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -1679,7 +1841,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L185" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L471" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1689,7 +1851,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="9825945789-1">(</span><span class="p" data-group-id="9825945789-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -1701,7 +1863,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L192" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L490" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1711,7 +1873,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="1268505039-1">(</span><span class="p" data-group-id="1268505039-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -1723,7 +1885,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L199" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L511" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1733,7 +1895,9 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Loads and creates a serialized ANN from a file
+   Use ANN::save to serialize and store an ANN to disk.
+   Load the ANN from this file again, by calling this function with the path to the file.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="3400314781-1">(</span><span class="n">filepath</span><span class="p" data-group-id="3400314781-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -1745,7 +1909,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L230" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L567" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1755,7 +1919,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="predict/2-positional-arguments" class="section-heading">
+  <a href="#predict/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/2-keyword-arguments" class="section-heading">
+  <a href="#predict/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="6746941359-1">(</span><span class="n">samples</span><span class="p" data-group-id="6746941359-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="6746941359-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6746941359-3">]</span><span class="p" data-group-id="6746941359-2">]</span><span class="p" data-group-id="6746941359-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -1767,7 +1943,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L539" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1777,7 +1953,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Predicts response(s) for the provided sample(s)</p><ul><li><strong>samples</strong>.</li><li><strong>results</strong>.</li><li><strong>flags</strong>.</li><li><strong>results</strong> : UMat</li><li><strong>flags</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="6991409178-1">(</span><span class="n">samples</span><span class="p" data-group-id="6991409178-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="6991409178-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6991409178-3">]</span><span class="p" data-group-id="6991409178-2">]</span><span class="p" data-group-id="6991409178-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<h3 id="predict/3-positional-arguments" class="section-heading">
+  <a href="#predict/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/3-keyword-arguments" class="section-heading">
+  <a href="#predict/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="7699332383-1">(</span><span class="n">samples</span><span class="p" data-group-id="7699332383-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="7699332383-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="7699332383-3">]</span><span class="p" data-group-id="7699332383-2">]</span><span class="p" data-group-id="7699332383-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setActivationFunction/2">
@@ -1789,7 +1977,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setActivationFunction(self, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L668" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1799,7 +1987,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="setActivationFunction/2-positional-arguments" class="section-heading">
+  <a href="#setActivationFunction/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>type</strong>: int. </li></ul><h3 id="setActivationFunction/2-keyword-arguments" class="section-heading">
+  <a href="#setActivationFunction/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><p><strong>param1</strong>: double.</p></li><li><p><strong>param2</strong>: double.</p><p>Initialize the activation function for each neuron.
+Currently the default and the only fully supported activation function is ANN_MLP::SIGMOID_SYM.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setActivationFunction</span><span class="p" data-group-id="0460147590-1">(</span><span class="n">type</span><span class="p" data-group-id="0460147590-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p" data-group-id="0460147590-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p" data-group-id="0460147590-3">]</span><span class="p" data-group-id="0460147590-2">]</span><span class="p" data-group-id="0460147590-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setActivationFunction/3">
@@ -1811,7 +2012,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setActivationFunction(self, type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L271" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L639" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1821,8 +2022,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>  Initialize the activation function for each neuron.
-  Currently the default and the only fully supported activation function is ANN_MLP::SIGMOID_SYM.</p><ul><li><strong>type</strong>.</li><li><strong>param1</strong>.</li><li><strong>param2</strong>.</li><li><strong>param1</strong> : double</li><li><strong>param2</strong> : double</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setActivationFunction</span><span class="p" data-group-id="0507242823-1">(</span><span class="n">type</span><span class="p" data-group-id="0507242823-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p" data-group-id="0507242823-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p" data-group-id="0507242823-3">]</span><span class="p" data-group-id="0507242823-2">]</span><span class="p" data-group-id="0507242823-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="setActivationFunction/3-positional-arguments" class="section-heading">
+  <a href="#setActivationFunction/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>type</strong>: int. </li></ul><h3 id="setActivationFunction/3-keyword-arguments" class="section-heading">
+  <a href="#setActivationFunction/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><p><strong>param1</strong>: double.</p></li><li><p><strong>param2</strong>: double.</p><p>Initialize the activation function for each neuron.
+Currently the default and the only fully supported activation function is ANN_MLP::SIGMOID_SYM.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setActivationFunction</span><span class="p" data-group-id="0131008184-1">(</span><span class="n">type</span><span class="p" data-group-id="0131008184-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p" data-group-id="0131008184-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p" data-group-id="0131008184-3">]</span><span class="p" data-group-id="0131008184-2">]</span><span class="p" data-group-id="0131008184-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setAnnealCoolingRatio/2">
@@ -1834,7 +2047,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setAnnealCoolingRatio(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L289" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L689" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1844,7 +2057,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getAnnealCoolingRatio @see getAnnealCoolingRatio</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setAnnealCoolingRatio</span><span class="p" data-group-id="4250486956-1">(</span><span class="n">val</span><span class="p" data-group-id="4250486956-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setAnnealFinalT/2">
@@ -1856,7 +2069,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setAnnealFinalT(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L298" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L710" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1866,7 +2079,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getAnnealFinalT @see getAnnealFinalT</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setAnnealFinalT</span><span class="p" data-group-id="8345888533-1">(</span><span class="n">val</span><span class="p" data-group-id="8345888533-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setAnnealInitialT/2">
@@ -1878,7 +2091,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setAnnealInitialT(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L307" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L731" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1888,7 +2101,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getAnnealInitialT @see getAnnealInitialT</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setAnnealInitialT</span><span class="p" data-group-id="0693317103-1">(</span><span class="n">val</span><span class="p" data-group-id="0693317103-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setAnnealItePerStep/2">
@@ -1900,7 +2113,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setAnnealItePerStep(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L752" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1910,7 +2123,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getAnnealItePerStep @see getAnnealItePerStep</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setAnnealItePerStep</span><span class="p" data-group-id="8253313449-1">(</span><span class="n">val</span><span class="p" data-group-id="8253313449-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setBackpropMomentumScale/2">
@@ -1922,7 +2135,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setBackpropMomentumScale(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L325" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L773" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1932,7 +2145,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getBackpropMomentumScale @see getBackpropMomentumScale</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setBackpropMomentumScale</span><span class="p" data-group-id="1385352580-1">(</span><span class="n">val</span><span class="p" data-group-id="1385352580-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setBackpropWeightScale/2">
@@ -1944,7 +2157,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setBackpropWeightScale(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L334" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L794" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1954,7 +2167,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getBackpropWeightScale @see getBackpropWeightScale</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setBackpropWeightScale</span><span class="p" data-group-id="8465140638-1">(</span><span class="n">val</span><span class="p" data-group-id="8465140638-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setLayerSizes/2">
@@ -1966,7 +2179,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setLayerSizes(self, layer_sizes)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L343" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L818" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1976,7 +2189,10 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>  Integer vector specifying the number of neurons in each layer including the input and output layers.
+  The very first element specifies the number of elements in the input layer.
+  The last element - number of elements in the output layer. Default value is empty Mat.
+@sa getLayerSizes</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setLayerSizes</span><span class="p" data-group-id="7212389755-1">(</span><span class="c">_layer_sizes</span><span class="p" data-group-id="7212389755-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRpropDW0/2">
@@ -1988,7 +2204,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setRpropDW0(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L839" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1998,7 +2214,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getRpropDW0 @see getRpropDW0</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRpropDW0</span><span class="p" data-group-id="6472921811-1">(</span><span class="n">val</span><span class="p" data-group-id="6472921811-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRpropDWMax/2">
@@ -2010,7 +2226,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setRpropDWMax(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L361" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L860" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2020,7 +2236,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getRpropDWMax @see getRpropDWMax</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRpropDWMax</span><span class="p" data-group-id="9025404597-1">(</span><span class="n">val</span><span class="p" data-group-id="9025404597-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRpropDWMin/2">
@@ -2032,7 +2248,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setRpropDWMin(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L370" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L881" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2042,7 +2258,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getRpropDWMin @see getRpropDWMin</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRpropDWMin</span><span class="p" data-group-id="1345000877-1">(</span><span class="n">val</span><span class="p" data-group-id="1345000877-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRpropDWMinus/2">
@@ -2054,7 +2270,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setRpropDWMinus(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L379" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L902" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2064,7 +2280,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getRpropDWMinus @see getRpropDWMinus</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRpropDWMinus</span><span class="p" data-group-id="9532816045-1">(</span><span class="n">val</span><span class="p" data-group-id="9532816045-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRpropDWPlus/2">
@@ -2076,7 +2292,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setRpropDWPlus(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L388" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L923" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2086,7 +2302,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getRpropDWPlus @see getRpropDWPlus</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRpropDWPlus</span><span class="p" data-group-id="6573949046-1">(</span><span class="n">val</span><span class="p" data-group-id="6573949046-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setTermCriteria/2">
@@ -2098,7 +2314,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setTermCriteria(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L397" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L944" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2108,7 +2324,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getTermCriteria @see getTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTermCriteria</span><span class="p" data-group-id="8258219612-1">(</span><span class="n">val</span><span class="p" data-group-id="8258219612-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setTrainMethod/2">
@@ -2120,7 +2336,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setTrainMethod(self, method)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L428" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1000" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2130,7 +2346,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="setTrainMethod/2-positional-arguments" class="section-heading">
+  <a href="#setTrainMethod/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>method</strong>: int. </li></ul><h3 id="setTrainMethod/2-keyword-arguments" class="section-heading">
+  <a href="#setTrainMethod/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><p><strong>param1</strong>: double.</p></li><li><p><strong>param2</strong>: double.</p><p>Sets training method and common parameters.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainMethod</span><span class="p" data-group-id="4460427042-1">(</span><span class="n">method</span><span class="p" data-group-id="4460427042-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p" data-group-id="4460427042-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p" data-group-id="4460427042-3">]</span><span class="p" data-group-id="4460427042-2">]</span><span class="p" data-group-id="4460427042-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setTrainMethod/3">
@@ -2142,7 +2370,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setTrainMethod(self, method, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L419" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L972" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2152,7 +2380,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>  Sets training method and common parameters.</p><ul><li><strong>method</strong>.</li><li><strong>param1</strong>.</li><li><strong>param2</strong>.</li><li><strong>param1</strong> : double</li><li><strong>param2</strong> : double</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainMethod</span><span class="p" data-group-id="5924482496-1">(</span><span class="n">method</span><span class="p" data-group-id="5924482496-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p" data-group-id="5924482496-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p" data-group-id="5924482496-3">]</span><span class="p" data-group-id="5924482496-2">]</span><span class="p" data-group-id="5924482496-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="setTrainMethod/3-positional-arguments" class="section-heading">
+  <a href="#setTrainMethod/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>method</strong>: int. </li></ul><h3 id="setTrainMethod/3-keyword-arguments" class="section-heading">
+  <a href="#setTrainMethod/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><p><strong>param1</strong>: double.</p></li><li><p><strong>param2</strong>: double.</p><p>Sets training method and common parameters.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainMethod</span><span class="p" data-group-id="5537241553-1">(</span><span class="n">method</span><span class="p" data-group-id="5537241553-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p" data-group-id="5537241553-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p" data-group-id="5537241553-3">]</span><span class="p" data-group-id="5537241553-2">]</span><span class="p" data-group-id="5537241553-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -2164,7 +2404,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L457" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1081" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2174,7 +2414,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="train/2-positional-arguments" class="section-heading">
+  <a href="#train/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/2-keyword-arguments" class="section-heading">
+  <a href="#train/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="8669854009-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="8669854009-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="6473029577-1">(</span><span class="n">trainData</span><span class="p" data-group-id="6473029577-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6473029577-2">]</span><span class="p" data-group-id="6473029577-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -2186,7 +2439,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L448" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1052" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2196,7 +2449,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="train/3-positional-arguments" class="section-heading">
+  <a href="#train/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/3-keyword-arguments" class="section-heading">
+  <a href="#train/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="9819211987-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="9819211987-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="7153635422-1">(</span><span class="n">trainData</span><span class="p" data-group-id="7153635422-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="7153635422-2">]</span><span class="p" data-group-id="7153635422-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -2208,7 +2474,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L466" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1021" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2218,7 +2484,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="5648257074-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="5648257074-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -2243,7 +2509,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2265,7 +2531,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2287,7 +2553,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2309,7 +2575,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2331,7 +2597,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2353,7 +2619,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getAnnealCoolingRatio!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2375,7 +2641,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getAnnealFinalT!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2397,7 +2663,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getAnnealInitialT!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2419,7 +2685,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getAnnealItePerStep!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2441,7 +2707,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBackpropMomentumScale!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2463,7 +2729,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBackpropWeightScale!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L244" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2485,7 +2751,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L264" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2507,7 +2773,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getLayerSizes!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L286" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2529,7 +2795,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRpropDW0!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L305" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2551,7 +2817,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRpropDWMax!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L324" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2573,7 +2839,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRpropDWMin!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L343" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2595,7 +2861,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRpropDWMinus!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L362" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2617,7 +2883,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRpropDWPlus!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L153" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2639,7 +2905,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTermCriteria!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L400" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2661,7 +2927,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainMethod!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L419" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2683,7 +2949,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L174" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L438" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2705,7 +2971,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getWeights!(self, layerIdx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L183" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L458" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2727,7 +2993,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L477" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2749,7 +3015,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L197" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L496" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2771,7 +3037,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L206" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L519" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2793,7 +3059,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L237" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L575" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2815,7 +3081,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L547" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2837,7 +3103,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L246" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L596" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2859,7 +3125,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L618" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2881,7 +3147,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setActivationFunction!(self, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L287" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L676" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2903,7 +3169,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setActivationFunction!(self, type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L647" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2925,7 +3191,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setAnnealCoolingRatio!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L697" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2947,7 +3213,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setAnnealFinalT!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L718" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2969,7 +3235,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setAnnealInitialT!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L314" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L739" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2991,7 +3257,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setAnnealItePerStep!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L323" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L760" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3013,7 +3279,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBackpropMomentumScale!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L332" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L781" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3035,7 +3301,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBackpropWeightScale!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L802" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3057,7 +3323,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setLayerSizes!(self, layer_sizes)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L350" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L826" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3079,7 +3345,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRpropDW0!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L359" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L847" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3101,7 +3367,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRpropDWMax!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L368" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L868" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3123,7 +3389,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRpropDWMin!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L377" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L889" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3145,7 +3411,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRpropDWMinus!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L386" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L910" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3167,7 +3433,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRpropDWPlus!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L395" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L931" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3189,7 +3455,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTermCriteria!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L404" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L952" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3211,7 +3477,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTrainMethod!(self, method)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L435" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1008" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3233,7 +3499,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTrainMethod!(self, method, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L426" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L980" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3255,7 +3521,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L464" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1089" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3277,7 +3543,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L455" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1060" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3299,7 +3565,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L475" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1031" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3321,7 +3587,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L504" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1147" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3343,7 +3609,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_annmlp.ex#L495" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_annmlp.ex#L1118" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3366,10 +3632,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_ml_annmlp.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_annmlp.ex">(current file)</a>
 
             </span>
 

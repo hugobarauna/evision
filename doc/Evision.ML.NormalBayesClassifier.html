@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.ML.NormalBayesClassifier — Evision v0.1.5-dev</title>
+    <title>Evision.ML.NormalBayesClassifier — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.NormalBayesClassifier</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Clears the algorithm state</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,9 @@ Evision
           <a href="#getDefaultName/1" translate="no">getDefaultName(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -142,6 +147,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Reads algorithm parameters from a file storage</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +156,9 @@ Evision
           <a href="#save/2" translate="no">save(self, filename)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -158,6 +168,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -166,7 +179,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>simplified API for language bindings
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
 Has overloading in C++</p></div>
 
       </div>
@@ -184,6 +197,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -192,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -202,6 +217,9 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>  Creates empty model
+  Use StatModel::train to train the model after creation.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -209,6 +227,8 @@ Has overloading in C++</p></div>
           <a href="#empty/1" translate="no">empty(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -218,6 +238,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns the number of variables in training samples</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -225,6 +247,8 @@ Has overloading in C++</p></div>
           <a href="#isClassifier/1" translate="no">isClassifier(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns true if the model is classifier</p></div>
 
       </div>
 
@@ -234,6 +258,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if the model is trained</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -241,6 +267,11 @@ Has overloading in C++</p></div>
           <a href="#load/1" translate="no">load(filepath)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filepath</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized NormalBayesClassifier from a file
+   Use NormalBayesClassifier::save to serialize and store an NormalBayesClassifier to disk.
+   Load the NormalBayesClassifier from this file again, by calling this function with the path to the file.
+   Optionally specify the node for the file containing the classifier</p></div>
 
       </div>
 
@@ -250,7 +281,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Loads and creates a serialized NormalBayesClassifier from a file
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filepath</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized NormalBayesClassifier from a file
    Use NormalBayesClassifier::save to serialize and store an NormalBayesClassifier to disk.
    Load the NormalBayesClassifier from this file again, by calling this function with the path to the file.
    Optionally specify the node for the file containing the classifier</p></div>
@@ -263,6 +294,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -271,7 +304,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -281,6 +314,13 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>inputs</strong>: UMat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outputs</strong>: UMat.</li><li><strong>outputProbs</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts the response for sample(s).
+  The method estimates the most probable classes for input vectors. Input vectors (one or more)
+  are stored as rows of the matrix inputs. In case of multiple input vectors, there should be one
+  output vector outputs. The predicted class for a single input vector is returned by the method.
+  The vector outputProbs contains the output probabilities corresponding to each element of
+  result.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -289,7 +329,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Predicts the response for sample(s).
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>inputs</strong>: UMat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outputs</strong>: UMat.</li><li><strong>outputProbs</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts the response for sample(s).
   The method estimates the most probable classes for input vectors. Input vectors (one or more)
   are stored as rows of the matrix inputs. In case of multiple input vectors, there should be one
   output vector outputs. The predicted class for a single input vector is returned by the method.
@@ -304,6 +344,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -312,6 +354,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -319,6 +363,8 @@ Has overloading in C++</p></div>
           <a href="#train/4" translate="no">train(self, samples, layout, responses)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -572,7 +618,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -582,7 +628,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="3910742863-1">(</span><span class="p" data-group-id="3910742863-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -594,7 +640,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -604,7 +650,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="1778007026-1">(</span><span class="p" data-group-id="1778007026-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -616,7 +663,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L403" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -626,7 +673,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="1391221972-1">(</span><span class="n">fn_</span><span class="p" data-group-id="1391221972-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -638,7 +685,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L198" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L425" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -648,7 +695,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="1350165856-1">(</span><span class="n">filename</span><span class="p" data-group-id="1350165856-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -660,7 +708,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L564" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -670,7 +718,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="write/2-positional-arguments" class="section-heading">
+  <a href="#write/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/2-keyword-arguments" class="section-heading">
+  <a href="#write/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="0052006124-1">(</span><span class="n">fs</span><span class="p" data-group-id="0052006124-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="0052006124-2">]</span><span class="p" data-group-id="0052006124-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -682,7 +743,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L535" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -692,8 +753,20 @@ cv
 
   <section class="docstring">
 
-<p>simplified API for language bindings
-Has overloading in C++</p><ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="8347239255-1">(</span><span class="n">fs</span><span class="p" data-group-id="8347239255-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="8347239255-2">]</span><span class="p" data-group-id="8347239255-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="write/3-positional-arguments" class="section-heading">
+  <a href="#write/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/3-keyword-arguments" class="section-heading">
+  <a href="#write/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="1904124035-1">(</span><span class="n">fs</span><span class="p" data-group-id="1904124035-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="1904124035-2">]</span><span class="p" data-group-id="1904124035-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -718,7 +791,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -728,7 +801,23 @@ cv.ml
 
   <section class="docstring">
 
-
+<h3 id="calcError/3-positional-arguments" class="section-heading">
+  <a href="#calcError/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/3-keyword-arguments" class="section-heading">
+  <a href="#calcError/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="6300565807-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="6300565807-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="6300565807-2">]</span><span class="p" data-group-id="6300565807-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -740,7 +829,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L28" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -750,13 +839,23 @@ cv.ml
 
   <section class="docstring">
 
-<p>Computes error on the training or test dataset</p><ul><li><strong>data</strong>.</li><li><strong>test</strong>.
-  computed over the training subset of the data. Please note that if you loaded a completely
-  different dataset to evaluate already trained classifier, you will probably want not to set
-  the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
-  that the error is computed for the whole new set. Yes, this sounds a bit confusing.</li><li><strong>resp</strong>.
-The method uses StatModel::predict to compute the error. For regression models the error is
-computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</li><li><strong>resp</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="5035142117-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="5035142117-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="5035142117-2">]</span><span class="p" data-group-id="5035142117-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<h3 id="calcError/4-positional-arguments" class="section-heading">
+  <a href="#calcError/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/4-keyword-arguments" class="section-heading">
+  <a href="#calcError/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="5189840128-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="5189840128-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="5189840128-2">]</span><span class="p" data-group-id="5189840128-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -768,7 +867,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -778,7 +877,8 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>  Creates empty model
+  Use StatModel::train to train the model after creation.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="9457377520-1">(</span><span class="p" data-group-id="9457377520-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -790,7 +890,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L123" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -800,7 +900,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="5018096926-1">(</span><span class="p" data-group-id="5018096926-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -812,7 +912,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -822,7 +922,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="1140568356-1">(</span><span class="p" data-group-id="1140568356-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -834,7 +934,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -844,7 +944,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="3854563967-1">(</span><span class="p" data-group-id="3854563967-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -856,7 +956,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L200" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -866,7 +966,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="3617809600-1">(</span><span class="p" data-group-id="3617809600-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -878,7 +978,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L258" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -888,7 +988,22 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="load/1-positional-arguments" class="section-heading">
+  <a href="#load/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filepath</strong>: String. </li></ul><h3 id="load/1-keyword-arguments" class="section-heading">
+  <a href="#load/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized NormalBayesClassifier from a file
+   Use NormalBayesClassifier::save to serialize and store an NormalBayesClassifier to disk.
+   Load the NormalBayesClassifier from this file again, by calling this function with the path to the file.
+   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="2056115688-1">(</span><span class="n">filepath</span><span class="p" data-group-id="2056115688-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="2056115688-2">]</span><span class="p" data-group-id="2056115688-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/2">
@@ -900,7 +1015,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">load(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L228" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -910,10 +1025,22 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Loads and creates a serialized NormalBayesClassifier from a file
+<h3 id="load/2-positional-arguments" class="section-heading">
+  <a href="#load/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filepath</strong>: String. </li></ul><h3 id="load/2-keyword-arguments" class="section-heading">
+  <a href="#load/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized NormalBayesClassifier from a file
    Use NormalBayesClassifier::save to serialize and store an NormalBayesClassifier to disk.
    Load the NormalBayesClassifier from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p><ul><li><strong>filepath</strong>.</li><li><strong>nodeName</strong>.</li><li><strong>nodeName</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="0633835512-1">(</span><span class="n">filepath</span><span class="p" data-group-id="0633835512-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="0633835512-2">]</span><span class="p" data-group-id="0633835512-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="3186124642-1">(</span><span class="n">filepath</span><span class="p" data-group-id="3186124642-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="3186124642-2">]</span><span class="p" data-group-id="3186124642-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -925,7 +1052,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L314" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -935,7 +1062,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="predict/2-positional-arguments" class="section-heading">
+  <a href="#predict/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/2-keyword-arguments" class="section-heading">
+  <a href="#predict/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="9423439168-1">(</span><span class="n">samples</span><span class="p" data-group-id="9423439168-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="9423439168-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="9423439168-3">]</span><span class="p" data-group-id="9423439168-2">]</span><span class="p" data-group-id="9423439168-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -947,7 +1086,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L137" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L286" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -957,7 +1096,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Predicts response(s) for the provided sample(s)</p><ul><li><strong>samples</strong>.</li><li><strong>results</strong>.</li><li><strong>flags</strong>.</li><li><strong>results</strong> : UMat</li><li><strong>flags</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="5649181661-1">(</span><span class="n">samples</span><span class="p" data-group-id="5649181661-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="5649181661-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="5649181661-3">]</span><span class="p" data-group-id="5649181661-2">]</span><span class="p" data-group-id="5649181661-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<h3 id="predict/3-positional-arguments" class="section-heading">
+  <a href="#predict/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/3-keyword-arguments" class="section-heading">
+  <a href="#predict/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="3658928970-1">(</span><span class="n">samples</span><span class="p" data-group-id="3658928970-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="3658928970-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="3658928970-3">]</span><span class="p" data-group-id="3658928970-2">]</span><span class="p" data-group-id="3658928970-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predictProb/2">
@@ -969,7 +1120,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predictProb(self, inputs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L382" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -979,7 +1130,24 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="predictProb/2-positional-arguments" class="section-heading">
+  <a href="#predictProb/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>inputs</strong>: UMat</li></ul><h3 id="predictProb/2-keyword-arguments" class="section-heading">
+  <a href="#predictProb/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outputs</strong>: UMat.</li><li><strong>outputProbs</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts the response for sample(s).
+  The method estimates the most probable classes for input vectors. Input vectors (one or more)
+  are stored as rows of the matrix inputs. In case of multiple input vectors, there should be one
+  output vector outputs. The predicted class for a single input vector is returned by the method.
+  The vector outputProbs contains the output probabilities corresponding to each element of
+  result.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predictProb</span><span class="p" data-group-id="3076059188-1">(</span><span class="n">inputs</span><span class="p" data-group-id="3076059188-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="3076059188-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputProbs</span><span class="p" data-group-id="3076059188-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="3076059188-4">]</span><span class="p" data-group-id="3076059188-3">]</span><span class="p" data-group-id="3076059188-2">]</span><span class="p" data-group-id="3076059188-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p">,</span><span class="w"> </span><span class="n">outputProbs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predictProb/3">
@@ -991,7 +1159,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predictProb(self, inputs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L171" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L348" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1001,12 +1169,24 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Predicts the response for sample(s).
+<h3 id="predictProb/3-positional-arguments" class="section-heading">
+  <a href="#predictProb/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>inputs</strong>: UMat</li></ul><h3 id="predictProb/3-keyword-arguments" class="section-heading">
+  <a href="#predictProb/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outputs</strong>: UMat.</li><li><strong>outputProbs</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts the response for sample(s).
   The method estimates the most probable classes for input vectors. Input vectors (one or more)
   are stored as rows of the matrix inputs. In case of multiple input vectors, there should be one
   output vector outputs. The predicted class for a single input vector is returned by the method.
   The vector outputProbs contains the output probabilities corresponding to each element of
-  result.</p><ul><li><strong>outputs</strong> : UMat</li><li><strong>outputProbs</strong> : UMat</li><li><strong>flags</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predictProb</span><span class="p" data-group-id="4616860733-1">(</span><span class="n">inputs</span><span class="p" data-group-id="4616860733-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="4616860733-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputProbs</span><span class="p" data-group-id="4616860733-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="4616860733-4">]</span><span class="p" data-group-id="4616860733-3">]</span><span class="p" data-group-id="4616860733-2">]</span><span class="p" data-group-id="4616860733-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p">,</span><span class="w"> </span><span class="n">outputProbs</span></code></pre>
+  result.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predictProb</span><span class="p" data-group-id="8254619301-1">(</span><span class="n">inputs</span><span class="p" data-group-id="8254619301-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p" data-group-id="8254619301-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputProbs</span><span class="p" data-group-id="8254619301-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="8254619301-4">]</span><span class="p" data-group-id="8254619301-3">]</span><span class="p" data-group-id="8254619301-2">]</span><span class="p" data-group-id="8254619301-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">outputs</span><span class="p">,</span><span class="w"> </span><span class="n">outputProbs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -1018,7 +1198,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L227" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L506" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1028,7 +1208,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="train/2-positional-arguments" class="section-heading">
+  <a href="#train/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/2-keyword-arguments" class="section-heading">
+  <a href="#train/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="0790560534-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="0790560534-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="0281626870-1">(</span><span class="n">trainData</span><span class="p" data-group-id="0281626870-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="0281626870-2">]</span><span class="p" data-group-id="0281626870-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -1040,7 +1233,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L218" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L477" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1050,7 +1243,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="train/3-positional-arguments" class="section-heading">
+  <a href="#train/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/3-keyword-arguments" class="section-heading">
+  <a href="#train/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="6247603944-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="6247603944-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="9076753724-1">(</span><span class="n">trainData</span><span class="p" data-group-id="9076753724-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="9076753724-2">]</span><span class="p" data-group-id="9076753724-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -1062,7 +1268,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L236" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L446" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1072,7 +1278,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="1315462275-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="1315462275-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -1097,7 +1303,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1119,7 +1325,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1141,7 +1347,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1163,7 +1369,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1185,7 +1391,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1207,7 +1413,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1229,7 +1435,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1251,7 +1457,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1273,7 +1479,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1295,7 +1501,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L266" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1317,7 +1523,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L236" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1339,7 +1545,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L153" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L322" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1361,7 +1567,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L144" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1383,7 +1589,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predictProb!(self, inputs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L390" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1405,7 +1611,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predictProb!(self, inputs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L178" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L356" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1427,7 +1633,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L411" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1449,7 +1655,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L433" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1471,7 +1677,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L514" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1493,7 +1699,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L485" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1515,7 +1721,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L245" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L456" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1537,7 +1743,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L274" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L572" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1559,7 +1765,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L265" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_normalbayesclassifier.ex#L543" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1582,10 +1788,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_ml_normalbayesclassifier.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_normalbayesclassifier.ex">(current file)</a>
 
             </span>
 

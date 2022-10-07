@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Detail.GraphCutSeamFinder — Evision v0.1.5-dev</title>
+    <title>Evision.Detail.GraphCutSeamFinder — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Detail.GraphCutSeamFinder</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,27 +122,31 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#detail_GraphCutSeamFinder/1" translate="no">detail_GraphCutSeamFinder(cost_type)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>cost_type</strong>: String</li></ul><h3>Keyword Arguments</h3><ul><li><strong>terminal_cost</strong>: float.</li><li><strong>bad_region_penalty</strong>: float.</li></ul><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#detail_GraphCutSeamFinder/2" translate="no">detail_GraphCutSeamFinder(cost_type, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>cost_type</strong>: String</li></ul><h3>Keyword Arguments</h3><ul><li><strong>terminal_cost</strong>: float.</li><li><strong>bad_region_penalty</strong>: float.</li></ul><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#find/4" translate="no">find(self, src, corners, masks)</a>
 
         </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#graphCutSeamFinder/1" translate="no">graphCutSeamFinder(cost_type)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#graphCutSeamFinder/2" translate="no">graphCutSeamFinder(cost_type, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><ul><li><strong>terminal_cost</strong> : float</li><li><strong>bad_region_penalty</strong> : float</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -155,31 +159,31 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#detail_GraphCutSeamFinder!/1" translate="no">detail_GraphCutSeamFinder!(cost_type)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#detail_GraphCutSeamFinder/1"><code class="inline">detail_GraphCutSeamFinder/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#detail_GraphCutSeamFinder!/2" translate="no">detail_GraphCutSeamFinder!(cost_type, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#detail_GraphCutSeamFinder/2"><code class="inline">detail_GraphCutSeamFinder/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#find!/4" translate="no">find!(self, src, corners, masks)</a>
 
         </div>
 
           <div class="summary-synopsis"><p>Raising version of <a href="#find/4"><code class="inline">find/4</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#graphCutSeamFinder!/1" translate="no">graphCutSeamFinder!(cost_type)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#graphCutSeamFinder/1"><code class="inline">graphCutSeamFinder/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#graphCutSeamFinder!/2" translate="no">graphCutSeamFinder!(cost_type, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#graphCutSeamFinder/2"><code class="inline">graphCutSeamFinder/2</code></a>.</p></div>
 
       </div>
 
@@ -197,6 +201,74 @@ Evision
 cv.detail
     </h1>
     <div class="cv-detail-list">
+<section class="detail" id="detail_GraphCutSeamFinder/1">
+
+  <div class="detail-header">
+    <a href="#detail_GraphCutSeamFinder/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">detail_GraphCutSeamFinder(cost_type)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L48" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="detail_GraphCutSeamFinder/1-positional-arguments" class="section-heading">
+  <a href="#detail_GraphCutSeamFinder/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>cost_type</strong>: String</li></ul><h3 id="detail_GraphCutSeamFinder/1-keyword-arguments" class="section-heading">
+  <a href="#detail_GraphCutSeamFinder/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>terminal_cost</strong>: float.</li><li><strong>bad_region_penalty</strong>: float.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">GraphCutSeamFinder</span><span class="p" data-group-id="1403378651-1">(</span><span class="n">cost_type</span><span class="p" data-group-id="1403378651-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">terminal_cost</span><span class="p" data-group-id="1403378651-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">bad_region_penalty</span><span class="p" data-group-id="1403378651-3">]</span><span class="p" data-group-id="1403378651-2">]</span><span class="p" data-group-id="1403378651-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">detail_GraphCutSeamFinder</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="detail_GraphCutSeamFinder/2">
+
+  <div class="detail-header">
+    <a href="#detail_GraphCutSeamFinder/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">detail_GraphCutSeamFinder(cost_type, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L21" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="detail_GraphCutSeamFinder/2-positional-arguments" class="section-heading">
+  <a href="#detail_GraphCutSeamFinder/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>cost_type</strong>: String</li></ul><h3 id="detail_GraphCutSeamFinder/2-keyword-arguments" class="section-heading">
+  <a href="#detail_GraphCutSeamFinder/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>terminal_cost</strong>: float.</li><li><strong>bad_region_penalty</strong>: float.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">GraphCutSeamFinder</span><span class="p" data-group-id="4760747766-1">(</span><span class="n">cost_type</span><span class="p" data-group-id="4760747766-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">terminal_cost</span><span class="p" data-group-id="4760747766-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">bad_region_penalty</span><span class="p" data-group-id="4760747766-3">]</span><span class="p" data-group-id="4760747766-2">]</span><span class="p" data-group-id="4760747766-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">detail_GraphCutSeamFinder</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
 <section class="detail" id="find/4">
 
   <div class="detail-header">
@@ -206,7 +278,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">find(self, src, corners, masks)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -216,51 +288,7 @@ cv.detail
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="graphCutSeamFinder/1">
-
-  <div class="detail-header">
-    <a href="#graphCutSeamFinder/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">graphCutSeamFinder(cost_type)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L23" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="graphCutSeamFinder/2">
-
-  <div class="detail-header">
-    <a href="#graphCutSeamFinder/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">graphCutSeamFinder(cost_type, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<ul><li><strong>terminal_cost</strong> : float</li><li><strong>bad_region_penalty</strong> : float</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">GraphCutSeamFinder</span><span class="p" data-group-id="7884411014-1">(</span><span class="n">cost_type</span><span class="p" data-group-id="7884411014-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">terminal_cost</span><span class="p" data-group-id="7884411014-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">bad_region_penalty</span><span class="p" data-group-id="7884411014-3">]</span><span class="p" data-group-id="7884411014-2">]</span><span class="p" data-group-id="7884411014-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">detail_GraphCutSeamFinder</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">find</span><span class="p" data-group-id="3058496587-1">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">corners</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="3058496587-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -276,6 +304,50 @@ cv.detail
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="detail_GraphCutSeamFinder!/1">
+
+  <div class="detail-header">
+    <a href="#detail_GraphCutSeamFinder!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">detail_GraphCutSeamFinder!(cost_type)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L56" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#detail_GraphCutSeamFinder/1"><code class="inline">detail_GraphCutSeamFinder/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="detail_GraphCutSeamFinder!/2">
+
+  <div class="detail-header">
+    <a href="#detail_GraphCutSeamFinder!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">detail_GraphCutSeamFinder!(cost_type, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L29" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#detail_GraphCutSeamFinder/2"><code class="inline">detail_GraphCutSeamFinder/2</code></a>.</p>
+  </section>
+</section>
 <section class="detail" id="find!/4">
 
   <div class="detail-header">
@@ -285,7 +357,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">find!(self, src, corners, masks)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -298,50 +370,6 @@ Functions
 <p>Raising version of <a href="#find/4"><code class="inline">find/4</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="graphCutSeamFinder!/1">
-
-  <div class="detail-header">
-    <a href="#graphCutSeamFinder!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">graphCutSeamFinder!(cost_type)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L30" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#graphCutSeamFinder/1"><code class="inline">graphCutSeamFinder/1</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="graphCutSeamFinder!/2">
-
-  <div class="detail-header">
-    <a href="#graphCutSeamFinder!/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">graphCutSeamFinder!(cost_type, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_graphcutseamfinder.ex#L21" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#graphCutSeamFinder/2"><code class="inline">graphCutSeamFinder/2</code></a>.</p>
-  </section>
-</section>
 
     </div>
   </section>
@@ -352,10 +380,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_detail_graphcutseamfinder.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_detail_graphcutseamfinder.ex">(current file)</a>
 
             </span>
 

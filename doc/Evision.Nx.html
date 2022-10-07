@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Nx — Evision v0.1.5-dev</title>
+    <title>Evision.Nx — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/evision_nx.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Nx</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -136,6 +136,30 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#to_mat/2" translate="no">to_mat(t, as_shape)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#to_mat/5" translate="no">to_mat(binary, type, rows, cols, channels)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#to_mat_2d/1" translate="no">to_mat_2d(t)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#to_nx/2" translate="no">to_nx(mat, backend \\ Evision.Backend)</a>
 
         </div>
@@ -158,6 +182,36 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Raising version of <a href="#to_mat/1"><code class="inline">to_mat/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#to_mat!/2" translate="no">to_mat!(t, as_shape)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#to_mat/2"><code class="inline">to_mat/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#to_mat!/5" translate="no">to_mat!(binary, type, rows, cols, channels)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#to_mat/5"><code class="inline">to_mat/5</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#to_mat_2d!/1" translate="no">to_mat_2d!(t)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#to_mat_2d/1"><code class="inline">to_mat_2d/1</code></a>.</p></div>
 
       </div>
 
@@ -204,7 +258,7 @@ external
     </a>
     <h1 class="signature" translate="no">to_mat(t)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/evision_nx.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L53" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -224,6 +278,72 @@ external
 to have shape<code class="inline">{height, width, channels}</code>.</p>
   </section>
 </section>
+<section class="detail" id="to_mat/2">
+
+  <div class="detail-header">
+    <a href="#to_mat/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">to_mat(t, as_shape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L66" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="to_mat/5">
+
+  <div class="detail-header">
+    <a href="#to_mat/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">to_mat(binary, type, rows, cols, channels)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L83" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="to_mat_2d/1">
+
+  <div class="detail-header">
+    <a href="#to_mat_2d/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">to_mat_2d(t)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L90" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="to_nx/2">
 
     <span id="to_nx/1"></span>
@@ -235,7 +355,7 @@ to have shape<code class="inline">{height, width, channels}</code>.</p>
     </a>
     <h1 class="signature" translate="no">to_nx(mat, backend \\ Evision.Backend)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/evision_nx.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -245,24 +365,18 @@ to have shape<code class="inline">{height, width, channels}</code>.</p>
 
   <section class="docstring">
 
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@spec</span> to_nx(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">reference</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">module</a>()) :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">reference</a>()} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
-
-      </div>
-
 <p>Transform an <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a> reference to <code class="inline">Nx.tensor</code>.</p><p>The resulting tensor is in the shape <code class="inline">{height, width, channels}</code>.</p><h3 id="to_nx/2-example" class="section-heading">
   <a href="#to_nx/2-example" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">example</p>
   </a>
   Example
 </h3>
-<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="6847466125-1">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">mat</span><span class="p" data-group-id="6847466125-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision</span><span class="o">.</span><span class="n">imread</span><span class="p" data-group-id="6847466125-2">(</span><span class="s">&quot;/path/to/exist/img.png&quot;</span><span class="p" data-group-id="6847466125-2">)</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="n">nx_tensor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_nx</span><span class="p" data-group-id="6847466125-3">(</span><span class="n">mat</span><span class="p" data-group-id="6847466125-3">)</span><span class="w">
-</span><span class="gp unselectable">...&gt; </span><span class="p" data-group-id="6847466125-4">#</span><span class="nc" data-group-id="6847466125-4">Nx.Tensor</span><span class="p" data-group-id="6847466125-4">&lt;</span><span class="w">
-</span><span class="gp unselectable">...&gt; </span><span class="w">   </span><span class="n">u8</span><span class="p" data-group-id="6847466125-5">[</span><span class="mi">1080</span><span class="p" data-group-id="6847466125-5">]</span><span class="p" data-group-id="6847466125-6">[</span><span class="mi">1920</span><span class="p" data-group-id="6847466125-6">]</span><span class="p" data-group-id="6847466125-7">[</span><span class="mi">3</span><span class="p" data-group-id="6847466125-7">]</span><span class="w">
-</span><span class="gp unselectable">...&gt; </span><span class="w">   </span><span class="p" data-group-id="6847466125-8">[</span><span class="p" data-group-id="6847466125-9">[</span><span class="w"> </span><span class="n">...</span><span class="w"> </span><span class="n">pixel</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">...</span><span class="w"> </span><span class="p" data-group-id="6847466125-9">]</span><span class="p" data-group-id="6847466125-8">]</span><span class="w">
-</span><span class="gp unselectable">...&gt; </span><span class="p" data-group-id="6847466125-4">&gt;</span></code></pre>
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="6879119666-1">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">mat</span><span class="p" data-group-id="6879119666-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision</span><span class="o">.</span><span class="n">imread</span><span class="p" data-group-id="6879119666-2">(</span><span class="s">&quot;/path/to/exist/img.png&quot;</span><span class="p" data-group-id="6879119666-2">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">nx_tensor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_nx</span><span class="p" data-group-id="6879119666-3">(</span><span class="n">mat</span><span class="p" data-group-id="6879119666-3">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="p" data-group-id="6879119666-4">#</span><span class="nc" data-group-id="6879119666-4">Nx.Tensor</span><span class="p" data-group-id="6879119666-4">&lt;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">   </span><span class="n">u8</span><span class="p" data-group-id="6879119666-5">[</span><span class="mi">1080</span><span class="p" data-group-id="6879119666-5">]</span><span class="p" data-group-id="6879119666-6">[</span><span class="mi">1920</span><span class="p" data-group-id="6879119666-6">]</span><span class="p" data-group-id="6879119666-7">[</span><span class="mi">3</span><span class="p" data-group-id="6879119666-7">]</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">   </span><span class="p" data-group-id="6879119666-8">[</span><span class="p" data-group-id="6879119666-9">[</span><span class="w"> </span><span class="n">...</span><span class="w"> </span><span class="n">pixel</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">...</span><span class="w"> </span><span class="p" data-group-id="6879119666-9">]</span><span class="p" data-group-id="6879119666-8">]</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="p" data-group-id="6879119666-4">&gt;</span></code></pre>
   </section>
 </section>
 
@@ -287,7 +401,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">to_mat!(t)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/evision_nx.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -300,6 +414,72 @@ Functions
 <p>Raising version of <a href="#to_mat/1"><code class="inline">to_mat/1</code></a>.</p>
   </section>
 </section>
+<section class="detail" id="to_mat!/2">
+
+  <div class="detail-header">
+    <a href="#to_mat!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">to_mat!(t, as_shape)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L80" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#to_mat/2"><code class="inline">to_mat/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="to_mat!/5">
+
+  <div class="detail-header">
+    <a href="#to_mat!/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">to_mat!(binary, type, rows, cols, channels)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L87" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#to_mat/5"><code class="inline">to_mat/5</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="to_mat_2d!/1">
+
+  <div class="detail-header">
+    <a href="#to_mat_2d!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">to_mat_2d!(t)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L101" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#to_mat_2d/1"><code class="inline">to_mat_2d/1</code></a>.</p>
+  </section>
+</section>
 <section class="detail" id="to_nx!/1">
 
   <div class="detail-header">
@@ -309,7 +489,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">to_nx!(mat)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/evision_nx.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L42" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -331,7 +511,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">to_nx!(mat, backend)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/evision_nx.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/evision_nx.ex#L43" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -354,10 +534,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/evision_nx.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/evision_nx.ex">(current file)</a>
 
             </span>
 

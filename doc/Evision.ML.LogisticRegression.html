@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.ML.LogisticRegression — Evision v0.1.5-dev</title>
+    <title>Evision.ML.LogisticRegression — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.LogisticRegression</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Clears the algorithm state</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,9 @@ Evision
           <a href="#getDefaultName/1" translate="no">getDefaultName(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -142,6 +147,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Reads algorithm parameters from a file storage</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +156,9 @@ Evision
           <a href="#save/2" translate="no">save(self, filename)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -158,6 +168,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -166,7 +179,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>simplified API for language bindings
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
 Has overloading in C++</p></div>
 
       </div>
@@ -184,6 +197,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -192,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -202,6 +217,9 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Creates empty model.
+  Creates Logistic Regression model with parameters given.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -209,6 +227,8 @@ Has overloading in C++</p></div>
           <a href="#empty/1" translate="no">empty(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -218,6 +238,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>This function returns the trained parameters arranged across rows.
+  For a two class classification problem, it returns a row matrix. It returns learnt parameters of
+  the Logistic Regression as a matrix of type CV_32F.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -225,6 +249,8 @@ Has overloading in C++</p></div>
           <a href="#getIterations/1" translate="no">getIterations(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setIterations</p></div>
 
       </div>
 
@@ -234,6 +260,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setLearningRate</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -241,6 +269,8 @@ Has overloading in C++</p></div>
           <a href="#getMiniBatchSize/1" translate="no">getMiniBatchSize(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setMiniBatchSize</p></div>
 
       </div>
 
@@ -250,6 +280,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setRegularization</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -257,6 +289,8 @@ Has overloading in C++</p></div>
           <a href="#getTermCriteria/1" translate="no">getTermCriteria(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setTermCriteria</p></div>
 
       </div>
 
@@ -266,6 +300,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setTrainMethod</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -273,6 +309,8 @@ Has overloading in C++</p></div>
           <a href="#getVarCount/1" translate="no">getVarCount(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns the number of variables in training samples</p></div>
 
       </div>
 
@@ -282,6 +320,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if the model is classifier</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -289,6 +329,8 @@ Has overloading in C++</p></div>
           <a href="#isTrained/1" translate="no">isTrained(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns true if the model is trained</p></div>
 
       </div>
 
@@ -298,6 +340,11 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filepath</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized LogisticRegression from a file
+   Use LogisticRegression::save to serialize and store an LogisticRegression to disk.
+   Load the LogisticRegression from this file again, by calling this function with the path to the file.
+   Optionally specify the node for the file containing the classifier</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -306,7 +353,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Loads and creates a serialized LogisticRegression from a file
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filepath</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized LogisticRegression from a file
    Use LogisticRegression::save to serialize and store an LogisticRegression to disk.
    Load the LogisticRegression from this file again, by calling this function with the path to the file.
    Optionally specify the node for the file containing the classifier</p></div>
@@ -319,6 +366,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts responses for input samples and returns a float type.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -327,7 +376,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Predicts responses for input samples and returns a float type.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts responses for input samples and returns a float type.</p></div>
 
       </div>
 
@@ -337,6 +386,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getIterations @see getIterations</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -344,6 +395,8 @@ Has overloading in C++</p></div>
           <a href="#setLearningRate/2" translate="no">setLearningRate(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getLearningRate @see getLearningRate</p></div>
 
       </div>
 
@@ -353,6 +406,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getMiniBatchSize @see getMiniBatchSize</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -360,6 +415,8 @@ Has overloading in C++</p></div>
           <a href="#setRegularization/2" translate="no">setRegularization(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getRegularization @see getRegularization</p></div>
 
       </div>
 
@@ -369,6 +426,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getTermCriteria @see getTermCriteria</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -376,6 +435,8 @@ Has overloading in C++</p></div>
           <a href="#setTrainMethod/2" translate="no">setTrainMethod(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getTrainMethod @see getTrainMethod</p></div>
 
       </div>
 
@@ -385,6 +446,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -393,6 +456,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -400,6 +465,8 @@ Has overloading in C++</p></div>
           <a href="#train/4" translate="no">train(self, samples, layout, responses)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -763,7 +830,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -773,7 +840,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="8277457440-1">(</span><span class="p" data-group-id="8277457440-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -785,7 +852,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -795,7 +862,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="6921982683-1">(</span><span class="p" data-group-id="6921982683-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -807,7 +875,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L472" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -817,7 +885,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="4664218058-1">(</span><span class="n">fn_</span><span class="p" data-group-id="4664218058-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -829,7 +897,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L214" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L494" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -839,7 +907,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="1638702714-1">(</span><span class="n">filename</span><span class="p" data-group-id="1638702714-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -851,7 +920,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L337" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L759" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -861,7 +930,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="write/2-positional-arguments" class="section-heading">
+  <a href="#write/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/2-keyword-arguments" class="section-heading">
+  <a href="#write/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="8893438328-1">(</span><span class="n">fs</span><span class="p" data-group-id="8893438328-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="8893438328-2">]</span><span class="p" data-group-id="8893438328-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -873,7 +955,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L328" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L730" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -883,8 +965,20 @@ cv
 
   <section class="docstring">
 
-<p>simplified API for language bindings
-Has overloading in C++</p><ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="8692567770-1">(</span><span class="n">fs</span><span class="p" data-group-id="8692567770-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="8692567770-2">]</span><span class="p" data-group-id="8692567770-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="write/3-positional-arguments" class="section-heading">
+  <a href="#write/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/3-keyword-arguments" class="section-heading">
+  <a href="#write/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="9150811127-1">(</span><span class="n">fs</span><span class="p" data-group-id="9150811127-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="9150811127-2">]</span><span class="p" data-group-id="9150811127-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -909,7 +1003,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -919,7 +1013,23 @@ cv.ml
 
   <section class="docstring">
 
-
+<h3 id="calcError/3-positional-arguments" class="section-heading">
+  <a href="#calcError/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/3-keyword-arguments" class="section-heading">
+  <a href="#calcError/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="7214166916-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="7214166916-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="7214166916-2">]</span><span class="p" data-group-id="7214166916-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -931,7 +1041,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L28" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -941,13 +1051,23 @@ cv.ml
 
   <section class="docstring">
 
-<p>Computes error on the training or test dataset</p><ul><li><strong>data</strong>.</li><li><strong>test</strong>.
-  computed over the training subset of the data. Please note that if you loaded a completely
-  different dataset to evaluate already trained classifier, you will probably want not to set
-  the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
-  that the error is computed for the whole new set. Yes, this sounds a bit confusing.</li><li><strong>resp</strong>.
-The method uses StatModel::predict to compute the error. For regression models the error is
-computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</li><li><strong>resp</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="0718394459-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="0718394459-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="0718394459-2">]</span><span class="p" data-group-id="0718394459-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<h3 id="calcError/4-positional-arguments" class="section-heading">
+  <a href="#calcError/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/4-keyword-arguments" class="section-heading">
+  <a href="#calcError/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="5539940475-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="5539940475-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="5539940475-2">]</span><span class="p" data-group-id="5539940475-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -959,7 +1079,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -969,7 +1089,8 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Creates empty model.
+  Creates Logistic Regression model with parameters given.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="8434461235-1">(</span><span class="p" data-group-id="8434461235-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -981,7 +1102,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L123" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -991,7 +1112,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="6627431777-1">(</span><span class="p" data-group-id="6627431777-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="get_learnt_thetas/1">
@@ -1003,7 +1124,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">get_learnt_thetas(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L297" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1013,7 +1134,9 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>This function returns the trained parameters arranged across rows.
+  For a two class classification problem, it returns a row matrix. It returns learnt parameters of
+  the Logistic Regression as a matrix of type CV_32F.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">get_learnt_thetas</span><span class="p" data-group-id="6146633202-1">(</span><span class="p" data-group-id="6146633202-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getIterations/1">
@@ -1025,7 +1148,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getIterations(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1035,7 +1158,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getIterations</span><span class="p" data-group-id="7556049120-1">(</span><span class="p" data-group-id="7556049120-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getLearningRate/1">
@@ -1047,7 +1170,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getLearningRate(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1057,7 +1180,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setLearningRate</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLearningRate</span><span class="p" data-group-id="9287215590-1">(</span><span class="p" data-group-id="9287215590-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getMiniBatchSize/1">
@@ -1069,7 +1192,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getMiniBatchSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L200" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1079,7 +1202,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setMiniBatchSize</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMiniBatchSize</span><span class="p" data-group-id="4353216800-1">(</span><span class="p" data-group-id="4353216800-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getRegularization/1">
@@ -1091,7 +1214,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getRegularization(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L219" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1101,7 +1224,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setRegularization</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRegularization</span><span class="p" data-group-id="9796161519-1">(</span><span class="p" data-group-id="9796161519-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTermCriteria/1">
@@ -1113,7 +1236,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getTermCriteria(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L238" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1123,7 +1246,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTermCriteria</span><span class="p" data-group-id="8598259360-1">(</span><span class="p" data-group-id="8598259360-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainMethod/1">
@@ -1135,7 +1258,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getTrainMethod(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L257" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1145,7 +1268,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setTrainMethod</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainMethod</span><span class="p" data-group-id="7633462135-1">(</span><span class="p" data-group-id="7633462135-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -1157,7 +1280,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L276" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1167,7 +1290,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="4469095296-1">(</span><span class="p" data-group-id="4469095296-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -1179,7 +1302,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L127" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1189,7 +1312,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="0467401159-1">(</span><span class="p" data-group-id="0467401159-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -1201,7 +1324,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L335" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1211,7 +1334,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="3581894718-1">(</span><span class="p" data-group-id="3581894718-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -1223,7 +1346,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L164" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1233,7 +1356,22 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="load/1-positional-arguments" class="section-heading">
+  <a href="#load/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filepath</strong>: String. </li></ul><h3 id="load/1-keyword-arguments" class="section-heading">
+  <a href="#load/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized LogisticRegression from a file
+   Use LogisticRegression::save to serialize and store an LogisticRegression to disk.
+   Load the LogisticRegression from this file again, by calling this function with the path to the file.
+   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="7805173190-1">(</span><span class="n">filepath</span><span class="p" data-group-id="7805173190-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="7805173190-2">]</span><span class="p" data-group-id="7805173190-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/2">
@@ -1245,7 +1383,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">load(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L155" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L363" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1255,10 +1393,22 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Loads and creates a serialized LogisticRegression from a file
+<h3 id="load/2-positional-arguments" class="section-heading">
+  <a href="#load/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filepath</strong>: String. </li></ul><h3 id="load/2-keyword-arguments" class="section-heading">
+  <a href="#load/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized LogisticRegression from a file
    Use LogisticRegression::save to serialize and store an LogisticRegression to disk.
    Load the LogisticRegression from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p><ul><li><strong>filepath</strong>.</li><li><strong>nodeName</strong>.</li><li><strong>nodeName</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="2261292854-1">(</span><span class="n">filepath</span><span class="p" data-group-id="2261292854-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="2261292854-2">]</span><span class="p" data-group-id="2261292854-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="2852881225-1">(</span><span class="n">filepath</span><span class="p" data-group-id="2852881225-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="2852881225-2">]</span><span class="p" data-group-id="2852881225-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -1270,7 +1420,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L451" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1280,7 +1430,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="predict/2-positional-arguments" class="section-heading">
+  <a href="#predict/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/2-keyword-arguments" class="section-heading">
+  <a href="#predict/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts responses for input samples and returns a float type.</p><pre><code class="makeup elixir" translate="no"><span class="n">contains</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="p" data-group-id="9809731098-1">(</span><span class="n">features</span><span class="p" data-group-id="9809731098-1">)</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">being</span><span class="w"> </span><span class="n">classified</span><span class="o">.</span><span class="w"> </span><span class="nc">Should</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="nc">CV_32F</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="2717116469-1">(</span><span class="n">samples</span><span class="p" data-group-id="2717116469-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="2717116469-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="2717116469-3">]</span><span class="p" data-group-id="2717116469-2">]</span><span class="p" data-group-id="2717116469-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -1292,7 +1454,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L422" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1302,8 +1464,19 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Predicts responses for input samples and returns a float type.</p><ul><li><strong>samples</strong>.
-  contains variables (features) of one object being classified. Should have data type CV_32F.</li><li><strong>results</strong>.</li><li><strong>flags</strong>.</li><li><strong>results</strong> : UMat</li><li><strong>flags</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="5148398819-1">(</span><span class="n">samples</span><span class="p" data-group-id="5148398819-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="5148398819-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="5148398819-3">]</span><span class="p" data-group-id="5148398819-2">]</span><span class="p" data-group-id="5148398819-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<h3 id="predict/3-positional-arguments" class="section-heading">
+  <a href="#predict/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/3-keyword-arguments" class="section-heading">
+  <a href="#predict/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts responses for input samples and returns a float type.</p><pre><code class="makeup elixir" translate="no"><span class="n">contains</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="p" data-group-id="0514049385-1">(</span><span class="n">features</span><span class="p" data-group-id="0514049385-1">)</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">being</span><span class="w"> </span><span class="n">classified</span><span class="o">.</span><span class="w"> </span><span class="nc">Should</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="nc">CV_32F</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="3707371393-1">(</span><span class="n">samples</span><span class="p" data-group-id="3707371393-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="3707371393-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="3707371393-3">]</span><span class="p" data-group-id="3707371393-2">]</span><span class="p" data-group-id="3707371393-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setIterations/2">
@@ -1315,7 +1488,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setIterations(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L223" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L515" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1325,7 +1498,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getIterations @see getIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setIterations</span><span class="p" data-group-id="7925598631-1">(</span><span class="n">val</span><span class="p" data-group-id="7925598631-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setLearningRate/2">
@@ -1337,7 +1510,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setLearningRate(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L232" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1347,7 +1520,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getLearningRate @see getLearningRate</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setLearningRate</span><span class="p" data-group-id="8693535608-1">(</span><span class="n">val</span><span class="p" data-group-id="8693535608-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setMiniBatchSize/2">
@@ -1359,7 +1532,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setMiniBatchSize(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L241" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L557" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1369,7 +1542,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getMiniBatchSize @see getMiniBatchSize</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMiniBatchSize</span><span class="p" data-group-id="7923126302-1">(</span><span class="n">val</span><span class="p" data-group-id="7923126302-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRegularization/2">
@@ -1381,7 +1554,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setRegularization(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L250" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L578" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1391,7 +1564,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getRegularization @see getRegularization</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRegularization</span><span class="p" data-group-id="1611718216-1">(</span><span class="n">val</span><span class="p" data-group-id="1611718216-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setTermCriteria/2">
@@ -1403,7 +1576,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setTermCriteria(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L259" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L599" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1413,7 +1586,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getTermCriteria @see getTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTermCriteria</span><span class="p" data-group-id="5158906345-1">(</span><span class="n">val</span><span class="p" data-group-id="5158906345-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setTrainMethod/2">
@@ -1425,7 +1598,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">setTrainMethod(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L268" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L620" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1435,7 +1608,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@copybrief getTrainMethod @see getTrainMethod</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainMethod</span><span class="p" data-group-id="2571437154-1">(</span><span class="n">val</span><span class="p" data-group-id="2571437154-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -1447,7 +1620,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L297" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L701" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1457,7 +1630,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="train/2-positional-arguments" class="section-heading">
+  <a href="#train/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/2-keyword-arguments" class="section-heading">
+  <a href="#train/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="3139019864-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="3139019864-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="0707820800-1">(</span><span class="n">trainData</span><span class="p" data-group-id="0707820800-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="0707820800-2">]</span><span class="p" data-group-id="0707820800-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -1469,7 +1655,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L288" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L672" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1479,7 +1665,20 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="train/3-positional-arguments" class="section-heading">
+  <a href="#train/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/3-keyword-arguments" class="section-heading">
+  <a href="#train/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="7127575433-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="7127575433-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="0875449120-1">(</span><span class="n">trainData</span><span class="p" data-group-id="0875449120-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="0875449120-2">]</span><span class="p" data-group-id="0875449120-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -1491,7 +1690,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L306" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L641" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1501,7 +1700,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="5091913046-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="5091913046-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -1526,7 +1725,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1548,7 +1747,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1570,7 +1769,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1592,7 +1791,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1614,7 +1813,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1636,7 +1835,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_learnt_thetas!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1658,7 +1857,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1680,7 +1879,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getIterations!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1702,7 +1901,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getLearningRate!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1724,7 +1923,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMiniBatchSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1746,7 +1945,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRegularization!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1768,7 +1967,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTermCriteria!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L244" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1790,7 +1989,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainMethod!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L263" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1812,7 +2011,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L282" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1834,7 +2033,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L322" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1856,7 +2055,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1878,7 +2077,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L171" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L401" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1900,7 +2099,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L162" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L371" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1922,7 +2121,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L203" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L459" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1944,7 +2143,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L194" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L430" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1966,7 +2165,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L480" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1988,7 +2187,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L502" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2010,7 +2209,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setIterations!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L230" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L523" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2032,7 +2231,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setLearningRate!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L239" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L544" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2054,7 +2253,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMiniBatchSize!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L248" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L565" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2076,7 +2275,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRegularization!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L586" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2098,7 +2297,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTermCriteria!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L266" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L607" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2120,7 +2319,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTrainMethod!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L275" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L628" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2142,7 +2341,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L304" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L709" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2164,7 +2363,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L295" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L680" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2186,7 +2385,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L315" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L651" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2208,7 +2407,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L344" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L767" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2230,7 +2429,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_logisticregression.ex#L335" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_logisticregression.ex#L738" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2253,10 +2452,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_ml_logisticregression.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_logisticregression.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.ML.EM — Evision v0.1.5-dev</title>
+    <title>Evision.ML.EM — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.EM</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Clears the algorithm state</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,9 @@ Evision
           <a href="#getDefaultName/1" translate="no">getDefaultName(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -142,6 +147,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Reads algorithm parameters from a file storage</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +156,9 @@ Evision
           <a href="#save/2" translate="no">save(self, filename)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -158,6 +168,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -166,7 +179,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>simplified API for language bindings
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
 Has overloading in C++</p></div>
 
       </div>
@@ -184,6 +197,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -192,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -202,6 +217,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>  Creates empty %EM model.
+  The model should be trained then using StatModel::train(traindata, flags) method. Alternatively, you
+  can use one of the EM::train* methods or load it from file using Algorithm::load\&lt;EM&gt;(filename).</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -209,6 +228,8 @@ Has overloading in C++</p></div>
           <a href="#empty/1" translate="no">empty(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -218,6 +239,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setClustersNumber</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -225,6 +248,8 @@ Has overloading in C++</p></div>
           <a href="#getCovarianceMatrixType/1" translate="no">getCovarianceMatrixType(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setCovarianceMatrixType</p></div>
 
       </div>
 
@@ -234,6 +259,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>covs</strong>: vector_Mat.</li></ul><p>Returns covariation matrices
+  Returns vector of covariation matrices. Number of matrices is the number of gaussian mixtures,
+  each matrix is a square floating-point matrix NxN, where N is the space dimensionality.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -241,6 +270,10 @@ Has overloading in C++</p></div>
           <a href="#getMeans/1" translate="no">getMeans(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns the cluster centers (means of the Gaussian mixture)
+  Returns matrix with the number of rows equal to the number of mixtures and number of columns
+  equal to the space dimensionality.</p></div>
 
       </div>
 
@@ -250,6 +283,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setTermCriteria</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -257,6 +292,8 @@ Has overloading in C++</p></div>
           <a href="#getVarCount/1" translate="no">getVarCount(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns the number of variables in training samples</p></div>
 
       </div>
 
@@ -266,6 +303,9 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns weights of the mixtures
+  Returns vector with the number of elements equal to the number of mixtures.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -273,6 +313,8 @@ Has overloading in C++</p></div>
           <a href="#isClassifier/1" translate="no">isClassifier(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns true if the model is classifier</p></div>
 
       </div>
 
@@ -282,6 +324,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if the model is trained</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -289,6 +333,11 @@ Has overloading in C++</p></div>
           <a href="#load/1" translate="no">load(filepath)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filepath</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized EM from a file
+   Use EM::save to serialize and store an EM to disk.
+   Load the EM from this file again, by calling this function with the path to the file.
+   Optionally specify the node for the file containing the classifier</p></div>
 
       </div>
 
@@ -298,7 +347,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Loads and creates a serialized EM from a file
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filepath</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized EM from a file
    Use EM::save to serialize and store an EM to disk.
    Load the EM from this file again, by calling this function with the path to the file.
    Optionally specify the node for the file containing the classifier</p></div>
@@ -311,6 +360,9 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>sample</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>probs</strong>: UMat.</li></ul><p>Returns a likelihood logarithm value and an index of the most probable mixture component
+  for the given sample.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -319,7 +371,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns a likelihood logarithm value and an index of the most probable mixture component
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>sample</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>probs</strong>: UMat.</li></ul><p>Returns a likelihood logarithm value and an index of the most probable mixture component
   for the given sample.</p></div>
 
       </div>
@@ -330,6 +382,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Returns posterior probabilities for the provided samples</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -338,7 +392,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns posterior probabilities for the provided samples</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Returns posterior probabilities for the provided samples</p></div>
 
       </div>
 
@@ -348,6 +402,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getClustersNumber @see getClustersNumber</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -355,6 +411,8 @@ Has overloading in C++</p></div>
           <a href="#setCovarianceMatrixType/2" translate="no">setCovarianceMatrixType(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getCovarianceMatrixType @see getCovarianceMatrixType</p></div>
 
       </div>
 
@@ -364,6 +422,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getTermCriteria @see getTermCriteria</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -371,6 +431,8 @@ Has overloading in C++</p></div>
           <a href="#train/2" translate="no">train(self, trainData)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -380,6 +442,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -387,6 +451,8 @@ Has overloading in C++</p></div>
           <a href="#train/4" translate="no">train(self, samples, layout, responses)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -396,6 +462,11 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li><li><strong>means0</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>covs0</strong>: UMat.</li><li><strong>weights0</strong>: UMat.</li><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
+  This variation starts with Expectation step. You need to provide initial means \f$a_k\f$ of
+  mixture components. Optionally you can pass initial weights \f$\pi_k\f$ and covariance matrices
+  \f$S_k\f$ of mixture components.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -404,7 +475,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Estimate the Gaussian mixture parameters from a samples set.
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li><li><strong>means0</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>covs0</strong>: UMat.</li><li><strong>weights0</strong>: UMat.</li><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
   This variation starts with Expectation step. You need to provide initial means \f$a_k\f$ of
   mixture components. Optionally you can pass initial weights \f$\pi_k\f$ and covariance matrices
   \f$S_k\f$ of mixture components.</p></div>
@@ -417,6 +488,19 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
+  This variation starts with Expectation step. Initial values of the model parameters will be
+  estimated by the k-means algorithm.
+  Unlike many of the ML models, %EM is an unsupervised learning algorithm and it does not take
+  responses (class labels or function values) as input. Instead, it computes the <em>Maximum
+  Likelihood Estimate</em> of the Gaussian mixture parameters from an input sample set, stores all the
+  parameters inside the structure: \f$p_{i,k}\f$ in probs, \f$a_k\f$ in means , \f$S_k\f$ in
+  covs[k], \f$\pi_k\f$ in weights , and optionally computes the output &quot;class label&quot; for each
+  sample: \f$\texttt{labels}_i=\texttt{arg max}_k(p_{i,k}), i=1..N\f$ (indices of the most
+  probable mixture component for each sample).
+  The trained model can be used further for prediction, just like any other classifier. The
+  trained model is similar to the NormalBayesClassifier.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -425,7 +509,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Estimate the Gaussian mixture parameters from a samples set.
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
   This variation starts with Expectation step. Initial values of the model parameters will be
   estimated by the k-means algorithm.
   Unlike many of the ML models, %EM is an unsupervised learning algorithm and it does not take
@@ -446,6 +530,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li><li><strong>probs0</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
+  This variation starts with Maximization step. You need to provide initial probabilities
+  \f$p_{i,k}\f$ to use this option.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -454,7 +542,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Estimate the Gaussian mixture parameters from a samples set.
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li><li><strong>probs0</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
   This variation starts with Maximization step. You need to provide initial probabilities
   \f$p_{i,k}\f$ to use this option.</p></div>
 
@@ -860,7 +948,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -870,7 +958,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="0886757847-1">(</span><span class="p" data-group-id="0886757847-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -882,7 +970,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -892,7 +980,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="6835872409-1">(</span><span class="p" data-group-id="6835872409-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -904,7 +993,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L233" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L528" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -914,7 +1003,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="3514276772-1">(</span><span class="n">fn_</span><span class="p" data-group-id="3514276772-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -926,7 +1015,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L242" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L550" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -936,7 +1025,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="4260232455-1">(</span><span class="n">filename</span><span class="p" data-group-id="4260232455-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -948,7 +1038,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L490" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L1024" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -958,7 +1048,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="write/2-positional-arguments" class="section-heading">
+  <a href="#write/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/2-keyword-arguments" class="section-heading">
+  <a href="#write/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="8764589031-1">(</span><span class="n">fs</span><span class="p" data-group-id="8764589031-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="8764589031-2">]</span><span class="p" data-group-id="8764589031-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -970,7 +1073,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L481" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L995" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -980,8 +1083,20 @@ cv
 
   <section class="docstring">
 
-<p>simplified API for language bindings
-Has overloading in C++</p><ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="6509311943-1">(</span><span class="n">fs</span><span class="p" data-group-id="6509311943-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="6509311943-2">]</span><span class="p" data-group-id="6509311943-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="write/3-positional-arguments" class="section-heading">
+  <a href="#write/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/3-keyword-arguments" class="section-heading">
+  <a href="#write/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="1179586777-1">(</span><span class="n">fs</span><span class="p" data-group-id="1179586777-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="1179586777-2">]</span><span class="p" data-group-id="1179586777-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -1006,7 +1121,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1016,7 +1131,23 @@ cv.ml
 
   <section class="docstring">
 
-
+<h3 id="calcError/3-positional-arguments" class="section-heading">
+  <a href="#calcError/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/3-keyword-arguments" class="section-heading">
+  <a href="#calcError/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="8223913329-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="8223913329-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="8223913329-2">]</span><span class="p" data-group-id="8223913329-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -1028,7 +1159,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L28" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1038,13 +1169,23 @@ cv.ml
 
   <section class="docstring">
 
-<p>Computes error on the training or test dataset</p><ul><li><strong>data</strong>.</li><li><strong>test</strong>.
-  computed over the training subset of the data. Please note that if you loaded a completely
-  different dataset to evaluate already trained classifier, you will probably want not to set
-  the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
-  that the error is computed for the whole new set. Yes, this sounds a bit confusing.</li><li><strong>resp</strong>.
-The method uses StatModel::predict to compute the error. For regression models the error is
-computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</li><li><strong>resp</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="5061960620-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="5061960620-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="5061960620-2">]</span><span class="p" data-group-id="5061960620-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<h3 id="calcError/4-positional-arguments" class="section-heading">
+  <a href="#calcError/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/4-keyword-arguments" class="section-heading">
+  <a href="#calcError/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="4568356845-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="4568356845-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="4568356845-2">]</span><span class="p" data-group-id="4568356845-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -1056,7 +1197,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L106" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1066,7 +1207,9 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>  Creates empty %EM model.
+  The model should be trained then using StatModel::train(traindata, flags) method. Alternatively, you
+  can use one of the EM::train* methods or load it from file using Algorithm::load\&lt;EM&gt;(filename).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="0020416950-1">(</span><span class="p" data-group-id="0020416950-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -1078,7 +1221,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1088,7 +1231,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="8565115088-1">(</span><span class="p" data-group-id="8565115088-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getClustersNumber/1">
@@ -1100,7 +1243,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getClustersNumber(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1110,7 +1253,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setClustersNumber</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getClustersNumber</span><span class="p" data-group-id="7200316343-1">(</span><span class="p" data-group-id="7200316343-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCovarianceMatrixType/1">
@@ -1122,7 +1265,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getCovarianceMatrixType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1132,7 +1275,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setCovarianceMatrixType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCovarianceMatrixType</span><span class="p" data-group-id="8839636713-1">(</span><span class="p" data-group-id="8839636713-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCovs/1">
@@ -1144,7 +1287,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getCovs(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1154,7 +1297,21 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="getCovs/1-positional-arguments" class="section-heading">
+  <a href="#getCovs/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="getCovs/1-keyword-arguments" class="section-heading">
+  <a href="#getCovs/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>covs</strong>: vector_Mat.</li></ul><p>Returns covariation matrices
+  Returns vector of covariation matrices. Number of matrices is the number of gaussian mixtures,
+  each matrix is a square floating-point matrix NxN, where N is the space dimensionality.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCovs</span><span class="p" data-group-id="0960812513-1">(</span><span class="p" data-group-id="0960812513-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">covs</span><span class="p" data-group-id="0960812513-2">]</span><span class="p" data-group-id="0960812513-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">covs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getMeans/1">
@@ -1166,7 +1323,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getMeans(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1176,7 +1333,9 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns the cluster centers (means of the Gaussian mixture)
+  Returns matrix with the number of rows equal to the number of mixtures and number of columns
+  equal to the space dimensionality.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMeans</span><span class="p" data-group-id="4407509067-1">(</span><span class="p" data-group-id="4407509067-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTermCriteria/1">
@@ -1188,7 +1347,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getTermCriteria(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L248" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1198,7 +1357,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTermCriteria</span><span class="p" data-group-id="5459243103-1">(</span><span class="p" data-group-id="5459243103-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -1210,7 +1369,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1220,7 +1379,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="8179709354-1">(</span><span class="p" data-group-id="8179709354-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getWeights/1">
@@ -1232,7 +1391,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getWeights(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L287" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1242,7 +1401,8 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns weights of the mixtures
+  Returns vector with the number of elements equal to the number of mixtures.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWeights</span><span class="p" data-group-id="1417009018-1">(</span><span class="p" data-group-id="1417009018-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -1254,7 +1414,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L306" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1264,7 +1424,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="7127299401-1">(</span><span class="p" data-group-id="7127299401-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -1276,7 +1436,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L127" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L325" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1286,7 +1446,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="0082550830-1">(</span><span class="p" data-group-id="0082550830-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -1298,7 +1458,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L157" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L383" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1308,7 +1468,22 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="load/1-positional-arguments" class="section-heading">
+  <a href="#load/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filepath</strong>: String. </li></ul><h3 id="load/1-keyword-arguments" class="section-heading">
+  <a href="#load/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized EM from a file
+   Use EM::save to serialize and store an EM to disk.
+   Load the EM from this file again, by calling this function with the path to the file.
+   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="1751748830-1">(</span><span class="n">filepath</span><span class="p" data-group-id="1751748830-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="1751748830-2">]</span><span class="p" data-group-id="1751748830-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/2">
@@ -1320,7 +1495,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">load(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L353" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1330,10 +1505,22 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Loads and creates a serialized EM from a file
+<h3 id="load/2-positional-arguments" class="section-heading">
+  <a href="#load/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filepath</strong>: String. </li></ul><h3 id="load/2-keyword-arguments" class="section-heading">
+  <a href="#load/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized EM from a file
    Use EM::save to serialize and store an EM to disk.
    Load the EM from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p><ul><li><strong>filepath</strong>.</li><li><strong>nodeName</strong>.</li><li><strong>nodeName</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="0979719242-1">(</span><span class="n">filepath</span><span class="p" data-group-id="0979719242-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="0979719242-2">]</span><span class="p" data-group-id="0979719242-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="0714079315-1">(</span><span class="n">filepath</span><span class="p" data-group-id="0714079315-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="0714079315-2">]</span><span class="p" data-group-id="0714079315-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict2/2">
@@ -1345,7 +1532,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict2(self, sample)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L507" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1355,7 +1542,23 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="predict2/2-positional-arguments" class="section-heading">
+  <a href="#predict2/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>sample</strong>: UMat. </li></ul><h3 id="predict2/2-keyword-arguments" class="section-heading">
+  <a href="#predict2/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>probs</strong>: UMat.</li></ul><p>Returns a likelihood logarithm value and an index of the most probable mixture component
+  for the given sample.</p><pre><code class="makeup elixir" translate="no"><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">dims</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">dims</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
+</span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>  The method returns a two-element double vector. Zero element is a likelihood logarithm value for
+  the sample. First element is an index of the most probable mixture component for the given
+  sample.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict2</span><span class="p" data-group-id="4900906768-1">(</span><span class="n">sample</span><span class="p" data-group-id="4900906768-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="4900906768-2">]</span><span class="p" data-group-id="4900906768-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict2/3">
@@ -1367,7 +1570,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">predict2(self, sample, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L215" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L474" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1377,13 +1580,23 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Returns a likelihood logarithm value and an index of the most probable mixture component
-  for the given sample.</p><ul><li><strong>sample</strong>.
-  \f$1 \times dims\f$ or \f$dims \times 1\f$ size.</li><li><strong>probs</strong>.
-  given the sample. It has \f$1 \times nclusters\f$ size and CV_64FC1 type.
-The method returns a two-element double vector. Zero element is a likelihood logarithm value for
-the sample. First element is an index of the most probable mixture component for the given
-sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict2</span><span class="p" data-group-id="3197790953-1">(</span><span class="n">sample</span><span class="p" data-group-id="3197790953-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="3197790953-2">]</span><span class="p" data-group-id="3197790953-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
+<h3 id="predict2/3-positional-arguments" class="section-heading">
+  <a href="#predict2/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>sample</strong>: UMat. </li></ul><h3 id="predict2/3-keyword-arguments" class="section-heading">
+  <a href="#predict2/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>probs</strong>: UMat.</li></ul><p>Returns a likelihood logarithm value and an index of the most probable mixture component
+  for the given sample.</p><pre><code class="makeup elixir" translate="no"><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">dims</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">dims</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
+</span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>  The method returns a two-element double vector. Zero element is a likelihood logarithm value for
+  the sample. First element is an index of the most probable mixture component for the given
+  sample.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict2</span><span class="p" data-group-id="0684958646-1">(</span><span class="n">sample</span><span class="p" data-group-id="0684958646-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="0684958646-2">]</span><span class="p" data-group-id="0684958646-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -1395,7 +1608,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L441" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1405,7 +1618,19 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<h3 id="predict/2-positional-arguments" class="section-heading">
+  <a href="#predict/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/2-keyword-arguments" class="section-heading">
+  <a href="#predict/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Returns posterior probabilities for the provided samples</p><pre><code class="makeup elixir" translate="no"><span class="n">posterior</span><span class="w"> </span><span class="n">probabilities</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="4997589163-1">(</span><span class="n">samples</span><span class="p" data-group-id="4997589163-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="4997589163-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="4997589163-3">]</span><span class="p" data-group-id="4997589163-2">]</span><span class="p" data-group-id="4997589163-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -1417,7 +1642,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L412" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1427,8 +1652,19 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-<p>Returns posterior probabilities for the provided samples</p><ul><li><strong>samples</strong>.</li><li><strong>results</strong>.
-  posterior probabilities for each sample from the input</li><li><strong>flags</strong>.</li><li><strong>results</strong> : UMat</li><li><strong>flags</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="3001882801-1">(</span><span class="n">samples</span><span class="p" data-group-id="3001882801-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="3001882801-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="3001882801-3">]</span><span class="p" data-group-id="3001882801-2">]</span><span class="p" data-group-id="3001882801-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<h3 id="predict/3-positional-arguments" class="section-heading">
+  <a href="#predict/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/3-keyword-arguments" class="section-heading">
+  <a href="#predict/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Returns posterior probabilities for the provided samples</p><pre><code class="makeup elixir" translate="no"><span class="n">posterior</span><span class="w"> </span><span class="n">probabilities</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="4348589063-1">(</span><span class="n">samples</span><span class="p" data-group-id="4348589063-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="4348589063-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="4348589063-3">]</span><span class="p" data-group-id="4348589063-2">]</span><span class="p" data-group-id="4348589063-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setClustersNumber/2">
@@ -1440,7 +1676,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">setClustersNumber(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L571" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1450,7 +1686,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<p>@copybrief getClustersNumber @see getClustersNumber</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setClustersNumber</span><span class="p" data-group-id="7726927538-1">(</span><span class="n">val</span><span class="p" data-group-id="7726927538-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setCovarianceMatrixType/2">
@@ -1462,7 +1698,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">setCovarianceMatrixType(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L592" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1472,7 +1708,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<p>@copybrief getCovarianceMatrixType @see getCovarianceMatrixType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setCovarianceMatrixType</span><span class="p" data-group-id="6964375698-1">(</span><span class="n">val</span><span class="p" data-group-id="6964375698-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setTermCriteria/2">
@@ -1484,7 +1720,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">setTermCriteria(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L269" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L613" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1494,7 +1730,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<p>@copybrief getTermCriteria @see getTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTermCriteria</span><span class="p" data-group-id="2536086120-1">(</span><span class="n">val</span><span class="p" data-group-id="2536086120-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -1506,7 +1742,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L298" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L694" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1516,7 +1752,20 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<h3 id="train/2-positional-arguments" class="section-heading">
+  <a href="#train/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/2-keyword-arguments" class="section-heading">
+  <a href="#train/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="5993811394-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="5993811394-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="3517498951-1">(</span><span class="n">trainData</span><span class="p" data-group-id="3517498951-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="3517498951-2">]</span><span class="p" data-group-id="3517498951-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -1528,7 +1777,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L289" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L665" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1538,7 +1787,20 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<h3 id="train/3-positional-arguments" class="section-heading">
+  <a href="#train/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/3-keyword-arguments" class="section-heading">
+  <a href="#train/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="8708167801-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="8708167801-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="2632410145-1">(</span><span class="n">trainData</span><span class="p" data-group-id="2632410145-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="2632410145-2">]</span><span class="p" data-group-id="2632410145-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -1550,7 +1812,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L307" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L634" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1560,7 +1822,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="4710883517-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="4710883517-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainE/3">
@@ -1572,7 +1834,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">trainE(self, samples, means0)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L364" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L791" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1582,7 +1844,34 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<h3 id="trainE/3-positional-arguments" class="section-heading">
+  <a href="#trainE/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li><li><strong>means0</strong>: UMat. </li></ul><h3 id="trainE/3-keyword-arguments" class="section-heading">
+  <a href="#trainE/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>covs0</strong>: UMat.</li><li><strong>weights0</strong>: UMat.</li><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
+  This variation starts with Expectation step. You need to provide initial means \f$a_k\f$ of
+  mixture components. Optionally you can pass initial weights \f$\pi_k\f$ and covariance matrices
+  \f$S_k\f$ of mixture components.</p><pre><code class="makeup elixir" translate="no"><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w">
+</span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nclusters</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">dims</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w">
+</span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">covariance</span><span class="w"> </span><span class="n">matrices</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">dims</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">dims</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrices</span><span class="w">
+</span><span class="k" data-group-id="6105276275-1">do</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w">
+</span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nclusters</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
+</span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="6105276275-2">{</span><span class="n">labels</span><span class="p" data-group-id="6105276275-2">}</span><span class="err">\</span><span class="c">_i</span><span class="o">=</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="6105276275-3">{</span><span class="n">arg</span><span class="w"> </span><span class="n">max</span><span class="p" data-group-id="6105276275-3">}</span><span class="err">\</span><span class="c">_k</span><span class="p" data-group-id="6105276275-4">(</span><span class="n">p</span><span class="err">\</span><span class="bp">_</span><span class="p" data-group-id="6105276275-5">{</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p" data-group-id="6105276275-5">}</span><span class="p" data-group-id="6105276275-4">)</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">..</span><span class="nc">N</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p" data-group-id="6105276275-6">(</span><span class="n">indices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span><span class="w"> </span><span class="n">probable</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="p" data-group-id="6105276275-6">)</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_32SC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainE</span><span class="p" data-group-id="2616667320-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">means0</span><span class="p" data-group-id="2616667320-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">covs0</span><span class="p" data-group-id="2616667320-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">weights0</span><span class="p" data-group-id="2616667320-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="2616667320-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="2616667320-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="2616667320-6">]</span><span class="p" data-group-id="2616667320-5">]</span><span class="p" data-group-id="2616667320-4">]</span><span class="p" data-group-id="2616667320-3">]</span><span class="p" data-group-id="2616667320-2">]</span><span class="p" data-group-id="2616667320-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainE/4">
@@ -1594,7 +1883,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">trainE(self, samples, means0, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L354" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L742" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1604,23 +1893,34 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-<p>Estimate the Gaussian mixture parameters from a samples set.
+<h3 id="trainE/4-positional-arguments" class="section-heading">
+  <a href="#trainE/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li><li><strong>means0</strong>: UMat. </li></ul><h3 id="trainE/4-keyword-arguments" class="section-heading">
+  <a href="#trainE/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>covs0</strong>: UMat.</li><li><strong>weights0</strong>: UMat.</li><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
   This variation starts with Expectation step. You need to provide initial means \f$a_k\f$ of
   mixture components. Optionally you can pass initial weights \f$\pi_k\f$ and covariance matrices
-  \f$S_k\f$ of mixture components.</p><ul><li><strong>samples</strong>.
-  one-channel matrix, each row of which is a sample. If the matrix does not have CV_64F type
-  it will be converted to the inner matrix of such type for the further computing.</li><li><strong>means0</strong>.
-  \f$nclusters \times dims\f$ size. If the matrix does not have CV_64F type it will be
-  converted to the inner matrix of such type for the further computing.</li><li><strong>covs0</strong>.
-  covariance matrices is a one-channel matrix of \f$dims \times dims\f$ size. If the matrices
-  do not have CV_64F type they will be converted to the inner matrices of such type for the
-  further computing.</li><li><strong>weights0</strong>.
-  floating-point matrix with \f$1 \times nclusters\f$ or \f$nclusters \times 1\f$ size.</li><li><strong>logLikelihoods</strong>.
-  each sample. It has \f$nsamples \times 1\f$ size and CV_64FC1 type.</li><li><strong>labels</strong>.
-  \f$\texttt{labels}_i=\texttt{arg max}_k(p_{i,k}), i=1..N\f$ (indices of the most probable
-  mixture component for each sample). It has \f$nsamples \times 1\f$ size and CV_32SC1 type.</li><li><strong>probs</strong>.
-  mixture component given the each sample. It has \f$nsamples \times nclusters\f$ size and
-  CV_64FC1 type.</li><li><strong>covs0</strong> : UMat</li><li><strong>weights0</strong> : UMat</li><li><strong>logLikelihoods</strong> : UMat</li><li><strong>labels</strong> : UMat</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainE</span><span class="p" data-group-id="3689978125-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">means0</span><span class="p" data-group-id="3689978125-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">covs0</span><span class="p" data-group-id="3689978125-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">weights0</span><span class="p" data-group-id="3689978125-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="3689978125-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="3689978125-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="3689978125-6">]</span><span class="p" data-group-id="3689978125-5">]</span><span class="p" data-group-id="3689978125-4">]</span><span class="p" data-group-id="3689978125-3">]</span><span class="p" data-group-id="3689978125-2">]</span><span class="p" data-group-id="3689978125-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
+  \f$S_k\f$ of mixture components.</p><pre><code class="makeup elixir" translate="no"><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w">
+</span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nclusters</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">dims</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w">
+</span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">covariance</span><span class="w"> </span><span class="n">matrices</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">dims</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">dims</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrices</span><span class="w">
+</span><span class="k" data-group-id="9257323786-1">do</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w">
+</span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nclusters</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
+</span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="9257323786-2">{</span><span class="n">labels</span><span class="p" data-group-id="9257323786-2">}</span><span class="err">\</span><span class="c">_i</span><span class="o">=</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="9257323786-3">{</span><span class="n">arg</span><span class="w"> </span><span class="n">max</span><span class="p" data-group-id="9257323786-3">}</span><span class="err">\</span><span class="c">_k</span><span class="p" data-group-id="9257323786-4">(</span><span class="n">p</span><span class="err">\</span><span class="bp">_</span><span class="p" data-group-id="9257323786-5">{</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p" data-group-id="9257323786-5">}</span><span class="p" data-group-id="9257323786-4">)</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">..</span><span class="nc">N</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p" data-group-id="9257323786-6">(</span><span class="n">indices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span><span class="w"> </span><span class="n">probable</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="p" data-group-id="9257323786-6">)</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_32SC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainE</span><span class="p" data-group-id="4719027319-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">means0</span><span class="p" data-group-id="4719027319-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">covs0</span><span class="p" data-group-id="4719027319-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">weights0</span><span class="p" data-group-id="4719027319-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="4719027319-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="4719027319-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="4719027319-6">]</span><span class="p" data-group-id="4719027319-5">]</span><span class="p" data-group-id="4719027319-4">]</span><span class="p" data-group-id="4719027319-3">]</span><span class="p" data-group-id="4719027319-2">]</span><span class="p" data-group-id="4719027319-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainEM/2">
@@ -1632,7 +1932,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">trainEM(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L416" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L886" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1642,7 +1942,36 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<h3 id="trainEM/2-positional-arguments" class="section-heading">
+  <a href="#trainEM/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="trainEM/2-keyword-arguments" class="section-heading">
+  <a href="#trainEM/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
+  This variation starts with Expectation step. Initial values of the model parameters will be
+  estimated by the k-means algorithm.
+  Unlike many of the ML models, %EM is an unsupervised learning algorithm and it does not take
+  responses (class labels or function values) as input. Instead, it computes the <em>Maximum
+  Likelihood Estimate</em> of the Gaussian mixture parameters from an input sample set, stores all the
+  parameters inside the structure: \f$p_{i,k}\f$ in probs, \f$a_k\f$ in means , \f$S_k\f$ in
+  covs[k], \f$\pi_k\f$ in weights , and optionally computes the output &quot;class label&quot; for each
+  sample: \f$\texttt{labels}_i=\texttt{arg max}_k(p_{i,k}), i=1..N\f$ (indices of the most
+  probable mixture component for each sample).
+  The trained model can be used further for prediction, just like any other classifier. The
+  trained model is similar to the NormalBayesClassifier.</p><pre><code class="makeup elixir" translate="no"><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w">
+</span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="2105508543-1">{</span><span class="n">labels</span><span class="p" data-group-id="2105508543-1">}</span><span class="err">\</span><span class="c">_i</span><span class="o">=</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="2105508543-2">{</span><span class="n">arg</span><span class="w"> </span><span class="n">max</span><span class="p" data-group-id="2105508543-2">}</span><span class="err">\</span><span class="c">_k</span><span class="p" data-group-id="2105508543-3">(</span><span class="n">p</span><span class="err">\</span><span class="bp">_</span><span class="p" data-group-id="2105508543-4">{</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p" data-group-id="2105508543-4">}</span><span class="p" data-group-id="2105508543-3">)</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">..</span><span class="nc">N</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p" data-group-id="2105508543-5">(</span><span class="n">indices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span><span class="w"> </span><span class="n">probable</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="p" data-group-id="2105508543-5">)</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_32SC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainEM</span><span class="p" data-group-id="5716343147-1">(</span><span class="n">samples</span><span class="p" data-group-id="5716343147-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="5716343147-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="5716343147-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="5716343147-4">]</span><span class="p" data-group-id="5716343147-3">]</span><span class="p" data-group-id="5716343147-2">]</span><span class="p" data-group-id="5716343147-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainEM/3">
@@ -1654,7 +1983,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">trainEM(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L407" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L839" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1664,7 +1993,19 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-<p>Estimate the Gaussian mixture parameters from a samples set.
+<h3 id="trainEM/3-positional-arguments" class="section-heading">
+  <a href="#trainEM/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="trainEM/3-keyword-arguments" class="section-heading">
+  <a href="#trainEM/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
   This variation starts with Expectation step. Initial values of the model parameters will be
   estimated by the k-means algorithm.
   Unlike many of the ML models, %EM is an unsupervised learning algorithm and it does not take
@@ -1675,14 +2016,13 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
   sample: \f$\texttt{labels}_i=\texttt{arg max}_k(p_{i,k}), i=1..N\f$ (indices of the most
   probable mixture component for each sample).
   The trained model can be used further for prediction, just like any other classifier. The
-  trained model is similar to the NormalBayesClassifier.</p><ul><li><strong>samples</strong>.
-  one-channel matrix, each row of which is a sample. If the matrix does not have CV_64F type
-  it will be converted to the inner matrix of such type for the further computing.</li><li><strong>logLikelihoods</strong>.
-  each sample. It has \f$nsamples \times 1\f$ size and CV_64FC1 type.</li><li><strong>labels</strong>.
-  \f$\texttt{labels}_i=\texttt{arg max}_k(p_{i,k}), i=1..N\f$ (indices of the most probable
-  mixture component for each sample). It has \f$nsamples \times 1\f$ size and CV_32SC1 type.</li><li><strong>probs</strong>.
-  mixture component given the each sample. It has \f$nsamples \times nclusters\f$ size and
-  CV_64FC1 type.</li><li><strong>logLikelihoods</strong> : UMat</li><li><strong>labels</strong> : UMat</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainEM</span><span class="p" data-group-id="0116708734-1">(</span><span class="n">samples</span><span class="p" data-group-id="0116708734-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="0116708734-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="0116708734-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="0116708734-4">]</span><span class="p" data-group-id="0116708734-3">]</span><span class="p" data-group-id="0116708734-2">]</span><span class="p" data-group-id="0116708734-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
+  trained model is similar to the NormalBayesClassifier.</p><pre><code class="makeup elixir" translate="no"><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w">
+</span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="0998084874-1">{</span><span class="n">labels</span><span class="p" data-group-id="0998084874-1">}</span><span class="err">\</span><span class="c">_i</span><span class="o">=</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="0998084874-2">{</span><span class="n">arg</span><span class="w"> </span><span class="n">max</span><span class="p" data-group-id="0998084874-2">}</span><span class="err">\</span><span class="c">_k</span><span class="p" data-group-id="0998084874-3">(</span><span class="n">p</span><span class="err">\</span><span class="bp">_</span><span class="p" data-group-id="0998084874-4">{</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p" data-group-id="0998084874-4">}</span><span class="p" data-group-id="0998084874-3">)</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">..</span><span class="nc">N</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p" data-group-id="0998084874-5">(</span><span class="n">indices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span><span class="w"> </span><span class="n">probable</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="p" data-group-id="0998084874-5">)</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_32SC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainEM</span><span class="p" data-group-id="6593271987-1">(</span><span class="n">samples</span><span class="p" data-group-id="6593271987-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="6593271987-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="6593271987-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="6593271987-4">]</span><span class="p" data-group-id="6593271987-3">]</span><span class="p" data-group-id="6593271987-2">]</span><span class="p" data-group-id="6593271987-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainM/3">
@@ -1694,7 +2034,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">trainM(self, samples, probs0)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L460" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L965" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1704,7 +2044,27 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-
+<h3 id="trainM/3-positional-arguments" class="section-heading">
+  <a href="#trainM/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li><li><strong>probs0</strong>: UMat. </li></ul><h3 id="trainM/3-keyword-arguments" class="section-heading">
+  <a href="#trainM/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
+  This variation starts with Maximization step. You need to provide initial probabilities
+  \f$p_{i,k}\f$ to use this option.</p><pre><code class="makeup elixir" translate="no"><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w">
+</span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="7380374008-1">{</span><span class="n">labels</span><span class="p" data-group-id="7380374008-1">}</span><span class="err">\</span><span class="c">_i</span><span class="o">=</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="7380374008-2">{</span><span class="n">arg</span><span class="w"> </span><span class="n">max</span><span class="p" data-group-id="7380374008-2">}</span><span class="err">\</span><span class="c">_k</span><span class="p" data-group-id="7380374008-3">(</span><span class="n">p</span><span class="err">\</span><span class="bp">_</span><span class="p" data-group-id="7380374008-4">{</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p" data-group-id="7380374008-4">}</span><span class="p" data-group-id="7380374008-3">)</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">..</span><span class="nc">N</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p" data-group-id="7380374008-5">(</span><span class="n">indices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span><span class="w"> </span><span class="n">probable</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="p" data-group-id="7380374008-5">)</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_32SC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainM</span><span class="p" data-group-id="1454318190-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">probs0</span><span class="p" data-group-id="1454318190-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="1454318190-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="1454318190-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="1454318190-4">]</span><span class="p" data-group-id="1454318190-3">]</span><span class="p" data-group-id="1454318190-2">]</span><span class="p" data-group-id="1454318190-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainM/4">
@@ -1716,7 +2076,7 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
     </a>
     <h1 class="signature" translate="no">trainM(self, samples, probs0, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L450" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L925" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1726,16 +2086,27 @@ sample.</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for 
 
   <section class="docstring">
 
-<p>Estimate the Gaussian mixture parameters from a samples set.
+<h3 id="trainM/4-positional-arguments" class="section-heading">
+  <a href="#trainM/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li><li><strong>probs0</strong>: UMat. </li></ul><h3 id="trainM/4-keyword-arguments" class="section-heading">
+  <a href="#trainM/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>logLikelihoods</strong>: UMat.</li><li><strong>labels</strong>: UMat.</li><li><strong>probs</strong>: UMat.</li></ul><p>Estimate the Gaussian mixture parameters from a samples set.
   This variation starts with Maximization step. You need to provide initial probabilities
-  \f$p_{i,k}\f$ to use this option.</p><ul><li><strong>samples</strong>.
-  one-channel matrix, each row of which is a sample. If the matrix does not have CV_64F type
-  it will be converted to the inner matrix of such type for the further computing.</li><li><strong>probs0</strong>.</li><li><strong>logLikelihoods</strong>.
-  each sample. It has \f$nsamples \times 1\f$ size and CV_64FC1 type.</li><li><strong>labels</strong>.
-  \f$\texttt{labels}_i=\texttt{arg max}_k(p_{i,k}), i=1..N\f$ (indices of the most probable
-  mixture component for each sample). It has \f$nsamples \times 1\f$ size and CV_32SC1 type.</li><li><strong>probs</strong>.
-  mixture component given the each sample. It has \f$nsamples \times nclusters\f$ size and
-  CV_64FC1 type.</li><li><strong>logLikelihoods</strong> : UMat</li><li><strong>labels</strong> : UMat</li><li><strong>probs</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainM</span><span class="p" data-group-id="8246565049-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">probs0</span><span class="p" data-group-id="8246565049-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="8246565049-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="8246565049-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="8246565049-4">]</span><span class="p" data-group-id="8246565049-3">]</span><span class="p" data-group-id="8246565049-2">]</span><span class="p" data-group-id="8246565049-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
+  \f$p_{i,k}\f$ to use this option.</p><pre><code class="makeup elixir" translate="no"><span class="n">one</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="nc">CV_64F</span><span class="w"> </span><span class="n">type</span><span class="w">
+</span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">computing</span><span class="o">.</span><span class="w">
+</span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="1803204069-1">{</span><span class="n">labels</span><span class="p" data-group-id="1803204069-1">}</span><span class="err">\</span><span class="c">_i</span><span class="o">=</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="1803204069-2">{</span><span class="n">arg</span><span class="w"> </span><span class="n">max</span><span class="p" data-group-id="1803204069-2">}</span><span class="err">\</span><span class="c">_k</span><span class="p" data-group-id="1803204069-3">(</span><span class="n">p</span><span class="err">\</span><span class="bp">_</span><span class="p" data-group-id="1803204069-4">{</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p" data-group-id="1803204069-4">}</span><span class="p" data-group-id="1803204069-3">)</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">..</span><span class="nc">N</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p" data-group-id="1803204069-5">(</span><span class="n">indices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">most</span><span class="w"> </span><span class="n">probable</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="p" data-group-id="1803204069-5">)</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="mi">1</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">CV_32SC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span><span class="w">
+</span><span class="n">mixture</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="n">nsamples</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="n">nclusters</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="ow">and</span><span class="w">
+</span><span class="nc">CV_64FC1</span><span class="w"> </span><span class="n">type</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainM</span><span class="p" data-group-id="6298388369-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">probs0</span><span class="p" data-group-id="6298388369-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p" data-group-id="6298388369-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p" data-group-id="6298388369-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="p" data-group-id="6298388369-4">]</span><span class="p" data-group-id="6298388369-3">]</span><span class="p" data-group-id="6298388369-2">]</span><span class="p" data-group-id="6298388369-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">logLikelihoods</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span></code></pre>
   </section>
 </section>
 
@@ -1760,7 +2131,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1782,7 +2153,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1804,7 +2175,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1826,7 +2197,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1848,7 +2219,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1870,7 +2241,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getClustersNumber!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1892,7 +2263,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCovarianceMatrixType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1914,7 +2285,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCovs!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L194" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1936,7 +2307,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L214" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1958,7 +2329,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMeans!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1980,7 +2351,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTermCriteria!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L254" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2002,7 +2373,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L273" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2024,7 +2395,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getWeights!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L293" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2046,7 +2417,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L312" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2068,7 +2439,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L331" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2090,7 +2461,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L164" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L391" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2112,7 +2483,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L155" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L361" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2134,7 +2505,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict2!(self, sample)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L231" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L515" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2156,7 +2527,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict2!(self, sample, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L222" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L482" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2178,7 +2549,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L449" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2200,7 +2571,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L420" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2222,7 +2593,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L240" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2244,7 +2615,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L558" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2266,7 +2637,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setClustersNumber!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L579" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2288,7 +2659,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setCovarianceMatrixType!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L600" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2310,7 +2681,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTermCriteria!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L276" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L621" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2332,7 +2703,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L702" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2354,7 +2725,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L673" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2376,7 +2747,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L644" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2398,7 +2769,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainE!(self, samples, means0)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L372" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L800" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2420,7 +2791,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainE!(self, samples, means0, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L362" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L751" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2442,7 +2813,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainEM!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L423" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L894" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2464,7 +2835,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainEM!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L414" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L847" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2486,7 +2857,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainM!(self, samples, probs0)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L974" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2508,7 +2879,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainM!(self, samples, probs0, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L458" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L934" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2530,7 +2901,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L497" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L1032" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2552,7 +2923,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_em.ex#L488" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_em.ex#L1003" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2575,10 +2946,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_ml_em.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_em.ex">(current file)</a>
 
             </span>
 

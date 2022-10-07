@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.DNN.TextRecognitionModel — Evision v0.1.5-dev</title>
+    <title>Evision.DNN.TextRecognitionModel — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.TextRecognitionModel</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,6 +122,48 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#dnn_TextRecognitionModel!/1" translate="no">dnn_TextRecognitionModel!(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_TextRecognitionModel/1"><code class="inline">dnn_TextRecognitionModel/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextRecognitionModel!/2" translate="no">dnn_TextRecognitionModel!(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_TextRecognitionModel/2"><code class="inline">dnn_TextRecognitionModel/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextRecognitionModel/1" translate="no">dnn_TextRecognitionModel(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: string. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: string.</li></ul><p>Create text recognition model from network represented in one of the supported formats
+   Call setDecodeType() and setVocabulary() after constructor to initialize the decoding method</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextRecognitionModel/2" translate="no">dnn_TextRecognitionModel(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: string. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: string.</li></ul><p>Create text recognition model from network represented in one of the supported formats
+   Call setDecodeType() and setVocabulary() after constructor to initialize the decoding method</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#getDecodeType!/1" translate="no">getDecodeType!(self)</a>
 
         </div>
@@ -135,6 +177,9 @@ Evision
           <a href="#getDecodeType/1" translate="no">getDecodeType(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Get the decoding method
+@return the decoding method</p></div>
 
       </div>
 
@@ -153,6 +198,9 @@ Evision
           <a href="#getVocabulary/1" translate="no">getVocabulary(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Get the vocabulary for recognition.
+@return vocabulary the associated vocabulary</p></div>
 
       </div>
 
@@ -182,6 +230,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Given the @p input frame, create input blob, run net and return recognition result
+@return The text recognition result</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -189,6 +240,8 @@ Evision
           <a href="#recognize/3" translate="no">recognize(self, frame, roiRects)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Given the @p input frame, create input blob, run net and return recognition result</p></div>
 
       </div>
 
@@ -218,6 +271,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>beamSize</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>vocPruneSize</strong>: int.</li></ul><p>Set the decoding method options for <code class="inline">&quot;CTC-prefix-beam-search&quot;</code> decode usage</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -226,7 +281,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Set the decoding method options for <code class="inline">&quot;CTC-prefix-beam-search&quot;</code> decode usage</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>beamSize</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>vocPruneSize</strong>: int.</li></ul><p>Set the decoding method options for <code class="inline">&quot;CTC-prefix-beam-search&quot;</code> decode usage</p></div>
 
       </div>
 
@@ -246,6 +301,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Set the decoding method of translating the network output into string</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -264,44 +321,7 @@ Evision
 
         </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textRecognitionModel!/1" translate="no">textRecognitionModel!(model)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#textRecognitionModel/1"><code class="inline">textRecognitionModel/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textRecognitionModel!/2" translate="no">textRecognitionModel!(model, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#textRecognitionModel/2"><code class="inline">textRecognitionModel/2</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textRecognitionModel/1" translate="no">textRecognitionModel(model)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textRecognitionModel/2" translate="no">textRecognitionModel(model, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Create text recognition model from network represented in one of the supported formats
-   Call setDecodeType() and setVocabulary() after constructor to initialize the decoding method</p></div>
+          <div class="summary-synopsis"><p>Set the vocabulary for recognition.</p></div>
 
       </div>
 
@@ -319,6 +339,120 @@ Evision
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="dnn_TextRecognitionModel!/1">
+
+  <div class="detail-header">
+    <a href="#dnn_TextRecognitionModel!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextRecognitionModel!(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L58" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_TextRecognitionModel/1"><code class="inline">dnn_TextRecognitionModel/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_TextRecognitionModel!/2">
+
+  <div class="detail-header">
+    <a href="#dnn_TextRecognitionModel!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextRecognitionModel!(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L30" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_TextRecognitionModel/2"><code class="inline">dnn_TextRecognitionModel/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_TextRecognitionModel/1">
+
+  <div class="detail-header">
+    <a href="#dnn_TextRecognitionModel/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextRecognitionModel(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L50" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="dnn_TextRecognitionModel/1-positional-arguments" class="section-heading">
+  <a href="#dnn_TextRecognitionModel/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: string. </li></ul><h3 id="dnn_TextRecognitionModel/1-keyword-arguments" class="section-heading">
+  <a href="#dnn_TextRecognitionModel/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: string.</li></ul><p>Create text recognition model from network represented in one of the supported formats
+   Call setDecodeType() and setVocabulary() after constructor to initialize the decoding method</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextRecognitionModel</span><span class="p" data-group-id="6063696665-1">(</span><span class="n">model</span><span class="p" data-group-id="6063696665-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="6063696665-2">]</span><span class="p" data-group-id="6063696665-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextRecognitionModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="dnn_TextRecognitionModel/2">
+
+  <div class="detail-header">
+    <a href="#dnn_TextRecognitionModel/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextRecognitionModel(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="dnn_TextRecognitionModel/2-positional-arguments" class="section-heading">
+  <a href="#dnn_TextRecognitionModel/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: string. </li></ul><h3 id="dnn_TextRecognitionModel/2-keyword-arguments" class="section-heading">
+  <a href="#dnn_TextRecognitionModel/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: string.</li></ul><p>Create text recognition model from network represented in one of the supported formats
+   Call setDecodeType() and setVocabulary() after constructor to initialize the decoding method</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextRecognitionModel</span><span class="p" data-group-id="4112591936-1">(</span><span class="n">model</span><span class="p" data-group-id="4112591936-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="4112591936-2">]</span><span class="p" data-group-id="4112591936-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextRecognitionModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
 <section class="detail" id="getDecodeType!/1">
 
   <div class="detail-header">
@@ -328,7 +462,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDecodeType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -350,7 +484,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDecodeType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -360,7 +494,8 @@ Functions
 
   <section class="docstring">
 
-
+<p>Get the decoding method
+@return the decoding method</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDecodeType</span><span class="p" data-group-id="9302088306-1">(</span><span class="p" data-group-id="9302088306-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVocabulary!/1">
@@ -372,7 +507,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVocabulary!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -394,7 +529,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVocabulary(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L42" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L92" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -404,7 +539,8 @@ Functions
 
   <section class="docstring">
 
-
+<p>Get the vocabulary for recognition.
+@return vocabulary the associated vocabulary</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVocabulary</span><span class="p" data-group-id="7323514200-1">(</span><span class="p" data-group-id="7323514200-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="recognize!/2">
@@ -416,7 +552,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">recognize!(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -438,7 +574,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">recognize!(self, frame, roiRects)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -460,7 +596,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">recognize(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L134" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -470,7 +606,8 @@ Functions
 
   <section class="docstring">
 
-
+<p>Given the @p input frame, create input blob, run net and return recognition result
+@return The text recognition result</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">recognize</span><span class="p" data-group-id="6584710386-1">(</span><span class="n">frame</span><span class="p" data-group-id="6584710386-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="recognize/3">
@@ -482,7 +619,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">recognize(self, frame, roiRects)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -492,7 +629,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Given the @p input frame, create input blob, run net and return recognition result</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">recognize</span><span class="p" data-group-id="8131391041-1">(</span><span class="n">frame</span><span class="p">,</span><span class="w"> </span><span class="n">roiRects</span><span class="p" data-group-id="8131391041-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setDecodeOptsCTCPrefixBeamSearch!/2">
@@ -504,7 +641,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDecodeOptsCTCPrefixBeamSearch!(self, beamSize)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L198" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -526,7 +663,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDecodeOptsCTCPrefixBeamSearch!(self, beamSize, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L170" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -548,7 +685,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDecodeOptsCTCPrefixBeamSearch(self, beamSize)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L190" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -558,7 +695,19 @@ Functions
 
   <section class="docstring">
 
-
+<h3 id="setDecodeOptsCTCPrefixBeamSearch/2-positional-arguments" class="section-heading">
+  <a href="#setDecodeOptsCTCPrefixBeamSearch/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>beamSize</strong>: int. </li></ul><h3 id="setDecodeOptsCTCPrefixBeamSearch/2-keyword-arguments" class="section-heading">
+  <a href="#setDecodeOptsCTCPrefixBeamSearch/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>vocPruneSize</strong>: int.</li></ul><p>Set the decoding method options for <code class="inline">&quot;CTC-prefix-beam-search&quot;</code> decode usage</p><pre><code class="makeup elixir" translate="no"><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">vocPruneSize</span><span class="w"> </span><span class="n">tokens</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="n">step</span><span class="p">,</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">vocPruneSize</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">stands</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">prune</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDecodeOptsCTCPrefixBeamSearch</span><span class="p" data-group-id="2324138609-1">(</span><span class="n">beamSize</span><span class="p" data-group-id="2324138609-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">vocPruneSize</span><span class="p" data-group-id="2324138609-2">]</span><span class="p" data-group-id="2324138609-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setDecodeOptsCTCPrefixBeamSearch/3">
@@ -570,7 +719,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDecodeOptsCTCPrefixBeamSearch(self, beamSize, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -580,8 +729,19 @@ Functions
 
   <section class="docstring">
 
-<p>Set the decoding method options for <code class="inline">&quot;CTC-prefix-beam-search&quot;</code> decode usage</p><ul><li><strong>beamSize</strong>.</li><li><strong>vocPruneSize</strong>.
-   only take top @p vocPruneSize tokens in each search step, @p vocPruneSize &lt;= 0 stands for disable this prune.</li><li><strong>vocPruneSize</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDecodeOptsCTCPrefixBeamSearch</span><span class="p" data-group-id="1411894242-1">(</span><span class="n">beamSize</span><span class="p" data-group-id="1411894242-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">vocPruneSize</span><span class="p" data-group-id="1411894242-2">]</span><span class="p" data-group-id="1411894242-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="setDecodeOptsCTCPrefixBeamSearch/3-positional-arguments" class="section-heading">
+  <a href="#setDecodeOptsCTCPrefixBeamSearch/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>beamSize</strong>: int. </li></ul><h3 id="setDecodeOptsCTCPrefixBeamSearch/3-keyword-arguments" class="section-heading">
+  <a href="#setDecodeOptsCTCPrefixBeamSearch/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>vocPruneSize</strong>: int.</li></ul><p>Set the decoding method options for <code class="inline">&quot;CTC-prefix-beam-search&quot;</code> decode usage</p><pre><code class="makeup elixir" translate="no"><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">take</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">vocPruneSize</span><span class="w"> </span><span class="n">tokens</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="n">step</span><span class="p">,</span><span class="w"> </span><span class="na">@p</span><span class="w"> </span><span class="n">vocPruneSize</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">stands</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">prune</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDecodeOptsCTCPrefixBeamSearch</span><span class="p" data-group-id="1304215360-1">(</span><span class="n">beamSize</span><span class="p" data-group-id="1304215360-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">vocPruneSize</span><span class="p" data-group-id="1304215360-2">]</span><span class="p" data-group-id="1304215360-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setDecodeType!/2">
@@ -593,7 +753,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDecodeType!(self, decodeType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L221" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -615,7 +775,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDecodeType(self, decodeType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L213" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -625,7 +785,8 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set the decoding method of translating the network output into string</p><pre><code class="makeup elixir" translate="no"><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="s">&quot;CTC-greedy&quot;</span><span class="err">`</span><span class="w"> </span><span class="n">greedy</span><span class="w"> </span><span class="n">decoding</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">CTC</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">methods</span><span class="w">
+    </span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="s">&quot;CTC-prefix-beam-search&quot;</span><span class="err">`</span><span class="w"> </span><span class="nc">Prefix</span><span class="w"> </span><span class="n">beam</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="n">decoding</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">CTC</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">methods</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDecodeType</span><span class="p" data-group-id="9161253106-1">(</span><span class="n">decodeType</span><span class="p" data-group-id="9161253106-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setVocabulary!/2">
@@ -637,7 +798,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVocabulary!(self, vocabulary)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L242" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -659,7 +820,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVocabulary(self, vocabulary)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L234" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -669,96 +830,7 @@ Functions
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="textRecognitionModel!/1">
-
-  <div class="detail-header">
-    <a href="#textRecognitionModel!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textRecognitionModel!(model)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L33" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#textRecognitionModel/1"><code class="inline">textRecognitionModel/1</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="textRecognitionModel!/2">
-
-  <div class="detail-header">
-    <a href="#textRecognitionModel!/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textRecognitionModel!(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L24" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#textRecognitionModel/2"><code class="inline">textRecognitionModel/2</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="textRecognitionModel/1">
-
-  <div class="detail-header">
-    <a href="#textRecognitionModel/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textRecognitionModel(model)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L26" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="textRecognitionModel/2">
-
-  <div class="detail-header">
-    <a href="#textRecognitionModel/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textRecognitionModel(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textrecognitionmodel.ex#L17" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Create text recognition model from network represented in one of the supported formats
-   Call setDecodeType() and setVocabulary() after constructor to initialize the decoding method</p><ul><li><strong>model</strong>.</li><li><strong>config</strong>.</li><li><strong>config</strong> : string</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextRecognitionModel</span><span class="p" data-group-id="4978328958-1">(</span><span class="n">model</span><span class="p" data-group-id="4978328958-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="4978328958-2">]</span><span class="p" data-group-id="4978328958-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextRecognitionModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Set the vocabulary for recognition.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVocabulary</span><span class="p" data-group-id="0778378333-1">(</span><span class="n">vocabulary</span><span class="p" data-group-id="0778378333-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -771,10 +843,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn_textrecognitionmodel.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_textrecognitionmodel.ex">(current file)</a>
 
             </span>
 

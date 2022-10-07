@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.DNN.TextDetectionModelEAST — Evision v0.1.5-dev</title>
+    <title>Evision.DNN.TextDetectionModelEAST — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.TextDetectionModelEAST</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,6 +122,48 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_EAST!/1" translate="no">dnn_TextDetectionModel_EAST!(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_TextDetectionModel_EAST/1"><code class="inline">dnn_TextDetectionModel_EAST/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_EAST!/2" translate="no">dnn_TextDetectionModel_EAST!(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_TextDetectionModel_EAST/2"><code class="inline">dnn_TextDetectionModel_EAST/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_EAST/1" translate="no">dnn_TextDetectionModel_EAST(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: string. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_EAST/2" translate="no">dnn_TextDetectionModel_EAST(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: string. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#getConfidenceThreshold!/1" translate="no">getConfidenceThreshold!(self)</a>
 
         </div>
@@ -135,6 +177,8 @@ Evision
           <a href="#getConfidenceThreshold/1" translate="no">getConfidenceThreshold(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Get the detection confidence threshold</p></div>
 
       </div>
 
@@ -154,6 +198,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Get the detection confidence threshold</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -171,6 +217,8 @@ Evision
           <a href="#setConfidenceThreshold/2" translate="no">setConfidenceThreshold(self, confThreshold)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Set the detection confidence threshold</p></div>
 
       </div>
 
@@ -190,44 +238,7 @@ Evision
 
         </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_EAST!/1" translate="no">textDetectionModel_EAST!(model)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#textDetectionModel_EAST/1"><code class="inline">textDetectionModel_EAST/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_EAST!/2" translate="no">textDetectionModel_EAST!(model, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#textDetectionModel_EAST/2"><code class="inline">textDetectionModel_EAST/2</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_EAST/1" translate="no">textDetectionModel_EAST(model)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_EAST/2" translate="no">textDetectionModel_EAST(model, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Create text detection model from network represented in one of the supported formats.
-   An order of @p model and @p config arguments does not matter.</p></div>
+          <div class="summary-synopsis"><p>Set the detection NMS filter threshold</p></div>
 
       </div>
 
@@ -245,6 +256,120 @@ Evision
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="dnn_TextDetectionModel_EAST!/1">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_EAST!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_EAST!(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L58" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_TextDetectionModel_EAST/1"><code class="inline">dnn_TextDetectionModel_EAST/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_TextDetectionModel_EAST!/2">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_EAST!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_EAST!(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L30" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_TextDetectionModel_EAST/2"><code class="inline">dnn_TextDetectionModel_EAST/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_TextDetectionModel_EAST/1">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_EAST/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_EAST(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L50" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="dnn_TextDetectionModel_EAST/1-positional-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_EAST/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: string. </li></ul><h3 id="dnn_TextDetectionModel_EAST/1-keyword-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_EAST/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextDetectionModel_EAST</span><span class="p" data-group-id="1853121572-1">(</span><span class="n">model</span><span class="p" data-group-id="1853121572-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="1853121572-2">]</span><span class="p" data-group-id="1853121572-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextDetectionModel_EAST</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="dnn_TextDetectionModel_EAST/2">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_EAST/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_EAST(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="dnn_TextDetectionModel_EAST/2-positional-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_EAST/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: string. </li></ul><h3 id="dnn_TextDetectionModel_EAST/2-keyword-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_EAST/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextDetectionModel_EAST</span><span class="p" data-group-id="7935667119-1">(</span><span class="n">model</span><span class="p" data-group-id="7935667119-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="7935667119-2">]</span><span class="p" data-group-id="7935667119-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextDetectionModel_EAST</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
 <section class="detail" id="getConfidenceThreshold!/1">
 
   <div class="detail-header">
@@ -254,7 +379,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getConfidenceThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L77" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -276,7 +401,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getConfidenceThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L71" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -286,7 +411,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Get the detection confidence threshold</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getConfidenceThreshold</span><span class="p" data-group-id="1310379873-1">(</span><span class="p" data-group-id="1310379873-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getNMSThreshold!/1">
@@ -298,7 +423,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNMSThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -320,7 +445,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNMSThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L42" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -330,7 +455,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Get the detection confidence threshold</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNMSThreshold</span><span class="p" data-group-id="6625803225-1">(</span><span class="p" data-group-id="6625803225-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setConfidenceThreshold!/2">
@@ -342,7 +467,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setConfidenceThreshold!(self, confThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L117" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -364,7 +489,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setConfidenceThreshold(self, confThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -374,7 +499,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set the detection confidence threshold</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setConfidenceThreshold</span><span class="p" data-group-id="4427399491-1">(</span><span class="n">confThreshold</span><span class="p" data-group-id="4427399491-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setNMSThreshold!/2">
@@ -386,7 +511,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setNMSThreshold!(self, nmsThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L138" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -408,7 +533,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setNMSThreshold(self, nmsThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -418,96 +543,7 @@ Functions
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_EAST!/1">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_EAST!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_EAST!(model)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L33" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#textDetectionModel_EAST/1"><code class="inline">textDetectionModel_EAST/1</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_EAST!/2">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_EAST!/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_EAST!(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L24" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#textDetectionModel_EAST/2"><code class="inline">textDetectionModel_EAST/2</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_EAST/1">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_EAST/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_EAST(model)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L26" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_EAST/2">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_EAST/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_EAST(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeleast.ex#L17" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Create text detection model from network represented in one of the supported formats.
-   An order of @p model and @p config arguments does not matter.</p><ul><li><strong>model</strong>.</li><li><strong>config</strong>.</li><li><strong>config</strong> : string</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextDetectionModel_EAST</span><span class="p" data-group-id="4173656712-1">(</span><span class="n">model</span><span class="p" data-group-id="4173656712-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="4173656712-2">]</span><span class="p" data-group-id="4173656712-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextDetectionModel_EAST</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Set the detection NMS filter threshold</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setNMSThreshold</span><span class="p" data-group-id="4453134644-1">(</span><span class="n">nmsThreshold</span><span class="p" data-group-id="4453134644-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -520,10 +556,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn_textdetectionmodeleast.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_textdetectionmodeleast.ex">(current file)</a>
 
             </span>
 

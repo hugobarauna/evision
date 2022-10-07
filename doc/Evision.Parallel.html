@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Parallel — Evision v0.1.5-dev</title>
+    <title>Evision.Parallel — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_parallel.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_parallel.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Parallel</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>backendName</strong>: string</li></ul><h3>Keyword Arguments</h3><ul><li><strong>propagateNumThreads</strong>: bool.</li></ul><p>Change OpenCV parallel_for backend
+<strong>Note</strong>: This call is not thread-safe. Consider calling this function from the <code class="inline">main()</code> before any other OpenCV processing functions (and without any other created threads).</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -134,7 +137,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Change OpenCV parallel_for backend
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>backendName</strong>: string</li></ul><h3>Keyword Arguments</h3><ul><li><strong>propagateNumThreads</strong>: bool.</li></ul><p>Change OpenCV parallel_for backend
 <strong>Note</strong>: This call is not thread-safe. Consider calling this function from the <code class="inline">main()</code> before any other OpenCV processing functions (and without any other created threads).</p></div>
 
       </div>
@@ -189,7 +192,7 @@ cv.parallel
     </a>
     <h1 class="signature" translate="no">setParallelForBackend(backendName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_parallel.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_parallel.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -199,7 +202,20 @@ cv.parallel
 
   <section class="docstring">
 
-
+<h3 id="setParallelForBackend/1-positional-arguments" class="section-heading">
+  <a href="#setParallelForBackend/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>backendName</strong>: string</li></ul><h3 id="setParallelForBackend/1-keyword-arguments" class="section-heading">
+  <a href="#setParallelForBackend/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>propagateNumThreads</strong>: bool.</li></ul><p>Change OpenCV parallel_for backend
+<strong>Note</strong>: This call is not thread-safe. Consider calling this function from the <code class="inline">main()</code> before any other OpenCV processing functions (and without any other created threads).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setParallelForBackend</span><span class="p" data-group-id="8516432257-1">(</span><span class="n">backendName</span><span class="p" data-group-id="8516432257-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">propagateNumThreads</span><span class="p" data-group-id="8516432257-2">]</span><span class="p" data-group-id="8516432257-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setParallelForBackend/2">
@@ -211,7 +227,7 @@ cv.parallel
     </a>
     <h1 class="signature" translate="no">setParallelForBackend(backendName, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_parallel.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_parallel.ex#L22" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -221,8 +237,20 @@ cv.parallel
 
   <section class="docstring">
 
-<p>Change OpenCV parallel_for backend
-<strong>Note</strong>: This call is not thread-safe. Consider calling this function from the <code class="inline">main()</code> before any other OpenCV processing functions (and without any other created threads).</p><ul><li><strong>propagateNumThreads</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setParallelForBackend</span><span class="p" data-group-id="0481351726-1">(</span><span class="n">backendName</span><span class="p" data-group-id="0481351726-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">propagateNumThreads</span><span class="p" data-group-id="0481351726-2">]</span><span class="p" data-group-id="0481351726-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="setParallelForBackend/2-positional-arguments" class="section-heading">
+  <a href="#setParallelForBackend/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>backendName</strong>: string</li></ul><h3 id="setParallelForBackend/2-keyword-arguments" class="section-heading">
+  <a href="#setParallelForBackend/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>propagateNumThreads</strong>: bool.</li></ul><p>Change OpenCV parallel_for backend
+<strong>Note</strong>: This call is not thread-safe. Consider calling this function from the <code class="inline">main()</code> before any other OpenCV processing functions (and without any other created threads).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setParallelForBackend</span><span class="p" data-group-id="1871275247-1">(</span><span class="n">backendName</span><span class="p" data-group-id="1871275247-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">propagateNumThreads</span><span class="p" data-group-id="1871275247-2">]</span><span class="p" data-group-id="1871275247-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -247,7 +275,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setParallelForBackend!(backendName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_parallel.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_parallel.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -269,7 +297,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setParallelForBackend!(backendName, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_parallel.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_parallel.ex#L30" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -292,10 +320,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_parallel.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_parallel.ex">(current file)</a>
 
             </span>
 

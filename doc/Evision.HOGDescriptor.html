@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.HOGDescriptor — Evision v0.1.5-dev</title>
+    <title>Evision.HOGDescriptor — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.HOGDescriptor</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Checks if detector size equal to descriptor size.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,8 @@ Evision
           <a href="#compute/2" translate="no">compute(self, img)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>locations</strong>: vector_Point.</li></ul><p>Computes HOG descriptors of given image.</p></div>
 
       </div>
 
@@ -142,7 +146,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes HOG descriptors of given image.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>locations</strong>: vector_Point.</li></ul><p>Computes HOG descriptors of given image.</p></div>
 
       </div>
 
@@ -152,6 +156,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li><li><strong>grad</strong>: UMat. </li><li><strong>angleOfs</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>paddingTL</strong>: Size.</li><li><strong>paddingBR</strong>: Size.</li></ul><p>Computes gradients and quantized gradient orientations.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -160,7 +166,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes gradients and quantized gradient orientations.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li><li><strong>grad</strong>: UMat. </li><li><strong>angleOfs</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>paddingTL</strong>: Size.</li><li><strong>paddingBR</strong>: Size.</li></ul><p>Computes gradients and quantized gradient orientations.</p></div>
 
       </div>
 
@@ -170,6 +176,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>searchLocations</strong>: vector_Point.</li></ul><p>Performs object detection without a multi-scale window.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -178,7 +186,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Performs object detection without a multi-scale window.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>searchLocations</strong>: vector_Point.</li></ul><p>Performs object detection without a multi-scale window.</p></div>
 
       </div>
 
@@ -188,6 +196,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>scale</strong>: double.</li><li><strong>groupThreshold</strong>: double.</li><li><strong>useMeanshiftGrouping</strong>: bool.</li></ul><p>Detects objects of different sizes in the input image. The detected objects are returned as a list
+  of rectangles.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -196,7 +207,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Detects objects of different sizes in the input image. The detected objects are returned as a list
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>img</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>scale</strong>: double.</li><li><strong>groupThreshold</strong>: double.</li><li><strong>useMeanshiftGrouping</strong>: bool.</li></ul><p>Detects objects of different sizes in the input image. The detected objects are returned as a list
   of rectangles.</p></div>
 
       </div>
@@ -207,6 +218,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns coefficients of the classifier trained for people detection (for 48x96 windows).</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -214,6 +227,8 @@ Evision
           <a href="#getDefaultPeopleDetector/0" translate="no">getDefaultPeopleDetector()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns coefficients of the classifier trained for people detection (for 64x128 windows).</p></div>
 
       </div>
 
@@ -223,6 +238,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns the number of coefficients required for the classification.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -230,6 +247,8 @@ Evision
           <a href="#getWinSigma/1" translate="no">getWinSigma(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns winSigma value</p></div>
 
       </div>
 
@@ -239,27 +258,14 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Creates the HOG descriptor and detector with default parameters.
+  aqual to HOGDescriptor(Size(64,128), Size(16,16), Size(8,8), Size(8,8), 9 )</p></div>
+
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
           <a href="#hogDescriptor/1" translate="no">hogDescriptor(filename)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#hogDescriptor/5" translate="no">hogDescriptor(winSize, blockSize, blockStride, cellSize, nbins)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#hogDescriptor/6" translate="no">hogDescriptor(winSize, blockSize, blockStride, cellSize, nbins, opts)</a>
 
         </div>
 
@@ -269,9 +275,31 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#hogDescriptor/5" translate="no">hogDescriptor(winSize, blockSize, blockStride, cellSize, nbins)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>winSize</strong>: Size. </li><li><strong>blockSize</strong>: Size. </li><li><strong>blockStride</strong>: Size. </li><li><strong>cellSize</strong>: Size. </li><li><strong>nbins</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>derivAperture</strong>: int.</li><li><strong>winSigma</strong>: double.</li><li><strong>histogramNormType</strong>: HOGDescriptor_HistogramNormType.</li><li><strong>l2HysThreshold</strong>: double.</li><li><strong>gammaCorrection</strong>: bool.</li><li><strong>nlevels</strong>: int.</li><li><strong>signedGradient</strong>: bool.</li></ul><p>Has overloading in C++</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#hogDescriptor/6" translate="no">hogDescriptor(winSize, blockSize, blockStride, cellSize, nbins, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>winSize</strong>: Size. </li><li><strong>blockSize</strong>: Size. </li><li><strong>blockStride</strong>: Size. </li><li><strong>cellSize</strong>: Size. </li><li><strong>nbins</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>derivAperture</strong>: int.</li><li><strong>winSigma</strong>: double.</li><li><strong>histogramNormType</strong>: HOGDescriptor_HistogramNormType.</li><li><strong>l2HysThreshold</strong>: double.</li><li><strong>gammaCorrection</strong>: bool.</li><li><strong>nlevels</strong>: int.</li><li><strong>signedGradient</strong>: bool.</li></ul><p>Has overloading in C++</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#load/2" translate="no">load(self, filename)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>objname</strong>: String.</li></ul><p>loads HOGDescriptor parameters and coefficients for the linear SVM classifier from a file</p></div>
 
       </div>
 
@@ -281,7 +309,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>loads HOGDescriptor parameters and coefficients for the linear SVM classifier from a file</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>objname</strong>: String.</li></ul><p>loads HOGDescriptor parameters and coefficients for the linear SVM classifier from a file</p></div>
 
       </div>
 
@@ -291,6 +319,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>objname</strong>: String.</li></ul><p>saves HOGDescriptor parameters and coefficients for the linear SVM classifier to a file</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -299,7 +329,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>saves HOGDescriptor parameters and coefficients for the linear SVM classifier to a file</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>objname</strong>: String.</li></ul><p>saves HOGDescriptor parameters and coefficients for the linear SVM classifier to a file</p></div>
 
       </div>
 
@@ -308,6 +338,8 @@ Evision
           <a href="#setSVMDetector/2" translate="no">setSVMDetector(self, svmdetector)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Sets coefficients for the linear SVM classifier.</p></div>
 
       </div>
 
@@ -795,7 +827,7 @@ cv
     </a>
     <h1 class="signature" translate="no">checkDetectorSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -805,7 +837,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Checks if detector size equal to descriptor size.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">checkDetectorSize</span><span class="p" data-group-id="6061408902-1">(</span><span class="p" data-group-id="6061408902-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="compute/2">
@@ -817,7 +849,7 @@ cv
     </a>
     <h1 class="signature" translate="no">compute(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L198" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -827,7 +859,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="compute/2-positional-arguments" class="section-heading">
+  <a href="#compute/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="compute/2-keyword-arguments" class="section-heading">
+  <a href="#compute/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>locations</strong>: vector_Point.</li></ul><p>Computes HOG descriptors of given image.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">compute</span><span class="p" data-group-id="1052428904-1">(</span><span class="n">img</span><span class="p" data-group-id="1052428904-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="1052428904-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="1052428904-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">locations</span><span class="p" data-group-id="1052428904-4">]</span><span class="p" data-group-id="1052428904-3">]</span><span class="p" data-group-id="1052428904-2">]</span><span class="p" data-group-id="1052428904-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">descriptors</span></code></pre>
   </section>
 </section>
 <section class="detail" id="compute/3">
@@ -839,7 +883,7 @@ cv
     </a>
     <h1 class="signature" translate="no">compute(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L169" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -849,7 +893,19 @@ cv
 
   <section class="docstring">
 
-<p>Computes HOG descriptors of given image.</p><ul><li><strong>img</strong>.</li><li><strong>descriptors</strong>.</li><li><strong>winStride</strong>.</li><li><strong>padding</strong> : Padding</li><li><strong>locations</strong>.</li><li><strong>winStride</strong> : Size</li><li><strong>padding</strong> : Size</li><li><strong>locations</strong> : vector_Point</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">compute</span><span class="p" data-group-id="9687499664-1">(</span><span class="n">img</span><span class="p" data-group-id="9687499664-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="9687499664-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="9687499664-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">locations</span><span class="p" data-group-id="9687499664-4">]</span><span class="p" data-group-id="9687499664-3">]</span><span class="p" data-group-id="9687499664-2">]</span><span class="p" data-group-id="9687499664-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">descriptors</span></code></pre>
+<h3 id="compute/3-positional-arguments" class="section-heading">
+  <a href="#compute/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="compute/3-keyword-arguments" class="section-heading">
+  <a href="#compute/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>locations</strong>: vector_Point.</li></ul><p>Computes HOG descriptors of given image.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">compute</span><span class="p" data-group-id="9802128389-1">(</span><span class="n">img</span><span class="p" data-group-id="9802128389-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="9802128389-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="9802128389-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">locations</span><span class="p" data-group-id="9802128389-4">]</span><span class="p" data-group-id="9802128389-3">]</span><span class="p" data-group-id="9802128389-2">]</span><span class="p" data-group-id="9802128389-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">descriptors</span></code></pre>
   </section>
 </section>
 <section class="detail" id="computeGradient/4">
@@ -861,7 +917,7 @@ cv
     </a>
     <h1 class="signature" translate="no">computeGradient(self, img, grad, angleOfs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -871,7 +927,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="computeGradient/4-positional-arguments" class="section-heading">
+  <a href="#computeGradient/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li><li><strong>grad</strong>: UMat. </li><li><strong>angleOfs</strong>: UMat. </li></ul><h3 id="computeGradient/4-keyword-arguments" class="section-heading">
+  <a href="#computeGradient/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>paddingTL</strong>: Size.</li><li><strong>paddingBR</strong>: Size.</li></ul><p>Computes gradients and quantized gradient orientations.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">computeGradient</span><span class="p" data-group-id="0903591642-1">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">grad</span><span class="p">,</span><span class="w"> </span><span class="n">angleOfs</span><span class="p" data-group-id="0903591642-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">paddingTL</span><span class="p" data-group-id="0903591642-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">paddingBR</span><span class="p" data-group-id="0903591642-3">]</span><span class="p" data-group-id="0903591642-2">]</span><span class="p" data-group-id="0903591642-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">grad</span><span class="p">,</span><span class="w"> </span><span class="n">angleOfs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="computeGradient/5">
@@ -883,7 +951,7 @@ cv
     </a>
     <h1 class="signature" translate="no">computeGradient(self, img, grad, angleOfs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L228" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -893,7 +961,19 @@ cv
 
   <section class="docstring">
 
-<p>Computes gradients and quantized gradient orientations.</p><ul><li><strong>img</strong>.</li><li><strong>grad</strong>.</li><li><strong>angleOfs</strong>.</li><li><strong>paddingTL</strong>.</li><li><strong>paddingBR</strong>.</li><li><strong>paddingTL</strong> : Size</li><li><strong>paddingBR</strong> : Size</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">computeGradient</span><span class="p" data-group-id="8874545774-1">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">grad</span><span class="p">,</span><span class="w"> </span><span class="n">angleOfs</span><span class="p" data-group-id="8874545774-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">paddingTL</span><span class="p" data-group-id="8874545774-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">paddingBR</span><span class="p" data-group-id="8874545774-3">]</span><span class="p" data-group-id="8874545774-2">]</span><span class="p" data-group-id="8874545774-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">grad</span><span class="p">,</span><span class="w"> </span><span class="n">angleOfs</span></code></pre>
+<h3 id="computeGradient/5-positional-arguments" class="section-heading">
+  <a href="#computeGradient/5-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li><li><strong>grad</strong>: UMat. </li><li><strong>angleOfs</strong>: UMat. </li></ul><h3 id="computeGradient/5-keyword-arguments" class="section-heading">
+  <a href="#computeGradient/5-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>paddingTL</strong>: Size.</li><li><strong>paddingBR</strong>: Size.</li></ul><p>Computes gradients and quantized gradient orientations.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">computeGradient</span><span class="p" data-group-id="7607960970-1">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">grad</span><span class="p">,</span><span class="w"> </span><span class="n">angleOfs</span><span class="p" data-group-id="7607960970-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">paddingTL</span><span class="p" data-group-id="7607960970-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">paddingBR</span><span class="p" data-group-id="7607960970-3">]</span><span class="p" data-group-id="7607960970-2">]</span><span class="p" data-group-id="7607960970-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">grad</span><span class="p">,</span><span class="w"> </span><span class="n">angleOfs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="detect/2">
@@ -905,7 +985,7 @@ cv
     </a>
     <h1 class="signature" translate="no">detect(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L183" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L326" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -915,7 +995,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="detect/2-positional-arguments" class="section-heading">
+  <a href="#detect/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="detect/2-keyword-arguments" class="section-heading">
+  <a href="#detect/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>searchLocations</strong>: vector_Point.</li></ul><p>Performs object detection without a multi-scale window.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Usually</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="n">coefficients</span><span class="w"> </span><span class="p" data-group-id="5692911403-1">(</span><span class="n">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="p" data-group-id="5692911403-1">)</span><span class="o">.</span><span class="w">
+</span><span class="nc">But</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">omitted</span><span class="w"> </span><span class="p" data-group-id="5692911403-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">allowed</span><span class="p" data-group-id="5692911403-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">manually</span><span class="w"> </span><span class="n">here</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detect</span><span class="p" data-group-id="9143501317-1">(</span><span class="n">img</span><span class="p" data-group-id="9143501317-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">hitThreshold</span><span class="p" data-group-id="9143501317-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="9143501317-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="9143501317-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">searchLocations</span><span class="p" data-group-id="9143501317-5">]</span><span class="p" data-group-id="9143501317-4">]</span><span class="p" data-group-id="9143501317-3">]</span><span class="p" data-group-id="9143501317-2">]</span><span class="p" data-group-id="9143501317-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">foundLocations</span><span class="p">,</span><span class="w"> </span><span class="n">weights</span></code></pre>
   </section>
 </section>
 <section class="detail" id="detect/3">
@@ -927,7 +1020,7 @@ cv
     </a>
     <h1 class="signature" translate="no">detect(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L174" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -937,9 +1030,20 @@ cv
 
   <section class="docstring">
 
-<p>Performs object detection without a multi-scale window.</p><ul><li><strong>img</strong>.</li><li><strong>foundLocations</strong>.</li><li><strong>weights</strong>.</li><li><strong>hitThreshold</strong>.
-  Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient).
-  But if the free coefficient is omitted (which is allowed), you can specify it manually here.</li><li><strong>winStride</strong>.</li><li><strong>padding</strong> : Padding</li><li><strong>searchLocations</strong>.</li><li><strong>hitThreshold</strong> : double</li><li><strong>winStride</strong> : Size</li><li><strong>padding</strong> : Size</li><li><strong>searchLocations</strong> : vector_Point</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detect</span><span class="p" data-group-id="3806117000-1">(</span><span class="n">img</span><span class="p" data-group-id="3806117000-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">hitThreshold</span><span class="p" data-group-id="3806117000-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="3806117000-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="3806117000-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">searchLocations</span><span class="p" data-group-id="3806117000-5">]</span><span class="p" data-group-id="3806117000-4">]</span><span class="p" data-group-id="3806117000-3">]</span><span class="p" data-group-id="3806117000-2">]</span><span class="p" data-group-id="3806117000-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">foundLocations</span><span class="p">,</span><span class="w"> </span><span class="n">weights</span></code></pre>
+<h3 id="detect/3-positional-arguments" class="section-heading">
+  <a href="#detect/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="detect/3-keyword-arguments" class="section-heading">
+  <a href="#detect/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>searchLocations</strong>: vector_Point.</li></ul><p>Performs object detection without a multi-scale window.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Usually</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="n">coefficients</span><span class="w"> </span><span class="p" data-group-id="0187366237-1">(</span><span class="n">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="p" data-group-id="0187366237-1">)</span><span class="o">.</span><span class="w">
+</span><span class="nc">But</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">omitted</span><span class="w"> </span><span class="p" data-group-id="0187366237-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">allowed</span><span class="p" data-group-id="0187366237-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">manually</span><span class="w"> </span><span class="n">here</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detect</span><span class="p" data-group-id="8999388149-1">(</span><span class="n">img</span><span class="p" data-group-id="8999388149-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">hitThreshold</span><span class="p" data-group-id="8999388149-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="8999388149-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="8999388149-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">searchLocations</span><span class="p" data-group-id="8999388149-5">]</span><span class="p" data-group-id="8999388149-4">]</span><span class="p" data-group-id="8999388149-3">]</span><span class="p" data-group-id="8999388149-2">]</span><span class="p" data-group-id="8999388149-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">foundLocations</span><span class="p">,</span><span class="w"> </span><span class="n">weights</span></code></pre>
   </section>
 </section>
 <section class="detail" id="detectMultiScale/2">
@@ -951,7 +1055,7 @@ cv
     </a>
     <h1 class="signature" translate="no">detectMultiScale(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L398" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -961,7 +1065,22 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="detectMultiScale/2-positional-arguments" class="section-heading">
+  <a href="#detectMultiScale/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="detectMultiScale/2-keyword-arguments" class="section-heading">
+  <a href="#detectMultiScale/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>scale</strong>: double.</li><li><strong>groupThreshold</strong>: double.</li><li><strong>useMeanshiftGrouping</strong>: bool.</li></ul><p>Detects objects of different sizes in the input image. The detected objects are returned as a list
+  of rectangles.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Usually</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="n">coefficients</span><span class="w"> </span><span class="p" data-group-id="1334804968-1">(</span><span class="n">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="p" data-group-id="1334804968-1">)</span><span class="o">.</span><span class="w">
+</span><span class="nc">But</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">omitted</span><span class="w"> </span><span class="p" data-group-id="1334804968-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">allowed</span><span class="p" data-group-id="1334804968-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">manually</span><span class="w"> </span><span class="n">here</span><span class="o">.</span><span class="w">
+</span><span class="n">by</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">rectangles</span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">perform</span><span class="w"> </span><span class="n">grouping</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detectMultiScale</span><span class="p" data-group-id="2967988788-1">(</span><span class="n">img</span><span class="p" data-group-id="2967988788-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">hitThreshold</span><span class="p" data-group-id="2967988788-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="2967988788-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="2967988788-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="p" data-group-id="2967988788-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">groupThreshold</span><span class="p" data-group-id="2967988788-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">useMeanshiftGrouping</span><span class="p" data-group-id="2967988788-7">]</span><span class="p" data-group-id="2967988788-6">]</span><span class="p" data-group-id="2967988788-5">]</span><span class="p" data-group-id="2967988788-4">]</span><span class="p" data-group-id="2967988788-3">]</span><span class="p" data-group-id="2967988788-2">]</span><span class="p" data-group-id="2967988788-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">foundLocations</span><span class="p">,</span><span class="w"> </span><span class="n">foundWeights</span></code></pre>
   </section>
 </section>
 <section class="detail" id="detectMultiScale/3">
@@ -973,7 +1092,7 @@ cv
     </a>
     <h1 class="signature" translate="no">detectMultiScale(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L219" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L362" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -983,11 +1102,22 @@ cv
 
   <section class="docstring">
 
-<p>Detects objects of different sizes in the input image. The detected objects are returned as a list
-  of rectangles.</p><ul><li><strong>img</strong>.</li><li><strong>foundLocations</strong>.</li><li><strong>foundWeights</strong>.</li><li><strong>hitThreshold</strong>.
-  Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient).
-  But if the free coefficient is omitted (which is allowed), you can specify it manually here.</li><li><strong>winStride</strong>.</li><li><strong>padding</strong> : Padding</li><li><strong>scale</strong>.</li><li><strong>groupThreshold</strong>.
-  by many rectangles. 0 means not to perform grouping.</li><li><strong>useMeanshiftGrouping</strong>.</li><li><strong>hitThreshold</strong> : double</li><li><strong>winStride</strong> : Size</li><li><strong>padding</strong> : Size</li><li><strong>scale</strong> : double</li><li><strong>groupThreshold</strong> : double</li><li><strong>useMeanshiftGrouping</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detectMultiScale</span><span class="p" data-group-id="0064191889-1">(</span><span class="n">img</span><span class="p" data-group-id="0064191889-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">hitThreshold</span><span class="p" data-group-id="0064191889-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="0064191889-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="0064191889-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="p" data-group-id="0064191889-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">groupThreshold</span><span class="p" data-group-id="0064191889-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">useMeanshiftGrouping</span><span class="p" data-group-id="0064191889-7">]</span><span class="p" data-group-id="0064191889-6">]</span><span class="p" data-group-id="0064191889-5">]</span><span class="p" data-group-id="0064191889-4">]</span><span class="p" data-group-id="0064191889-3">]</span><span class="p" data-group-id="0064191889-2">]</span><span class="p" data-group-id="0064191889-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">foundLocations</span><span class="p">,</span><span class="w"> </span><span class="n">foundWeights</span></code></pre>
+<h3 id="detectMultiScale/3-positional-arguments" class="section-heading">
+  <a href="#detectMultiScale/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>img</strong>: UMat. </li></ul><h3 id="detectMultiScale/3-keyword-arguments" class="section-heading">
+  <a href="#detectMultiScale/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>hitThreshold</strong>: double.</li><li><strong>winStride</strong>: Size.</li><li><strong>padding</strong>: Size.</li><li><strong>scale</strong>: double.</li><li><strong>groupThreshold</strong>: double.</li><li><strong>useMeanshiftGrouping</strong>: bool.</li></ul><p>Detects objects of different sizes in the input image. The detected objects are returned as a list
+  of rectangles.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Usually</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="n">coefficients</span><span class="w"> </span><span class="p" data-group-id="5759351192-1">(</span><span class="n">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="p" data-group-id="5759351192-1">)</span><span class="o">.</span><span class="w">
+</span><span class="nc">But</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">coefficient</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">omitted</span><span class="w"> </span><span class="p" data-group-id="5759351192-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">allowed</span><span class="p" data-group-id="5759351192-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">manually</span><span class="w"> </span><span class="n">here</span><span class="o">.</span><span class="w">
+</span><span class="n">by</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">rectangles</span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">perform</span><span class="w"> </span><span class="n">grouping</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detectMultiScale</span><span class="p" data-group-id="7543391702-1">(</span><span class="n">img</span><span class="p" data-group-id="7543391702-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">hitThreshold</span><span class="p" data-group-id="7543391702-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">winStride</span><span class="p" data-group-id="7543391702-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">padding</span><span class="p" data-group-id="7543391702-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="p" data-group-id="7543391702-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">groupThreshold</span><span class="p" data-group-id="7543391702-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">useMeanshiftGrouping</span><span class="p" data-group-id="7543391702-7">]</span><span class="p" data-group-id="7543391702-6">]</span><span class="p" data-group-id="7543391702-5">]</span><span class="p" data-group-id="7543391702-4">]</span><span class="p" data-group-id="7543391702-3">]</span><span class="p" data-group-id="7543391702-2">]</span><span class="p" data-group-id="7543391702-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">foundLocations</span><span class="p">,</span><span class="w"> </span><span class="n">foundWeights</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDaimlerPeopleDetector/0">
@@ -999,7 +1129,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDaimlerPeopleDetector()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L237" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L419" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1009,7 +1139,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns coefficients of the classifier trained for people detection (for 48x96 windows).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDaimlerPeopleDetector</span><span class="p" data-group-id="9705994107-1">(</span><span class="p" data-group-id="9705994107-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultPeopleDetector/0">
@@ -1021,7 +1151,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultPeopleDetector()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L244" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L438" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1031,7 +1161,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns coefficients of the classifier trained for people detection (for 64x128 windows).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultPeopleDetector</span><span class="p" data-group-id="6248405520-1">(</span><span class="p" data-group-id="6248405520-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDescriptorSize/1">
@@ -1043,7 +1173,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDescriptorSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L457" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1053,7 +1183,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns the number of coefficients required for the classification.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDescriptorSize</span><span class="p" data-group-id="0949692249-1">(</span><span class="p" data-group-id="0949692249-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getWinSigma/1">
@@ -1065,7 +1195,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getWinSigma(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L476" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1075,7 +1205,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns winSigma value</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWinSigma</span><span class="p" data-group-id="1099889310-1">(</span><span class="p" data-group-id="1099889310-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="hogDescriptor/0">
@@ -1087,7 +1217,7 @@ cv
     </a>
     <h1 class="signature" translate="no">hogDescriptor()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L123" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1097,7 +1227,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Creates the HOG descriptor and detector with default parameters.
+  aqual to HOGDescriptor(Size(64,128), Size(16,16), Size(8,8), Size(8,8), 9 )</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">HOGDescriptor</span><span class="p" data-group-id="4202741550-1">(</span><span class="p" data-group-id="4202741550-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">HOGDescriptor</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="hogDescriptor/1">
@@ -1109,7 +1240,7 @@ cv
     </a>
     <h1 class="signature" translate="no">hogDescriptor(filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L101" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1119,7 +1250,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Has overloading in C++</p><p>  Creates the HOG descriptor and detector and loads HOGDescriptor parameters and coefficients for the linear SVM classifier from a file.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">HOGDescriptor</span><span class="p" data-group-id="1711814544-1">(</span><span class="n">filename</span><span class="p" data-group-id="1711814544-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">HOGDescriptor</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="hogDescriptor/5">
@@ -1131,7 +1262,7 @@ cv
     </a>
     <h1 class="signature" translate="no">hogDescriptor(winSize, blockSize, blockStride, cellSize, nbins)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1141,7 +1272,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="hogDescriptor/5-positional-arguments" class="section-heading">
+  <a href="#hogDescriptor/5-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>winSize</strong>: Size. </li><li><strong>blockSize</strong>: Size. </li><li><strong>blockStride</strong>: Size. </li><li><strong>cellSize</strong>: Size. </li><li><strong>nbins</strong>: int. </li></ul><h3 id="hogDescriptor/5-keyword-arguments" class="section-heading">
+  <a href="#hogDescriptor/5-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>derivAperture</strong>: int.</li><li><strong>winSigma</strong>: double.</li><li><strong>histogramNormType</strong>: HOGDescriptor_HistogramNormType.</li><li><strong>l2HysThreshold</strong>: double.</li><li><strong>gammaCorrection</strong>: bool.</li><li><strong>nlevels</strong>: int.</li><li><strong>signedGradient</strong>: bool.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">HOGDescriptor</span><span class="p" data-group-id="2573228888-1">(</span><span class="c">_winSize</span><span class="p">,</span><span class="w"> </span><span class="c">_blockSize</span><span class="p">,</span><span class="w"> </span><span class="c">_blockStride</span><span class="p">,</span><span class="w"> </span><span class="c">_cellSize</span><span class="p">,</span><span class="w"> </span><span class="c">_nbins</span><span class="p" data-group-id="2573228888-2">[</span><span class="p">,</span><span class="w"> </span><span class="c">_derivAperture</span><span class="p" data-group-id="2573228888-3">[</span><span class="p">,</span><span class="w"> </span><span class="c">_winSigma</span><span class="p" data-group-id="2573228888-4">[</span><span class="p">,</span><span class="w"> </span><span class="c">_histogramNormType</span><span class="p" data-group-id="2573228888-5">[</span><span class="p">,</span><span class="w"> </span><span class="c">_L2HysThreshold</span><span class="p" data-group-id="2573228888-6">[</span><span class="p">,</span><span class="w"> </span><span class="c">_gammaCorrection</span><span class="p" data-group-id="2573228888-7">[</span><span class="p">,</span><span class="w"> </span><span class="c">_nlevels</span><span class="p" data-group-id="2573228888-8">[</span><span class="p">,</span><span class="w"> </span><span class="c">_signedGradient</span><span class="p" data-group-id="2573228888-8">]</span><span class="p" data-group-id="2573228888-7">]</span><span class="p" data-group-id="2573228888-6">]</span><span class="p" data-group-id="2573228888-5">]</span><span class="p" data-group-id="2573228888-4">]</span><span class="p" data-group-id="2573228888-3">]</span><span class="p" data-group-id="2573228888-2">]</span><span class="p" data-group-id="2573228888-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">HOGDescriptor</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="hogDescriptor/6">
@@ -1153,7 +1296,7 @@ cv
     </a>
     <h1 class="signature" translate="no">hogDescriptor(winSize, blockSize, blockStride, cellSize, nbins, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1163,7 +1306,19 @@ cv
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><ul><li><strong>winSize</strong>.</li><li><strong>blockSize</strong>.</li><li><strong>blockStride</strong>.</li><li><strong>cellSize</strong>.</li><li><strong>nbins</strong>.</li><li><strong>derivAperture</strong>.</li><li><strong>winSigma</strong>.</li><li><strong>histogramNormType</strong>.</li><li><strong>l2HysThreshold</strong>.</li><li><strong>gammaCorrection</strong>.</li><li><strong>nlevels</strong>.</li><li><strong>signedGradient</strong>.</li><li><strong>derivAperture</strong> : int</li><li><strong>winSigma</strong> : double</li><li><strong>histogramNormType</strong> : HOGDescriptor_HistogramNormType</li><li><strong>l2HysThreshold</strong> : double</li><li><strong>gammaCorrection</strong> : bool</li><li><strong>nlevels</strong> : int</li><li><strong>signedGradient</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">HOGDescriptor</span><span class="p" data-group-id="5113698683-1">(</span><span class="c">_winSize</span><span class="p">,</span><span class="w"> </span><span class="c">_blockSize</span><span class="p">,</span><span class="w"> </span><span class="c">_blockStride</span><span class="p">,</span><span class="w"> </span><span class="c">_cellSize</span><span class="p">,</span><span class="w"> </span><span class="c">_nbins</span><span class="p" data-group-id="5113698683-2">[</span><span class="p">,</span><span class="w"> </span><span class="c">_derivAperture</span><span class="p" data-group-id="5113698683-3">[</span><span class="p">,</span><span class="w"> </span><span class="c">_winSigma</span><span class="p" data-group-id="5113698683-4">[</span><span class="p">,</span><span class="w"> </span><span class="c">_histogramNormType</span><span class="p" data-group-id="5113698683-5">[</span><span class="p">,</span><span class="w"> </span><span class="c">_L2HysThreshold</span><span class="p" data-group-id="5113698683-6">[</span><span class="p">,</span><span class="w"> </span><span class="c">_gammaCorrection</span><span class="p" data-group-id="5113698683-7">[</span><span class="p">,</span><span class="w"> </span><span class="c">_nlevels</span><span class="p" data-group-id="5113698683-8">[</span><span class="p">,</span><span class="w"> </span><span class="c">_signedGradient</span><span class="p" data-group-id="5113698683-8">]</span><span class="p" data-group-id="5113698683-7">]</span><span class="p" data-group-id="5113698683-6">]</span><span class="p" data-group-id="5113698683-5">]</span><span class="p" data-group-id="5113698683-4">]</span><span class="p" data-group-id="5113698683-3">]</span><span class="p" data-group-id="5113698683-2">]</span><span class="p" data-group-id="5113698683-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">HOGDescriptor</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h3 id="hogDescriptor/6-positional-arguments" class="section-heading">
+  <a href="#hogDescriptor/6-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>winSize</strong>: Size. </li><li><strong>blockSize</strong>: Size. </li><li><strong>blockStride</strong>: Size. </li><li><strong>cellSize</strong>: Size. </li><li><strong>nbins</strong>: int. </li></ul><h3 id="hogDescriptor/6-keyword-arguments" class="section-heading">
+  <a href="#hogDescriptor/6-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>derivAperture</strong>: int.</li><li><strong>winSigma</strong>: double.</li><li><strong>histogramNormType</strong>: HOGDescriptor_HistogramNormType.</li><li><strong>l2HysThreshold</strong>: double.</li><li><strong>gammaCorrection</strong>: bool.</li><li><strong>nlevels</strong>: int.</li><li><strong>signedGradient</strong>: bool.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">HOGDescriptor</span><span class="p" data-group-id="7083635168-1">(</span><span class="c">_winSize</span><span class="p">,</span><span class="w"> </span><span class="c">_blockSize</span><span class="p">,</span><span class="w"> </span><span class="c">_blockStride</span><span class="p">,</span><span class="w"> </span><span class="c">_cellSize</span><span class="p">,</span><span class="w"> </span><span class="c">_nbins</span><span class="p" data-group-id="7083635168-2">[</span><span class="p">,</span><span class="w"> </span><span class="c">_derivAperture</span><span class="p" data-group-id="7083635168-3">[</span><span class="p">,</span><span class="w"> </span><span class="c">_winSigma</span><span class="p" data-group-id="7083635168-4">[</span><span class="p">,</span><span class="w"> </span><span class="c">_histogramNormType</span><span class="p" data-group-id="7083635168-5">[</span><span class="p">,</span><span class="w"> </span><span class="c">_L2HysThreshold</span><span class="p" data-group-id="7083635168-6">[</span><span class="p">,</span><span class="w"> </span><span class="c">_gammaCorrection</span><span class="p" data-group-id="7083635168-7">[</span><span class="p">,</span><span class="w"> </span><span class="c">_nlevels</span><span class="p" data-group-id="7083635168-8">[</span><span class="p">,</span><span class="w"> </span><span class="c">_signedGradient</span><span class="p" data-group-id="7083635168-8">]</span><span class="p" data-group-id="7083635168-7">]</span><span class="p" data-group-id="7083635168-6">]</span><span class="p" data-group-id="7083635168-5">]</span><span class="p" data-group-id="7083635168-4">]</span><span class="p" data-group-id="7083635168-3">]</span><span class="p" data-group-id="7083635168-2">]</span><span class="p" data-group-id="7083635168-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">HOGDescriptor</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/2">
@@ -1175,7 +1330,7 @@ cv
     </a>
     <h1 class="signature" translate="no">load(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L285" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L528" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1185,7 +1340,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="load/2-positional-arguments" class="section-heading">
+  <a href="#load/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String. </li></ul><h3 id="load/2-keyword-arguments" class="section-heading">
+  <a href="#load/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>objname</strong>: String.</li></ul><p>loads HOGDescriptor parameters and coefficients for the linear SVM classifier from a file</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="5153896574-1">(</span><span class="n">filename</span><span class="p" data-group-id="5153896574-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">objname</span><span class="p" data-group-id="5153896574-2">]</span><span class="p" data-group-id="5153896574-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/3">
@@ -1197,7 +1364,7 @@ cv
     </a>
     <h1 class="signature" translate="no">load(self, filename, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L276" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L501" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1207,7 +1374,19 @@ cv
 
   <section class="docstring">
 
-<p>loads HOGDescriptor parameters and coefficients for the linear SVM classifier from a file</p><ul><li><strong>filename</strong>.</li><li><strong>objname</strong>.</li><li><strong>objname</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="7207574148-1">(</span><span class="n">filename</span><span class="p" data-group-id="7207574148-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">objname</span><span class="p" data-group-id="7207574148-2">]</span><span class="p" data-group-id="7207574148-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="load/3-positional-arguments" class="section-heading">
+  <a href="#load/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String. </li></ul><h3 id="load/3-keyword-arguments" class="section-heading">
+  <a href="#load/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>objname</strong>: String.</li></ul><p>loads HOGDescriptor parameters and coefficients for the linear SVM classifier from a file</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="4711272787-1">(</span><span class="n">filename</span><span class="p" data-group-id="4711272787-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">objname</span><span class="p" data-group-id="4711272787-2">]</span><span class="p" data-group-id="4711272787-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -1219,7 +1398,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L314" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L582" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1229,7 +1408,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="save/2-positional-arguments" class="section-heading">
+  <a href="#save/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String. </li></ul><h3 id="save/2-keyword-arguments" class="section-heading">
+  <a href="#save/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>objname</strong>: String.</li></ul><p>saves HOGDescriptor parameters and coefficients for the linear SVM classifier to a file</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="7126671236-1">(</span><span class="n">filename</span><span class="p" data-group-id="7126671236-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">objname</span><span class="p" data-group-id="7126671236-2">]</span><span class="p" data-group-id="7126671236-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/3">
@@ -1241,7 +1432,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L555" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1251,7 +1442,19 @@ cv
 
   <section class="docstring">
 
-<p>saves HOGDescriptor parameters and coefficients for the linear SVM classifier to a file</p><ul><li><strong>filename</strong>.</li><li><strong>objname</strong>.</li><li><strong>objname</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="5687748822-1">(</span><span class="n">filename</span><span class="p" data-group-id="5687748822-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">objname</span><span class="p" data-group-id="5687748822-2">]</span><span class="p" data-group-id="5687748822-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="save/3-positional-arguments" class="section-heading">
+  <a href="#save/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String. </li></ul><h3 id="save/3-keyword-arguments" class="section-heading">
+  <a href="#save/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>objname</strong>: String.</li></ul><p>saves HOGDescriptor parameters and coefficients for the linear SVM classifier to a file</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="4120399713-1">(</span><span class="n">filename</span><span class="p" data-group-id="4120399713-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">objname</span><span class="p" data-group-id="4120399713-2">]</span><span class="p" data-group-id="4120399713-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setSVMDetector/2">
@@ -1263,7 +1466,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setSVMDetector(self, svmdetector)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L323" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L603" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1273,7 +1476,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Sets coefficients for the linear SVM classifier.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setSVMDetector</span><span class="p" data-group-id="3239967462-1">(</span><span class="n">svmdetector</span><span class="p" data-group-id="3239967462-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -1298,7 +1501,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">checkDetectorSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1320,7 +1523,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">compute!(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1342,7 +1545,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">compute!(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1364,7 +1567,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">computeGradient!(self, img, grad, angleOfs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L270" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1386,7 +1589,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">computeGradient!(self, img, grad, angleOfs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L238" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1408,7 +1611,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detect!(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L334" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1430,7 +1633,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detect!(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L181" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L302" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1452,7 +1655,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detectMultiScale!(self, img)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L406" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1474,7 +1677,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detectMultiScale!(self, img, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L226" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L370" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1496,7 +1699,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_blockSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L338" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L623" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1518,7 +1721,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_blockSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L335" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L619" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1540,7 +1743,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_blockStride!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L629" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1562,7 +1765,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_blockStride(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L339" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L625" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1584,7 +1787,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_cellSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L346" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L635" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1606,7 +1809,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_cellSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L343" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L631" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1628,7 +1831,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_derivAperture!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L350" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L641" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1650,7 +1853,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_derivAperture(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L347" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L637" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1672,7 +1875,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_gammaCorrection!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L354" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L647" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1694,7 +1897,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_gammaCorrection(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L643" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1716,7 +1919,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_histogramNormType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L358" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L653" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1738,7 +1941,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_histogramNormType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L355" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L649" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1760,7 +1963,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_L2HysThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L334" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L617" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1782,7 +1985,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_L2HysThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L331" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L613" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1804,7 +2007,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_nbins!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L362" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L659" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1826,7 +2029,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_nbins(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L359" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L655" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1848,7 +2051,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_nlevels!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L366" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L665" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1870,7 +2073,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_nlevels(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L363" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L661" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1892,7 +2095,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_signedGradient!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L370" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L671" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1914,7 +2117,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_signedGradient(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L367" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L667" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1936,7 +2139,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_svmDetector!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L374" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L677" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1958,7 +2161,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_svmDetector(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L371" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L673" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1980,7 +2183,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_winSigma!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L378" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L683" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2002,7 +2205,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_winSigma(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L375" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L679" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2024,7 +2227,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_winSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L382" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L689" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2046,7 +2249,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_winSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L379" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L685" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2068,7 +2271,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDaimlerPeopleDetector!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L242" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L425" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2090,7 +2293,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultPeopleDetector!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L444" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2112,7 +2315,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDescriptorSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L256" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L463" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2134,7 +2337,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getWinSigma!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L263" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L482" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2156,7 +2359,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">hogDescriptor!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2178,7 +2381,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">hogDescriptor!(filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2200,7 +2403,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">hogDescriptor!(winSize, blockSize, blockStride, cellSize, nbins)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2222,7 +2425,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">hogDescriptor!(winSize, blockSize, blockStride, cellSize, nbins, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L44" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2244,7 +2447,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L292" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2266,7 +2469,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(self, filename, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L283" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L509" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2288,7 +2491,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L321" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L590" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2310,7 +2513,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L312" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L563" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2332,7 +2535,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setSVMDetector!(self, svmdetector)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_hogdescriptor.ex#L330" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_hogdescriptor.ex#L611" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2355,10 +2558,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_hogdescriptor.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_hogdescriptor.ex">(current file)</a>
 
             </span>
 

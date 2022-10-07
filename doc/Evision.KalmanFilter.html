@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.KalmanFilter — Evision v0.1.5-dev</title>
+    <title>Evision.KalmanFilter — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.KalmanFilter</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Updates the predicted state from the measurement.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,8 @@ Evision
           <a href="#kalmanFilter/0" translate="no">kalmanFilter()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -142,6 +146,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>dynamParams</strong>: int. </li><li><strong>measureParams</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>controlParams</strong>: int.</li><li><strong>type</strong>: int.</li></ul><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -150,7 +156,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>dynamParams</strong>: int. </li><li><strong>measureParams</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>controlParams</strong>: int.</li><li><strong>type</strong>: int.</li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -159,6 +165,8 @@ Evision
           <a href="#predict/1" translate="no">predict(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>control</strong>: Mat.</li></ul><p>Computes a predicted state.</p></div>
 
       </div>
 
@@ -401,7 +409,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_controlMatrix!/2" translate="no">set_controlMatrix!(self, opts)</a>
+          <a href="#set_controlMatrix!/2" translate="no">set_controlMatrix!(self, prop)</a>
 
         </div>
 
@@ -411,7 +419,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_controlMatrix/2" translate="no">set_controlMatrix(self, opts)</a>
+          <a href="#set_controlMatrix/2" translate="no">set_controlMatrix(self, prop)</a>
 
         </div>
 
@@ -419,7 +427,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_errorCovPost!/2" translate="no">set_errorCovPost!(self, opts)</a>
+          <a href="#set_errorCovPost!/2" translate="no">set_errorCovPost!(self, prop)</a>
 
         </div>
 
@@ -429,7 +437,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_errorCovPost/2" translate="no">set_errorCovPost(self, opts)</a>
+          <a href="#set_errorCovPost/2" translate="no">set_errorCovPost(self, prop)</a>
 
         </div>
 
@@ -437,7 +445,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_errorCovPre!/2" translate="no">set_errorCovPre!(self, opts)</a>
+          <a href="#set_errorCovPre!/2" translate="no">set_errorCovPre!(self, prop)</a>
 
         </div>
 
@@ -447,7 +455,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_errorCovPre/2" translate="no">set_errorCovPre(self, opts)</a>
+          <a href="#set_errorCovPre/2" translate="no">set_errorCovPre(self, prop)</a>
 
         </div>
 
@@ -455,7 +463,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_gain!/2" translate="no">set_gain!(self, opts)</a>
+          <a href="#set_gain!/2" translate="no">set_gain!(self, prop)</a>
 
         </div>
 
@@ -465,7 +473,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_gain/2" translate="no">set_gain(self, opts)</a>
+          <a href="#set_gain/2" translate="no">set_gain(self, prop)</a>
 
         </div>
 
@@ -473,7 +481,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_measurementMatrix!/2" translate="no">set_measurementMatrix!(self, opts)</a>
+          <a href="#set_measurementMatrix!/2" translate="no">set_measurementMatrix!(self, prop)</a>
 
         </div>
 
@@ -483,7 +491,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_measurementMatrix/2" translate="no">set_measurementMatrix(self, opts)</a>
+          <a href="#set_measurementMatrix/2" translate="no">set_measurementMatrix(self, prop)</a>
 
         </div>
 
@@ -491,7 +499,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_measurementNoiseCov!/2" translate="no">set_measurementNoiseCov!(self, opts)</a>
+          <a href="#set_measurementNoiseCov!/2" translate="no">set_measurementNoiseCov!(self, prop)</a>
 
         </div>
 
@@ -501,7 +509,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_measurementNoiseCov/2" translate="no">set_measurementNoiseCov(self, opts)</a>
+          <a href="#set_measurementNoiseCov/2" translate="no">set_measurementNoiseCov(self, prop)</a>
 
         </div>
 
@@ -509,7 +517,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_processNoiseCov!/2" translate="no">set_processNoiseCov!(self, opts)</a>
+          <a href="#set_processNoiseCov!/2" translate="no">set_processNoiseCov!(self, prop)</a>
 
         </div>
 
@@ -519,7 +527,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_processNoiseCov/2" translate="no">set_processNoiseCov(self, opts)</a>
+          <a href="#set_processNoiseCov/2" translate="no">set_processNoiseCov(self, prop)</a>
 
         </div>
 
@@ -527,7 +535,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_statePost!/2" translate="no">set_statePost!(self, opts)</a>
+          <a href="#set_statePost!/2" translate="no">set_statePost!(self, prop)</a>
 
         </div>
 
@@ -537,7 +545,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_statePost/2" translate="no">set_statePost(self, opts)</a>
+          <a href="#set_statePost/2" translate="no">set_statePost(self, prop)</a>
 
         </div>
 
@@ -545,7 +553,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_statePre!/2" translate="no">set_statePre!(self, opts)</a>
+          <a href="#set_statePre!/2" translate="no">set_statePre!(self, prop)</a>
 
         </div>
 
@@ -555,7 +563,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_statePre/2" translate="no">set_statePre(self, opts)</a>
+          <a href="#set_statePre/2" translate="no">set_statePre(self, prop)</a>
 
         </div>
 
@@ -563,7 +571,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_transitionMatrix!/2" translate="no">set_transitionMatrix!(self, opts)</a>
+          <a href="#set_transitionMatrix!/2" translate="no">set_transitionMatrix!(self, prop)</a>
 
         </div>
 
@@ -573,7 +581,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_transitionMatrix/2" translate="no">set_transitionMatrix(self, opts)</a>
+          <a href="#set_transitionMatrix/2" translate="no">set_transitionMatrix(self, prop)</a>
 
         </div>
 
@@ -602,7 +610,7 @@ cv
     </a>
     <h1 class="signature" translate="no">correct(self, measurement)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -612,7 +620,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Updates the predicted state from the measurement.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">correct</span><span class="p" data-group-id="4821467581-1">(</span><span class="n">measurement</span><span class="p" data-group-id="4821467581-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="kalmanFilter/0">
@@ -624,7 +632,7 @@ cv
     </a>
     <h1 class="signature" translate="no">kalmanFilter()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L76" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -634,7 +642,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">KalmanFilter</span><span class="p" data-group-id="5404326022-1">(</span><span class="p" data-group-id="5404326022-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">KalmanFilter</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="kalmanFilter/2">
@@ -646,7 +654,7 @@ cv
     </a>
     <h1 class="signature" translate="no">kalmanFilter(dynamParams, measureParams)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -656,7 +664,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="kalmanFilter/2-positional-arguments" class="section-heading">
+  <a href="#kalmanFilter/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>dynamParams</strong>: int. </li><li><strong>measureParams</strong>: int. </li></ul><h3 id="kalmanFilter/2-keyword-arguments" class="section-heading">
+  <a href="#kalmanFilter/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>controlParams</strong>: int.</li><li><strong>type</strong>: int.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">KalmanFilter</span><span class="p" data-group-id="4422337720-1">(</span><span class="n">dynamParams</span><span class="p">,</span><span class="w"> </span><span class="n">measureParams</span><span class="p" data-group-id="4422337720-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">controlParams</span><span class="p" data-group-id="4422337720-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="4422337720-3">]</span><span class="p" data-group-id="4422337720-2">]</span><span class="p" data-group-id="4422337720-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">KalmanFilter</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="kalmanFilter/3">
@@ -668,7 +688,7 @@ cv
     </a>
     <h1 class="signature" translate="no">kalmanFilter(dynamParams, measureParams, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -678,7 +698,19 @@ cv
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><ul><li><strong>dynamParams</strong>.</li><li><strong>measureParams</strong>.</li><li><strong>controlParams</strong>.</li><li><strong>type</strong>.</li><li><strong>controlParams</strong> : int</li><li><strong>type</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">KalmanFilter</span><span class="p" data-group-id="8232892692-1">(</span><span class="n">dynamParams</span><span class="p">,</span><span class="w"> </span><span class="n">measureParams</span><span class="p" data-group-id="8232892692-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">controlParams</span><span class="p" data-group-id="8232892692-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="8232892692-3">]</span><span class="p" data-group-id="8232892692-2">]</span><span class="p" data-group-id="8232892692-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">KalmanFilter</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h3 id="kalmanFilter/3-positional-arguments" class="section-heading">
+  <a href="#kalmanFilter/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>dynamParams</strong>: int. </li><li><strong>measureParams</strong>: int. </li></ul><h3 id="kalmanFilter/3-keyword-arguments" class="section-heading">
+  <a href="#kalmanFilter/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>controlParams</strong>: int.</li><li><strong>type</strong>: int.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">KalmanFilter</span><span class="p" data-group-id="1051133074-1">(</span><span class="n">dynamParams</span><span class="p">,</span><span class="w"> </span><span class="n">measureParams</span><span class="p" data-group-id="1051133074-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">controlParams</span><span class="p" data-group-id="1051133074-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="1051133074-3">]</span><span class="p" data-group-id="1051133074-2">]</span><span class="p" data-group-id="1051133074-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">KalmanFilter</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/1">
@@ -690,7 +722,7 @@ cv
     </a>
     <h1 class="signature" translate="no">predict(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L121" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -700,7 +732,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="predict/1-positional-arguments" class="section-heading">
+  <a href="#predict/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="predict/1-keyword-arguments" class="section-heading">
+  <a href="#predict/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>control</strong>: Mat.</li></ul><p>Computes a predicted state.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="7879260116-1">(</span><span class="p" data-group-id="7879260116-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">control</span><span class="p" data-group-id="7879260116-2">]</span><span class="p" data-group-id="7879260116-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -725,7 +769,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">correct!(self, measurement)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -747,7 +791,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_controlMatrix!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -769,7 +813,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_controlMatrix(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -791,7 +835,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_errorCovPost!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L145" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -813,7 +857,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_errorCovPost(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L141" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -835,7 +879,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_errorCovPre!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L157" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -857,7 +901,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_errorCovPre(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L153" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -879,7 +923,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_gain!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L169" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -901,7 +945,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_gain(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L165" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -923,7 +967,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_measurementMatrix!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -945,7 +989,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_measurementMatrix(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L94" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -967,7 +1011,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_measurementNoiseCov!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L193" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -989,7 +1033,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_measurementNoiseCov(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L189" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1011,7 +1055,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_processNoiseCov!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L205" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1033,7 +1077,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_processNoiseCov(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L201" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1055,7 +1099,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_statePost!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L121" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1077,7 +1121,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_statePost(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L213" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1099,7 +1143,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_statePre!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L129" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1121,7 +1165,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_statePre(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1143,7 +1187,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_transitionMatrix!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L137" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L241" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1165,7 +1209,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_transitionMatrix(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1187,7 +1231,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">kalmanFilter!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L82" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1209,7 +1253,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">kalmanFilter!(dynamParams, measureParams)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L64" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1231,7 +1275,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">kalmanFilter!(dynamParams, measureParams, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1253,7 +1297,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L127" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1273,9 +1317,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_controlMatrix!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_controlMatrix!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L139" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1295,9 +1339,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_controlMatrix(self, opts)</h1>
+    <h1 class="signature" translate="no">set_controlMatrix(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L135" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1317,9 +1361,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_errorCovPost!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_errorCovPost!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1339,9 +1383,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_errorCovPost(self, opts)</h1>
+    <h1 class="signature" translate="no">set_errorCovPost(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1361,9 +1405,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_errorCovPre!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_errorCovPre!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L163" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1383,9 +1427,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_errorCovPre(self, opts)</h1>
+    <h1 class="signature" translate="no">set_errorCovPre(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1405,9 +1449,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_gain!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_gain!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1427,9 +1471,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_gain(self, opts)</h1>
+    <h1 class="signature" translate="no">set_gain(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L171" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1449,9 +1493,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_measurementMatrix!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_measurementMatrix!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1471,9 +1515,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_measurementMatrix(self, opts)</h1>
+    <h1 class="signature" translate="no">set_measurementMatrix(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L183" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1493,9 +1537,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_measurementNoiseCov!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_measurementNoiseCov!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1515,9 +1559,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_measurementNoiseCov(self, opts)</h1>
+    <h1 class="signature" translate="no">set_measurementNoiseCov(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1537,9 +1581,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_processNoiseCov!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_processNoiseCov!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L117" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L211" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1559,9 +1603,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_processNoiseCov(self, opts)</h1>
+    <h1 class="signature" translate="no">set_processNoiseCov(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L207" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1581,9 +1625,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_statePost!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_statePost!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L223" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1603,9 +1647,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_statePost(self, opts)</h1>
+    <h1 class="signature" translate="no">set_statePost(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L219" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1625,9 +1669,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_statePre!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_statePre!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1647,9 +1691,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_statePre(self, opts)</h1>
+    <h1 class="signature" translate="no">set_statePre(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L130" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L231" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1669,9 +1713,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_transitionMatrix!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_transitionMatrix!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L247" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1691,9 +1735,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_transitionMatrix(self, opts)</h1>
+    <h1 class="signature" translate="no">set_transitionMatrix(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_kalmanfilter.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_kalmanfilter.ex#L243" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1716,10 +1760,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_kalmanfilter.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_kalmanfilter.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Stitcher — Evision v0.1.5-dev</title>
+    <title>Evision.Stitcher — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Stitcher</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>pano</strong>: UMat.</li></ul><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,13 @@ Evision
           <a href="#composePanorama/2" translate="no">composePanorama(self, images)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>images</strong>: vector_UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to compose the given images (or images stored internally from the other function
+  calls) into the final pano under the assumption that the image transformations were estimated
+  before.
+<strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
+  Stitcher::stitch.
+@return Status code.</p></div>
 
       </div>
 
@@ -142,11 +151,12 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>These functions try to compose the given images (or images stored internally from the other function
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>images</strong>: vector_UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to compose the given images (or images stored internally from the other function
   calls) into the final pano under the assumption that the image transformations were estimated
   before.
 <strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
-  Stitcher::stitch.</p></div>
+  Stitcher::stitch.
+@return Status code.</p></div>
 
       </div>
 
@@ -156,6 +166,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -163,6 +175,8 @@ Evision
           <a href="#create/0" translate="no">create()</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>mode</strong>: Mode.</li></ul><p>Creates a Stitcher configured in one of the stitching modes.</p></div>
 
       </div>
 
@@ -172,7 +186,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Creates a Stitcher configured in one of the stitching modes.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>mode</strong>: Mode.</li></ul><p>Creates a Stitcher configured in one of the stitching modes.</p></div>
 
       </div>
 
@@ -182,6 +196,11 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>images</strong>: vector_UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>masks</strong>: vector_UMat.</li></ul><p>These functions try to match the given images and to estimate rotations of each camera.
+<strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
+  Stitcher::stitch.
+@return Status code.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -190,9 +209,10 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>These functions try to match the given images and to estimate rotations of each camera.
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>images</strong>: vector_UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>masks</strong>: vector_UMat.</li></ul><p>These functions try to match the given images and to estimate rotations of each camera.
 <strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
-  Stitcher::stitch.</p></div>
+  Stitcher::stitch.
+@return Status code.</p></div>
 
       </div>
 
@@ -202,6 +222,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -209,6 +231,8 @@ Evision
           <a href="#panoConfidenceThresh/1" translate="no">panoConfidenceThresh(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -218,6 +242,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -225,6 +251,8 @@ Evision
           <a href="#seamEstimationResol/1" translate="no">seamEstimationResol(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -234,6 +262,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -241,6 +271,8 @@ Evision
           <a href="#setInterpolationFlags/2" translate="no">setInterpolationFlags(self, interp_flags)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -250,6 +282,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -257,6 +291,8 @@ Evision
           <a href="#setRegistrationResol/2" translate="no">setRegistrationResol(self, resol_mpx)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -266,6 +302,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -273,6 +311,8 @@ Evision
           <a href="#setWaveCorrection/2" translate="no">setWaveCorrection(self, flag)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -282,6 +322,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>images</strong>: vector_UMat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>pano</strong>: UMat.</li></ul><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -289,6 +331,9 @@ Evision
           <a href="#stitch/3" translate="no">stitch(self, images, opts)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><h3>Positional Arguments</h3><ul><li><strong>images</strong>: vector_UMat. </li><li><strong>masks</strong>: vector_UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to stitch the given images.
+@return Status code.</p></div>
 
       </div>
 
@@ -298,7 +343,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>These functions try to stitch the given images.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>images</strong>: vector_UMat. </li><li><strong>masks</strong>: vector_UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to stitch the given images.
+@return Status code.</p></div>
 
       </div>
 
@@ -308,6 +354,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -315,6 +363,8 @@ Evision
           <a href="#workScale/1" translate="no">workScale(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -578,7 +628,7 @@ cv
     </a>
     <h1 class="signature" translate="no">composePanorama(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -588,7 +638,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="composePanorama/1-positional-arguments" class="section-heading">
+  <a href="#composePanorama/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="composePanorama/1-keyword-arguments" class="section-heading">
+  <a href="#composePanorama/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>pano</strong>: UMat.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">composePanorama</span><span class="p" data-group-id="5659019127-1">(</span><span class="p" data-group-id="5659019127-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="5659019127-2">]</span><span class="p" data-group-id="5659019127-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
   </section>
 </section>
 <section class="detail" id="composePanorama/2">
@@ -600,7 +662,7 @@ cv
     </a>
     <h1 class="signature" translate="no">composePanorama(self, images)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -610,7 +672,24 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="composePanorama/2-positional-arguments" class="section-heading">
+  <a href="#composePanorama/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat. </li></ul><h3 id="composePanorama/2-keyword-arguments" class="section-heading">
+  <a href="#composePanorama/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to compose the given images (or images stored internally from the other function
+  calls) into the final pano under the assumption that the image transformations were estimated
+  before.
+<strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
+  Stitcher::stitch.
+@return Status code.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">composePanorama</span><span class="p" data-group-id="9321903558-1">(</span><span class="n">images</span><span class="p" data-group-id="9321903558-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="9321903558-2">]</span><span class="p" data-group-id="9321903558-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
   </section>
 </section>
 <section class="detail" id="composePanorama/3">
@@ -622,7 +701,7 @@ cv
     </a>
     <h1 class="signature" translate="no">composePanorama(self, images, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -632,12 +711,24 @@ cv
 
   <section class="docstring">
 
-<p>These functions try to compose the given images (or images stored internally from the other function
+<h3 id="composePanorama/3-positional-arguments" class="section-heading">
+  <a href="#composePanorama/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat. </li></ul><h3 id="composePanorama/3-keyword-arguments" class="section-heading">
+  <a href="#composePanorama/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to compose the given images (or images stored internally from the other function
   calls) into the final pano under the assumption that the image transformations were estimated
   before.
 <strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
-  Stitcher::stitch.</p><ul><li><strong>images</strong>.</li><li><strong>pano</strong>.
-@return Status code.</li><li><strong>pano</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">composePanorama</span><span class="p" data-group-id="7640767567-1">(</span><span class="n">images</span><span class="p" data-group-id="7640767567-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="7640767567-2">]</span><span class="p" data-group-id="7640767567-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
+  Stitcher::stitch.
+@return Status code.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">composePanorama</span><span class="p" data-group-id="0762198935-1">(</span><span class="n">images</span><span class="p" data-group-id="0762198935-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="0762198935-2">]</span><span class="p" data-group-id="0762198935-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
   </section>
 </section>
 <section class="detail" id="compositingResol/1">
@@ -649,7 +740,7 @@ cv
     </a>
     <h1 class="signature" translate="no">compositingResol(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -659,7 +750,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">compositingResol</span><span class="p" data-group-id="5374694484-1">(</span><span class="p" data-group-id="5374694484-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -671,7 +762,7 @@ cv
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L158" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -681,7 +772,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="create/0-positional-arguments" class="section-heading">
+  <a href="#create/0-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="create/0-keyword-arguments" class="section-heading">
+  <a href="#create/0-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mode</strong>: Mode.</li></ul><p>Creates a Stitcher configured in one of the stitching modes.</p><pre><code class="makeup elixir" translate="no"><span class="n">to</span><span class="w"> </span><span class="n">stitch</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">transformation</span><span class="o">.</span><span class="w"> </span><span class="nc">Default</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">operation</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">given</span><span class="w">
+</span><span class="n">scenario</span><span class="o">.</span></code></pre><p>@return Stitcher class instance.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="7140735579-1">(</span><span class="p" data-group-id="7140735579-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p" data-group-id="7140735579-2">]</span><span class="p" data-group-id="7140735579-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/1">
@@ -693,7 +797,7 @@ cv
     </a>
     <h1 class="signature" translate="no">create(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -703,10 +807,20 @@ cv
 
   <section class="docstring">
 
-<p>Creates a Stitcher configured in one of the stitching modes.</p><ul><li><strong>mode</strong>.
-  to stitch and their transformation. Default parameters will be chosen for operation in given
-  scenario.
-@return Stitcher class instance.</li><li><strong>mode</strong> : Mode</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="0426528797-1">(</span><span class="p" data-group-id="0426528797-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p" data-group-id="0426528797-2">]</span><span class="p" data-group-id="0426528797-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="create/1-positional-arguments" class="section-heading">
+  <a href="#create/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="create/1-keyword-arguments" class="section-heading">
+  <a href="#create/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>mode</strong>: Mode.</li></ul><p>Creates a Stitcher configured in one of the stitching modes.</p><pre><code class="makeup elixir" translate="no"><span class="n">to</span><span class="w"> </span><span class="n">stitch</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">transformation</span><span class="o">.</span><span class="w"> </span><span class="nc">Default</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">operation</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">given</span><span class="w">
+</span><span class="n">scenario</span><span class="o">.</span></code></pre><p>@return Stitcher class instance.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="7763137830-1">(</span><span class="p" data-group-id="7763137830-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p" data-group-id="7763137830-2">]</span><span class="p" data-group-id="7763137830-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="estimateTransform/2">
@@ -718,7 +832,7 @@ cv
     </a>
     <h1 class="signature" translate="no">estimateTransform(self, images)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L216" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -728,7 +842,22 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="estimateTransform/2-positional-arguments" class="section-heading">
+  <a href="#estimateTransform/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat. </li></ul><h3 id="estimateTransform/2-keyword-arguments" class="section-heading">
+  <a href="#estimateTransform/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li></ul><p>These functions try to match the given images and to estimate rotations of each camera.
+<strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
+  Stitcher::stitch.
+@return Status code.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">estimateTransform</span><span class="p" data-group-id="3410552911-1">(</span><span class="n">images</span><span class="p" data-group-id="3410552911-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="3410552911-2">]</span><span class="p" data-group-id="3410552911-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="estimateTransform/3">
@@ -740,7 +869,7 @@ cv
     </a>
     <h1 class="signature" translate="no">estimateTransform(self, images, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L186" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -750,10 +879,22 @@ cv
 
   <section class="docstring">
 
-<p>These functions try to match the given images and to estimate rotations of each camera.
+<h3 id="estimateTransform/3-positional-arguments" class="section-heading">
+  <a href="#estimateTransform/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat. </li></ul><h3 id="estimateTransform/3-keyword-arguments" class="section-heading">
+  <a href="#estimateTransform/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>masks</strong>: vector_UMat.</li></ul><p>These functions try to match the given images and to estimate rotations of each camera.
 <strong>Note</strong>: Use the functions only if you're aware of the stitching pipeline, otherwise use
-  Stitcher::stitch.</p><ul><li><strong>images</strong>.</li><li><strong>masks</strong>.
-@return Status code.</li><li><strong>masks</strong> : vector_UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">estimateTransform</span><span class="p" data-group-id="8278637376-1">(</span><span class="n">images</span><span class="p" data-group-id="8278637376-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="8278637376-2">]</span><span class="p" data-group-id="8278637376-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  Stitcher::stitch.
+@return Status code.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">estimateTransform</span><span class="p" data-group-id="6241779506-1">(</span><span class="n">images</span><span class="p" data-group-id="6241779506-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="6241779506-2">]</span><span class="p" data-group-id="6241779506-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="interpolationFlags/1">
@@ -765,7 +906,7 @@ cv
     </a>
     <h1 class="signature" translate="no">interpolationFlags(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L236" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -775,7 +916,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">interpolationFlags</span><span class="p" data-group-id="0328699423-1">(</span><span class="p" data-group-id="0328699423-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="panoConfidenceThresh/1">
@@ -787,7 +928,7 @@ cv
     </a>
     <h1 class="signature" translate="no">panoConfidenceThresh(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L254" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -797,7 +938,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">panoConfidenceThresh</span><span class="p" data-group-id="8483887926-1">(</span><span class="p" data-group-id="8483887926-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="registrationResol/1">
@@ -809,7 +950,7 @@ cv
     </a>
     <h1 class="signature" translate="no">registrationResol(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L127" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -819,7 +960,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">registrationResol</span><span class="p" data-group-id="0455398029-1">(</span><span class="p" data-group-id="0455398029-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="seamEstimationResol/1">
@@ -831,7 +972,7 @@ cv
     </a>
     <h1 class="signature" translate="no">seamEstimationResol(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L290" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -841,7 +982,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">seamEstimationResol</span><span class="p" data-group-id="0578523610-1">(</span><span class="p" data-group-id="0578523610-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setCompositingResol/2">
@@ -853,7 +994,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setCompositingResol(self, resol_mpx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L308" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -863,7 +1004,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setCompositingResol</span><span class="p" data-group-id="9096398175-1">(</span><span class="n">resol_mpx</span><span class="p" data-group-id="9096398175-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInterpolationFlags/2">
@@ -875,7 +1016,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setInterpolationFlags(self, interp_flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L150" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L328" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -885,7 +1026,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInterpolationFlags</span><span class="p" data-group-id="6336039288-1">(</span><span class="n">interp_flags</span><span class="p" data-group-id="6336039288-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setPanoConfidenceThresh/2">
@@ -897,7 +1038,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setPanoConfidenceThresh(self, conf_thresh)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L348" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -907,7 +1048,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPanoConfidenceThresh</span><span class="p" data-group-id="3254940946-1">(</span><span class="n">conf_thresh</span><span class="p" data-group-id="3254940946-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setRegistrationResol/2">
@@ -919,7 +1060,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setRegistrationResol(self, resol_mpx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L368" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -929,7 +1070,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRegistrationResol</span><span class="p" data-group-id="8989341144-1">(</span><span class="n">resol_mpx</span><span class="p" data-group-id="8989341144-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setSeamEstimationResol/2">
@@ -941,7 +1082,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setSeamEstimationResol(self, resol_mpx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L177" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L388" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -951,7 +1092,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setSeamEstimationResol</span><span class="p" data-group-id="5979222916-1">(</span><span class="n">resol_mpx</span><span class="p" data-group-id="5979222916-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setWaveCorrection/2">
@@ -963,7 +1104,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setWaveCorrection(self, flag)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L186" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L408" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -973,7 +1114,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setWaveCorrection</span><span class="p" data-group-id="0592872567-1">(</span><span class="n">flag</span><span class="p" data-group-id="0592872567-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="stitch/2">
@@ -985,7 +1126,7 @@ cv
     </a>
     <h1 class="signature" translate="no">stitch(self, images)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L521" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -995,7 +1136,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="stitch/2-positional-arguments" class="section-heading">
+  <a href="#stitch/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat</li></ul><h3 id="stitch/2-keyword-arguments" class="section-heading">
+  <a href="#stitch/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>pano</strong>: UMat.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">stitch</span><span class="p" data-group-id="6501499121-1">(</span><span class="n">images</span><span class="p" data-group-id="6501499121-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="6501499121-2">]</span><span class="p" data-group-id="6501499121-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
   </section>
 </section>
 <section class="detail" id="stitch/3">
@@ -1007,7 +1160,7 @@ cv
     </a>
     <h1 class="signature" translate="no">stitch(self, images, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L484" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1017,7 +1170,44 @@ cv
 
   <section class="docstring">
 
-
+<h2 id="stitch/3-variaint-1" class="section-heading">
+  <a href="#stitch/3-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<h3 id="stitch/3-positional-arguments" class="section-heading">
+  <a href="#stitch/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat. </li><li><strong>masks</strong>: vector_UMat. </li></ul><h3 id="stitch/3-keyword-arguments" class="section-heading">
+  <a href="#stitch/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to stitch the given images.
+@return Status code.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">stitch</span><span class="p" data-group-id="6454029348-1">(</span><span class="n">images</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="6454029348-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="6454029348-2">]</span><span class="p" data-group-id="6454029348-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre><h2 id="stitch/3-variaint-2" class="section-heading">
+  <a href="#stitch/3-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<h3 id="stitch/3-positional-arguments-1" class="section-heading">
+  <a href="#stitch/3-positional-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments-1</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat</li></ul><h3 id="stitch/3-keyword-arguments-1" class="section-heading">
+  <a href="#stitch/3-keyword-arguments-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments-1</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>pano</strong>: UMat.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">stitch</span><span class="p" data-group-id="5230520986-1">(</span><span class="n">images</span><span class="p" data-group-id="5230520986-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="5230520986-2">]</span><span class="p" data-group-id="5230520986-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
   </section>
 </section>
 <section class="detail" id="stitch/4">
@@ -1029,7 +1219,7 @@ cv
     </a>
     <h1 class="signature" translate="no">stitch(self, images, masks, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L231" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L437" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1039,8 +1229,20 @@ cv
 
   <section class="docstring">
 
-<p>These functions try to stitch the given images.</p><ul><li><strong>images</strong>.</li><li><strong>masks</strong>.</li><li><strong>pano</strong>.
-@return Status code.</li><li><strong>pano</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">stitch</span><span class="p" data-group-id="9906736540-1">(</span><span class="n">images</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="9906736540-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="9906736540-2">]</span><span class="p" data-group-id="9906736540-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
+<h3 id="stitch/4-positional-arguments" class="section-heading">
+  <a href="#stitch/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>images</strong>: vector_UMat. </li><li><strong>masks</strong>: vector_UMat. </li></ul><h3 id="stitch/4-keyword-arguments" class="section-heading">
+  <a href="#stitch/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>pano</strong>: UMat.</li></ul><p>These functions try to stitch the given images.
+@return Status code.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">stitch</span><span class="p" data-group-id="8286384667-1">(</span><span class="n">images</span><span class="p">,</span><span class="w"> </span><span class="n">masks</span><span class="p" data-group-id="8286384667-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span><span class="p" data-group-id="8286384667-2">]</span><span class="p" data-group-id="8286384667-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">pano</span></code></pre>
   </section>
 </section>
 <section class="detail" id="waveCorrection/1">
@@ -1052,7 +1254,7 @@ cv
     </a>
     <h1 class="signature" translate="no">waveCorrection(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L541" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1062,7 +1264,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waveCorrection</span><span class="p" data-group-id="8809369612-1">(</span><span class="p" data-group-id="8809369612-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="workScale/1">
@@ -1074,7 +1276,7 @@ cv
     </a>
     <h1 class="signature" translate="no">workScale(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1084,7 +1286,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">workScale</span><span class="p" data-group-id="3764449930-1">(</span><span class="p" data-group-id="3764449930-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -1109,7 +1311,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">composePanorama!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1131,7 +1333,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">composePanorama!(self, images)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L66" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1153,7 +1355,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">composePanorama!(self, images, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1175,7 +1377,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">compositingResol!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1197,7 +1399,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L164" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1219,7 +1421,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L137" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1241,7 +1443,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">estimateTransform!(self, images)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L224" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1263,7 +1465,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">estimateTransform!(self, images, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L194" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1285,7 +1487,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">interpolationFlags!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L242" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1307,7 +1509,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">panoConfidenceThresh!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1329,7 +1531,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">registrationResol!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1351,7 +1553,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">seamEstimationResol!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L296" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1373,7 +1575,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setCompositingResol!(self, resol_mpx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1395,7 +1597,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInterpolationFlags!(self, interp_flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L157" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L336" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1417,7 +1619,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPanoConfidenceThresh!(self, conf_thresh)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L166" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L356" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1439,7 +1641,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRegistrationResol!(self, resol_mpx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L376" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1461,7 +1663,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setSeamEstimationResol!(self, resol_mpx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1483,7 +1685,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setWaveCorrection!(self, flag)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L193" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L416" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1505,7 +1707,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">stitch!(self, images)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L216" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L529" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1527,7 +1729,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">stitch!(self, images, masks)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L501" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1549,7 +1751,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">stitch!(self, images, masks, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L239" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L446" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1571,7 +1773,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">waveCorrection!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L256" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L547" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1593,7 +1795,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">workScale!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_stitcher.ex#L263" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_stitcher.ex#L565" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1616,10 +1818,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_stitcher.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_stitcher.ex">(current file)</a>
 
             </span>
 

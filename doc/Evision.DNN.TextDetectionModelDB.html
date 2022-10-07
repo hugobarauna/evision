@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.DNN.TextDetectionModelDB — Evision v0.1.5-dev</title>
+    <title>Evision.DNN.TextDetectionModelDB — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.TextDetectionModelDB</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,6 +122,48 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_DB!/1" translate="no">dnn_TextDetectionModel_DB!(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_TextDetectionModel_DB/1"><code class="inline">dnn_TextDetectionModel_DB/1</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_DB!/2" translate="no">dnn_TextDetectionModel_DB!(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_TextDetectionModel_DB/2"><code class="inline">dnn_TextDetectionModel_DB/2</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_DB/1" translate="no">dnn_TextDetectionModel_DB(model)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: string. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#dnn_TextDetectionModel_DB/2" translate="no">dnn_TextDetectionModel_DB(model, opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: string. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#getBinaryThreshold!/1" translate="no">getBinaryThreshold!(self)</a>
 
         </div>
@@ -135,6 +177,8 @@ Evision
           <a href="#getBinaryThreshold/1" translate="no">getBinaryThreshold(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -154,6 +198,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -171,6 +217,8 @@ Evision
           <a href="#getPolygonThreshold/1" translate="no">getPolygonThreshold(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -190,6 +238,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -207,6 +257,8 @@ Evision
           <a href="#setBinaryThreshold/2" translate="no">setBinaryThreshold(self, binaryThreshold)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -226,6 +278,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -243,6 +297,8 @@ Evision
           <a href="#setPolygonThreshold/2" translate="no">setPolygonThreshold(self, polygonThreshold)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -262,44 +318,7 @@ Evision
 
         </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_DB!/1" translate="no">textDetectionModel_DB!(model)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#textDetectionModel_DB/1"><code class="inline">textDetectionModel_DB/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_DB!/2" translate="no">textDetectionModel_DB!(model, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#textDetectionModel_DB/2"><code class="inline">textDetectionModel_DB/2</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_DB/1" translate="no">textDetectionModel_DB(model)</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#textDetectionModel_DB/2" translate="no">textDetectionModel_DB(model, opts)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Create text detection model from network represented in one of the supported formats.
-   An order of @p model and @p config arguments does not matter.</p></div>
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -317,6 +336,120 @@ Evision
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="dnn_TextDetectionModel_DB!/1">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_DB!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_DB!(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L58" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_TextDetectionModel_DB/1"><code class="inline">dnn_TextDetectionModel_DB/1</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_TextDetectionModel_DB!/2">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_DB!/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_DB!(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L30" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#dnn_TextDetectionModel_DB/2"><code class="inline">dnn_TextDetectionModel_DB/2</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="dnn_TextDetectionModel_DB/1">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_DB/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_DB(model)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L50" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="dnn_TextDetectionModel_DB/1-positional-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_DB/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: string. </li></ul><h3 id="dnn_TextDetectionModel_DB/1-keyword-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_DB/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextDetectionModel_DB</span><span class="p" data-group-id="3787964145-1">(</span><span class="n">model</span><span class="p" data-group-id="3787964145-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="3787964145-2">]</span><span class="p" data-group-id="3787964145-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextDetectionModel_DB</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="dnn_TextDetectionModel_DB/2">
+
+  <div class="detail-header">
+    <a href="#dnn_TextDetectionModel_DB/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">dnn_TextDetectionModel_DB(model, opts)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h3 id="dnn_TextDetectionModel_DB/2-positional-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_DB/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: string. </li></ul><h3 id="dnn_TextDetectionModel_DB/2-keyword-arguments" class="section-heading">
+  <a href="#dnn_TextDetectionModel_DB/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: string.</li></ul><p>Create text detection model from network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextDetectionModel_DB</span><span class="p" data-group-id="4203911926-1">(</span><span class="n">model</span><span class="p" data-group-id="4203911926-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="4203911926-2">]</span><span class="p" data-group-id="4203911926-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextDetectionModel_DB</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
 <section class="detail" id="getBinaryThreshold!/1">
 
   <div class="detail-header">
@@ -326,7 +459,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBinaryThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L76" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -348,7 +481,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBinaryThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L70" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -358,7 +491,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBinaryThreshold</span><span class="p" data-group-id="4533122991-1">(</span><span class="p" data-group-id="4533122991-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getMaxCandidates!/1">
@@ -370,7 +503,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMaxCandidates!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L94" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -392,7 +525,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMaxCandidates(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L42" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L88" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -402,7 +535,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMaxCandidates</span><span class="p" data-group-id="0818046838-1">(</span><span class="p" data-group-id="0818046838-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getPolygonThreshold!/1">
@@ -414,7 +547,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getPolygonThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -436,7 +569,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getPolygonThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L106" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -446,7 +579,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getPolygonThreshold</span><span class="p" data-group-id="2141706456-1">(</span><span class="p" data-group-id="2141706456-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getUnclipRatio!/1">
@@ -458,7 +591,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUnclipRatio!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -480,7 +613,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUnclipRatio(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -490,7 +623,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUnclipRatio</span><span class="p" data-group-id="1950676589-1">(</span><span class="p" data-group-id="1950676589-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setBinaryThreshold!/2">
@@ -502,7 +635,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBinaryThreshold!(self, binaryThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -524,7 +657,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBinaryThreshold(self, binaryThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -534,7 +667,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setBinaryThreshold</span><span class="p" data-group-id="4746538180-1">(</span><span class="n">binaryThreshold</span><span class="p" data-group-id="4746538180-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setMaxCandidates!/2">
@@ -546,7 +679,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMaxCandidates!(self, maxCandidates)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L170" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -568,7 +701,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMaxCandidates(self, maxCandidates)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -578,7 +711,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMaxCandidates</span><span class="p" data-group-id="7062743034-1">(</span><span class="n">maxCandidates</span><span class="p" data-group-id="7062743034-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setPolygonThreshold!/2">
@@ -590,7 +723,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPolygonThreshold!(self, polygonThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L190" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -612,7 +745,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPolygonThreshold(self, polygonThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L182" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -622,7 +755,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPolygonThreshold</span><span class="p" data-group-id="7079322978-1">(</span><span class="n">polygonThreshold</span><span class="p" data-group-id="7079322978-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setUnclipRatio!/2">
@@ -634,7 +767,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUnclipRatio!(self, unclipRatio)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L210" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -656,7 +789,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUnclipRatio(self, unclipRatio)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -666,96 +799,7 @@ Functions
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_DB!/1">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_DB!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_DB!(model)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L33" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#textDetectionModel_DB/1"><code class="inline">textDetectionModel_DB/1</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_DB!/2">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_DB!/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_DB!(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L24" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#textDetectionModel_DB/2"><code class="inline">textDetectionModel_DB/2</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_DB/1">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_DB/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_DB(model)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L26" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="textDetectionModel_DB/2">
-
-  <div class="detail-header">
-    <a href="#textDetectionModel_DB/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">textDetectionModel_DB(model, opts)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_textdetectionmodeldb.ex#L17" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Create text detection model from network represented in one of the supported formats.
-   An order of @p model and @p config arguments does not matter.</p><ul><li><strong>model</strong>.</li><li><strong>config</strong>.</li><li><strong>config</strong> : string</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">TextDetectionModel_DB</span><span class="p" data-group-id="6670336319-1">(</span><span class="n">model</span><span class="p" data-group-id="6670336319-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="6670336319-2">]</span><span class="p" data-group-id="6670336319-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_TextDetectionModel_DB</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setUnclipRatio</span><span class="p" data-group-id="7451569879-1">(</span><span class="n">unclipRatio</span><span class="p" data-group-id="7451569879-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -768,10 +812,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn_textdetectionmodeldb.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_textdetectionmodeldb.ex">(current file)</a>
 
             </span>
 

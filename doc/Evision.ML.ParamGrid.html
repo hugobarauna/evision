@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.ML.ParamGrid — Evision v0.1.5-dev</title>
+    <title>Evision.ML.ParamGrid — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.ParamGrid</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>minVal</strong>: double.</li><li><strong>maxVal</strong>: double.</li><li><strong>logstep</strong>: double.</li></ul><p>Creates a ParamGrid Ptr that can be given to the %SVM::trainAuto method</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -134,7 +136,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Creates a ParamGrid Ptr that can be given to the %SVM::trainAuto method</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>minVal</strong>: double.</li><li><strong>maxVal</strong>: double.</li><li><strong>logstep</strong>: double.</li></ul><p>Creates a ParamGrid Ptr that can be given to the %SVM::trainAuto method</p></div>
 
       </div>
 
@@ -221,7 +223,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_logStep!/2" translate="no">set_logStep!(self, opts)</a>
+          <a href="#set_logStep!/2" translate="no">set_logStep!(self, prop)</a>
 
         </div>
 
@@ -231,7 +233,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_logStep/2" translate="no">set_logStep(self, opts)</a>
+          <a href="#set_logStep/2" translate="no">set_logStep(self, prop)</a>
 
         </div>
 
@@ -239,7 +241,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_maxVal!/2" translate="no">set_maxVal!(self, opts)</a>
+          <a href="#set_maxVal!/2" translate="no">set_maxVal!(self, prop)</a>
 
         </div>
 
@@ -249,7 +251,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_maxVal/2" translate="no">set_maxVal(self, opts)</a>
+          <a href="#set_maxVal/2" translate="no">set_maxVal(self, prop)</a>
 
         </div>
 
@@ -257,7 +259,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_minVal!/2" translate="no">set_minVal!(self, opts)</a>
+          <a href="#set_minVal!/2" translate="no">set_minVal!(self, prop)</a>
 
         </div>
 
@@ -267,7 +269,7 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#set_minVal/2" translate="no">set_minVal(self, opts)</a>
+          <a href="#set_minVal/2" translate="no">set_minVal(self, prop)</a>
 
         </div>
 
@@ -296,7 +298,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L49" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -306,7 +308,19 @@ cv.ml
 
   <section class="docstring">
 
-
+<h3 id="create/0-positional-arguments" class="section-heading">
+  <a href="#create/0-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="create/0-keyword-arguments" class="section-heading">
+  <a href="#create/0-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>minVal</strong>: double.</li><li><strong>maxVal</strong>: double.</li><li><strong>logstep</strong>: double.</li></ul><p>Creates a ParamGrid Ptr that can be given to the %SVM::trainAuto method</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="6545704414-1">(</span><span class="p" data-group-id="6545704414-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">minVal</span><span class="p" data-group-id="6545704414-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">maxVal</span><span class="p" data-group-id="6545704414-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">logstep</span><span class="p" data-group-id="6545704414-4">]</span><span class="p" data-group-id="6545704414-3">]</span><span class="p" data-group-id="6545704414-2">]</span><span class="p" data-group-id="6545704414-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/1">
@@ -318,7 +332,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">create(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L22" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -328,7 +342,19 @@ cv.ml
 
   <section class="docstring">
 
-<p>Creates a ParamGrid Ptr that can be given to the %SVM::trainAuto method</p><ul><li><strong>minVal</strong>.</li><li><strong>maxVal</strong>.</li><li><strong>logstep</strong>.</li><li><strong>minVal</strong> : double</li><li><strong>maxVal</strong> : double</li><li><strong>logstep</strong> : double</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="5991853792-1">(</span><span class="p" data-group-id="5991853792-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">minVal</span><span class="p" data-group-id="5991853792-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">maxVal</span><span class="p" data-group-id="5991853792-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">logstep</span><span class="p" data-group-id="5991853792-4">]</span><span class="p" data-group-id="5991853792-3">]</span><span class="p" data-group-id="5991853792-2">]</span><span class="p" data-group-id="5991853792-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="create/1-positional-arguments" class="section-heading">
+  <a href="#create/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="create/1-keyword-arguments" class="section-heading">
+  <a href="#create/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>minVal</strong>: double.</li><li><strong>maxVal</strong>: double.</li><li><strong>logstep</strong>: double.</li></ul><p>Creates a ParamGrid Ptr that can be given to the %SVM::trainAuto method</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="8240857914-1">(</span><span class="p" data-group-id="8240857914-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">minVal</span><span class="p" data-group-id="8240857914-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">maxVal</span><span class="p" data-group-id="8240857914-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">logstep</span><span class="p" data-group-id="8240857914-4">]</span><span class="p" data-group-id="8240857914-3">]</span><span class="p" data-group-id="8240857914-2">]</span><span class="p" data-group-id="8240857914-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -353,7 +379,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -375,7 +401,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -397,7 +423,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_logStep!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -419,7 +445,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_logStep(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L57" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -441,7 +467,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_maxVal!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L73" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -463,7 +489,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_maxVal(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L69" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -485,7 +511,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_minVal!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -507,7 +533,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_minVal(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L81" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -527,9 +553,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_logStep!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_logStep!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L67" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -549,9 +575,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_logStep(self, opts)</h1>
+    <h1 class="signature" translate="no">set_logStep(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -571,9 +597,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_maxVal!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_maxVal!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -593,9 +619,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_maxVal(self, opts)</h1>
+    <h1 class="signature" translate="no">set_maxVal(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L75" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -615,9 +641,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_minVal!(self, opts)</h1>
+    <h1 class="signature" translate="no">set_minVal!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -637,9 +663,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">set_minVal(self, opts)</h1>
+    <h1 class="signature" translate="no">set_minVal(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_paramgrid.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_paramgrid.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -662,10 +688,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_ml_paramgrid.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_paramgrid.ex">(current file)</a>
 
             </span>
 

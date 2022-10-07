@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.FileStorage — Evision v0.1.5-dev</title>
+    <title>Evision.FileStorage — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.FileStorage</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Finishes writing nested structure (should pair startWriteStruct())</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,10 @@ Evision
           <a href="#fileStorage/0" translate="no">fileStorage()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>The constructors.
+  The full constructor opens the file. Alternatively you can use the default constructor and then
+  call FileStorage::open.</p></div>
 
       </div>
 
@@ -142,6 +148,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String</li><li><strong>flags</strong>: int</li></ul><h3>Keyword Arguments</h3><ul><li><strong>encoding</strong>: String.</li></ul><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -150,7 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String</li><li><strong>flags</strong>: int</li></ul><h3>Keyword Arguments</h3><ul><li><strong>encoding</strong>: String.</li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -160,6 +168,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns the first element of the top-level mapping.
+@returns The first element of the top-level mapping.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -167,6 +178,9 @@ Evision
           <a href="#getFormat/1" translate="no">getFormat(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns the current format.
+@returns The current format, see FileStorage::Mode</p></div>
 
       </div>
 
@@ -176,6 +190,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -183,6 +199,10 @@ Evision
           <a href="#isOpened/1" translate="no">isOpened(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Checks whether the file is opened.
+@returns true if the object is associated with the current file and false otherwise. It is a
+  good practice to call this method after you tried to open a file.</p></div>
 
       </div>
 
@@ -192,6 +212,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>encoding</strong>: String.</li></ul><p>Opens a file.
+  See description of parameters in FileStorage::FileStorage. The method calls FileStorage::release
+  before opening the file.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -200,7 +224,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Opens a file.
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>filename</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>encoding</strong>: String.</li></ul><p>Opens a file.
   See description of parameters in FileStorage::FileStorage. The method calls FileStorage::release
   before opening the file.</p></div>
 
@@ -212,6 +236,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Closes the file and releases all the memory buffers.
+  Call this method after all I/O operations with the storage are finished.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -219,6 +246,10 @@ Evision
           <a href="#releaseAndGetString/1" translate="no">releaseAndGetString(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Closes the file and releases all the memory buffers.
+  Call this method after all I/O operations with the storage are finished. If the storage was
+  opened for writing data and FileStorage::WRITE was specified</p></div>
 
       </div>
 
@@ -228,6 +259,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>streamidx</strong>: int.</li></ul><p>Returns the top-level mapping</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -235,6 +268,8 @@ Evision
           <a href="#startWriteStruct/3" translate="no">startWriteStruct(self, name, flags)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>name</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>typeName</strong>: String.</li></ul><p>Starts to write a nested structure (sequence or a mapping).</p></div>
 
       </div>
 
@@ -244,7 +279,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Starts to write a nested structure (sequence or a mapping).</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>name</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>typeName</strong>: String.</li></ul><p>Starts to write a nested structure (sequence or a mapping).</p></div>
 
       </div>
 
@@ -254,6 +289,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -261,6 +298,9 @@ Evision
           <a href="#writeComment/2" translate="no">writeComment(self, comment)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>comment</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>append</strong>: bool.</li></ul><p>Writes a comment.
+  The function writes a comment into file storage. The comments are skipped when the storage is read.</p></div>
 
       </div>
 
@@ -270,7 +310,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Writes a comment.
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>comment</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>append</strong>: bool.</li></ul><p>Writes a comment.
   The function writes a comment into file storage. The comments are skipped when the storage is read.</p></div>
 
       </div>
@@ -485,7 +525,7 @@ cv
     </a>
     <h1 class="signature" translate="no">endWriteStruct(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -495,7 +535,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Finishes writing nested structure (should pair startWriteStruct())</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">endWriteStruct</span><span class="p" data-group-id="0714864096-1">(</span><span class="p" data-group-id="0714864096-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="fileStorage/0">
@@ -507,7 +547,7 @@ cv
     </a>
     <h1 class="signature" translate="no">fileStorage()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -517,7 +557,9 @@ cv
 
   <section class="docstring">
 
-
+<p>The constructors.
+  The full constructor opens the file. Alternatively you can use the default constructor and then
+  call FileStorage::open.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">FileStorage</span><span class="p" data-group-id="9238582872-1">(</span><span class="p" data-group-id="9238582872-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">FileStorage</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="fileStorage/2">
@@ -529,7 +571,7 @@ cv
     </a>
     <h1 class="signature" translate="no">fileStorage(filename, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -539,7 +581,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="fileStorage/2-positional-arguments" class="section-heading">
+  <a href="#fileStorage/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String</li><li><strong>flags</strong>: int</li></ul><h3 id="fileStorage/2-keyword-arguments" class="section-heading">
+  <a href="#fileStorage/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>encoding</strong>: String.</li></ul><p>Has overloading in C++</p><p>@copydoc open()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">FileStorage</span><span class="p" data-group-id="5481733790-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="5481733790-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="p" data-group-id="5481733790-2">]</span><span class="p" data-group-id="5481733790-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">FileStorage</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="fileStorage/3">
@@ -551,7 +605,7 @@ cv
     </a>
     <h1 class="signature" translate="no">fileStorage(filename, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -561,7 +615,19 @@ cv
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>@copydoc open()</p><ul><li><strong>encoding</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">FileStorage</span><span class="p" data-group-id="2706394979-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="2706394979-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="p" data-group-id="2706394979-2">]</span><span class="p" data-group-id="2706394979-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">FileStorage</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h3 id="fileStorage/3-positional-arguments" class="section-heading">
+  <a href="#fileStorage/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String</li><li><strong>flags</strong>: int</li></ul><h3 id="fileStorage/3-keyword-arguments" class="section-heading">
+  <a href="#fileStorage/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>encoding</strong>: String.</li></ul><p>Has overloading in C++</p><p>@copydoc open()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">FileStorage</span><span class="p" data-group-id="1355900302-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="1355900302-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="p" data-group-id="1355900302-2">]</span><span class="p" data-group-id="1355900302-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">FileStorage</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getFirstTopLevelNode/1">
@@ -573,7 +639,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getFirstTopLevelNode(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -583,7 +649,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns the first element of the top-level mapping.
+@returns The first element of the top-level mapping.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFirstTopLevelNode</span><span class="p" data-group-id="5162336140-1">(</span><span class="p" data-group-id="5162336140-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getFormat/1">
@@ -595,7 +662,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getFormat(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L138" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -605,7 +672,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns the current format.
+@returns The current format, see FileStorage::Mode</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFormat</span><span class="p" data-group-id="1697375584-1">(</span><span class="p" data-group-id="1697375584-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getNode/2">
@@ -617,7 +685,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getNode(self, nodename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L158" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -627,7 +695,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNode</span><span class="p" data-group-id="8381266493-1">(</span><span class="n">nodename</span><span class="p" data-group-id="8381266493-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isOpened/1">
@@ -639,7 +707,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isOpened(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -649,7 +717,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Checks whether the file is opened.
+@returns true if the object is associated with the current file and false otherwise. It is a
+  good practice to call this method after you tried to open a file.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isOpened</span><span class="p" data-group-id="3377095097-1">(</span><span class="p" data-group-id="3377095097-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="open/3">
@@ -661,7 +731,7 @@ cv
     </a>
     <h1 class="signature" translate="no">open(self, filename, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L254" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -671,7 +741,27 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="open/3-positional-arguments" class="section-heading">
+  <a href="#open/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3 id="open/3-keyword-arguments" class="section-heading">
+  <a href="#open/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>encoding</strong>: String.</li></ul><p>Opens a file.
+  See description of parameters in FileStorage::FileStorage. The method calls FileStorage::release
+  before opening the file.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Extension</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="p" data-group-id="1455780711-1">(</span><span class="o">.</span><span class="n">xml</span><span class="p">,</span><span class="w"> </span><span class="o">.</span><span class="n">yml</span><span class="o">/</span><span class="o">.</span><span class="n">yaml</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">.</span><span class="n">json</span><span class="p" data-group-id="1455780711-1">)</span><span class="w"> </span><span class="n">determines</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="p" data-group-id="1455780711-2">(</span><span class="nc">XML</span><span class="p">,</span><span class="w"> </span><span class="nc">YAML</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">JSON</span><span class="w">
+</span><span class="n">respectively</span><span class="p" data-group-id="1455780711-2">)</span><span class="o">.</span><span class="w"> </span><span class="nc">Also</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">work</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">compressed</span><span class="w"> </span><span class="n">files</span><span class="p">,</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="n">myHugeMatrix</span><span class="o">.</span><span class="n">xml</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">both</span><span class="w">
+</span><span class="nc">FileStorage</span><span class="o">::</span><span class="nc">WRITE</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">FileStorage</span><span class="o">::</span><span class="nc">MEMORY</span><span class="w"> </span><span class="n">flags</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">specify</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="p" data-group-id="1455780711-3">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">mydata</span><span class="o">.</span><span class="n">xml</span><span class="p">,</span><span class="w"> </span><span class="o">.</span><span class="n">yml</span><span class="w"> </span><span class="n">etc</span><span class="o">.</span><span class="p" data-group-id="1455780711-3">)</span><span class="o">.</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">parameters</span><span class="o">.</span><span class="w">
+</span><span class="nc">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*?base64&quot;</span><span class="w"> </span><span class="p" data-group-id="1455780711-4">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="s">&quot;file.json?base64&quot;</span><span class="w"> </span><span class="p" data-group-id="1455780711-5">(</span><span class="k">case</span><span class="w"> </span><span class="n">sensitive</span><span class="p" data-group-id="1455780711-5">)</span><span class="p" data-group-id="1455780711-4">)</span><span class="p">,</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="n">to</span><span class="w">
+</span><span class="nc">FileStorage</span><span class="o">::</span><span class="nc">BASE64</span><span class="w"> </span><span class="n">flag</span><span class="o">.</span><span class="w">
+</span><span class="n">you</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="mi">8</span><span class="o">-</span><span class="n">bit</span><span class="w"> </span><span class="n">encoding</span><span class="w"> </span><span class="n">instead</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">it</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="8561265116-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="8561265116-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="p" data-group-id="8561265116-2">]</span><span class="p" data-group-id="8561265116-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="open/4">
@@ -683,7 +773,7 @@ cv
     </a>
     <h1 class="signature" translate="no">open(self, filename, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L216" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -693,16 +783,27 @@ cv
 
   <section class="docstring">
 
-<p>Opens a file.
+<h3 id="open/4-positional-arguments" class="section-heading">
+  <a href="#open/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>filename</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3 id="open/4-keyword-arguments" class="section-heading">
+  <a href="#open/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>encoding</strong>: String.</li></ul><p>Opens a file.
   See description of parameters in FileStorage::FileStorage. The method calls FileStorage::release
-  before opening the file.</p><ul><li><strong>filename</strong>.
-  Extension of the file (.xml, .yml/.yaml or .json) determines its format (XML, YAML or JSON
-  respectively). Also you can append .gz to work with compressed files, for example myHugeMatrix.xml.gz. If both
-  FileStorage::WRITE and FileStorage::MEMORY flags are specified, source is used just to specify
-  the output file format (e.g. mydata.xml, .yml etc.). A file name can also contain parameters.
-  You can use this format, &quot;*?base64&quot; (e.g. &quot;file.json?base64&quot; (case sensitive)), as an alternative to
-  FileStorage::BASE64 flag.</li><li><strong>flags</strong>.</li><li><strong>encoding</strong>.
-  you should use 8-bit encoding instead of it.</li><li><strong>encoding</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="6340500730-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6340500730-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="p" data-group-id="6340500730-2">]</span><span class="p" data-group-id="6340500730-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+  before opening the file.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Extension</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="p" data-group-id="4753172591-1">(</span><span class="o">.</span><span class="n">xml</span><span class="p">,</span><span class="w"> </span><span class="o">.</span><span class="n">yml</span><span class="o">/</span><span class="o">.</span><span class="n">yaml</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">.</span><span class="n">json</span><span class="p" data-group-id="4753172591-1">)</span><span class="w"> </span><span class="n">determines</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="p" data-group-id="4753172591-2">(</span><span class="nc">XML</span><span class="p">,</span><span class="w"> </span><span class="nc">YAML</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">JSON</span><span class="w">
+</span><span class="n">respectively</span><span class="p" data-group-id="4753172591-2">)</span><span class="o">.</span><span class="w"> </span><span class="nc">Also</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">append</span><span class="w"> </span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">work</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">compressed</span><span class="w"> </span><span class="n">files</span><span class="p">,</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="n">myHugeMatrix</span><span class="o">.</span><span class="n">xml</span><span class="o">.</span><span class="n">gz</span><span class="o">.</span><span class="w"> </span><span class="nc">If</span><span class="w"> </span><span class="n">both</span><span class="w">
+</span><span class="nc">FileStorage</span><span class="o">::</span><span class="nc">WRITE</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nc">FileStorage</span><span class="o">::</span><span class="nc">MEMORY</span><span class="w"> </span><span class="n">flags</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">specify</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="p" data-group-id="4753172591-3">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="n">mydata</span><span class="o">.</span><span class="n">xml</span><span class="p">,</span><span class="w"> </span><span class="o">.</span><span class="n">yml</span><span class="w"> </span><span class="n">etc</span><span class="o">.</span><span class="p" data-group-id="4753172591-3">)</span><span class="o">.</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">parameters</span><span class="o">.</span><span class="w">
+</span><span class="nc">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*?base64&quot;</span><span class="w"> </span><span class="p" data-group-id="4753172591-4">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="s">&quot;file.json?base64&quot;</span><span class="w"> </span><span class="p" data-group-id="4753172591-5">(</span><span class="k">case</span><span class="w"> </span><span class="n">sensitive</span><span class="p" data-group-id="4753172591-5">)</span><span class="p" data-group-id="4753172591-4">)</span><span class="p">,</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="n">to</span><span class="w">
+</span><span class="nc">FileStorage</span><span class="o">::</span><span class="nc">BASE64</span><span class="w"> </span><span class="n">flag</span><span class="o">.</span><span class="w">
+</span><span class="n">you</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="mi">8</span><span class="o">-</span><span class="n">bit</span><span class="w"> </span><span class="n">encoding</span><span class="w"> </span><span class="n">instead</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">it</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">open</span><span class="p" data-group-id="9193624244-1">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="9193624244-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="p" data-group-id="9193624244-2">]</span><span class="p" data-group-id="9193624244-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="release/1">
@@ -714,7 +815,7 @@ cv
     </a>
     <h1 class="signature" translate="no">release(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L121" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L277" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -724,7 +825,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Closes the file and releases all the memory buffers.
+  Call this method after all I/O operations with the storage are finished.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">release</span><span class="p" data-group-id="0908015768-1">(</span><span class="p" data-group-id="0908015768-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="releaseAndGetString/1">
@@ -736,7 +838,7 @@ cv
     </a>
     <h1 class="signature" translate="no">releaseAndGetString(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L298" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -746,7 +848,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Closes the file and releases all the memory buffers.
+  Call this method after all I/O operations with the storage are finished. If the storage was
+  opened for writing data and FileStorage::WRITE was specified</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">releaseAndGetString</span><span class="p" data-group-id="1405048911-1">(</span><span class="p" data-group-id="1405048911-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="root/1">
@@ -758,7 +862,7 @@ cv
     </a>
     <h1 class="signature" translate="no">root(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L324" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -768,7 +872,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="root/1-positional-arguments" class="section-heading">
+  <a href="#root/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="root/1-keyword-arguments" class="section-heading">
+  <a href="#root/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>streamidx</strong>: int.</li></ul><p>Returns the top-level mapping</p><pre><code class="makeup elixir" translate="no"><span class="nc">However</span><span class="p">,</span><span class="w"> </span><span class="nc">YAML</span><span class="w"> </span><span class="n">supports</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">streams</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">several</span><span class="o">.</span></code></pre><p>@returns The top-level mapping.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">root</span><span class="p" data-group-id="4968780582-1">(</span><span class="p" data-group-id="4968780582-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">streamidx</span><span class="p" data-group-id="4968780582-2">]</span><span class="p" data-group-id="4968780582-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="startWriteStruct/3">
@@ -780,7 +896,7 @@ cv
     </a>
     <h1 class="signature" translate="no">startWriteStruct(self, name, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -790,7 +906,19 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="startWriteStruct/3-positional-arguments" class="section-heading">
+  <a href="#startWriteStruct/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>name</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3 id="startWriteStruct/3-keyword-arguments" class="section-heading">
+  <a href="#startWriteStruct/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>typeName</strong>: String.</li></ul><p>Starts to write a nested structure (sequence or a mapping).</p><pre><code class="makeup elixir" translate="no"><span class="nc">I</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">specification</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">storing</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">information</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">startWriteStruct</span><span class="p" data-group-id="9314877303-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="9314877303-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">typeName</span><span class="p" data-group-id="9314877303-2">]</span><span class="p" data-group-id="9314877303-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="startWriteStruct/4">
@@ -802,7 +930,7 @@ cv
     </a>
     <h1 class="signature" translate="no">startWriteStruct(self, name, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L155" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -812,8 +940,19 @@ cv
 
   <section class="docstring">
 
-<p>Starts to write a nested structure (sequence or a mapping).</p><ul><li><strong>name</strong>.</li><li><strong>flags</strong>.</li><li><strong>typeName</strong>.
-  I.e. if the format has a specification for storing type information, this parameter is used.</li><li><strong>typeName</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">startWriteStruct</span><span class="p" data-group-id="7733841188-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="7733841188-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">typeName</span><span class="p" data-group-id="7733841188-2">]</span><span class="p" data-group-id="7733841188-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="startWriteStruct/4-positional-arguments" class="section-heading">
+  <a href="#startWriteStruct/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>name</strong>: String. </li><li><strong>flags</strong>: int. </li></ul><h3 id="startWriteStruct/4-keyword-arguments" class="section-heading">
+  <a href="#startWriteStruct/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>typeName</strong>: String.</li></ul><p>Starts to write a nested structure (sequence or a mapping).</p><pre><code class="makeup elixir" translate="no"><span class="nc">I</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">specification</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">storing</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">information</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">startWriteStruct</span><span class="p" data-group-id="4976067616-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="4976067616-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">typeName</span><span class="p" data-group-id="4976067616-2">]</span><span class="p" data-group-id="4976067616-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -825,7 +964,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, name, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L433" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -835,7 +974,37 @@ cv
 
   <section class="docstring">
 
-
+<h2 id="write/3-variaint-1" class="section-heading">
+  <a href="#write/3-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="5084325377-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p" data-group-id="5084325377-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre><h2 id="write/3-variaint-2" class="section-heading">
+  <a href="#write/3-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="0145539424-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p" data-group-id="0145539424-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre><h2 id="write/3-variaint-3" class="section-heading">
+  <a href="#write/3-variaint-3" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-3</p>
+  </a>
+  Variaint 3:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="6789575220-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p" data-group-id="6789575220-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre><h2 id="write/3-variaint-4" class="section-heading">
+  <a href="#write/3-variaint-4" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-4</p>
+  </a>
+  Variaint 4:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="4183242512-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p" data-group-id="4183242512-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre><h2 id="write/3-variaint-5" class="section-heading">
+  <a href="#write/3-variaint-5" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-5</p>
+  </a>
+  Variaint 5:
+</h2>
+<p>Simplified writing API to use with bindings.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="9704863503-1">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p" data-group-id="9704863503-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="writeComment/2">
@@ -847,7 +1016,7 @@ cv
     </a>
     <h1 class="signature" translate="no">writeComment(self, comment)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L244" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L530" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -857,7 +1026,21 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="writeComment/2-positional-arguments" class="section-heading">
+  <a href="#writeComment/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>comment</strong>: String. </li></ul><h3 id="writeComment/2-keyword-arguments" class="section-heading">
+  <a href="#writeComment/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>append</strong>: bool.</li></ul><p>Writes a comment.
+  The function writes a comment into file storage. The comments are skipped when the storage is read.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">comment</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">multi</span><span class="o">-</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">fit</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w">
+</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">comment</span><span class="w"> </span><span class="n">starts</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">line</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">writeComment</span><span class="p" data-group-id="3888815100-1">(</span><span class="n">comment</span><span class="p" data-group-id="3888815100-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="p" data-group-id="3888815100-2">]</span><span class="p" data-group-id="3888815100-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="writeComment/3">
@@ -869,7 +1052,7 @@ cv
     </a>
     <h1 class="signature" translate="no">writeComment(self, comment, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L500" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -879,10 +1062,21 @@ cv
 
   <section class="docstring">
 
-<p>Writes a comment.
-  The function writes a comment into file storage. The comments are skipped when the storage is read.</p><ul><li><strong>comment</strong>.</li><li><strong>append</strong>.
-  Else if the comment is multi-line, or if it does not fit at the end of the current
-  line, the comment starts a new line.</li><li><strong>append</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">writeComment</span><span class="p" data-group-id="5871376566-1">(</span><span class="n">comment</span><span class="p" data-group-id="5871376566-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="p" data-group-id="5871376566-2">]</span><span class="p" data-group-id="5871376566-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="writeComment/3-positional-arguments" class="section-heading">
+  <a href="#writeComment/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>comment</strong>: String. </li></ul><h3 id="writeComment/3-keyword-arguments" class="section-heading">
+  <a href="#writeComment/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>append</strong>: bool.</li></ul><p>Writes a comment.
+  The function writes a comment into file storage. The comments are skipped when the storage is read.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">comment</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">multi</span><span class="o">-</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">fit</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w">
+</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">comment</span><span class="w"> </span><span class="n">starts</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">line</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">writeComment</span><span class="p" data-group-id="2476822855-1">(</span><span class="n">comment</span><span class="p" data-group-id="2476822855-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="p" data-group-id="2476822855-2">]</span><span class="p" data-group-id="2476822855-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -907,7 +1101,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">endWriteStruct!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -929,7 +1123,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">fileStorage!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -951,7 +1145,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">fileStorage!(filename, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L64" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -973,7 +1167,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">fileStorage!(filename, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -995,7 +1189,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getFirstTopLevelNode!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1017,7 +1211,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getFormat!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L144" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1039,7 +1233,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNode!(self, nodename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L166" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1061,7 +1255,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isOpened!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1083,7 +1277,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">open!(self, filename, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L119" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L263" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1105,7 +1299,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">open!(self, filename, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1127,7 +1321,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">release!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L283" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1149,7 +1343,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">releaseAndGetString!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L304" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1171,7 +1365,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">root!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1193,7 +1387,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">startWriteStruct!(self, name, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L173" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L390" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1215,7 +1409,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">startWriteStruct!(self, name, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L163" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L360" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1237,7 +1431,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, name, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L183" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L442" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1259,7 +1453,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">writeComment!(self, comment)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L538" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1281,7 +1475,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">writeComment!(self, comment, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_filestorage.ex#L242" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filestorage.ex#L508" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1304,10 +1498,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_filestorage.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_filestorage.ex">(current file)</a>
 
             </span>
 

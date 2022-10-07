@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.VariationalRefinement — Evision v0.1.5-dev</title>
+    <title>Evision.VariationalRefinement — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.VariationalRefinement</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>@ref calc function overload to handle separate horizontal (u) and vertical (v) flow components
+  (to avoid extra splits/merges)</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +136,8 @@ Evision
           <a href="#create/0" translate="no">create()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Creates an instance of VariationalRefinement</p></div>
 
       </div>
 
@@ -142,6 +147,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Weight of the smoothness term
+@see setAlpha</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +157,9 @@ Evision
           <a href="#getDelta/1" translate="no">getDelta(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Weight of the color constancy term
+@see setDelta</p></div>
 
       </div>
 
@@ -158,6 +169,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Number of outer (fixed-point) iterations in the minimization procedure.
+@see setFixedPointIterations</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -165,6 +179,9 @@ Evision
           <a href="#getGamma/1" translate="no">getGamma(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Weight of the gradient constancy term
+@see setGamma</p></div>
 
       </div>
 
@@ -174,6 +191,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Relaxation factor in SOR
+@see setOmega</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -181,6 +201,10 @@ Evision
           <a href="#getSorIterations/1" translate="no">getSorIterations(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Number of inner successive over-relaxation (SOR) iterations
+  in the minimization procedure to solve the respective linear system.
+@see setSorIterations</p></div>
 
       </div>
 
@@ -190,6 +214,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getAlpha @see getAlpha</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -197,6 +223,8 @@ Evision
           <a href="#setDelta/2" translate="no">setDelta(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getDelta @see getDelta</p></div>
 
       </div>
 
@@ -206,6 +234,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getFixedPointIterations @see getFixedPointIterations</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -213,6 +243,8 @@ Evision
           <a href="#setGamma/2" translate="no">setGamma(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getGamma @see getGamma</p></div>
 
       </div>
 
@@ -222,6 +254,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getOmega @see getOmega</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -229,6 +263,8 @@ Evision
           <a href="#setSorIterations/2" translate="no">setSorIterations(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getSorIterations @see getSorIterations</p></div>
 
       </div>
 
@@ -402,7 +438,7 @@ cv
     </a>
     <h1 class="signature" translate="no">calcUV(self, i0, i1, flow_u, flow_v)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -412,7 +448,8 @@ cv
 
   <section class="docstring">
 
-
+<p>@ref calc function overload to handle separate horizontal (u) and vertical (v) flow components
+  (to avoid extra splits/merges)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcUV</span><span class="p" data-group-id="6687572263-1">(</span><span class="nc">I0</span><span class="p">,</span><span class="w"> </span><span class="nc">I1</span><span class="p">,</span><span class="w"> </span><span class="n">flow_u</span><span class="p">,</span><span class="w"> </span><span class="n">flow_v</span><span class="p" data-group-id="6687572263-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">flow_u</span><span class="p">,</span><span class="w"> </span><span class="n">flow_v</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -424,7 +461,7 @@ cv
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -434,7 +471,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Creates an instance of VariationalRefinement</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="9455131975-1">(</span><span class="p" data-group-id="9455131975-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getAlpha/1">
@@ -446,7 +483,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getAlpha(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -456,7 +493,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Weight of the smoothness term
+@see setAlpha</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getAlpha</span><span class="p" data-group-id="6641520341-1">(</span><span class="p" data-group-id="6641520341-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDelta/1">
@@ -468,7 +506,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDelta(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L80" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -478,7 +516,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Weight of the color constancy term
+@see setDelta</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDelta</span><span class="p" data-group-id="4927483214-1">(</span><span class="p" data-group-id="4927483214-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getFixedPointIterations/1">
@@ -490,7 +529,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getFixedPointIterations(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L100" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -500,7 +539,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Number of outer (fixed-point) iterations in the minimization procedure.
+@see setFixedPointIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFixedPointIterations</span><span class="p" data-group-id="0106975858-1">(</span><span class="p" data-group-id="0106975858-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getGamma/1">
@@ -512,7 +552,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getGamma(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -522,7 +562,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Weight of the gradient constancy term
+@see setGamma</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getGamma</span><span class="p" data-group-id="2230712610-1">(</span><span class="p" data-group-id="2230712610-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getOmega/1">
@@ -534,7 +575,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getOmega(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L140" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -544,7 +585,8 @@ cv
 
   <section class="docstring">
 
-
+<p>Relaxation factor in SOR
+@see setOmega</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getOmega</span><span class="p" data-group-id="7840564992-1">(</span><span class="p" data-group-id="7840564992-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getSorIterations/1">
@@ -556,7 +598,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getSorIterations(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L161" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -566,7 +608,9 @@ cv
 
   <section class="docstring">
 
-
+<p>Number of inner successive over-relaxation (SOR) iterations
+  in the minimization procedure to solve the respective linear system.
+@see setSorIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSorIterations</span><span class="p" data-group-id="2615556677-1">(</span><span class="p" data-group-id="2615556677-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setAlpha/2">
@@ -578,7 +622,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setAlpha(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L180" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -588,7 +632,7 @@ cv
 
   <section class="docstring">
 
-
+<p>@copybrief getAlpha @see getAlpha</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setAlpha</span><span class="p" data-group-id="7993708016-1">(</span><span class="n">val</span><span class="p" data-group-id="7993708016-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setDelta/2">
@@ -600,7 +644,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setDelta(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L201" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -610,7 +654,7 @@ cv
 
   <section class="docstring">
 
-
+<p>@copybrief getDelta @see getDelta</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDelta</span><span class="p" data-group-id="4185882834-1">(</span><span class="n">val</span><span class="p" data-group-id="4185882834-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setFixedPointIterations/2">
@@ -622,7 +666,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setFixedPointIterations(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L84" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L222" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -632,7 +676,7 @@ cv
 
   <section class="docstring">
 
-
+<p>@copybrief getFixedPointIterations @see getFixedPointIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setFixedPointIterations</span><span class="p" data-group-id="3132452139-1">(</span><span class="n">val</span><span class="p" data-group-id="3132452139-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setGamma/2">
@@ -644,7 +688,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setGamma(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L243" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -654,7 +698,7 @@ cv
 
   <section class="docstring">
 
-
+<p>@copybrief getGamma @see getGamma</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setGamma</span><span class="p" data-group-id="6122665516-1">(</span><span class="n">val</span><span class="p" data-group-id="6122665516-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setOmega/2">
@@ -666,7 +710,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setOmega(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L264" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -676,7 +720,7 @@ cv
 
   <section class="docstring">
 
-
+<p>@copybrief getOmega @see getOmega</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setOmega</span><span class="p" data-group-id="0561479466-1">(</span><span class="n">val</span><span class="p" data-group-id="0561479466-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setSorIterations/2">
@@ -688,7 +732,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setSorIterations(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L285" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -698,7 +742,7 @@ cv
 
   <section class="docstring">
 
-
+<p>@copybrief getSorIterations @see getSorIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setSorIterations</span><span class="p" data-group-id="9396359401-1">(</span><span class="n">val</span><span class="p" data-group-id="9396359401-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -723,7 +767,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcUV!(self, i0, i1, flow_u, flow_v)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L27" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -745,7 +789,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -767,7 +811,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getAlpha!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L66" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -789,7 +833,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDelta!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -811,7 +855,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getFixedPointIterations!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L106" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -833,7 +877,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getGamma!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L126" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -855,7 +899,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getOmega!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L146" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -877,7 +921,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSorIterations!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -899,7 +943,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setAlpha!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -921,7 +965,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDelta!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -943,7 +987,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setFixedPointIterations!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L230" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -965,7 +1009,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setGamma!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L100" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L251" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -987,7 +1031,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setOmega!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1009,7 +1053,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setSorIterations!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_variationalrefinement.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_variationalrefinement.ex#L293" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1032,10 +1076,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_variationalrefinement.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_variationalrefinement.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Samples — Evision v0.1.5-dev</title>
+    <title>Evision.Samples — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Samples</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Override search data path by adding new search location
+  Use this only to override default behavior
+  Passed paths are used in LIFO order.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +137,10 @@ Evision
           <a href="#addSamplesDataSearchSubDirectory/1" translate="no">addSamplesDataSearchSubDirectory(subdir)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Append samples search data sub directory
+  General usage is to add OpenCV modules name (<code class="inline">&lt;opencv_contrib&gt;/modules/&lt;name&gt;/samples/data</code> -&gt; <code class="inline">&lt;name&gt;/samples/data</code> + <code class="inline">modules/&lt;name&gt;/samples/data</code>).
+  Passed subdirectories are used in LIFO order.</p></div>
 
       </div>
 
@@ -142,6 +150,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>relative_path</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>required</strong>: bool.</li><li><strong>silentMode</strong>: bool.</li></ul><p>Try to find requested data file
+  Search directories</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -150,7 +161,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Try to find requested data file
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>relative_path</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>required</strong>: bool.</li><li><strong>silentMode</strong>: bool.</li></ul><p>Try to find requested data file
   Search directories</p></div>
 
       </div>
@@ -161,6 +172,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>relative_path</strong>: String</li></ul><h3>Keyword Arguments</h3><ul><li><strong>silentMode</strong>: bool.</li></ul><p>Python prototype (for reference): </p></div>
+
       </div>
 
       <div class="summary-row">
@@ -169,7 +182,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><ul><li><strong>silentMode</strong> : bool</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>relative_path</strong>: String</li></ul><h3>Keyword Arguments</h3><ul><li><strong>silentMode</strong>: bool.</li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -263,7 +276,7 @@ cv.samples
     </a>
     <h1 class="signature" translate="no">addSamplesDataSearchPath(path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L17" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -273,7 +286,9 @@ cv.samples
 
   <section class="docstring">
 
-
+<p>Override search data path by adding new search location
+  Use this only to override default behavior
+  Passed paths are used in LIFO order.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">addSamplesDataSearchPath</span><span class="p" data-group-id="6865711134-1">(</span><span class="n">path</span><span class="p" data-group-id="6865711134-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="addSamplesDataSearchSubDirectory/1">
@@ -285,7 +300,7 @@ cv.samples
     </a>
     <h1 class="signature" translate="no">addSamplesDataSearchSubDirectory(subdir)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -295,7 +310,9 @@ cv.samples
 
   <section class="docstring">
 
-
+<p>Append samples search data sub directory
+  General usage is to add OpenCV modules name (<code class="inline">&lt;opencv_contrib&gt;/modules/&lt;name&gt;/samples/data</code> -&gt; <code class="inline">&lt;name&gt;/samples/data</code> + <code class="inline">modules/&lt;name&gt;/samples/data</code>).
+  Passed subdirectories are used in LIFO order.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">addSamplesDataSearchSubDirectory</span><span class="p" data-group-id="6797403556-1">(</span><span class="n">subdir</span><span class="p" data-group-id="6797403556-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="findFile/1">
@@ -307,7 +324,7 @@ cv.samples
     </a>
     <h1 class="signature" translate="no">findFile(relative_path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -317,7 +334,27 @@ cv.samples
 
   <section class="docstring">
 
-
+<h3 id="findFile/1-positional-arguments" class="section-heading">
+  <a href="#findFile/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>relative_path</strong>: String. </li></ul><h3 id="findFile/1-keyword-arguments" class="section-heading">
+  <a href="#findFile/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>required</strong>: bool.</li><li><strong>silentMode</strong>: bool.</li></ul><p>Try to find requested data file
+  Search directories:</p><ol><li>Directories passed via <code class="inline">addSamplesDataSearchPath()</code></li><li>OPENCV_SAMPLES_DATA_PATH_HINT environment variable</li><li>OPENCV_SAMPLES_DATA_PATH environment variable
+If parameter value is not empty and nothing is found then stop searching.</li><li>Detects build/install path based on:
+a. current working directory (CWD)
+b. and/or binary module location (opencv_core/opencv_world, doesn't work with static linkage)</li><li>Scan <code class="inline">&lt;source&gt;/{,data,samples/data}</code> directories if build directory is detected or the current directory is in source tree.</li><li>Scan <code class="inline">&lt;install&gt;/share/OpenCV</code> directory if install directory is detected.
+@see cv::utils::findDataFile
+If true, function prints information message and raises cv::Exception.
+If false, function returns empty result
+@return Returns path (absolute or relative to the current directory) or empty string if file is not found</li></ol><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findFile</span><span class="p" data-group-id="1588423773-1">(</span><span class="n">relative_path</span><span class="p" data-group-id="1588423773-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">required</span><span class="p" data-group-id="1588423773-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">silentMode</span><span class="p" data-group-id="1588423773-3">]</span><span class="p" data-group-id="1588423773-2">]</span><span class="p" data-group-id="1588423773-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="findFile/2">
@@ -329,7 +366,7 @@ cv.samples
     </a>
     <h1 class="signature" translate="no">findFile(relative_path, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L82" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -339,15 +376,27 @@ cv.samples
 
   <section class="docstring">
 
-<p>Try to find requested data file
+<h3 id="findFile/2-positional-arguments" class="section-heading">
+  <a href="#findFile/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>relative_path</strong>: String. </li></ul><h3 id="findFile/2-keyword-arguments" class="section-heading">
+  <a href="#findFile/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>required</strong>: bool.</li><li><strong>silentMode</strong>: bool.</li></ul><p>Try to find requested data file
   Search directories:</p><ol><li>Directories passed via <code class="inline">addSamplesDataSearchPath()</code></li><li>OPENCV_SAMPLES_DATA_PATH_HINT environment variable</li><li>OPENCV_SAMPLES_DATA_PATH environment variable
 If parameter value is not empty and nothing is found then stop searching.</li><li>Detects build/install path based on:
 a. current working directory (CWD)
 b. and/or binary module location (opencv_core/opencv_world, doesn't work with static linkage)</li><li>Scan <code class="inline">&lt;source&gt;/{,data,samples/data}</code> directories if build directory is detected or the current directory is in source tree.</li><li>Scan <code class="inline">&lt;install&gt;/share/OpenCV</code> directory if install directory is detected.
-@see cv::utils::findDataFile</li></ol><ul><li><strong>relative_path</strong>.</li><li><strong>required</strong>.
-  If true, function prints information message and raises cv::Exception.
-  If false, function returns empty result</li><li><strong>silentMode</strong>.
-@return Returns path (absolute or relative to the current directory) or empty string if file is not found</li><li><strong>required</strong> : bool</li><li><strong>silentMode</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findFile</span><span class="p" data-group-id="5633198140-1">(</span><span class="n">relative_path</span><span class="p" data-group-id="5633198140-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">required</span><span class="p" data-group-id="5633198140-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">silentMode</span><span class="p" data-group-id="5633198140-3">]</span><span class="p" data-group-id="5633198140-2">]</span><span class="p" data-group-id="5633198140-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+@see cv::utils::findDataFile
+If true, function prints information message and raises cv::Exception.
+If false, function returns empty result
+@return Returns path (absolute or relative to the current directory) or empty string if file is not found</li></ol><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findFile</span><span class="p" data-group-id="5106021986-1">(</span><span class="n">relative_path</span><span class="p" data-group-id="5106021986-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">required</span><span class="p" data-group-id="5106021986-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">silentMode</span><span class="p" data-group-id="5106021986-3">]</span><span class="p" data-group-id="5106021986-2">]</span><span class="p" data-group-id="5106021986-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="findFileOrKeep/1">
@@ -359,7 +408,7 @@ b. and/or binary module location (opencv_core/opencv_world, doesn't work with st
     </a>
     <h1 class="signature" translate="no">findFileOrKeep(relative_path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L176" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -369,7 +418,19 @@ b. and/or binary module location (opencv_core/opencv_world, doesn't work with st
 
   <section class="docstring">
 
-
+<h3 id="findFileOrKeep/1-positional-arguments" class="section-heading">
+  <a href="#findFileOrKeep/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>relative_path</strong>: String</li></ul><h3 id="findFileOrKeep/1-keyword-arguments" class="section-heading">
+  <a href="#findFileOrKeep/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>silentMode</strong>: bool.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findFileOrKeep</span><span class="p" data-group-id="4732424308-1">(</span><span class="n">relative_path</span><span class="p" data-group-id="4732424308-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">silentMode</span><span class="p" data-group-id="4732424308-2">]</span><span class="p" data-group-id="4732424308-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="findFileOrKeep/2">
@@ -381,7 +442,7 @@ b. and/or binary module location (opencv_core/opencv_world, doesn't work with st
     </a>
     <h1 class="signature" translate="no">findFileOrKeep(relative_path, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -391,7 +452,19 @@ b. and/or binary module location (opencv_core/opencv_world, doesn't work with st
 
   <section class="docstring">
 
-<ul><li><strong>silentMode</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findFileOrKeep</span><span class="p" data-group-id="1543647969-1">(</span><span class="n">relative_path</span><span class="p" data-group-id="1543647969-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">silentMode</span><span class="p" data-group-id="1543647969-2">]</span><span class="p" data-group-id="1543647969-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="findFileOrKeep/2-positional-arguments" class="section-heading">
+  <a href="#findFileOrKeep/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>relative_path</strong>: String</li></ul><h3 id="findFileOrKeep/2-keyword-arguments" class="section-heading">
+  <a href="#findFileOrKeep/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>silentMode</strong>: bool.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findFileOrKeep</span><span class="p" data-group-id="4655161590-1">(</span><span class="n">relative_path</span><span class="p" data-group-id="4655161590-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">silentMode</span><span class="p" data-group-id="4655161590-2">]</span><span class="p" data-group-id="4655161590-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -416,7 +489,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">addSamplesDataSearchPath!(path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -438,7 +511,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">addSamplesDataSearchSubDirectory!(subdir)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -460,7 +533,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">findFile!(relative_path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L132" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -482,7 +555,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">findFile!(relative_path, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -504,7 +577,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">findFileOrKeep!(relative_path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L184" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -526,7 +599,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">findFileOrKeep!(relative_path, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_samples.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_samples.ex#L158" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -549,10 +622,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_samples.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_samples.ex">(current file)</a>
 
             </span>
 

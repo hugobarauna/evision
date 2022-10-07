@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Segmentation.IntelligentScissorsMB — Evision v0.1.5-dev</title>
+    <title>Evision.Segmentation.IntelligentScissorsMB — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Segmentation.IntelligentScissorsMB</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Specify input image and extract image features</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,9 @@ Evision
           <a href="#applyImageFeatures/4" translate="no">applyImageFeatures(self, non_edge, gradient_direction, gradient_magnitude)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>non_edge</strong>: UMat. </li><li><strong>gradient_direction</strong>: UMat. </li><li><strong>gradient_magnitude</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>image</strong>: UMat.</li></ul><p>Specify custom features of input image
+   Customized advanced variant of applyImage() call.</p></div>
 
       </div>
 
@@ -142,7 +147,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Specify custom features of input image
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>non_edge</strong>: UMat. </li><li><strong>gradient_direction</strong>: UMat. </li><li><strong>gradient_magnitude</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>image</strong>: UMat.</li></ul><p>Specify custom features of input image
    Customized advanced variant of applyImage() call.</p></div>
 
       </div>
@@ -153,6 +158,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Prepares a map of optimal paths for the given source point on the image
+<strong>Note</strong>: applyImage() / applyImageFeatures() must be called before this call</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -160,6 +168,9 @@ Evision
           <a href="#getContour/2" translate="no">getContour(self, targetPt)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>targetPt</strong>: Point. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>contour</strong>: UMat.</li><li><strong>backward</strong>: bool.</li></ul><p>Extracts optimal contour for the given target point on the image
+<strong>Note</strong>: buildMap() must be called before this call</p></div>
 
       </div>
 
@@ -169,16 +180,18 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Extracts optimal contour for the given target point on the image
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>targetPt</strong>: Point. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>contour</strong>: UMat.</li><li><strong>backward</strong>: bool.</li></ul><p>Extracts optimal contour for the given target point on the image
 <strong>Note</strong>: buildMap() must be called before this call</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#intelligentScissorsMB/0" translate="no">intelligentScissorsMB()</a>
+          <a href="#segmentation_IntelligentScissorsMB/0" translate="no">segmentation_IntelligentScissorsMB()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -188,6 +201,10 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>threshold1</strong>: double</li><li><strong>threshold2</strong>: double</li></ul><h3>Keyword Arguments</h3><ul><li><strong>apertureSize</strong>: int.</li><li><strong>l2gradient</strong>: bool.</li></ul><p>Switch edge feature extractor to use Canny edge detector
+<strong>Note</strong>: &quot;Laplacian Zero-Crossing&quot; feature extractor is used by default (following to original article)
+@sa Canny</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -196,7 +213,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Switch edge feature extractor to use Canny edge detector
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>threshold1</strong>: double</li><li><strong>threshold2</strong>: double</li></ul><h3>Keyword Arguments</h3><ul><li><strong>apertureSize</strong>: int.</li><li><strong>l2gradient</strong>: bool.</li></ul><p>Switch edge feature extractor to use Canny edge detector
 <strong>Note</strong>: &quot;Laplacian Zero-Crossing&quot; feature extractor is used by default (following to original article)
 @sa Canny</p></div>
 
@@ -208,6 +225,13 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>gradient_magnitude_min_value</strong>: float.</li></ul><p>Switch to &quot;Laplacian Zero-Crossing&quot; edge feature extractor and specify its parameters
+   This feature extractor is used by default according to article.
+   Implementation has additional filtering for regions with low-amplitude noise.
+   This filtering is enabled through parameter of minimal gradient amplitude (use some small value 4, 8, 16).
+<strong>Note</strong>: Current implementation of this feature extractor is based on processing of grayscale images (color image is converted to grayscale image first).
+<strong>Note</strong>: Canny edge detector is a bit slower, but provides better results (especially on color images): use setEdgeFeatureCannyParameters().</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -216,6 +240,11 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>gradient_magnitude_threshold_max</strong>: float.</li></ul><p>Specify gradient magnitude max value threshold
+   Zero limit value is used to disable gradient magnitude thresholding (default behavior, as described in original article).
+   Otherwize pixels with <code class="inline">gradient magnitude &gt;= threshold</code> have zero cost.
+<strong>Note</strong>: Thresholding should be used for images with irregular regions (to avoid stuck on parameters from high-contract areas, like embedded logos).</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -223,6 +252,10 @@ Evision
           <a href="#setWeights/4" translate="no">setWeights(self, weight_non_edge, weight_gradient_direction, weight_gradient_magnitude)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Specify weights of feature functions
+   Consider keeping weights normalized (sum of weights equals to 1.0)
+   Discrete dynamic programming (DP) goal is minimization of costs between pixels.</p></div>
 
       </div>
 
@@ -295,11 +328,11 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#intelligentScissorsMB!/0" translate="no">intelligentScissorsMB!()</a>
+          <a href="#segmentation_IntelligentScissorsMB!/0" translate="no">segmentation_IntelligentScissorsMB!()</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>Raising version of <a href="#intelligentScissorsMB/0"><code class="inline">intelligentScissorsMB/0</code></a>.</p></div>
+          <div class="summary-synopsis"><p>Raising version of <a href="#segmentation_IntelligentScissorsMB/0"><code class="inline">segmentation_IntelligentScissorsMB/0</code></a>.</p></div>
 
       </div>
 
@@ -376,7 +409,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">applyImage(self, image)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -386,7 +419,7 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<p>Specify input image and extract image features</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">applyImage</span><span class="p" data-group-id="2760048212-1">(</span><span class="n">image</span><span class="p" data-group-id="2760048212-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="applyImageFeatures/4">
@@ -398,7 +431,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">applyImageFeatures(self, non_edge, gradient_direction, gradient_magnitude)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -408,7 +441,20 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<h3 id="applyImageFeatures/4-positional-arguments" class="section-heading">
+  <a href="#applyImageFeatures/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>non_edge</strong>: UMat. </li><li><strong>gradient_direction</strong>: UMat. </li><li><strong>gradient_magnitude</strong>: UMat. </li></ul><h3 id="applyImageFeatures/4-keyword-arguments" class="section-heading">
+  <a href="#applyImageFeatures/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>image</strong>: UMat.</li></ul><p>Specify custom features of input image
+   Customized advanced variant of applyImage() call.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">applyImageFeatures</span><span class="p" data-group-id="6768535781-1">(</span><span class="n">non_edge</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_direction</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_magnitude</span><span class="p" data-group-id="6768535781-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p" data-group-id="6768535781-2">]</span><span class="p" data-group-id="6768535781-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="applyImageFeatures/5">
@@ -420,7 +466,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">applyImageFeatures(self, non_edge, gradient_direction, gradient_magnitude, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -430,8 +476,20 @@ cv.segmentation
 
   <section class="docstring">
 
-<p>Specify custom features of input image
-   Customized advanced variant of applyImage() call.</p><ul><li><strong>non_edge</strong>.</li><li><strong>gradient_direction</strong>.</li><li><strong>gradient_magnitude</strong>.</li><li><strong>image</strong>.</li><li><strong>image</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">applyImageFeatures</span><span class="p" data-group-id="9641947269-1">(</span><span class="n">non_edge</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_direction</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_magnitude</span><span class="p" data-group-id="9641947269-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p" data-group-id="9641947269-2">]</span><span class="p" data-group-id="9641947269-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="applyImageFeatures/5-positional-arguments" class="section-heading">
+  <a href="#applyImageFeatures/5-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>non_edge</strong>: UMat. </li><li><strong>gradient_direction</strong>: UMat. </li><li><strong>gradient_magnitude</strong>: UMat. </li></ul><h3 id="applyImageFeatures/5-keyword-arguments" class="section-heading">
+  <a href="#applyImageFeatures/5-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>image</strong>: UMat.</li></ul><p>Specify custom features of input image
+   Customized advanced variant of applyImage() call.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">applyImageFeatures</span><span class="p" data-group-id="4588474156-1">(</span><span class="n">non_edge</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_direction</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_magnitude</span><span class="p" data-group-id="4588474156-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="p" data-group-id="4588474156-2">]</span><span class="p" data-group-id="4588474156-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="buildMap/2">
@@ -443,7 +501,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">buildMap(self, sourcePt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L119" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -453,7 +511,8 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<p>Prepares a map of optimal paths for the given source point on the image
+<strong>Note</strong>: applyImage() / applyImageFeatures() must be called before this call</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">buildMap</span><span class="p" data-group-id="9399283271-1">(</span><span class="n">sourcePt</span><span class="p" data-group-id="9399283271-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getContour/2">
@@ -465,7 +524,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">getContour(self, targetPt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -475,7 +534,20 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<h3 id="getContour/2-positional-arguments" class="section-heading">
+  <a href="#getContour/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>targetPt</strong>: Point. </li></ul><h3 id="getContour/2-keyword-arguments" class="section-heading">
+  <a href="#getContour/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>contour</strong>: UMat.</li><li><strong>backward</strong>: bool.</li></ul><p>Extracts optimal contour for the given target point on the image
+<strong>Note</strong>: buildMap() must be called before this call</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getContour</span><span class="p" data-group-id="3476110911-1">(</span><span class="n">targetPt</span><span class="p" data-group-id="3476110911-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">contour</span><span class="p" data-group-id="3476110911-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">backward</span><span class="p" data-group-id="3476110911-3">]</span><span class="p" data-group-id="3476110911-2">]</span><span class="p" data-group-id="3476110911-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">contour</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getContour/3">
@@ -487,7 +559,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">getContour(self, targetPt, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -497,20 +569,32 @@ cv.segmentation
 
   <section class="docstring">
 
-<p>Extracts optimal contour for the given target point on the image
-<strong>Note</strong>: buildMap() must be called before this call</p><ul><li><strong>targetPt</strong>.</li><li><strong>contour</strong>.</li><li><strong>backward</strong>.</li><li><strong>contour</strong> : UMat</li><li><strong>backward</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getContour</span><span class="p" data-group-id="2473374107-1">(</span><span class="n">targetPt</span><span class="p" data-group-id="2473374107-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">contour</span><span class="p" data-group-id="2473374107-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">backward</span><span class="p" data-group-id="2473374107-3">]</span><span class="p" data-group-id="2473374107-2">]</span><span class="p" data-group-id="2473374107-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">contour</span></code></pre>
+<h3 id="getContour/3-positional-arguments" class="section-heading">
+  <a href="#getContour/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>targetPt</strong>: Point. </li></ul><h3 id="getContour/3-keyword-arguments" class="section-heading">
+  <a href="#getContour/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>contour</strong>: UMat.</li><li><strong>backward</strong>: bool.</li></ul><p>Extracts optimal contour for the given target point on the image
+<strong>Note</strong>: buildMap() must be called before this call</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getContour</span><span class="p" data-group-id="4485762522-1">(</span><span class="n">targetPt</span><span class="p" data-group-id="4485762522-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">contour</span><span class="p" data-group-id="4485762522-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">backward</span><span class="p" data-group-id="4485762522-3">]</span><span class="p" data-group-id="4485762522-2">]</span><span class="p" data-group-id="4485762522-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">contour</span></code></pre>
   </section>
 </section>
-<section class="detail" id="intelligentScissorsMB/0">
+<section class="detail" id="segmentation_IntelligentScissorsMB/0">
 
   <div class="detail-header">
-    <a href="#intelligentScissorsMB/0" class="detail-link" title="Link to this function">
+    <a href="#segmentation_IntelligentScissorsMB/0" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">intelligentScissorsMB()</h1>
+    <h1 class="signature" translate="no">segmentation_IntelligentScissorsMB()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L14" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -520,7 +604,7 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">IntelligentScissorsMB</span><span class="p" data-group-id="0213841209-1">(</span><span class="p" data-group-id="0213841209-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">segmentation_IntelligentScissorsMB</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setEdgeFeatureCannyParameters/3">
@@ -532,7 +616,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">setEdgeFeatureCannyParameters(self, threshold1, threshold2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L240" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -542,7 +626,21 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<h3 id="setEdgeFeatureCannyParameters/3-positional-arguments" class="section-heading">
+  <a href="#setEdgeFeatureCannyParameters/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>threshold1</strong>: double</li><li><strong>threshold2</strong>: double</li></ul><h3 id="setEdgeFeatureCannyParameters/3-keyword-arguments" class="section-heading">
+  <a href="#setEdgeFeatureCannyParameters/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>apertureSize</strong>: int.</li><li><strong>l2gradient</strong>: bool.</li></ul><p>Switch edge feature extractor to use Canny edge detector
+<strong>Note</strong>: &quot;Laplacian Zero-Crossing&quot; feature extractor is used by default (following to original article)
+@sa Canny</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setEdgeFeatureCannyParameters</span><span class="p" data-group-id="9289105811-1">(</span><span class="n">threshold1</span><span class="p">,</span><span class="w"> </span><span class="n">threshold2</span><span class="p" data-group-id="9289105811-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apertureSize</span><span class="p" data-group-id="9289105811-3">[</span><span class="p">,</span><span class="w"> </span><span class="nc">L2gradient</span><span class="p" data-group-id="9289105811-3">]</span><span class="p" data-group-id="9289105811-2">]</span><span class="p" data-group-id="9289105811-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setEdgeFeatureCannyParameters/4">
@@ -554,7 +652,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">setEdgeFeatureCannyParameters(self, threshold1, threshold2, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -564,9 +662,21 @@ cv.segmentation
 
   <section class="docstring">
 
-<p>Switch edge feature extractor to use Canny edge detector
+<h3 id="setEdgeFeatureCannyParameters/4-positional-arguments" class="section-heading">
+  <a href="#setEdgeFeatureCannyParameters/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>threshold1</strong>: double</li><li><strong>threshold2</strong>: double</li></ul><h3 id="setEdgeFeatureCannyParameters/4-keyword-arguments" class="section-heading">
+  <a href="#setEdgeFeatureCannyParameters/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>apertureSize</strong>: int.</li><li><strong>l2gradient</strong>: bool.</li></ul><p>Switch edge feature extractor to use Canny edge detector
 <strong>Note</strong>: &quot;Laplacian Zero-Crossing&quot; feature extractor is used by default (following to original article)
-@sa Canny</p><ul><li><strong>apertureSize</strong> : int</li><li><strong>l2gradient</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setEdgeFeatureCannyParameters</span><span class="p" data-group-id="5665972641-1">(</span><span class="n">threshold1</span><span class="p">,</span><span class="w"> </span><span class="n">threshold2</span><span class="p" data-group-id="5665972641-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apertureSize</span><span class="p" data-group-id="5665972641-3">[</span><span class="p">,</span><span class="w"> </span><span class="nc">L2gradient</span><span class="p" data-group-id="5665972641-3">]</span><span class="p" data-group-id="5665972641-2">]</span><span class="p" data-group-id="5665972641-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+@sa Canny</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setEdgeFeatureCannyParameters</span><span class="p" data-group-id="3765692812-1">(</span><span class="n">threshold1</span><span class="p">,</span><span class="w"> </span><span class="n">threshold2</span><span class="p" data-group-id="3765692812-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">apertureSize</span><span class="p" data-group-id="3765692812-3">[</span><span class="p">,</span><span class="w"> </span><span class="nc">L2gradient</span><span class="p" data-group-id="3765692812-3">]</span><span class="p" data-group-id="3765692812-2">]</span><span class="p" data-group-id="3765692812-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setEdgeFeatureZeroCrossingParameters/1">
@@ -578,7 +688,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">setEdgeFeatureZeroCrossingParameters(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L130" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -588,7 +698,24 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<h3 id="setEdgeFeatureZeroCrossingParameters/1-positional-arguments" class="section-heading">
+  <a href="#setEdgeFeatureZeroCrossingParameters/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="setEdgeFeatureZeroCrossingParameters/1-keyword-arguments" class="section-heading">
+  <a href="#setEdgeFeatureZeroCrossingParameters/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>gradient_magnitude_min_value</strong>: float.</li></ul><p>Switch to &quot;Laplacian Zero-Crossing&quot; edge feature extractor and specify its parameters
+   This feature extractor is used by default according to article.
+   Implementation has additional filtering for regions with low-amplitude noise.
+   This filtering is enabled through parameter of minimal gradient amplitude (use some small value 4, 8, 16).
+<strong>Note</strong>: Current implementation of this feature extractor is based on processing of grayscale images (color image is converted to grayscale image first).
+<strong>Note</strong>: Canny edge detector is a bit slower, but provides better results (especially on color images): use setEdgeFeatureCannyParameters().</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setEdgeFeatureZeroCrossingParameters</span><span class="p" data-group-id="0033464888-1">(</span><span class="p" data-group-id="0033464888-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_magnitude_min_value</span><span class="p" data-group-id="0033464888-2">]</span><span class="p" data-group-id="0033464888-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setGradientMagnitudeMaxLimit/1">
@@ -600,7 +727,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">setGradientMagnitudeMaxLimit(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L137" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L299" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -610,7 +737,22 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<h3 id="setGradientMagnitudeMaxLimit/1-positional-arguments" class="section-heading">
+  <a href="#setGradientMagnitudeMaxLimit/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="setGradientMagnitudeMaxLimit/1-keyword-arguments" class="section-heading">
+  <a href="#setGradientMagnitudeMaxLimit/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>gradient_magnitude_threshold_max</strong>: float.</li></ul><p>Specify gradient magnitude max value threshold
+   Zero limit value is used to disable gradient magnitude thresholding (default behavior, as described in original article).
+   Otherwize pixels with <code class="inline">gradient magnitude &gt;= threshold</code> have zero cost.
+<strong>Note</strong>: Thresholding should be used for images with irregular regions (to avoid stuck on parameters from high-contract areas, like embedded logos).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setGradientMagnitudeMaxLimit</span><span class="p" data-group-id="0480299996-1">(</span><span class="p" data-group-id="0480299996-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">gradient_magnitude_threshold_max</span><span class="p" data-group-id="0480299996-2">]</span><span class="p" data-group-id="0480299996-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setWeights/4">
@@ -622,7 +764,7 @@ cv.segmentation
     </a>
     <h1 class="signature" translate="no">setWeights(self, weight_non_edge, weight_gradient_direction, weight_gradient_magnitude)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L144" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -632,7 +774,9 @@ cv.segmentation
 
   <section class="docstring">
 
-
+<p>Specify weights of feature functions
+   Consider keeping weights normalized (sum of weights equals to 1.0)
+   Discrete dynamic programming (DP) goal is minimization of costs between pixels.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setWeights</span><span class="p" data-group-id="9564494000-1">(</span><span class="n">weight_non_edge</span><span class="p">,</span><span class="w"> </span><span class="n">weight_gradient_direction</span><span class="p">,</span><span class="w"> </span><span class="n">weight_gradient_magnitude</span><span class="p" data-group-id="9564494000-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -657,7 +801,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">applyImage!(self, image)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L41" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -679,7 +823,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">applyImageFeatures!(self, non_edge, gradient_direction, gradient_magnitude)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -701,7 +845,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">applyImageFeatures!(self, non_edge, gradient_direction, gradient_magnitude, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L73" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -723,7 +867,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">buildMap!(self, sourcePt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L127" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -745,7 +889,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getContour!(self, targetPt)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L185" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -767,7 +911,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getContour!(self, targetPt, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -780,16 +924,16 @@ Functions
 <p>Raising version of <a href="#getContour/3"><code class="inline">getContour/3</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="intelligentScissorsMB!/0">
+<section class="detail" id="segmentation_IntelligentScissorsMB!/0">
 
   <div class="detail-header">
-    <a href="#intelligentScissorsMB!/0" class="detail-link" title="Link to this function">
+    <a href="#segmentation_IntelligentScissorsMB!/0" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">intelligentScissorsMB!()</h1>
+    <h1 class="signature" translate="no">segmentation_IntelligentScissorsMB!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L20" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -799,7 +943,7 @@ Functions
 
   <section class="docstring">
 
-<p>Raising version of <a href="#intelligentScissorsMB/0"><code class="inline">intelligentScissorsMB/0</code></a>.</p>
+<p>Raising version of <a href="#segmentation_IntelligentScissorsMB/0"><code class="inline">segmentation_IntelligentScissorsMB/0</code></a>.</p>
   </section>
 </section>
 <section class="detail" id="setEdgeFeatureCannyParameters!/3">
@@ -811,7 +955,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEdgeFeatureCannyParameters!(self, threshold1, threshold2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L249" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -833,7 +977,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEdgeFeatureCannyParameters!(self, threshold1, threshold2, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -855,7 +999,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEdgeFeatureZeroCrossingParameters!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -877,7 +1021,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setGradientMagnitudeMaxLimit!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L305" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -899,7 +1043,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setWeights!(self, weight_non_edge, weight_gradient_direction, weight_gradient_magnitude)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L153" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_segmentation_intelligentscissorsmb.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -922,10 +1066,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_segmentation_intelligentscissorsmb.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_segmentation_intelligentscissorsmb.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.DNN.Model — Evision v0.1.5-dev</title>
+    <title>Evision.DNN.Model — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.Model</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,37 +122,42 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#model!/1" translate="no">model!(network)</a>
+          <a href="#dnn_Model!/1" translate="no">dnn_Model!(network)</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>Raising version of <a href="#model/1"><code class="inline">model/1</code></a>.</p></div>
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_Model/1"><code class="inline">dnn_Model/1</code></a>.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#model!/2" translate="no">model!(model, opts)</a>
+          <a href="#dnn_Model!/2" translate="no">dnn_Model!(model, opts)</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>Raising version of <a href="#model/2"><code class="inline">model/2</code></a>.</p></div>
+          <div class="summary-synopsis"><p>Raising version of <a href="#dnn_Model/2"><code class="inline">dnn_Model/2</code></a>.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#model/1" translate="no">model(network)</a>
+          <a href="#dnn_Model/1" translate="no">dnn_Model(network)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>Create model from deep learning network.</p></div>
 
       </div>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#model/2" translate="no">model(model, opts)</a>
+          <a href="#dnn_Model/2" translate="no">dnn_Model(model, opts)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>model</strong>: String. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>config</strong>: String.</li></ul><p>Create model from deep learning network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p></div>
 
       </div>
 
@@ -182,6 +187,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>frame</strong>: UMat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outs</strong>: vector_UMat.</li></ul><p>Given the @p input frame, create input blob, run net and return the output @p blobs.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -190,7 +197,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Given the @p input frame, create input blob, run net and return the output @p blobs.</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>frame</strong>: UMat</li></ul><h3>Keyword Arguments</h3><ul><li><strong>outs</strong>: vector_UMat.</li></ul><p>Given the @p input frame, create input blob, run net and return the output @p blobs.</p></div>
 
       </div>
 
@@ -210,6 +217,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Set flag crop for frame.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -227,6 +236,8 @@ Evision
           <a href="#setInputMean/2" translate="no">setInputMean(self, mean)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Set mean value for frame.</p></div>
 
       </div>
 
@@ -246,6 +257,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><h3>Keyword Arguments</h3><ul><li><strong>scale</strong>: double.</li><li><strong>size</strong>: Size.</li><li><strong>mean</strong>: Scalar.</li><li><strong>swapRB</strong>: bool.</li><li><strong>crop</strong>: bool.</li></ul><p>Set preprocessing parameters for frame.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -263,6 +276,8 @@ Evision
           <a href="#setInputScale/2" translate="no">setInputScale(self, scale)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Set scalefactor value for frame.</p></div>
 
       </div>
 
@@ -292,6 +307,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Set input size for frame.
+<strong>Note</strong>: If shape of the new blob less than 0, then frame size not change.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -299,6 +317,8 @@ Evision
           <a href="#setInputSize/3" translate="no">setInputSize(self, width, height)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -318,6 +338,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Set flag swapRB for frame.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -335,6 +357,8 @@ Evision
           <a href="#setPreferableBackend/2" translate="no">setPreferableBackend(self, backendId)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -354,6 +378,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
       </div>
 
   </div>
@@ -370,16 +396,16 @@ Evision
 Functions
     </h1>
     <div class="functions-list">
-<section class="detail" id="model!/1">
+<section class="detail" id="dnn_Model!/1">
 
   <div class="detail-header">
-    <a href="#model!/1" class="detail-link" title="Link to this function">
+    <a href="#dnn_Model!/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">model!(network)</h1>
+    <h1 class="signature" translate="no">dnn_Model!(network)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -389,19 +415,19 @@ Functions
 
   <section class="docstring">
 
-<p>Raising version of <a href="#model/1"><code class="inline">model/1</code></a>.</p>
+<p>Raising version of <a href="#dnn_Model/1"><code class="inline">dnn_Model/1</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="model!/2">
+<section class="detail" id="dnn_Model!/2">
 
   <div class="detail-header">
-    <a href="#model!/2" class="detail-link" title="Link to this function">
+    <a href="#dnn_Model!/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">model!(model, opts)</h1>
+    <h1 class="signature" translate="no">dnn_Model!(model, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L76" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -411,19 +437,19 @@ Functions
 
   <section class="docstring">
 
-<p>Raising version of <a href="#model/2"><code class="inline">model/2</code></a>.</p>
+<p>Raising version of <a href="#dnn_Model/2"><code class="inline">dnn_Model/2</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="model/1">
+<section class="detail" id="dnn_Model/1">
 
   <div class="detail-header">
-    <a href="#model/1" class="detail-link" title="Link to this function">
+    <a href="#dnn_Model/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">model(network)</h1>
+    <h1 class="signature" translate="no">dnn_Model(network)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -433,19 +459,44 @@ Functions
 
   <section class="docstring">
 
-
+<h2 id="dnn_Model/1-variaint-1" class="section-heading">
+  <a href="#dnn_Model/1-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<p>Create model from deep learning network.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Model</span><span class="p" data-group-id="9193868056-1">(</span><span class="n">network</span><span class="p" data-group-id="9193868056-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_Model</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h2 id="dnn_Model/1-variaint-2" class="section-heading">
+  <a href="#dnn_Model/1-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<h3 id="dnn_Model/1-positional-arguments" class="section-heading">
+  <a href="#dnn_Model/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: String. </li></ul><h3 id="dnn_Model/1-keyword-arguments" class="section-heading">
+  <a href="#dnn_Model/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: String.</li></ul><p>Create model from deep learning network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Model</span><span class="p" data-group-id="2280654227-1">(</span><span class="n">model</span><span class="p" data-group-id="2280654227-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="2280654227-2">]</span><span class="p" data-group-id="2280654227-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_Model</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
-<section class="detail" id="model/2">
+<section class="detail" id="dnn_Model/2">
 
   <div class="detail-header">
-    <a href="#model/2" class="detail-link" title="Link to this function">
+    <a href="#dnn_Model/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">model(model, opts)</h1>
+    <h1 class="signature" translate="no">dnn_Model(model, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -455,7 +506,20 @@ Functions
 
   <section class="docstring">
 
-
+<h3 id="dnn_Model/2-positional-arguments" class="section-heading">
+  <a href="#dnn_Model/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>model</strong>: String. </li></ul><h3 id="dnn_Model/2-keyword-arguments" class="section-heading">
+  <a href="#dnn_Model/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>config</strong>: String.</li></ul><p>Create model from deep learning network represented in one of the supported formats.
+   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Model</span><span class="p" data-group-id="5856444935-1">(</span><span class="n">model</span><span class="p" data-group-id="5856444935-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="5856444935-2">]</span><span class="p" data-group-id="5856444935-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_Model</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict!/2">
@@ -467,7 +531,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -489,7 +553,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, frame, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -511,7 +575,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L122" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -521,7 +585,19 @@ Functions
 
   <section class="docstring">
 
-
+<h3 id="predict/2-positional-arguments" class="section-heading">
+  <a href="#predict/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>frame</strong>: UMat</li></ul><h3 id="predict/2-keyword-arguments" class="section-heading">
+  <a href="#predict/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outs</strong>: vector_UMat.</li></ul><p>Given the @p input frame, create input blob, run net and return the output @p blobs.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="3822225686-1">(</span><span class="n">frame</span><span class="p" data-group-id="3822225686-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outs</span><span class="p" data-group-id="3822225686-2">]</span><span class="p" data-group-id="3822225686-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -533,7 +609,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict(self, frame, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -543,7 +619,19 @@ Functions
 
   <section class="docstring">
 
-<p>Given the @p input frame, create input blob, run net and return the output @p blobs.</p><ul><li><em>**</em>.</li><li><strong>outs</strong>.</li><li><strong>outs</strong> : vector_UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="5022539773-1">(</span><span class="n">frame</span><span class="p" data-group-id="5022539773-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outs</span><span class="p" data-group-id="5022539773-2">]</span><span class="p" data-group-id="5022539773-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outs</span></code></pre>
+<h3 id="predict/3-positional-arguments" class="section-heading">
+  <a href="#predict/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>frame</strong>: UMat</li></ul><h3 id="predict/3-keyword-arguments" class="section-heading">
+  <a href="#predict/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>outs</strong>: vector_UMat.</li></ul><p>Given the @p input frame, create input blob, run net and return the output @p blobs.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="9974573445-1">(</span><span class="n">frame</span><span class="p" data-group-id="9974573445-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outs</span><span class="p" data-group-id="9974573445-2">]</span><span class="p" data-group-id="9974573445-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outs</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInputCrop!/2">
@@ -555,7 +643,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputCrop!(self, crop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -577,7 +665,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputCrop(self, crop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -587,7 +675,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set flag crop for frame.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputCrop</span><span class="p" data-group-id="4265187496-1">(</span><span class="n">crop</span><span class="p" data-group-id="4265187496-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInputMean!/2">
@@ -599,7 +687,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputMean!(self, mean)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -621,7 +709,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputMean(self, mean)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L164" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -631,7 +719,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set mean value for frame.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputMean</span><span class="p" data-group-id="9876964846-1">(</span><span class="n">mean</span><span class="p" data-group-id="9876964846-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInputParams!/1">
@@ -643,7 +731,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputParams!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L201" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -665,7 +753,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputParams(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -675,7 +763,19 @@ Functions
 
   <section class="docstring">
 
-
+<h3 id="setInputParams/1-positional-arguments" class="section-heading">
+  <a href="#setInputParams/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<h3 id="setInputParams/1-keyword-arguments" class="section-heading">
+  <a href="#setInputParams/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>scale</strong>: double.</li><li><strong>size</strong>: Size.</li><li><strong>mean</strong>: Scalar.</li><li><strong>swapRB</strong>: bool.</li><li><strong>crop</strong>: bool.</li></ul><p>Set preprocessing parameters for frame.</p><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="n">blob</span><span class="p" data-group-id="7585110565-1">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p" data-group-id="7585110565-1">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">resize</span><span class="p" data-group-id="7585110565-2">(</span><span class="w"> </span><span class="n">frame</span><span class="p" data-group-id="7585110565-3">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p" data-group-id="7585110565-3">)</span><span class="w"> </span><span class="p" data-group-id="7585110565-2">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mean</span><span class="p" data-group-id="7585110565-4">(</span><span class="n">c</span><span class="p" data-group-id="7585110565-4">)</span><span class="w"> </span><span class="p">)</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputParams</span><span class="p" data-group-id="9720634504-1">(</span><span class="p" data-group-id="9720634504-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="p" data-group-id="9720634504-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="9720634504-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p" data-group-id="9720634504-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">swapRB</span><span class="p" data-group-id="9720634504-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">crop</span><span class="p" data-group-id="9720634504-6">]</span><span class="p" data-group-id="9720634504-5">]</span><span class="p" data-group-id="9720634504-4">]</span><span class="p" data-group-id="9720634504-3">]</span><span class="p" data-group-id="9720634504-2">]</span><span class="p" data-group-id="9720634504-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInputScale!/2">
@@ -687,7 +787,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputScale!(self, scale)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L222" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -709,7 +809,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputScale(self, scale)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L94" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L214" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -719,7 +819,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set scalefactor value for frame.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputScale</span><span class="p" data-group-id="7407951523-1">(</span><span class="n">scale</span><span class="p" data-group-id="7407951523-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInputSize!/2">
@@ -731,7 +831,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputSize!(self, size)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -753,7 +853,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputSize!(self, width, height)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L245" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -775,7 +875,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputSize(self, size)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L103" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L259" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -785,7 +885,8 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set input size for frame.
+<strong>Note</strong>: If shape of the new blob less than 0, then frame size not change.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputSize</span><span class="p" data-group-id="7720314050-1">(</span><span class="n">size</span><span class="p" data-group-id="7720314050-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInputSize/3">
@@ -797,7 +898,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputSize(self, width, height)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L236" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -807,7 +908,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputSize</span><span class="p" data-group-id="6352328156-1">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p" data-group-id="6352328156-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setInputSwapRB!/2">
@@ -819,7 +920,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputSwapRB!(self, swapRB)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L129" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L288" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -841,7 +942,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setInputSwapRB(self, swapRB)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -851,7 +952,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Set flag swapRB for frame.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputSwapRB</span><span class="p" data-group-id="2360002789-1">(</span><span class="n">swapRB</span><span class="p" data-group-id="2360002789-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setPreferableBackend!/2">
@@ -863,7 +964,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPreferableBackend!(self, backendId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L308" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -885,7 +986,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPreferableBackend(self, backendId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L300" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -895,7 +996,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPreferableBackend</span><span class="p" data-group-id="0459761552-1">(</span><span class="n">backendId</span><span class="p" data-group-id="0459761552-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setPreferableTarget!/2">
@@ -907,7 +1008,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPreferableTarget!(self, targetId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L328" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -929,7 +1030,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPreferableTarget(self, targetId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_dnn_model.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_model.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -939,7 +1040,7 @@ Functions
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPreferableTarget</span><span class="p" data-group-id="2510206430-1">(</span><span class="n">targetId</span><span class="p" data-group-id="2510206430-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -952,10 +1053,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_dnn_model.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_model.ex">(current file)</a>
 
             </span>
 

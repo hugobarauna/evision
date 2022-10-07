@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.CUDA.Stream — Evision v0.1.5-dev</title>
+    <title>Evision.CUDA.Stream — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.CUDA.Stream</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -122,9 +122,33 @@ Evision
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#cuda_Stream/0" translate="no">cuda_Stream()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_Stream/1" translate="no">cuda_Stream(cudaFlags)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><h2>Variaint 1:</h2><p>creates a new Stream using the cudaFlags argument to determine the behaviors of the stream
+<strong>Note</strong>: The cudaFlags parameter is passed to the underlying api cudaStreamCreateWithFlags() and
+  supports the same parameter values.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#cudaPtr/1" translate="no">cudaPtr(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -134,6 +158,13 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Adds a callback to be called on the host after all currently enqueued items in the stream have
+  completed.
+<strong>Note</strong>: Callbacks must not make any CUDA API calls. Callbacks must not perform any synchronization
+  that may depend on outstanding device work or other callbacks that are not mandated to run earlier.
+  Callbacks without a mandated order (in independent streams) execute in undefined order and may be
+  serialized.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -142,21 +173,7 @@ Evision
 
         </div>
 
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#stream/0" translate="no">stream()</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#stream/1" translate="no">stream(cudaFlags)</a>
-
-        </div>
+          <div class="summary-synopsis"><p>Returns true if the current stream queue is finished. Otherwise, it returns false.</p></div>
 
       </div>
 
@@ -166,6 +183,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Makes a compute stream wait on an event.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -173,6 +192,8 @@ Evision
           <a href="#waitForCompletion/1" translate="no">waitForCompletion(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Blocks the current CPU thread until all operations in the stream are complete.</p></div>
 
       </div>
 
@@ -182,6 +203,26 @@ Evision
     <h2>
       <a href="#functions">Functions</a>
     </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_Stream!/0" translate="no">cuda_Stream!()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#cuda_Stream/0"><code class="inline">cuda_Stream/0</code></a>.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#cuda_Stream!/1" translate="no">cuda_Stream!(cudaFlags)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Raising version of <a href="#cuda_Stream/1"><code class="inline">cuda_Stream/1</code></a>.</p></div>
+
+      </div>
 
       <div class="summary-row">
         <div class="summary-signature">
@@ -210,26 +251,6 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Raising version of <a href="#queryIfComplete/1"><code class="inline">queryIfComplete/1</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#stream!/0" translate="no">stream!()</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#stream/0"><code class="inline">stream/0</code></a>.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#stream!/1" translate="no">stream!(cudaFlags)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Raising version of <a href="#stream/1"><code class="inline">stream/1</code></a>.</p></div>
 
       </div>
 
@@ -267,16 +288,16 @@ Evision
 cv.cuda
     </h1>
     <div class="cv-cuda-list">
-<section class="detail" id="cudaPtr/1">
+<section class="detail" id="cuda_Stream/0">
 
   <div class="detail-header">
-    <a href="#cudaPtr/1" class="detail-link" title="Link to this function">
+    <a href="#cuda_Stream/0" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">cudaPtr(self)</h1>
+    <h1 class="signature" translate="no">cuda_Stream()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L59" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -286,7 +307,67 @@ cv.cuda
 
   <section class="docstring">
 
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="2532871881-1">(</span><span class="p" data-group-id="2532871881-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="cuda_Stream/1">
 
+  <div class="detail-header">
+    <a href="#cuda_Stream/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_Stream(cudaFlags)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L31" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<h2 id="cuda_Stream/1-variaint-1" class="section-heading">
+  <a href="#cuda_Stream/1-variaint-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-1</p>
+  </a>
+  Variaint 1:
+</h2>
+<p>creates a new Stream using the cudaFlags argument to determine the behaviors of the stream
+<strong>Note</strong>: The cudaFlags parameter is passed to the underlying api cudaStreamCreateWithFlags() and
+  supports the same parameter values.</p><pre><code class="makeup elixir" translate="no"><span class="o">//</span><span class="w"> </span><span class="n">creates</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="nc">OpenCV</span><span class="w"> </span><span class="n">cuda</span><span class="o">::</span><span class="nc">Stream</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">manages</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">asynchronous</span><span class="p">,</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">blocking</span><span class="p">,</span><span class="w">
+</span><span class="o">//</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">default</span><span class="w"> </span><span class="nc">CUDA</span><span class="w"> </span><span class="n">stream</span><span class="w">
+</span><span class="n">cv</span><span class="o">::</span><span class="n">cuda</span><span class="o">::</span><span class="nc">Stream</span><span class="w"> </span><span class="n">cvStream</span><span class="p" data-group-id="2319947417-1">(</span><span class="n">cudaStreamNonBlocking</span><span class="p" data-group-id="2319947417-1">)</span><span class="p">;</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="5992396218-1">(</span><span class="n">cudaFlags</span><span class="p" data-group-id="5992396218-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h2 id="cuda_Stream/1-variaint-2" class="section-heading">
+  <a href="#cuda_Stream/1-variaint-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">variaint-2</p>
+  </a>
+  Variaint 2:
+</h2>
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Stream</span><span class="p" data-group-id="4740067947-1">(</span><span class="n">allocator</span><span class="p" data-group-id="4740067947-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_Stream</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="cudaPtr/1">
+
+  <div class="detail-header">
+    <a href="#cudaPtr/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cudaPtr(self)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L101" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">cudaPtr</span><span class="p" data-group-id="5367828204-1">(</span><span class="p" data-group-id="5367828204-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="null/0">
@@ -298,7 +379,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">null()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -308,7 +389,12 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Adds a callback to be called on the host after all currently enqueued items in the stream have
+  completed.
+<strong>Note</strong>: Callbacks must not make any CUDA API calls. Callbacks must not perform any synchronization
+  that may depend on outstanding device work or other callbacks that are not mandated to run earlier.
+  Callbacks without a mandated order (in independent streams) execute in undefined order and may be
+  serialized.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Null</span><span class="p" data-group-id="3873499902-1">(</span><span class="p" data-group-id="3873499902-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="queryIfComplete/1">
@@ -320,7 +406,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">queryIfComplete(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -330,51 +416,7 @@ cv.cuda
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="stream/0">
-
-  <div class="detail-header">
-    <a href="#stream/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">stream()</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L5" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="stream/1">
-
-  <div class="detail-header">
-    <a href="#stream/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">stream(cudaFlags)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
+<p>Returns true if the current stream queue is finished. Otherwise, it returns false.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">queryIfComplete</span><span class="p" data-group-id="1752543222-1">(</span><span class="p" data-group-id="1752543222-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="waitEvent/2">
@@ -386,7 +428,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">waitEvent(self, event)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L139" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -396,7 +438,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Makes a compute stream wait on an event.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waitEvent</span><span class="p" data-group-id="2178590024-1">(</span><span class="n">event</span><span class="p" data-group-id="2178590024-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="waitForCompletion/1">
@@ -408,7 +450,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">waitForCompletion(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L160" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -418,7 +460,7 @@ cv.cuda
 
   <section class="docstring">
 
-
+<p>Blocks the current CPU thread until all operations in the stream are complete.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">waitForCompletion</span><span class="p" data-group-id="9529908667-1">(</span><span class="p" data-group-id="9529908667-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -434,6 +476,50 @@ cv.cuda
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="cuda_Stream!/0">
+
+  <div class="detail-header">
+    <a href="#cuda_Stream!/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_Stream!()</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L65" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#cuda_Stream/0"><code class="inline">cuda_Stream/0</code></a>.</p>
+  </section>
+</section>
+<section class="detail" id="cuda_Stream!/1">
+
+  <div class="detail-header">
+    <a href="#cuda_Stream!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">cuda_Stream!(cudaFlags)</h1>
+
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L39" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Raising version of <a href="#cuda_Stream/1"><code class="inline">cuda_Stream/1</code></a>.</p>
+  </section>
+</section>
 <section class="detail" id="cudaPtr!/1">
 
   <div class="detail-header">
@@ -443,7 +529,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">cudaPtr!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L107" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -465,7 +551,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">null!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L89" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -487,7 +573,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">queryIfComplete!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L126" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -500,50 +586,6 @@ Functions
 <p>Raising version of <a href="#queryIfComplete/1"><code class="inline">queryIfComplete/1</code></a>.</p>
   </section>
 </section>
-<section class="detail" id="stream!/0">
-
-  <div class="detail-header">
-    <a href="#stream!/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">stream!()</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L10" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#stream/0"><code class="inline">stream/0</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="stream!/1">
-
-  <div class="detail-header">
-    <a href="#stream!/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">stream!(cudaFlags)</h1>
-
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L19" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Raising version of <a href="#stream/1"><code class="inline">stream/1</code></a>.</p>
-  </section>
-</section>
 <section class="detail" id="waitEvent!/2">
 
   <div class="detail-header">
@@ -553,7 +595,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">waitEvent!(self, event)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -575,7 +617,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">waitForCompletion!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_cuda_stream.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_stream.ex#L166" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -598,10 +640,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_cuda_stream.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_cuda_stream.ex">(current file)</a>
 
             </span>
 

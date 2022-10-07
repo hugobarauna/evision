@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.BOWImgDescriptorExtractor — Evision v0.1.5-dev</title>
+    <title>Evision.BOWImgDescriptorExtractor — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.BOWImgDescriptorExtractor</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>The constructor.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,8 @@ Evision
           <a href="#compute/3" translate="no">compute(self, image, keypoints)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>image</strong>: Mat</li><li><strong>keypoints</strong>: vector_KeyPoint</li></ul><h3>Keyword Arguments</h3><ul><li><strong>imgDescriptor</strong>: Mat.</li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -142,7 +146,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>image</strong>: Mat</li><li><strong>keypoints</strong>: vector_KeyPoint</li></ul><h3>Keyword Arguments</h3><ul><li><strong>imgDescriptor</strong>: Mat.</li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -152,6 +156,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns an image descriptor size if the vocabulary is set. Otherwise, it returns 0.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -159,6 +165,8 @@ Evision
           <a href="#descriptorType/1" translate="no">descriptorType(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns an image descriptor type.</p></div>
 
       </div>
 
@@ -168,6 +176,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns the set vocabulary.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -175,6 +185,8 @@ Evision
           <a href="#setVocabulary/2" translate="no">setVocabulary(self, vocabulary)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Sets a visual vocabulary.</p></div>
 
       </div>
 
@@ -278,7 +290,7 @@ cv
     </a>
     <h1 class="signature" translate="no">bowImgDescriptorExtractor(dextractor, dmatcher)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L17" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -288,7 +300,8 @@ cv
 
   <section class="docstring">
 
-
+<p>The constructor.</p><pre><code class="makeup elixir" translate="no"><span class="n">its</span><span class="w"> </span><span class="n">keypoints</span><span class="o">.</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">keypoint</span><span class="w"> </span><span class="n">descriptor</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">image</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">BOWImgDescriptorExtractor</span><span class="p" data-group-id="9460147556-1">(</span><span class="n">dextractor</span><span class="p">,</span><span class="w"> </span><span class="n">dmatcher</span><span class="p" data-group-id="9460147556-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">BOWImgDescriptorExtractor</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
   </section>
 </section>
 <section class="detail" id="compute/3">
@@ -300,7 +313,7 @@ cv
     </a>
     <h1 class="signature" translate="no">compute(self, image, keypoints)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L81" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -310,7 +323,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="compute/3-positional-arguments" class="section-heading">
+  <a href="#compute/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>image</strong>: Mat</li><li><strong>keypoints</strong>: vector_KeyPoint</li></ul><h3 id="compute/3-keyword-arguments" class="section-heading">
+  <a href="#compute/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>imgDescriptor</strong>: Mat.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">pointIdxsOfClusters</span><span class="p" data-group-id="6424053732-1">[</span><span class="n">i</span><span class="p" data-group-id="6424053732-1">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">keypoint</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">belong</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">cluster</span><span class="w"> </span><span class="p" data-group-id="6424053732-2">(</span><span class="n">word</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">vocabulary</span><span class="p" data-group-id="6424053732-2">)</span><span class="w">
+</span><span class="n">returned</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">zero</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">compute</span><span class="p" data-group-id="3665421830-1">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">keypoints</span><span class="p" data-group-id="3665421830-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">imgDescriptor</span><span class="p" data-group-id="3665421830-2">]</span><span class="p" data-group-id="3665421830-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">imgDescriptor</span></code></pre>
   </section>
 </section>
 <section class="detail" id="compute/4">
@@ -322,7 +348,7 @@ cv
     </a>
     <h1 class="signature" translate="no">compute(self, image, keypoints, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L49" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -332,9 +358,20 @@ cv
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><ul><li><strong>keypointDescriptors</strong>.</li><li><strong>imgDescriptor</strong>.</li><li><strong>pointIdxsOfClusters</strong>.
-  pointIdxsOfClusters[i] are keypoint indices that belong to the i -th cluster (word of vocabulary)
-  returned if it is non-zero.</li><li><strong>imgDescriptor</strong> : Mat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">compute</span><span class="p" data-group-id="6414492608-1">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">keypoints</span><span class="p" data-group-id="6414492608-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">imgDescriptor</span><span class="p" data-group-id="6414492608-2">]</span><span class="p" data-group-id="6414492608-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">imgDescriptor</span></code></pre>
+<h3 id="compute/4-positional-arguments" class="section-heading">
+  <a href="#compute/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>image</strong>: Mat</li><li><strong>keypoints</strong>: vector_KeyPoint</li></ul><h3 id="compute/4-keyword-arguments" class="section-heading">
+  <a href="#compute/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>imgDescriptor</strong>: Mat.</li></ul><p>Has overloading in C++</p><pre><code class="makeup elixir" translate="no"><span class="n">pointIdxsOfClusters</span><span class="p" data-group-id="5029728906-1">[</span><span class="n">i</span><span class="p" data-group-id="5029728906-1">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">keypoint</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">belong</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="n">th</span><span class="w"> </span><span class="n">cluster</span><span class="w"> </span><span class="p" data-group-id="5029728906-2">(</span><span class="n">word</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">vocabulary</span><span class="p" data-group-id="5029728906-2">)</span><span class="w">
+</span><span class="n">returned</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">zero</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">compute</span><span class="p" data-group-id="0607664428-1">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">keypoints</span><span class="p" data-group-id="0607664428-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">imgDescriptor</span><span class="p" data-group-id="0607664428-2">]</span><span class="p" data-group-id="0607664428-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">imgDescriptor</span></code></pre>
   </section>
 </section>
 <section class="detail" id="descriptorSize/1">
@@ -346,7 +383,7 @@ cv
     </a>
     <h1 class="signature" translate="no">descriptorSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -356,7 +393,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns an image descriptor size if the vocabulary is set. Otherwise, it returns 0.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">descriptorSize</span><span class="p" data-group-id="6877616875-1">(</span><span class="p" data-group-id="6877616875-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="descriptorType/1">
@@ -368,7 +405,7 @@ cv
     </a>
     <h1 class="signature" translate="no">descriptorType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L122" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -378,7 +415,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns an image descriptor type.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">descriptorType</span><span class="p" data-group-id="9082125678-1">(</span><span class="p" data-group-id="9082125678-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVocabulary/1">
@@ -390,7 +427,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVocabulary(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L141" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -400,7 +437,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Returns the set vocabulary.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVocabulary</span><span class="p" data-group-id="9408181177-1">(</span><span class="p" data-group-id="9408181177-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setVocabulary/2">
@@ -412,7 +449,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVocabulary(self, vocabulary)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L161" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -422,7 +459,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Sets a visual vocabulary.</p><pre><code class="makeup elixir" translate="no"><span class="n">vocabulary</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">visual</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="p" data-group-id="1645382638-1">(</span><span class="n">cluster</span><span class="w"> </span><span class="n">center</span><span class="p" data-group-id="1645382638-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVocabulary</span><span class="p" data-group-id="5301927567-1">(</span><span class="n">vocabulary</span><span class="p" data-group-id="5301927567-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -447,7 +484,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">bowImgDescriptorExtractor!(dextractor, dmatcher)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -469,7 +506,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">compute!(self, image, keypoints)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -491,7 +528,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">compute!(self, image, keypoints, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -513,7 +550,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">descriptorSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -535,7 +572,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">descriptorType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L128" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -557,7 +594,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVocabulary!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -579,7 +616,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVocabulary!(self, vocabulary)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowimgdescriptorextractor.ex#L169" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -602,10 +639,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_bowimgdescriptorextractor.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_bowimgdescriptorextractor.ex">(current file)</a>
 
             </span>
 

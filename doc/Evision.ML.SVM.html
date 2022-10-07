@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.ML.SVM — Evision v0.1.5-dev</title>
+    <title>Evision.ML.SVM — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.SVM</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Clears the algorithm state</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,9 @@ Evision
           <a href="#getDefaultName/1" translate="no">getDefaultName(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -142,6 +147,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Reads algorithm parameters from a file storage</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +156,9 @@ Evision
           <a href="#save/2" translate="no">save(self, filename)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -158,6 +168,9 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -166,7 +179,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>simplified API for language bindings
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3>Keyword Arguments</h3><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
 Has overloading in C++</p></div>
 
       </div>
@@ -184,6 +197,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -192,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -202,6 +217,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>  Creates empty model.
+  Use StatModel::train to train the model. Since %SVM has several parameters, you may want to
+  find the best parameters for your problem, it can be done with SVM::trainAuto.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -209,6 +228,8 @@ Has overloading in C++</p></div>
           <a href="#empty/1" translate="no">empty(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -218,6 +239,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setC</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -225,6 +248,8 @@ Has overloading in C++</p></div>
           <a href="#getClassWeights/1" translate="no">getClassWeights(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setClassWeights</p></div>
 
       </div>
 
@@ -234,6 +259,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setCoef0</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -241,6 +268,8 @@ Has overloading in C++</p></div>
           <a href="#getDecisionFunction/2" translate="no">getDecisionFunction(self, i)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>i</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>alpha</strong>: UMat.</li><li><strong>svidx</strong>: UMat.</li></ul><p>Retrieves the decision function</p></div>
 
       </div>
 
@@ -250,7 +279,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Retrieves the decision function</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>i</strong>: int. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>alpha</strong>: UMat.</li><li><strong>svidx</strong>: UMat.</li></ul><p>Retrieves the decision function</p></div>
 
       </div>
 
@@ -260,6 +289,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Generates a grid for %SVM parameters.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -267,6 +298,8 @@ Has overloading in C++</p></div>
           <a href="#getDegree/1" translate="no">getDegree(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setDegree</p></div>
 
       </div>
 
@@ -276,6 +309,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setGamma</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -283,6 +318,9 @@ Has overloading in C++</p></div>
           <a href="#getKernelType/1" translate="no">getKernelType(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Type of a %SVM kernel.
+  See SVM::KernelTypes. Default value is SVM::RBF.</p></div>
 
       </div>
 
@@ -292,6 +330,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setNu</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -299,6 +339,8 @@ Has overloading in C++</p></div>
           <a href="#getP/1" translate="no">getP(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setP</p></div>
 
       </div>
 
@@ -308,6 +350,10 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Retrieves all the support vectors
+  The method returns all the support vectors as a floating-point matrix, where support vectors are
+  stored as matrix rows.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -315,6 +361,8 @@ Has overloading in C++</p></div>
           <a href="#getTermCriteria/1" translate="no">getTermCriteria(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@see setTermCriteria</p></div>
 
       </div>
 
@@ -324,6 +372,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@see setType</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -331,6 +381,11 @@ Has overloading in C++</p></div>
           <a href="#getUncompressedSupportVectors/1" translate="no">getUncompressedSupportVectors(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Retrieves all the uncompressed support vectors of a linear %SVM
+  The method returns all the uncompressed support vectors of a linear %SVM that the compressed
+  support vector, used for prediction, was derived from. They are returned in a floating-point
+  matrix, where the support vectors are stored as matrix rows.</p></div>
 
       </div>
 
@@ -340,6 +395,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns the number of variables in training samples</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -347,6 +404,8 @@ Has overloading in C++</p></div>
           <a href="#isClassifier/1" translate="no">isClassifier(self)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns true if the model is classifier</p></div>
 
       </div>
 
@@ -356,6 +415,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if the model is trained</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -363,6 +424,10 @@ Has overloading in C++</p></div>
           <a href="#load/1" translate="no">load(filepath)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Loads and creates a serialized svm from a file
+   Use SVM::save to serialize and store an SVM to disk.
+   Load the SVM from this file again, by calling this function with the path to the file.</p></div>
 
       </div>
 
@@ -372,6 +437,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -380,7 +447,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -390,6 +457,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getC @see getC</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -397,6 +466,8 @@ Has overloading in C++</p></div>
           <a href="#setClassWeights/2" translate="no">setClassWeights(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getClassWeights @see getClassWeights</p></div>
 
       </div>
 
@@ -406,6 +477,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getCoef0 @see getCoef0</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -413,6 +486,8 @@ Has overloading in C++</p></div>
           <a href="#setDegree/2" translate="no">setDegree(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getDegree @see getDegree</p></div>
 
       </div>
 
@@ -422,6 +497,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getGamma @see getGamma</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -429,6 +506,9 @@ Has overloading in C++</p></div>
           <a href="#setKernel/2" translate="no">setKernel(self, kernelType)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>  Initialize with one of predefined kernels.
+  See SVM::KernelTypes.</p></div>
 
       </div>
 
@@ -438,6 +518,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getNu @see getNu</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -445,6 +527,8 @@ Has overloading in C++</p></div>
           <a href="#setP/2" translate="no">setP(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getP @see getP</p></div>
 
       </div>
 
@@ -454,6 +538,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>@copybrief getTermCriteria @see getTermCriteria</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -461,6 +547,8 @@ Has overloading in C++</p></div>
           <a href="#setType/2" translate="no">setType(self, val)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>@copybrief getType @see getType</p></div>
 
       </div>
 
@@ -470,6 +558,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -477,6 +567,8 @@ Has overloading in C++</p></div>
           <a href="#train/3" translate="no">train(self, trainData, opts)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -486,6 +578,8 @@ Has overloading in C++</p></div>
 
         </div>
 
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -493,6 +587,8 @@ Has overloading in C++</p></div>
           <a href="#trainAuto/4" translate="no">trainAuto(self, samples, layout, responses)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>kFold</strong>: int.</li><li><strong>cgrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>gammaGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>pGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>nuGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>coeffGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>degreeGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>balanced</strong>: bool.</li></ul><p>Trains an %SVM with optimal parameters</p></div>
 
       </div>
 
@@ -502,7 +598,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Trains an %SVM with optimal parameters</p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h3>Keyword Arguments</h3><ul><li><strong>kFold</strong>: int.</li><li><strong>cgrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>gammaGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>pGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>nuGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>coeffGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>degreeGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>balanced</strong>: bool.</li></ul><p>Trains an %SVM with optimal parameters</p></div>
 
       </div>
 
@@ -996,7 +1092,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1006,7 +1102,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="5672980157-1">(</span><span class="p" data-group-id="5672980157-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -1018,7 +1114,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L297" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1028,7 +1124,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Returns the algorithm string identifier.
+  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="9513386448-1">(</span><span class="p" data-group-id="9513386448-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -1040,7 +1137,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L264" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L629" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1050,7 +1147,7 @@ cv
 
   <section class="docstring">
 
-
+<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="1379563622-1">(</span><span class="n">fn_</span><span class="p" data-group-id="1379563622-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -1062,7 +1159,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L273" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L651" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1072,7 +1169,8 @@ cv
 
   <section class="docstring">
 
-
+<p>  Saves the algorithm to a file.
+  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="7304357952-1">(</span><span class="n">filename</span><span class="p" data-group-id="7304357952-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -1084,7 +1182,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L492" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1099" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1094,7 +1192,20 @@ cv
 
   <section class="docstring">
 
-
+<h3 id="write/2-positional-arguments" class="section-heading">
+  <a href="#write/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/2-keyword-arguments" class="section-heading">
+  <a href="#write/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="9497560360-1">(</span><span class="n">fs</span><span class="p" data-group-id="9497560360-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="9497560360-2">]</span><span class="p" data-group-id="9497560360-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -1106,7 +1217,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L483" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1070" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1116,8 +1227,20 @@ cv
 
   <section class="docstring">
 
-<p>simplified API for language bindings
-Has overloading in C++</p><ul><li><strong>name</strong> : String</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="4141042967-1">(</span><span class="n">fs</span><span class="p" data-group-id="4141042967-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="4141042967-2">]</span><span class="p" data-group-id="4141042967-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h3 id="write/3-positional-arguments" class="section-heading">
+  <a href="#write/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h3 id="write/3-keyword-arguments" class="section-heading">
+  <a href="#write/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
+Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="0706272560-1">(</span><span class="n">fs</span><span class="p" data-group-id="0706272560-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="0706272560-2">]</span><span class="p" data-group-id="0706272560-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -1142,7 +1265,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1152,7 +1275,23 @@ cv.ml
 
   <section class="docstring">
 
-
+<h3 id="calcError/3-positional-arguments" class="section-heading">
+  <a href="#calcError/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/3-keyword-arguments" class="section-heading">
+  <a href="#calcError/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="7062777397-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="7062777397-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="7062777397-2">]</span><span class="p" data-group-id="7062777397-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -1164,7 +1303,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L28" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1174,13 +1313,23 @@ cv.ml
 
   <section class="docstring">
 
-<p>Computes error on the training or test dataset</p><ul><li><strong>data</strong>.</li><li><strong>test</strong>.
-  computed over the training subset of the data. Please note that if you loaded a completely
-  different dataset to evaluate already trained classifier, you will probably want not to set
-  the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
-  that the error is computed for the whole new set. Yes, this sounds a bit confusing.</li><li><strong>resp</strong>.
-The method uses StatModel::predict to compute the error. For regression models the error is
-computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</li><li><strong>resp</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="8368148026-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="8368148026-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="8368148026-2">]</span><span class="p" data-group-id="8368148026-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<h3 id="calcError/4-positional-arguments" class="section-heading">
+  <a href="#calcError/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h3 id="calcError/4-keyword-arguments" class="section-heading">
+  <a href="#calcError/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
+</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
+</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
+</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
+  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="4923942431-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="4923942431-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="4923942431-2">]</span><span class="p" data-group-id="4923942431-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -1192,7 +1341,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L106" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1202,7 +1351,9 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>  Creates empty model.
+  Use StatModel::train to train the model. Since %SVM has several parameters, you may want to
+  find the best parameters for your problem, it can be done with SVM::trainAuto.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="2967795520-1">(</span><span class="p" data-group-id="2967795520-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -1214,7 +1365,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1224,7 +1375,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="8716203083-1">(</span><span class="p" data-group-id="8716203083-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getC/1">
@@ -1236,7 +1387,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getC(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1246,7 +1397,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setC</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getC</span><span class="p" data-group-id="9922448848-1">(</span><span class="p" data-group-id="9922448848-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getClassWeights/1">
@@ -1258,7 +1409,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getClassWeights(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1268,7 +1419,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setClassWeights</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getClassWeights</span><span class="p" data-group-id="9665948537-1">(</span><span class="p" data-group-id="9665948537-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCoef0/1">
@@ -1280,7 +1431,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getCoef0(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1290,7 +1441,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<p>@see setCoef0</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCoef0</span><span class="p" data-group-id="0713327445-1">(</span><span class="p" data-group-id="0713327445-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDecisionFunction/2">
@@ -1302,7 +1453,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getDecisionFunction(self, i)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L251" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1312,7 +1463,25 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-
+<h3 id="getDecisionFunction/2-positional-arguments" class="section-heading">
+  <a href="#getDecisionFunction/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>i</strong>: int. </li></ul><h3 id="getDecisionFunction/2-keyword-arguments" class="section-heading">
+  <a href="#getDecisionFunction/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>alpha</strong>: UMat.</li><li><strong>svidx</strong>: UMat.</li></ul><p>Retrieves the decision function</p><pre><code class="makeup elixir" translate="no"><span class="mi">2</span><span class="o">-</span><span class="n">class</span><span class="w"> </span><span class="n">classification</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">decision</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">should</span><span class="w">
+</span><span class="n">always</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="mi">0</span><span class="o">.</span><span class="w"> </span><span class="nc">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">N</span><span class="o">-</span><span class="n">class</span><span class="w"> </span><span class="n">classification</span><span class="p">,</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="nc">N</span><span class="p" data-group-id="3992433187-1">(</span><span class="nc">N</span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="3992433187-1">)</span><span class="o">/</span><span class="mi">2</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w">
+</span><span class="n">decision</span><span class="w"> </span><span class="n">functions</span><span class="o">.</span><span class="w">
+</span><span class="nc">In</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="p">%</span><span class="nc">SVM</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">alpha</span><span class="sc">&#39;s will be 1&#39;</span><span class="n">s</span><span class="o">.</span><span class="w">
+</span><span class="n">support</span><span class="w"> </span><span class="n">vectors</span><span class="w"> </span><span class="p" data-group-id="3992433187-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">retrieved</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="nc">SVM</span><span class="o">::</span><span class="n">getSupportVectors</span><span class="p" data-group-id="3992433187-2">)</span><span class="o">.</span><span class="w"> </span><span class="nc">In</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">linear</span><span class="w">
+</span><span class="p">%</span><span class="nc">SVM</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">decision</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">consists</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="s">&quot;compressed&quot;</span><span class="w"> </span><span class="n">support</span><span class="w"> </span><span class="n">vector</span><span class="o">.</span></code></pre><p>  The method returns rho parameter of the decision function, a scalar subtracted from the weighted
+  sum of kernel responses.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDecisionFunction</span><span class="p" data-group-id="8651770229-1">(</span><span class="n">i</span><span class="p" data-group-id="8651770229-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p" data-group-id="8651770229-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">svidx</span><span class="p" data-group-id="8651770229-3">]</span><span class="p" data-group-id="8651770229-2">]</span><span class="p" data-group-id="8651770229-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">svidx</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDecisionFunction/3">
@@ -1324,7 +1493,7 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
     </a>
     <h1 class="signature" translate="no">getDecisionFunction(self, i, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L215" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1334,15 +1503,25 @@ computed as RMS, for classifiers - as a percent of missclassified samples (0%-10
 
   <section class="docstring">
 
-<p>Retrieves the decision function</p><ul><li><strong>i</strong>.
-  2-class classification, then there will be just one decision function and the index should
-  always be 0. Otherwise, in the case of N-class classification, there will be \f$N(N-1)/2\f$
-  decision functions.</li><li><strong>alpha</strong>.
-  In the case of linear %SVM all the alpha's will be 1's.</li><li><strong>svidx</strong>.
-  support vectors (which can be retrieved by SVM::getSupportVectors). In the case of linear
-  %SVM each decision function consists of a single &quot;compressed&quot; support vector.
-The method returns rho parameter of the decision function, a scalar subtracted from the weighted
-sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>svidx</strong> : UMat</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDecisionFunction</span><span class="p" data-group-id="1123539715-1">(</span><span class="n">i</span><span class="p" data-group-id="1123539715-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p" data-group-id="1123539715-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">svidx</span><span class="p" data-group-id="1123539715-3">]</span><span class="p" data-group-id="1123539715-2">]</span><span class="p" data-group-id="1123539715-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">svidx</span></code></pre>
+<h3 id="getDecisionFunction/3-positional-arguments" class="section-heading">
+  <a href="#getDecisionFunction/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>i</strong>: int. </li></ul><h3 id="getDecisionFunction/3-keyword-arguments" class="section-heading">
+  <a href="#getDecisionFunction/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>alpha</strong>: UMat.</li><li><strong>svidx</strong>: UMat.</li></ul><p>Retrieves the decision function</p><pre><code class="makeup elixir" translate="no"><span class="mi">2</span><span class="o">-</span><span class="n">class</span><span class="w"> </span><span class="n">classification</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">decision</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">should</span><span class="w">
+</span><span class="n">always</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="mi">0</span><span class="o">.</span><span class="w"> </span><span class="nc">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nc">N</span><span class="o">-</span><span class="n">class</span><span class="w"> </span><span class="n">classification</span><span class="p">,</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="nc">N</span><span class="p" data-group-id="4335379974-1">(</span><span class="nc">N</span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="4335379974-1">)</span><span class="o">/</span><span class="mi">2</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w">
+</span><span class="n">decision</span><span class="w"> </span><span class="n">functions</span><span class="o">.</span><span class="w">
+</span><span class="nc">In</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="p">%</span><span class="nc">SVM</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">alpha</span><span class="sc">&#39;s will be 1&#39;</span><span class="n">s</span><span class="o">.</span><span class="w">
+</span><span class="n">support</span><span class="w"> </span><span class="n">vectors</span><span class="w"> </span><span class="p" data-group-id="4335379974-2">(</span><span class="n">which</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">retrieved</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="nc">SVM</span><span class="o">::</span><span class="n">getSupportVectors</span><span class="p" data-group-id="4335379974-2">)</span><span class="o">.</span><span class="w"> </span><span class="nc">In</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">linear</span><span class="w">
+</span><span class="p">%</span><span class="nc">SVM</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">decision</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">consists</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="s">&quot;compressed&quot;</span><span class="w"> </span><span class="n">support</span><span class="w"> </span><span class="n">vector</span><span class="o">.</span></code></pre><p>  The method returns rho parameter of the decision function, a scalar subtracted from the weighted
+  sum of kernel responses.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDecisionFunction</span><span class="p" data-group-id="9234065297-1">(</span><span class="n">i</span><span class="p" data-group-id="9234065297-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p" data-group-id="9234065297-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">svidx</span><span class="p" data-group-id="9234065297-3">]</span><span class="p" data-group-id="9234065297-2">]</span><span class="p" data-group-id="9234065297-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">svidx</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultGridPtr/1">
@@ -1354,7 +1533,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getDefaultGridPtr(param_id)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1364,7 +1543,8 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Generates a grid for %SVM parameters.</p><pre><code class="makeup elixir" translate="no"><span class="n">generated</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="nc">ID</span><span class="o">.</span></code></pre><p>  The function generates a grid pointer for the specified parameter of the %SVM algorithm.
+  The grid may be passed to the function SVM::trainAuto.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultGridPtr</span><span class="p" data-group-id="2129260519-1">(</span><span class="n">param_id</span><span class="p" data-group-id="2129260519-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getDegree/1">
@@ -1376,7 +1556,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getDegree(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1386,7 +1566,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@see setDegree</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDegree</span><span class="p" data-group-id="6837917269-1">(</span><span class="p" data-group-id="6837917269-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getGamma/1">
@@ -1398,7 +1578,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getGamma(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L335" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1408,7 +1588,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@see setGamma</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getGamma</span><span class="p" data-group-id="0471965379-1">(</span><span class="p" data-group-id="0471965379-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getKernelType/1">
@@ -1420,7 +1600,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getKernelType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L154" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L355" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1430,7 +1610,8 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>  Type of a %SVM kernel.
+  See SVM::KernelTypes. Default value is SVM::RBF.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getKernelType</span><span class="p" data-group-id="2025855328-1">(</span><span class="p" data-group-id="2025855328-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getNu/1">
@@ -1442,7 +1623,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getNu(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L161" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L374" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1452,7 +1633,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@see setNu</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNu</span><span class="p" data-group-id="8672136642-1">(</span><span class="p" data-group-id="8672136642-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getP/1">
@@ -1464,7 +1645,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getP(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1474,7 +1655,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@see setP</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getP</span><span class="p" data-group-id="3754551432-1">(</span><span class="p" data-group-id="3754551432-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getSupportVectors/1">
@@ -1486,7 +1667,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getSupportVectors(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L414" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1496,7 +1677,9 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Retrieves all the support vectors
+  The method returns all the support vectors as a floating-point matrix, where support vectors are
+  stored as matrix rows.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSupportVectors</span><span class="p" data-group-id="5165731378-1">(</span><span class="p" data-group-id="5165731378-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getTermCriteria/1">
@@ -1508,7 +1691,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getTermCriteria(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L182" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L433" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1518,7 +1701,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@see setTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTermCriteria</span><span class="p" data-group-id="1022191256-1">(</span><span class="p" data-group-id="1022191256-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getType/1">
@@ -1530,7 +1713,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L452" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1540,7 +1723,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@see setType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getType</span><span class="p" data-group-id="1033354904-1">(</span><span class="p" data-group-id="1033354904-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getUncompressedSupportVectors/1">
@@ -1552,7 +1735,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getUncompressedSupportVectors(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L474" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1562,7 +1745,10 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Retrieves all the uncompressed support vectors of a linear %SVM
+  The method returns all the uncompressed support vectors of a linear %SVM that the compressed
+  support vector, used for prediction, was derived from. They are returned in a floating-point
+  matrix, where the support vectors are stored as matrix rows.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUncompressedSupportVectors</span><span class="p" data-group-id="5788963691-1">(</span><span class="p" data-group-id="5788963691-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -1574,7 +1760,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L203" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L493" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1584,7 +1770,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="1233170638-1">(</span><span class="p" data-group-id="1233170638-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -1596,7 +1782,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L210" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L512" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1606,7 +1792,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="5047482227-1">(</span><span class="p" data-group-id="5047482227-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -1618,7 +1804,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L531" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1628,7 +1814,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="1347061894-1">(</span><span class="p" data-group-id="1347061894-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -1640,7 +1826,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L552" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1650,7 +1836,9 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Loads and creates a serialized svm from a file
+   Use SVM::save to serialize and store an SVM to disk.
+   Load the SVM from this file again, by calling this function with the path to the file.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="0691214738-1">(</span><span class="n">filepath</span><span class="p" data-group-id="0691214738-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -1662,7 +1850,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L608" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1672,7 +1860,19 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<h3 id="predict/2-positional-arguments" class="section-heading">
+  <a href="#predict/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/2-keyword-arguments" class="section-heading">
+  <a href="#predict/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="8678578400-1">(</span><span class="n">samples</span><span class="p" data-group-id="8678578400-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="8678578400-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="8678578400-3">]</span><span class="p" data-group-id="8678578400-2">]</span><span class="p" data-group-id="8678578400-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -1684,7 +1884,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L246" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L580" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1694,7 +1894,19 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-<p>Predicts response(s) for the provided sample(s)</p><ul><li><strong>samples</strong>.</li><li><strong>results</strong>.</li><li><strong>flags</strong>.</li><li><strong>results</strong> : UMat</li><li><strong>flags</strong> : int</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="3925354530-1">(</span><span class="n">samples</span><span class="p" data-group-id="3925354530-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="3925354530-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="3925354530-3">]</span><span class="p" data-group-id="3925354530-2">]</span><span class="p" data-group-id="3925354530-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<h3 id="predict/3-positional-arguments" class="section-heading">
+  <a href="#predict/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li></ul><h3 id="predict/3-keyword-arguments" class="section-heading">
+  <a href="#predict/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="6477259396-1">(</span><span class="n">samples</span><span class="p" data-group-id="6477259396-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="6477259396-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6477259396-3">]</span><span class="p" data-group-id="6477259396-2">]</span><span class="p" data-group-id="6477259396-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setC/2">
@@ -1706,7 +1918,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setC(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L672" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1716,7 +1928,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getC @see getC</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setC</span><span class="p" data-group-id="3411957278-1">(</span><span class="n">val</span><span class="p" data-group-id="3411957278-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setClassWeights/2">
@@ -1728,7 +1940,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setClassWeights(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L291" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L693" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1738,7 +1950,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getClassWeights @see getClassWeights</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setClassWeights</span><span class="p" data-group-id="7822410176-1">(</span><span class="n">val</span><span class="p" data-group-id="7822410176-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setCoef0/2">
@@ -1750,7 +1962,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setCoef0(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L300" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L714" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1760,7 +1972,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getCoef0 @see getCoef0</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setCoef0</span><span class="p" data-group-id="9186807866-1">(</span><span class="n">val</span><span class="p" data-group-id="9186807866-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setDegree/2">
@@ -1772,7 +1984,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setDegree(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L735" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1782,7 +1994,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getDegree @see getDegree</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDegree</span><span class="p" data-group-id="6273434005-1">(</span><span class="n">val</span><span class="p" data-group-id="6273434005-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setGamma/2">
@@ -1794,7 +2006,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setGamma(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L318" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L756" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1804,7 +2016,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getGamma @see getGamma</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setGamma</span><span class="p" data-group-id="9231611119-1">(</span><span class="n">val</span><span class="p" data-group-id="9231611119-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setKernel/2">
@@ -1816,7 +2028,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setKernel(self, kernelType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L327" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L778" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1826,7 +2038,8 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>  Initialize with one of predefined kernels.
+  See SVM::KernelTypes.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setKernel</span><span class="p" data-group-id="9955892230-1">(</span><span class="n">kernelType</span><span class="p" data-group-id="9955892230-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setNu/2">
@@ -1838,7 +2051,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setNu(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L336" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L799" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1848,7 +2061,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getNu @see getNu</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setNu</span><span class="p" data-group-id="5752898470-1">(</span><span class="n">val</span><span class="p" data-group-id="5752898470-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setP/2">
@@ -1860,7 +2073,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setP(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L345" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L820" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1870,7 +2083,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getP @see getP</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setP</span><span class="p" data-group-id="4252233471-1">(</span><span class="n">val</span><span class="p" data-group-id="4252233471-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setTermCriteria/2">
@@ -1882,7 +2095,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setTermCriteria(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L354" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L841" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1892,7 +2105,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getTermCriteria @see getTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTermCriteria</span><span class="p" data-group-id="6801907081-1">(</span><span class="n">val</span><span class="p" data-group-id="6801907081-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="setType/2">
@@ -1904,7 +2117,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">setType(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L363" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L862" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1914,7 +2127,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>@copybrief getType @see getType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setType</span><span class="p" data-group-id="1806539348-1">(</span><span class="n">val</span><span class="p" data-group-id="1806539348-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -1926,7 +2139,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L392" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L943" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1936,7 +2149,20 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<h3 id="train/2-positional-arguments" class="section-heading">
+  <a href="#train/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/2-keyword-arguments" class="section-heading">
+  <a href="#train/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="4036742680-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="4036742680-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="8919013046-1">(</span><span class="n">trainData</span><span class="p" data-group-id="8919013046-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="8919013046-2">]</span><span class="p" data-group-id="8919013046-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -1948,7 +2174,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L383" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L914" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1958,7 +2184,20 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<h3 id="train/3-positional-arguments" class="section-heading">
+  <a href="#train/3-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h3 id="train/3-keyword-arguments" class="section-heading">
+  <a href="#train/3-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
+</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="9374086117-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="9374086117-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="5079924964-1">(</span><span class="n">trainData</span><span class="p" data-group-id="5079924964-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="5079924964-2">]</span><span class="p" data-group-id="5079924964-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -1970,7 +2209,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L401" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L883" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1980,7 +2219,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="3837187037-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="3837187037-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainAuto/4">
@@ -1992,7 +2231,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">trainAuto(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L461" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1039" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2002,7 +2241,28 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-
+<h3 id="trainAuto/4-positional-arguments" class="section-heading">
+  <a href="#trainAuto/4-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h3 id="trainAuto/4-keyword-arguments" class="section-heading">
+  <a href="#trainAuto/4-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>kFold</strong>: int.</li><li><strong>cgrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>gammaGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>pGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>nuGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>coeffGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>degreeGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>balanced</strong>: bool.</li></ul><p>Trains an %SVM with optimal parameters</p><pre><code class="makeup elixir" translate="no"><span class="n">subset</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">others</span><span class="w"> </span><span class="n">form</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">So</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="p">%</span><span class="nc">SVM</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">is</span><span class="w">
+</span><span class="n">balanced</span><span class="w"> </span><span class="n">cross</span><span class="o">-</span><span class="n">validation</span><span class="w"> </span><span class="n">subsets</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">proportions</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">subsets</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">close</span><span class="w">
+</span><span class="n">to</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">proportion</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">dataset</span><span class="o">.</span></code></pre><p>  The method trains the %SVM model automatically by choosing the optimal parameters C, gamma, p,
+  nu, coef0, degree. Parameters are considered optimal when the cross-validation
+  estimate of the test set error is minimal.
+  This function only makes use of SVM::getDefaultGrid for parameter optimization and thus only
+  offers rudimentary parameter options.
+  This function works for the classification (SVM::C_SVC or SVM::NU_SVC) as well as for the
+  regression (SVM::EPS_SVR or SVM::NU_SVR). If it is SVM::ONE_CLASS, no optimization is made and
+  the usual %SVM with parameters specified in params is executed.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainAuto</span><span class="p" data-group-id="3880859822-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="3880859822-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">kFold</span><span class="p" data-group-id="3880859822-3">[</span><span class="p">,</span><span class="w"> </span><span class="nc">Cgrid</span><span class="p" data-group-id="3880859822-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">gammaGrid</span><span class="p" data-group-id="3880859822-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">pGrid</span><span class="p" data-group-id="3880859822-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">nuGrid</span><span class="p" data-group-id="3880859822-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">coeffGrid</span><span class="p" data-group-id="3880859822-8">[</span><span class="p">,</span><span class="w"> </span><span class="n">degreeGrid</span><span class="p" data-group-id="3880859822-9">[</span><span class="p">,</span><span class="w"> </span><span class="n">balanced</span><span class="p" data-group-id="3880859822-9">]</span><span class="p" data-group-id="3880859822-8">]</span><span class="p" data-group-id="3880859822-7">]</span><span class="p" data-group-id="3880859822-6">]</span><span class="p" data-group-id="3880859822-5">]</span><span class="p" data-group-id="3880859822-4">]</span><span class="p" data-group-id="3880859822-3">]</span><span class="p" data-group-id="3880859822-2">]</span><span class="p" data-group-id="3880859822-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="trainAuto/5">
@@ -2014,7 +2274,7 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
     </a>
     <h1 class="signature" translate="no">trainAuto(self, samples, layout, responses, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L450" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L990" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2024,18 +2284,28 @@ sum of kernel responses.</li><li><strong>alpha</strong> : UMat</li><li><strong>s
 
   <section class="docstring">
 
-<p>Trains an %SVM with optimal parameters</p><ul><li><strong>samples</strong>.</li><li><strong>layout</strong>.</li><li><strong>responses</strong>.</li><li><strong>kFold</strong>.
-  subset is used to test the model, the others form the train set. So, the %SVM algorithm is</li><li><strong>cgrid</strong>.</li><li><strong>gammaGrid</strong>.</li><li><strong>pGrid</strong>.</li><li><strong>nuGrid</strong>.</li><li><strong>coeffGrid</strong>.</li><li><strong>degreeGrid</strong>.</li><li><strong>balanced</strong>.
-  balanced cross-validation subsets that is proportions between classes in subsets are close
-  to such proportion in the whole train dataset.
-The method trains the %SVM model automatically by choosing the optimal parameters C, gamma, p,
-nu, coef0, degree. Parameters are considered optimal when the cross-validation
-estimate of the test set error is minimal.
-This function only makes use of SVM::getDefaultGrid for parameter optimization and thus only
-offers rudimentary parameter options.
-This function works for the classification (SVM::C_SVC or SVM::NU_SVC) as well as for the
-regression (SVM::EPS_SVR or SVM::NU_SVR). If it is SVM::ONE_CLASS, no optimization is made and
-the usual %SVM with parameters specified in params is executed.</li><li><strong>kFold</strong> : int</li><li><strong>cgrid</strong> : Ptr&lt;ParamGrid&gt;</li><li><strong>gammaGrid</strong> : Ptr&lt;ParamGrid&gt;</li><li><strong>pGrid</strong> : Ptr&lt;ParamGrid&gt;</li><li><strong>nuGrid</strong> : Ptr&lt;ParamGrid&gt;</li><li><strong>coeffGrid</strong> : Ptr&lt;ParamGrid&gt;</li><li><strong>degreeGrid</strong> : Ptr&lt;ParamGrid&gt;</li><li><strong>balanced</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainAuto</span><span class="p" data-group-id="7340417364-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="7340417364-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">kFold</span><span class="p" data-group-id="7340417364-3">[</span><span class="p">,</span><span class="w"> </span><span class="nc">Cgrid</span><span class="p" data-group-id="7340417364-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">gammaGrid</span><span class="p" data-group-id="7340417364-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">pGrid</span><span class="p" data-group-id="7340417364-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">nuGrid</span><span class="p" data-group-id="7340417364-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">coeffGrid</span><span class="p" data-group-id="7340417364-8">[</span><span class="p">,</span><span class="w"> </span><span class="n">degreeGrid</span><span class="p" data-group-id="7340417364-9">[</span><span class="p">,</span><span class="w"> </span><span class="n">balanced</span><span class="p" data-group-id="7340417364-9">]</span><span class="p" data-group-id="7340417364-8">]</span><span class="p" data-group-id="7340417364-7">]</span><span class="p" data-group-id="7340417364-6">]</span><span class="p" data-group-id="7340417364-5">]</span><span class="p" data-group-id="7340417364-4">]</span><span class="p" data-group-id="7340417364-3">]</span><span class="p" data-group-id="7340417364-2">]</span><span class="p" data-group-id="7340417364-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="trainAuto/5-positional-arguments" class="section-heading">
+  <a href="#trainAuto/5-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h3 id="trainAuto/5-keyword-arguments" class="section-heading">
+  <a href="#trainAuto/5-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>kFold</strong>: int.</li><li><strong>cgrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>gammaGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>pGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>nuGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>coeffGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>degreeGrid</strong>: Ptr&lt;ParamGrid&gt;.</li><li><strong>balanced</strong>: bool.</li></ul><p>Trains an %SVM with optimal parameters</p><pre><code class="makeup elixir" translate="no"><span class="n">subset</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">others</span><span class="w"> </span><span class="n">form</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">So</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="p">%</span><span class="nc">SVM</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">is</span><span class="w">
+</span><span class="n">balanced</span><span class="w"> </span><span class="n">cross</span><span class="o">-</span><span class="n">validation</span><span class="w"> </span><span class="n">subsets</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">proportions</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">subsets</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">close</span><span class="w">
+</span><span class="n">to</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">proportion</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">dataset</span><span class="o">.</span></code></pre><p>  The method trains the %SVM model automatically by choosing the optimal parameters C, gamma, p,
+  nu, coef0, degree. Parameters are considered optimal when the cross-validation
+  estimate of the test set error is minimal.
+  This function only makes use of SVM::getDefaultGrid for parameter optimization and thus only
+  offers rudimentary parameter options.
+  This function works for the classification (SVM::C_SVC or SVM::NU_SVC) as well as for the
+  regression (SVM::EPS_SVR or SVM::NU_SVR). If it is SVM::ONE_CLASS, no optimization is made and
+  the usual %SVM with parameters specified in params is executed.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">trainAuto</span><span class="p" data-group-id="0357104645-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="0357104645-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">kFold</span><span class="p" data-group-id="0357104645-3">[</span><span class="p">,</span><span class="w"> </span><span class="nc">Cgrid</span><span class="p" data-group-id="0357104645-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">gammaGrid</span><span class="p" data-group-id="0357104645-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">pGrid</span><span class="p" data-group-id="0357104645-6">[</span><span class="p">,</span><span class="w"> </span><span class="n">nuGrid</span><span class="p" data-group-id="0357104645-7">[</span><span class="p">,</span><span class="w"> </span><span class="n">coeffGrid</span><span class="p" data-group-id="0357104645-8">[</span><span class="p">,</span><span class="w"> </span><span class="n">degreeGrid</span><span class="p" data-group-id="0357104645-9">[</span><span class="p">,</span><span class="w"> </span><span class="n">balanced</span><span class="p" data-group-id="0357104645-9">]</span><span class="p" data-group-id="0357104645-8">]</span><span class="p" data-group-id="0357104645-7">]</span><span class="p" data-group-id="0357104645-6">]</span><span class="p" data-group-id="0357104645-5">]</span><span class="p" data-group-id="0357104645-4">]</span><span class="p" data-group-id="0357104645-3">]</span><span class="p" data-group-id="0357104645-2">]</span><span class="p" data-group-id="0357104645-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -2060,7 +2330,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2082,7 +2352,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2104,7 +2374,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2126,7 +2396,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2148,7 +2418,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2170,7 +2440,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getC!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2192,7 +2462,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getClassWeights!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2214,7 +2484,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCoef0!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2236,7 +2506,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDecisionFunction!(self, i)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L259" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2258,7 +2528,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDecisionFunction!(self, i, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L223" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2280,7 +2550,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultGridPtr!(param_id)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L283" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2302,7 +2572,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2324,7 +2594,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDegree!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L322" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2346,7 +2616,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getGamma!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2368,7 +2638,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getKernelType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L361" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2390,7 +2660,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNu!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L166" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L380" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2412,7 +2682,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getP!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L173" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L399" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2434,7 +2704,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSupportVectors!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L420" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2456,7 +2726,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTermCriteria!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L439" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2478,7 +2748,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L194" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L458" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2500,7 +2770,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUncompressedSupportVectors!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L480" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2522,7 +2792,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L499" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2544,7 +2814,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L215" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L518" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2566,7 +2836,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L222" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L537" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2588,7 +2858,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L231" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L560" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2610,7 +2880,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L262" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L616" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2632,7 +2902,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L253" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L588" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2654,7 +2924,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L271" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L637" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2676,7 +2946,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L659" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2698,7 +2968,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setC!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L289" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L680" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2720,7 +2990,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setClassWeights!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L298" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L701" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2742,7 +3012,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setCoef0!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L307" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L722" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2764,7 +3034,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDegree!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L743" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2786,7 +3056,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setGamma!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L325" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L764" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2808,7 +3078,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setKernel!(self, kernelType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L334" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L786" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2830,7 +3100,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setNu!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L343" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L807" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2852,7 +3122,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setP!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L828" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2874,7 +3144,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTermCriteria!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L361" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L849" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2896,7 +3166,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setType!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L370" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L870" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2918,7 +3188,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L399" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L951" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2940,7 +3210,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L390" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L922" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2962,7 +3232,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L410" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L893" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2984,7 +3254,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainAuto!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L470" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1049" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3006,7 +3276,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trainAuto!(self, samples, layout, responses, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L459" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1000" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3028,7 +3298,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L499" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1107" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3050,7 +3320,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_ml_svm.ex#L490" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_svm.ex#L1078" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3073,10 +3343,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_ml_svm.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_svm.ex">(current file)</a>
 
             </span>
 

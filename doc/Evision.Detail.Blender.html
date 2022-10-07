@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.Detail.Blender — Evision v0.1.5-dev</title>
+    <title>Evision.Detail.Blender — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Detail.Blender</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Blends and returns the final pano.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,8 @@ Evision
           <a href="#createDefault/1" translate="no">createDefault(type)</a>
 
         </div>
+
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>type</strong>: int</li></ul><h3>Keyword Arguments</h3><ul><li><strong>try_gpu</strong>: bool.</li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -142,7 +146,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><ul><li><strong>try_gpu</strong> : bool</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h3>Positional Arguments</h3><ul><li><strong>type</strong>: int</li></ul><h3>Keyword Arguments</h3><ul><li><strong>try_gpu</strong>: bool.</li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -152,6 +156,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Processes the image.</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -160,6 +166,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -167,6 +175,8 @@ Evision
           <a href="#prepare/3" translate="no">prepare(self, corners, sizes)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Prepares the blender for blending.</p></div>
 
       </div>
 
@@ -260,7 +270,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">blend(self, dst, dst_mask)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -270,7 +280,7 @@ cv.detail
 
   <section class="docstring">
 
-
+<p>Blends and returns the final pano.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">blend</span><span class="p" data-group-id="4251144348-1">(</span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">dst_mask</span><span class="p" data-group-id="4251144348-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">dst_mask</span></code></pre>
   </section>
 </section>
 <section class="detail" id="createDefault/1">
@@ -282,7 +292,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">createDefault(type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -292,7 +302,19 @@ cv.detail
 
   <section class="docstring">
 
-
+<h3 id="createDefault/1-positional-arguments" class="section-heading">
+  <a href="#createDefault/1-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>type</strong>: int</li></ul><h3 id="createDefault/1-keyword-arguments" class="section-heading">
+  <a href="#createDefault/1-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>try_gpu</strong>: bool.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">createDefault</span><span class="p" data-group-id="2443255573-1">(</span><span class="n">type</span><span class="p" data-group-id="2443255573-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_gpu</span><span class="p" data-group-id="2443255573-2">]</span><span class="p" data-group-id="2443255573-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="createDefault/2">
@@ -304,7 +326,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">createDefault(type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L42" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -314,7 +336,19 @@ cv.detail
 
   <section class="docstring">
 
-<ul><li><strong>try_gpu</strong> : bool</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">createDefault</span><span class="p" data-group-id="8661575053-1">(</span><span class="n">type</span><span class="p" data-group-id="8661575053-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_gpu</span><span class="p" data-group-id="8661575053-2">]</span><span class="p" data-group-id="8661575053-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h3 id="createDefault/2-positional-arguments" class="section-heading">
+  <a href="#createDefault/2-positional-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">positional-arguments</p>
+  </a>
+  Positional Arguments
+</h3>
+<ul><li><strong>type</strong>: int</li></ul><h3 id="createDefault/2-keyword-arguments" class="section-heading">
+  <a href="#createDefault/2-keyword-arguments" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">keyword-arguments</p>
+  </a>
+  Keyword Arguments
+</h3>
+<ul><li><strong>try_gpu</strong>: bool.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">createDefault</span><span class="p" data-group-id="8205852796-1">(</span><span class="n">type</span><span class="p" data-group-id="8205852796-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_gpu</span><span class="p" data-group-id="8205852796-2">]</span><span class="p" data-group-id="8205852796-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="feed/4">
@@ -326,7 +360,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">feed(self, img, mask, tl)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L89" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -336,7 +370,7 @@ cv.detail
 
   <section class="docstring">
 
-
+<p>Processes the image.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">feed</span><span class="p" data-group-id="6038301017-1">(</span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">tl</span><span class="p" data-group-id="6038301017-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="prepare/2">
@@ -348,7 +382,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">prepare(self, dst_roi)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L135" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -358,7 +392,7 @@ cv.detail
 
   <section class="docstring">
 
-
+<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">prepare</span><span class="p" data-group-id="0257310222-1">(</span><span class="n">dst_roi</span><span class="p" data-group-id="0257310222-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 <section class="detail" id="prepare/3">
@@ -370,7 +404,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">prepare(self, corners, sizes)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -380,7 +414,7 @@ cv.detail
 
   <section class="docstring">
 
-
+<p>Prepares the blender for blending.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">prepare</span><span class="p" data-group-id="9499873104-1">(</span><span class="n">corners</span><span class="p">,</span><span class="w"> </span><span class="n">sizes</span><span class="p" data-group-id="9499873104-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
   </section>
 </section>
 
@@ -405,7 +439,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">blend!(self, dst, dst_mask)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -427,7 +461,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">createDefault!(type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L76" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -449,7 +483,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">createDefault!(type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -471,7 +505,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">feed!(self, img, mask, tl)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L99" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -493,7 +527,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">prepare!(self, dst_roi)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -515,7 +549,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">prepare!(self, corners, sizes)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_detail_blender.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_blender.ex#L121" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -538,10 +572,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_detail_blender.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_detail_blender.ex">(current file)</a>
 
             </span>
 

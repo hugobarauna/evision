@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.5-dev">
+    <meta name="project" content="Evision v0.1.7-dev">
 
-    <title>Evision.VideoIORegistry — Evision v0.1.5-dev</title>
+    <title>Evision.VideoIORegistry — Evision v0.1.7-dev</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-52e7b71e2b.js"></script>
+    <script src="dist/sidebar_items-85b1cfe249.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.5-dev
+        v0.1.7-dev
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -94,13 +94,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.VideoIORegistry</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.5-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
 
 </h1>
 
@@ -126,6 +126,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns backend API name or &quot;UnknownVideoAPI(xxx)&quot;</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -133,6 +135,8 @@ Evision
           <a href="#getBackends/0" translate="no">getBackends()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns list of all available backends</p></div>
 
       </div>
 
@@ -142,6 +146,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns description and ABI/API version of videoio plugin's camera interface</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -149,6 +155,8 @@ Evision
           <a href="#getCameraBackends/0" translate="no">getCameraBackends()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(int index)</code></p></div>
 
       </div>
 
@@ -158,6 +166,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns description and ABI/API version of videoio plugin's stream capture interface</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -165,6 +175,8 @@ Evision
           <a href="#getStreamBackends/0" translate="no">getStreamBackends()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(filename)</code></p></div>
 
       </div>
 
@@ -174,6 +186,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns description and ABI/API version of videoio plugin's writer interface</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -181,6 +195,8 @@ Evision
           <a href="#getWriterBackends/0" translate="no">getWriterBackends()</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns list of available backends which works via <code class="inline">cv::VideoWriter()</code></p></div>
 
       </div>
 
@@ -190,6 +206,8 @@ Evision
 
         </div>
 
+          <div class="summary-synopsis"><p>Returns true if backend is available</p></div>
+
       </div>
 
       <div class="summary-row">
@@ -197,6 +215,8 @@ Evision
           <a href="#isBackendBuiltIn/1" translate="no">isBackendBuiltIn(api)</a>
 
         </div>
+
+          <div class="summary-synopsis"><p>Returns true if backend is built in (false if backend is used as plugin)</p></div>
 
       </div>
 
@@ -330,7 +350,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getBackendName(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -340,7 +360,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns backend API name or &quot;UnknownVideoAPI(xxx)&quot;</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackendName</span><span class="p" data-group-id="5039870428-1">(</span><span class="n">api</span><span class="p" data-group-id="5039870428-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getBackends/0">
@@ -352,7 +372,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getBackends()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L36" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -362,7 +382,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns list of all available backends</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackends</span><span class="p" data-group-id="1130404434-1">(</span><span class="p" data-group-id="1130404434-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCameraBackendPluginVersion/1">
@@ -374,7 +394,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getCameraBackendPluginVersion(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -384,7 +404,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns description and ABI/API version of videoio plugin's camera interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCameraBackendPluginVersion</span><span class="p" data-group-id="1418160158-1">(</span><span class="n">api</span><span class="p" data-group-id="1418160158-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getCameraBackends/0">
@@ -396,7 +416,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getCameraBackends()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L76" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -406,7 +426,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(int index)</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCameraBackends</span><span class="p" data-group-id="4458255997-1">(</span><span class="p" data-group-id="4458255997-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getStreamBackendPluginVersion/1">
@@ -418,7 +438,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getStreamBackendPluginVersion(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -428,7 +448,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns description and ABI/API version of videoio plugin's stream capture interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getStreamBackendPluginVersion</span><span class="p" data-group-id="3818620024-1">(</span><span class="n">api</span><span class="p" data-group-id="3818620024-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getStreamBackends/0">
@@ -440,7 +460,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getStreamBackends()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -450,7 +470,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns list of available backends which works via <code class="inline">cv::VideoCapture(filename)</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getStreamBackends</span><span class="p" data-group-id="7100692695-1">(</span><span class="p" data-group-id="7100692695-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getWriterBackendPluginVersion/1">
@@ -462,7 +482,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getWriterBackendPluginVersion(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L135" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -472,7 +492,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns description and ABI/API version of videoio plugin's writer interface</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWriterBackendPluginVersion</span><span class="p" data-group-id="2348691655-1">(</span><span class="n">api</span><span class="p" data-group-id="2348691655-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">version_ABI</span><span class="p">,</span><span class="w"> </span><span class="n">version_API</span></code></pre>
   </section>
 </section>
 <section class="detail" id="getWriterBackends/0">
@@ -484,7 +504,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">getWriterBackends()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -494,7 +514,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns list of available backends which works via <code class="inline">cv::VideoWriter()</code></p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWriterBackends</span><span class="p" data-group-id="7580608896-1">(</span><span class="p" data-group-id="7580608896-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="hasBackend/1">
@@ -506,7 +526,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">hasBackend(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -516,7 +536,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns true if backend is available</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">hasBackend</span><span class="p" data-group-id="7969163912-1">(</span><span class="n">api</span><span class="p" data-group-id="7969163912-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 <section class="detail" id="isBackendBuiltIn/1">
@@ -528,7 +548,7 @@ cv.videoio_registry
     </a>
     <h1 class="signature" translate="no">isBackendBuiltIn(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L196" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -538,7 +558,7 @@ cv.videoio_registry
 
   <section class="docstring">
 
-
+<p>Returns true if backend is built in (false if backend is used as plugin)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isBackendBuiltIn</span><span class="p" data-group-id="3993248431-1">(</span><span class="n">api</span><span class="p" data-group-id="3993248431-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
   </section>
 </section>
 
@@ -563,7 +583,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBackendName!(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L23" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -585,7 +605,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBackends!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L42" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -607,7 +627,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCameraBackendPluginVersion!(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -629,7 +649,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCameraBackends!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L82" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -651,7 +671,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getStreamBackendPluginVersion!(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -673,7 +693,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getStreamBackends!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L122" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -695,7 +715,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getWriterBackendPluginVersion!(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -717,7 +737,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getWriterBackends!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -739,7 +759,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">hasBackend!(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L183" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -761,7 +781,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isBackendBuiltIn!(api)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.5-dev/lib/generated/evision_videoioregistry.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_videoioregistry.ex#L204" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -784,10 +804,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.5-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.5-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.5-dev/show/lib/generated/evision_videoioregistry.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_videoioregistry.ex">(current file)</a>
 
             </span>
 
