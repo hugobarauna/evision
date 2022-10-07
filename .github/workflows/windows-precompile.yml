@@ -10,10 +10,11 @@ jobs:
     runs-on: windows-latest
     env:
       MIX_ENV: prod
-      EVISION_VERSION: "0.1.4"
       OPENCV_VER: "4.6.0"
       OTP_VERSION: "25.0.4"
       ELIXIR_VERSION: "1.14.0"
+      EVISION_PREFER_PRECOMPILED: "false"
+      EVISION_GENERATE_LANG: "erlang,elixir"
 
     steps:
       - uses: actions/checkout@v3
@@ -26,7 +27,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
         with:
           arch: x64
-      
+
       - name: Cache mix packages
         id: cache-mix-deps
         uses: actions/cache@v3
@@ -59,7 +60,7 @@ jobs:
         id: cache-mix-compile
         uses: actions/cache@v3
         with:
-          key: precompile-${{ runner.os }}-${{ hashFiles('cc_toolchain/**') }}-${{ hashFiles('c_src/**') }}-${{ hashFiles('CMakeLists.txt') }}-${{ hashFiles('Makefile.win') }}-${{ env.OPENCV_VER }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}
+          key: precompile-${{ runner.os }}-${{ hashFiles('cc_toolchain/**') }}-${{ hashFiles('c_src/**') }}-${{ hashFiles('py_src/**') }}-${{ hashFiles('CMakeLists.txt') }}-${{ hashFiles('Makefile.win') }}-${{ env.OPENCV_VER }}-${{ env.OTP_VERSION }}-${{ env.ELIXIR_VERSION }}
           path: |
             ./_build
             ./c_src/headers.txt
@@ -78,7 +79,7 @@ jobs:
       - name: Create precompiled library
         shell: bash
         run: |
-          export PKG_NAME=evision-amd64-windows-msvc-${GITHUB_REF##*/v}
+          export PKG_NAME=evision-x86_64-windows-msvc-${GITHUB_REF##*/v}
           mkdir -p "${PKG_NAME}"
           rm -rf "_build/${MIX_ENV}/lib/evision/priv/x64"
           cp -a _build/${MIX_ENV}/lib/evision/priv "${PKG_NAME}"

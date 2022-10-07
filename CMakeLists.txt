@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
 project(evision)
 
 if(NOT DEFINED CMAKE_BUILD_TYPE OR "${CMAKE_BUILD_TYPE}" STREQUAL "")
@@ -12,27 +12,61 @@ else()
 endif()
 message(STATUS "Using PRIV_DIR: ${PRIV_DIR}")
 
+set(EVISION_AVAILABLE_PRECOMPILED_BINARIES
+    "aarch64-apple-darwin"
+    "x86_64-apple-darwin"
+    "aarch64-linux-gnu"
+    "aarch64-linux-musl"
+    "x86_64-linux-gnu"
+    "x86_64-linux-musl"
+    "armv7l-linux-gnueabihf"
+    "ppc64le-linux-gnu"
+    "s390x-linux-gnu"
+    "riscv64-linux-gnu"
+    "riscv64-linux-musl"
+    "x86_64-windows-msvc"
+)
+
 if(EVISION_PREFER_PRECOMPILED STREQUAL "true")
     message(STATUS "EVISION_PREFER_PRECOMPILED is true: try to download and use the precompiled library")
 
     string(TOLOWER "${CMAKE_SYSTEM_NAME}" PRECOMPILED_SYSTEM_NAME)
     string(TOLOWER "${CMAKE_SYSTEM_PROCESSOR}" PRECOMPILED_PROCESSOR_ARCH)
 
+    if("${PRECOMPILED_PROCESSOR_ARCH}" STREQUAL "amd64")
+        set(PRECOMPILED_PROCESSOR_ARCH "x86_64")
+    elseif("${PRECOMPILED_PROCESSOR_ARCH}" STREQUAL "arm64")
+        set(PRECOMPILED_PROCESSOR_ARCH "aarch64")
+    endif()
+
     if("${PRECOMPILED_SYSTEM_NAME}" STREQUAL "darwin")
-        set(PRECOMPILE_PKG_NAME "evision-${PRECOMPILED_PROCESSOR_ARCH}-apple-darwin-${EVISION_PRECOMPILED_VERSION}")
+        set(PRECOMPILE_TARGET_TRIPLET "${PRECOMPILED_PROCESSOR_ARCH}-apple-darwin")
     elseif("${PRECOMPILED_SYSTEM_NAME}" STREQUAL "linux")
         if(NOT "$ENV{TARGET_ABI}" STREQUAL "")
-            set(PRECOMPILE_PKG_NAME "evision-${PRECOMPILED_PROCESSOR_ARCH}-linux-$ENV{TARGET_ABI}-${EVISION_PRECOMPILED_VERSION}")
+            set(PRECOMPILE_TARGET_TRIPLET "${PRECOMPILED_PROCESSOR_ARCH}-linux-$ENV{TARGET_ABI}")
         else()
             if("${PRECOMPILED_PROCESSOR_ARCH}" STREQUAL "armv7l")
-                set(PRECOMPILE_PKG_NAME "evision-${PRECOMPILED_PROCESSOR_ARCH}-linux-gnueabihf-${EVISION_PRECOMPILED_VERSION}")
+                set(PRECOMPILE_TARGET_TRIPLET "${PRECOMPILED_PROCESSOR_ARCH}-linux-gnueabihf")
             else()
-                set(PRECOMPILE_PKG_NAME "evision-${PRECOMPILED_PROCESSOR_ARCH}-linux-gnu-${EVISION_PRECOMPILED_VERSION}")
+                set(PRECOMPILE_TARGET_TRIPLET "${PRECOMPILED_PROCESSOR_ARCH}-linux-gnu")
             endif()
         endif()
     elseif("${PRECOMPILED_SYSTEM_NAME}" STREQUAL "windows")
-        set(PRECOMPILE_PKG_NAME "evision-${PRECOMPILED_PROCESSOR_ARCH}-windows-msvc-${EVISION_PRECOMPILED_VERSION}")
+        set(PRECOMPILE_TARGET_TRIPLET "${PRECOMPILED_PROCESSOR_ARCH}-windows-msvc")
     endif()
+
+    set(EVISION_HAS_PRECOMPILED_BINARY_AVAILABLE false)
+    if("${PRECOMPILE_TARGET_TRIPLET}" IN_LIST EVISION_AVAILABLE_PRECOMPILED_BINARIES)
+        set(EVISION_HAS_PRECOMPILED_BINARY_AVAILABLE true)
+        message(STATUS "Precompiled binaries is available for the current target: ${PRECOMPILE_TARGET_TRIPLET}")
+    else()
+        message(WARNING "EVISION_PREFER_PRECOMPILED is true, but there is no precompiled binaries available for the current target: ${PRECOMPILE_TARGET_TRIPLET}")
+        message(WARNING "Will fallback to building evision from source")
+    endif()
+endif()
+
+if(EVISION_HAS_PRECOMPILED_BINARY_AVAILABLE)
+    set(PRECOMPILE_PKG_NAME "evision-${PRECOMPILE_TARGET_TRIPLET}-${EVISION_PRECOMPILED_VERSION}")
 
     set(PRECOMPILE_PKG_FILENAME "${PRECOMPILE_PKG_NAME}.tar.gz")
     set(PRECOMPILE_PKG_URL "https://github.com/cocoa-xu/evision/releases/download/v${EVISION_PRECOMPILED_VERSION}/${PRECOMPILE_PKG_FILENAME}")
@@ -45,7 +79,6 @@ if(EVISION_PREFER_PRECOMPILED STREQUAL "true")
     else()
         set(EVISION_SO_FILE "${PRIV_DIR}/evision.so")
     endif(WIN32)
-    
 
     set(PRECOMPILE_PKG_NEEDS_DOWNLOAD YES)
     set(PRECOMPILE_PKG_NEEDS_UNARCHIVE YES)
@@ -160,16 +193,16 @@ else()
     if(WIN32)
         execute_process(COMMAND "rmdir ${GENERATED_ELIXIR_SRC_DIR} /s /q && rmdir ${GENERATED_ERLANG_SRC_DIR} /s /q  && mkdir ${GENERATED_ELIXIR_SRC_DIR} && mkdir ${GENERATED_ERLANG_SRC_DIR}")
         message("enabled modules: ${ENABLED_CV_MODULES}")
-        execute_process(COMMAND python3.exe "${PY_SRC}\\gen2.py" "${C_SRC}" "${GENERATED_ELIXIR_SRC_DIR}" "${GENERATED_ERLANG_SRC_DIR}" "${C_SRC}\\headers.txt" "${ENABLED_CV_MODULES}" RESULT_VARIABLE STATUS)
+        execute_process(COMMAND python3.exe "${PY_SRC}\\gen2.py" "${C_SRC}" "${GENERATED_ELIXIR_SRC_DIR}" "${GENERATED_ERLANG_SRC_DIR}" "${C_SRC}\\headers.txt" "${EVISION_GENERATE_LANG}" "${ENABLED_CV_MODULES}" RESULT_VARIABLE STATUS)
     else()
         execute_process(COMMAND bash -c "rm -rf ${GENERATED_ELIXIR_SRC_DIR} && rm -rf ${GENERATED_ERLANG_SRC_DIR} && mkdir -p ${GENERATED_ELIXIR_SRC_DIR} && mkdir -p ${GENERATED_ERLANG_SRC_DIR}")
         message("enabled modules: ${ENABLED_CV_MODULES}")
-        execute_process(COMMAND bash -c "python3 ${PY_SRC}/gen2.py ${C_SRC} ${GENERATED_ELIXIR_SRC_DIR} ${GENERATED_ERLANG_SRC_DIR} ${C_SRC}/headers.txt ${ENABLED_CV_MODULES}" RESULT_VARIABLE STATUS)
+        execute_process(COMMAND bash -c "python3 ${PY_SRC}/gen2.py ${C_SRC} ${GENERATED_ELIXIR_SRC_DIR} ${GENERATED_ERLANG_SRC_DIR} ${C_SRC}/headers.txt ${EVISION_GENERATE_LANG} ${ENABLED_CV_MODULES}" RESULT_VARIABLE STATUS)
     endif()
     if(STATUS STREQUAL "0")
-        message("Successfully generated Erlang/Elixir bindings")
+        message(STATUS "Successfully generated binding code for: ${EVISION_GENERATE_LANG}")
     else()
-        message(FATAL_ERROR "Failed to generate Erlang/Elixir bindings")
+        message(FATAL_ERROR "Failed to generate binding code for: ${EVISION_GENERATE_LANG}")
     endif()
 
     if(WIN32)
@@ -209,6 +242,12 @@ else()
     if(WIN32)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /wd4996 /wd4267 /wd4068")
     else()
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -O3 -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-deprecated-declarations -Wno-unused-but-set-variable")
+        if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g3")
+        else()
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
+        endif()
+
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-deprecated-declarations -Wno-unused-but-set-variable")
     endif()
 endif()

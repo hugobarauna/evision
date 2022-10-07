@@ -345,14 +345,17 @@ class FuncInfo(object):
                     code_ret = "return evision::nif::ok(env, self)"
             elif len(v.py_outlist) == 1:
                 if self.isconstructor:
-                    code_ret = "ERL_NIF_TERM ret = enif_make_resource(env, self);\n        enif_release_resource(self);\n        return evision::nif::ok(env, ret);"
+                    if self.classname in ["VideoCapture"]:
+                        code_ret = ET.code_ret_constructor_structurise % (self.classname,)
+                    else:
+                        code_ret = ET.code_ret_constructor
                 else:
                     aname, argno = v.py_outlist[0]
                     if v.rettype == 'bool':
                         code_ret = "if (%s) {\n                return evision::nif::atom(env, \"ok\");\n            } else {\n                return evision::nif::atom(env, \"error\");\n            }" % (aname,)
                     elif v.rettype == 'Mat':
                         code_ret = f"ERL_NIF_TERM mat_ret = evision_from(env, {aname});\n" \
-                                   "            if (enif_is_ref(env, mat_ret)) return evision::nif::ok(env, mat_ret);\n" \
+                                   "            if (enif_is_ref(env, mat_ret) || enif_is_map(env, mat_ret)) return evision::nif::ok(env, mat_ret);\n" \
                                    "            else return mat_ret;"
                     else:
                         code_ret = "return evision::nif::ok(env, evision_from(env, %s))" % (aname,)
@@ -362,21 +365,19 @@ class FuncInfo(object):
                 evision_from_calls = ["evision_from(env, " + aname + ")" for aname, argno in v.py_outlist]
                 if v.rettype == 'bool':
                     if n_tuple >= 10:
-                        code_ret = "ERL_NIF_TERM arr[] = {%s};\n    if (retval) {\n                return evision::nif::ok(env, enif_make_tuple_from_array(env, arr, %d));\n            } else {\n                return evision::nif::atom(env, \"error\");\n            }" % \
-                            (",\n        ".join(evision_from_calls[1:]), n_tuple-1)
+                        code_ret = ET.code_ret_ge_10_tuple_except_bool % (",\n        ".join(evision_from_calls[1:]), n_tuple-1)
                     elif (n_tuple-1) == 1:
-                        code_ret = "if (retval) {\n                return evision::nif::ok(env, %s);\n            } else {\n                return evision::nif::atom(env, \"error\");\n            }" % \
-                            (", ".join(evision_from_calls[1:]),)
+                        if "imencode" in fname:
+                            code_ret = ET.code_ret_as_binary % (", ".join(evision_from_calls[1:]).replace("evision_from", "evision_from_as_binary").replace(")", ", success)"),)
+                        else:
+                            code_ret = ET.code_ret_1_tuple_except_bool % (", ".join(evision_from_calls[1:]),)
                     else:
-                        code_ret = "if (retval) {\n                return evision::nif::ok(env, enif_make_tuple%d(env, %s));\n            } else {\n                return evision::nif::atom(env, \"error\");\n            }" % \
-                            (n_tuple-1, ", ".join(evision_from_calls[1:]))
+                        code_ret = ET.code_ret_2_to_10_tuple_except_bool % (n_tuple-1, ", ".join(evision_from_calls[1:]))
                 else:
                     if n_tuple >= 10:
-                        code_ret = "ERL_NIF_TERM arr[] = {%s};\n    return evision::nif::ok(env, enif_make_tuple_from_array(env, arr, %d))" % \
-                            (",\n        ".join(evision_from_calls), n_tuple)
+                        code_ret = ET.code_ret_ge_10_tuple % (",\n                ".join(evision_from_calls), n_tuple)
                     else:
-                        code_ret = "return evision::nif::ok(env, enif_make_tuple%d(env, %s))" % \
-                            (n_tuple, ", ".join(evision_from_calls))
+                        code_ret = ET.code_ret_lt_10_tuple % (n_tuple, ", ".join(evision_from_calls))
 
             all_code_variants.append(ET.gen_template_func_body.substitute(code_decl=code_decl, code_parse=code_parse,
                                                                        code_prelude=code_prelude, code_fcall=code_fcall,

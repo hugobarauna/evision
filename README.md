@@ -16,7 +16,7 @@
 | Windows 2019     | x86_64         | msvc |[![CI](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml/badge.svg)](https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml) | Yes |
 
 ## Docs
-Online docs is available here, [https://cocoa-xu.github.io/evision](https://cocoa-xu.github.io/evision/doc/OpenCV.html).
+Online docs is available here, [https://cocoa-xu.github.io/evision](https://cocoa-xu.github.io/evision/doc/Evision.html).
 
 Will be available on hex.pm once we reach to the first release.
 
@@ -42,24 +42,93 @@ The default password of the livebook is `nerves` (as the time of writing, if it 
 `Evision.Nx` module converts `Evision.Mat` to `Nx.tensor`:
 
 ```elixir
-{:ok, mat} = Evision.imread("/path/to/image.png")
+iex> {:ok, mat} = Evision.imread("/path/to/image.png")
 # Or you can use the !(bang) version, but if the image cannot be read by OpenCV for whatever reason
 # the bang version will raise a RuntimeError exception
-mat = Evision.imread!("/path/to/image.png")
-t = Evision.Nx.to_nx(mat)
+iex> mat = Evision.imread!("/path/to/image.png")
+%Evision.Mat{
+  channels: 3,
+  dims: 2,
+  type: {:u, 8},
+  raw_type: 16,
+  shape: {512, 512, 3},
+  ref: #Reference<0.2992585850.4173463580.172624>
+}
+
+iex> t = Evision.Nx.to_nx(mat)
+#Nx.Tensor<
+  u8[512][512][3]
+  Evision.Backend
+  [
+    [
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, 255],
+      [255, 255, ...],
+      ...
+    ],
+    ...
+  ]
+>
 ```
 
 and vice-versa:
 
 ```elixir
-{:ok, mat} = Evision.imread("/path/to/image.png")
-t = Evision.Nx.to_nx(mat)
+iex> mat = Evision.imread!("/path/to/image.png")
+iex> t = Evision.Nx.to_nx(mat)
 # convert a tensor to a mat
-{:ok, mat_from_tensor} = Evision.Nx.to_mat(t)
+iex> mat_from_tensor = Evision.Nx.to_mat!(t)
+%Evision.Mat{
+  channels: 1,
+  dims: 3,
+  type: {:u, 8},
+  raw_type: 0,
+  shape: {512, 512, 3},
+  ref: #Reference<0.1086574232.1510342676.18186>
+}
+
+# Note that `Evision.Nx.to_mat` gives a tensor
+# however, some OpenCV functions expect the mat
+# to be a "valid 2D image"
+# therefore, in such cases `Evision.Nx.to_mat_2d`
+# should be used instead
+#
+# Noticing the changes in `channels`, `dims` and `raw_type`
+iex> mat_from_tensor = Evision.Nx.to_mat_2d!(t)
+%Evision.Mat{
+  channels: 3,
+  dims: 2,
+  type: {:u, 8},
+  raw_type: 16,
+  shape: {512, 512, 3},
+  ref: #Reference<0.1086574232.1510342676.18187>
+}
 
 # and it works for tensors with any shapes
-t = Nx.iota({2, 3, 2, 3, 2, 3}, type: {:s, 32})
-{:ok, mat} = Evision.Nx.to_mat(t)
+iex> t = Nx.iota({2, 3, 2, 3, 2, 3}, type: :s32)
+iex> mat = Evision.Nx.to_mat!(t)
+%Evision.Mat{
+  channels: 1,
+  dims: 6,
+  type: {:s, 32},
+  raw_type: 4,
+  shape: {2, 3, 2, 3, 2, 3},
+  ref: #Reference<0.1086574232.1510342676.18188>
+}
 ```
 
 ## Description
@@ -85,7 +154,7 @@ In general, you can add `evision` to `deps` with the following settings.
 ```elixir
 def deps do
   [
-    {:evision, "~> 0.1.4", github: "cocoa-xu/evision", tag: "v0.1.4"}
+    {:evision, "~> 0.1", github: "cocoa-xu/evision", tag: "v0.1.6"}
   ]
 end
 ```
@@ -96,29 +165,15 @@ Early versions (v0.1.x) of `evision` will be available on hex.pm soon.
 To use precompiled Evision library, the following environment variables should be set
 
 ```shell
-# required 
-# set this to true if prefer to use precompiled library
+# required if and only if the build target is using musl libc.
 #
-# currently "0.1.1" to "0.1.4" are available
-# the version is implied by the tag in deps:
-#   {:evision, "~> 0.1.4", github: "cocoa-xu/evision", tag: "v0.1.4"}
-# for other available versions, please check the GitHub release page
-# https://github.com/cocoa-xu/evision/releases
-export EVISION_PREFER_PRECOMPILED=true
-
-# optional.
-## set the cache directory for the precompiled archive file
-export EVISION_PRECOMPILED_CACHE_DIR="$(pwd)/.cache"
-
-# optional.
-## for linux system with musl libc only:
-## for nerves project, this environment variable is set by nerves
+# (for nerves project, this environment variable is set by nerves)
 export TARGET_ABI=musl
 ## (for armv7l which uses hard-float ABI (armhf))
 export TARGET_ABI=musleabihf
 ```
 
-The default value for the `TARGET_ABI` env var is set using the following elixir code
+The default value for the `TARGET_ABI` env var is obtained using the following elixir code
 
 ```elixir
 target_abi = List.last(String.split(to_string(:erlang.system_info(:system_architecture)), "-"))
@@ -133,6 +188,23 @@ target_abi =
       end
     _ -> target_abi
   end
+```
+
+```shell
+# optional. 
+# set this to "false" if you prefer :evision to be compiled from source
+# 
+# default value is "true", and :evision will prefer to use precompiled binaries (if available)
+#   currently "0.1.1" to "0.1.6" are available
+#   the version is implied by the tag in deps:
+#     {:evision, "~> 0.1.6", github: "cocoa-xu/evision", tag: "v0.1.6"}
+#   for other available versions, please check the GitHub release page
+#   https://github.com/cocoa-xu/evision/releases
+export EVISION_PREFER_PRECOMPILED=false
+
+# optional.
+## set the cache directory for the precompiled archive file
+export EVISION_PRECOMPILED_CACHE_DIR="$(pwd)/.cache"
 ```
 
 Note 1: Precompiled binaries does not use FFmpeg. If you'd like to use FFmpeg, please compile from source and set corresponding environment variables.
@@ -233,12 +305,12 @@ brew link ffmpeg@4
   - 3.8.12
   - 3.9.9
   - 3.10.1
-- [CMake](https://cmake.org/) >= 3.1 (for this project)
+- [CMake](https://cmake.org/) >= 3.3 (for this project)
 
   The minimal version required by OpenCV can vary between versions.
 
   OpenCV 4.5.5 requires at least CMake 3.5.1.
-- Erlang development library/headers. Tested on OTP/24.
+- Erlang development library/headers. Tested on OTP/25.
 
 #### Extra Notes for Windows
 Evision on Windows uses `nmake` to handle the `Makefile.win` at the moment. And we also need `powershell` for now. `nmake`
@@ -268,7 +340,7 @@ Then you can add `evision` as dependency in your `mix.exs`. At the moment you wi
 ```elixir
 def deps do
   [
-    {:evision, "~> 0.1.4", github: "cocoa-xu/evision", tag: "v0.1.4"}
+    {:evision, "~> 0.1.6", github: "cocoa-xu/evision", tag: "v0.1.6"}
   ]
 end
 ```
@@ -324,11 +396,9 @@ As OpenCV does not support the following types
 - `{:u, 32}`
 - `{:u, 64}`
 
-Although it's possible to *store* values with those types using custom types, the resulting Mat/tensor will be 
-incompatible with most existing functions in OpenCV.
+Although it's possible to *store* values with those types using custom types, the resulting Mat/tensor will be incompatible with most existing functions in OpenCV.
 
-Moreover, it's somewhat inconvinient to explicitly specify the type each time using them. Therefore, Evision allows to 
-set a map for those unsupported types. 
+Moreover, it's somewhat inconvinient to explicitly specify the type each time using them. Therefore, Evision allows to set a map for those unsupported types. 
 
 ```elixir
 config :evision, unsupported_type_map: %{
@@ -387,6 +457,17 @@ The `key` of this `unsupported_type_map` is the unsupported type, and the value 
 - How do I make my own adjustments to the OpenCV CMake options?
     ```shell
     export CMAKE_OPENCV_OPTIONS="YOUR CMAKE OPTIONS FOR OPENCV"
+    ```
+
+- How do I generate binding code for erlang and Elixir at the same time?
+    Yes, but currently it's only possible to do so when compiling evision using `mix`.
+
+    ```shell
+    # default value is `elixir` when compiling evision using `mix`
+    # default value is `erlang` when compiling evision using `rebar`
+    #
+    # expected format is a comma-separated string
+    export EVISION_GENERATE_LANG="erlang,elixir"
     ```
 
 - Which ones of OpenCV options are supposed to be specified in `config/config.exs`?

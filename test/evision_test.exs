@@ -171,14 +171,11 @@ defmodule Evision.Test do
   end
 
   test "Evision.imencode and Evision.imdecode" do
-    {:ok, mat} =
-      Path.join(__DIR__, ["test.png"])
-      |> Evision.imread()
+    {:ok, mat} = Evision.imread(Path.join(__DIR__, ["test.png"]))
 
     ret = Evision.imencode(".png", mat)
     assert :ok == elem(ret, 0)
     {:ok, encoded} = ret
-    encoded = IO.iodata_to_binary(encoded)
 
     ret = Evision.imdecode(encoded, Evision.cv_IMREAD_ANYCOLOR())
     assert :ok == elem(ret, 0)
@@ -187,9 +184,7 @@ defmodule Evision.Test do
   end
 
   test "Evision.resize" do
-    {:ok, mat} =
-      Path.join([__DIR__, "test.png"])
-      |> Evision.imread()
+    {:ok, mat} = Evision.imread(Path.join([__DIR__, "test.png"]))
 
     resize_height = 4
     resize_width = 6
@@ -244,5 +239,115 @@ defmodule Evision.Test do
       |> Evision.imread(flags: Evision.cv_IMREAD_GRAYSCALE())
 
     {:ok, {112.0, 209.0, {2, 0}, {0, 1}}} = Evision.minMaxLoc(mat)
+  end
+
+  test "Evision.Mat.size" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert {2, [2, 3]} == Evision.Mat.size(img)
+  end
+
+  test "Evision.Mat.channels" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert 3 == Evision.Mat.channels(img)
+  end
+
+  test "Evision.Mat.depth" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert Evision.cv_8U() == Evision.Mat.depth(img)
+  end
+
+  test "Evision.Mat.raw_type" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert Evision.cv_8UC3() == Evision.Mat.raw_type(img)
+  end
+
+  test "Evision.Mat.isSubmatrix" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert false == Evision.Mat.isSubmatrix(img)
+  end
+
+  test "Evision.Mat.isContinuous" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert true == Evision.Mat.isContinuous(img)
+  end
+
+  test "Evision.Mat.elemSize" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert 3 == Evision.Mat.elemSize(img)
+  end
+
+  test "Evision.Mat.elemSize1" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert 1 == Evision.Mat.elemSize1(img)
+  end
+
+  test "Evision.Mat.total/{1,2,3}" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    assert 6 == Evision.Mat.total(img)
+    assert 2 == Evision.Mat.total(img, 0, 1)
+    assert 3 == Evision.Mat.total(img, 1, 2)
+  end
+
+  test "Evision.Mat.as_shape" do
+    img = Evision.imread!(Path.join([__DIR__, "test.jpg"]))
+    new_img = Evision.Mat.as_shape!(img, {3, 2, 3})
+    assert {3, 2, 3} == Evision.Mat.shape!(new_img)
+    assert Evision.Mat.to_binary!(img) == Evision.Mat.to_binary!(new_img)
+  end
+
+  test "Evision.Mat.literal/1" do
+    %Evision.Mat{
+      channels: 1,
+      dims: 0,
+      type: {:u, 8},
+      raw_type: 0,
+      shape: {},
+      ref: any_ref
+    } = Evision.Mat.literal!([])
+    assert is_reference(any_ref)
+  end
+
+  test "Evision.Mat.literal/2" do
+    %Evision.Mat{
+      channels: 1,
+      dims: 3,
+      type: {:u, 8},
+      raw_type: 0,
+      shape: {1, 3, 3},
+      ref: any_ref
+    } = Evision.Mat.literal!([[[1,1,1],[2,2,2],[3,3,3]]], :u8)
+    assert is_reference(any_ref)
+
+    %Evision.Mat{
+      channels: 1,
+      dims: 3,
+      type: {:f, 32},
+      raw_type: 5,
+      shape: {1, 3, 3},
+      ref: any_ref
+    } = Evision.Mat.literal!([[[1,1,1],[2,2,2],[3,3,3]]], :f32)
+    assert is_reference(any_ref)
+  end
+
+  test "Evision.Mat.literal/3" do
+    %Evision.Mat{
+      channels: 3,
+      dims: 2,
+      type: {:u, 8},
+      raw_type: 16,
+      shape: {1, 3, 3},
+      ref: any_ref
+    } = Evision.Mat.literal!([[[1,1,1],[2,2,2],[3,3,3]]], :u8, as_2d: true)
+    assert is_reference(any_ref)
+
+    %Evision.Mat{
+      channels: 3,
+      dims: 2,
+      type: {:f, 32},
+      raw_type: 21,
+      shape: {1, 3, 3},
+      ref: any_ref
+    } = Evision.Mat.literal!([[[1,1,1],[2,2,2],[3,3,3]]], :f32, as_2d: true)
+    assert is_reference(any_ref)
   end
 end

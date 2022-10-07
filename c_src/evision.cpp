@@ -38,6 +38,7 @@
 #include "opencv2/core/types_c.h"
 #include "erlcompat.hpp"
 #include "ArgInfo.hpp"
+#include "modules/evision_mat_api.h"
 #include <map>
 
 #include <type_traits>  // std::enable_if
@@ -98,6 +99,8 @@ struct Evision_Converter
 {
     static inline bool to(ErlNifEnv *env, ERL_NIF_TERM obj, T& p, const ArgInfo& info);
     static inline ERL_NIF_TERM from(ErlNifEnv *env, const T& src);
+    static inline ERL_NIF_TERM from_as_binary(ErlNifEnv *env, const T& src, bool& success);
+    static inline ERL_NIF_TERM from_as_map(ErlNifEnv *env, T src, ERL_NIF_TERM res_term);
 };
 
 // exception-safe evision_to
@@ -134,6 +137,26 @@ bool evision_to(ErlNifEnv *env, ERL_NIF_TERM obj, T& p, const ArgInfo& info) { r
 
 template<typename T> static
 ERL_NIF_TERM evision_from(ErlNifEnv *env, const T& src) { return Evision_Converter<T>::from(env, src); }
+
+template<typename T> static
+ERL_NIF_TERM evision_from_as_binary(ErlNifEnv *env, const T& src, bool& success) { return Evision_Converter<T>::from_as_binary(env, src, success); }
+
+template<typename T> static
+ERL_NIF_TERM evision_from_as_map(ErlNifEnv *env, const T& src, ERL_NIF_TERM res_term) { return res_term; }
+
+template <>
+ERL_NIF_TERM evision_from_as_binary(ErlNifEnv *env, const std::vector<uchar>& src, bool& success) {
+    size_t n = static_cast<size_t>(src.size());
+    ErlNifBinary binary;
+    if ((success = enif_alloc_binary(n, &binary))) {
+        memcpy(binary.data, src.data(), n);
+        ERL_NIF_TERM ret = enif_make_binary(env, &binary);
+        return ret;
+    }
+    return 0;
+}
+
+#include "modules/evision_video_api.h"
 
 static bool isBindingsDebugEnabled()
 {
@@ -490,8 +513,9 @@ bool evision_to(ErlNifEnv *env, ERL_NIF_TERM o, Vec<_Tp, cn>& vec, const ArgInfo
 template<>
 ERL_NIF_TERM evision_from(ErlNifEnv *env, const Mat& m)
 {
-    if( !m.data )
+    if (!m.data) {
         return evision::nif::error(env, "empty matrix");
+    }
 
     evision_res<cv::Mat *> * res;
     if (alloc_resource(&res)) {
@@ -501,12 +525,13 @@ ERL_NIF_TERM evision_from(ErlNifEnv *env, const Mat& m)
         // and this function returns the output/result matrix, which should already be a new matrix
         *res->val = m;
     } else {
-        return evision::nif::error(env, "no memory");
+        return evision::nif::error(env, "out of memory");
     }
 
     ERL_NIF_TERM ret = enif_make_resource(env, res);
     enif_release_resource(res);
-    return ret;
+
+    return _evision_make_mat_resource_into_map(env, m, ret);
 }
 
 template<typename _Tp, int m, int n>

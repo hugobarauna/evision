@@ -3,8 +3,8 @@ defmodule Evision.MixProject do
   require Logger
 
   @app :evision
-  @version "0.1.5-dev"
-  @last_released_version "0.1.4"
+  @version "0.1.7-dev"
+  @last_released_version "0.1.6"
   @github_url "https://github.com/cocoa-xu/evision"
   @opencv_version "4.6.0"
   # only means compatible. need to write more tests
@@ -56,9 +56,10 @@ defmodule Evision.MixProject do
           System.get_env("MAKE_BUILD_FLAGS", "-j#{System.schedulers_online()}"),
         "CMAKE_OPTIONS" => cmake_options,
         "ENABLED_CV_MODULES" => enabled_modules,
-        "EVISION_PREFER_PRECOMPILED" => System.get_env("EVISION_PREFER_PRECOMPILED", "false"),
+        "EVISION_PREFER_PRECOMPILED" => System.get_env("EVISION_PREFER_PRECOMPILED", "true"),
         "EVISION_PRECOMPILED_VERSION" => @last_released_version,
-        "TARGET_ABI" => System.get_env("TARGET_ABI", target_abi)
+        "TARGET_ABI" => System.get_env("TARGET_ABI", target_abi),
+        "EVISION_GENERATE_LANG" => System.get_env("EVISION_GENERATE_LANG", "elixir"),
       }
     ]
   end
@@ -224,10 +225,14 @@ defmodule Evision.MixProject do
 
   defp deps do
     [
+      # compilation
       {:elixir_make, "~> 0.6", runtime: false},
+      # runtime
       {:dll_loader_helper, "~> 0.1"},
+      {:nx, "~> 0.3", override: true},
+      # docs
       {:ex_doc, "~> 0.28", only: :docs, runtime: false},
-      {:nx, "~> 0.3"},
+      # test
       {:scidata, "~> 0.1", only: :test},
       {:scholar, "~> 0.1", only: :test, github: "elixir-nx/scholar"},
       {:castore, "~> 0.1", only: :test, override: true}

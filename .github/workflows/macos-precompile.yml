@@ -11,22 +11,26 @@ jobs:
     env:
       MIX_ENV: prod
       OPENCV_VER: "4.6.0"
+      EVISION_PREFER_PRECOMPILED: "false"
+      EVISION_GENERATE_LANG: "erlang,elixir"
     strategy:
       fail-fast: false
       matrix:
         include:
           - pair:
               arch: x86_64
+              arch_name: x86_64
           - pair:
               arch: arm64
+              arch_name: aarch64
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Erlang and Elixir
+      - name: Install FFmpeg4, Erlang and Elixir
         run: |
-          brew install erlang
-          brew install elixir
+          brew install erlang elixir ffmpeg@4
+          brew link ffmpeg@4
           mix local.hex --force
           mix local.rebar --force
 
@@ -60,7 +64,7 @@ jobs:
         id: cache-mix-compile
         uses: actions/cache@v3
         with:
-          key: precompile-${{ runner.os }}-${{ matrix.pair.arch }}-${{ hashFiles('cc_toolchain/**') }}-${{ hashFiles('c_src/**') }}-${{ hashFiles('CMakeLists.txt') }}-${{ hashFiles('Makefile') }}-${{ env.OPENCV_VER }}
+          key: precompile-${{ runner.os }}-${{ matrix.pair.arch }}-${{ hashFiles('cc_toolchain/**') }}-${{ hashFiles('c_src/**') }}-${{ hashFiles('py_src/**') }}-${{ hashFiles('CMakeLists.txt') }}-${{ hashFiles('Makefile') }}-${{ env.OPENCV_VER }}
           path: |
             ./_build
             ./c_src/headers.txt
@@ -81,7 +85,7 @@ jobs:
 
       - name: Create precompiled library
         run: |
-          export PKG_NAME=evision-${{ matrix.pair.arch }}-apple-darwin-${GITHUB_REF##*/v}
+          export PKG_NAME=evision-${{ matrix.pair.arch_name }}-apple-darwin-${GITHUB_REF##*/v}
           mkdir -p "${PKG_NAME}"
           cp -a _build/${MIX_ENV}/lib/evision/priv "${PKG_NAME}"
           cp -a lib/generated "${PKG_NAME}/elixir_generated"

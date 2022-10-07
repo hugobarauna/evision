@@ -9,10 +9,11 @@ def evision_elixir_fixes():
     def imdecode(buf, flags) when is_integer(flags)
     do
         positional = [
-        buf: buf,
-        flags: flags
+            buf: buf,
+            flags: flags
         ]
         :evision_nif.imdecode(positional)
+        |> Evision.Internal.Structurise.to_struct()
     end
     deferror imdecode(buf, flags)
 """
@@ -23,6 +24,6 @@ def evision_erlang_fixes():
     return [
         """
 imdecode(Buf, Flags) ->
-  evision:imdecode([{buf, Buf}, {flags, Flags}]).
+  evision_nif:imdecode([{buf, Buf}, {flags, Flags}]).
 """
     ]
