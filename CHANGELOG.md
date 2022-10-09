@@ -1,7 +1,42 @@
 # Changelog
 
-## v0.1.7-dev (main)
-[Browse the Repository](https://github.com/cocoa-xu/evision)
+## v0.1.9 (2022-10-09)
+[Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.9) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.9)
+### Bug Fixes
+- `Mix.Tasks.Compile.EvisionPrecompiled`: using `File.cp_r/2` instead of calling `cp -a` via `System.cmd/3`.
+- Fixed TLS warnings when downloading precompiled tarball file. Thanks to @kipcole9!
+- Only include `evision_custom_headers/evision_ml.hpp` if the `HAVE_OPENCV_ML` macro is defined.
+- Support parsing `RefWrapper<T> (&value)[N]` from list or tuple. ([#99](https://github.com/cocoa-xu/evision/issues/99))
+
+  See the function in `c_src/evision.cpp`.
+
+  ```cpp
+  bool parseSequence(ErlNifEnv *env, ERL_NIF_TERM obj, RefWrapper<T> (&value)[N], const ArgInfo& info)
+  ```
+
+  ```elixir
+  # `RotatedRect` has to be a tuple, {centre, size, angle}
+  Evision.boxPoints!({{224.0, 262.5}, {343.0, 344.0}, 90.0})
+
+  # while `Point`/`Size` can be either a list, `[x, y]`, or a tuple, `{x, y}`
+  Evision.boxPoints!({[224.0, 262.5], [343.0, 344.0], 90.0})
+  ```
+
+- Fixed the mapping from a type to the corresponding function guard in `py_src/helper.py`. ([#99](https://github.com/cocoa-xu/evision/issues/99))
+
+
+### Changed
+- Display `RotatedRect` type as `{centre={x, y}, size={s1, s2}, angle}` in docs.
+
+## v0.1.8 (2022-10-08)
+[Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.8) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.8)
+### Changed
+- `CMake` and `make` (`nmake` if on Windows) will not be used to download and deploy precompiled binaries for Elixir users.
+
+  This means that `evision` can be downloaded and deployed once Erlang and Elixir are properly installed on the system.
+
+## v0.1.7 (2022-10-07)
+[Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.7) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.7)
 ### Breaking Changes
 - `EVISION_PREFER_PRECOMPILED` is set to `true` by default. 
    
@@ -251,7 +286,7 @@
     {:error, "cannot assign new value, mismatched type?"}
     iex> Evision.KalmanFilter.set_gain(k, :p)
     ** (RuntimeError) cannot assign new value, mismatched type?
-        (evision 0.1.7-dev) lib/generated/evision_kalmanfilter.ex:175: Evision.KalmanFilter.set_gain!/2
+        (evision 0.1.7) lib/generated/evision_kalmanfilter.ex:175: Evision.KalmanFilter.set_gain!/2
         iex:7: (file)
     ```
 
@@ -272,13 +307,17 @@
     "cannot get `Ptr<cv::KalmanFilter>` from `self`: mismatched type or invalid resource?"}
     iex> Evision.KalmanFilter.set_gain!(mat, mat)
     ** (RuntimeError) cannot get `Ptr<cv::KalmanFilter>` from `self`: mismatched type or invalid resource?
-        (evision 0.1.7-dev) lib/generated/evision_kalmanfilter.ex:175: Evision.KalmanFilter.set_gain!/2
+        (evision 0.1.7) lib/generated/evision_kalmanfilter.ex:175: Evision.KalmanFilter.set_gain!/2
         iex:2: (file)
     ```
 
 - `evision_##NAME##_getp` (in `c_src/erlcompat.hpp`) should just return true or false. 
   
   Returning a `ERL_NIF_TERM` (`enif_make_badarg`) in the macro (when `enif_get_resource` fails) will prevent the caller from returning an error-tuple with detailed error message.
+
+- Improved the quality of generated inline docs.
+
+  Also displays what variable(s) will be returned (when applicable) in the `##### Return` section.
 
 ### Added
 - Added `Evision.Mat.literal/{1,2,3}` to create `Evision.Mat` from list literals.
@@ -357,8 +396,54 @@
   }
   ```
 
+- Automatically displays a tabbed output in Livebook if the type of evaluated result is `Evision.Mat`.
+
+  This is an optional feature. To enable it, `:kino` should be added to `deps`, e.g.,
+
+  ```elixir
+  defp deps do
+    [
+      # ...
+      {:kino, "~> 0.7"},
+      # ...
+    ]
+  end
+  ```
+
+  Now, with `:kino` >= v0.7 available, a tabbed output will shown in Livebook if the evaluated result is an `Evision.Mat`.
+
+  A `Raw` tab will always be the first one, e.g.,
+
+  ```elixir
+  %Evision.Mat{
+    channels: 1,
+    dims: 3,
+    type: {:u, 8},
+    raw_type: 0,
+    shape: {1, 2, 3},
+    ref: #Reference<0.3310236255.1057357843.168932>
+  }
+  ```
+
+  For 2D images (`dims == 2`), the second tab will be `Image`, which displays the image.
+
+  For all `Evision.Mat`, the last tab will be `Numerical`, which shows the numbers behind the scene. Of course, for large size `Evision.Mat`, only part of the data will be shown. A example output in this tab:
+
+  ```elixir
+  #Nx.Tensor<
+    u8[1][2][3]
+    Evision.Backend
+    [
+      [
+        [1, 2, 3],
+        [1, 2, 3]
+      ]
+    ]
+  >
+  ```
+
 ## v0.1.6 (2022-09-29)
-[Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.7) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.6)
+[Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.6) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.6)
 ### Breaking Changes
 - `Evision.imencode/{2,3}` will now return encoded image as binary instead of a list.
 
@@ -385,7 +470,7 @@
 - Check `cv::Mat::Mat.type()` when fetching the shape of a Mat.
   The number of channels will be included as the last dim of the shape if and only if `cv::Mat::Mat.type()` did not encode any channel information.
 
-### Fixed
+### Bug Fixes
 - Fixed `Evision.Mat.transpose`: should call `shape!` instead of `shape`. Thanks to @kipcole9 ! #77
 
 ### Added
@@ -468,7 +553,7 @@
 ### Changed
 - Default to `Evision.Backend` for `Evision.Nx.to_nx/2`.
 
-### Fixed
+### Bug Fixes
 - Fixed class inheritance issue in `py_src/class_info.py`.
 - Fixed missing comma in example livebooks' `Mix.install`. Thanks to @dbii.
 
@@ -477,7 +562,7 @@
 
 ## v0.1.3 (2022-09-01)
 [Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.3) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.3)
-### Fixed
+### Bug Fixes
 - Fixed issues in restoring files from precompiled package for macOS and Linux.
   - Paths are now quoted. 
   - using `cp -RPf` on macOS while `cp -a` on Linux.
@@ -486,7 +571,7 @@
 
 ## v0.1.2 (2022-08-26)
 [Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.2) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.2)
-### Fixed
+### Bug Fixes
 - Fixed transpose.
 
 ### Added
