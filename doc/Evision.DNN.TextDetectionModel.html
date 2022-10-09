@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.DNN.TextDetectionModel — Evision v0.1.7-dev</title>
+    <title>Evision.DNN.TextDetectionModel — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodel.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_textdetectionmodel.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.TextDetectionModel</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>frame</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><h5>Return</h5><ul><li><strong>detections</strong>: <code class="inline">[vector_Point]</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -156,7 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>frame</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><h5>Return</h5><ul><li><strong>detections</strong>: <code class="inline">[{centre={x, y}, size={s1, s2}, angle}]</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -183,7 +185,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detect!(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodel.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_textdetectionmodel.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -205,7 +207,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detect(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodel.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_textdetectionmodel.ex#L23" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -215,7 +217,7 @@ Functions
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detect</span><span class="p" data-group-id="3871065340-1">(</span><span class="n">frame</span><span class="p" data-group-id="3871065340-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">detections</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>frame</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><h5>Return</h5><ul><li><strong>detections</strong>: <code class="inline">[vector_Point]</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">detect(frame) -&gt; detections</code></pre>
   </section>
 </section>
 <section class="detail" id="detectTextRectangles!/2">
@@ -227,7 +229,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detectTextRectangles!(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodel.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_textdetectionmodel.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -249,7 +251,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detectTextRectangles(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_textdetectionmodel.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_textdetectionmodel.ex#L52" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -259,7 +261,7 @@ Functions
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">detectTextRectangles</span><span class="p" data-group-id="9786310793-1">(</span><span class="n">frame</span><span class="p" data-group-id="9786310793-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">detections</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>frame</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><h5>Return</h5><ul><li><strong>detections</strong>: <code class="inline">[{centre={x, y}, size={s1, s2}, angle}]</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">detectTextRectangles(frame) -&gt; detections</code></pre>
   </section>
 </section>
 
@@ -272,10 +274,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_textdetectionmodel.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_dnn_textdetectionmodel.ex">(current file)</a>
 
             </span>
 

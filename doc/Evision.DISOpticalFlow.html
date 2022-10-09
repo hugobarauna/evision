@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.DISOpticalFlow — Evision v0.1.7-dev</title>
+    <title>Evision.DISOpticalFlow — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DISOpticalFlow</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>preset</strong>: int.</li></ul><p>Creates an instance of DISOpticalFlow</p></div>
+          <div class="summary-synopsis"><p>Creates an instance of DISOpticalFlow</p></div>
 
       </div>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>preset</strong>: int.</li></ul><p>Creates an instance of DISOpticalFlow</p></div>
+          <div class="summary-synopsis"><p>Creates an instance of DISOpticalFlow</p></div>
 
       </div>
 
@@ -147,8 +149,7 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Finest level of the Gaussian pyramid on which the flow is computed (zero level
-  corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.
-@see setFinestScale</p></div>
+corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.</p></div>
 
       </div>
 
@@ -159,8 +160,7 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Maximum number of gradient descent iterations in the patch inverse search stage. Higher values
-  may improve quality in some cases.
-@see setGradientDescentIterations</p></div>
+may improve quality in some cases.</p></div>
 
       </div>
 
@@ -171,8 +171,7 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well
-  enough in most cases.
-@see setPatchSize</p></div>
+enough in most cases.</p></div>
 
       </div>
 
@@ -183,8 +182,7 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Stride between neighbor patches. Must be less than patch size. Lower values correspond
-  to higher flow quality.
-@see setPatchStride</p></div>
+to higher flow quality.</p></div>
 
       </div>
 
@@ -195,10 +193,9 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Whether to use mean-normalization of patches when computing patch distance. It is turned on
-  by default as it typically provides a noticeable quality boost because of increased robustness to
-  illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes
-  in illumination.
-@see setUseMeanNormalization</p></div>
+by default as it typically provides a noticeable quality boost because of increased robustness to
+illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes
+in illumination.</p></div>
 
       </div>
 
@@ -209,10 +206,9 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Whether to use spatial propagation of good optical flow vectors. This option is turned on by
-  default, as it tends to work better on average and can sometimes help recover from major errors
-  introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this
-  option off can make the output flow field a bit smoother, however.
-@see setUseSpatialPropagation</p></div>
+default, as it tends to work better on average and can sometimes help recover from major errors
+introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this
+option off can make the output flow field a bit smoother, however.</p></div>
 
       </div>
 
@@ -222,8 +218,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Weight of the smoothness term
-@see setVariationalRefinementAlpha</p></div>
+          <div class="summary-synopsis"><p>Weight of the smoothness term</p></div>
 
       </div>
 
@@ -233,8 +228,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Weight of the color constancy term
-@see setVariationalRefinementDelta</p></div>
+          <div class="summary-synopsis"><p>Weight of the color constancy term</p></div>
 
       </div>
 
@@ -244,8 +238,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Weight of the gradient constancy term
-@see setVariationalRefinementGamma</p></div>
+          <div class="summary-synopsis"><p>Weight of the gradient constancy term</p></div>
 
       </div>
 
@@ -256,9 +249,8 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Number of fixed point iterations of variational refinement per scale. Set to zero to
-  disable variational refinement completely. Higher values will typically result in more smooth and
-  high-quality flow.
-@see setGradientDescentIterations</p></div>
+disable variational refinement completely. Higher values will typically result in more smooth and
+high-quality flow.</p></div>
 
       </div>
 
@@ -268,7 +260,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getFinestScale @see getFinestScale</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getFinestScale @see getFinestScale</p></div>
 
       </div>
 
@@ -278,7 +270,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p></div>
 
       </div>
 
@@ -288,7 +280,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getPatchSize @see getPatchSize</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getPatchSize @see getPatchSize</p></div>
 
       </div>
 
@@ -298,7 +290,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getPatchStride @see getPatchStride</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getPatchStride @see getPatchStride</p></div>
 
       </div>
 
@@ -308,7 +300,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getUseMeanNormalization @see getUseMeanNormalization</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseMeanNormalization @see getUseMeanNormalization</p></div>
 
       </div>
 
@@ -318,7 +310,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getUseSpatialPropagation @see getUseSpatialPropagation</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseSpatialPropagation @see getUseSpatialPropagation</p></div>
 
       </div>
 
@@ -328,7 +320,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getVariationalRefinementAlpha @see getVariationalRefinementAlpha</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getVariationalRefinementAlpha @see getVariationalRefinementAlpha</p></div>
 
       </div>
 
@@ -338,7 +330,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getVariationalRefinementDelta @see getVariationalRefinementDelta</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getVariationalRefinementDelta @see getVariationalRefinementDelta</p></div>
 
       </div>
 
@@ -348,7 +340,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getVariationalRefinementGamma @see getVariationalRefinementGamma</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getVariationalRefinementGamma @see getVariationalRefinementGamma</p></div>
 
       </div>
 
@@ -358,7 +350,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p></div>
 
       </div>
 
@@ -612,7 +604,7 @@ cv
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L49" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -622,7 +614,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>preset</strong>: int.</li></ul><p>Creates an instance of DISOpticalFlow</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="1559743332-1">(</span><span class="p" data-group-id="1559743332-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">preset</span><span class="p" data-group-id="1559743332-2">]</span><span class="p" data-group-id="1559743332-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Creates an instance of DISOpticalFlow</p><h5>Keyword Arguments</h5><ul><li><p><strong>preset</strong>: <code class="inline">int</code>.</p><p>one of PRESET_ULTRAFAST, PRESET_FAST and PRESET_MEDIUM</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create([, preset]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="create/1">
@@ -634,7 +626,7 @@ cv
     </a>
     <h1 class="signature" translate="no">create(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L22" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -644,7 +636,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>preset</strong>: int.</li></ul><p>Creates an instance of DISOpticalFlow</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="2973485326-1">(</span><span class="p" data-group-id="2973485326-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">preset</span><span class="p" data-group-id="2973485326-2">]</span><span class="p" data-group-id="2973485326-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Creates an instance of DISOpticalFlow</p><h5>Keyword Arguments</h5><ul><li><p><strong>preset</strong>: <code class="inline">int</code>.</p><p>one of PRESET_ULTRAFAST, PRESET_FAST and PRESET_MEDIUM</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create([, preset]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getFinestScale/1">
@@ -656,7 +648,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getFinestScale(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -667,8 +659,7 @@ cv
   <section class="docstring">
 
 <p>Finest level of the Gaussian pyramid on which the flow is computed (zero level
-  corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.
-@see setFinestScale</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFinestScale</span><span class="p" data-group-id="7963847227-1">(</span><span class="p" data-group-id="7963847227-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.</p><p>@see setFinestScale</p><p>Python prototype (for reference): </p><pre><code class="python3">getFinestScale() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getGradientDescentIterations/1">
@@ -680,7 +671,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getGradientDescentIterations(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -691,8 +682,7 @@ cv
   <section class="docstring">
 
 <p>Maximum number of gradient descent iterations in the patch inverse search stage. Higher values
-  may improve quality in some cases.
-@see setGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getGradientDescentIterations</span><span class="p" data-group-id="3126450804-1">(</span><span class="p" data-group-id="3126450804-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+may improve quality in some cases.</p><p>@see setGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="python3">getGradientDescentIterations() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getPatchSize/1">
@@ -704,7 +694,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getPatchSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -715,8 +705,7 @@ cv
   <section class="docstring">
 
 <p>Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well
-  enough in most cases.
-@see setPatchSize</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getPatchSize</span><span class="p" data-group-id="1144509323-1">(</span><span class="p" data-group-id="1144509323-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+enough in most cases.</p><p>@see setPatchSize</p><p>Python prototype (for reference): </p><pre><code class="python3">getPatchSize() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getPatchStride/1">
@@ -728,7 +717,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getPatchStride(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L129" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L141" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -739,8 +728,7 @@ cv
   <section class="docstring">
 
 <p>Stride between neighbor patches. Must be less than patch size. Lower values correspond
-  to higher flow quality.
-@see setPatchStride</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getPatchStride</span><span class="p" data-group-id="4082478348-1">(</span><span class="p" data-group-id="4082478348-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+to higher flow quality.</p><p>@see setPatchStride</p><p>Python prototype (for reference): </p><pre><code class="python3">getPatchStride() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getUseMeanNormalization/1">
@@ -752,7 +740,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getUseMeanNormalization(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L166" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -763,10 +751,9 @@ cv
   <section class="docstring">
 
 <p>Whether to use mean-normalization of patches when computing patch distance. It is turned on
-  by default as it typically provides a noticeable quality boost because of increased robustness to
-  illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes
-  in illumination.
-@see setUseMeanNormalization</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUseMeanNormalization</span><span class="p" data-group-id="7004125737-1">(</span><span class="p" data-group-id="7004125737-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+by default as it typically provides a noticeable quality boost because of increased robustness to
+illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes
+in illumination.</p><p>@see setUseMeanNormalization</p><p>Python prototype (for reference): </p><pre><code class="python3">getUseMeanNormalization() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getUseSpatialPropagation/1">
@@ -778,7 +765,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getUseSpatialPropagation(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -789,10 +776,9 @@ cv
   <section class="docstring">
 
 <p>Whether to use spatial propagation of good optical flow vectors. This option is turned on by
-  default, as it tends to work better on average and can sometimes help recover from major errors
-  introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this
-  option off can make the output flow field a bit smoother, however.
-@see setUseSpatialPropagation</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUseSpatialPropagation</span><span class="p" data-group-id="2347526741-1">(</span><span class="p" data-group-id="2347526741-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+default, as it tends to work better on average and can sometimes help recover from major errors
+introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this
+option off can make the output flow field a bit smoother, however.</p><p>@see setUseSpatialPropagation</p><p>Python prototype (for reference): </p><pre><code class="python3">getUseSpatialPropagation() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVariationalRefinementAlpha/1">
@@ -804,7 +790,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementAlpha(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L195" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -814,8 +800,7 @@ cv
 
   <section class="docstring">
 
-<p>Weight of the smoothness term
-@see setVariationalRefinementAlpha</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVariationalRefinementAlpha</span><span class="p" data-group-id="8716216681-1">(</span><span class="p" data-group-id="8716216681-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Weight of the smoothness term</p><p>@see setVariationalRefinementAlpha</p><p>Python prototype (for reference): </p><pre><code class="python3">getVariationalRefinementAlpha() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVariationalRefinementDelta/1">
@@ -827,7 +812,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementDelta(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L215" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L233" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -837,8 +822,7 @@ cv
 
   <section class="docstring">
 
-<p>Weight of the color constancy term
-@see setVariationalRefinementDelta</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVariationalRefinementDelta</span><span class="p" data-group-id="6711513978-1">(</span><span class="p" data-group-id="6711513978-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Weight of the color constancy term</p><p>@see setVariationalRefinementDelta</p><p>Python prototype (for reference): </p><pre><code class="python3">getVariationalRefinementDelta() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVariationalRefinementGamma/1">
@@ -850,7 +834,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementGamma(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L254" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -860,8 +844,7 @@ cv
 
   <section class="docstring">
 
-<p>Weight of the gradient constancy term
-@see setVariationalRefinementGamma</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVariationalRefinementGamma</span><span class="p" data-group-id="0748826252-1">(</span><span class="p" data-group-id="0748826252-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Weight of the gradient constancy term</p><p>@see setVariationalRefinementGamma</p><p>Python prototype (for reference): </p><pre><code class="python3">getVariationalRefinementGamma() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVariationalRefinementIterations/1">
@@ -873,7 +856,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementIterations(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -884,9 +867,8 @@ cv
   <section class="docstring">
 
 <p>Number of fixed point iterations of variational refinement per scale. Set to zero to
-  disable variational refinement completely. Higher values will typically result in more smooth and
-  high-quality flow.
-@see setGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVariationalRefinementIterations</span><span class="p" data-group-id="5817142899-1">(</span><span class="p" data-group-id="5817142899-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+disable variational refinement completely. Higher values will typically result in more smooth and
+high-quality flow.</p><p>@see setGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="python3">getVariationalRefinementIterations() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="setFinestScale/2">
@@ -898,7 +880,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setFinestScale(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L276" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L302" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -908,7 +890,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getFinestScale @see getFinestScale</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setFinestScale</span><span class="p" data-group-id="0935330920-1">(</span><span class="n">val</span><span class="p" data-group-id="0935330920-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getFinestScale @see getFinestScale</p><p>Python prototype (for reference): </p><pre><code class="python3">setFinestScale(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setGradientDescentIterations/2">
@@ -920,7 +902,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setGradientDescentIterations(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L297" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L328" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -930,7 +912,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setGradientDescentIterations</span><span class="p" data-group-id="7893686911-1">(</span><span class="n">val</span><span class="p" data-group-id="7893686911-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="python3">setGradientDescentIterations(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setPatchSize/2">
@@ -942,7 +924,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setPatchSize(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L318" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L354" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -952,7 +934,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getPatchSize @see getPatchSize</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPatchSize</span><span class="p" data-group-id="6924094377-1">(</span><span class="n">val</span><span class="p" data-group-id="6924094377-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getPatchSize @see getPatchSize</p><p>Python prototype (for reference): </p><pre><code class="python3">setPatchSize(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setPatchStride/2">
@@ -964,7 +946,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setPatchStride(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L339" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L380" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -974,7 +956,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getPatchStride @see getPatchStride</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPatchStride</span><span class="p" data-group-id="9000447347-1">(</span><span class="n">val</span><span class="p" data-group-id="9000447347-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getPatchStride @see getPatchStride</p><p>Python prototype (for reference): </p><pre><code class="python3">setPatchStride(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setUseMeanNormalization/2">
@@ -986,7 +968,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setUseMeanNormalization(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L360" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L406" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -996,7 +978,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getUseMeanNormalization @see getUseMeanNormalization</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setUseMeanNormalization</span><span class="p" data-group-id="1656756268-1">(</span><span class="n">val</span><span class="p" data-group-id="1656756268-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseMeanNormalization @see getUseMeanNormalization</p><p>Python prototype (for reference): </p><pre><code class="python3">setUseMeanNormalization(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setUseSpatialPropagation/2">
@@ -1008,7 +990,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setUseSpatialPropagation(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L432" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1018,7 +1000,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getUseSpatialPropagation @see getUseSpatialPropagation</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setUseSpatialPropagation</span><span class="p" data-group-id="9521359560-1">(</span><span class="n">val</span><span class="p" data-group-id="9521359560-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseSpatialPropagation @see getUseSpatialPropagation</p><p>Python prototype (for reference): </p><pre><code class="python3">setUseSpatialPropagation(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVariationalRefinementAlpha/2">
@@ -1030,7 +1012,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementAlpha(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L402" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L458" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1040,7 +1022,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getVariationalRefinementAlpha @see getVariationalRefinementAlpha</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVariationalRefinementAlpha</span><span class="p" data-group-id="8155608233-1">(</span><span class="n">val</span><span class="p" data-group-id="8155608233-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getVariationalRefinementAlpha @see getVariationalRefinementAlpha</p><p>Python prototype (for reference): </p><pre><code class="python3">setVariationalRefinementAlpha(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVariationalRefinementDelta/2">
@@ -1052,7 +1034,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementDelta(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L423" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L484" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1062,7 +1044,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getVariationalRefinementDelta @see getVariationalRefinementDelta</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVariationalRefinementDelta</span><span class="p" data-group-id="9849382545-1">(</span><span class="n">val</span><span class="p" data-group-id="9849382545-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getVariationalRefinementDelta @see getVariationalRefinementDelta</p><p>Python prototype (for reference): </p><pre><code class="python3">setVariationalRefinementDelta(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVariationalRefinementGamma/2">
@@ -1074,7 +1056,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementGamma(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L444" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L510" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1084,7 +1066,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getVariationalRefinementGamma @see getVariationalRefinementGamma</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVariationalRefinementGamma</span><span class="p" data-group-id="6530991085-1">(</span><span class="n">val</span><span class="p" data-group-id="6530991085-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getVariationalRefinementGamma @see getVariationalRefinementGamma</p><p>Python prototype (for reference): </p><pre><code class="python3">setVariationalRefinementGamma(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVariationalRefinementIterations/2">
@@ -1096,7 +1078,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementIterations(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L465" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1106,7 +1088,7 @@ cv
 
   <section class="docstring">
 
-<p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVariationalRefinementIterations</span><span class="p" data-group-id="0331734262-1">(</span><span class="n">val</span><span class="p" data-group-id="0331734262-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getGradientDescentIterations @see getGradientDescentIterations</p><p>Python prototype (for reference): </p><pre><code class="python3">setVariationalRefinementIterations(val) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -1131,7 +1113,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1153,7 +1135,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1175,7 +1157,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getFinestScale!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1197,7 +1179,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getGradientDescentIterations!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L101" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1219,7 +1201,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getPatchSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1241,7 +1223,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getPatchStride!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1263,7 +1245,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUseMeanNormalization!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1285,7 +1267,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUseSpatialPropagation!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L181" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L197" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1307,7 +1289,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementAlpha!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L218" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1329,7 +1311,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementDelta!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L239" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1351,7 +1333,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementGamma!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L241" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1373,7 +1355,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVariationalRefinementIterations!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L263" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L284" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1395,7 +1377,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setFinestScale!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L284" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L310" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1417,7 +1399,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setGradientDescentIterations!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L336" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1439,7 +1421,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPatchSize!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L326" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L362" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1461,7 +1443,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPatchStride!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L347" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L388" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1483,7 +1465,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUseMeanNormalization!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L368" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L414" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1505,7 +1487,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUseSpatialPropagation!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L389" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L440" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1527,7 +1509,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementAlpha!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L410" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L466" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1549,7 +1531,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementDelta!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L431" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L492" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1571,7 +1553,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementGamma!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L452" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L518" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1593,7 +1575,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVariationalRefinementIterations!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_disopticalflow.ex#L473" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_disopticalflow.ex#L544" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1616,10 +1598,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_disopticalflow.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_disopticalflow.ex">(current file)</a>
 
             </span>
 

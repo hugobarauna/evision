@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.ML.Boost — Evision v0.1.7-dev</title>
+    <title>Evision.ML.Boost — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.Boost</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -136,8 +138,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
-  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
+          <div class="summary-synopsis"><p>Returns the algorithm string identifier.
+This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -157,8 +159,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
-  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>filename</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Saves the algorithm to a file.
+In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -168,8 +170,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p></div>
+          <div class="summary-synopsis"><p>simplified API for language bindings</p></div>
 
       </div>
 
@@ -179,8 +180,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p></div>
+          <div class="summary-synopsis"><p>simplified API for language bindings</p></div>
 
       </div>
 
@@ -197,7 +197,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -207,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -217,8 +217,8 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>  Creates the empty model.
-  Use StatModel::train to train the model, Algorithm::load\&lt;Boost&gt;(filename) to load the pre-trained model.</p></div>
+          <div class="summary-synopsis"><p>Creates the empty model.
+Use StatModel::train to train the model, Algorithm::load\&lt;Boost&gt;(filename) to load the pre-trained model.</p></div>
 
       </div>
 
@@ -388,10 +388,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized Boost from a file
-   Use Boost::save to serialize and store an RTree to disk.
-   Load the Boost from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p></div>
+          <div class="summary-synopsis"><p>Loads and creates a serialized Boost from a file</p></div>
 
       </div>
 
@@ -401,10 +398,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized Boost from a file
-   Use Boost::save to serialize and store an RTree to disk.
-   Load the Boost from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p></div>
+          <div class="summary-synopsis"><p>Loads and creates a serialized Boost from a file</p></div>
 
       </div>
 
@@ -414,7 +408,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -424,7 +418,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -434,7 +428,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getBoostType @see getBoostType</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getBoostType @see getBoostType</p></div>
 
       </div>
 
@@ -444,7 +438,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getCVFolds @see getCVFolds</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getCVFolds @see getCVFolds</p></div>
 
       </div>
 
@@ -454,7 +448,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getMaxCategories @see getMaxCategories</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxCategories @see getMaxCategories</p></div>
 
       </div>
 
@@ -464,7 +458,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getMaxDepth @see getMaxDepth</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxDepth @see getMaxDepth</p></div>
 
       </div>
 
@@ -474,7 +468,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getMinSampleCount @see getMinSampleCount</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMinSampleCount @see getMinSampleCount</p></div>
 
       </div>
 
@@ -484,7 +478,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getPriors @see getPriors</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><p>@copybrief getPriors @see getPriors</p></div>
 
       </div>
 
@@ -494,7 +488,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p></div>
 
       </div>
 
@@ -504,7 +498,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p></div>
 
       </div>
 
@@ -514,7 +508,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getUse1SERule @see getUse1SERule</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUse1SERule @see getUse1SERule</p></div>
 
       </div>
 
@@ -524,7 +518,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getUseSurrogates @see getUseSurrogates</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseSurrogates @see getUseSurrogates</p></div>
 
       </div>
 
@@ -534,7 +528,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getWeakCount @see getWeakCount</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getWeakCount @see getWeakCount</p></div>
 
       </div>
 
@@ -544,7 +538,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getWeightTrimRate @see getWeightTrimRate</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">double</code></li></ul><p>@copybrief getWeightTrimRate @see getWeightTrimRate</p></div>
 
       </div>
 
@@ -554,7 +548,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -564,7 +558,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -1048,7 +1042,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1058,7 +1052,7 @@ cv
 
   <section class="docstring">
 
-<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="2734573504-1">(</span><span class="p" data-group-id="2734573504-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="python3">clear() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -1070,7 +1064,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L181" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L211" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1080,8 +1074,8 @@ cv
 
   <section class="docstring">
 
-<p>  Returns the algorithm string identifier.
-  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="6992192611-1">(</span><span class="p" data-group-id="6992192611-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the algorithm string identifier.
+This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDefaultName() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -1093,7 +1087,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L563" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L651" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1103,7 +1097,7 @@ cv
 
   <section class="docstring">
 
-<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="0703856469-1">(</span><span class="n">fn_</span><span class="p" data-group-id="0703856469-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Reads algorithm parameters from a file storage</p><h5>Positional Arguments</h5><ul><li><strong>fn_</strong>: <code class="inline">FileNode</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">read(fn_) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -1115,7 +1109,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L585" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L677" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1125,8 +1119,8 @@ cv
 
   <section class="docstring">
 
-<p>  Saves the algorithm to a file.
-  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="6056301110-1">(</span><span class="n">filename</span><span class="p" data-group-id="6056301110-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>filename</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Saves the algorithm to a file.
+In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="python3">save(filename) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -1138,7 +1132,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L976" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1165" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1148,8 +1142,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="6783389419-1">(</span><span class="n">fs</span><span class="p" data-group-id="6783389419-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="6783389419-2">]</span><span class="p" data-group-id="6783389419-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>simplified API for language bindings</p><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: <code class="inline">Ptr&lt;FileStorage&gt;</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">write(fs[, name]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -1161,7 +1154,7 @@ Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code cl
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L947" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1134" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1171,8 +1164,7 @@ Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code cl
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="3028306101-1">(</span><span class="n">fs</span><span class="p" data-group-id="3028306101-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="3028306101-2">]</span><span class="p" data-group-id="3028306101-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>simplified API for language bindings</p><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: <code class="inline">Ptr&lt;FileStorage&gt;</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">write(fs[, name]) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -1197,7 +1189,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1207,11 +1199,12 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
-</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
-</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
-</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
-  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="1057810178-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="1057810178-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="1057810178-2">]</span><span class="p" data-group-id="1057810178-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<p>Computes error on the training or test dataset</p><h5>Positional Arguments</h5><ul><li><p><strong>data</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>the training data</p></li><li><p><strong>test</strong>: <code class="inline">bool</code>.</p><p>if true, the error is computed over the test subset of the data, otherwise it's
+computed over the training subset of the data. Please note that if you loaded a completely
+different dataset to evaluate already trained classifier, you will probably want not to set
+the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
+that the error is computed for the whole new set. Yes, this sounds a bit confusing.</p></li></ul><h5>Return</h5><ul><li><p><strong>resp</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>the optional output responses.</p></li></ul><p>The method uses StatModel::predict to compute the error. For regression models the error is
+computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="python3">calcError(data, test[, resp]) -&gt; retval, resp</code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -1223,7 +1216,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1233,11 +1226,12 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
-</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
-</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
-</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
-  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="0854046288-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="0854046288-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="0854046288-2">]</span><span class="p" data-group-id="0854046288-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<p>Computes error on the training or test dataset</p><h5>Positional Arguments</h5><ul><li><p><strong>data</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>the training data</p></li><li><p><strong>test</strong>: <code class="inline">bool</code>.</p><p>if true, the error is computed over the test subset of the data, otherwise it's
+computed over the training subset of the data. Please note that if you loaded a completely
+different dataset to evaluate already trained classifier, you will probably want not to set
+the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
+that the error is computed for the whole new set. Yes, this sounds a bit confusing.</p></li></ul><h5>Return</h5><ul><li><p><strong>resp</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>the optional output responses.</p></li></ul><p>The method uses StatModel::predict to compute the error. For regression models the error is
+computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="python3">calcError(data, test[, resp]) -&gt; retval, resp</code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -1249,7 +1243,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L131" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1259,8 +1253,8 @@ cv.ml
 
   <section class="docstring">
 
-<p>  Creates the empty model.
-  Use StatModel::train to train the model, Algorithm::load\&lt;Boost&gt;(filename) to load the pre-trained model.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="5481762491-1">(</span><span class="p" data-group-id="5481762491-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Creates the empty model.
+Use StatModel::train to train the model, Algorithm::load\&lt;Boost&gt;(filename) to load the pre-trained model.</p><p>Python prototype (for reference): </p><pre><code class="python3">create() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -1272,7 +1266,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1282,7 +1276,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="4859889482-1">(</span><span class="p" data-group-id="4859889482-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">empty() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getBoostType/1">
@@ -1294,7 +1288,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getBoostType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L170" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1304,7 +1298,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setBoostType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBoostType</span><span class="p" data-group-id="1863272272-1">(</span><span class="p" data-group-id="1863272272-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setBoostType</p><p>Python prototype (for reference): </p><pre><code class="python3">getBoostType() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getCVFolds/1">
@@ -1316,7 +1310,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getCVFolds(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L161" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L190" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1326,7 +1320,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setCVFolds</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCVFolds</span><span class="p" data-group-id="1414197903-1">(</span><span class="p" data-group-id="1414197903-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setCVFolds</p><p>Python prototype (for reference): </p><pre><code class="python3">getCVFolds() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getMaxCategories/1">
@@ -1338,7 +1332,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getMaxCategories(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L200" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L231" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1348,7 +1342,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMaxCategories</span><span class="p" data-group-id="1550517000-1">(</span><span class="p" data-group-id="1550517000-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="python3">getMaxCategories() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getMaxDepth/1">
@@ -1360,7 +1354,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getMaxDepth(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L219" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L251" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1370,7 +1364,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMaxDepth</span><span class="p" data-group-id="9698378109-1">(</span><span class="p" data-group-id="9698378109-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="python3">getMaxDepth() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getMinSampleCount/1">
@@ -1382,7 +1376,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getMinSampleCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L238" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L271" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1392,7 +1386,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMinSampleCount</span><span class="p" data-group-id="9015070884-1">(</span><span class="p" data-group-id="9015070884-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="python3">getMinSampleCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getPriors/1">
@@ -1404,7 +1398,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getPriors(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L291" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1414,7 +1408,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setPriors</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getPriors</span><span class="p" data-group-id="3964490556-1">(</span><span class="p" data-group-id="3964490556-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setPriors</p><p>Python prototype (for reference): </p><pre><code class="python3">getPriors() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getRegressionAccuracy/1">
@@ -1426,7 +1420,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getRegressionAccuracy(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L276" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L311" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1436,7 +1430,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRegressionAccuracy</span><span class="p" data-group-id="3757253896-1">(</span><span class="p" data-group-id="3757253896-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="python3">getRegressionAccuracy() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTruncatePrunedTree/1">
@@ -1448,7 +1442,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTruncatePrunedTree(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L295" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L331" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1458,7 +1452,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTruncatePrunedTree</span><span class="p" data-group-id="8909996575-1">(</span><span class="p" data-group-id="8909996575-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="python3">getTruncatePrunedTree() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getUse1SERule/1">
@@ -1470,7 +1464,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getUse1SERule(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L314" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1480,7 +1474,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUse1SERule</span><span class="p" data-group-id="8948977293-1">(</span><span class="p" data-group-id="8948977293-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="python3">getUse1SERule() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getUseSurrogates/1">
@@ -1492,7 +1486,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getUseSurrogates(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L333" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L371" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1502,7 +1496,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUseSurrogates</span><span class="p" data-group-id="2879540847-1">(</span><span class="p" data-group-id="2879540847-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="python3">getUseSurrogates() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -1514,7 +1508,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L391" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1524,7 +1518,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="3430050807-1">(</span><span class="p" data-group-id="3430050807-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="python3">getVarCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getWeakCount/1">
@@ -1536,7 +1530,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getWeakCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L371" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L411" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1546,7 +1540,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setWeakCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWeakCount</span><span class="p" data-group-id="9135130565-1">(</span><span class="p" data-group-id="9135130565-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setWeakCount</p><p>Python prototype (for reference): </p><pre><code class="python3">getWeakCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getWeightTrimRate/1">
@@ -1558,7 +1552,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getWeightTrimRate(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L390" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L431" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1568,7 +1562,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setWeightTrimRate</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getWeightTrimRate</span><span class="p" data-group-id="5781257002-1">(</span><span class="p" data-group-id="5781257002-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setWeightTrimRate</p><p>Python prototype (for reference): </p><pre><code class="python3">getWeightTrimRate() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -1580,7 +1574,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L409" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L451" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1590,7 +1584,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="8463636622-1">(</span><span class="p" data-group-id="8463636622-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="python3">isClassifier() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -1602,7 +1596,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L428" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L471" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1612,7 +1606,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="9278416816-1">(</span><span class="p" data-group-id="9278416816-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="python3">isTrained() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -1624,7 +1618,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L486" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L545" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1634,10 +1628,9 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized Boost from a file
-   Use Boost::save to serialize and store an RTree to disk.
-   Load the Boost from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="3669802014-1">(</span><span class="n">filepath</span><span class="p" data-group-id="3669802014-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="3669802014-2">]</span><span class="p" data-group-id="3669802014-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Loads and creates a serialized Boost from a file</p><h5>Positional Arguments</h5><ul><li><p><strong>filepath</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>path to serialized Boost</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>nodeName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>name of node containing the classifier</p></li></ul><p> Use Boost::save to serialize and store an RTree to disk.
+ Load the Boost from this file again, by calling this function with the path to the file.
+ Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="python3">load(filepath[, nodeName]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="load/2">
@@ -1649,7 +1642,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">load(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L456" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L507" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1659,10 +1652,9 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized Boost from a file
-   Use Boost::save to serialize and store an RTree to disk.
-   Load the Boost from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="9766682930-1">(</span><span class="n">filepath</span><span class="p" data-group-id="9766682930-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="9766682930-2">]</span><span class="p" data-group-id="9766682930-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Loads and creates a serialized Boost from a file</p><h5>Positional Arguments</h5><ul><li><p><strong>filepath</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>path to serialized Boost</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>nodeName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>name of node containing the classifier</p></li></ul><p> Use Boost::save to serialize and store an RTree to disk.
+ Load the Boost from this file again, by calling this function with the path to the file.
+ Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="python3">load(filepath[, nodeName]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -1674,7 +1666,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L542" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L625" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1684,7 +1676,7 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="9544880527-1">(</span><span class="n">samples</span><span class="p" data-group-id="9544880527-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="9544880527-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="9544880527-3">]</span><span class="p" data-group-id="9544880527-2">]</span><span class="p" data-group-id="9544880527-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<p>Predicts response(s) for the provided sample(s)</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The input samples, floating-point matrix</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>The optional flags, model-dependent. See cv::ml::StatModel::Flags.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The optional output matrix of results.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">predict(samples[, results[, flags]]) -&gt; retval, results</code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -1696,7 +1688,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L514" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L585" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1706,7 +1698,7 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="6722715431-1">(</span><span class="n">samples</span><span class="p" data-group-id="6722715431-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="6722715431-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6722715431-3">]</span><span class="p" data-group-id="6722715431-2">]</span><span class="p" data-group-id="6722715431-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<p>Predicts response(s) for the provided sample(s)</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The input samples, floating-point matrix</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>The optional flags, model-dependent. See cv::ml::StatModel::Flags.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The optional output matrix of results.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">predict(samples[, results[, flags]]) -&gt; retval, results</code></pre>
   </section>
 </section>
 <section class="detail" id="setBoostType/2">
@@ -1718,7 +1710,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setBoostType(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L606" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L703" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1728,7 +1720,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getBoostType @see getBoostType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setBoostType</span><span class="p" data-group-id="0006918212-1">(</span><span class="n">val</span><span class="p" data-group-id="0006918212-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getBoostType @see getBoostType</p><p>Python prototype (for reference): </p><pre><code class="python3">setBoostType(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setCVFolds/2">
@@ -1740,7 +1732,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setCVFolds(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L627" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L729" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1750,7 +1742,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getCVFolds @see getCVFolds</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setCVFolds</span><span class="p" data-group-id="4584172389-1">(</span><span class="n">val</span><span class="p" data-group-id="4584172389-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getCVFolds @see getCVFolds</p><p>Python prototype (for reference): </p><pre><code class="python3">setCVFolds(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setMaxCategories/2">
@@ -1762,7 +1754,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setMaxCategories(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L648" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L755" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1772,7 +1764,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getMaxCategories @see getMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMaxCategories</span><span class="p" data-group-id="4628346590-1">(</span><span class="n">val</span><span class="p" data-group-id="4628346590-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxCategories @see getMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="python3">setMaxCategories(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setMaxDepth/2">
@@ -1784,7 +1776,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setMaxDepth(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L669" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L781" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1794,7 +1786,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getMaxDepth @see getMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMaxDepth</span><span class="p" data-group-id="1085602745-1">(</span><span class="n">val</span><span class="p" data-group-id="1085602745-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxDepth @see getMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="python3">setMaxDepth(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setMinSampleCount/2">
@@ -1806,7 +1798,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setMinSampleCount(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L690" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L807" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1816,7 +1808,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getMinSampleCount @see getMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMinSampleCount</span><span class="p" data-group-id="0991793891-1">(</span><span class="n">val</span><span class="p" data-group-id="0991793891-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMinSampleCount @see getMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="python3">setMinSampleCount(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setPriors/2">
@@ -1828,7 +1820,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setPriors(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L711" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L833" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1838,7 +1830,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getPriors @see getPriors</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPriors</span><span class="p" data-group-id="6067239048-1">(</span><span class="n">val</span><span class="p" data-group-id="6067239048-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><p>@copybrief getPriors @see getPriors</p><p>Python prototype (for reference): </p><pre><code class="python3">setPriors(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setRegressionAccuracy/2">
@@ -1850,7 +1842,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setRegressionAccuracy(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L732" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L859" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1860,7 +1852,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRegressionAccuracy</span><span class="p" data-group-id="2185886571-1">(</span><span class="n">val</span><span class="p" data-group-id="2185886571-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="python3">setRegressionAccuracy(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setTruncatePrunedTree/2">
@@ -1872,7 +1864,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setTruncatePrunedTree(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L753" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L885" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1882,7 +1874,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTruncatePrunedTree</span><span class="p" data-group-id="4087119916-1">(</span><span class="n">val</span><span class="p" data-group-id="4087119916-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="python3">setTruncatePrunedTree(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setUse1SERule/2">
@@ -1894,7 +1886,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setUse1SERule(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L774" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L911" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1904,7 +1896,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getUse1SERule @see getUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setUse1SERule</span><span class="p" data-group-id="1845493723-1">(</span><span class="n">val</span><span class="p" data-group-id="1845493723-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUse1SERule @see getUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="python3">setUse1SERule(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setUseSurrogates/2">
@@ -1916,7 +1908,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setUseSurrogates(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L795" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L937" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1926,7 +1918,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getUseSurrogates @see getUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setUseSurrogates</span><span class="p" data-group-id="5616706726-1">(</span><span class="n">val</span><span class="p" data-group-id="5616706726-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseSurrogates @see getUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="python3">setUseSurrogates(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setWeakCount/2">
@@ -1938,7 +1930,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setWeakCount(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L816" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L963" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1948,7 +1940,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getWeakCount @see getWeakCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setWeakCount</span><span class="p" data-group-id="1686484485-1">(</span><span class="n">val</span><span class="p" data-group-id="1686484485-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getWeakCount @see getWeakCount</p><p>Python prototype (for reference): </p><pre><code class="python3">setWeakCount(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setWeightTrimRate/2">
@@ -1960,7 +1952,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setWeightTrimRate(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L837" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L989" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1970,7 +1962,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getWeightTrimRate @see getWeightTrimRate</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setWeightTrimRate</span><span class="p" data-group-id="2749645518-1">(</span><span class="n">val</span><span class="p" data-group-id="2749645518-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">double</code></li></ul><p>@copybrief getWeightTrimRate @see getWeightTrimRate</p><p>Python prototype (for reference): </p><pre><code class="python3">setWeightTrimRate(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -1982,7 +1974,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L918" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1992,8 +1984,9 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
-</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="1795691743-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="1795691743-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="0811882210-1">(</span><span class="n">trainData</span><span class="p" data-group-id="0811882210-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="0811882210-2">]</span><span class="p" data-group-id="0811882210-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>trainData</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>training data that can be loaded from file using TrainData::loadFromCSV or
+created with TrainData::create.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>optional flags, depending on the model. Some of the models can be updated with the
+new training samples, not completely overwritten (such as NormalBayesClassifier or ANN_MLP).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(trainData[, flags]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -2005,7 +1998,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L889" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1066" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2015,8 +2008,9 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
-</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="4546328216-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="4546328216-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="0896665656-1">(</span><span class="n">trainData</span><span class="p" data-group-id="0896665656-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="0896665656-2">]</span><span class="p" data-group-id="0896665656-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>trainData</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>training data that can be loaded from file using TrainData::loadFromCSV or
+created with TrainData::create.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>optional flags, depending on the model. Some of the models can be updated with the
+new training samples, not completely overwritten (such as NormalBayesClassifier or ANN_MLP).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(trainData[, flags]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -2028,7 +2022,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L858" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1027" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2038,7 +2032,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="4531475925-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="4531475925-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>training samples</p></li><li><p><strong>layout</strong>: <code class="inline">int</code>.</p><p>See ml::SampleTypes.</p></li><li><p><strong>responses</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>vector of responses associated with the training samples.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(samples, layout, responses) -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -2063,7 +2057,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2085,7 +2079,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L49" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2107,7 +2101,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2129,7 +2123,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L137" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2151,7 +2145,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L129" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2173,7 +2167,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBoostType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L176" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2195,7 +2189,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCVFolds!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L196" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2217,7 +2211,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2239,7 +2233,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMaxCategories!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L206" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2261,7 +2255,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMaxDepth!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L257" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2283,7 +2277,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMinSampleCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L244" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L277" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2305,7 +2299,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getPriors!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L263" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L297" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2327,7 +2321,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRegressionAccuracy!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L317" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2349,7 +2343,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTruncatePrunedTree!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L301" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L337" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2371,7 +2365,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUse1SERule!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L320" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L357" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2393,7 +2387,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUseSurrogates!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L339" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L377" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2415,7 +2409,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L358" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L397" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2437,7 +2431,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getWeakCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L377" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L417" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2459,7 +2453,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getWeightTrimRate!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L437" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2481,7 +2475,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L415" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L457" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2503,7 +2497,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L434" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L477" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2525,7 +2519,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L494" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L553" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2547,7 +2541,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L464" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L515" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2569,7 +2563,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L550" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L633" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2591,7 +2585,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L522" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L593" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2613,7 +2607,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L571" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L658" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2635,7 +2629,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L593" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L685" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2657,7 +2651,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBoostType!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L614" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L711" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2679,7 +2673,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setCVFolds!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L635" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L737" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2701,7 +2695,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMaxCategories!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L656" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L763" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2723,7 +2717,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMaxDepth!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L677" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L789" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2745,7 +2739,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMinSampleCount!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L698" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L815" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2767,7 +2761,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPriors!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L719" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L841" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2789,7 +2783,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRegressionAccuracy!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L740" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L867" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2811,7 +2805,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTruncatePrunedTree!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L761" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L893" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2833,7 +2827,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUse1SERule!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L782" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L919" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2855,7 +2849,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUseSurrogates!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L803" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L945" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2877,7 +2871,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setWeakCount!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L824" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L971" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2899,7 +2893,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setWeightTrimRate!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L845" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L997" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2921,7 +2915,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L926" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1111" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2943,7 +2937,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L897" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1074" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2965,7 +2959,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L868" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1037" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2987,7 +2981,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L984" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1173" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3009,7 +3003,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_boost.ex#L955" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_boost.ex#L1142" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3032,10 +3026,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_boost.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_ml_boost.ex">(current file)</a>
 
             </span>
 

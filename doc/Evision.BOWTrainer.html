@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.BOWTrainer — Evision v0.1.7-dev</title>
+    <title>Evision.BOWTrainer — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.BOWTrainer</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -270,7 +272,7 @@ cv
     </a>
     <h1 class="signature" translate="no">add(self, descriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -280,7 +282,8 @@ cv
 
   <section class="docstring">
 
-<p>Adds descriptors to a training set.</p><pre><code class="makeup elixir" translate="no"><span class="n">descriptor</span><span class="o">.</span></code></pre><p>  The training set is clustered using clustermethod to construct the vocabulary.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">add</span><span class="p" data-group-id="2997467512-1">(</span><span class="n">descriptors</span><span class="p" data-group-id="2997467512-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Adds descriptors to a training set.</p><h5>Positional Arguments</h5><ul><li><p><strong>descriptors</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Descriptors to add to a training set. Each row of the descriptors matrix is a
+descriptor.</p></li></ul><p>The training set is clustered using clustermethod to construct the vocabulary.</p><p>Python prototype (for reference): </p><pre><code class="python3">add(descriptors) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="clear/1">
@@ -292,7 +295,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -302,7 +305,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="2660266238-1">(</span><span class="p" data-group-id="2660266238-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">clear() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="cluster/1">
@@ -314,7 +317,7 @@ cv
     </a>
     <h1 class="signature" translate="no">cluster(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L102" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -324,7 +327,7 @@ cv
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">cluster</span><span class="p" data-group-id="3653580397-1">(</span><span class="p" data-group-id="3653580397-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">cluster() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="cluster/2">
@@ -336,7 +339,7 @@ cv
     </a>
     <h1 class="signature" translate="no">cluster(self, descriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -346,9 +349,10 @@ cv
 
   <section class="docstring">
 
-<p>Clusters train descriptors.</p><pre><code class="makeup elixir" translate="no"><span class="nc">Descriptors</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inner</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="n">descriptor</span><span class="w"> </span><span class="n">set</span><span class="o">.</span></code></pre><p>  The vocabulary consists of cluster centers. So, this method returns the vocabulary. In the first
-  variant of the method, train descriptors stored in the object are clustered. In the second variant,
-  input descriptors are clustered.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">cluster</span><span class="p" data-group-id="9246105054-1">(</span><span class="n">descriptors</span><span class="p" data-group-id="9246105054-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Clusters train descriptors.</p><h5>Positional Arguments</h5><ul><li><p><strong>descriptors</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Descriptors to cluster. Each row of the descriptors matrix is a descriptor.
+Descriptors are not added to the inner train descriptor set.</p></li></ul><p>The vocabulary consists of cluster centers. So, this method returns the vocabulary. In the first
+variant of the method, train descriptors stored in the object are clustered. In the second variant,
+input descriptors are clustered.</p><p>Python prototype (for reference): </p><pre><code class="python3">cluster(descriptors) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="descriptorsCount/1">
@@ -360,7 +364,7 @@ cv
     </a>
     <h1 class="signature" translate="no">descriptorsCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L122" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -370,7 +374,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns the count of all descriptors stored in the training set.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">descriptorsCount</span><span class="p" data-group-id="3281135184-1">(</span><span class="p" data-group-id="3281135184-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the count of all descriptors stored in the training set.</p><p>Python prototype (for reference): </p><pre><code class="python3">descriptorsCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getDescriptors/1">
@@ -382,7 +386,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDescriptors(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -392,7 +396,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns a training set of descriptors.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDescriptors</span><span class="p" data-group-id="8535930560-1">(</span><span class="p" data-group-id="8535930560-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns a training set of descriptors.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDescriptors() -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -417,7 +421,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">add!(self, descriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -439,7 +443,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L53" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -461,7 +465,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">cluster!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -483,7 +487,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">cluster!(self, descriptors)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -505,7 +509,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">descriptorsCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L128" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -527,7 +531,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDescriptors!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_bowtrainer.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_bowtrainer.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -550,10 +554,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_bowtrainer.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_bowtrainer.ex">(current file)</a>
 
             </span>
 

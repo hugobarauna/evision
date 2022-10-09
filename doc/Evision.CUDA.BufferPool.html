@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.CUDA.BufferPool — Evision v0.1.7-dev</title>
+    <title>Evision.CUDA.BufferPool — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.CUDA.BufferPool</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>stream</strong>: <a href="https://hexdocs.pm/elixir/Stream.html"><code class="inline">Stream</code></a></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -146,7 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>size</strong>: <code class="inline">Size</code></li><li><strong>type</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -156,7 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>rows</strong>: <code class="inline">int</code></li><li><strong>cols</strong>: <code class="inline">int</code></li><li><strong>type</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -230,7 +232,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">cuda_BufferPool(stream)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -240,7 +242,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">BufferPool</span><span class="p" data-group-id="7119922407-1">(</span><span class="n">stream</span><span class="p" data-group-id="7119922407-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">cuda_BufferPool</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>stream</strong>: <a href="https://hexdocs.pm/elixir/Stream.html"><code class="inline">Stream</code></a></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">BufferPool(stream) -&gt; &lt;cuda_BufferPool object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="getAllocator/1">
@@ -252,7 +254,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">getAllocator(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L39" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -262,7 +264,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getAllocator</span><span class="p" data-group-id="3245725642-1">(</span><span class="p" data-group-id="3245725642-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getAllocator() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getBuffer/3">
@@ -274,7 +276,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">getBuffer(self, size, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L92" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -284,7 +286,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBuffer</span><span class="p" data-group-id="2902820206-1">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="2902820206-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>size</strong>: <code class="inline">Size</code></li><li><strong>type</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getBuffer(size, type) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getBuffer/4">
@@ -296,7 +298,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">getBuffer(self, rows, cols, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L64" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -306,7 +308,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBuffer</span><span class="p" data-group-id="1575785982-1">(</span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="1575785982-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>rows</strong>: <code class="inline">int</code></li><li><strong>cols</strong>: <code class="inline">int</code></li><li><strong>type</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getBuffer(rows, cols, type) -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -331,7 +333,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">cuda_BufferPool!(stream)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -353,7 +355,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getAllocator!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -375,7 +377,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBuffer!(self, size, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L101" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -397,7 +399,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBuffer!(self, rows, cols, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda_bufferpool.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda_bufferpool.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -420,10 +422,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_cuda_bufferpool.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_cuda_bufferpool.ex">(current file)</a>
 
             </span>
 

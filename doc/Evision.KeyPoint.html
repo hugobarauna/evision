@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.KeyPoint — Evision v0.1.7-dev</title>
+    <title>Evision.KeyPoint — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.KeyPoint</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>points2f</strong>: vector_Point2f. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>size</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>points2f</strong>: <code class="inline">[Point2f]</code>.</p></div>
 
       </div>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>points2f</strong>: vector_Point2f. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>size</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>points2f</strong>: <code class="inline">[Point2f]</code>.</p></div>
 
       </div>
 
@@ -156,7 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>x</strong>: float. </li><li><strong>y</strong>: float. </li><li><strong>size</strong>: float. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>angle</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>x</strong>: <code class="inline">float</code>.</p></div>
 
       </div>
 
@@ -166,7 +168,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>x</strong>: float. </li><li><strong>y</strong>: float. </li><li><strong>size</strong>: float. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>angle</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>x</strong>: <code class="inline">float</code>.</p></div>
 
       </div>
 
@@ -176,9 +178,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  This method computes overlap for pair of keypoints. Overlap is the ratio between area of keypoint
-  regions' intersection and area of keypoint regions' union (considering keypoint region as circle).
-  If they don't overlap, we get zero. If they coincide at same location with same size, we get 1.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>kp1</strong>: <code class="inline">KeyPoint</code>.</p></div>
 
       </div>
 
@@ -488,7 +488,7 @@ cv
     </a>
     <h1 class="signature" translate="no">convert(points2f)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L231" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -498,7 +498,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>points2f</strong>: vector_Point2f. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>size</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">convert</span><span class="p" data-group-id="4279319936-1">(</span><span class="n">points2f</span><span class="p" data-group-id="4279319936-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="4279319936-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p" data-group-id="4279319936-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">octave</span><span class="p" data-group-id="4279319936-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">class_id</span><span class="p" data-group-id="4279319936-5">]</span><span class="p" data-group-id="4279319936-4">]</span><span class="p" data-group-id="4279319936-3">]</span><span class="p" data-group-id="4279319936-2">]</span><span class="p" data-group-id="4279319936-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">keypoints</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>points2f</strong>: <code class="inline">[Point2f]</code>.</p><p>Array of (x,y) coordinates of each keypoint</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>size</strong>: <code class="inline">float</code>.</p><p>keypoint diameter</p></li><li><p><strong>response</strong>: <code class="inline">float</code>.</p><p>keypoint detector response on the keypoint (that is, strength of the keypoint)</p></li><li><p><strong>octave</strong>: <code class="inline">int</code>.</p><p>pyramid octave in which the keypoint has been detected</p></li><li><p><strong>class_id</strong>: <code class="inline">int</code>.</p><p>object id</p></li></ul><h5>Return</h5><ul><li><p><strong>keypoints</strong>: <code class="inline">[KeyPoint]</code>.</p><p>Keypoints obtained from any feature detection algorithm like SIFT/SURF/ORB</p></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">convert(points2f[, size[, response[, octave[, class_id]]]]) -&gt; keypoints</code></pre>
   </section>
 </section>
 <section class="detail" id="convert/2">
@@ -510,7 +510,7 @@ cv
     </a>
     <h1 class="signature" translate="no">convert(points2f, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L178" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -520,7 +520,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>points2f</strong>: vector_Point2f. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>size</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">convert</span><span class="p" data-group-id="4224881022-1">(</span><span class="n">points2f</span><span class="p" data-group-id="4224881022-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="4224881022-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p" data-group-id="4224881022-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">octave</span><span class="p" data-group-id="4224881022-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">class_id</span><span class="p" data-group-id="4224881022-5">]</span><span class="p" data-group-id="4224881022-4">]</span><span class="p" data-group-id="4224881022-3">]</span><span class="p" data-group-id="4224881022-2">]</span><span class="p" data-group-id="4224881022-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">keypoints</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>points2f</strong>: <code class="inline">[Point2f]</code>.</p><p>Array of (x,y) coordinates of each keypoint</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>size</strong>: <code class="inline">float</code>.</p><p>keypoint diameter</p></li><li><p><strong>response</strong>: <code class="inline">float</code>.</p><p>keypoint detector response on the keypoint (that is, strength of the keypoint)</p></li><li><p><strong>octave</strong>: <code class="inline">int</code>.</p><p>pyramid octave in which the keypoint has been detected</p></li><li><p><strong>class_id</strong>: <code class="inline">int</code>.</p><p>object id</p></li></ul><h5>Return</h5><ul><li><p><strong>keypoints</strong>: <code class="inline">[KeyPoint]</code>.</p><p>Keypoints obtained from any feature detection algorithm like SIFT/SURF/ORB</p></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">convert(points2f[, size[, response[, octave[, class_id]]]]) -&gt; keypoints</code></pre>
   </section>
 </section>
 <section class="detail" id="keyPoint/0">
@@ -532,7 +532,7 @@ cv
     </a>
     <h1 class="signature" translate="no">keyPoint()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L127" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -542,7 +542,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">KeyPoint</span><span class="p" data-group-id="1729290645-1">(</span><span class="p" data-group-id="1729290645-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">KeyPoint</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">KeyPoint() -&gt; &lt;KeyPoint object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="keyPoint/3">
@@ -554,7 +554,7 @@ cv
     </a>
     <h1 class="signature" translate="no">keyPoint(x, y, size)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -564,7 +564,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>x</strong>: float. </li><li><strong>y</strong>: float. </li><li><strong>size</strong>: float. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>angle</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">KeyPoint</span><span class="p" data-group-id="5753244727-1">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="5753244727-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">angle</span><span class="p" data-group-id="5753244727-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p" data-group-id="5753244727-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">octave</span><span class="p" data-group-id="5753244727-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">class_id</span><span class="p" data-group-id="5753244727-5">]</span><span class="p" data-group-id="5753244727-4">]</span><span class="p" data-group-id="5753244727-3">]</span><span class="p" data-group-id="5753244727-2">]</span><span class="p" data-group-id="5753244727-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">KeyPoint</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>x</strong>: <code class="inline">float</code>.</p><p>x-coordinate of the keypoint</p></li><li><p><strong>y</strong>: <code class="inline">float</code>.</p><p>y-coordinate of the keypoint</p></li><li><p><strong>size</strong>: <code class="inline">float</code>.</p><p>keypoint diameter</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>angle</strong>: <code class="inline">float</code>.</p><p>keypoint orientation</p></li><li><p><strong>response</strong>: <code class="inline">float</code>.</p><p>keypoint detector response on the keypoint (that is, strength of the keypoint)</p></li><li><p><strong>octave</strong>: <code class="inline">int</code>.</p><p>pyramid octave in which the keypoint has been detected</p></li><li><p><strong>class_id</strong>: <code class="inline">int</code>.</p><p>object id</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">KeyPoint(x, y, size[, angle[, response[, octave[, class_id]]]]) -&gt; &lt;KeyPoint object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="keyPoint/4">
@@ -576,7 +576,7 @@ cv
     </a>
     <h1 class="signature" translate="no">keyPoint(x, y, size, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -586,7 +586,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>x</strong>: float. </li><li><strong>y</strong>: float. </li><li><strong>size</strong>: float. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>angle</strong>: float.</li><li><strong>response</strong>: float.</li><li><strong>octave</strong>: int.</li><li><strong>class_id</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">KeyPoint</span><span class="p" data-group-id="2448166112-1">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p" data-group-id="2448166112-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">angle</span><span class="p" data-group-id="2448166112-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p" data-group-id="2448166112-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">octave</span><span class="p" data-group-id="2448166112-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">class_id</span><span class="p" data-group-id="2448166112-5">]</span><span class="p" data-group-id="2448166112-4">]</span><span class="p" data-group-id="2448166112-3">]</span><span class="p" data-group-id="2448166112-2">]</span><span class="p" data-group-id="2448166112-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">KeyPoint</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>x</strong>: <code class="inline">float</code>.</p><p>x-coordinate of the keypoint</p></li><li><p><strong>y</strong>: <code class="inline">float</code>.</p><p>y-coordinate of the keypoint</p></li><li><p><strong>size</strong>: <code class="inline">float</code>.</p><p>keypoint diameter</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>angle</strong>: <code class="inline">float</code>.</p><p>keypoint orientation</p></li><li><p><strong>response</strong>: <code class="inline">float</code>.</p><p>keypoint detector response on the keypoint (that is, strength of the keypoint)</p></li><li><p><strong>octave</strong>: <code class="inline">int</code>.</p><p>pyramid octave in which the keypoint has been detected</p></li><li><p><strong>class_id</strong>: <code class="inline">int</code>.</p><p>object id</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">KeyPoint(x, y, size[, angle[, response[, octave[, class_id]]]]) -&gt; &lt;KeyPoint object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="overlap/2">
@@ -598,7 +598,7 @@ cv
     </a>
     <h1 class="signature" translate="no">overlap(kp1, kp2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L163" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -608,9 +608,9 @@ cv
 
   <section class="docstring">
 
-<p>  This method computes overlap for pair of keypoints. Overlap is the ratio between area of keypoint
-  regions' intersection and area of keypoint regions' union (considering keypoint region as circle).
-  If they don't overlap, we get zero. If they coincide at same location with same size, we get 1.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">overlap</span><span class="p" data-group-id="0338711553-1">(</span><span class="n">kp1</span><span class="p">,</span><span class="w"> </span><span class="n">kp2</span><span class="p" data-group-id="0338711553-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>kp1</strong>: <code class="inline">KeyPoint</code>.</p><p>First keypoint</p></li><li><p><strong>kp2</strong>: <code class="inline">KeyPoint</code>.</p><p>Second keypoint</p></li></ul><p>This method computes overlap for pair of keypoints. Overlap is the ratio between area of keypoint
+regions' intersection and area of keypoint regions' union (considering keypoint region as circle).
+If they don't overlap, we get zero. If they coincide at same location with same size, we get 1.</p><p>Python prototype (for reference): </p><pre><code class="python3">overlap(kp1, kp2) -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -635,7 +635,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">convert!(points2f)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L239" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -657,7 +657,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">convert!(points2f, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L117" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L186" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -679,7 +679,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_angle!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L178" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L282" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -701,7 +701,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_angle(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L174" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -723,7 +723,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_class_id!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -745,7 +745,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_class_id(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L186" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L290" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -767,7 +767,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_octave!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L202" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L306" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -789,7 +789,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_octave(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L198" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L302" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -811,7 +811,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_pt!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L214" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L318" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -833,7 +833,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_pt(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L210" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L314" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -855,7 +855,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_response!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L226" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -877,7 +877,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_response(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L222" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L326" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -899,7 +899,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_size!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L238" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L342" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -921,7 +921,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_size(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L338" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -943,7 +943,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">keyPoint!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -965,7 +965,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">keyPoint!(x, y, size)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L114" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -987,7 +987,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">keyPoint!(x, y, size, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1009,7 +1009,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">overlap!(kp1, kp2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L172" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L276" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1031,7 +1031,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_angle!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L288" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1053,7 +1053,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_angle(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L284" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1075,7 +1075,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_class_id!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L300" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1097,7 +1097,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_class_id(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L192" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L296" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1119,7 +1119,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_octave!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L312" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1141,7 +1141,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_octave(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L204" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L308" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1163,7 +1163,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_pt!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L220" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L324" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1185,7 +1185,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_pt(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L216" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1207,7 +1207,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_response!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L232" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L336" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1229,7 +1229,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_response(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L332" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1251,7 +1251,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_size!(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L244" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L348" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1273,7 +1273,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_size(self, prop)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_keypoint.ex#L240" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_keypoint.ex#L344" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1296,10 +1296,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_keypoint.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_keypoint.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.Detail.BestOf2NearestMatcher — Evision v0.1.7-dev</title>
+    <title>Evision.Detail.BestOf2NearestMatcher — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Detail.BestOf2NearestMatcher</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,9 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p></div>
+          <div class="summary-synopsis"><p>Performs images matching.</p></div>
 
       </div>
 
@@ -138,9 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p></div>
+          <div class="summary-synopsis"><p>Performs images matching.</p></div>
 
       </div>
 
@@ -150,7 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>features1</strong>: <code class="inline">ImageFeatures</code>.</p></div>
 
       </div>
 
@@ -170,7 +168,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><p>  ##### Keyword Arguments</p></div>
 
       </div>
 
@@ -180,7 +178,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><p>  ##### Keyword Arguments</p></div>
 
       </div>
 
@@ -190,7 +188,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher.</p></div>
+          <div class="summary-synopsis"><p>Constructs a &quot;best of 2 nearest&quot; matcher.</p></div>
 
       </div>
 
@@ -200,7 +198,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher.</p></div>
+          <div class="summary-synopsis"><p>Constructs a &quot;best of 2 nearest&quot; matcher.</p></div>
 
       </div>
 
@@ -334,7 +332,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">apply2(self, features)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -344,9 +342,8 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply2</span><span class="p" data-group-id="5577888494-1">(</span><span class="n">features</span><span class="p" data-group-id="5577888494-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="5577888494-2">]</span><span class="p" data-group-id="5577888494-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">pairwise_matches</span></code></pre>
+<p>Performs images matching.</p><h5>Positional Arguments</h5><ul><li><p><strong>features</strong>: <code class="inline">[ImageFeatures]</code>.</p><p>Features of the source images</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>mask</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Mask indicating which image pairs must be matched</p></li></ul><h5>Return</h5><ul><li><p><strong>pairwise_matches</strong>: <code class="inline">[MatchesInfo]</code>.</p><p>Found pairwise matches</p></li></ul><p>The function is parallelized with the TBB library.
+@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="python3">apply2(features[, mask]) -&gt; pairwise_matches</code></pre>
   </section>
 </section>
 <section class="detail" id="apply2/3">
@@ -358,7 +355,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">apply2(self, features, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -368,9 +365,8 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply2</span><span class="p" data-group-id="0597046854-1">(</span><span class="n">features</span><span class="p" data-group-id="0597046854-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="0597046854-2">]</span><span class="p" data-group-id="0597046854-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">pairwise_matches</span></code></pre>
+<p>Performs images matching.</p><h5>Positional Arguments</h5><ul><li><p><strong>features</strong>: <code class="inline">[ImageFeatures]</code>.</p><p>Features of the source images</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>mask</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Mask indicating which image pairs must be matched</p></li></ul><h5>Return</h5><ul><li><p><strong>pairwise_matches</strong>: <code class="inline">[MatchesInfo]</code>.</p><p>Found pairwise matches</p></li></ul><p>The function is parallelized with the TBB library.
+@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="python3">apply2(features[, mask]) -&gt; pairwise_matches</code></pre>
   </section>
 </section>
 <section class="detail" id="apply/3">
@@ -382,7 +378,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">apply(self, features1, features2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -392,7 +388,7 @@ cv.detail
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="9436318821-1">(</span><span class="n">features1</span><span class="p">,</span><span class="w"> </span><span class="n">features2</span><span class="p" data-group-id="9436318821-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches_info</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>features1</strong>: <code class="inline">ImageFeatures</code>.</p><p>First image features</p></li><li><p><strong>features2</strong>: <code class="inline">ImageFeatures</code>.</p><p>Second image features</p></li></ul><h5>Return</h5><ul><li><p><strong>matches_info</strong>: <code class="inline">MatchesInfo</code>.</p><p>Found matches</p></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">apply(features1, features2) -&gt; matches_info</code></pre>
   </section>
 </section>
 <section class="detail" id="collectGarbage/1">
@@ -404,7 +400,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">collectGarbage(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L154" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L223" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -414,7 +410,7 @@ cv.detail
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">collectGarbage</span><span class="p" data-group-id="3532771775-1">(</span><span class="p" data-group-id="3532771775-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">collectGarbage() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -426,7 +422,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L207" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -436,7 +432,7 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="4834788591-1">(</span><span class="p" data-group-id="4834788591-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="4834788591-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="4834788591-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="4834788591-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh2</span><span class="p" data-group-id="4834788591-5">]</span><span class="p" data-group-id="4834788591-4">]</span><span class="p" data-group-id="4834788591-3">]</span><span class="p" data-group-id="4834788591-2">]</span><span class="p" data-group-id="4834788591-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>  ##### Keyword Arguments</p><ul><li><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</li><li><strong>match_conf</strong>: <code class="inline">float</code>.</li><li><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</li><li><strong>num_matches_thresh2</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create([, try_use_gpu[, match_conf[, num_matches_thresh1[, num_matches_thresh2]]]]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="create/1">
@@ -448,7 +444,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">create(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L248" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -458,7 +454,7 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="9965733607-1">(</span><span class="p" data-group-id="9965733607-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="9965733607-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="9965733607-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="9965733607-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh2</span><span class="p" data-group-id="9965733607-5">]</span><span class="p" data-group-id="9965733607-4">]</span><span class="p" data-group-id="9965733607-3">]</span><span class="p" data-group-id="9965733607-2">]</span><span class="p" data-group-id="9965733607-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>  ##### Keyword Arguments</p><ul><li><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</li><li><strong>match_conf</strong>: <code class="inline">float</code>.</li><li><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</li><li><strong>num_matches_thresh2</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create([, try_use_gpu[, match_conf[, num_matches_thresh1[, num_matches_thresh2]]]]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="detail_BestOf2NearestMatcher/0">
@@ -470,7 +466,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">detail_BestOf2NearestMatcher()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L77" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -480,8 +476,9 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher.</p><pre><code class="makeup elixir" translate="no"><span class="n">estimation</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inliers</span><span class="w"> </span><span class="n">classification</span><span class="w"> </span><span class="n">step</span><span class="w">
-</span><span class="n">re</span><span class="o">-</span><span class="n">estimation</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">inliers</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">BestOf2NearestMatcher</span><span class="p" data-group-id="4973494348-1">(</span><span class="p" data-group-id="4973494348-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="4973494348-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="4973494348-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="4973494348-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh2</span><span class="p" data-group-id="4973494348-5">]</span><span class="p" data-group-id="4973494348-4">]</span><span class="p" data-group-id="4973494348-3">]</span><span class="p" data-group-id="4973494348-2">]</span><span class="p" data-group-id="4973494348-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">detail_BestOf2NearestMatcher</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Constructs a &quot;best of 2 nearest&quot; matcher.</p><h5>Keyword Arguments</h5><ul><li><p><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</p><p>Should try to use GPU or not</p></li><li><p><strong>match_conf</strong>: <code class="inline">float</code>.</p><p>Match distances ration threshold</p></li><li><p><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</p><p>Minimum number of matches required for the 2D projective transform
+estimation used in the inliers classification step</p></li><li><p><strong>num_matches_thresh2</strong>: <code class="inline">int</code>.</p><p>Minimum number of matches required for the 2D projective transform
+re-estimation on inliers</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">BestOf2NearestMatcher([, try_use_gpu[, match_conf[, num_matches_thresh1[, num_matches_thresh2]]]]) -&gt; &lt;detail_BestOf2NearestMatcher object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="detail_BestOf2NearestMatcher/1">
@@ -493,7 +490,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">detail_BestOf2NearestMatcher(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L36" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -503,8 +500,9 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher.</p><pre><code class="makeup elixir" translate="no"><span class="n">estimation</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inliers</span><span class="w"> </span><span class="n">classification</span><span class="w"> </span><span class="n">step</span><span class="w">
-</span><span class="n">re</span><span class="o">-</span><span class="n">estimation</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">inliers</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">BestOf2NearestMatcher</span><span class="p" data-group-id="0373437589-1">(</span><span class="p" data-group-id="0373437589-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="0373437589-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="0373437589-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="0373437589-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh2</span><span class="p" data-group-id="0373437589-5">]</span><span class="p" data-group-id="0373437589-4">]</span><span class="p" data-group-id="0373437589-3">]</span><span class="p" data-group-id="0373437589-2">]</span><span class="p" data-group-id="0373437589-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">detail_BestOf2NearestMatcher</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Constructs a &quot;best of 2 nearest&quot; matcher.</p><h5>Keyword Arguments</h5><ul><li><p><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</p><p>Should try to use GPU or not</p></li><li><p><strong>match_conf</strong>: <code class="inline">float</code>.</p><p>Match distances ration threshold</p></li><li><p><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</p><p>Minimum number of matches required for the 2D projective transform
+estimation used in the inliers classification step</p></li><li><p><strong>num_matches_thresh2</strong>: <code class="inline">int</code>.</p><p>Minimum number of matches required for the 2D projective transform
+re-estimation on inliers</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">BestOf2NearestMatcher([, try_use_gpu[, match_conf[, num_matches_thresh1[, num_matches_thresh2]]]]) -&gt; &lt;detail_BestOf2NearestMatcher object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="isThreadSafe/1">
@@ -516,7 +514,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">isThreadSafe(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L226" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -526,7 +524,7 @@ cv.detail
 
   <section class="docstring">
 
-<p>@return True, if it's possible to use the same matcher instance in parallel, false otherwise</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isThreadSafe</span><span class="p" data-group-id="3575897496-1">(</span><span class="p" data-group-id="3575897496-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@return True, if it's possible to use the same matcher instance in parallel, false otherwise</p><p>Python prototype (for reference): </p><pre><code class="python3">isThreadSafe() -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -551,7 +549,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply2!(self, features)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L210" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -573,7 +571,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply2!(self, features, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -595,7 +593,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply!(self, features1, features2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L84" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -617,7 +615,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">collectGarbage!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -639,7 +637,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L213" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -661,7 +659,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -683,7 +681,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detail_BestOf2NearestMatcher!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -705,7 +703,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detail_BestOf2NearestMatcher!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L43" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -727,7 +725,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isThreadSafe!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_bestof2nearestmatcher.ex#L232" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_bestof2nearestmatcher.ex#L300" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -750,10 +748,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_detail_bestof2nearestmatcher.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_detail_bestof2nearestmatcher.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.CLAHE — Evision v0.1.7-dev</title>
+    <title>Evision.CLAHE — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.CLAHE</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>src</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>dst</strong>: UMat.</li></ul><p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p></div>
+          <div class="summary-synopsis"><p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p></div>
 
       </div>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>src</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>dst</strong>: UMat.</li></ul><p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p></div>
+          <div class="summary-synopsis"><p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p></div>
 
       </div>
 
@@ -187,7 +189,7 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Sets size of grid for histogram equalization. Input image will be divided into
-  equally sized rectangular tiles.</p></div>
+equally sized rectangular tiles.</p></div>
 
       </div>
 
@@ -291,7 +293,7 @@ cv
     </a>
     <h1 class="signature" translate="no">apply(self, src)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L64" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -301,7 +303,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>src</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>dst</strong>: UMat.</li></ul><p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="1467853955-1">(</span><span class="n">src</span><span class="p" data-group-id="1467853955-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="1467853955-2">]</span><span class="p" data-group-id="1467853955-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
+<p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p><h5>Positional Arguments</h5><ul><li><p><strong>src</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Source image of type CV_8UC1 or CV_16UC1.</p></li></ul><h5>Return</h5><ul><li><p><strong>dst</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Destination image.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">apply(src[, dst]) -&gt; dst</code></pre>
   </section>
 </section>
 <section class="detail" id="apply/3">
@@ -313,7 +315,7 @@ cv
     </a>
     <h1 class="signature" translate="no">apply(self, src, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -323,7 +325,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>src</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>dst</strong>: UMat.</li></ul><p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="0749663832-1">(</span><span class="n">src</span><span class="p" data-group-id="0749663832-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p" data-group-id="0749663832-2">]</span><span class="p" data-group-id="0749663832-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dst</span></code></pre>
+<p>Equalizes the histogram of a grayscale image using Contrast Limited Adaptive Histogram Equalization.</p><h5>Positional Arguments</h5><ul><li><p><strong>src</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Source image of type CV_8UC1 or CV_16UC1.</p></li></ul><h5>Return</h5><ul><li><p><strong>dst</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Destination image.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">apply(src[, dst]) -&gt; dst</code></pre>
   </section>
 </section>
 <section class="detail" id="collectGarbage/1">
@@ -335,7 +337,7 @@ cv
     </a>
     <h1 class="signature" translate="no">collectGarbage(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -345,7 +347,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">collectGarbage</span><span class="p" data-group-id="6074927535-1">(</span><span class="p" data-group-id="6074927535-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">collectGarbage() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="getClipLimit/1">
@@ -357,7 +359,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getClipLimit(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -367,7 +369,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getClipLimit</span><span class="p" data-group-id="0300745760-1">(</span><span class="p" data-group-id="0300745760-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getClipLimit() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTilesGridSize/1">
@@ -379,7 +381,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getTilesGridSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L123" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -389,7 +391,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTilesGridSize</span><span class="p" data-group-id="4582804815-1">(</span><span class="p" data-group-id="4582804815-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getTilesGridSize() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="setClipLimit/2">
@@ -401,7 +403,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setClipLimit(self, clipLimit)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -411,7 +413,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets threshold for contrast limiting.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setClipLimit</span><span class="p" data-group-id="8697051399-1">(</span><span class="n">clipLimit</span><span class="p" data-group-id="8697051399-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets threshold for contrast limiting.</p><h5>Positional Arguments</h5><ul><li><p><strong>clipLimit</strong>: <code class="inline">double</code>.</p><p>threshold value.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setClipLimit(clipLimit) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setTilesGridSize/2">
@@ -423,7 +425,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setTilesGridSize(self, tileGridSize)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L183" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -434,7 +436,7 @@ cv
   <section class="docstring">
 
 <p>Sets size of grid for histogram equalization. Input image will be divided into
-  equally sized rectangular tiles.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTilesGridSize</span><span class="p" data-group-id="0610821227-1">(</span><span class="n">tileGridSize</span><span class="p" data-group-id="0610821227-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+equally sized rectangular tiles.</p><h5>Positional Arguments</h5><ul><li><p><strong>tileGridSize</strong>: <code class="inline">Size</code>.</p><p>defines the number of tiles in row and column.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setTilesGridSize(tileGridSize) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -459,7 +461,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply!(self, src)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -481,7 +483,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply!(self, src, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -503,7 +505,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">collectGarbage!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -525,7 +527,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getClipLimit!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -547,7 +549,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTilesGridSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -569,7 +571,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setClipLimit!(self, clipLimit)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -591,7 +593,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTilesGridSize!(self, tileGridSize)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_clahe.ex#L153" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_clahe.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -614,10 +616,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_clahe.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_clahe.ex">(current file)</a>
 
             </span>
 

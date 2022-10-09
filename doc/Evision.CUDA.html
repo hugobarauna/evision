@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.CUDA — Evision v0.1.7-dev</title>
+    <title>Evision.CUDA — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.CUDA</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Creates a continuous matrix.</p></div>
+          <div class="summary-synopsis"><p>Creates a continuous matrix.</p></div>
 
       </div>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Creates a continuous matrix.</p></div>
+          <div class="summary-synopsis"><p>Creates a continuous matrix.</p></div>
 
       </div>
 
@@ -146,8 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Ensures that the size of a matrix is big enough and the matrix has a proper type.
-  The function does not reallocate memory if the matrix has proper attributes already.</p></div>
+          <div class="summary-synopsis"><p>Ensures that the size of a matrix is big enough and the matrix has a proper type.</p></div>
 
       </div>
 
@@ -157,8 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Ensures that the size of a matrix is big enough and the matrix has a proper type.
-  The function does not reallocate memory if the matrix has proper attributes already.</p></div>
+          <div class="summary-synopsis"><p>Ensures that the size of a matrix is big enough and the matrix has a proper type.</p></div>
 
       </div>
 
@@ -168,10 +168,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the number of installed CUDA-enabled devices.
-  Use this function before any other CUDA functions calls. If OpenCV is compiled without CUDA support,
-  this function returns 0. If the CUDA driver is not installed, or is incompatible, this function
-  returns -1.</p></div>
+          <div class="summary-synopsis"><p>Returns the number of installed CUDA-enabled devices.</p></div>
 
       </div>
 
@@ -191,7 +188,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>device</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -201,7 +198,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>device</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -222,8 +219,7 @@ Evision
         </div>
 
           <div class="summary-synopsis"><p>Explicitly destroys and cleans up all resources associated with the current device in the current
-  process.
-  Any subsequent API call to this device will reinitialize the device.</p></div>
+process.</p></div>
 
       </div>
 
@@ -233,7 +229,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>deviceId</strong>: <code class="inline">int</code></li><li><strong>stackSize</strong>: <code class="inline">size_t</code></li><li><strong>stackCount</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -243,7 +239,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>on</strong>: <code class="inline">bool</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -253,8 +249,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Sets a device and initializes it for the current thread.
-  If the call of this function is omitted, a default device is initialized at the fist CUDA usage.</p></div>
+          <div class="summary-synopsis"><p>Sets a device and initializes it for the current thread.</p></div>
 
       </div>
 
@@ -438,7 +433,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">createContinuous(rows, cols, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -448,8 +443,9 @@ cv.cuda
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Creates a continuous matrix.</p><pre><code class="makeup elixir" translate="no"><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="9500340731-1">{</span><span class="n">rows</span><span class="p" data-group-id="9500340731-1">}</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="9500340731-2">{</span><span class="n">cols</span><span class="p" data-group-id="9500340731-2">}</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p">)</span><span class="o">.</span></code></pre><p>  Matrix is called continuous if its elements are stored continuously, that is, without gaps at the
-  end of each row.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">createContinuous</span><span class="p" data-group-id="1860476859-1">(</span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="1860476859-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="p" data-group-id="1860476859-2">]</span><span class="p" data-group-id="1860476859-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">arr</span></code></pre>
+<p>Creates a continuous matrix.</p><h5>Positional Arguments</h5><ul><li><p><strong>rows</strong>: <code class="inline">int</code>.</p><p>Row count.</p></li><li><p><strong>cols</strong>: <code class="inline">int</code>.</p><p>Column count.</p></li><li><p><strong>type</strong>: <code class="inline">int</code>.</p><p>Type of the matrix.</p></li></ul><h5>Return</h5><ul><li><p><strong>arr</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Destination matrix. This parameter changes only if it has a proper type and area (
+\f$\texttt{rows} \times \texttt{cols}\f$ ).</p></li></ul><p>Matrix is called continuous if its elements are stored continuously, that is, without gaps at the
+end of each row.</p><p>Python prototype (for reference): </p><pre><code class="python3">createContinuous(rows, cols, type[, arr]) -&gt; arr</code></pre>
   </section>
 </section>
 <section class="detail" id="createContinuous/4">
@@ -461,7 +457,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">createContinuous(rows, cols, type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L41" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -471,8 +467,9 @@ cv.cuda
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Creates a continuous matrix.</p><pre><code class="makeup elixir" translate="no"><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="9791049968-1">{</span><span class="n">rows</span><span class="p" data-group-id="9791049968-1">}</span><span class="w"> </span><span class="err">\</span><span class="n">times</span><span class="w"> </span><span class="err">\</span><span class="n">texttt</span><span class="p" data-group-id="9791049968-2">{</span><span class="n">cols</span><span class="p" data-group-id="9791049968-2">}</span><span class="err">\</span><span class="n">f</span><span class="err">$</span><span class="w"> </span><span class="p">)</span><span class="o">.</span></code></pre><p>  Matrix is called continuous if its elements are stored continuously, that is, without gaps at the
-  end of each row.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">createContinuous</span><span class="p" data-group-id="2870207465-1">(</span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="2870207465-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="p" data-group-id="2870207465-2">]</span><span class="p" data-group-id="2870207465-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">arr</span></code></pre>
+<p>Creates a continuous matrix.</p><h5>Positional Arguments</h5><ul><li><p><strong>rows</strong>: <code class="inline">int</code>.</p><p>Row count.</p></li><li><p><strong>cols</strong>: <code class="inline">int</code>.</p><p>Column count.</p></li><li><p><strong>type</strong>: <code class="inline">int</code>.</p><p>Type of the matrix.</p></li></ul><h5>Return</h5><ul><li><p><strong>arr</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Destination matrix. This parameter changes only if it has a proper type and area (
+\f$\texttt{rows} \times \texttt{cols}\f$ ).</p></li></ul><p>Matrix is called continuous if its elements are stored continuously, that is, without gaps at the
+end of each row.</p><p>Python prototype (for reference): </p><pre><code class="python3">createContinuous(rows, cols, type[, arr]) -&gt; arr</code></pre>
   </section>
 </section>
 <section class="detail" id="ensureSizeIsEnough/3">
@@ -484,7 +481,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">ensureSizeIsEnough(rows, cols, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L184" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -494,8 +491,7 @@ cv.cuda
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Ensures that the size of a matrix is big enough and the matrix has a proper type.
-  The function does not reallocate memory if the matrix has proper attributes already.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">ensureSizeIsEnough</span><span class="p" data-group-id="0903256774-1">(</span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="0903256774-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="p" data-group-id="0903256774-2">]</span><span class="p" data-group-id="0903256774-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">arr</span></code></pre>
+<p>Ensures that the size of a matrix is big enough and the matrix has a proper type.</p><h5>Positional Arguments</h5><ul><li><p><strong>rows</strong>: <code class="inline">int</code>.</p><p>Minimum desired number of rows.</p></li><li><p><strong>cols</strong>: <code class="inline">int</code>.</p><p>Minimum desired number of columns.</p></li><li><p><strong>type</strong>: <code class="inline">int</code>.</p><p>Desired matrix type.</p></li></ul><h5>Return</h5><ul><li><p><strong>arr</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Destination matrix.</p></li></ul><p>The function does not reallocate memory if the matrix has proper attributes already.</p><p>Python prototype (for reference): </p><pre><code class="python3">ensureSizeIsEnough(rows, cols, type[, arr]) -&gt; arr</code></pre>
   </section>
 </section>
 <section class="detail" id="ensureSizeIsEnough/4">
@@ -507,7 +503,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">ensureSizeIsEnough(rows, cols, type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L137" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -517,8 +513,7 @@ cv.cuda
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>rows</strong>: int. </li><li><strong>cols</strong>: int. </li><li><strong>type</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>arr</strong>: UMat.</li></ul><p>Ensures that the size of a matrix is big enough and the matrix has a proper type.
-  The function does not reallocate memory if the matrix has proper attributes already.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">ensureSizeIsEnough</span><span class="p" data-group-id="2036114180-1">(</span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="p" data-group-id="2036114180-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="p" data-group-id="2036114180-2">]</span><span class="p" data-group-id="2036114180-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">arr</span></code></pre>
+<p>Ensures that the size of a matrix is big enough and the matrix has a proper type.</p><h5>Positional Arguments</h5><ul><li><p><strong>rows</strong>: <code class="inline">int</code>.</p><p>Minimum desired number of rows.</p></li><li><p><strong>cols</strong>: <code class="inline">int</code>.</p><p>Minimum desired number of columns.</p></li><li><p><strong>type</strong>: <code class="inline">int</code>.</p><p>Desired matrix type.</p></li></ul><h5>Return</h5><ul><li><p><strong>arr</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Destination matrix.</p></li></ul><p>The function does not reallocate memory if the matrix has proper attributes already.</p><p>Python prototype (for reference): </p><pre><code class="python3">ensureSizeIsEnough(rows, cols, type[, arr]) -&gt; arr</code></pre>
   </section>
 </section>
 <section class="detail" id="getCudaEnabledDeviceCount/0">
@@ -530,7 +525,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">getCudaEnabledDeviceCount()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L150" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L211" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -540,10 +535,9 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Returns the number of installed CUDA-enabled devices.
-  Use this function before any other CUDA functions calls. If OpenCV is compiled without CUDA support,
-  this function returns 0. If the CUDA driver is not installed, or is incompatible, this function
-  returns -1.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCudaEnabledDeviceCount</span><span class="p" data-group-id="0299226587-1">(</span><span class="p" data-group-id="0299226587-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of installed CUDA-enabled devices.</p><p>Use this function before any other CUDA functions calls. If OpenCV is compiled without CUDA support,
+this function returns 0. If the CUDA driver is not installed, or is incompatible, this function
+returns -1.</p><p>Python prototype (for reference): </p><pre><code class="python3">getCudaEnabledDeviceCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getDevice/0">
@@ -555,7 +549,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">getDevice()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L231" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -565,7 +559,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Returns the current device index set by cuda::setDevice or initialized by default.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDevice</span><span class="p" data-group-id="5439815637-1">(</span><span class="p" data-group-id="5439815637-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the current device index set by cuda::setDevice or initialized by default.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDevice() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="printCudaDeviceInfo/1">
@@ -577,7 +571,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">printCudaDeviceInfo(device)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L254" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -587,7 +581,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">printCudaDeviceInfo</span><span class="p" data-group-id="4395771631-1">(</span><span class="n">device</span><span class="p" data-group-id="4395771631-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>device</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">printCudaDeviceInfo(device) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="printShortCudaDeviceInfo/1">
@@ -599,7 +593,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">printShortCudaDeviceInfo(device)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L207" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L279" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -609,7 +603,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">printShortCudaDeviceInfo</span><span class="p" data-group-id="7493244833-1">(</span><span class="n">device</span><span class="p" data-group-id="7493244833-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>device</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">printShortCudaDeviceInfo(device) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="registerPageLocked/1">
@@ -621,7 +615,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">registerPageLocked(m)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -631,7 +625,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Page-locks the memory of matrix and maps it for the device(s).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">registerPageLocked</span><span class="p" data-group-id="9631271443-1">(</span><span class="n">m</span><span class="p" data-group-id="9631271443-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Page-locks the memory of matrix and maps it for the device(s).</p><h5>Positional Arguments</h5><ul><li><p><strong>m</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Input matrix.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">registerPageLocked(m) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="resetDevice/0">
@@ -643,7 +637,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">resetDevice()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L334" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -654,8 +648,7 @@ cv.cuda
   <section class="docstring">
 
 <p>Explicitly destroys and cleans up all resources associated with the current device in the current
-  process.
-  Any subsequent API call to this device will reinitialize the device.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">resetDevice</span><span class="p" data-group-id="5752400077-1">(</span><span class="p" data-group-id="5752400077-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+process.</p><p>Any subsequent API call to this device will reinitialize the device.</p><p>Python prototype (for reference): </p><pre><code class="python3">resetDevice() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setBufferPoolConfig/3">
@@ -667,7 +660,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">setBufferPoolConfig(deviceId, stackSize, stackCount)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L269" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -677,7 +670,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setBufferPoolConfig</span><span class="p" data-group-id="7791363960-1">(</span><span class="n">deviceId</span><span class="p">,</span><span class="w"> </span><span class="n">stackSize</span><span class="p">,</span><span class="w"> </span><span class="n">stackCount</span><span class="p" data-group-id="7791363960-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>deviceId</strong>: <code class="inline">int</code></li><li><strong>stackSize</strong>: <code class="inline">size_t</code></li><li><strong>stackCount</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setBufferPoolConfig(deviceId, stackSize, stackCount) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setBufferPoolUsage/1">
@@ -689,7 +682,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">setBufferPoolUsage(on)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L291" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L386" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -699,7 +692,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setBufferPoolUsage</span><span class="p" data-group-id="1729925323-1">(</span><span class="n">on</span><span class="p" data-group-id="1729925323-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>on</strong>: <code class="inline">bool</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setBufferPoolUsage(on) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setDevice/1">
@@ -711,7 +704,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">setDevice(device)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L313" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L417" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -721,8 +714,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Sets a device and initializes it for the current thread.
-  If the call of this function is omitted, a default device is initialized at the fist CUDA usage.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDevice</span><span class="p" data-group-id="1975094473-1">(</span><span class="n">device</span><span class="p" data-group-id="1975094473-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets a device and initializes it for the current thread.</p><h5>Positional Arguments</h5><ul><li><p><strong>device</strong>: <code class="inline">int</code>.</p><p>System index of a CUDA device starting with 0.</p></li></ul><p>If the call of this function is omitted, a default device is initialized at the fist CUDA usage.</p><p>Python prototype (for reference): </p><pre><code class="python3">setDevice(device) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="unregisterPageLocked/1">
@@ -734,7 +726,7 @@ cv.cuda
     </a>
     <h1 class="signature" translate="no">unregisterPageLocked(m)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L334" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -744,7 +736,7 @@ cv.cuda
 
   <section class="docstring">
 
-<p>Unmaps the memory of matrix and makes it pageable again.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">unregisterPageLocked</span><span class="p" data-group-id="2368906343-1">(</span><span class="n">m</span><span class="p" data-group-id="2368906343-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Unmaps the memory of matrix and makes it pageable again.</p><h5>Positional Arguments</h5><ul><li><p><strong>m</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Input matrix.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">unregisterPageLocked(m) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -769,7 +761,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">createContinuous!(rows, cols, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L100" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -791,7 +783,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">createContinuous!(rows, cols, type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L51" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -813,7 +805,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">ensureSizeIsEnough!(rows, cols, type)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L194" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -835,7 +827,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">ensureSizeIsEnough!(rows, cols, type, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -857,7 +849,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCudaEnabledDeviceCount!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L156" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -879,7 +871,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDevice!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -901,7 +893,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">printCudaDeviceInfo!(device)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L195" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L262" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -923,7 +915,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">printShortCudaDeviceInfo!(device)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L215" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L287" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -945,7 +937,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">registerPageLocked!(m)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L236" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L317" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -967,7 +959,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">resetDevice!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L340" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -989,7 +981,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBufferPoolConfig!(deviceId, stackSize, stackCount)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L279" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L369" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1011,7 +1003,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBufferPoolUsage!(on)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L299" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L394" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1033,7 +1025,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDevice!(device)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L321" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L425" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1055,7 +1047,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">unregisterPageLocked!(m)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_cuda.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_cuda.ex#L455" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1078,10 +1070,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_cuda.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_cuda.ex">(current file)</a>
 
             </span>
 

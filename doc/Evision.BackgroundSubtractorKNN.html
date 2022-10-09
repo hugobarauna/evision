@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.BackgroundSubtractorKNN — Evision v0.1.7-dev</title>
+    <title>Evision.BackgroundSubtractorKNN — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.BackgroundSubtractorKNN</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,9 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the shadow detection flag
-  If true, the algorithm detects shadows and marks them. See createBackgroundSubtractorKNN for
-  details.</p></div>
+          <div class="summary-synopsis"><p>Returns the shadow detection flag</p></div>
 
       </div>
 
@@ -138,9 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the threshold on the squared distance between the pixel and the sample
-  The threshold on the squared distance between the pixel and the sample to decide whether a pixel is
-  close to a data sample.</p></div>
+          <div class="summary-synopsis"><p>Returns the threshold on the squared distance between the pixel and the sample</p></div>
 
       </div>
 
@@ -160,9 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the number of neighbours, the k in the kNN.
-  K is the number of samples that need to be within dist2Threshold in order to decide that that
-  pixel is matching the kNN background model.</p></div>
+          <div class="summary-synopsis"><p>Returns the number of neighbours, the k in the kNN.</p></div>
 
       </div>
 
@@ -182,11 +178,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the shadow threshold
-  A shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in
-  the paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel
-  is more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,
-  Detecting Moving Shadows...*, IEEE PAMI,2003.</p></div>
+          <div class="summary-synopsis"><p>Returns the shadow threshold</p></div>
 
       </div>
 
@@ -196,9 +188,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the shadow value
-  Shadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0
-  in the mask always means background, 255 means foreground.</p></div>
+          <div class="summary-synopsis"><p>Returns the shadow value</p></div>
 
       </div>
 
@@ -248,8 +238,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Sets the number of data samples in the background model.
-  The model needs to be reinitalized to reserve memory.</p></div>
+          <div class="summary-synopsis"><p>Sets the number of data samples in the background model.</p></div>
 
       </div>
 
@@ -443,7 +432,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDetectShadows(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -453,9 +442,8 @@ cv
 
   <section class="docstring">
 
-<p>Returns the shadow detection flag
-  If true, the algorithm detects shadows and marks them. See createBackgroundSubtractorKNN for
-  details.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDetectShadows</span><span class="p" data-group-id="6871529458-1">(</span><span class="p" data-group-id="6871529458-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the shadow detection flag</p><p>If true, the algorithm detects shadows and marks them. See createBackgroundSubtractorKNN for
+details.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDetectShadows() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getDist2Threshold/1">
@@ -467,7 +455,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDist2Threshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -477,9 +465,8 @@ cv
 
   <section class="docstring">
 
-<p>Returns the threshold on the squared distance between the pixel and the sample
-  The threshold on the squared distance between the pixel and the sample to decide whether a pixel is
-  close to a data sample.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDist2Threshold</span><span class="p" data-group-id="6473383177-1">(</span><span class="p" data-group-id="6473383177-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the threshold on the squared distance between the pixel and the sample</p><p>The threshold on the squared distance between the pixel and the sample to decide whether a pixel is
+close to a data sample.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDist2Threshold() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getHistory/1">
@@ -491,7 +478,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getHistory(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -501,7 +488,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns the number of last frames that affect the background model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getHistory</span><span class="p" data-group-id="9953974054-1">(</span><span class="p" data-group-id="9953974054-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of last frames that affect the background model</p><p>Python prototype (for reference): </p><pre><code class="python3">getHistory() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getkNNSamples/1">
@@ -513,7 +500,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getkNNSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -523,9 +510,8 @@ cv
 
   <section class="docstring">
 
-<p>Returns the number of neighbours, the k in the kNN.
-  K is the number of samples that need to be within dist2Threshold in order to decide that that
-  pixel is matching the kNN background model.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getkNNSamples</span><span class="p" data-group-id="4550510369-1">(</span><span class="p" data-group-id="4550510369-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of neighbours, the k in the kNN.</p><p>K is the number of samples that need to be within dist2Threshold in order to decide that that
+pixel is matching the kNN background model.</p><p>Python prototype (for reference): </p><pre><code class="python3">getkNNSamples() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNSamples/1">
@@ -537,7 +523,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getNSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L80" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -547,7 +533,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns the number of data samples in the background model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNSamples</span><span class="p" data-group-id="9932015011-1">(</span><span class="p" data-group-id="9932015011-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of data samples in the background model</p><p>Python prototype (for reference): </p><pre><code class="python3">getNSamples() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getShadowThreshold/1">
@@ -559,7 +545,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getShadowThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -569,11 +555,10 @@ cv
 
   <section class="docstring">
 
-<p>Returns the shadow threshold
-  A shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in
-  the paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel
-  is more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,
-  Detecting Moving Shadows...*, IEEE PAMI,2003.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getShadowThreshold</span><span class="p" data-group-id="2168465454-1">(</span><span class="p" data-group-id="2168465454-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the shadow threshold</p><p>A shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in
+the paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel
+is more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,
+Detecting Moving Shadows...*, IEEE PAMI,2003.</p><p>Python prototype (for reference): </p><pre><code class="python3">getShadowThreshold() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getShadowValue/1">
@@ -585,7 +570,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getShadowValue(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L126" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -595,9 +580,8 @@ cv
 
   <section class="docstring">
 
-<p>Returns the shadow value
-  Shadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0
-  in the mask always means background, 255 means foreground.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getShadowValue</span><span class="p" data-group-id="2191948326-1">(</span><span class="p" data-group-id="2191948326-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the shadow value</p><p>Shadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0
+in the mask always means background, 255 means foreground.</p><p>Python prototype (for reference): </p><pre><code class="python3">getShadowValue() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="setDetectShadows/2">
@@ -609,7 +593,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setDetectShadows(self, detectShadows)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -619,7 +603,7 @@ cv
 
   <section class="docstring">
 
-<p>Enables or disables shadow detection</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDetectShadows</span><span class="p" data-group-id="1901708838-1">(</span><span class="n">detectShadows</span><span class="p" data-group-id="1901708838-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Enables or disables shadow detection</p><h5>Positional Arguments</h5><ul><li><strong>detectShadows</strong>: <code class="inline">bool</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setDetectShadows(detectShadows) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setDist2Threshold/2">
@@ -631,7 +615,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setDist2Threshold(self, dist2Threshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L181" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L198" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -641,7 +625,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the threshold on the squared distance</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDist2Threshold</span><span class="p" data-group-id="3900401792-1">(</span><span class="c">_dist2Threshold</span><span class="p" data-group-id="3900401792-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the threshold on the squared distance</p><h5>Positional Arguments</h5><ul><li><strong>dist2Threshold</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setDist2Threshold(_dist2Threshold) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setHistory/2">
@@ -653,7 +637,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setHistory(self, history)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L202" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L224" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -663,7 +647,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the number of last frames that affect the background model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setHistory</span><span class="p" data-group-id="0400755696-1">(</span><span class="n">history</span><span class="p" data-group-id="0400755696-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the number of last frames that affect the background model</p><h5>Positional Arguments</h5><ul><li><strong>history</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setHistory(history) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setkNNSamples/2">
@@ -675,7 +659,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setkNNSamples(self, nkNN)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L287" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L329" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -685,7 +669,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the k in the kNN. How many nearest neighbours need to match.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setkNNSamples</span><span class="p" data-group-id="5657362414-1">(</span><span class="c">_nkNN</span><span class="p" data-group-id="5657362414-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the k in the kNN. How many nearest neighbours need to match.</p><h5>Positional Arguments</h5><ul><li><strong>nkNN</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setkNNSamples(_nkNN) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setNSamples/2">
@@ -697,7 +681,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setNSamples(self, nN)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L251" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -707,8 +691,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the number of data samples in the background model.
-  The model needs to be reinitalized to reserve memory.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setNSamples</span><span class="p" data-group-id="1214572632-1">(</span><span class="c">_nN</span><span class="p" data-group-id="1214572632-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the number of data samples in the background model.</p><h5>Positional Arguments</h5><ul><li><strong>nN</strong>: <code class="inline">int</code></li></ul><p>The model needs to be reinitalized to reserve memory.</p><p>Python prototype (for reference): </p><pre><code class="python3">setNSamples(_nN) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setShadowThreshold/2">
@@ -720,7 +703,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setShadowThreshold(self, threshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L245" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L277" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -730,7 +713,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the shadow threshold</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setShadowThreshold</span><span class="p" data-group-id="3691188466-1">(</span><span class="n">threshold</span><span class="p" data-group-id="3691188466-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the shadow threshold</p><h5>Positional Arguments</h5><ul><li><strong>threshold</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setShadowThreshold(threshold) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setShadowValue/2">
@@ -742,7 +725,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setShadowValue(self, value)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L266" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -752,7 +735,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the shadow value</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setShadowValue</span><span class="p" data-group-id="7896314333-1">(</span><span class="n">value</span><span class="p" data-group-id="7896314333-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the shadow value</p><h5>Positional Arguments</h5><ul><li><strong>value</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setShadowValue(value) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -777,7 +760,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDetectShadows!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -799,7 +782,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDist2Threshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -821,7 +804,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getHistory!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L66" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -843,7 +826,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getkNNSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L154" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -865,7 +848,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -887,7 +870,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getShadowThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -909,7 +892,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getShadowValue!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L132" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -931,7 +914,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDetectShadows!(self, detectShadows)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L180" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -953,7 +936,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDist2Threshold!(self, dist2Threshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -975,7 +958,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setHistory!(self, history)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L210" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L232" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -997,7 +980,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setkNNSamples!(self, nkNN)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L295" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L337" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1019,7 +1002,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setNSamples!(self, nN)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L232" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L259" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1041,7 +1024,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setShadowThreshold!(self, threshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L253" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L285" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1063,7 +1046,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setShadowValue!(self, value)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractorknn.ex#L274" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractorknn.ex#L311" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1086,10 +1069,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_backgroundsubtractorknn.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_backgroundsubtractorknn.ex">(current file)</a>
 
             </span>
 

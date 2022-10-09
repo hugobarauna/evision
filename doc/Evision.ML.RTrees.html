@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.ML.RTrees — Evision v0.1.7-dev</title>
+    <title>Evision.ML.RTrees — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.RTrees</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -136,8 +138,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
-  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
+          <div class="summary-synopsis"><p>Returns the algorithm string identifier.
+This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -157,8 +159,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
-  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>filename</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Saves the algorithm to a file.
+In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -168,8 +170,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p></div>
+          <div class="summary-synopsis"><p>simplified API for language bindings</p></div>
 
       </div>
 
@@ -179,8 +180,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p></div>
+          <div class="summary-synopsis"><p>simplified API for language bindings</p></div>
 
       </div>
 
@@ -197,7 +197,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -207,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -217,9 +217,9 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>  Creates the empty model.
-  Use StatModel::train to train the model, StatModel::train to create and train the model,
-  Algorithm::load to load the pre-trained model.</p></div>
+          <div class="summary-synopsis"><p>Creates the empty model.
+Use StatModel::train to train the model, StatModel::train to create and train the model,
+Algorithm::load to load the pre-trained model.</p></div>
 
       </div>
 
@@ -299,8 +299,8 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>  Returns the OOB error value, computed at the training stage when calcOOBError is set to true.
-   If this flag was set to false, 0 is returned. The OOB error is also scaled by sample weighting.</p></div>
+          <div class="summary-synopsis"><p>Returns the OOB error value, computed at the training stage when calcOOBError is set to true.
+ If this flag was set to false, 0 is returned. The OOB error is also scaled by sample weighting.</p></div>
 
       </div>
 
@@ -380,10 +380,10 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>  Returns the variable importance array.
-  The method returns the variable importance vector, computed at the training stage when
-  CalculateVarImportance is set to true. If this flag was set to false, the empty matrix is
-  returned.</p></div>
+          <div class="summary-synopsis"><p>Returns the variable importance array.
+The method returns the variable importance vector, computed at the training stage when
+CalculateVarImportance is set to true. If this flag was set to false, the empty matrix is
+returned.</p></div>
 
       </div>
 
@@ -393,7 +393,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>flags</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>results</strong>: UMat.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p></div>
 
       </div>
 
@@ -403,7 +403,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>flags</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>results</strong>: UMat.</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p></div>
 
       </div>
 
@@ -433,10 +433,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized RTree from a file
-   Use RTree::save to serialize and store an RTree to disk.
-   Load the RTree from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p></div>
+          <div class="summary-synopsis"><p>Loads and creates a serialized RTree from a file</p></div>
 
       </div>
 
@@ -446,10 +443,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized RTree from a file
-   Use RTree::save to serialize and store an RTree to disk.
-   Load the RTree from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p></div>
+          <div class="summary-synopsis"><p>Loads and creates a serialized RTree from a file</p></div>
 
       </div>
 
@@ -459,7 +453,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -469,7 +463,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -479,7 +473,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getActiveVarCount @see getActiveVarCount</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getActiveVarCount @see getActiveVarCount</p></div>
 
       </div>
 
@@ -489,7 +483,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getCalculateVarImportance @see getCalculateVarImportance</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getCalculateVarImportance @see getCalculateVarImportance</p></div>
 
       </div>
 
@@ -499,7 +493,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getCVFolds @see getCVFolds</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getCVFolds @see getCVFolds</p></div>
 
       </div>
 
@@ -509,7 +503,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getMaxCategories @see getMaxCategories</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxCategories @see getMaxCategories</p></div>
 
       </div>
 
@@ -519,7 +513,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getMaxDepth @see getMaxDepth</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxDepth @see getMaxDepth</p></div>
 
       </div>
 
@@ -529,7 +523,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getMinSampleCount @see getMinSampleCount</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMinSampleCount @see getMinSampleCount</p></div>
 
       </div>
 
@@ -539,7 +533,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getPriors @see getPriors</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><p>@copybrief getPriors @see getPriors</p></div>
 
       </div>
 
@@ -549,7 +543,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p></div>
 
       </div>
 
@@ -559,7 +553,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getTermCriteria @see getTermCriteria</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">TermCriteria</code></li></ul><p>@copybrief getTermCriteria @see getTermCriteria</p></div>
 
       </div>
 
@@ -569,7 +563,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p></div>
 
       </div>
 
@@ -579,7 +573,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getUse1SERule @see getUse1SERule</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUse1SERule @see getUse1SERule</p></div>
 
       </div>
 
@@ -589,7 +583,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getUseSurrogates @see getUseSurrogates</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseSurrogates @see getUseSurrogates</p></div>
 
       </div>
 
@@ -599,7 +593,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -609,7 +603,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -1133,7 +1127,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1143,7 +1137,7 @@ cv
 
   <section class="docstring">
 
-<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="3933118526-1">(</span><span class="p" data-group-id="3933118526-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="python3">clear() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -1155,7 +1149,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L232" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1165,8 +1159,8 @@ cv
 
   <section class="docstring">
 
-<p>  Returns the algorithm string identifier.
-  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="8049819741-1">(</span><span class="p" data-group-id="8049819741-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the algorithm string identifier.
+This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDefaultName() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -1178,7 +1172,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L672" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L784" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1188,7 +1182,7 @@ cv
 
   <section class="docstring">
 
-<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="6869773893-1">(</span><span class="n">fn_</span><span class="p" data-group-id="6869773893-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Reads algorithm parameters from a file storage</p><h5>Positional Arguments</h5><ul><li><strong>fn_</strong>: <code class="inline">FileNode</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">read(fn_) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -1200,7 +1194,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L694" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L810" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1210,8 +1204,8 @@ cv
 
   <section class="docstring">
 
-<p>  Saves the algorithm to a file.
-  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="4435534797-1">(</span><span class="n">filename</span><span class="p" data-group-id="4435534797-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>filename</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Saves the algorithm to a file.
+In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="python3">save(filename) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -1223,7 +1217,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1085" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1298" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1233,8 +1227,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="6864690070-1">(</span><span class="n">fs</span><span class="p" data-group-id="6864690070-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="6864690070-2">]</span><span class="p" data-group-id="6864690070-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>simplified API for language bindings</p><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: <code class="inline">Ptr&lt;FileStorage&gt;</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">write(fs[, name]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -1246,7 +1239,7 @@ Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code cl
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1056" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1267" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1256,8 +1249,7 @@ Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code cl
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="1648375193-1">(</span><span class="n">fs</span><span class="p" data-group-id="1648375193-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="1648375193-2">]</span><span class="p" data-group-id="1648375193-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>simplified API for language bindings</p><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: <code class="inline">Ptr&lt;FileStorage&gt;</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">write(fs[, name]) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -1282,7 +1274,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1292,11 +1284,12 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
-</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
-</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
-</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
-  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="6622839129-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="6622839129-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="6622839129-2">]</span><span class="p" data-group-id="6622839129-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<p>Computes error on the training or test dataset</p><h5>Positional Arguments</h5><ul><li><p><strong>data</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>the training data</p></li><li><p><strong>test</strong>: <code class="inline">bool</code>.</p><p>if true, the error is computed over the test subset of the data, otherwise it's
+computed over the training subset of the data. Please note that if you loaded a completely
+different dataset to evaluate already trained classifier, you will probably want not to set
+the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
+that the error is computed for the whole new set. Yes, this sounds a bit confusing.</p></li></ul><h5>Return</h5><ul><li><p><strong>resp</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>the optional output responses.</p></li></ul><p>The method uses StatModel::predict to compute the error. For regression models the error is
+computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="python3">calcError(data, test[, resp]) -&gt; retval, resp</code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -1308,7 +1301,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1318,11 +1311,12 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
-</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
-</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
-</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
-  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="4354729017-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="4354729017-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="4354729017-2">]</span><span class="p" data-group-id="4354729017-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<p>Computes error on the training or test dataset</p><h5>Positional Arguments</h5><ul><li><p><strong>data</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>the training data</p></li><li><p><strong>test</strong>: <code class="inline">bool</code>.</p><p>if true, the error is computed over the test subset of the data, otherwise it's
+computed over the training subset of the data. Please note that if you loaded a completely
+different dataset to evaluate already trained classifier, you will probably want not to set
+the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
+that the error is computed for the whole new set. Yes, this sounds a bit confusing.</p></li></ul><h5>Return</h5><ul><li><p><strong>resp</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>the optional output responses.</p></li></ul><p>The method uses StatModel::predict to compute the error. For regression models the error is
+computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="python3">calcError(data, test[, resp]) -&gt; retval, resp</code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -1334,7 +1328,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L132" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1344,9 +1338,9 @@ cv.ml
 
   <section class="docstring">
 
-<p>  Creates the empty model.
-  Use StatModel::train to train the model, StatModel::train to create and train the model,
-  Algorithm::load to load the pre-trained model.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="3932189148-1">(</span><span class="p" data-group-id="3932189148-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Creates the empty model.
+Use StatModel::train to train the model, StatModel::train to create and train the model,
+Algorithm::load to load the pre-trained model.</p><p>Python prototype (for reference): </p><pre><code class="python3">create() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -1358,7 +1352,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1368,7 +1362,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="6463505668-1">(</span><span class="p" data-group-id="6463505668-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">empty() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getActiveVarCount/1">
@@ -1380,7 +1374,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getActiveVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L171" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1390,7 +1384,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setActiveVarCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getActiveVarCount</span><span class="p" data-group-id="6434078231-1">(</span><span class="p" data-group-id="6434078231-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setActiveVarCount</p><p>Python prototype (for reference): </p><pre><code class="python3">getActiveVarCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getCalculateVarImportance/1">
@@ -1402,7 +1396,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getCalculateVarImportance(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L181" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L211" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1412,7 +1406,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setCalculateVarImportance</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCalculateVarImportance</span><span class="p" data-group-id="0712908349-1">(</span><span class="p" data-group-id="0712908349-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setCalculateVarImportance</p><p>Python prototype (for reference): </p><pre><code class="python3">getCalculateVarImportance() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getCVFolds/1">
@@ -1424,7 +1418,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getCVFolds(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L162" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1434,7 +1428,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setCVFolds</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCVFolds</span><span class="p" data-group-id="7436671653-1">(</span><span class="p" data-group-id="7436671653-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setCVFolds</p><p>Python prototype (for reference): </p><pre><code class="python3">getCVFolds() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getMaxCategories/1">
@@ -1446,7 +1440,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getMaxCategories(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L220" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L252" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1456,7 +1450,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMaxCategories</span><span class="p" data-group-id="3675519042-1">(</span><span class="p" data-group-id="3675519042-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="python3">getMaxCategories() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getMaxDepth/1">
@@ -1468,7 +1462,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getMaxDepth(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L239" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1478,7 +1472,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMaxDepth</span><span class="p" data-group-id="0864859962-1">(</span><span class="p" data-group-id="0864859962-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="python3">getMaxDepth() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getMinSampleCount/1">
@@ -1490,7 +1484,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getMinSampleCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L292" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1500,7 +1494,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMinSampleCount</span><span class="p" data-group-id="7861661626-1">(</span><span class="p" data-group-id="7861661626-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="python3">getMinSampleCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getOOBError/1">
@@ -1512,7 +1506,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getOOBError(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L313" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1522,8 +1516,8 @@ cv.ml
 
   <section class="docstring">
 
-<p>  Returns the OOB error value, computed at the training stage when calcOOBError is set to true.
-   If this flag was set to false, 0 is returned. The OOB error is also scaled by sample weighting.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getOOBError</span><span class="p" data-group-id="9715005765-1">(</span><span class="p" data-group-id="9715005765-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the OOB error value, computed at the training stage when calcOOBError is set to true.
+ If this flag was set to false, 0 is returned. The OOB error is also scaled by sample weighting.</p><p>Python prototype (for reference): </p><pre><code class="python3">getOOBError() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getPriors/1">
@@ -1535,7 +1529,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getPriors(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L297" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L333" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1545,7 +1539,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setPriors</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getPriors</span><span class="p" data-group-id="2505157539-1">(</span><span class="p" data-group-id="2505157539-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setPriors</p><p>Python prototype (for reference): </p><pre><code class="python3">getPriors() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getRegressionAccuracy/1">
@@ -1557,7 +1551,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getRegressionAccuracy(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L353" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1567,7 +1561,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getRegressionAccuracy</span><span class="p" data-group-id="9268736298-1">(</span><span class="p" data-group-id="9268736298-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="python3">getRegressionAccuracy() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTermCriteria/1">
@@ -1579,7 +1573,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTermCriteria(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L335" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L373" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1589,7 +1583,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTermCriteria</span><span class="p" data-group-id="3612334619-1">(</span><span class="p" data-group-id="3612334619-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="python3">getTermCriteria() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTruncatePrunedTree/1">
@@ -1601,7 +1595,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTruncatePrunedTree(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L354" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1611,7 +1605,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTruncatePrunedTree</span><span class="p" data-group-id="8841065175-1">(</span><span class="p" data-group-id="8841065175-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="python3">getTruncatePrunedTree() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getUse1SERule/1">
@@ -1623,7 +1617,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getUse1SERule(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L373" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L413" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1633,7 +1627,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUse1SERule</span><span class="p" data-group-id="0911339319-1">(</span><span class="p" data-group-id="0911339319-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="python3">getUse1SERule() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getUseSurrogates/1">
@@ -1645,7 +1639,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getUseSurrogates(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L392" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L433" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1655,7 +1649,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUseSurrogates</span><span class="p" data-group-id="8046347534-1">(</span><span class="p" data-group-id="8046347534-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="python3">getUseSurrogates() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -1667,7 +1661,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L411" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L453" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1677,7 +1671,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="2830937189-1">(</span><span class="p" data-group-id="2830937189-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="python3">getVarCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarImportance/1">
@@ -1689,7 +1683,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVarImportance(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L433" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L476" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1699,10 +1693,10 @@ cv.ml
 
   <section class="docstring">
 
-<p>  Returns the variable importance array.
-  The method returns the variable importance vector, computed at the training stage when
-  CalculateVarImportance is set to true. If this flag was set to false, the empty matrix is
-  returned.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarImportance</span><span class="p" data-group-id="3084206136-1">(</span><span class="p" data-group-id="3084206136-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the variable importance array.
+The method returns the variable importance vector, computed at the training stage when
+CalculateVarImportance is set to true. If this flag was set to false, the empty matrix is
+returned.</p><p>Python prototype (for reference): </p><pre><code class="python3">getVarImportance() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVotes/3">
@@ -1714,7 +1708,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVotes(self, samples, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L496" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L561" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1724,11 +1718,11 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>flags</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>results</strong>: UMat.</p><p>Returns the result of each individual tree in the forest.
+<h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Array containing the samples for which votes will be calculated.</p></li><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>Flags for defining the type of RTrees.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Array where the result of the calculation will be written.</p></li></ul><p>Returns the result of each individual tree in the forest.
 In case the model is a regression problem, the method will return each of the trees'
 results for each of the sample cases. If the model is a classifier, it will return
 a Mat with samples + 1 rows, where the first row gives the class number and the
-following rows return the votes each class had for each sample.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVotes</span><span class="p" data-group-id="8295319935-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="8295319935-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="8295319935-2">]</span><span class="p" data-group-id="8295319935-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">results</span></code></pre>
+following rows return the votes each class had for each sample.</p><p>Python prototype (for reference): </p><pre><code class="python3">getVotes(samples, flags[, results]) -&gt; results</code></pre>
   </section>
 </section>
 <section class="detail" id="getVotes/4">
@@ -1740,7 +1734,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">getVotes(self, samples, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L463" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L517" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1750,11 +1744,11 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>flags</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>results</strong>: UMat.</p><p>Returns the result of each individual tree in the forest.
+<h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Array containing the samples for which votes will be calculated.</p></li><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>Flags for defining the type of RTrees.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Array where the result of the calculation will be written.</p></li></ul><p>Returns the result of each individual tree in the forest.
 In case the model is a regression problem, the method will return each of the trees'
 results for each of the sample cases. If the model is a classifier, it will return
 a Mat with samples + 1 rows, where the first row gives the class number and the
-following rows return the votes each class had for each sample.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVotes</span><span class="p" data-group-id="4483448429-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="4483448429-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="4483448429-2">]</span><span class="p" data-group-id="4483448429-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">results</span></code></pre>
+following rows return the votes each class had for each sample.</p><p>Python prototype (for reference): </p><pre><code class="python3">getVotes(samples, flags[, results]) -&gt; results</code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -1766,7 +1760,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L518" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L584" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1776,7 +1770,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="3353388026-1">(</span><span class="p" data-group-id="3353388026-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="python3">isClassifier() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -1788,7 +1782,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L537" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L604" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1798,7 +1792,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="7023297938-1">(</span><span class="p" data-group-id="7023297938-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="python3">isTrained() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -1810,7 +1804,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L595" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L678" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1820,10 +1814,9 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized RTree from a file
-   Use RTree::save to serialize and store an RTree to disk.
-   Load the RTree from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="8212598196-1">(</span><span class="n">filepath</span><span class="p" data-group-id="8212598196-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="8212598196-2">]</span><span class="p" data-group-id="8212598196-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Loads and creates a serialized RTree from a file</p><h5>Positional Arguments</h5><ul><li><p><strong>filepath</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>path to serialized RTree</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>nodeName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>name of node containing the classifier</p></li></ul><p> Use RTree::save to serialize and store an RTree to disk.
+ Load the RTree from this file again, by calling this function with the path to the file.
+ Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="python3">load(filepath[, nodeName]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="load/2">
@@ -1835,7 +1828,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">load(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L565" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L640" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1845,10 +1838,9 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>filepath</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>nodeName</strong>: String.</li></ul><p>Loads and creates a serialized RTree from a file
-   Use RTree::save to serialize and store an RTree to disk.
-   Load the RTree from this file again, by calling this function with the path to the file.
-   Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="6124958422-1">(</span><span class="n">filepath</span><span class="p" data-group-id="6124958422-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">nodeName</span><span class="p" data-group-id="6124958422-2">]</span><span class="p" data-group-id="6124958422-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Loads and creates a serialized RTree from a file</p><h5>Positional Arguments</h5><ul><li><p><strong>filepath</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>path to serialized RTree</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>nodeName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>name of node containing the classifier</p></li></ul><p> Use RTree::save to serialize and store an RTree to disk.
+ Load the RTree from this file again, by calling this function with the path to the file.
+ Optionally specify the node for the file containing the classifier</p><p>Python prototype (for reference): </p><pre><code class="python3">load(filepath[, nodeName]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -1860,7 +1852,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L651" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L758" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1870,7 +1862,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="2014463342-1">(</span><span class="n">samples</span><span class="p" data-group-id="2014463342-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="2014463342-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="2014463342-3">]</span><span class="p" data-group-id="2014463342-2">]</span><span class="p" data-group-id="2014463342-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<p>Predicts response(s) for the provided sample(s)</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The input samples, floating-point matrix</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>The optional flags, model-dependent. See cv::ml::StatModel::Flags.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The optional output matrix of results.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">predict(samples[, results[, flags]]) -&gt; retval, results</code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -1882,7 +1874,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L623" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L718" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1892,7 +1884,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="9598096821-1">(</span><span class="n">samples</span><span class="p" data-group-id="9598096821-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="9598096821-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="9598096821-3">]</span><span class="p" data-group-id="9598096821-2">]</span><span class="p" data-group-id="9598096821-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<p>Predicts response(s) for the provided sample(s)</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The input samples, floating-point matrix</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>The optional flags, model-dependent. See cv::ml::StatModel::Flags.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The optional output matrix of results.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">predict(samples[, results[, flags]]) -&gt; retval, results</code></pre>
   </section>
 </section>
 <section class="detail" id="setActiveVarCount/2">
@@ -1904,7 +1896,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setActiveVarCount(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L715" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L836" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1914,7 +1906,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getActiveVarCount @see getActiveVarCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setActiveVarCount</span><span class="p" data-group-id="5931163091-1">(</span><span class="n">val</span><span class="p" data-group-id="5931163091-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getActiveVarCount @see getActiveVarCount</p><p>Python prototype (for reference): </p><pre><code class="python3">setActiveVarCount(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setCalculateVarImportance/2">
@@ -1926,7 +1918,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setCalculateVarImportance(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L757" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L888" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1936,7 +1928,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getCalculateVarImportance @see getCalculateVarImportance</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setCalculateVarImportance</span><span class="p" data-group-id="7508222896-1">(</span><span class="n">val</span><span class="p" data-group-id="7508222896-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getCalculateVarImportance @see getCalculateVarImportance</p><p>Python prototype (for reference): </p><pre><code class="python3">setCalculateVarImportance(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setCVFolds/2">
@@ -1948,7 +1940,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setCVFolds(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L736" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L862" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1958,7 +1950,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getCVFolds @see getCVFolds</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setCVFolds</span><span class="p" data-group-id="7141545695-1">(</span><span class="n">val</span><span class="p" data-group-id="7141545695-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getCVFolds @see getCVFolds</p><p>Python prototype (for reference): </p><pre><code class="python3">setCVFolds(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setMaxCategories/2">
@@ -1970,7 +1962,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setMaxCategories(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L778" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L914" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1980,7 +1972,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getMaxCategories @see getMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMaxCategories</span><span class="p" data-group-id="6695625073-1">(</span><span class="n">val</span><span class="p" data-group-id="6695625073-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxCategories @see getMaxCategories</p><p>Python prototype (for reference): </p><pre><code class="python3">setMaxCategories(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setMaxDepth/2">
@@ -1992,7 +1984,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setMaxDepth(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L799" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L940" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2002,7 +1994,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getMaxDepth @see getMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMaxDepth</span><span class="p" data-group-id="2494639265-1">(</span><span class="n">val</span><span class="p" data-group-id="2494639265-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMaxDepth @see getMaxDepth</p><p>Python prototype (for reference): </p><pre><code class="python3">setMaxDepth(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setMinSampleCount/2">
@@ -2014,7 +2006,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setMinSampleCount(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L820" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L966" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2024,7 +2016,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getMinSampleCount @see getMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setMinSampleCount</span><span class="p" data-group-id="4184036577-1">(</span><span class="n">val</span><span class="p" data-group-id="4184036577-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getMinSampleCount @see getMinSampleCount</p><p>Python prototype (for reference): </p><pre><code class="python3">setMinSampleCount(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setPriors/2">
@@ -2036,7 +2028,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setPriors(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L841" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L992" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2046,7 +2038,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getPriors @see getPriors</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPriors</span><span class="p" data-group-id="6528580492-1">(</span><span class="n">val</span><span class="p" data-group-id="6528580492-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><p>@copybrief getPriors @see getPriors</p><p>Python prototype (for reference): </p><pre><code class="python3">setPriors(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setRegressionAccuracy/2">
@@ -2058,7 +2050,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setRegressionAccuracy(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L862" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1018" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2068,7 +2060,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setRegressionAccuracy</span><span class="p" data-group-id="3347744214-1">(</span><span class="n">val</span><span class="p" data-group-id="3347744214-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">float</code></li></ul><p>@copybrief getRegressionAccuracy @see getRegressionAccuracy</p><p>Python prototype (for reference): </p><pre><code class="python3">setRegressionAccuracy(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setTermCriteria/2">
@@ -2080,7 +2072,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setTermCriteria(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L883" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1044" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2090,7 +2082,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getTermCriteria @see getTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTermCriteria</span><span class="p" data-group-id="0252880789-1">(</span><span class="n">val</span><span class="p" data-group-id="0252880789-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">TermCriteria</code></li></ul><p>@copybrief getTermCriteria @see getTermCriteria</p><p>Python prototype (for reference): </p><pre><code class="python3">setTermCriteria(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setTruncatePrunedTree/2">
@@ -2102,7 +2094,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setTruncatePrunedTree(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L904" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1070" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2112,7 +2104,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTruncatePrunedTree</span><span class="p" data-group-id="1478908466-1">(</span><span class="n">val</span><span class="p" data-group-id="1478908466-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getTruncatePrunedTree @see getTruncatePrunedTree</p><p>Python prototype (for reference): </p><pre><code class="python3">setTruncatePrunedTree(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setUse1SERule/2">
@@ -2124,7 +2116,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setUse1SERule(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L925" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1096" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2134,7 +2126,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getUse1SERule @see getUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setUse1SERule</span><span class="p" data-group-id="1215009609-1">(</span><span class="n">val</span><span class="p" data-group-id="1215009609-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUse1SERule @see getUse1SERule</p><p>Python prototype (for reference): </p><pre><code class="python3">setUse1SERule(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setUseSurrogates/2">
@@ -2146,7 +2138,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">setUseSurrogates(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L946" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1122" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2156,7 +2148,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>@copybrief getUseSurrogates @see getUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setUseSurrogates</span><span class="p" data-group-id="9486633792-1">(</span><span class="n">val</span><span class="p" data-group-id="9486633792-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getUseSurrogates @see getUseSurrogates</p><p>Python prototype (for reference): </p><pre><code class="python3">setUseSurrogates(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -2168,7 +2160,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1027" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1236" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2178,8 +2170,9 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
-</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="7493726960-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="7493726960-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="6750455136-1">(</span><span class="n">trainData</span><span class="p" data-group-id="6750455136-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6750455136-2">]</span><span class="p" data-group-id="6750455136-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>trainData</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>training data that can be loaded from file using TrainData::loadFromCSV or
+created with TrainData::create.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>optional flags, depending on the model. Some of the models can be updated with the
+new training samples, not completely overwritten (such as NormalBayesClassifier or ANN_MLP).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(trainData[, flags]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -2191,7 +2184,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L998" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1199" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2201,8 +2194,9 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
-</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="0462851163-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="0462851163-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="2218037193-1">(</span><span class="n">trainData</span><span class="p" data-group-id="2218037193-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="2218037193-2">]</span><span class="p" data-group-id="2218037193-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>trainData</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>training data that can be loaded from file using TrainData::loadFromCSV or
+created with TrainData::create.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>optional flags, depending on the model. Some of the models can be updated with the
+new training samples, not completely overwritten (such as NormalBayesClassifier or ANN_MLP).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(trainData[, flags]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -2214,7 +2208,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L967" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1160" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2224,7 +2218,7 @@ following rows return the votes each class had for each sample.</p></li></ul><p>
 
   <section class="docstring">
 
-<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="7603496134-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="7603496134-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>training samples</p></li><li><p><strong>layout</strong>: <code class="inline">int</code>.</p><p>See ml::SampleTypes.</p></li><li><p><strong>responses</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>vector of responses associated with the training samples.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(samples, layout, responses) -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -2249,7 +2243,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2271,7 +2265,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L49" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2293,7 +2287,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2315,7 +2309,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L138" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2337,7 +2331,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L130" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L157" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2359,7 +2353,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getActiveVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L149" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2381,7 +2375,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCalculateVarImportance!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2403,7 +2397,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCVFolds!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L197" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2425,7 +2419,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L207" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L238" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2447,7 +2441,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMaxCategories!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L226" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L258" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2469,7 +2463,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMaxDepth!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L245" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2491,7 +2485,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMinSampleCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L264" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L298" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2513,7 +2507,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getOOBError!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L284" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L319" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2535,7 +2529,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getPriors!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L339" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2557,7 +2551,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getRegressionAccuracy!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L322" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2579,7 +2573,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTermCriteria!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L379" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2601,7 +2595,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTruncatePrunedTree!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L360" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L399" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2623,7 +2617,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUse1SERule!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L379" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L419" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2645,7 +2639,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getUseSurrogates!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L398" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L439" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2667,7 +2661,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L417" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L459" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2689,7 +2683,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarImportance!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L439" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L482" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2711,7 +2705,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVotes!(self, samples, flags)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L505" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L570" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2733,7 +2727,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVotes!(self, samples, flags, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L472" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L526" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2755,7 +2749,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L524" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L590" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2777,7 +2771,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L543" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L610" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2799,7 +2793,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L603" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L686" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2821,7 +2815,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L573" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L648" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2843,7 +2837,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L659" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L766" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2865,7 +2859,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L631" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L726" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2887,7 +2881,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L680" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L791" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2909,7 +2903,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L702" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L818" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2931,7 +2925,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setActiveVarCount!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L723" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L844" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2953,7 +2947,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setCalculateVarImportance!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L765" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L896" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2975,7 +2969,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setCVFolds!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L744" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L870" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2997,7 +2991,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMaxCategories!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L786" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L922" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3019,7 +3013,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMaxDepth!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L807" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L948" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3041,7 +3035,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setMinSampleCount!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L828" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L974" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3063,7 +3057,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setPriors!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L849" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1000" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3085,7 +3079,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setRegressionAccuracy!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L870" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1026" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3107,7 +3101,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTermCriteria!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L891" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1052" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3129,7 +3123,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTruncatePrunedTree!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L912" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1078" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3151,7 +3145,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUse1SERule!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L933" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1104" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3173,7 +3167,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setUseSurrogates!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L954" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1130" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3195,7 +3189,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1035" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1244" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3217,7 +3211,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1006" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1207" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3239,7 +3233,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L977" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1170" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3261,7 +3255,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1093" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1306" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3283,7 +3277,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_rtrees.ex#L1064" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_rtrees.ex#L1275" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -3306,10 +3300,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_rtrees.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_ml_rtrees.ex">(current file)</a>
 
             </span>
 

@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.DNN.Net — Evision v0.1.7-dev</title>
+    <title>Evision.DNN.Net — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.Net</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -136,8 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Connects output of the first layer to input of the second layer.
-   Descriptors have the following template &lt;DFN&gt;&amp;lt;layer_name&amp;gt;[.input_number]&lt;/DFN&gt;</p></div>
+          <div class="summary-synopsis"><p>Connects output of the first layer to input of the second layer.</p></div>
 
       </div>
 
@@ -177,8 +178,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Dump net to String
-@returns String with structure, hyperparameters, backend, target and fusion</p></div>
+          <div class="summary-synopsis"><p>Dump net to String</p></div>
 
       </div>
 
@@ -198,8 +198,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Dump net structure, hyperparameters, backend, target and fusion to dot file
-@see dump()</p></div>
+          <div class="summary-synopsis"><p>Dump net structure, hyperparameters, backend, target and fusion to dot file</p></div>
 
       </div>
 
@@ -219,7 +218,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Returns true if there are no layers in the network.</p></div>
+          <div class="summary-synopsis"><p>Returns true if there are no layers in the network.</p></div>
 
       </div>
 
@@ -259,7 +258,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>outBlobNames</strong>: vector_String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>outputBlobs</strong>: vector_UMat.</li></ul><p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p></div>
+          <div class="summary-synopsis"><p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p></div>
 
       </div>
 
@@ -299,8 +298,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>outputName</strong>: String.</li></ul><p>Runs forward pass to compute output of layer with name @p outputName.
-@details By default runs forward pass for the whole network.</p></div>
+          <div class="summary-synopsis"><p>Runs forward pass to compute output of layer with name @p outputName.</p></div>
 
       </div>
 
@@ -330,7 +328,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -340,7 +338,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">int</code></li><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -380,7 +378,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -400,8 +398,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Converts string name of the layer to the integer identifier.
-@returns id of the layer, or -1 if the layer wasn't found.</p></div>
+          <div class="summary-synopsis"><p>Converts string name of the layer to the integer identifier.</p></div>
 
       </div>
 
@@ -441,7 +438,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>netInputShapes</strong>: <code class="inline">[MatShape]</code></li><li><strong>layerId</strong>: <code class="inline">int</code></li></ul><h5>Return</h5><ul><li><strong>inLayerShapes</strong>: <code class="inline">[MatShape]</code></li><li><strong>outLayerShapes</strong>: <code class="inline">[MatShape]</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -461,8 +458,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns count of layers of specified type.
-@returns count of layers</p></div>
+          <div class="summary-synopsis"><p>Returns count of layers of specified type.</p></div>
 
       </div>
 
@@ -482,7 +478,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><h5>Return</h5><ul><li><strong>layersIds</strong>: <code class="inline">[int]</code></li><li><strong>inLayersShapes</strong>: <code class="inline">[vector_MatShape]</code></li><li><strong>outLayersShapes</strong>: <code class="inline">[vector_MatShape]</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -532,7 +528,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><h5>Return</h5><ul><li><strong>weights</strong>: <code class="inline">size_t</code></li><li><strong>blobs</strong>: <code class="inline">size_t</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -542,7 +538,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">int</code></li><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><h5>Return</h5><ul><li><strong>weights</strong>: <code class="inline">size_t</code></li><li><strong>blobs</strong>: <code class="inline">size_t</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -592,7 +588,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: String</li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -602,7 +598,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: String</li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -622,10 +618,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns overall time for inference and timings (in ticks) for layers.
-   Indexes in returned vector correspond to layers ids. Some layers can be fused with others,
-   in this case zero ticks count will be return for that skipped layers. Supported by DNN_BACKEND_OPENCV on DNN_TARGET_CPU only.
-@return overall ticks for model inference.</p></div>
+          <div class="summary-synopsis"><p>Returns overall time for inference and timings (in ticks) for layers.</p></div>
 
       </div>
 
@@ -645,8 +638,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns indexes of layers with unconnected outputs.
-   FIXIT: Rework API to registerOutput() approach, deprecate this call</p></div>
+          <div class="summary-synopsis"><p>Returns indexes of layers with unconnected outputs.</p></div>
 
       </div>
 
@@ -666,8 +658,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns names of layers with unconnected outputs.
-   FIXIT: Rework API to registerOutput() approach, deprecate this call</p></div>
+          <div class="summary-synopsis"><p>Returns names of layers with unconnected outputs.</p></div>
 
       </div>
 
@@ -707,8 +698,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
-@returns Net object.</p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><p>Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).</p></div>
 
       </div>
 
@@ -728,11 +718,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Compile Halide layers.
-@see setPreferableBackend
-   Schedule layers that support Halide backend. Then compile them for
-   specific target. For layers that not represented in scheduling file
-   or if no manual scheduling used at all, automatic scheduling will be applied.</p></div>
+          <div class="summary-synopsis"><p>Compile Halide layers.</p></div>
 
       </div>
 
@@ -762,8 +748,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>blob</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li><li><strong>scalefactor</strong>: double.</li><li><strong>mean</strong>: Scalar.</li></ul><p>Sets the new input value for the network
-@see connect(String, String) to know format of the descriptor.</p></div>
+          <div class="summary-synopsis"><p>Sets the new input value for the network</p></div>
 
       </div>
 
@@ -773,8 +758,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>blob</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li><li><strong>scalefactor</strong>: double.</li><li><strong>mean</strong>: Scalar.</li></ul><p>Sets the new input value for the network
-@see connect(String, String) to know format of the descriptor.</p></div>
+          <div class="summary-synopsis"><p>Sets the new input value for the network</p></div>
 
       </div>
 
@@ -814,11 +798,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Sets outputs names of the network input pseudo layer.
-   Each net always has special own the network input pseudo layer with id=0.
-   This layer stores the user blobs only and don't make any computations.
-   In fact, this layer provides the only way to pass user data into the network.
-   As any other layer, this layer can label its outputs and this function provides an easy way to do this.</p></div>
+          <div class="summary-synopsis"><p>Sets outputs names of the network input pseudo layer.</p></div>
 
       </div>
 
@@ -838,7 +818,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li><li><strong>numParam</strong>: <code class="inline">int</code></li><li><strong>blob</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -858,10 +838,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Ask network to use specific computation backend where it supported.
-@see Backend
-   If OpenCV is compiled with Intel's Inference Engine library, DNN_BACKEND_DEFAULT
-   means DNN_BACKEND_INFERENCE_ENGINE. Otherwise it equals to DNN_BACKEND_OPENCV.</p></div>
+          <div class="summary-synopsis"><p>Ask network to use specific computation backend where it supported.</p></div>
 
       </div>
 
@@ -881,19 +858,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Ask network to make computations on specific target device.
-@see Target
-   List of supported combinations backend / target:
-   |                        | DNN_BACKEND_OPENCV | DNN_BACKEND_INFERENCE_ENGINE | DNN_BACKEND_HALIDE |  DNN_BACKEND_CUDA |
-   |------------------------|--------------------|------------------------------|--------------------|-------------------|
-   | DNN_TARGET_CPU         |                  + |                            + |                  + |                   |
-   | DNN_TARGET_OPENCL      |                  + |                            + |                  + |                   |
-   | DNN_TARGET_OPENCL_FP16 |                  + |                            + |                    |                   |
-   | DNN_TARGET_MYRIAD      |                    |                            + |                    |                   |
-   | DNN_TARGET_FPGA        |                    |                            + |                    |                   |
-   | DNN_TARGET_CUDA        |                    |                              |                    |                 + |
-   | DNN_TARGET_CUDA_FP16   |                    |                              |                    |                 + |
-   | DNN_TARGET_HDDL        |                    |                            + |                    |                   |</p></div>
+          <div class="summary-synopsis"><p>Ask network to make computations on specific target device.</p></div>
 
       </div>
 
@@ -920,7 +885,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">connect!(self, outPin, inpPin)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L66" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -942,7 +907,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">connect(self, outPin, inpPin)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L57" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -952,12 +917,10 @@ Functions
 
   <section class="docstring">
 
-<p>Connects output of the first layer to input of the second layer.
-   Descriptors have the following template &lt;DFN&gt;&amp;lt;layer_name&amp;gt;[.input_number]&lt;/DFN&gt;:</p><ul><li>the first part of the template &lt;DFN&gt;layer_name&lt;/DFN&gt; is string name of the added layer.
-If this part is empty then the network input pseudo layer will be used;</li><li>the second optional part of the template &lt;DFN&gt;input_number&lt;/DFN&gt;
+<p>Connects output of the first layer to input of the second layer.</p><h5>Positional Arguments</h5><ul><li><p><strong>outPin</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>descriptor of the first layer output.</p></li><li><p><strong>inpPin</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>descriptor of the second layer input.</p></li></ul><p> Descriptors have the following template &lt;DFN&gt;&amp;lt;layer_name&amp;gt;[.input_number]&lt;/DFN&gt;:</p><ul><li><p>the first part of the template &lt;DFN&gt;layer_name&lt;/DFN&gt; is string name of the added layer.
+If this part is empty then the network input pseudo layer will be used;</p></li><li><p>the second optional part of the template &lt;DFN&gt;input_number&lt;/DFN&gt;
 is either number of the layer input, either label one.
-If this part is omitted then the first layer input will be used.
-@see setNetInputs(), Layer::inputNameToIndex(), Layer::outputNameToIndex()</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">connect</span><span class="p" data-group-id="5434701781-1">(</span><span class="n">outPin</span><span class="p">,</span><span class="w"> </span><span class="n">inpPin</span><span class="p" data-group-id="5434701781-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+If this part is omitted then the first layer input will be used.</p></li></ul><p>@see setNetInputs(), Layer::inputNameToIndex(), Layer::outputNameToIndex()</p><p>Python prototype (for reference): </p><pre><code class="python3">connect(outPin, inpPin) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="dnn_Net!/0">
@@ -969,7 +932,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">dnn_Net!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L21" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -991,7 +954,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">dnn_Net()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1001,7 +964,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">Net</span><span class="p" data-group-id="5487281804-1">(</span><span class="p" data-group-id="5487281804-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_Net</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">Net() -&gt; &lt;dnn_Net object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="dump!/1">
@@ -1013,7 +976,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">dump!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L88" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1035,7 +998,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">dump(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L82" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1045,8 +1008,8 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Dump net to String
-@returns String with structure, hyperparameters, backend, target and fusion</p><pre><code class="makeup elixir" translate="no"><span class="nc">Call</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">setInput</span><span class="p" data-group-id="5035292809-1">(</span><span class="p" data-group-id="5035292809-1">)</span><span class="o">.</span><span class="w"> </span><span class="nc">To</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="n">backend</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">fusion</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">forward</span><span class="p" data-group-id="5035292809-2">(</span><span class="p" data-group-id="5035292809-2">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">dump</span><span class="p" data-group-id="3597987313-1">(</span><span class="p" data-group-id="3597987313-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Dump net to String</p><p>@returns String with structure, hyperparameters, backend, target and fusion
+  Call method after setInput(). To see correct backend, target and fusion run after forward().</p><p>Python prototype (for reference): </p><pre><code class="python3">dump() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="dumpToFile!/2">
@@ -1058,7 +1021,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">dumpToFile!(self, path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1080,7 +1043,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">dumpToFile(self, path)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L84" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1090,8 +1053,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Dump net structure, hyperparameters, backend, target and fusion to dot file
-@see dump()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">dumpToFile</span><span class="p" data-group-id="5150703139-1">(</span><span class="n">path</span><span class="p" data-group-id="5150703139-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Dump net structure, hyperparameters, backend, target and fusion to dot file</p><h5>Positional Arguments</h5><ul><li><p><strong>path</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>path to output file with .dot extension</p></li></ul><p>@see dump()</p><p>Python prototype (for reference): </p><pre><code class="python3">dumpToFile(path) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="empty!/1">
@@ -1103,7 +1065,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L138" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1125,7 +1087,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L132" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1135,7 +1097,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>  Returns true if there are no layers in the network.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="1528209730-1">(</span><span class="p" data-group-id="1528209730-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if there are no layers in the network.</p><p>Python prototype (for reference): </p><pre><code class="python3">empty() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="enableFusion!/2">
@@ -1147,7 +1109,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">enableFusion!(self, fusion)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1169,7 +1131,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">enableFusion(self, fusion)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L160" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1179,7 +1141,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Enables or disables layer fusion in the network.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">enableFusion</span><span class="p" data-group-id="1424792066-1">(</span><span class="n">fusion</span><span class="p" data-group-id="1424792066-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Enables or disables layer fusion in the network.</p><h5>Positional Arguments</h5><ul><li><p><strong>fusion</strong>: <code class="inline">bool</code>.</p><p>true to enable the fusion, false to disable. The fusion is enabled by default.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">enableFusion(fusion) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="forward!/2">
@@ -1191,7 +1153,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">forward!(self, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1215,7 +1177,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">forward(self, opts \\ [])</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1225,7 +1187,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>outBlobNames</strong>: vector_String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>outputBlobs</strong>: vector_UMat.</li></ul><p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">forward</span><span class="p" data-group-id="2769859913-1">(</span><span class="n">outBlobNames</span><span class="p" data-group-id="2769859913-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputBlobs</span><span class="p" data-group-id="2769859913-2">]</span><span class="p" data-group-id="2769859913-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputBlobs</span></code></pre>
+<p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p><h5>Positional Arguments</h5><ul><li><p><strong>outBlobNames</strong>: <code class="inline">[String]</code>.</p><p>names for layers which outputs are needed to get</p></li></ul><h5>Return</h5><ul><li><p><strong>outputBlobs</strong>: <code class="inline">[Evision.Mat]</code>.</p><p>contains blobs for first outputs of specified layers.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">forward(outBlobNames[, outputBlobs]) -&gt; outputBlobs</code></pre>
   </section>
 </section>
 <section class="detail" id="forwardAndRetrieve!/2">
@@ -1237,7 +1199,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">forwardAndRetrieve!(self, outBlobNames)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L179" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1259,7 +1221,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">forwardAndRetrieve(self, outBlobNames)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L171" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1269,7 +1231,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">forwardAndRetrieve</span><span class="p" data-group-id="8997715543-1">(</span><span class="n">outBlobNames</span><span class="p" data-group-id="8997715543-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">outputBlobs</span></code></pre>
+<p>Runs forward pass to compute outputs of layers listed in @p outBlobNames.</p><h5>Positional Arguments</h5><ul><li><p><strong>outBlobNames</strong>: <code class="inline">[String]</code>.</p><p>names for layers which outputs are needed to get</p></li></ul><h5>Return</h5><ul><li><p><strong>outputBlobs</strong>: <code class="inline">[vector_Mat]</code>.</p><p>contains all output blobs for each layer specified in @p outBlobNames.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">forwardAndRetrieve(outBlobNames) -&gt; outputBlobs</code></pre>
   </section>
 </section>
 <section class="detail" id="forwardAsync!/1">
@@ -1281,7 +1243,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">forwardAsync!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L206" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L266" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1303,7 +1265,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">forwardAsync(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L200" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1313,9 +1275,9 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>outputName</strong>: String.</li></ul><p>Runs forward pass to compute output of layer with name @p outputName.
-@details By default runs forward pass for the whole network.</p><pre><code class="makeup elixir" translate="no"><span class="nc">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">asynchronous</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">forward</span><span class="p" data-group-id="8764817427-1">(</span><span class="n">const</span><span class="w"> </span><span class="nc">String</span><span class="o">&amp;</span><span class="p" data-group-id="8764817427-1">)</span><span class="o">.</span><span class="w">
-</span><span class="n">dnn</span><span class="o">::</span><span class="nc">DNN_BACKEND_INFERENCE_ENGINE</span><span class="w"> </span><span class="n">backend</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">required</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">forwardAsync</span><span class="p" data-group-id="8352364636-1">(</span><span class="p" data-group-id="8352364636-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">outputName</span><span class="p" data-group-id="8352364636-2">]</span><span class="p" data-group-id="8352364636-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Runs forward pass to compute output of layer with name @p outputName.</p><h5>Keyword Arguments</h5><ul><li><p><strong>outputName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>name for layer which output is needed to get</p></li></ul><p>@details By default runs forward pass for the whole network.
+  This is an asynchronous version of forward(const String&amp;).
+  dnn::DNN_BACKEND_INFERENCE_ENGINE backend is required.</p><p>Python prototype (for reference): </p><pre><code class="python3">forwardAsync([, outputName]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getFLOPS!/2">
@@ -1327,7 +1289,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getFLOPS!(self, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1349,7 +1311,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getFLOPS!(self, layerId, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L240" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L312" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1371,7 +1333,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getFLOPS(self, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L274" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1381,8 +1343,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFLOPS</span><span class="p" data-group-id="0517027532-1">(</span><span class="n">netInputShape</span><span class="p" data-group-id="0517027532-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><p>Computes FLOP for whole loaded model with specified input shapes.
-@returns computed FLOP.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFLOPS</span><span class="p" data-group-id="0914608406-1">(</span><span class="n">netInputShapes</span><span class="p" data-group-id="0914608406-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getFLOPS(netInputShape) -&gt; retval</code></pre><h4>Variant 2:</h4><p>Computes FLOP for whole loaded model with specified input shapes.</p><h5>Positional Arguments</h5><ul><li><p><strong>netInputShapes</strong>: <code class="inline">[MatShape]</code>.</p><p>vector of shapes for all net inputs.</p></li></ul><p>@returns computed FLOP.</p><p>Python prototype (for reference): </p><pre><code class="python3">getFLOPS(netInputShapes) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getFLOPS/3">
@@ -1394,7 +1355,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getFLOPS(self, layerId, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L231" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1404,7 +1365,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFLOPS</span><span class="p" data-group-id="2056173845-1">(</span><span class="n">layerId</span><span class="p">,</span><span class="w"> </span><span class="n">netInputShape</span><span class="p" data-group-id="2056173845-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getFLOPS</span><span class="p" data-group-id="5373519017-1">(</span><span class="n">layerId</span><span class="p">,</span><span class="w"> </span><span class="n">netInputShapes</span><span class="p" data-group-id="5373519017-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">int</code></li><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getFLOPS(layerId, netInputShape) -&gt; retval</code></pre><h4>Variant 2:</h4><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">int</code></li><li><strong>netInputShapes</strong>: <code class="inline">[MatShape]</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getFLOPS(layerId, netInputShapes) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getInputDetails!/1">
@@ -1416,7 +1377,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getInputDetails!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L405" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1438,7 +1399,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getInputDetails(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L399" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1448,7 +1409,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns input scale and zeropoint for a quantized Net.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getInputDetails</span><span class="p" data-group-id="6278304506-1">(</span><span class="p" data-group-id="6278304506-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">scales</span><span class="p">,</span><span class="w"> </span><span class="n">zeropoints</span></code></pre>
+<p>Returns input scale and zeropoint for a quantized Net.</p><h5>Return</h5><ul><li><p><strong>scales</strong>: <code class="inline">[float]</code>.</p><p>output parameter for returning input scales.</p></li><li><p><strong>zeropoints</strong>: <code class="inline">[int]</code>.</p><p>output parameter for returning input zeropoints.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getInputDetails() -&gt; scales, zeropoints</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayer!/2">
@@ -1460,7 +1421,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayer!(self, layerName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L463" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1482,7 +1443,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayer(self, layerName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L344" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L455" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1492,7 +1453,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><p>Has overloading in C++</p><p>@deprecated Use int getLayerId(const String &amp;layer)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayer</span><span class="p" data-group-id="0975421884-1">(</span><span class="n">layerName</span><span class="p" data-group-id="0975421884-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><p>Returns pointer to layer with specified id or name which the network use.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayer</span><span class="p" data-group-id="7482526923-1">(</span><span class="n">layerId</span><span class="p" data-group-id="7482526923-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 3:</h4><p>Has overloading in C++</p><p>@deprecated to be removed</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayer</span><span class="p" data-group-id="0132289150-1">(</span><span class="n">layerId</span><span class="p" data-group-id="0132289150-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Has overloading in C++</p><p>@deprecated Use int getLayerId(const String &amp;layer)</p><p>Python prototype (for reference): </p><pre><code class="python3">getLayer(layerName) -&gt; retval</code></pre><h4>Variant 2:</h4><p>Returns pointer to layer with specified id or name which the network use.</p><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getLayer(layerId) -&gt; retval</code></pre><h4>Variant 3:</h4><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">LayerId</code></li></ul><p>Has overloading in C++</p><p>@deprecated to be removed</p><p>Python prototype (for reference): </p><pre><code class="python3">getLayer(layerId) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayerId!/2">
@@ -1504,7 +1465,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerId!(self, layer)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L389" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L505" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1526,7 +1487,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerId(self, layer)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L497" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1536,8 +1497,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Converts string name of the layer to the integer identifier.
-@returns id of the layer, or -1 if the layer wasn't found.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayerId</span><span class="p" data-group-id="8226733609-1">(</span><span class="n">layer</span><span class="p" data-group-id="8226733609-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Converts string name of the layer to the integer identifier.</p><h5>Positional Arguments</h5><ul><li><strong>layer</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>@returns id of the layer, or -1 if the layer wasn't found.</p><p>Python prototype (for reference): </p><pre><code class="python3">getLayerId(layer) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayerNames!/1">
@@ -1549,7 +1509,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerNames!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L407" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L524" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1571,7 +1531,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerNames(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L401" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L518" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1581,7 +1541,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayerNames</span><span class="p" data-group-id="7543264103-1">(</span><span class="p" data-group-id="7543264103-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getLayerNames() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayerShapes!/2">
@@ -1593,7 +1553,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerShapes!(self, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L427" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L553" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1617,7 +1577,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerShapes(self, opts \\ [])</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L421" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L547" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1627,7 +1587,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayerShapes</span><span class="p" data-group-id="2898138664-1">(</span><span class="n">netInputShapes</span><span class="p">,</span><span class="w"> </span><span class="n">layerId</span><span class="p" data-group-id="2898138664-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">inLayerShapes</span><span class="p">,</span><span class="w"> </span><span class="n">outLayerShapes</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>netInputShapes</strong>: <code class="inline">[MatShape]</code></li><li><strong>layerId</strong>: <code class="inline">int</code></li></ul><h5>Return</h5><ul><li><strong>inLayerShapes</strong>: <code class="inline">[MatShape]</code></li><li><strong>outLayerShapes</strong>: <code class="inline">[MatShape]</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getLayerShapes(netInputShapes, layerId) -&gt; inLayerShapes, outLayerShapes</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayersCount!/2">
@@ -1639,7 +1599,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayersCount!(self, layerType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L609" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1661,7 +1621,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayersCount(self, layerType)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L460" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L601" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1671,8 +1631,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns count of layers of specified type.
-@returns count of layers</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayersCount</span><span class="p" data-group-id="6346655328-1">(</span><span class="n">layerType</span><span class="p" data-group-id="6346655328-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns count of layers of specified type.</p><h5>Positional Arguments</h5><ul><li><p><strong>layerType</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>type.</p></li></ul><p>@returns count of layers</p><p>Python prototype (for reference): </p><pre><code class="python3">getLayersCount(layerType) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayersShapes!/2">
@@ -1684,7 +1643,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayersShapes!(self, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L488" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L638" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1708,7 +1667,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayersShapes(self, opts \\ [])</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L482" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L632" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1718,7 +1677,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayersShapes</span><span class="p" data-group-id="5850025209-1">(</span><span class="n">netInputShape</span><span class="p" data-group-id="5850025209-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">layersIds</span><span class="p">,</span><span class="w"> </span><span class="n">inLayersShapes</span><span class="p">,</span><span class="w"> </span><span class="n">outLayersShapes</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><h5>Return</h5><ul><li><strong>layersIds</strong>: <code class="inline">[int]</code></li><li><strong>inLayersShapes</strong>: <code class="inline">[vector_MatShape]</code></li><li><strong>outLayersShapes</strong>: <code class="inline">[vector_MatShape]</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getLayersShapes(netInputShape) -&gt; layersIds, inLayersShapes, outLayersShapes</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayerTypes!/1">
@@ -1730,7 +1689,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerTypes!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L446" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L579" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1752,7 +1711,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getLayerTypes(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L440" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L573" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1762,7 +1721,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns list of types for layer used in model.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayerTypes</span><span class="p" data-group-id="2028531411-1">(</span><span class="p" data-group-id="2028531411-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">layersTypes</span></code></pre>
+<p>Returns list of types for layer used in model.</p><h5>Return</h5><ul><li><p><strong>layersTypes</strong>: <code class="inline">[String]</code>.</p><p>output parameter for returning types.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getLayerTypes() -&gt; layersTypes</code></pre>
   </section>
 </section>
 <section class="detail" id="getMemoryConsumption!/2">
@@ -1774,7 +1733,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getMemoryConsumption!(self, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L553" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L729" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1796,7 +1755,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getMemoryConsumption!(self, layerId, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L522" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L690" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1818,7 +1777,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getMemoryConsumption(self, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L545" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L721" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1828,7 +1787,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMemoryConsumption</span><span class="p" data-group-id="4554971103-1">(</span><span class="n">netInputShape</span><span class="p" data-group-id="4554971103-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">weights</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><h5>Return</h5><ul><li><strong>weights</strong>: <code class="inline">size_t</code></li><li><strong>blobs</strong>: <code class="inline">size_t</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getMemoryConsumption(netInputShape) -&gt; weights, blobs</code></pre>
   </section>
 </section>
 <section class="detail" id="getMemoryConsumption/3">
@@ -1840,7 +1799,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getMemoryConsumption(self, layerId, netInputShape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L513" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L681" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1850,7 +1809,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMemoryConsumption</span><span class="p" data-group-id="3299574284-1">(</span><span class="n">layerId</span><span class="p">,</span><span class="w"> </span><span class="n">netInputShape</span><span class="p" data-group-id="3299574284-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">weights</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span></code></pre><h4>Variaint 2:</h4><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMemoryConsumption</span><span class="p" data-group-id="0656615250-1">(</span><span class="n">layerId</span><span class="p">,</span><span class="w"> </span><span class="n">netInputShapes</span><span class="p" data-group-id="0656615250-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">weights</span><span class="p">,</span><span class="w"> </span><span class="n">blobs</span></code></pre>
+<h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">int</code></li><li><strong>netInputShape</strong>: <code class="inline">MatShape</code></li></ul><h5>Return</h5><ul><li><strong>weights</strong>: <code class="inline">size_t</code></li><li><strong>blobs</strong>: <code class="inline">size_t</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getMemoryConsumption(layerId, netInputShape) -&gt; weights, blobs</code></pre><h4>Variant 2:</h4><h5>Positional Arguments</h5><ul><li><strong>layerId</strong>: <code class="inline">int</code></li><li><strong>netInputShapes</strong>: <code class="inline">[MatShape]</code></li></ul><h5>Return</h5><ul><li><strong>weights</strong>: <code class="inline">size_t</code></li><li><strong>blobs</strong>: <code class="inline">size_t</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getMemoryConsumption(layerId, netInputShapes) -&gt; weights, blobs</code></pre>
   </section>
 </section>
 <section class="detail" id="getOutputDetails!/1">
@@ -1862,7 +1821,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getOutputDetails!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L572" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L759" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1884,7 +1843,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getOutputDetails(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L566" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L753" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1894,7 +1853,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns output scale and zeropoint for a quantized Net.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getOutputDetails</span><span class="p" data-group-id="7835506708-1">(</span><span class="p" data-group-id="7835506708-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">scales</span><span class="p">,</span><span class="w"> </span><span class="n">zeropoints</span></code></pre>
+<p>Returns output scale and zeropoint for a quantized Net.</p><h5>Return</h5><ul><li><p><strong>scales</strong>: <code class="inline">[float]</code>.</p><p>output parameter for returning output scales.</p></li><li><p><strong>zeropoints</strong>: <code class="inline">[int]</code>.</p><p>output parameter for returning output zeropoints.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getOutputDetails() -&gt; scales, zeropoints</code></pre>
   </section>
 </section>
 <section class="detail" id="getParam!/2">
@@ -1906,7 +1865,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getParam!(self, layerName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L666" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L873" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1928,7 +1887,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getParam!(self, layerName, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L615" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L812" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1950,7 +1909,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getParam(self, layerName)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L658" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L865" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1960,8 +1919,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: String</li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getParam</span><span class="p" data-group-id="6689935906-1">(</span><span class="n">layerName</span><span class="p" data-group-id="6689935906-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">numParam</span><span class="p" data-group-id="6689935906-2">]</span><span class="p" data-group-id="6689935906-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><h5>Positional Arguments</h5><ul><li><strong>layer</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: int.</li></ul><p>Returns parameter blob of the layer.
-@see Layer::blobs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getParam</span><span class="p" data-group-id="5207751906-1">(</span><span class="n">layer</span><span class="p" data-group-id="5207751906-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">numParam</span><span class="p" data-group-id="5207751906-2">]</span><span class="p" data-group-id="5207751906-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getParam(layerName[, numParam]) -&gt; retval</code></pre><h4>Variant 2:</h4><p>Returns parameter blob of the layer.</p><h5>Positional Arguments</h5><ul><li><p><strong>layer</strong>: <code class="inline">int</code>.</p><p>name or id of the layer.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>numParam</strong>: <code class="inline">int</code>.</p><p>index of the layer parameter in the Layer::blobs array.</p></li></ul><p>@see Layer::blobs</p><p>Python prototype (for reference): </p><pre><code class="python3">getParam(layer[, numParam]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getParam/3">
@@ -1973,7 +1931,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getParam(self, layerName, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L607" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L804" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1983,8 +1941,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: String</li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getParam</span><span class="p" data-group-id="1581282524-1">(</span><span class="n">layerName</span><span class="p" data-group-id="1581282524-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">numParam</span><span class="p" data-group-id="1581282524-2">]</span><span class="p" data-group-id="1581282524-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><h5>Positional Arguments</h5><ul><li><strong>layer</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: int.</li></ul><p>Returns parameter blob of the layer.
-@see Layer::blobs</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getParam</span><span class="p" data-group-id="7825113782-1">(</span><span class="n">layer</span><span class="p" data-group-id="7825113782-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">numParam</span><span class="p" data-group-id="7825113782-2">]</span><span class="p" data-group-id="7825113782-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><h5>Keyword Arguments</h5><ul><li><strong>numParam</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getParam(layerName[, numParam]) -&gt; retval</code></pre><h4>Variant 2:</h4><p>Returns parameter blob of the layer.</p><h5>Positional Arguments</h5><ul><li><p><strong>layer</strong>: <code class="inline">int</code>.</p><p>name or id of the layer.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>numParam</strong>: <code class="inline">int</code>.</p><p>index of the layer parameter in the Layer::blobs array.</p></li></ul><p>@see Layer::blobs</p><p>Python prototype (for reference): </p><pre><code class="python3">getParam(layer[, numParam]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getPerfProfile!/1">
@@ -1996,7 +1953,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getPerfProfile!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L696" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L909" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2018,7 +1975,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getPerfProfile(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L690" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L903" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2028,10 +1985,9 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns overall time for inference and timings (in ticks) for layers.
-   Indexes in returned vector correspond to layers ids. Some layers can be fused with others,
-   in this case zero ticks count will be return for that skipped layers. Supported by DNN_BACKEND_OPENCV on DNN_TARGET_CPU only.
-@return overall ticks for model inference.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getPerfProfile</span><span class="p" data-group-id="6157247836-1">(</span><span class="p" data-group-id="6157247836-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">timings</span></code></pre>
+<p>Returns overall time for inference and timings (in ticks) for layers.</p><h5>Return</h5><ul><li><p><strong>timings</strong>: <code class="inline">[double]</code>.</p><p>vector for tick timings for all layers.</p></li></ul><p> Indexes in returned vector correspond to layers ids. Some layers can be fused with others,
+ in this case zero ticks count will be return for that skipped layers. Supported by DNN_BACKEND_OPENCV on DNN_TARGET_CPU only.
+@return overall ticks for model inference.</p><p>Python prototype (for reference): </p><pre><code class="python3">getPerfProfile() -&gt; retval, timings</code></pre>
   </section>
 </section>
 <section class="detail" id="getUnconnectedOutLayers!/1">
@@ -2043,7 +1999,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getUnconnectedOutLayers!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L716" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L930" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2065,7 +2021,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getUnconnectedOutLayers(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L710" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L924" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2075,8 +2031,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns indexes of layers with unconnected outputs.
-   FIXIT: Rework API to registerOutput() approach, deprecate this call</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUnconnectedOutLayers</span><span class="p" data-group-id="2377781059-1">(</span><span class="p" data-group-id="2377781059-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns indexes of layers with unconnected outputs.</p><p> FIXIT: Rework API to registerOutput() approach, deprecate this call</p><p>Python prototype (for reference): </p><pre><code class="python3">getUnconnectedOutLayers() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getUnconnectedOutLayersNames!/1">
@@ -2088,7 +2043,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getUnconnectedOutLayersNames!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L736" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L951" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2110,7 +2065,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">getUnconnectedOutLayersNames(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L730" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L945" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2120,8 +2075,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns names of layers with unconnected outputs.
-   FIXIT: Rework API to registerOutput() approach, deprecate this call</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getUnconnectedOutLayersNames</span><span class="p" data-group-id="7176547132-1">(</span><span class="p" data-group-id="7176547132-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns names of layers with unconnected outputs.</p><p> FIXIT: Rework API to registerOutput() approach, deprecate this call</p><p>Python prototype (for reference): </p><pre><code class="python3">getUnconnectedOutLayersNames() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="quantize!/4">
@@ -2133,7 +2087,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">quantize!(self, calibData, inputsDtype, outputsDtype)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L759" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L991" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2155,7 +2109,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">quantize(self, calibData, inputsDtype, outputsDtype)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L749" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L981" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2165,7 +2119,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Returns a quantized Net from a floating-point Net.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">quantize</span><span class="p" data-group-id="9334384499-1">(</span><span class="n">calibData</span><span class="p">,</span><span class="w"> </span><span class="n">inputsDtype</span><span class="p">,</span><span class="w"> </span><span class="n">outputsDtype</span><span class="p" data-group-id="9334384499-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns a quantized Net from a floating-point Net.</p><h5>Positional Arguments</h5><ul><li><p><strong>calibData</strong>: <code class="inline">[Evision.Mat]</code>.</p><p>Calibration data to compute the quantization parameters.</p></li><li><p><strong>inputsDtype</strong>: <code class="inline">int</code>.</p><p>Datatype of quantized net's inputs. Can be CV_32F or CV_8S.</p></li><li><p><strong>outputsDtype</strong>: <code class="inline">int</code>.</p><p>Datatype of quantized net's outputs. Can be CV_32F or CV_8S.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">quantize(calibData, inputsDtype, outputsDtype) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="readFromModelOptimizer!/2">
@@ -2177,7 +2131,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">readFromModelOptimizer!(bufferModelConfig, bufferWeights)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L794" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1051" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2199,7 +2153,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">readFromModelOptimizer(bufferModelConfig, bufferWeights)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L785" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1042" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2209,9 +2163,9 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><p>Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
-@returns Net object.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readFromModelOptimizer</span><span class="p" data-group-id="8563497375-1">(</span><span class="n">bufferModelConfig</span><span class="p">,</span><span class="w"> </span><span class="n">bufferWeights</span><span class="p" data-group-id="8563497375-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre><h4>Variaint 2:</h4><p>Create a network from Intel's Model Optimizer intermediate representation (IR).</p><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="nc">Networks</span><span class="w"> </span><span class="n">imported</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="nc">Intel</span><span class="sc">&#39;s Model Optimizer are launched in Intel&#39;</span><span class="n">s</span><span class="w"> </span><span class="nc">Inference</span><span class="w"> </span><span class="nc">Engine</span><span class="w">
-  </span><span class="n">backend</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">readFromModelOptimizer</span><span class="p" data-group-id="5462426385-1">(</span><span class="n">xml</span><span class="p">,</span><span class="w"> </span><span class="n">bin</span><span class="p" data-group-id="5462426385-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h4>Variant 1:</h4><p>Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).</p><h5>Positional Arguments</h5><ul><li><p><strong>bufferModelConfig</strong>: <code class="inline">[uchar]</code>.</p><p>buffer with model's configuration.</p></li><li><p><strong>bufferWeights</strong>: <code class="inline">[uchar]</code>.</p><p>buffer with model's trained weights.</p></li></ul><p>@returns Net object.</p><p>Python prototype (for reference): </p><pre><code class="python3">readFromModelOptimizer(bufferModelConfig, bufferWeights) -&gt; retval</code></pre><h4>Variant 2:</h4><p>Create a network from Intel's Model Optimizer intermediate representation (IR).</p><h5>Positional Arguments</h5><ul><li><p><strong>xml</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>XML configuration file with network's topology.</p></li><li><p><strong>bin</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>Binary file with trained weights.
+Networks imported from Intel's Model Optimizer are launched in Intel's Inference Engine
+backend.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">readFromModelOptimizer(xml, bin) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="setHalideScheduler!/2">
@@ -2223,7 +2177,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setHalideScheduler!(self, scheduler)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L828" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1093" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2245,7 +2199,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setHalideScheduler(self, scheduler)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L820" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1085" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2255,11 +2209,10 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Compile Halide layers.
-@see setPreferableBackend
-   Schedule layers that support Halide backend. Then compile them for
-   specific target. For layers that not represented in scheduling file
-   or if no manual scheduling used at all, automatic scheduling will be applied.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setHalideScheduler</span><span class="p" data-group-id="7355742303-1">(</span><span class="n">scheduler</span><span class="p" data-group-id="7355742303-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Compile Halide layers.</p><h5>Positional Arguments</h5><ul><li><p><strong>scheduler</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>Path to YAML file with scheduling directives.</p></li></ul><p>@see setPreferableBackend
+ Schedule layers that support Halide backend. Then compile them for
+ specific target. For layers that not represented in scheduling file
+ or if no manual scheduling used at all, automatic scheduling will be applied.</p><p>Python prototype (for reference): </p><pre><code class="python3">setHalideScheduler(scheduler) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setInput!/2">
@@ -2271,7 +2224,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInput!(self, blob)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L894" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1187" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2293,7 +2246,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInput!(self, blob, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L861" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1140" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2315,7 +2268,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInput(self, blob)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L886" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1179" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2325,9 +2278,10 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>blob</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li><li><strong>scalefactor</strong>: double.</li><li><strong>mean</strong>: Scalar.</li></ul><p>Sets the new input value for the network
-@see connect(String, String) to know format of the descriptor.</p><pre><code class="makeup elixir" translate="no"><span class="nc">If</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">final</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">blob</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w">
-</span><span class="n">as</span><span class="p">:</span></code></pre><p>   \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f]</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInput</span><span class="p" data-group-id="5705075439-1">(</span><span class="n">blob</span><span class="p" data-group-id="5705075439-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="5705075439-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">scalefactor</span><span class="p" data-group-id="5705075439-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p" data-group-id="5705075439-4">]</span><span class="p" data-group-id="5705075439-3">]</span><span class="p" data-group-id="5705075439-2">]</span><span class="p" data-group-id="5705075439-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the new input value for the network</p><h5>Positional Arguments</h5><ul><li><p><strong>blob</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>A new blob. Should have CV_32F or CV_8U depth.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>A name of input layer.</p></li><li><p><strong>scalefactor</strong>: <code class="inline">double</code>.</p><p>An optional normalization scale.</p></li><li><p><strong>mean</strong>: <code class="inline">Scalar</code>.</p><p>An optional mean subtraction values.</p></li></ul><p>@see connect(String, String) to know format of the descriptor.
+  If scale or mean values are specified, a final input blob is computed
+  as:
+ \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f]</p><p>Python prototype (for reference): </p><pre><code class="python3">setInput(blob[, name[, scalefactor[, mean]]]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setInput/3">
@@ -2339,7 +2293,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInput(self, blob, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L853" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1132" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2349,9 +2303,10 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>blob</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li><li><strong>scalefactor</strong>: double.</li><li><strong>mean</strong>: Scalar.</li></ul><p>Sets the new input value for the network
-@see connect(String, String) to know format of the descriptor.</p><pre><code class="makeup elixir" translate="no"><span class="nc">If</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">final</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">blob</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w">
-</span><span class="n">as</span><span class="p">:</span></code></pre><p>   \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f]</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInput</span><span class="p" data-group-id="5935441401-1">(</span><span class="n">blob</span><span class="p" data-group-id="5935441401-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="5935441401-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">scalefactor</span><span class="p" data-group-id="5935441401-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p" data-group-id="5935441401-4">]</span><span class="p" data-group-id="5935441401-3">]</span><span class="p" data-group-id="5935441401-2">]</span><span class="p" data-group-id="5935441401-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the new input value for the network</p><h5>Positional Arguments</h5><ul><li><p><strong>blob</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>A new blob. Should have CV_32F or CV_8U depth.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>A name of input layer.</p></li><li><p><strong>scalefactor</strong>: <code class="inline">double</code>.</p><p>An optional normalization scale.</p></li><li><p><strong>mean</strong>: <code class="inline">Scalar</code>.</p><p>An optional mean subtraction values.</p></li></ul><p>@see connect(String, String) to know format of the descriptor.
+  If scale or mean values are specified, a final input blob is computed
+  as:
+ \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f]</p><p>Python prototype (for reference): </p><pre><code class="python3">setInput(blob[, name[, scalefactor[, mean]]]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setInputShape!/3">
@@ -2363,7 +2318,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInputShape!(self, inputName, shape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L916" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1215" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2385,7 +2340,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInputShape(self, inputName, shape)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L907" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1206" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2395,7 +2350,7 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Specify shape of network input.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputShape</span><span class="p" data-group-id="0089931939-1">(</span><span class="n">inputName</span><span class="p">,</span><span class="w"> </span><span class="n">shape</span><span class="p" data-group-id="0089931939-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Specify shape of network input.</p><h5>Positional Arguments</h5><ul><li><strong>inputName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li><li><strong>shape</strong>: <code class="inline">MatShape</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setInputShape(inputName, shape) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setInputsNames!/2">
@@ -2407,7 +2362,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInputsNames!(self, inputBlobNames)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L941" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1245" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2429,7 +2384,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setInputsNames(self, inputBlobNames)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L933" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1237" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2439,11 +2394,10 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Sets outputs names of the network input pseudo layer.
-   Each net always has special own the network input pseudo layer with id=0.
-   This layer stores the user blobs only and don't make any computations.
-   In fact, this layer provides the only way to pass user data into the network.
-   As any other layer, this layer can label its outputs and this function provides an easy way to do this.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setInputsNames</span><span class="p" data-group-id="5100545959-1">(</span><span class="n">inputBlobNames</span><span class="p" data-group-id="5100545959-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets outputs names of the network input pseudo layer.</p><h5>Positional Arguments</h5><ul><li><strong>inputBlobNames</strong>: <code class="inline">[String]</code></li></ul><p> Each net always has special own the network input pseudo layer with id=0.
+ This layer stores the user blobs only and don't make any computations.
+ In fact, this layer provides the only way to pass user data into the network.
+ As any other layer, this layer can label its outputs and this function provides an easy way to do this.</p><p>Python prototype (for reference): </p><pre><code class="python3">setInputsNames(inputBlobNames) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setParam!/4">
@@ -2455,7 +2409,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setParam!(self, layerName, numParam, blob)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L976" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1303" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2477,7 +2431,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setParam(self, layerName, numParam, blob)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L966" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1293" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2487,9 +2441,9 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setParam</span><span class="p" data-group-id="0618945034-1">(</span><span class="n">layerName</span><span class="p">,</span><span class="w"> </span><span class="n">numParam</span><span class="p">,</span><span class="w"> </span><span class="n">blob</span><span class="p" data-group-id="0618945034-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre><h4>Variaint 2:</h4><p>Sets the new value for the learned param of the layer.
-@see Layer::blobs
-<strong>Note</strong>: If shape of the new blob differs from the previous shape,</p><pre><code class="makeup elixir" translate="no"><span class="n">then</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">forward</span><span class="w"> </span><span class="n">pass</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">fail</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setParam</span><span class="p" data-group-id="4569318166-1">(</span><span class="n">layer</span><span class="p">,</span><span class="w"> </span><span class="n">numParam</span><span class="p">,</span><span class="w"> </span><span class="n">blob</span><span class="p" data-group-id="4569318166-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h4>Variant 1:</h4><h5>Positional Arguments</h5><ul><li><strong>layerName</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li><li><strong>numParam</strong>: <code class="inline">int</code></li><li><strong>blob</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setParam(layerName, numParam, blob) -&gt; None</code></pre><h4>Variant 2:</h4><p>Sets the new value for the learned param of the layer.</p><h5>Positional Arguments</h5><ul><li><p><strong>layer</strong>: <code class="inline">int</code>.</p><p>name or id of the layer.</p></li><li><p><strong>numParam</strong>: <code class="inline">int</code>.</p><p>index of the layer parameter in the Layer::blobs array.</p></li><li><p><strong>blob</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>the new value.</p></li></ul><p>@see Layer::blobs
+<strong>Note</strong>: If shape of the new blob differs from the previous shape,
+  then the following forward pass may fail.</p><p>Python prototype (for reference): </p><pre><code class="python3">setParam(layer, numParam, blob) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setPreferableBackend!/2">
@@ -2501,7 +2455,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setPreferableBackend!(self, backendId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L1010" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1345" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2523,7 +2477,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setPreferableBackend(self, backendId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L1002" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1337" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2533,10 +2487,9 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Ask network to use specific computation backend where it supported.
-@see Backend
-   If OpenCV is compiled with Intel's Inference Engine library, DNN_BACKEND_DEFAULT
-   means DNN_BACKEND_INFERENCE_ENGINE. Otherwise it equals to DNN_BACKEND_OPENCV.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPreferableBackend</span><span class="p" data-group-id="4516616587-1">(</span><span class="n">backendId</span><span class="p" data-group-id="4516616587-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Ask network to use specific computation backend where it supported.</p><h5>Positional Arguments</h5><ul><li><p><strong>backendId</strong>: <code class="inline">int</code>.</p><p>backend identifier.</p></li></ul><p>@see Backend
+ If OpenCV is compiled with Intel's Inference Engine library, DNN_BACKEND_DEFAULT
+ means DNN_BACKEND_INFERENCE_ENGINE. Otherwise it equals to DNN_BACKEND_OPENCV.</p><p>Python prototype (for reference): </p><pre><code class="python3">setPreferableBackend(backendId) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setPreferableTarget!/2">
@@ -2548,7 +2501,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setPreferableTarget!(self, targetId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L1043" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1386" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2570,7 +2523,7 @@ If this part is omitted then the first layer input will be used.
     </a>
     <h1 class="signature" translate="no">setPreferableTarget(self, targetId)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_net.ex#L1035" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_net.ex#L1378" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2580,19 +2533,18 @@ If this part is omitted then the first layer input will be used.
 
   <section class="docstring">
 
-<p>Ask network to make computations on specific target device.
-@see Target
-   List of supported combinations backend / target:
-   |                        | DNN_BACKEND_OPENCV | DNN_BACKEND_INFERENCE_ENGINE | DNN_BACKEND_HALIDE |  DNN_BACKEND_CUDA |
-   |------------------------|--------------------|------------------------------|--------------------|-------------------|
-   | DNN_TARGET_CPU         |                  + |                            + |                  + |                   |
-   | DNN_TARGET_OPENCL      |                  + |                            + |                  + |                   |
-   | DNN_TARGET_OPENCL_FP16 |                  + |                            + |                    |                   |
-   | DNN_TARGET_MYRIAD      |                    |                            + |                    |                   |
-   | DNN_TARGET_FPGA        |                    |                            + |                    |                   |
-   | DNN_TARGET_CUDA        |                    |                              |                    |                 + |
-   | DNN_TARGET_CUDA_FP16   |                    |                              |                    |                 + |
-   | DNN_TARGET_HDDL        |                    |                            + |                    |                   |</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setPreferableTarget</span><span class="p" data-group-id="8009950829-1">(</span><span class="n">targetId</span><span class="p" data-group-id="8009950829-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Ask network to make computations on specific target device.</p><h5>Positional Arguments</h5><ul><li><p><strong>targetId</strong>: <code class="inline">int</code>.</p><p>target identifier.</p></li></ul><p>@see Target
+ List of supported combinations backend / target:
+ |                        | DNN_BACKEND_OPENCV | DNN_BACKEND_INFERENCE_ENGINE | DNN_BACKEND_HALIDE |  DNN_BACKEND_CUDA |
+ |------------------------|--------------------|------------------------------|--------------------|-------------------|
+ | DNN_TARGET_CPU         |                  + |                            + |                  + |                   |
+ | DNN_TARGET_OPENCL      |                  + |                            + |                  + |                   |
+ | DNN_TARGET_OPENCL_FP16 |                  + |                            + |                    |                   |
+ | DNN_TARGET_MYRIAD      |                    |                            + |                    |                   |
+ | DNN_TARGET_FPGA        |                    |                            + |                    |                   |
+ | DNN_TARGET_CUDA        |                    |                              |                    |                 + |
+ | DNN_TARGET_CUDA_FP16   |                    |                              |                    |                 + |
+ | DNN_TARGET_HDDL        |                    |                            + |                    |                   |</p><p>Python prototype (for reference): </p><pre><code class="python3">setPreferableTarget(targetId) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -2605,10 +2557,10 @@ If this part is omitted then the first layer input will be used.
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_net.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_dnn_net.ex">(current file)</a>
 
             </span>
 

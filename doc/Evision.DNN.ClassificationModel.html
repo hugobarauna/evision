@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.DNN.ClassificationModel — Evision v0.1.7-dev</title>
+    <title>Evision.DNN.ClassificationModel — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.DNN.ClassificationModel</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>frame</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><h5>Return</h5><ul><li><strong>classId</strong>: <code class="inline">int</code></li><li><strong>conf</strong>: <code class="inline">float</code></li></ul><p>Has overloading in C++</p></div>
 
       </div>
 
@@ -166,7 +168,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h4>Variaint 1:</h4><p>Create model from deep learning network.</p></div>
+          <div class="summary-synopsis"><h4>Variant 1:</h4><p>Create model from deep learning network.</p></div>
 
       </div>
 
@@ -176,8 +178,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>model</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>config</strong>: String.</li></ul><p>Create classification model from network represented in one of the supported formats.
-   An order of @p model and @p config arguments does not matter.</p></div>
+          <div class="summary-synopsis"><p>Create classification model from network represented in one of the supported formats.
+An order of @p model and @p config arguments does not matter.</p></div>
 
       </div>
 
@@ -197,8 +199,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Get enable/disable softmax post processing option.
-   This option defaults to false, softmax post processing is not applied within the classify() function.</p></div>
+          <div class="summary-synopsis"><p>Get enable/disable softmax post processing option.</p></div>
 
       </div>
 
@@ -218,11 +219,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Set enable/disable softmax post processing option.
-   If this option is true, softmax is applied after forward inference within the classify() function
-   to convert the confidences range to [0.0-1.0].
-   This function allows you to toggle this behavior.
-   Please turn true when not contain softmax layer in model.</p></div>
+          <div class="summary-synopsis"><p>Set enable/disable softmax post processing option.</p></div>
 
       </div>
 
@@ -249,7 +246,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">classify!(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -271,7 +268,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">classify(self, frame)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L125" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -281,7 +278,7 @@ Functions
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">classify</span><span class="p" data-group-id="5528144422-1">(</span><span class="n">frame</span><span class="p" data-group-id="5528144422-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">classId</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>frame</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li></ul><h5>Return</h5><ul><li><strong>classId</strong>: <code class="inline">int</code></li><li><strong>conf</strong>: <code class="inline">float</code></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">classify(frame) -&gt; classId, conf</code></pre>
   </section>
 </section>
 <section class="detail" id="dnn_ClassificationModel!/1">
@@ -293,7 +290,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">dnn_ClassificationModel!(network)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -315,7 +312,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">dnn_ClassificationModel!(model, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -337,7 +334,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">dnn_ClassificationModel(network)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -347,8 +344,8 @@ Functions
 
   <section class="docstring">
 
-<h4>Variaint 1:</h4><p>Create model from deep learning network.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">ClassificationModel</span><span class="p" data-group-id="6745163781-1">(</span><span class="n">network</span><span class="p" data-group-id="6745163781-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_ClassificationModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre><h4>Variaint 2:</h4><h5>Positional Arguments</h5><ul><li><strong>model</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>config</strong>: String.</li></ul><p>Create classification model from network represented in one of the supported formats.
-   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">ClassificationModel</span><span class="p" data-group-id="4563154169-1">(</span><span class="n">model</span><span class="p" data-group-id="4563154169-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="4563154169-2">]</span><span class="p" data-group-id="4563154169-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_ClassificationModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<h4>Variant 1:</h4><p>Create model from deep learning network.</p><h5>Positional Arguments</h5><ul><li><p><strong>network</strong>: <code class="inline">Net</code>.</p><p>Net object.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">ClassificationModel(network) -&gt; &lt;dnn_ClassificationModel object&gt;</code></pre><h4>Variant 2:</h4><p>Create classification model from network represented in one of the supported formats.
+An order of @p model and @p config arguments does not matter.</p><h5>Positional Arguments</h5><ul><li><p><strong>model</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>Binary file contains trained weights.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>config</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>Text file contains network configuration.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">ClassificationModel(model[, config]) -&gt; &lt;dnn_ClassificationModel object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="dnn_ClassificationModel/2">
@@ -360,7 +357,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">dnn_ClassificationModel(model, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -370,8 +367,8 @@ Functions
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>model</strong>: String. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>config</strong>: String.</li></ul><p>Create classification model from network represented in one of the supported formats.
-   An order of @p model and @p config arguments does not matter.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">ClassificationModel</span><span class="p" data-group-id="3958278236-1">(</span><span class="n">model</span><span class="p" data-group-id="3958278236-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p" data-group-id="3958278236-2">]</span><span class="p" data-group-id="3958278236-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dnn_ClassificationModel</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Create classification model from network represented in one of the supported formats.
+An order of @p model and @p config arguments does not matter.</p><h5>Positional Arguments</h5><ul><li><p><strong>model</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>Binary file contains trained weights.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>config</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>Text file contains network configuration.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">ClassificationModel(model[, config]) -&gt; &lt;dnn_ClassificationModel object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="getEnableSoftmaxPostProcessing!/1">
@@ -383,7 +380,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getEnableSoftmaxPostProcessing!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L154" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -405,7 +402,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getEnableSoftmaxPostProcessing(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -415,8 +412,7 @@ Functions
 
   <section class="docstring">
 
-<p>Get enable/disable softmax post processing option.
-   This option defaults to false, softmax post processing is not applied within the classify() function.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getEnableSoftmaxPostProcessing</span><span class="p" data-group-id="2880752999-1">(</span><span class="p" data-group-id="2880752999-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Get enable/disable softmax post processing option.</p><p> This option defaults to false, softmax post processing is not applied within the classify() function.</p><p>Python prototype (for reference): </p><pre><code class="python3">getEnableSoftmaxPostProcessing() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="setEnableSoftmaxPostProcessing!/2">
@@ -428,7 +424,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEnableSoftmaxPostProcessing!(self, enable)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -450,7 +446,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEnableSoftmaxPostProcessing(self, enable)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_dnn_classificationmodel.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_dnn_classificationmodel.ex#L180" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -460,11 +456,10 @@ Functions
 
   <section class="docstring">
 
-<p>Set enable/disable softmax post processing option.
-   If this option is true, softmax is applied after forward inference within the classify() function
-   to convert the confidences range to [0.0-1.0].
-   This function allows you to toggle this behavior.
-   Please turn true when not contain softmax layer in model.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setEnableSoftmaxPostProcessing</span><span class="p" data-group-id="5955305410-1">(</span><span class="n">enable</span><span class="p" data-group-id="5955305410-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Set enable/disable softmax post processing option.</p><h5>Positional Arguments</h5><ul><li><p><strong>enable</strong>: <code class="inline">bool</code>.</p><p>Set enable softmax post processing within the classify() function.</p></li></ul><p> If this option is true, softmax is applied after forward inference within the classify() function
+ to convert the confidences range to [0.0-1.0].
+ This function allows you to toggle this behavior.
+ Please turn true when not contain softmax layer in model.</p><p>Python prototype (for reference): </p><pre><code class="python3">setEnableSoftmaxPostProcessing(enable) -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -477,10 +472,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_dnn_classificationmodel.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_dnn_classificationmodel.ex">(current file)</a>
 
             </span>
 

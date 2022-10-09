@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.9">
+
+    <title>evision [WIP] — Evision v0.1.9</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+
+
+  </head>
+  <body data-type="extras">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
+Evision
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.9
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/README.md#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span>evision [WIP]</span>
+</h1>
+
+<table><thead><tr><th style="text-align: left;">OS</th><th style="text-align: left;">Arch</th><th style="text-align: left;">ABI</th><th style="text-align: left;">Build Status</th><th style="text-align: left;">Has Precompiled Library</th></tr></thead><tbody><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">x86_64</td><td style="text-align: left;">gnu</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-x86_64.yml/badge.svg" alt="CI"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">x86_64</td><td style="text-align: left;">musl</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml/badge.svg" alt="CI"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">arm64</td><td style="text-align: left;">gnu</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg" alt="linux-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">arm64</td><td style="text-align: left;">musl</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml/badge.svg" alt="linux-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">armv7l (armhf)</td><td style="text-align: left;">gnueabihf</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg" alt="linux-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">ppc64le</td><td style="text-align: left;">gnu</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg" alt="linux-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">s390x</td><td style="text-align: left;">gnu</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg" alt="linux-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">riscv64</td><td style="text-align: left;">gnu</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-gnu.yml/badge.svg" alt="linux-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Linux</td><td style="text-align: left;">riscv64</td><td style="text-align: left;">musl</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/linux-precompile-musl.yml/badge.svg" alt="linux-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">macOS 11 Big Sur</td><td style="text-align: left;">x86_64</td><td style="text-align: left;">darwin</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/macos-x86_64.yml/badge.svg" alt="CI"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">macOS 11 Big Sur</td><td style="text-align: left;">arm64</td><td style="text-align: left;">darwin</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/macos-precompile.yml/badge.svg?branch=v0.1.1" alt="macos-precompile"/></a></td><td style="text-align: left;">Yes</td></tr><tr><td style="text-align: left;">Windows 2019</td><td style="text-align: left;">x86_64</td><td style="text-align: left;">msvc</td><td style="text-align: left;"><a href="https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml"><img src="https://github.com/cocoa-xu/evision/actions/workflows/windows-x86_64.yml/badge.svg" alt="CI"/></a></td><td style="text-align: left;">Yes</td></tr></tbody></table><h2 id="docs" class="section-heading">
+  <a href="#docs" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">docs</p>
+  </a>
+  Docs
+</h2>
+<p>Online docs for the latest released version is available on Hex.pm, <a href="https://hexdocs.pm/evision/">https://hexdocs.pm/evision/</a>.</p><p>Online docs for git HEAD is available here, <a href="https://cocoa-xu.github.io/evision/">https://cocoa-xu.github.io/evision/</a>.</p><h2 id="nerves-support" class="section-heading">
+  <a href="#nerves-support" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">nerves-support</p>
+  </a>
+  Nerves Support
+</h2>
+<p><a href="https://github.com/cocoa-xu/evision"><img src="https://github-actions.40ants.com/cocoa-xu/evision/matrix.svg?only=nerves-build" alt="Nerves"/></a></p><p>Prebuilt firmwares are available <a href="https://github.com/cocoa-xu/evision/actions/workflows/nerves-build.yml?query=is%3Asuccess">here</a>. 
+Select the most recent run and scroll down to the <code class="inline">Artifacts</code> section, download the firmware file for your board and run</p><pre><code class="makeup bash" translate="no"><span class="">fwup /path/to/the/downloaded/firmware.fw
+</span></code></pre><p>In the nerves build, <code class="inline">evision</code> is integrated as one of the dependencies of the <a href="https://github.com/livebook-dev/nerves_livebook">nerves_livebook</a>
+project. This means that you can use livebook (as well as other pre-pulled libraries) to explore and evaluate the <code class="inline">evision</code>
+project. </p><p>The default password of the livebook is <code class="inline">nerves</code> (as the time of writing, if it does not work, please check the nerves_livebook project). </p><h2 id="integration-with-nx" class="section-heading">
+  <a href="#integration-with-nx" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">integration-with-nx</p>
+  </a>
+  Integration with Nx
+</h2>
+<p><a href="Evision.Nx.html"><code class="inline">Evision.Nx</code></a> module converts <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a> to <code class="inline">Nx.tensor</code>:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="6146127044-1">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">mat</span><span class="p" data-group-id="6146127044-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision</span><span class="o">.</span><span class="n">imread</span><span class="p" data-group-id="6146127044-2">(</span><span class="s">&quot;/path/to/image.png&quot;</span><span class="p" data-group-id="6146127044-2">)</span><span class="w">
+</span><span class="c1"># Or you can use the !(bang) version, but if the image cannot be read by OpenCV for whatever reason</span><span class="w">
+</span><span class="c1"># the bang version will raise a RuntimeError exception</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision</span><span class="o">.</span><span class="n">imread!</span><span class="p" data-group-id="6146127044-3">(</span><span class="s">&quot;/path/to/image.png&quot;</span><span class="p" data-group-id="6146127044-3">)</span><span class="w">
+</span><span class="p" data-group-id="6146127044-4">%</span><span class="nc" data-group-id="6146127044-4">Evision.Mat</span><span class="p" data-group-id="6146127044-4">{</span><span class="w">
+  </span><span class="ss">channels</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="ss">dims</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="6146127044-5">{</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="6146127044-5">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">raw_type</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+  </span><span class="ss">shape</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="6146127044-6">{</span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="6146127044-6">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="6146127044-7">#</span><span class="nc" data-group-id="6146127044-7">Reference</span><span class="p" data-group-id="6146127044-7">&lt;</span><span class="mf">0.2992585850</span><span class="o">.</span><span class="mf">4173463580.172624</span><span class="p" data-group-id="6146127044-7">&gt;</span><span class="w">
+</span><span class="p" data-group-id="6146127044-4">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_nx</span><span class="p" data-group-id="6146127044-8">(</span><span class="n">mat</span><span class="p" data-group-id="6146127044-8">)</span><span class="w">
+</span><span class="p" data-group-id="6146127044-9">#</span><span class="nc" data-group-id="6146127044-9">Nx.Tensor</span><span class="p" data-group-id="6146127044-9">&lt;</span><span class="w">
+  </span><span class="n">u8</span><span class="p" data-group-id="6146127044-10">[</span><span class="mi">512</span><span class="p" data-group-id="6146127044-10">]</span><span class="p" data-group-id="6146127044-11">[</span><span class="mi">512</span><span class="p" data-group-id="6146127044-11">]</span><span class="p" data-group-id="6146127044-12">[</span><span class="mi">3</span><span class="p" data-group-id="6146127044-12">]</span><span class="w">
+  </span><span class="nc">Evision.Backend</span><span class="w">
+  </span><span class="p" data-group-id="6146127044-13">[</span><span class="w">
+    </span><span class="p" data-group-id="6146127044-14">[</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-15">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-15">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-16">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-16">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-17">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-17">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-18">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-18">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-19">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-19">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-20">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-20">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-21">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-21">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-22">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-22">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-23">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-23">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-24">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-24">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-25">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-25">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-26">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-26">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-27">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-27">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-28">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-28">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-29">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-29">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-30">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p" data-group-id="6146127044-30">]</span><span class="p">,</span><span class="w">
+      </span><span class="p" data-group-id="6146127044-31">[</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="6146127044-31">]</span><span class="p">,</span><span class="w">
+      </span><span class="n">...</span><span class="w">
+    </span><span class="p" data-group-id="6146127044-14">]</span><span class="p">,</span><span class="w">
+    </span><span class="n">...</span><span class="w">
+  </span><span class="p" data-group-id="6146127044-13">]</span><span class="w">
+</span><span class="p" data-group-id="6146127044-9">&gt;</span></code></pre><p>and vice-versa:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision</span><span class="o">.</span><span class="n">imread!</span><span class="p" data-group-id="8816751382-1">(</span><span class="s">&quot;/path/to/image.png&quot;</span><span class="p" data-group-id="8816751382-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_nx</span><span class="p" data-group-id="8816751382-2">(</span><span class="n">mat</span><span class="p" data-group-id="8816751382-2">)</span><span class="w">
+</span><span class="c1"># convert a tensor to a mat</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">mat_from_tensor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_mat!</span><span class="p" data-group-id="8816751382-3">(</span><span class="n">t</span><span class="p" data-group-id="8816751382-3">)</span><span class="w">
+</span><span class="p" data-group-id="8816751382-4">%</span><span class="nc" data-group-id="8816751382-4">Evision.Mat</span><span class="p" data-group-id="8816751382-4">{</span><span class="w">
+  </span><span class="ss">channels</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="ss">dims</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-5">{</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="8816751382-5">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">raw_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="ss">shape</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-6">{</span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="8816751382-6">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-7">#</span><span class="nc" data-group-id="8816751382-7">Reference</span><span class="p" data-group-id="8816751382-7">&lt;</span><span class="mf">0.1086574232</span><span class="o">.</span><span class="mf">1510342676.18186</span><span class="p" data-group-id="8816751382-7">&gt;</span><span class="w">
+</span><span class="p" data-group-id="8816751382-4">}</span><span class="w">
+
+</span><span class="c1"># Note that `Evision.Nx.to_mat` gives a tensor</span><span class="w">
+</span><span class="c1"># however, some OpenCV functions expect the mat</span><span class="w">
+</span><span class="c1"># to be a &quot;valid 2D image&quot;</span><span class="w">
+</span><span class="c1"># therefore, in such cases `Evision.Nx.to_mat_2d`</span><span class="w">
+</span><span class="c1"># should be used instead</span><span class="w">
+</span><span class="c1">#</span><span class="w">
+</span><span class="c1"># Noticing the changes in `channels`, `dims` and `raw_type`</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">mat_from_tensor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_mat_2d!</span><span class="p" data-group-id="8816751382-8">(</span><span class="n">t</span><span class="p" data-group-id="8816751382-8">)</span><span class="w">
+</span><span class="p" data-group-id="8816751382-9">%</span><span class="nc" data-group-id="8816751382-9">Evision.Mat</span><span class="p" data-group-id="8816751382-9">{</span><span class="w">
+  </span><span class="ss">channels</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="ss">dims</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-10">{</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="8816751382-10">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">raw_type</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+  </span><span class="ss">shape</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-11">{</span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="8816751382-11">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-12">#</span><span class="nc" data-group-id="8816751382-12">Reference</span><span class="p" data-group-id="8816751382-12">&lt;</span><span class="mf">0.1086574232</span><span class="o">.</span><span class="mf">1510342676.18187</span><span class="p" data-group-id="8816751382-12">&gt;</span><span class="w">
+</span><span class="p" data-group-id="8816751382-9">}</span><span class="w">
+
+</span><span class="c1"># and it works for tensors with any shapes</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Nx</span><span class="o">.</span><span class="n">iota</span><span class="p" data-group-id="8816751382-13">(</span><span class="p" data-group-id="8816751382-14">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="8816751382-14">}</span><span class="p">,</span><span class="w"> </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="ss">:s32</span><span class="p" data-group-id="8816751382-13">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_mat!</span><span class="p" data-group-id="8816751382-15">(</span><span class="n">t</span><span class="p" data-group-id="8816751382-15">)</span><span class="w">
+</span><span class="p" data-group-id="8816751382-16">%</span><span class="nc" data-group-id="8816751382-16">Evision.Mat</span><span class="p" data-group-id="8816751382-16">{</span><span class="w">
+  </span><span class="ss">channels</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="ss">dims</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-17">{</span><span class="ss">:s</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p" data-group-id="8816751382-17">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">raw_type</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="ss">shape</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-18">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="8816751382-18">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8816751382-19">#</span><span class="nc" data-group-id="8816751382-19">Reference</span><span class="p" data-group-id="8816751382-19">&lt;</span><span class="mf">0.1086574232</span><span class="o">.</span><span class="mf">1510342676.18188</span><span class="p" data-group-id="8816751382-19">&gt;</span><span class="w">
+</span><span class="p" data-group-id="8816751382-16">}</span></code></pre><h4>Unsupported Type Map</h4><p>As OpenCV does not support the following types (yet, as of OpenCV 4.6.0)</p><ul><li><code class="inline">{:s, 64}</code></li><li><code class="inline">{:u, 32}</code></li><li><code class="inline">{:u, 64}</code></li></ul><p>Although it's possible to <em>store</em> values with those types using custom types, the resulting Mat/tensor will be incompatible with most existing functions in OpenCV.</p><p>Moreover, it's somewhat inconvinient to explicitly specify the type each time using them. Therefore, Evision allows to set a map for those unsupported types. </p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="ss">unsupported_type_map</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1787284194-1">%{</span><span class="w">
+  </span><span class="p" data-group-id="1787284194-2">{</span><span class="ss">:s</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p" data-group-id="1787284194-2">}</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="1787284194-3">{</span><span class="ss">:f</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p" data-group-id="1787284194-3">}</span><span class="p">,</span><span class="w">
+  </span><span class="p" data-group-id="1787284194-4">{</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p" data-group-id="1787284194-4">}</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="1787284194-5">{</span><span class="ss">:f</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p" data-group-id="1787284194-5">}</span><span class="p">,</span><span class="w">
+  </span><span class="p" data-group-id="1787284194-6">{</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p" data-group-id="1787284194-6">}</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="1787284194-7">{</span><span class="ss">:f</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p" data-group-id="1787284194-7">}</span><span class="w">
+</span><span class="p" data-group-id="1787284194-1">}</span></code></pre><p>The <code class="inline">key</code> of this <code class="inline">unsupported_type_map</code> is the unsupported type, and the value is the replacement type for it.</p><p>See <a href="https://github.com/cocoa-xu/evision/issues/48#issuecomment-1266282345">this reply</a> for more details on this.</p><h2 id="examples" class="section-heading">
+  <a href="#examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">examples</p>
+  </a>
+  Examples
+</h2>
+<p>Some <a href="https://github.com/cocoa-xu/evision/tree/main/examples">examples</a> are available in the <code class="inline">examples</code> directory.</p><h2 id="description" class="section-heading">
+  <a href="#description" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">description</p>
+  </a>
+  Description
+</h2>
+<p><code class="inline">evision</code> will pull OpenCV source code from GitHub, then parse and automatically generate corresponding OpenCV-Elixir bindings.</p><p>This project uses and modifies <code class="inline">gen2.py</code> and <code class="inline">hdr_parser.py</code> from the <code class="inline">python</code> module in the <a href="https://github.com/opencv/opencv">OpenCV repo</a> so that they output header files that can be used in Elixir bindings. </p><p>We hope this project can largely reduce the work of manually porting OpenCV functions/modules to Elixir.</p><p>Compatible OpenCV versions:</p><ul><li>4.5.3</li><li>4.5.4</li><li>4.5.5</li><li>4.6.0</li></ul><p>by compatible, it means these versions can compile successfully, and I tested a small range of functions. Tons of tests
+should be written, and then we can have a list for tested OpenCV versions.</p><h2 id="installation" class="section-heading">
+  <a href="#installation" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">installation</p>
+  </a>
+  Installation
+</h2>
+<p>In order to use <code class="inline">evision</code>, you will need Elixir installed. Then create an Elixir project via the <code class="inline">mix</code> build tool:</p><pre><code class="makeup sh" translate="no"><span class="gp unselectable">$ </span><span class="">mix new my_app
+</span></code></pre><p>Then you can add <code class="inline">evision</code> as dependency in your <code class="inline">mix.exs</code>.</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="6781554916-1">do</span><span class="w">
+  </span><span class="p" data-group-id="6781554916-2">[</span><span class="w">
+    </span><span class="p" data-group-id="6781554916-3">{</span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; 0.1.9&quot;</span><span class="p" data-group-id="6781554916-3">}</span><span class="w">
+  </span><span class="p" data-group-id="6781554916-2">]</span><span class="w">
+</span><span class="k" data-group-id="6781554916-1">end</span></code></pre><p>Please note that although <code class="inline">:evision</code> is available on hex.pm now, it's still in its early versions. And it will remain on v0.1.x for a while, and all v0.1.x versions should be treated as in very active development. Please read the <code class="inline">CHANGELOG.md</code> for all breaking changes even it's a &quot;minor&quot; update.</p><p>Therefore, it's recommended to use a specific version (i.e., include the minor version number in <code class="inline">deps</code>, <code class="inline">{:evision, &quot;~&gt; 0.1.8&quot;}</code>, instead of <code class="inline">{:evision, &quot;~&gt; 0.1&quot;}</code>) at the moment.</p><h3 id="use-precompiled-library-default" class="section-heading">
+  <a href="#use-precompiled-library-default" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">use-precompiled-library-default</p>
+  </a>
+  Use Precompiled Library (Default)
+</h3>
+<p>The following environment variables can be set based on your needs.</p><p>(Note that precompiled binaries do not use FFmpeg. If you'd like to use FFmpeg, please compile from source (please see instructions in the next section) and set corresponding environment variables. We're considering this option at the moment.)</p><h4>Important notes</h4><p>When using <code class="inline">:evision</code> from git, version &quot;0.1.1&quot; to &quot;0.1.7&quot; are available.</p><p>Starting from <code class="inline">0.1.8</code> (included) and onwards, using <code class="inline">:evision</code> from git is no longer supported (unless set <code class="inline">EVISION_PREFER_PRECOMPILED</code> to <code class="inline">false</code>) because we started to use checksum file to verify the integrity of the downloaded tarball file, and the checksum file is only tracked in the hex.pm package.</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="9389690886-1">do</span><span class="w">
+  </span><span class="p" data-group-id="9389690886-2">[</span><span class="w">
+    </span><span class="p" data-group-id="9389690886-3">{</span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; 0.1.7&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">github</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cocoa-xu/evision&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v0.1.7&quot;</span><span class="p" data-group-id="9389690886-3">}</span><span class="w">
+  </span><span class="p" data-group-id="9389690886-2">]</span><span class="w">
+</span><span class="k" data-group-id="9389690886-1">end</span></code></pre><p>It is recommended to use <code class="inline">:evision</code> from hex.pm. Currently &quot;0.1.7&quot; to &quot;0.1.9&quot; are available on hex.pm,</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="5466448113-1">do</span><span class="w">
+  </span><span class="p" data-group-id="5466448113-2">[</span><span class="w">
+    </span><span class="p" data-group-id="5466448113-3">{</span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; 0.1.9&quot;</span><span class="p" data-group-id="5466448113-3">}</span><span class="w">
+  </span><span class="p" data-group-id="5466448113-2">]</span><span class="w">
+</span><span class="k" data-group-id="5466448113-1">end</span></code></pre><h4>TARGET_ABI</h4><pre><code class="makeup shell" translate="no"><span class=""># required if and only if the build target is using musl libc.
+</span><span class="">#
+</span><span class=""># (for nerves project, this environment variable is set by nerves)
+</span><span class="">export TARGET_ABI=musl
+</span><span class="">## (for armv7l which uses hard-float ABI (armhf))
+</span><span class="">export TARGET_ABI=musleabihf
+</span></code></pre><p>The default value for the <code class="inline">TARGET_ABI</code> env var is obtained using the following elixir code</p><pre><code class="makeup elixir" translate="no"><span class="n">target_abi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="o">.</span><span class="n">last</span><span class="p" data-group-id="3703612710-1">(</span><span class="nc">String</span><span class="o">.</span><span class="n">split</span><span class="p" data-group-id="3703612710-2">(</span><span class="n">to_string</span><span class="p" data-group-id="3703612710-3">(</span><span class="nc">:erlang</span><span class="o">.</span><span class="n">system_info</span><span class="p" data-group-id="3703612710-4">(</span><span class="ss">:system_architecture</span><span class="p" data-group-id="3703612710-4">)</span><span class="p" data-group-id="3703612710-3">)</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="p" data-group-id="3703612710-2">)</span><span class="p" data-group-id="3703612710-1">)</span><span class="w">
+</span><span class="n">target_abi</span><span class="w"> </span><span class="o">=</span><span class="w">
+  </span><span class="k">case</span><span class="w"> </span><span class="n">target_abi</span><span class="w"> </span><span class="k" data-group-id="3703612710-5">do</span><span class="w">
+    </span><span class="s">&quot;darwin&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="bp">_</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;darwin&quot;</span><span class="w">
+    </span><span class="s">&quot;win32&quot;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+      </span><span class="p" data-group-id="3703612710-6">{</span><span class="n">compiler_id</span><span class="p">,</span><span class="w"> </span><span class="bp">_</span><span class="p" data-group-id="3703612710-6">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">:erlang</span><span class="o">.</span><span class="n">system_info</span><span class="p" data-group-id="3703612710-7">(</span><span class="ss">:c_compiler_used</span><span class="p" data-group-id="3703612710-7">)</span><span class="w">
+      </span><span class="k">case</span><span class="w"> </span><span class="n">compiler_id</span><span class="w"> </span><span class="k" data-group-id="3703612710-8">do</span><span class="w">
+        </span><span class="ss">:msc</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;msvc&quot;</span><span class="w">
+        </span><span class="bp">_</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">to_string</span><span class="p" data-group-id="3703612710-9">(</span><span class="n">compiler_id</span><span class="p" data-group-id="3703612710-9">)</span><span class="w">
+      </span><span class="k" data-group-id="3703612710-8">end</span><span class="w">
+    </span><span class="bp">_</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">target_abi</span><span class="w">
+  </span><span class="k" data-group-id="3703612710-5">end</span></code></pre><h4>EVISION_PREFER_PRECOMPILED</h4><pre><code class="makeup shell" translate="no"><span class=""># optional. 
+</span><span class=""># set this to &quot;false&quot; if you prefer :evision to be compiled from source
+</span><span class=""># 
+</span><span class=""># default value is &quot;true&quot;, and :evision will prefer to use precompiled binaries (if available)
+</span><span class="">export EVISION_PREFER_PRECOMPILED=false
+</span></code></pre><p>If you found the precompiled binaries does not suit your needs (e.g., perhaps you need OpenCV to be compiled with FFmpeg to handle more video formats.), it's possible to override the behaviour by setting the environment variable <code class="inline">EVISION_PREFER_PRECOMPILED</code> to <code class="inline">false</code></p><pre><code class="makeup shell" translate="no"><span class="">export EVISION_PREFER_PRECOMPILED=false
+</span></code></pre><p>For livebook users, </p><pre><code class="makeup elixir" translate="no"><span class="nc">Mix</span><span class="o">.</span><span class="n">install</span><span class="p" data-group-id="2885549184-1">(</span><span class="p" data-group-id="2885549184-2">[</span><span class="w">
+  </span><span class="p" data-group-id="2885549184-3">{</span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; 0.1.9&quot;</span><span class="p" data-group-id="2885549184-3">}</span><span class="w">
+</span><span class="p" data-group-id="2885549184-2">]</span><span class="p">,</span><span class="w"> </span><span class="ss">system_env</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="2885549184-4">[</span><span class="w">
+  </span><span class="p" data-group-id="2885549184-5">{</span><span class="s">&quot;EVISION_PREFER_PRECOMPILED&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;false&quot;</span><span class="p" data-group-id="2885549184-5">}</span><span class="w">
+</span><span class="p" data-group-id="2885549184-4">]</span><span class="p" data-group-id="2885549184-1">)</span></code></pre><h4>EVISION_PRECOMPILED_CACHE_DIR</h4><pre><code class="makeup shell" translate="no"><span class=""># optional.
+</span><span class="">## set the cache directory for the precompiled archive file
+</span><span class="">export EVISION_PRECOMPILED_CACHE_DIR=&quot;$(pwd)/.cache&quot;
+</span></code></pre><h3 id="compile-evision-from-source" class="section-heading">
+  <a href="#compile-evision-from-source" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">compile-evision-from-source</p>
+  </a>
+  Compile evision from source
+</h3>
+<h4>Dependencies</h4><ul><li><p>Python3 (Only during the compilation, to generate binding files)</p><p>Tested Python verisons (on <code class="inline">ubuntu:20.04</code>, see <a href="https://github.com/cocoa-xu/evision/blob/main/.github/workflows/test-python-compatibility.yml">workflow file</a>):</p><ul><li>3.6.15</li><li>3.7.12</li><li>3.8.12</li><li>3.9.9</li><li>3.10.1</li></ul></li><li><p><a href="https://cmake.org/">CMake</a> &gt;= 3.3 (for this project)</p><p>The minimal version required by OpenCV can vary between versions.</p><p>OpenCV 4.5.5 requires at least CMake 3.5.1.</p></li><li><p>Erlang development library/headers. Tested on OTP/25.</p></li></ul><h4>Build from source</h4><p>To obtain and compile OpenCV's source code from official releases, the following environment variables can affect the build</p><pre><code class="makeup shell" translate="no"><span class=""># optional
+</span><span class="">## set OpenCV version
+</span><span class="">##   the corresponding license file should be available at https://github.com/opencv/opencv/blob/${OPENCV_VER}/LICENSE
+</span><span class="">export OPENCV_VER=&quot;4.6.0&quot;
+</span><span class="">
+</span><span class=""># optional
+</span><span class="">## Use Debug build
+</span><span class="">export CMAKE_BUILD_TYPE=Debug
+</span><span class="">
+</span><span class=""># optional
+</span><span class="">## enable FFmpeg
+</span><span class="">##   this will allow cmake to auto-detect FFmpeg libraries installed on the host
+</span><span class="">##   on Windows, OpenCV will download prebuilt FFmpeg libraries
+</span><span class="">##   for more information, please visit https://github.com/opencv/opencv/tree/4.x/3rdparty/ffmpeg
+</span><span class="">export CMAKE_OPENCV_OPTIONS=&quot;-D WITH_FFMPEG=ON&quot;
+</span><span class="">## or disable FFmpeg
+</span><span class="">export CMAKE_OPENCV_OPTIONS=&quot;-D WITH_FFMPEG=OFF&quot;
+</span></code></pre><p>Note 1: OpenCV can encode and decode some video formats (varies depending on your system). FFmpeg can be used to encode/decode more video formats. </p><p>However, you should be aware of the license of the FFmpeg components you selected as they could be licensed by LGPL/GPL or other licenses.</p><p>Note 2: FFmpeg 5 is not supported by OpenCV yet (as of OpenCV 4.6.0).</p><pre><code class="makeup shell" translate="no"><span class="">sudo apt install -y libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavresample-dev ffmpeg
+</span></code></pre><p>on macOS</p><pre><code class="makeup shell" translate="no"><span class="">brew install ffmpeg@4
+</span><span class="">brew link ffmpeg@4
+</span></code></pre><h5>Extra notes for building from source on Windows</h5><p>Evision on Windows uses <code class="inline">nmake</code> to handle the <code class="inline">Makefile.win</code> at the moment. And we also need <code class="inline">powershell</code> for now. <code class="inline">nmake</code>
+should be included in Microsoft Visual Studio, and <code class="inline">powershell</code> should be included in almost all recent versions (it was 
+first released in 2007) of Windows.</p><p>If <code class="inline">ninja</code> can be found in <code class="inline">%PATH%</code>, then we will prefer using <code class="inline">ninja</code> to build everything as it allows parallel building.</p><p>Evision is NOT tested in MSYS2, Cygwin, or WSL/WSL2. </p><h4>Using source from a git repo (Optional)</h4><p>It's also possible to obtain and compile OpenCV's source code from a custom git repo by setting the following environment variables (in addition to the ones above)</p><pre><code class="makeup shell" translate="no"><span class=""># required if and only if you prefer to compile OpenCV from a git repo
+</span><span class=""># set OPENCV_USE_GIT_HEAD to true to compile OpenCV from a git repo
+</span><span class=""># default value is false
+</span><span class="">export OPENCV_USE_GIT_HEAD=true
+</span><span class="">
+</span><span class=""># required if and only if you prefer to compile OpenCV from a git repo
+</span><span class=""># this env var indicates which branch you prefer to use
+</span><span class=""># no default value
+</span><span class="">export OPENCV_USE_GIT_BRANCH=4.x
+</span><span class="">
+</span><span class=""># optional.
+</span><span class=""># set this env var to specify which git repo to use
+</span><span class=""># default value is https://github.com/opencv/opencv.git, which is the offical git repo of OpenCV
+</span><span class="">export OPENCV_GIT_REPO=&quot;https://github.com/opencv/opencv.git&quot;
+</span></code></pre><p>When <code class="inline">OPENCV_USE_GIT_HEAD</code> is set to <code class="inline">true</code>, the following command will be used to fetch OpenCV's source code in <code class="inline">Makefile</code>:</p><pre><code class="makeup shell" translate="no"><span class="">git clone --branch=${OPENCV_USE_GIT_BRANCH} --depth=1 ${OPENCV_GIT_REPO} &quot;${OPENCV_DIR}&quot;
+</span></code></pre><h4>More Configuration (Optional)</h4><p><code class="inline">evision</code> will compile a subset of OpenCV functionality. You can configure the enabled modules in your <code class="inline">config</code> files:</p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="ss">enabled_modules</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="8579500758-1">[</span><span class="w">
+  </span><span class="ss">:calib3d</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:core</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:features2d</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:flann</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:highgui</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:imgcodecs</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:imgproc</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:ml</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:photo</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:stitching</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:ts</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:video</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:videoio</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:dnn</span><span class="w">
+</span><span class="p" data-group-id="8579500758-1">]</span></code></pre><p>If a module is not specified in <code class="inline">:enabled_modules</code>, it may still be compiled if all requirements are present in your machine.
+You can enforce only the <code class="inline">:enabled_modules</code> to be compiled by changing the compilation mode:</p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="ss">:compile_mode</span><span class="p">,</span><span class="w"> </span><span class="ss">:only_enabled_modules</span></code></pre><p>You can also configure the list of image codecs used:</p><pre><code class="makeup elixir" translate="no"><span class="n">config</span><span class="w"> </span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="ss">enabled_img_codecs</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="0695344185-1">[</span><span class="w">
+  </span><span class="ss">:png</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:jpeg</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:tiff</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:webp</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:openjpeg</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:jasper</span><span class="p">,</span><span class="w">
+  </span><span class="ss">:openexr</span><span class="w">
+</span><span class="p" data-group-id="0695344185-1">]</span></code></pre><h4>Notes</h4><ul><li><p>How do I use my own OpenCV source code on my local disk?</p><pre><code class="makeup shell" translate="no"><span class="">  # To skip the download process, you can put the source zip file at `3rd_party/cache/opencv-${OPENCV_VER}.zip`.
+</span><span class="">  # Or you could supply OpenCV source code at `3rd_party/opencv/opencv-${OPENCV_VER}`.
+</span><span class="">  #
+</span><span class="">  # `3rd_party/opencv/opencv-${OPENCV_VER}` is the default value for `OPENCV_DIR`
+</span><span class="">  export OPENCV_DIR=/path/to/your/opencv/source/root
+</span></code></pre></li><li><p>How do I use my own OpenCV source code on my git repo?</p><pre><code class="makeup shell" translate="no"><span class="">  # use branch
+</span><span class="">  export OPENCV_USE_GIT_BRANCH=&quot;branch_name&quot;
+</span><span class="">  export OPENCV_GIT_REPO=&quot;https://github.com/username/opencv.git&quot;
+</span><span class="">
+</span><span class="">  # use HEAD
+</span><span class="">  export OPENCV_USE_GIT_HEAD=true
+</span><span class="">  export OPENCV_GIT_REPO=&quot;https://github.com/username/opencv.git&quot;
+</span></code></pre></li><li><p>How do I set the number of jobs for compiling?</p><pre><code class="makeup shell" translate="no"><span class="">  # use all logical cores, by default
+</span><span class="">  # `&quot;-j#{System.schedulers_online()}&quot;`. In `mix.exs`.
+</span><span class="">  export MAKE_BUILD_FLAGS=&quot;-j$(nproc)&quot;
+</span><span class="">  
+</span><span class="">  # use 2 cores
+</span><span class="">  export MAKE_BUILD_FLAGS=&quot;-j2&quot;
+</span></code></pre></li><li><p>How do I set up for cross-compile or specify the toolchain?</p><pre><code class="makeup shell" translate="no"><span class="">  export CMAKE_TOOLCHAIN_FILE=&quot;/path/to/toolchain.cmake&quot;
+</span></code></pre></li><li><p>How do I make my own adjustments to the OpenCV CMake options?</p><pre><code class="makeup shell" translate="no"><span class="">  export CMAKE_OPENCV_OPTIONS=&quot;YOUR CMAKE OPTIONS FOR OPENCV&quot;
+</span></code></pre></li><li><p>How do I generate binding code for erlang and Elixir at the same time?
+  Yes, but currently it's only possible to do so when compiling evision using <code class="inline">mix</code>.</p><pre><code class="makeup shell" translate="no"><span class="">  # default value is `elixir` when compiling evision using `mix`
+</span><span class="">  # default value is `erlang` when compiling evision using `rebar`
+</span><span class="">  #
+</span><span class="">  # expected format is a comma-separated string
+</span><span class="">  export EVISION_GENERATE_LANG=&quot;erlang,elixir&quot;
+</span></code></pre></li><li><p>Which ones of OpenCV options are supposed to be specified in <code class="inline">config/config.exs</code>?</p><ol><li>Enabled and disabled OpenCV modules</li><li>Image codecs (if you enabled related OpenCV modules).</li></ol></li></ul><h4>Debug related</h4><p>Say you have the following MIX environment variables:</p><pre><code class="makeup shell" translate="no"><span class=""># set by MIX
+</span><span class="">MIX_ENV=dev
+</span><span class=""># set by evision or you
+</span><span class="">OPENCV_VER=4.6.0
+</span><span class=""># set by yourself if you&#39;re compiling evision to a nerves firmware
+</span><span class="">MIX_TARGET=rpi4
+</span></code></pre><ul><li><p>How do I delete OpenCV related CMake build caches?</p><pre><code class="makeup shell" translate="no"><span class="">  # delete OpenCV related CMake build caches.
+</span><span class="">  rm -rf &quot;_build/${MIX_ENV}/lib/evision/cmake_opencv_${OPENCV_VER}&quot;
+</span><span class="">  ## for nerves
+</span><span class="">  rm -rf &quot;_build/${MIX_TARGET}_${MIX_ENV}/lib/evision/cmake_opencv_${OPENCV_VER}&quot;
+</span></code></pre></li><li><p>How do I remove downloaded OpenCV source zip file.</p><pre><code class="makeup shell" translate="no"><span class="">  rm -f &quot;3rd_party/cache/opencv-${OPENCV_VER}&quot;
+</span></code></pre></li><li><p>Can I manually edit the generated files and compile them?</p><ol><li><p>First, delete evision.so (so that <code class="inline">cmake</code> can rebuild it)  </p><pre><code class="makeup shell" translate="no"><span class=""> # 
+</span><span class=""> rm -f &quot;_build/${MIX_ENV}/lib/evision/priv/evision.so&quot;
+</span><span class=""> ## if you&#39;re building with nerves,
+</span><span class=""> ## use this path instead
+</span><span class=""> rm -rf &quot;_build/${MIX_TARGET}_${MIX_ENV}/lib/evision/priv/evision.so&quot;
+</span></code></pre></li><li><p>Secondly, comment out the following lines in the CMakeLists.txt  </p></li></ol><p>  otherwise, your editing will be overwritten by the <code class="inline">py_src/gen2.py</code> (executing from the <code class="inline">CMakeLists.txt</code>)</p><pre><code class="cmake">  if(WIN32)
+      execute_process(COMMAND &quot;rmdir ${GENERATED_ELIXIR_SRC_DIR} /s /q &amp;&amp; rmdir ${GENERATED_ERLANG_SRC_DIR} /s /q  &amp;&amp; mkdir ${GENERATED_ELIXIR_SRC_DIR} &amp;&amp; mkdir ${GENERATED_ERLANG_SRC_DIR}&quot;)
+      message(&quot;enabled modules: ${ENABLED_CV_MODULES}&quot;)
+      execute_process(COMMAND python3.exe &quot;${PY_SRC}\\gen2.py&quot; &quot;${C_SRC}&quot; &quot;${GENERATED_ELIXIR_SRC_DIR}&quot; &quot;${GENERATED_ERLANG_SRC_DIR}&quot; &quot;${C_SRC}\\headers.txt&quot; &quot;${EVISION_GENERATE_LANG}&quot; &quot;${ENABLED_CV_MODULES}&quot; RESULT_VARIABLE STATUS)
+  else()
+      execute_process(COMMAND bash -c &quot;rm -rf ${GENERATED_ELIXIR_SRC_DIR} &amp;&amp; rm -rf ${GENERATED_ERLANG_SRC_DIR} &amp;&amp; mkdir -p ${GENERATED_ELIXIR_SRC_DIR} &amp;&amp; mkdir -p ${GENERATED_ERLANG_SRC_DIR}&quot;)
+      message(&quot;enabled modules: ${ENABLED_CV_MODULES}&quot;)
+      execute_process(COMMAND bash -c &quot;python3 ${PY_SRC}/gen2.py ${C_SRC} ${GENERATED_ELIXIR_SRC_DIR} ${GENERATED_ERLANG_SRC_DIR} ${C_SRC}/headers.txt ${EVISION_GENERATE_LANG} ${ENABLED_CV_MODULES}&quot; RESULT_VARIABLE STATUS)
+  endif()
+  if(STATUS STREQUAL &quot;0&quot;)
+      message(STATUS &quot;Successfully generated binding code for: ${EVISION_GENERATE_LANG}&quot;)
+  else()
+      message(FATAL_ERROR &quot;Failed to generate binding code for: ${EVISION_GENERATE_LANG}&quot;)
+  endif()</code></pre><ol start="3"><li>Then you can edit the source files and recompile <code class="inline">evision.so</code>.</li></ol><pre><code class="makeup shell" translate="no"><span class="">  mix compile
+</span></code></pre></li></ul><h4>Runtime related</h4><ul><li><p>How do I enable debug logging for OpenCV (prints to stderr).</p><pre><code class="makeup shell" translate="no"><span class="">  export OPENCV_EVISION_DEBUG=1
+</span></code></pre></li></ul><h3 id="acknowledgements" class="section-heading">
+  <a href="#acknowledgements" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">acknowledgements</p>
+  </a>
+  Acknowledgements
+</h3>
+<ul><li><code class="inline">gen2.py</code>, <code class="inline">hdr_parser.py</code> and <code class="inline">c_src/erlcompat.hpp</code> were directly copied from the <code class="inline">python</code> module in the <a href="https://github.com/opencv/opencv">OpenCV repo</a>. Changes applied.</li><li><code class="inline">Makefile</code>, <code class="inline">CMakeLists.txt</code> and <code class="inline">c_src/nif_utils.hpp</code> were also copied from the <code class="inline">torchx</code> module in the <a href="https://github.com/elixir-nx/nx">elixir-nx repo</a>. Minor changes applied.</li></ul>
+<div class="bottom-actions">
+  <div class="bottom-actions-item">
+
+      <a href="changelog.html" class="bottom-actions-button" rel="prev">
+        <span class="subheader">
+          ← Previous Page
+        </span>
+        <span class="title">
+Changelog
+        </span>
+      </a>
+
+  </div>
+  <div class="bottom-actions-item">
+
+  </div>
+</div>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/README.md">(current file)</a>
+
+            </span>
+
+            <button class="line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["\\f$", "\\f$"]],
+            displayMath: [["\\f[", "\\f]"]],
+            skipTags: ["script", "noscript", "style", "textarea"],
+            processEnvironments: false
+        },
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+    });
+    //<![CDATA[
+    MathJax.Hub.Config(
+    {
+        TeX: {
+            Macros: {
+                matTT: ["\\[ \\left|\\begin{array}{ccc} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{array}\\right| \\]", 9],
+                fork: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ \\end{array} \\right.", 4],
+                forkthree: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ \\end{array} \\right.", 6],
+                forkfour: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ #7 & \\mbox{#8}\\\\ \\end{array} \\right.", 8],
+                vecthree: ["\\begin{bmatrix} #1\\\\ #2\\\\ #3 \\end{bmatrix}", 3],
+                vecthreethree: ["\\begin{bmatrix} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{bmatrix}", 9],
+                cameramatrix: ["#1 = \\begin{bmatrix} f_x & 0 & c_x\\\\ 0 & f_y & c_y\\\\ 0 & 0 & 1 \\end{bmatrix}", 1],
+                distcoeffs: ["(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]]) \\text{ of 4, 5, 8, 12 or 14 elements}"],
+                distcoeffsfisheye: ["(k_1, k_2, k_3, k_4)"],
+                hdotsfor: ["\\dots", 1],
+                mathbbm: ["\\mathbb{#1}", 1],
+                bordermatrix: ["\\matrix{#1}", 1]
+            }
+        }
+    }
+    );
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
+    
+  </body>
+</html>

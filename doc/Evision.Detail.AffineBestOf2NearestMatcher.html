@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.Detail.AffineBestOf2NearestMatcher — Evision v0.1.7-dev</title>
+    <title>Evision.Detail.AffineBestOf2NearestMatcher — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.Detail.AffineBestOf2NearestMatcher</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,9 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p></div>
+          <div class="summary-synopsis"><p>Performs images matching.</p></div>
 
       </div>
 
@@ -138,9 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p></div>
+          <div class="summary-synopsis"><p>Performs images matching.</p></div>
 
       </div>
 
@@ -150,7 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>features1</strong>: <code class="inline">ImageFeatures</code>.</p></div>
 
       </div>
 
@@ -170,7 +168,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><p>  ##### Keyword Arguments</p></div>
 
       </div>
 
@@ -180,7 +178,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><p>  ##### Keyword Arguments</p></div>
 
       </div>
 
@@ -190,8 +188,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>full_affine</strong>: bool.</li><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
-  between images</p></div>
+          <div class="summary-synopsis"><p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
+between images</p></div>
 
       </div>
 
@@ -201,8 +199,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>full_affine</strong>: bool.</li><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
-  between images</p></div>
+          <div class="summary-synopsis"><p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
+between images</p></div>
 
       </div>
 
@@ -336,7 +334,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">apply2(self, features)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L210" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -346,9 +344,8 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply2</span><span class="p" data-group-id="1145510860-1">(</span><span class="n">features</span><span class="p" data-group-id="1145510860-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="1145510860-2">]</span><span class="p" data-group-id="1145510860-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">pairwise_matches</span></code></pre>
+<p>Performs images matching.</p><h5>Positional Arguments</h5><ul><li><p><strong>features</strong>: <code class="inline">[ImageFeatures]</code>.</p><p>Features of the source images</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>mask</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Mask indicating which image pairs must be matched</p></li></ul><h5>Return</h5><ul><li><p><strong>pairwise_matches</strong>: <code class="inline">[MatchesInfo]</code>.</p><p>Found pairwise matches</p></li></ul><p>The function is parallelized with the TBB library.
+@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="python3">apply2(features[, mask]) -&gt; pairwise_matches</code></pre>
   </section>
 </section>
 <section class="detail" id="apply2/3">
@@ -360,7 +357,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">apply2(self, features, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -370,9 +367,8 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>features</strong>: vector_ImageFeatures. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>mask</strong>: UMat.</li></ul><p>Performs images matching.
-  The function is parallelized with the TBB library.
-@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply2</span><span class="p" data-group-id="8492454336-1">(</span><span class="n">features</span><span class="p" data-group-id="8492454336-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p" data-group-id="8492454336-2">]</span><span class="p" data-group-id="8492454336-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">pairwise_matches</span></code></pre>
+<p>Performs images matching.</p><h5>Positional Arguments</h5><ul><li><p><strong>features</strong>: <code class="inline">[ImageFeatures]</code>.</p><p>Features of the source images</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>mask</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Mask indicating which image pairs must be matched</p></li></ul><h5>Return</h5><ul><li><p><strong>pairwise_matches</strong>: <code class="inline">[MatchesInfo]</code>.</p><p>Found pairwise matches</p></li></ul><p>The function is parallelized with the TBB library.
+@sa detail::MatchesInfo</p><p>Python prototype (for reference): </p><pre><code class="python3">apply2(features[, mask]) -&gt; pairwise_matches</code></pre>
   </section>
 </section>
 <section class="detail" id="apply/3">
@@ -384,7 +380,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">apply(self, features1, features2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L123" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -394,7 +390,7 @@ cv.detail
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="0053135360-1">(</span><span class="n">features1</span><span class="p">,</span><span class="w"> </span><span class="n">features2</span><span class="p" data-group-id="0053135360-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">matches_info</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>features1</strong>: <code class="inline">ImageFeatures</code>.</p><p>First image features</p></li><li><p><strong>features2</strong>: <code class="inline">ImageFeatures</code>.</p><p>Second image features</p></li></ul><h5>Return</h5><ul><li><p><strong>matches_info</strong>: <code class="inline">MatchesInfo</code>.</p><p>Found matches</p></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">apply(features1, features2) -&gt; matches_info</code></pre>
   </section>
 </section>
 <section class="detail" id="collectGarbage/1">
@@ -406,7 +402,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">collectGarbage(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L231" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -416,7 +412,7 @@ cv.detail
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">collectGarbage</span><span class="p" data-group-id="0318542264-1">(</span><span class="p" data-group-id="0318542264-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">collectGarbage() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -428,7 +424,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L211" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L282" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -438,7 +434,7 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="8840120721-1">(</span><span class="p" data-group-id="8840120721-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="8840120721-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="8840120721-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="8840120721-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh2</span><span class="p" data-group-id="8840120721-5">]</span><span class="p" data-group-id="8840120721-4">]</span><span class="p" data-group-id="8840120721-3">]</span><span class="p" data-group-id="8840120721-2">]</span><span class="p" data-group-id="8840120721-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>  ##### Keyword Arguments</p><ul><li><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</li><li><strong>match_conf</strong>: <code class="inline">float</code>.</li><li><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</li><li><strong>num_matches_thresh2</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create([, try_use_gpu[, match_conf[, num_matches_thresh1[, num_matches_thresh2]]]]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="create/1">
@@ -450,7 +446,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">create(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L256" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -460,7 +456,7 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li><li><strong>num_matches_thresh2</strong>: int.</li></ul><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="3263243470-1">(</span><span class="p" data-group-id="3263243470-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="3263243470-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="3263243470-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="3263243470-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh2</span><span class="p" data-group-id="3263243470-5">]</span><span class="p" data-group-id="3263243470-4">]</span><span class="p" data-group-id="3263243470-3">]</span><span class="p" data-group-id="3263243470-2">]</span><span class="p" data-group-id="3263243470-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>  ##### Keyword Arguments</p><ul><li><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</li><li><strong>match_conf</strong>: <code class="inline">float</code>.</li><li><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</li><li><strong>num_matches_thresh2</strong>: <code class="inline">int</code>.</li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create([, try_use_gpu[, match_conf[, num_matches_thresh1[, num_matches_thresh2]]]]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="detail_AffineBestOf2NearestMatcher/0">
@@ -472,7 +468,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">detail_AffineBestOf2NearestMatcher()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L85" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -482,9 +478,10 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>full_affine</strong>: bool.</li><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
-  between images</p><pre><code class="makeup elixir" translate="no"><span class="n">transformation</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">degrees</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">freedom</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">rotation</span><span class="p">,</span><span class="w"> </span><span class="n">translation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">uniform</span><span class="w"> </span><span class="n">scaling</span><span class="w">
-</span><span class="n">estimation</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inliers</span><span class="w"> </span><span class="n">classification</span><span class="w"> </span><span class="n">step</span></code></pre><p>@sa cv::estimateAffine2D cv::estimateAffinePartial2D</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">AffineBestOf2NearestMatcher</span><span class="p" data-group-id="1609934234-1">(</span><span class="p" data-group-id="1609934234-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">full_affine</span><span class="p" data-group-id="1609934234-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="1609934234-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="1609934234-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="1609934234-5">]</span><span class="p" data-group-id="1609934234-4">]</span><span class="p" data-group-id="1609934234-3">]</span><span class="p" data-group-id="1609934234-2">]</span><span class="p" data-group-id="1609934234-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">detail_AffineBestOf2NearestMatcher</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
+between images</p><h5>Keyword Arguments</h5><ul><li><p><strong>full_affine</strong>: <code class="inline">bool</code>.</p><p>whether to use full affine transformation with 6 degress of freedom or reduced
+transformation with 4 degrees of freedom using only rotation, translation and uniform scaling</p></li><li><p><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</p><p>Should try to use GPU or not</p></li><li><p><strong>match_conf</strong>: <code class="inline">float</code>.</p><p>Match distances ration threshold</p></li><li><p><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</p><p>Minimum number of matches required for the 2D affine transform
+estimation used in the inliers classification step</p></li></ul><p>@sa cv::estimateAffine2D cv::estimateAffinePartial2D</p><p>Python prototype (for reference): </p><pre><code class="python3">AffineBestOf2NearestMatcher([, full_affine[, try_use_gpu[, match_conf[, num_matches_thresh1]]]]) -&gt; &lt;detail_AffineBestOf2NearestMatcher object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="detail_AffineBestOf2NearestMatcher/1">
@@ -496,7 +493,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">detail_AffineBestOf2NearestMatcher(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -506,9 +503,10 @@ cv.detail
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>full_affine</strong>: bool.</li><li><strong>try_use_gpu</strong>: bool.</li><li><strong>match_conf</strong>: float.</li><li><strong>num_matches_thresh1</strong>: int.</li></ul><p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
-  between images</p><pre><code class="makeup elixir" translate="no"><span class="n">transformation</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">degrees</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">freedom</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">rotation</span><span class="p">,</span><span class="w"> </span><span class="n">translation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">uniform</span><span class="w"> </span><span class="n">scaling</span><span class="w">
-</span><span class="n">estimation</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">inliers</span><span class="w"> </span><span class="n">classification</span><span class="w"> </span><span class="n">step</span></code></pre><p>@sa cv::estimateAffine2D cv::estimateAffinePartial2D</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">AffineBestOf2NearestMatcher</span><span class="p" data-group-id="2853460907-1">(</span><span class="p" data-group-id="2853460907-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">full_affine</span><span class="p" data-group-id="2853460907-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">try_use_gpu</span><span class="p" data-group-id="2853460907-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">match_conf</span><span class="p" data-group-id="2853460907-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">num_matches_thresh1</span><span class="p" data-group-id="2853460907-5">]</span><span class="p" data-group-id="2853460907-4">]</span><span class="p" data-group-id="2853460907-3">]</span><span class="p" data-group-id="2853460907-2">]</span><span class="p" data-group-id="2853460907-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">detail_AffineBestOf2NearestMatcher</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>Constructs a &quot;best of 2 nearest&quot; matcher that expects affine transformation
+between images</p><h5>Keyword Arguments</h5><ul><li><p><strong>full_affine</strong>: <code class="inline">bool</code>.</p><p>whether to use full affine transformation with 6 degress of freedom or reduced
+transformation with 4 degrees of freedom using only rotation, translation and uniform scaling</p></li><li><p><strong>try_use_gpu</strong>: <code class="inline">bool</code>.</p><p>Should try to use GPU or not</p></li><li><p><strong>match_conf</strong>: <code class="inline">float</code>.</p><p>Match distances ration threshold</p></li><li><p><strong>num_matches_thresh1</strong>: <code class="inline">int</code>.</p><p>Minimum number of matches required for the 2D affine transform
+estimation used in the inliers classification step</p></li></ul><p>@sa cv::estimateAffine2D cv::estimateAffinePartial2D</p><p>Python prototype (for reference): </p><pre><code class="python3">AffineBestOf2NearestMatcher([, full_affine[, try_use_gpu[, match_conf[, num_matches_thresh1]]]]) -&gt; &lt;detail_AffineBestOf2NearestMatcher object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="isThreadSafe/1">
@@ -520,7 +518,7 @@ cv.detail
     </a>
     <h1 class="signature" translate="no">isThreadSafe(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L230" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L302" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -530,7 +528,7 @@ cv.detail
 
   <section class="docstring">
 
-<p>@return True, if it's possible to use the same matcher instance in parallel, false otherwise</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isThreadSafe</span><span class="p" data-group-id="1584617531-1">(</span><span class="p" data-group-id="1584617531-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@return True, if it's possible to use the same matcher instance in parallel, false otherwise</p><p>Python prototype (for reference): </p><pre><code class="python3">isThreadSafe() -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -555,7 +553,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply2!(self, features)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L218" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -577,7 +575,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply2!(self, features, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L117" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -599,7 +597,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply!(self, features1, features2)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L132" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -621,7 +619,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">collectGarbage!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L164" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -643,7 +641,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L288" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -665,7 +663,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L191" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L263" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -687,7 +685,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detail_AffineBestOf2NearestMatcher!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -709,7 +707,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">detail_AffineBestOf2NearestMatcher!(opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -731,7 +729,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isThreadSafe!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L236" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_detail_affinebestof2nearestmatcher.ex#L308" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -754,10 +752,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_detail_affinebestof2nearestmatcher.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_detail_affinebestof2nearestmatcher.ex">(current file)</a>
 
             </span>
 

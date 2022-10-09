@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="project" content="Evision v0.1.9">
+
+    <title>Changelog — Evision v0.1.9</title>
+    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+
+
+  </head>
+  <body data-type="extras">
+    <script>
+
+      try {
+        var settings = JSON.parse(localStorage.getItem('ex_doc:settings') || '{}');
+
+        if (settings.theme === 'dark' ||
+           ((settings.theme === 'system' || settings.theme == null) &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+           ) {
+          document.body.classList.add('dark')
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="Evision.html" class="sidebar-projectName" translate="no">
+Evision
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.9
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <output role="status" id="toast"></output>
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/CHANGELOG.md#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span>Changelog</span>
+</h1>
+
+<h2 id="v0-1-9-2022-10-09" class="section-heading">
+  <a href="#v0-1-9-2022-10-09" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">v0-1-9-2022-10-09</p>
+  </a>
+  v0.1.9 (2022-10-09)
+</h2>
+<p><a href="https://github.com/cocoa-xu/evision/tree/v0.1.9">Browse the Repository</a> | <a href="https://github.com/cocoa-xu/evision/releases/tag/v0.1.9">Released Assets</a></p><h3 id="bug-fixes" class="section-heading">
+  <a href="#bug-fixes" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">bug-fixes</p>
+  </a>
+  Bug Fixes
+</h3>
+<ul><li><p><a href="Mix.Tasks.Compile.EvisionPrecompiled.html"><code class="inline">Mix.Tasks.Compile.EvisionPrecompiled</code></a>: using <a href="https://hexdocs.pm/elixir/File.html#cp_r/2"><code class="inline">File.cp_r/2</code></a> instead of calling <code class="inline">cp -a</code> via <a href="https://hexdocs.pm/elixir/System.html#cmd/3"><code class="inline">System.cmd/3</code></a>.</p></li><li><p>Fixed TLS warnings when downloading precompiled tarball file. Thanks to @kipcole9!</p></li><li><p>Only include <code class="inline">evision_custom_headers/evision_ml.hpp</code> if the <code class="inline">HAVE_OPENCV_ML</code> macro is defined.</p></li><li><p>Support parsing <code class="inline">RefWrapper&lt;T&gt; (&amp;value)[N]</code> from list or tuple. (<a href="https://github.com/cocoa-xu/evision/issues/99">#99</a>)</p><p>See the function in <code class="inline">c_src/evision.cpp</code>.</p><pre><code class="cpp">bool parseSequence(ErlNifEnv *env, ERL_NIF_TERM obj, RefWrapper&lt;T&gt; (&amp;value)[N], const ArgInfo&amp; info)</code></pre><pre><code class="makeup elixir" translate="no"><span class="c1"># `RotatedRect` has to be a tuple, {centre, size, angle}</span><span class="w">
+</span><span class="nc">Evision</span><span class="o">.</span><span class="n">boxPoints!</span><span class="p" data-group-id="0422189222-1">(</span><span class="p" data-group-id="0422189222-2">{</span><span class="p" data-group-id="0422189222-3">{</span><span class="mf">224.0</span><span class="p">,</span><span class="w"> </span><span class="mf">262.5</span><span class="p" data-group-id="0422189222-3">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0422189222-4">{</span><span class="mf">343.0</span><span class="p">,</span><span class="w"> </span><span class="mf">344.0</span><span class="p" data-group-id="0422189222-4">}</span><span class="p">,</span><span class="w"> </span><span class="mf">90.0</span><span class="p" data-group-id="0422189222-2">}</span><span class="p" data-group-id="0422189222-1">)</span><span class="w">
+
+</span><span class="c1"># while `Point`/`Size` can be either a list, `[x, y]`, or a tuple, `{x, y}`</span><span class="w">
+</span><span class="nc">Evision</span><span class="o">.</span><span class="n">boxPoints!</span><span class="p" data-group-id="0422189222-5">(</span><span class="p" data-group-id="0422189222-6">{</span><span class="p" data-group-id="0422189222-7">[</span><span class="mf">224.0</span><span class="p">,</span><span class="w"> </span><span class="mf">262.5</span><span class="p" data-group-id="0422189222-7">]</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0422189222-8">[</span><span class="mf">343.0</span><span class="p">,</span><span class="w"> </span><span class="mf">344.0</span><span class="p" data-group-id="0422189222-8">]</span><span class="p">,</span><span class="w"> </span><span class="mf">90.0</span><span class="p" data-group-id="0422189222-6">}</span><span class="p" data-group-id="0422189222-5">)</span></code></pre></li><li><p>Fixed the mapping from a type to the corresponding function guard in <code class="inline">py_src/helper.py</code>. (<a href="https://github.com/cocoa-xu/evision/issues/99">#99</a>)</p></li></ul><h3 id="changed" class="section-heading">
+  <a href="#changed" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">changed</p>
+  </a>
+  Changed
+</h3>
+<ul><li>Display <code class="inline">RotatedRect</code> type as <code class="inline">{centre={x, y}, size={s1, s2}, angle}</code> in docs.</li></ul><h2 id="v0-1-8-2022-10-08" class="section-heading">
+  <a href="#v0-1-8-2022-10-08" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">v0-1-8-2022-10-08</p>
+  </a>
+  v0.1.8 (2022-10-08)
+</h2>
+<p><a href="https://github.com/cocoa-xu/evision/tree/v0.1.8">Browse the Repository</a> | <a href="https://github.com/cocoa-xu/evision/releases/tag/v0.1.8">Released Assets</a></p><h3 id="changed-1" class="section-heading">
+  <a href="#changed-1" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">changed-1</p>
+  </a>
+  Changed
+</h3>
+<ul><li><p><code class="inline">CMake</code> and <code class="inline">make</code> (<code class="inline">nmake</code> if on Windows) will not be used to download and deploy precompiled binaries for Elixir users.</p><p>This means that <code class="inline">evision</code> can be downloaded and deployed once Erlang and Elixir are properly installed on the system.</p></li></ul><h2 id="v0-1-7-2022-10-07" class="section-heading">
+  <a href="#v0-1-7-2022-10-07" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">v0-1-7-2022-10-07</p>
+  </a>
+  v0.1.7 (2022-10-07)
+</h2>
+<p><a href="https://github.com/cocoa-xu/evision/tree/v0.1.7">Browse the Repository</a> | <a href="https://github.com/cocoa-xu/evision/releases/tag/v0.1.7">Released Assets</a></p><h3 id="breaking-changes" class="section-heading">
+  <a href="#breaking-changes" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">breaking-changes</p>
+  </a>
+  Breaking Changes
+</h3>
+<ul><li><p><code class="inline">EVISION_PREFER_PRECOMPILED</code> is set to <code class="inline">true</code> by default. </p><p> <code class="inline">:evision</code> will try to use precompiled binaries if available. Otherwise, it will fallback to building from source.</p></li><li><p>Precompiled binary filename changed:</p><pre><code class="makeup elixir" translate="no"><span class="n">arm64</span><span class="o">-</span><span class="n">apple</span><span class="o">-</span><span class="n">darwin</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">aarch64</span><span class="o">-</span><span class="n">apple</span><span class="o">-</span><span class="n">darwin</span><span class="w">
+</span><span class="n">amd64</span><span class="o">-</span><span class="n">windows</span><span class="o">-</span><span class="n">msvc</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x86_64</span><span class="o">-</span><span class="n">windows</span><span class="o">-</span><span class="n">msvc</span></code></pre></li></ul><h3 id="changed-2" class="section-heading">
+  <a href="#changed-2" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">changed-2</p>
+  </a>
+  Changed
+</h3>
+<ul><li><p><code class="inline">cv::VideoCapture</code> will be wrapped in struct. For example:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">cap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.VideoCapture</span><span class="o">.</span><span class="n">videoCapture!</span><span class="p" data-group-id="1884051517-1">(</span><span class="s">&quot;test/videocapture_test.mp4&quot;</span><span class="p" data-group-id="1884051517-1">)</span><span class="w">
+</span><span class="p" data-group-id="1884051517-2">%</span><span class="nc" data-group-id="1884051517-2">Evision.VideoCapture</span><span class="p" data-group-id="1884051517-2">{</span><span class="w">
+  </span><span class="ss">fps</span><span class="p">:</span><span class="w"> </span><span class="mf">43.2</span><span class="p">,</span><span class="w">
+  </span><span class="ss">frame_count</span><span class="p">:</span><span class="w"> </span><span class="mf">18.0</span><span class="p">,</span><span class="w">
+  </span><span class="ss">frame_width</span><span class="p">:</span><span class="w"> </span><span class="mf">1920.0</span><span class="p">,</span><span class="w">
+  </span><span class="ss">frame_height</span><span class="p">:</span><span class="w"> </span><span class="mf">1080.0</span><span class="p">,</span><span class="w">
+  </span><span class="ss">isOpened</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w">
+  </span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1884051517-3">#</span><span class="nc" data-group-id="1884051517-3">Reference</span><span class="p" data-group-id="1884051517-3">&lt;</span><span class="mf">0.3650318819</span><span class="o">.</span><span class="mf">3952214034.37793</span><span class="p" data-group-id="1884051517-3">&gt;</span><span class="w">
+</span><span class="p" data-group-id="1884051517-2">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Evision.VideoCapture</span><span class="o">.</span><span class="n">read!</span><span class="p" data-group-id="1884051517-4">(</span><span class="n">cap</span><span class="p" data-group-id="1884051517-4">)</span><span class="w">
+</span><span class="p" data-group-id="1884051517-5">%</span><span class="nc" data-group-id="1884051517-5">Evision.Mat</span><span class="p" data-group-id="1884051517-5">{</span><span class="w">
+  </span><span class="ss">channels</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="ss">dims</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1884051517-6">{</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="1884051517-6">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">raw_type</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+  </span><span class="ss">shape</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1884051517-7">{</span><span class="mi">1080</span><span class="p">,</span><span class="w"> </span><span class="mi">1920</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="1884051517-7">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1884051517-8">#</span><span class="nc" data-group-id="1884051517-8">Reference</span><span class="p" data-group-id="1884051517-8">&lt;</span><span class="mf">0.3650318819</span><span class="o">.</span><span class="mf">3952214042.38343</span><span class="p" data-group-id="1884051517-8">&gt;</span><span class="w">
+</span><span class="p" data-group-id="1884051517-5">}</span></code></pre></li><li><p><a href="Evision.Mat.html#empty/0"><code class="inline">Evision.Mat.empty/0</code></a> will also return an <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a> struct (was returning <code class="inline">#Reference&lt;some random numbers&gt;</code>).</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">empty!</span><span class="p" data-group-id="3161932664-1">(</span><span class="p" data-group-id="3161932664-1">)</span><span class="w">
+</span><span class="p" data-group-id="3161932664-2">%</span><span class="nc" data-group-id="3161932664-2">Evision.Mat</span><span class="p" data-group-id="3161932664-2">{</span><span class="w">
+  </span><span class="ss">channels</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="ss">dims</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="3161932664-3">{</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="3161932664-3">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">raw_type</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="ss">shape</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="3161932664-4">{</span><span class="p" data-group-id="3161932664-4">}</span><span class="p">,</span><span class="w">
+  </span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="3161932664-5">#</span><span class="nc" data-group-id="3161932664-5">Reference</span><span class="p" data-group-id="3161932664-5">&lt;</span><span class="mf">0.2351084001</span><span class="o">.</span><span class="mf">2568618002.207930</span><span class="p" data-group-id="3161932664-5">&gt;</span><span class="w">
+</span><span class="p" data-group-id="3161932664-2">}</span></code></pre></li><li><p>raise RuntimeError for all unimplemented <code class="inline">:nx</code> callbacks.</p><pre><code class="makeup elixir" translate="no"><span class="k">raise</span><span class="w"> </span><span class="nc">RuntimeError</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;not implemented yet&quot;</span></code></pre></li><li><p>Elixir functions that have the same name and arity will be grouped together now.</p><p>This should massively reduce the number of warnings emitted by the elixir compiler.</p></li><li><p>Only generate corresponding binding code.</p><ul><li>Only generate binding code for Elixir when compiling <code class="inline">:evision</code> using <code class="inline">mix</code>; </li><li>Only generate binding code for erlang when compiling <code class="inline">:evision</code> using <code class="inline">rebar</code>;</li></ul><p>It's possible to generate erlang and Elixir at the same time. However, currently it's only possible to do so when compiling evision using <code class="inline">mix</code>.</p><pre><code class="makeup shell" translate="no"><span class=""># default value is `elixir` when compiling evision using `mix`
+</span><span class=""># default value is `erlang` when compiling evision using `rebar`
+</span><span class="">#
+</span><span class=""># expected format is a comma-separated string
+</span><span class="">export EVISION_GENERATE_LANG=&quot;erlang,elixir&quot;
+</span></code></pre></li><li><p>Better inline docs.</p><ul><li><p>Inline docs will have a section for <code class="inline">Positional Arguments</code> and a section for <code class="inline">Keyword Arguments</code>. For example,</p><pre><code class="makeup elixir" translate="no"><span class="na">@doc</span><span class="w"> </span><span class="s">&quot;&quot;&quot;
+### Positional Arguments
+- **bboxes**: vector_Rect2d. 
+- **scores**: vector_float. 
+- **score_threshold**: float. 
+- **nms_threshold**: float. 
+
+### Keyword Arguments
+- **eta**: float.
+- **top_k**: int.
+
+Performs non maximum suppression given boxes and corresponding scores.
+
+Python prototype (for reference): 
+</span><span class="se">\`</span><span class="s">``
+NMSBoxes(bboxes, scores, score_threshold, nms_threshold[, eta[, top_k]]) -&gt; indices
+</span><span class="se">\`</span><span class="s">``
+&quot;&quot;&quot;</span><span class="w">
+</span><span class="na">@doc</span><span class="w"> </span><span class="ss">namespace</span><span class="p">:</span><span class="w"> </span><span class="ss">:&quot;cv.dnn&quot;</span><span class="w">
+</span><span class="kd">def</span><span class="w"> </span><span class="nf">nmsBoxes</span><span class="p" data-group-id="4915336660-1">(</span><span class="n">bboxes</span><span class="p">,</span><span class="w"> </span><span class="n">scores</span><span class="p">,</span><span class="w"> </span><span class="n">score_threshold</span><span class="p">,</span><span class="w"> </span><span class="n">nms_threshold</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p" data-group-id="4915336660-1">)</span></code></pre><ul><li>If a function (same name and arity) has multiple variants, the inline docs will show each of them in section <code class="inline">## Variant VAR_INDEX</code>. For example,</li></ul><pre><code class="makeup elixir" translate="no"><span class="na">@doc</span><span class="w"> </span><span class="s">&quot;&quot;&quot;
+#### Variant 1:
+
+##### Positional Arguments
+- **dx**: UMat. 
+- **dy**: UMat. 
+- **threshold1**: double. 
+- **threshold2**: double. 
+
+##### Keyword Arguments
+- **edges**: UMat.
+- **l2gradient**: bool.
+
+  </span><span class="se">\\</span><span class="s">overload
+  Finds edges in an image using the Canny algorithm with custom image gradient.
+    </span><span class="se">\\</span><span class="s">f$=</span><span class="se">\\</span><span class="s">sqrt{(dI/dx)^2 + (dI/dy)^2}</span><span class="se">\\</span><span class="s">f$ should be used to calculate the image gradient magnitude (
+    L2gradient=true ), or whether the default </span><span class="se">\\</span><span class="s">f$L</span><span class="se">\\</span><span class="s">_1</span><span class="se">\\</span><span class="s">f$ norm </span><span class="se">\\</span><span class="s">f$=|dI/dx|+|dI/dy|</span><span class="se">\\</span><span class="s">f$ is enough (
+    L2gradient=false ).
+
+Python prototype (for reference): 
+</span><span class="se">\`</span><span class="s">``
+Canny(dx, dy, threshold1, threshold2[, edges[, L2gradient]]) -&gt; edges
+</span><span class="se">\`</span><span class="s">``
+#### Variant 2:
+
+##### Positional Arguments
+- **image**: UMat. 
+- **threshold1**: double. 
+- **threshold2**: double. 
+
+##### Keyword Arguments
+- **edges**: UMat.
+- **apertureSize**: int.
+- **l2gradient**: bool.
+
+Finds edges in an image using the Canny algorithm @cite Canny86 .
+  The function finds edges in the input image and marks them in the output map edges using the
+  Canny algorithm. The smallest value between threshold1 and threshold2 is used for edge linking. The
+  largest value is used to find initial segments of strong edges. See
+  &lt;http://en.wikipedia.org/wiki/Canny_edge_detector&gt;
+    </span><span class="se">\\</span><span class="s">f$=</span><span class="se">\\</span><span class="s">sqrt{(dI/dx)^2 + (dI/dy)^2}</span><span class="se">\\</span><span class="s">f$ should be used to calculate the image gradient magnitude (
+    L2gradient=true ), or whether the default </span><span class="se">\\</span><span class="s">f$L</span><span class="se">\\</span><span class="s">_1</span><span class="se">\\</span><span class="s">f$ norm </span><span class="se">\\</span><span class="s">f$=|dI/dx|+|dI/dy|</span><span class="se">\\</span><span class="s">f$ is enough (
+    L2gradient=false ).
+
+Python prototype (for reference): 
+</span><span class="se">\`</span><span class="s">``
+Canny(image, threshold1, threshold2[, edges[, apertureSize[, L2gradient]]]) -&gt; edges
+</span><span class="se">\`</span><span class="s">``
+
+&quot;&quot;&quot;</span><span class="w">
+</span><span class="na">@doc</span><span class="w"> </span><span class="ss">namespace</span><span class="p">:</span><span class="w"> </span><span class="ss">:cv</span><span class="w">
+</span><span class="kd">def</span><span class="w"> </span><span class="nf">canny</span><span class="p" data-group-id="0914018325-1">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="n">threshold1</span><span class="p">,</span><span class="w"> </span><span class="n">threshold2</span><span class="p">,</span><span class="w"> </span><span class="n">opts</span><span class="p" data-group-id="0914018325-1">)</span><span class="w">
+</span><span class="ow">when</span><span class="w"> </span><span class="p" data-group-id="0914018325-2">(</span><span class="n">is_reference</span><span class="p" data-group-id="0914018325-3">(</span><span class="n">image</span><span class="p" data-group-id="0914018325-3">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">is_struct</span><span class="p" data-group-id="0914018325-4">(</span><span class="n">image</span><span class="p" data-group-id="0914018325-4">)</span><span class="p" data-group-id="0914018325-2">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">is_number</span><span class="p" data-group-id="0914018325-5">(</span><span class="n">threshold1</span><span class="p" data-group-id="0914018325-5">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">is_number</span><span class="p" data-group-id="0914018325-6">(</span><span class="n">threshold2</span><span class="p" data-group-id="0914018325-6">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">is_list</span><span class="p" data-group-id="0914018325-7">(</span><span class="n">opts</span><span class="p" data-group-id="0914018325-7">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p" data-group-id="0914018325-8">(</span><span class="n">opts</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p" data-group-id="0914018325-9">[</span><span class="p" data-group-id="0914018325-9">]</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">is_tuple</span><span class="p" data-group-id="0914018325-10">(</span><span class="n">hd</span><span class="p" data-group-id="0914018325-11">(</span><span class="n">opts</span><span class="p" data-group-id="0914018325-11">)</span><span class="p" data-group-id="0914018325-10">)</span><span class="p" data-group-id="0914018325-8">)</span><span class="p">,</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="c1"># variant 2</span><span class="w">
+
+</span><span class="kd">def</span><span class="w"> </span><span class="nf">canny</span><span class="p" data-group-id="0914018325-12">(</span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">threshold1</span><span class="p">,</span><span class="w"> </span><span class="n">threshold2</span><span class="p" data-group-id="0914018325-12">)</span><span class="w">
+</span><span class="ow">when</span><span class="w"> </span><span class="p" data-group-id="0914018325-13">(</span><span class="n">is_reference</span><span class="p" data-group-id="0914018325-14">(</span><span class="n">dx</span><span class="p" data-group-id="0914018325-14">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">is_struct</span><span class="p" data-group-id="0914018325-15">(</span><span class="n">dx</span><span class="p" data-group-id="0914018325-15">)</span><span class="p" data-group-id="0914018325-13">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p" data-group-id="0914018325-16">(</span><span class="n">is_reference</span><span class="p" data-group-id="0914018325-17">(</span><span class="n">dy</span><span class="p" data-group-id="0914018325-17">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">is_struct</span><span class="p" data-group-id="0914018325-18">(</span><span class="n">dy</span><span class="p" data-group-id="0914018325-18">)</span><span class="p" data-group-id="0914018325-16">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">is_number</span><span class="p" data-group-id="0914018325-19">(</span><span class="n">threshold1</span><span class="p" data-group-id="0914018325-19">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">is_number</span><span class="p" data-group-id="0914018325-20">(</span><span class="n">threshold2</span><span class="p" data-group-id="0914018325-20">)</span><span class="p">,</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="c1"># variant 1</span></code></pre><ul><li>Better integration with <code class="inline">:nx</code>.</li></ul><pre><code class="makeup elixir" translate="no"></code></pre></li></ul><p>iex&gt; t = Nx.tensor([[[0,0,0], [255, 255, 255]]], type: :u8)
+#Nx.Tensor&lt;
+  u8[1][2][3]
+  [
+    [
+      [0, 0, 0],
+      [255, 255, 255]
+    ]
+  ]
+&gt;
+iex&gt; mat = Evision.imread!(&quot;test.png&quot;)
+%Evision.Mat{
+  channels: 3,
+  dims: 2,
+  type: {:u, 8},
+  raw_type: 16,
+  shape: {1, 2, 3},
+  ref: #Reference&lt;0.2067356221.74055707.218654&gt;
+}
+iex&gt; mat = Evision.Mat.channel_as_last_dim!(mat)
+%Evision.Mat{
+  channels: 1,
+  dims: 3,
+  type: {:u, 8},
+  raw_type: 0,
+  shape: {1, 2, 3},
+  ref: #Reference&lt;0.2067356221.74055698.218182&gt;
+}
+iex&gt; result = Evision.Mat.add!(t, mat)
+%Evision.Mat{
+  channels: 1,
+  dims: 3,
+  type: {:u, 8},
+  raw_type: 0,
+  shape: {1, 2, 3},
+  ref: #Reference&lt;0.2067356221.74055698.218184&gt;
+}
+iex&gt; Evision.Nx.to_nx!(result)
+#Nx.Tensor&lt;
+  u8[1][2][3]
+  Evision.Backend
+  [
+    [
+      [255, 255, 255],
+      [255, 255, 255]
+    ]
+  ]
+&gt;</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Implemented</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="n">setter</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">`</span><span class="n">cv</span><span class="o">::</span><span class="nc">Ptr</span><span class="o">&lt;&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">wrapped</span><span class="w"> </span><span class="n">types</span><span class="o">.</span><span class="w"> </span><span class="nc">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w">
+</span></code></pre><p>iex&gt; k = Evision.KalmanFilter.kalmanFilter!(1, 1)
+#Reference&lt;0.382162378.457572372.189094&gt;
+iex&gt; Evision.KalmanFilter.get_gain!(k) |&gt; Evision.Nx.to_nx!
+#Nx.Tensor&lt;
+  f32[1][1]
+  Evision.Backend
+  [
+    [0.0]
+  ]
+&gt;
+iex&gt; Evision.KalmanFilter.set_gain!(k, Evision.Mat.literal!([1.0], :f32))
+#Reference&lt;0.382162378.457572372.189094&gt;
+iex&gt; Evision.KalmanFilter.get_gain!(k) |&gt; Evision.Nx.to_nx!
+#Nx.Tensor&lt;
+  f32[1][1]
+  Evision.Backend
+  [
+    [1.0]
+  ]
+&gt;</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">More</span><span class="w"> </span><span class="n">detailed</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="n">getter</span><span class="o">/</span><span class="n">setter</span><span class="o">.</span><span class="w"> </span><span class="nc">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w">
+
+</span><span class="o">-</span><span class="w"> </span><span class="nc">When</span><span class="w"> </span><span class="n">setting</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="err">`</span><span class="nc">A</span><span class="err">`</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">passed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">setter</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="err">`</span><span class="nc">B</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">known</span><span class="w"> </span><span class="n">conversion</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="err">`</span><span class="nc">B</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="nc">A</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="o">-</span><span class="n">tuple</span><span class="w">
+</span></code></pre><p>  iex&gt; k = Evision.KalmanFilter.kalmanFilter!(1, 1)
+  iex&gt; Evision.KalmanFilter.set_gain(k, :p)</p><p>  iex&gt; Evision.KalmanFilter.set_gain(k, :p)
+  ** (RuntimeError) cannot assign new value, mismatched type?</p><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="p" data-group-id="1211768983-1">(</span><span class="n">evision</span><span class="w"> </span><span class="mf">0.1</span><span class="o">.</span><span class="mi">7</span><span class="p" data-group-id="1211768983-1">)</span><span class="w"> </span><span class="n">lib</span><span class="o">/</span><span class="n">generated</span><span class="o">/</span><span class="n">evision_kalmanfilter</span><span class="o">.</span><span class="n">ex</span><span class="p">:</span><span class="mi">175</span><span class="p">:</span><span class="w"> </span><span class="nc">Evision.KalmanFilter</span><span class="o">.</span><span class="n">set_gain!</span><span class="o">/</span><span class="mi">2</span><span class="w">
+  </span><span class="n">iex</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1211768983-2">(</span><span class="n">file</span><span class="p" data-group-id="1211768983-2">)</span></code></pre><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">For</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="n">getter</span><span class="o">/</span><span class="n">setter</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="n">self</span><span class="err">`</span><span class="w"> </span><span class="n">passed</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">different</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">expected</span><span class="p">,</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="o">-</span><span class="n">tuple</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">returned</span><span class="w">
+</span></code></pre><p>  iex&gt; mat = Evision.Mat.literal!([1.0], :f32)
+  %Evision.Mat{</p><pre><code class="makeup elixir" translate="no"><span class="ss">channels</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+</span><span class="ss">dims</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+</span><span class="ss">type</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="9895101446-1">{</span><span class="ss">:f</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p" data-group-id="9895101446-1">}</span><span class="p">,</span><span class="w">
+</span><span class="ss">raw_type</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+</span><span class="ss">shape</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="9895101446-2">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="9895101446-2">}</span><span class="p">,</span><span class="w">
+</span><span class="ss">ref</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="9895101446-3">#</span><span class="nc" data-group-id="9895101446-3">Reference</span><span class="p" data-group-id="9895101446-3">&lt;</span><span class="mf">0.1499445684</span><span class="o">.</span><span class="mf">3682467860.58544</span><span class="p" data-group-id="9895101446-3">&gt;</span></code></pre><p>  }
+  iex&gt; Evision.KalmanFilter.set_gain(mat, mat) 
+  {:error,
+  &quot;cannot get <code class="inline">Ptr&lt;cv::KalmanFilter&gt;</code> from <code class="inline">self</code>: mismatched type or invalid resource?&quot;}
+  iex&gt; Evision.KalmanFilter.set_gain!(mat, mat)
+  ** (RuntimeError) cannot get <code class="inline">Ptr&lt;cv::KalmanFilter&gt;</code> from <code class="inline">self</code>: mismatched type or invalid resource?</p><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="p" data-group-id="4518129560-1">(</span><span class="n">evision</span><span class="w"> </span><span class="mf">0.1</span><span class="o">.</span><span class="mi">7</span><span class="p" data-group-id="4518129560-1">)</span><span class="w"> </span><span class="n">lib</span><span class="o">/</span><span class="n">generated</span><span class="o">/</span><span class="n">evision_kalmanfilter</span><span class="o">.</span><span class="n">ex</span><span class="p">:</span><span class="mi">175</span><span class="p">:</span><span class="w"> </span><span class="nc">Evision.KalmanFilter</span><span class="o">.</span><span class="n">set_gain!</span><span class="o">/</span><span class="mi">2</span><span class="w">
+  </span><span class="n">iex</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="4518129560-2">(</span><span class="n">file</span><span class="p" data-group-id="4518129560-2">)</span></code></pre><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="n">evision_</span><span class="c1">##NAME##_getp` (in `c_src/erlcompat.hpp`) should just return true or false. </span><span class="w">
+
+</span><span class="nc">Returning</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="nc">ERL_NIF_TERM</span><span class="err">`</span><span class="w"> </span><span class="p" data-group-id="1680674925-1">(</span><span class="err">`</span><span class="n">enif_make_badarg</span><span class="err">`</span><span class="p" data-group-id="1680674925-1">)</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">macro</span><span class="w"> </span><span class="p" data-group-id="1680674925-2">(</span><span class="ow">when</span><span class="w"> </span><span class="err">`</span><span class="n">enif_get_resource</span><span class="err">`</span><span class="w"> </span><span class="n">fails</span><span class="p" data-group-id="1680674925-2">)</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">prevent</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">caller</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">returning</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="o">-</span><span class="n">tuple</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">detailed</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">message</span><span class="o">.</span><span class="w">
+
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Improved</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">quality</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">generated</span><span class="w"> </span><span class="n">inline</span><span class="w"> </span><span class="n">docs</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">Also</span><span class="w"> </span><span class="n">displays</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">variable</span><span class="p" data-group-id="1680674925-3">(</span><span class="n">s</span><span class="p" data-group-id="1680674925-3">)</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">returned</span><span class="w"> </span><span class="p" data-group-id="1680674925-4">(</span><span class="ow">when</span><span class="w"> </span><span class="n">applicable</span><span class="p" data-group-id="1680674925-4">)</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="c1">##### Return` section.</span><span class="w">
+
+</span><span class="c1">### Added</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">literal</span><span class="o">/</span><span class="p" data-group-id="1680674925-5">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="1680674925-5">}</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="err">`</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">literals</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">Creating</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="err">`</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">literal</span><span class="w"> </span><span class="p" data-group-id="1680674925-6">(</span><span class="err">`</span><span class="p" data-group-id="1680674925-7">[</span><span class="p" data-group-id="1680674925-7">]</span><span class="err">`</span><span class="p" data-group-id="1680674925-6">)</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">calling</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">empty</span><span class="p" data-group-id="1680674925-8">(</span><span class="p" data-group-id="1680674925-8">)</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span></code></pre><p>iex&gt; Evision.Mat.literal!([])
+%Evision.Mat{
+  channels: 1,
+  dims: 0,
+  type: {:u, 8},
+  raw_type: 0,
+  shape: {},
+  ref: #Reference&lt;0.1204050731.2031747092.46781&gt;
+}</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="nc">By</span><span class="w"> </span><span class="n">default</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">Mat</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">stay</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">is</span><span class="o">.</span></code></pre><p>iex&gt; Evision.Mat.literal!([[[1,1,1],[2,2,2],[3,3,3]]], :u8)
+%Evision.Mat{
+  channels: 1,
+  dims: 3,
+  type: {:u, 8},
+  raw_type: 0,
+  shape: {1, 3, 3},
+  ref: #Reference&lt;0.512519210.691404819.106300&gt;
+}</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">literal</span><span class="o">/</span><span class="mi">3</span><span class="err">`</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">vaild</span><span class="w"> </span><span class="mi">2</span><span class="nc">D</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">keyword</span><span class="w"> </span><span class="n">argument</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="n">as_2d</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="no">true</span><span class="err">`</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">literal</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">represented</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">2</span><span class="nc">D</span><span class="w"> </span><span class="n">image</span><span class="o">.</span></code></pre><p>iex&gt; Evision.Mat.literal!([[[1,1,1],[2,2,2],[3,3,3]]], :u8, as_2d: true)
+%Evision.Mat{
+  channels: 3,
+  dims: 2,
+  type: {:u, 8},
+  raw_type: 16,
+  shape: {1, 3, 3},
+  ref: #Reference&lt;0.512519210.691404820.106293&gt;
+}</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">channel_as_last_dim</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">This</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">opposite</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">last_dim_as_channel</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">channels</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="nc">Evision.Mat</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+</span><span class="n">then</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="nc">Evision.Mat</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">dims</span><span class="w"> </span><span class="err">`</span><span class="n">dims</span><span class="o">=</span><span class="n">list</span><span class="p" data-group-id="6831673802-1">(</span><span class="n">int</span><span class="p" data-group-id="6831673802-2">(</span><span class="p" data-group-id="6831673802-2">)</span><span class="p" data-group-id="6831673802-1">)</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="mi">1</span><span class="err">`</span><span class="o">-</span><span class="n">channel</span><span class="w"> </span><span class="nc">Evision.Mat</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">dims</span><span class="w"> </span><span class="err">`</span><span class="p" data-group-id="6831673802-3">[</span><span class="n">dims</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">channels</span><span class="p" data-group-id="6831673802-3">]</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">channels</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="nc">Evision.Mat</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">equal</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">dims</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">shape</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">nothing</span><span class="w"> </span><span class="n">happens</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="n">otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="nc">Evision.Mat</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">dims</span><span class="o">=</span><span class="err">`</span><span class="p" data-group-id="6831673802-4">[</span><span class="n">dims</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">channels</span><span class="p" data-group-id="6831673802-4">]</span><span class="err">`</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">returned</span><span class="w">
+
+</span><span class="nc">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w">
+</span></code></pre><p>iex&gt; mat = Evision.imread!(&quot;test.png&quot;)
+%Evision.Mat{
+  channels: 3,
+  dims: 2,
+  type: {:u, 8},
+  raw_type: 16,
+  shape: {1, 2, 3},
+  ref: #Reference&lt;0.2067356221.74055707.218654&gt;
+}
+iex&gt; mat = Evision.Mat.channel_as_last_dim!(mat)
+%Evision.Mat{
+  channels: 1,
+  dims: 3,
+  type: {:u, 8},
+  raw_type: 0,
+  shape: {1, 2, 3},
+  ref: #Reference&lt;0.2067356221.74055698.218182&gt;
+}</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Automatically</span><span class="w"> </span><span class="n">displays</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tabbed</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nc">Livebook</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">evaluated</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">optional</span><span class="w"> </span><span class="n">feature</span><span class="o">.</span><span class="w"> </span><span class="nc">To</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="ss">:kino</span><span class="err">`</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="n">deps</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span><span class="w">
+</span></code></pre><p>defp deps do
+  [
+    # ...
+    {:kino, &quot;~&gt; 0.7&quot;},
+    # ...
+  ]
+end</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="nc">Now</span><span class="p">,</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="err">`</span><span class="ss">:kino</span><span class="err">`</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">v0</span><span class="o">.</span><span class="mi">7</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tabbed</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">shown</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nc">Livebook</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">evaluated</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">A</span><span class="w"> </span><span class="err">`</span><span class="nc">Raw</span><span class="err">`</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">always</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">one</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span><span class="w">
+</span></code></pre><p>%Evision.Mat{
+  channels: 1,
+  dims: 3,
+  type: {:u, 8},
+  raw_type: 0,
+  shape: {1, 2, 3},
+  ref: #Reference&lt;0.3310236255.1057357843.168932&gt;
+}</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="nc">For</span><span class="w"> </span><span class="mi">2</span><span class="nc">D</span><span class="w"> </span><span class="n">images</span><span class="w"> </span><span class="p" data-group-id="8058540787-1">(</span><span class="err">`</span><span class="n">dims</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="err">`</span><span class="p" data-group-id="8058540787-1">)</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="err">`</span><span class="nc">Image</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">displays</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">image</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">For</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="err">`</span><span class="nc">Numerical</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">shows</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="n">behind</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">scene</span><span class="o">.</span><span class="w"> </span><span class="nc">Of</span><span class="w"> </span><span class="n">course</span><span class="p">,</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">large</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">part</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">shown</span><span class="o">.</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="ss">tab</span><span class="p">:</span><span class="w">
+</span></code></pre><p>#Nx.Tensor&lt;
+  u8[1][2][3]
+  Evision.Backend
+  [
+    [
+      [1, 2, 3],
+      [1, 2, 3]
+    ]
+  ]
+&gt;</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="c1">## v0.1.6 (2022-09-29)</span><span class="w">
+</span><span class="p" data-group-id="6045207880-1">[</span><span class="nc">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">Repository</span><span class="p" data-group-id="6045207880-1">]</span><span class="p" data-group-id="6045207880-2">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.6</span><span class="p" data-group-id="6045207880-2">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p" data-group-id="6045207880-3">[</span><span class="nc">Released</span><span class="w"> </span><span class="nc">Assets</span><span class="p" data-group-id="6045207880-3">]</span><span class="p" data-group-id="6045207880-4">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">tag</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.6</span><span class="p" data-group-id="6045207880-4">)</span><span class="w">
+</span><span class="c1">### Breaking Changes</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">imencode</span><span class="o">/</span><span class="p" data-group-id="6045207880-5">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="6045207880-5">}</span><span class="err">`</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">encoded</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">binary</span><span class="w"> </span><span class="n">instead</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">list</span><span class="o">.</span><span class="w">
+
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="n">cv</span><span class="o">::</span><span class="nc">Mat</span><span class="err">`</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">wrapped</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">struct</span><span class="o">.</span><span class="w"> </span><span class="nc">For</span><span class="w"> </span><span class="ss">example</span><span class="p">:</span><span class="w">
+</span></code></pre><p>iex&gt; Evision.imread!(&quot;path/to/image.png&quot;)
+%Evision.Mat{
+  channels: 3,
+  dims: 2,
+  type: {:u, 8},
+  raw_type: 16,
+  shape: {512, 512, 3},
+  ref: #Reference&lt;0.2992585850.4173463580.172624&gt;
+}</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="nc">This</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">close</span><span class="w"> </span><span class="c1">#76.</span><span class="w">
+
+</span><span class="c1">## v0.1.5 (2022-09-27)</span><span class="w">
+</span><span class="p" data-group-id="5138732141-1">[</span><span class="nc">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">Repository</span><span class="p" data-group-id="5138732141-1">]</span><span class="p" data-group-id="5138732141-2">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.5</span><span class="p" data-group-id="5138732141-2">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p" data-group-id="5138732141-3">[</span><span class="nc">Released</span><span class="w"> </span><span class="nc">Assets</span><span class="p" data-group-id="5138732141-3">]</span><span class="p" data-group-id="5138732141-4">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">tag</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.5</span><span class="p" data-group-id="5138732141-4">)</span><span class="w">
+</span><span class="c1">### Changed</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Always</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">from_binary_by_shape</span><span class="o">/</span><span class="mi">3</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_mat</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Check</span><span class="w"> </span><span class="err">`</span><span class="n">cv</span><span class="o">::</span><span class="nc">Mat</span><span class="o">::</span><span class="nc">Mat</span><span class="o">.</span><span class="n">type</span><span class="p" data-group-id="5138732141-5">(</span><span class="p" data-group-id="5138732141-5">)</span><span class="err">`</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">fetching</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nc">Mat</span><span class="o">.</span><span class="w">
+</span><span class="nc">The</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">channels</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">included</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="err">`</span><span class="n">cv</span><span class="o">::</span><span class="nc">Mat</span><span class="o">::</span><span class="nc">Mat</span><span class="o">.</span><span class="n">type</span><span class="p" data-group-id="5138732141-6">(</span><span class="p" data-group-id="5138732141-6">)</span><span class="err">`</span><span class="w"> </span><span class="n">did</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">encode</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="n">information</span><span class="o">.</span><span class="w">
+
+</span><span class="c1">### Bug Fixes</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Fixed</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">transpose</span><span class="err">`</span><span class="p">:</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="err">`</span><span class="n">shape!</span><span class="err">`</span><span class="w"> </span><span class="n">instead</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">`</span><span class="n">shape</span><span class="err">`</span><span class="o">.</span><span class="w"> </span><span class="nc">Thanks</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="na">@kipcole9</span><span class="w"> </span><span class="o">!</span><span class="w"> </span><span class="c1">#77</span><span class="w">
+
+</span><span class="c1">### Added</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">last_dim_as_channel</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">This</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tensor</span><span class="o">-</span><span class="n">like</span><span class="w"> </span><span class="err">`</span><span class="nc">Mat</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="s">&quot;valid 2D image&quot;</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="err">`</span><span class="n">channels</span><span class="err">`</span><span class="w"> </span><span class="n">equals</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="mi">3</span><span class="err">`</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="err">`</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_mat</span><span class="o">/</span><span class="mi">2</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="nc">This</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="nc">Nx.Tensor</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="nc">Mat</span><span class="err">`</span><span class="o">.</span><span class="w"> </span><span class="nc">The</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">argument</span><span class="w"> </span><span class="n">indicates</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">wanted</span><span class="o">/</span><span class="n">actual</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">tensor</span><span class="o">.</span><span class="w">
+
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="nc">Mat</span><span class="w"> </span><span class="ss">functions</span><span class="p">:</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">as_shape</span><span class="o">/</span><span class="mi">2</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">size</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">channels</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">depth</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">raw_type</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">isSubmatrix</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">isContinuous</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">elemSize</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">elemSize1</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Mat</span><span class="o">.</span><span class="n">total</span><span class="o">/</span><span class="p" data-group-id="5138732141-7">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="5138732141-7">}</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="nc">OpenCV</span><span class="w"> </span><span class="ss">types</span><span class="p">:</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_cn_shift</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_depth_max</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_mat_depth_mask</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_maketype</span><span class="o">/</span><span class="mi">2</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8U</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8UC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8UC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8UC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8UC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8UC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8S</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8SC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8SC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8SC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8SC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_8SC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16U</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16UC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16UC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16UC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16UC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16UC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16S</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16SC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16SC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16SC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16SC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16SC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32S</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32SC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32SC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32SC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32SC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32SC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32F</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32FC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32FC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32FC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32FC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_32FC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_64F</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_64FC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_64FC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_64FC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_64FC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_64FC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16F</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16FC</span><span class="o">/</span><span class="mi">1</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16FC1</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16FC2</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16FC3</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision</span><span class="o">.</span><span class="n">cv_16FC4</span><span class="o">/</span><span class="mi">0</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="c1">## v0.1.4 (2022-09-10)</span><span class="w">
+</span><span class="p" data-group-id="5138732141-8">[</span><span class="nc">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">Repository</span><span class="p" data-group-id="5138732141-8">]</span><span class="p" data-group-id="5138732141-9">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.4</span><span class="p" data-group-id="5138732141-9">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p" data-group-id="5138732141-10">[</span><span class="nc">Released</span><span class="w"> </span><span class="nc">Assets</span><span class="p" data-group-id="5138732141-10">]</span><span class="p" data-group-id="5138732141-11">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">tag</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.4</span><span class="p" data-group-id="5138732141-11">)</span><span class="w">
+</span><span class="c1">### Changed</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Default</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Backend</span><span class="err">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">`</span><span class="nc">Evision.Nx</span><span class="o">.</span><span class="n">to_nx</span><span class="o">/</span><span class="mi">2</span><span class="err">`</span><span class="o">.</span><span class="w">
+
+</span><span class="c1">### Bug Fixes</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Fixed</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n">inheritance</span><span class="w"> </span><span class="n">issue</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="err">`</span><span class="n">py_src</span><span class="o">/</span><span class="n">class_info</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Fixed</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="n">comma</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="n">livebooks</span><span class="sc">&#39; `Mix.install`. Thanks to @dbii.
+
+### Added
+- Added decision tree and random forest example.
+
+## v0.1.3 (2022-09-01)
+[Browse the Repository](https://github.com/cocoa-xu/evision/tree/v0.1.3) | [Released Assets](https://github.com/cocoa-xu/evision/releases/tag/v0.1.3)
+### Bug Fixes
+- Fixed issues in restoring files from precompiled package for macOS and Linux.
+- Paths are now quoted. 
+- using `cp -RPf` on macOS while `cp -a` on Linux.
+- Fixed `destroyAllWindows` in NIF.
+It was generated as &#39;</span><span class="n">erlang</span><span class="ss">:destroyAllWindows</span><span class="o">/</span><span class="mi">1</span><span class="sc">&#39; but it should be &#39;</span><span class="n">erlang</span><span class="ss">:destroyAllWindows</span><span class="o">/</span><span class="mi">0</span><span class="err">&#39;</span><span class="o">.</span><span class="w">
+
+</span><span class="c1">## v0.1.2 (2022-08-26)</span><span class="w">
+</span><span class="p" data-group-id="5138732141-12">[</span><span class="nc">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">Repository</span><span class="p" data-group-id="5138732141-12">]</span><span class="p" data-group-id="5138732141-13">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.2</span><span class="p" data-group-id="5138732141-13">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p" data-group-id="5138732141-14">[</span><span class="nc">Released</span><span class="w"> </span><span class="nc">Assets</span><span class="p" data-group-id="5138732141-14">]</span><span class="p" data-group-id="5138732141-15">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">tag</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.2</span><span class="p" data-group-id="5138732141-15">)</span><span class="w">
+</span><span class="c1">### Bug Fixes</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Fixed</span><span class="w"> </span><span class="n">transpose</span><span class="o">.</span><span class="w">
+
+</span><span class="c1">### Added</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="n">x86_64</span><span class="w"> </span><span class="n">musl</span><span class="w"> </span><span class="n">compilation</span><span class="w"> </span><span class="nc">CI</span><span class="w"> </span><span class="n">test</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Added</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">few</span><span class="w"> </span><span class="n">precompilation</span><span class="w"> </span><span class="n">musl</span><span class="w"> </span><span class="ss">targets</span><span class="p">:</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">musl</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="n">aarch64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">musl</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="n">armv7l</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">musleabihf</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="n">riscv64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">musl</span><span class="w">
+
+</span><span class="c1">## v0.1.1 (2022-08-25)</span><span class="w">
+</span><span class="p" data-group-id="5138732141-16">[</span><span class="nc">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">Repository</span><span class="p" data-group-id="5138732141-16">]</span><span class="p" data-group-id="5138732141-17">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.1</span><span class="p" data-group-id="5138732141-17">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p" data-group-id="5138732141-18">[</span><span class="nc">Released</span><span class="w"> </span><span class="nc">Assets</span><span class="p" data-group-id="5138732141-18">]</span><span class="p" data-group-id="5138732141-19">(</span><span class="n">https</span><span class="ss">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cocoa</span><span class="o">-</span><span class="n">xu</span><span class="o">/</span><span class="n">evision</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">tag</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">1.1</span><span class="p" data-group-id="5138732141-19">)</span><span class="w">
+</span><span class="c1">### Changed</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Use</span><span class="w"> </span><span class="nc">OpenCV</span><span class="w"> </span><span class="mf">4.6</span><span class="o">.</span><span class="mi">0</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">default</span><span class="o">.</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Deprecated</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="err">`</span><span class="nc">EVISION_PRECOMPILED_VERSION</span><span class="err">`</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variable</span><span class="o">.</span><span class="w"> </span><span class="nc">The</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">implied</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="ss">tag</span><span class="p">:</span><span class="w">
+</span></code></pre><p>  def deps do
+  [</p><pre><code class="makeup elixir" translate="no"><span class="w">  </span><span class="p" data-group-id="1839612173-1">{</span><span class="ss">:evision</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; 0.1.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">github</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cocoa-xu/evision&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v0.1.1&quot;</span><span class="p" data-group-id="1839612173-1">}</span></code></pre><p>  ]
+  end</p><pre><code class="makeup elixir" translate="no"><span class="w">
+</span><span class="nc">The</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="err">`</span><span class="nc">EVISION_PREFER_PRECOMPILED</span><span class="err">`</span><span class="w"> </span><span class="n">decides</span><span class="w"> </span><span class="n">whether</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">precompiled</span><span class="w"> </span><span class="n">artefacts</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="ow">not</span><span class="o">.</span><span class="w">
+
+</span><span class="err">~</span><span class="err">~</span><span class="nc">From</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="p" data-group-id="2436245444-1">(</span><span class="o">&gt;=</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">2</span><span class="p" data-group-id="2436245444-1">)</span><span class="p">,</span><span class="w"> </span><span class="err">`</span><span class="n">evision</span><span class="err">`</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="err">`</span><span class="nc">EVISION_PREFER_PRECOMPILED</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="no">true</span><span class="err">`</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">default</span><span class="o">.</span><span class="err">~</span><span class="err">~</span><span class="w">
+
+</span><span class="c1">### Added</span><span class="w">
+</span><span class="o">-</span><span class="w"> </span><span class="nc">Implemented</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">few</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="n">callbacks</span><span class="w"> </span><span class="p" data-group-id="2436245444-2">(</span><span class="n">remaining</span><span class="w"> </span><span class="n">ones</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">implemented</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="n">release</span><span class="p" data-group-id="2436245444-2">)</span><span class="o">.</span><span class="w">
+
+
+</span><span class="c1">## v0.1.0 (2022-07-23)</span><span class="w">
+</span><span class="nc">First</span><span class="w"> </span><span class="n">release</span><span class="o">.</span></code></pre></li></ul>
+<div class="bottom-actions">
+  <div class="bottom-actions-item">
+
+      <a href="api-reference.html" class="bottom-actions-button" rel="prev">
+        <span class="subheader">
+          ← Previous Page
+        </span>
+        <span class="title">
+API Reference
+        </span>
+      </a>
+
+  </div>
+  <div class="bottom-actions-item">
+
+      <a href="readme.html" class="bottom-actions-button" rel="next">
+        <span class="subheader">
+          Next Page →
+        </span>
+        <span class="title">
+evision [WIP]
+        </span>
+      </a>
+
+  </div>
+</div>
+
+      <footer class="footer">
+
+          <p>
+            On Hex.pm:
+
+            <span class="line">
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
+
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/CHANGELOG.md">(current file)</a>
+
+            </span>
+
+            <button class="line footer-button display-quick-switch">
+              Search
+            </button>
+          </p>
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["\\f$", "\\f$"]],
+            displayMath: [["\\f[", "\\f]"]],
+            skipTags: ["script", "noscript", "style", "textarea"],
+            processEnvironments: false
+        },
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+    });
+    //<![CDATA[
+    MathJax.Hub.Config(
+    {
+        TeX: {
+            Macros: {
+                matTT: ["\\[ \\left|\\begin{array}{ccc} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{array}\\right| \\]", 9],
+                fork: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ \\end{array} \\right.", 4],
+                forkthree: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ \\end{array} \\right.", 6],
+                forkfour: ["\\left\\{ \\begin{array}{l l} #1 & \\mbox{#2}\\\\ #3 & \\mbox{#4}\\\\ #5 & \\mbox{#6}\\\\ #7 & \\mbox{#8}\\\\ \\end{array} \\right.", 8],
+                vecthree: ["\\begin{bmatrix} #1\\\\ #2\\\\ #3 \\end{bmatrix}", 3],
+                vecthreethree: ["\\begin{bmatrix} #1 & #2 & #3\\\\ #4 & #5 & #6\\\\ #7 & #8 & #9 \\end{bmatrix}", 9],
+                cameramatrix: ["#1 = \\begin{bmatrix} f_x & 0 & c_x\\\\ 0 & f_y & c_y\\\\ 0 & 0 & 1 \\end{bmatrix}", 1],
+                distcoeffs: ["(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]]) \\text{ of 4, 5, 8, 12 or 14 elements}"],
+                distcoeffsfisheye: ["(k_1, k_2, k_3, k_4)"],
+                hdotsfor: ["\\dots", 1],
+                mathbbm: ["\\mathbb{#1}", 1],
+                bordermatrix: ["\\matrix{#1}", 1]
+            }
+        }
+    }
+    );
+    //]]>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
+    
+  </body>
+</html>

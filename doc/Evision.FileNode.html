@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.FileNode — Evision v0.1.7-dev</title>
+    <title>Evision.FileNode — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.FileNode</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>i</strong>: <code class="inline">int</code>.</p></div>
 
       </div>
 
@@ -146,9 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>The constructors.
-  These constructors are used to create a default file node, construct it from obsolete structures or
-  from the another file node.</p></div>
+          <div class="summary-synopsis"><p>The constructors.</p></div>
 
       </div>
 
@@ -158,7 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Has overloading in C++</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><p><strong>nodename</strong>: <code class="inline">c_string</code>.</p></div>
 
       </div>
 
@@ -238,8 +238,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns keys of a mapping node.
-@returns Keys of a mapping node.</p></div>
+          <div class="summary-synopsis"><p>Returns keys of a mapping node.</p></div>
 
       </div>
 
@@ -279,8 +278,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Internal method used when reading FileStorage.
-  Sets the type (int, real or string) and value of the previously created node.</p></div>
+          <div class="summary-synopsis"><p>Internal method used when reading FileStorage.
+Sets the type (int, real or string) and value of the previously created node.</p></div>
 
       </div>
 
@@ -310,8 +309,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns type of the node.
-@returns Type of the node. See FileNode::Type</p></div>
+          <div class="summary-synopsis"><p>Returns type of the node.</p></div>
 
       </div>
 
@@ -535,7 +533,7 @@ cv
     </a>
     <h1 class="signature" translate="no">at(self, i)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -545,7 +543,7 @@ cv
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">at</span><span class="p" data-group-id="5271209935-1">(</span><span class="n">i</span><span class="p" data-group-id="5271209935-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>i</strong>: <code class="inline">int</code>.</p><p>Index of an element in the sequence node.</p></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">at(i) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -557,7 +555,7 @@ cv
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -567,7 +565,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="1746518630-1">(</span><span class="p" data-group-id="1746518630-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">empty() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="fileNode/0">
@@ -579,7 +577,7 @@ cv
     </a>
     <h1 class="signature" translate="no">fileNode()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -589,9 +587,8 @@ cv
 
   <section class="docstring">
 
-<p>The constructors.
-  These constructors are used to create a default file node, construct it from obsolete structures or
-  from the another file node.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="nc">FileNode</span><span class="p" data-group-id="4986904683-1">(</span><span class="p" data-group-id="4986904683-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nc">FileNode</span><span class="w"> </span><span class="n">object</span><span class="o">&gt;</span></code></pre>
+<p>The constructors.</p><p>These constructors are used to create a default file node, construct it from obsolete structures or
+from the another file node.</p><p>Python prototype (for reference): </p><pre><code class="python3">FileNode() -&gt; &lt;FileNode object&gt;</code></pre>
   </section>
 </section>
 <section class="detail" id="getNode/2">
@@ -603,7 +600,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getNode(self, nodename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L97" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -613,7 +610,7 @@ cv
 
   <section class="docstring">
 
-<p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNode</span><span class="p" data-group-id="4017541471-1">(</span><span class="n">nodename</span><span class="p" data-group-id="4017541471-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><p><strong>nodename</strong>: <code class="inline">c_string</code>.</p><p>Name of an element in the mapping node.</p></li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">getNode(nodename) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isInt/1">
@@ -625,7 +622,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isInt(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -635,7 +632,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isInt</span><span class="p" data-group-id="7904994143-1">(</span><span class="p" data-group-id="7904994143-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">isInt() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isMap/1">
@@ -647,7 +644,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isMap(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L137" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -657,7 +654,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isMap</span><span class="p" data-group-id="7156358582-1">(</span><span class="p" data-group-id="7156358582-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">isMap() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isNamed/1">
@@ -669,7 +666,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isNamed(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -679,7 +676,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isNamed</span><span class="p" data-group-id="8576575043-1">(</span><span class="p" data-group-id="8576575043-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">isNamed() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isNone/1">
@@ -691,7 +688,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isNone(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -701,7 +698,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isNone</span><span class="p" data-group-id="9616412211-1">(</span><span class="p" data-group-id="9616412211-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">isNone() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isReal/1">
@@ -713,7 +710,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isReal(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L194" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -723,7 +720,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isReal</span><span class="p" data-group-id="3169690328-1">(</span><span class="p" data-group-id="3169690328-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">isReal() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isSeq/1">
@@ -735,7 +732,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isSeq(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L213" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -745,7 +742,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isSeq</span><span class="p" data-group-id="9687883592-1">(</span><span class="p" data-group-id="9687883592-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">isSeq() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isString/1">
@@ -757,7 +754,7 @@ cv
     </a>
     <h1 class="signature" translate="no">isString(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L232" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -767,7 +764,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isString</span><span class="p" data-group-id="2288782899-1">(</span><span class="p" data-group-id="2288782899-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">isString() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="keys/1">
@@ -779,7 +776,7 @@ cv
     </a>
     <h1 class="signature" translate="no">keys(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L253" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -789,8 +786,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns keys of a mapping node.
-@returns Keys of a mapping node.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">keys</span><span class="p" data-group-id="5768745026-1">(</span><span class="p" data-group-id="5768745026-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns keys of a mapping node.</p><p>@returns Keys of a mapping node.</p><p>Python prototype (for reference): </p><pre><code class="python3">keys() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="mat/1">
@@ -802,7 +798,7 @@ cv
     </a>
     <h1 class="signature" translate="no">mat(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L243" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -812,7 +808,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">mat</span><span class="p" data-group-id="7509927772-1">(</span><span class="p" data-group-id="7509927772-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">mat() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="name/1">
@@ -824,7 +820,7 @@ cv
     </a>
     <h1 class="signature" translate="no">name(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L261" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L291" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -834,7 +830,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">name</span><span class="p" data-group-id="8298101605-1">(</span><span class="p" data-group-id="8298101605-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">name() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="rawSize/1">
@@ -846,7 +842,7 @@ cv
     </a>
     <h1 class="signature" translate="no">rawSize(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L279" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L310" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -856,7 +852,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">rawSize</span><span class="p" data-group-id="7989285523-1">(</span><span class="p" data-group-id="7989285523-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">rawSize() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="real/1">
@@ -868,7 +864,7 @@ cv
     </a>
     <h1 class="signature" translate="no">real(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L299" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L331" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -878,8 +874,8 @@ cv
 
   <section class="docstring">
 
-<p>  Internal method used when reading FileStorage.
-  Sets the type (int, real or string) and value of the previously created node.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">real</span><span class="p" data-group-id="9435950567-1">(</span><span class="p" data-group-id="9435950567-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Internal method used when reading FileStorage.
+Sets the type (int, real or string) and value of the previously created node.</p><p>Python prototype (for reference): </p><pre><code class="python3">real() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="size/1">
@@ -891,7 +887,7 @@ cv
     </a>
     <h1 class="signature" translate="no">size(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L317" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L350" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -901,7 +897,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">size</span><span class="p" data-group-id="4074252918-1">(</span><span class="p" data-group-id="4074252918-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">size() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="string/1">
@@ -913,7 +909,7 @@ cv
     </a>
     <h1 class="signature" translate="no">string(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L335" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L369" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -923,7 +919,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">string</span><span class="p" data-group-id="1518616468-1">(</span><span class="p" data-group-id="1518616468-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">string() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="type/1">
@@ -935,7 +931,7 @@ cv
     </a>
     <h1 class="signature" translate="no">type(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L355" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L390" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -945,8 +941,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns type of the node.
-@returns Type of the node. See FileNode::Type</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">type</span><span class="p" data-group-id="2196550366-1">(</span><span class="p" data-group-id="2196550366-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns type of the node.</p><p>@returns Type of the node. See FileNode::Type</p><p>Python prototype (for reference): </p><pre><code class="python3">type() -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -971,7 +966,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">at!(self, i)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -993,7 +988,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1015,7 +1010,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">fileNode!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1037,7 +1032,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNode!(self, nodename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1059,7 +1054,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isInt!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L103" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1081,7 +1076,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isMap!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L121" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1103,7 +1098,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isNamed!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L162" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1125,7 +1120,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isNone!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L157" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1147,7 +1142,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isReal!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L200" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1169,7 +1164,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isSeq!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L193" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L219" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1191,7 +1186,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isString!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L211" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L238" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1213,7 +1208,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">keys!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L231" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L259" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1235,7 +1230,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">mat!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1257,7 +1252,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">name!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L297" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1279,7 +1274,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">rawSize!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L285" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1301,7 +1296,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">real!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L337" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1323,7 +1318,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">size!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L323" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L356" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1345,7 +1340,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">string!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L375" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1367,7 +1362,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">type!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_filenode.ex#L361" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_filenode.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1390,10 +1385,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_filenode.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_filenode.ex">(current file)</a>
 
             </span>
 

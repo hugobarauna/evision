@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.ML.TrainData — Evision v0.1.7-dev</title>
+    <title>Evision.ML.TrainData — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.TrainData</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>varIdx</strong>: UMat.</li><li><strong>sampleIdx</strong>: UMat.</li><li><strong>sampleWeights</strong>: UMat.</li><li><strong>varType</strong>: UMat.</li></ul><p>Creates training data from in-memory arrays.</p></div>
+          <div class="summary-synopsis"><p>Creates training data from in-memory arrays.</p></div>
 
       </div>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>varIdx</strong>: UMat.</li><li><strong>sampleIdx</strong>: UMat.</li><li><strong>sampleWeights</strong>: UMat.</li><li><strong>varType</strong>: UMat.</li></ul><p>Creates training data from in-memory arrays.</p></div>
+          <div class="summary-synopsis"><p>Creates training data from in-memory arrays.</p></div>
 
       </div>
 
@@ -146,7 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>vi</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -176,8 +178,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the vector of class labels
-  The function returns vector of unique labels occurred in the responses.</p></div>
+          <div class="summary-synopsis"><p>Returns the vector of class labels</p></div>
 
       </div>
 
@@ -307,7 +308,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>varIdx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li><li><strong>sidx</strong>: <code class="inline">int</code></li><li><strong>buf</strong>: <code class="inline">float*</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -407,9 +408,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the vector of normalized categorical responses
-  The function returns vector of responses. Each response is integer from <code class="inline">0</code> to <code class="inline">&lt;number of classes&gt;-1</code>. The actual label value can be retrieved then from the class label vector, see
-  TrainData::getClassLabels.</p></div>
+          <div class="summary-synopsis"><p>Returns the vector of normalized categorical responses</p></div>
 
       </div>
 
@@ -419,9 +418,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the vector of responses
-  The function returns ordered or the original categorical responses. Usually it's used in
-  regression algorithms.</p></div>
+          <div class="summary-synopsis"><p>Returns the vector of responses</p></div>
 
       </div>
 
@@ -441,7 +438,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>layout</strong>: int.</li><li><strong>compressSamples</strong>: bool.</li><li><strong>compressVars</strong>: bool.</li></ul><p>Returns matrix of train samples</p></div>
+          <div class="summary-synopsis"><p>Returns matrix of train samples</p></div>
 
       </div>
 
@@ -461,7 +458,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>vi</strong>: <code class="inline">int</code></li><li><strong>sidx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li><li><strong>values</strong>: <code class="inline">float*</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -501,8 +498,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>count</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-@sa TrainData::setTrainTestSplitRatio</p></div>
+          <div class="summary-synopsis"><p>Splits the training data into the training and test parts</p></div>
 
       </div>
 
@@ -512,8 +508,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>count</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-@sa TrainData::setTrainTestSplitRatio</p></div>
+          <div class="summary-synopsis"><p>Splits the training data into the training and test parts</p></div>
 
       </div>
 
@@ -523,12 +518,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>ratio</strong>: double</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-  The function selects a subset of specified relative size and then returns it as the training
-  set. If the function is not called, all the data is used for training. Please, note that for
-  each of TrainData::getTrain* there is corresponding TrainData::getTest*, so that the test
-  subset can be retrieved and processed as well.
-@sa TrainData::setTrainTestSplit</p></div>
+          <div class="summary-synopsis"><p>Splits the training data into the training and test parts</p></div>
 
       </div>
 
@@ -538,12 +528,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>ratio</strong>: double</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-  The function selects a subset of specified relative size and then returns it as the training
-  set. If the function is not called, all the data is used for training. Please, note that for
-  each of TrainData::getTrain* there is corresponding TrainData::getTest*, so that the test
-  subset can be retrieved and processed as well.
-@sa TrainData::setTrainTestSplit</p></div>
+          <div class="summary-synopsis"><p>Splits the training data into the training and test parts</p></div>
 
       </div>
 
@@ -1007,7 +992,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">create(samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1017,15 +1002,15 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>varIdx</strong>: UMat.</li><li><strong>sampleIdx</strong>: UMat.</li><li><strong>sampleWeights</strong>: UMat.</li><li><strong>varType</strong>: UMat.</li></ul><p>Creates training data from in-memory arrays.</p><pre><code class="makeup elixir" translate="no"><span class="n">single</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">column</span><span class="o">.</span><span class="w"> </span><span class="nc">The</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="nc">CV_32F</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">CV_32S</span><span class="w"> </span><span class="p" data-group-id="5131107071-1">(</span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w">
-</span><span class="n">former</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">responses</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">considered</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">default</span><span class="p">;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">latter</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">as</span><span class="w">
-</span><span class="n">categorical</span><span class="p" data-group-id="5131107071-1">)</span><span class="w">
-</span><span class="p" data-group-id="5131107071-2">(</span><span class="nc">CV_32S</span><span class="p" data-group-id="5131107071-2">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="mi">0</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="p" data-group-id="5131107071-3">(</span><span class="nc">CV_8U</span><span class="p" data-group-id="5131107071-3">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="n">of</span><span class="w">
-</span><span class="n">active</span><span class="w"> </span><span class="n">variables</span><span class="o">.</span><span class="w">
-</span><span class="n">vector</span><span class="w"> </span><span class="p" data-group-id="5131107071-4">(</span><span class="nc">CV_32S</span><span class="p" data-group-id="5131107071-4">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="mi">0</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="p" data-group-id="5131107071-5">(</span><span class="nc">CV_8U</span><span class="p" data-group-id="5131107071-5">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mask</span><span class="w">
-</span><span class="n">of</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="o">.</span><span class="w">
-</span><span class="o">&lt;</span><span class="n">number_of_variables_in_responses</span><span class="o">&gt;</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">types</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">variable</span><span class="o">.</span><span class="w"> </span><span class="nc">See</span><span class="w">
-</span><span class="n">ml</span><span class="o">::</span><span class="nc">VariableTypes</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="3626614122-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="3626614122-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">varIdx</span><span class="p" data-group-id="3626614122-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">sampleIdx</span><span class="p" data-group-id="3626614122-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">sampleWeights</span><span class="p" data-group-id="3626614122-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">varType</span><span class="p" data-group-id="3626614122-5">]</span><span class="p" data-group-id="3626614122-4">]</span><span class="p" data-group-id="3626614122-3">]</span><span class="p" data-group-id="3626614122-2">]</span><span class="p" data-group-id="3626614122-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Creates training data from in-memory arrays.</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>matrix of samples. It should have CV_32F type.</p></li><li><p><strong>layout</strong>: <code class="inline">int</code>.</p><p>see ml::SampleTypes.</p></li><li><p><strong>responses</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>matrix of responses. If the responses are scalar, they should be stored as a
+single row or as a single column. The matrix should have type CV_32F or CV_32S (in the
+former case the responses are considered as ordered by default; in the latter case - as
+categorical)</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>varIdx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>vector specifying which variables to use for training. It can be an integer vector
+(CV_32S) containing 0-based variable indices or byte vector (CV_8U) containing a mask of
+active variables.</p></li><li><p><strong>sampleIdx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>vector specifying which samples to use for training. It can be an integer
+vector (CV_32S) containing 0-based sample indices or byte vector (CV_8U) containing a mask
+of training samples.</p></li><li><p><strong>sampleWeights</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>optional vector with weights for each sample. It should have CV_32F type.</p></li><li><p><strong>varType</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>optional vector of type CV_8U and size <code class="inline">&lt;number_of_variables_in_samples&gt; + &lt;number_of_variables_in_responses&gt;</code>, containing types of each input and output variable. See
+ml::VariableTypes.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create(samples, layout, responses[, varIdx[, sampleIdx[, sampleWeights[, varType]]]]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="create/4">
@@ -1037,7 +1022,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">create(samples, layout, responses, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1047,15 +1032,15 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>layout</strong>: int. </li><li><strong>responses</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>varIdx</strong>: UMat.</li><li><strong>sampleIdx</strong>: UMat.</li><li><strong>sampleWeights</strong>: UMat.</li><li><strong>varType</strong>: UMat.</li></ul><p>Creates training data from in-memory arrays.</p><pre><code class="makeup elixir" translate="no"><span class="n">single</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">column</span><span class="o">.</span><span class="w"> </span><span class="nc">The</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="nc">CV_32F</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">CV_32S</span><span class="w"> </span><span class="p" data-group-id="1200320793-1">(</span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w">
-</span><span class="n">former</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">responses</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">considered</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">default</span><span class="p">;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">latter</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">as</span><span class="w">
-</span><span class="n">categorical</span><span class="p" data-group-id="1200320793-1">)</span><span class="w">
-</span><span class="p" data-group-id="1200320793-2">(</span><span class="nc">CV_32S</span><span class="p" data-group-id="1200320793-2">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="mi">0</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="p" data-group-id="1200320793-3">(</span><span class="nc">CV_8U</span><span class="p" data-group-id="1200320793-3">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="n">of</span><span class="w">
-</span><span class="n">active</span><span class="w"> </span><span class="n">variables</span><span class="o">.</span><span class="w">
-</span><span class="n">vector</span><span class="w"> </span><span class="p" data-group-id="1200320793-4">(</span><span class="nc">CV_32S</span><span class="p" data-group-id="1200320793-4">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="mi">0</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="p" data-group-id="1200320793-5">(</span><span class="nc">CV_8U</span><span class="p" data-group-id="1200320793-5">)</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mask</span><span class="w">
-</span><span class="n">of</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="o">.</span><span class="w">
-</span><span class="o">&lt;</span><span class="n">number_of_variables_in_responses</span><span class="o">&gt;</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">types</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">variable</span><span class="o">.</span><span class="w"> </span><span class="nc">See</span><span class="w">
-</span><span class="n">ml</span><span class="o">::</span><span class="nc">VariableTypes</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="6903970526-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="6903970526-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">varIdx</span><span class="p" data-group-id="6903970526-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">sampleIdx</span><span class="p" data-group-id="6903970526-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">sampleWeights</span><span class="p" data-group-id="6903970526-5">[</span><span class="p">,</span><span class="w"> </span><span class="n">varType</span><span class="p" data-group-id="6903970526-5">]</span><span class="p" data-group-id="6903970526-4">]</span><span class="p" data-group-id="6903970526-3">]</span><span class="p" data-group-id="6903970526-2">]</span><span class="p" data-group-id="6903970526-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Creates training data from in-memory arrays.</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>matrix of samples. It should have CV_32F type.</p></li><li><p><strong>layout</strong>: <code class="inline">int</code>.</p><p>see ml::SampleTypes.</p></li><li><p><strong>responses</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>matrix of responses. If the responses are scalar, they should be stored as a
+single row or as a single column. The matrix should have type CV_32F or CV_32S (in the
+former case the responses are considered as ordered by default; in the latter case - as
+categorical)</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>varIdx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>vector specifying which variables to use for training. It can be an integer vector
+(CV_32S) containing 0-based variable indices or byte vector (CV_8U) containing a mask of
+active variables.</p></li><li><p><strong>sampleIdx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>vector specifying which samples to use for training. It can be an integer
+vector (CV_32S) containing 0-based sample indices or byte vector (CV_8U) containing a mask
+of training samples.</p></li><li><p><strong>sampleWeights</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>optional vector with weights for each sample. It should have CV_32F type.</p></li><li><p><strong>varType</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>optional vector of type CV_8U and size <code class="inline">&lt;number_of_variables_in_samples&gt; + &lt;number_of_variables_in_responses&gt;</code>, containing types of each input and output variable. See
+ml::VariableTypes.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">create(samples, layout, responses[, varIdx[, sampleIdx[, sampleWeights[, varType]]]]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getCatCount/2">
@@ -1067,7 +1052,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getCatCount(self, vi)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L100" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1077,7 +1062,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCatCount</span><span class="p" data-group-id="4115418512-1">(</span><span class="n">vi</span><span class="p" data-group-id="4115418512-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>vi</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getCatCount(vi) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getCatMap/1">
@@ -1089,7 +1074,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getCatMap(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1099,7 +1084,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCatMap</span><span class="p" data-group-id="2903691971-1">(</span><span class="p" data-group-id="2903691971-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getCatMap() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getCatOfs/1">
@@ -1111,7 +1096,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getCatOfs(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1121,7 +1106,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getCatOfs</span><span class="p" data-group-id="3612914315-1">(</span><span class="p" data-group-id="3612914315-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getCatOfs() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getClassLabels/1">
@@ -1133,7 +1118,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getClassLabels(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1143,8 +1128,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns the vector of class labels
-  The function returns vector of unique labels occurred in the responses.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getClassLabels</span><span class="p" data-group-id="6001334220-1">(</span><span class="p" data-group-id="6001334220-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the vector of class labels</p><p>The function returns vector of unique labels occurred in the responses.</p><p>Python prototype (for reference): </p><pre><code class="python3">getClassLabels() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultSubstValues/1">
@@ -1156,7 +1140,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getDefaultSubstValues(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L231" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1166,7 +1150,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultSubstValues</span><span class="p" data-group-id="3023148147-1">(</span><span class="p" data-group-id="3023148147-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getDefaultSubstValues() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getLayout/1">
@@ -1178,7 +1162,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getLayout(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L194" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L250" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1188,7 +1172,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getLayout</span><span class="p" data-group-id="6305454593-1">(</span><span class="p" data-group-id="6305454593-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getLayout() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getMissing/1">
@@ -1200,7 +1184,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getMissing(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L269" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1210,7 +1194,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getMissing</span><span class="p" data-group-id="2632920156-1">(</span><span class="p" data-group-id="2632920156-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getMissing() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNAllVars/1">
@@ -1222,7 +1206,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getNAllVars(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L230" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L288" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1232,7 +1216,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNAllVars</span><span class="p" data-group-id="8219418005-1">(</span><span class="p" data-group-id="8219418005-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getNAllVars() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNames/2">
@@ -1244,7 +1228,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getNames(self, names)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L321" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L388" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1254,7 +1238,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns vector of symbolic names captured in loadFromCSV()</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNames</span><span class="p" data-group-id="3374985682-1">(</span><span class="n">names</span><span class="p" data-group-id="3374985682-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Returns vector of symbolic names captured in loadFromCSV()</p><h5>Positional Arguments</h5><ul><li><strong>names</strong>: <code class="inline">[String]</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getNames(names) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="getNormCatResponses/1">
@@ -1266,7 +1250,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getNormCatResponses(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L409" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1276,7 +1260,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNormCatResponses</span><span class="p" data-group-id="6473438222-1">(</span><span class="p" data-group-id="6473438222-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getNormCatResponses() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNSamples/1">
@@ -1288,7 +1272,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getNSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L248" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L307" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1298,7 +1282,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNSamples</span><span class="p" data-group-id="0435209695-1">(</span><span class="p" data-group-id="0435209695-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getNSamples() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNTestSamples/1">
@@ -1310,7 +1294,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getNTestSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L266" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L326" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1320,7 +1304,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNTestSamples</span><span class="p" data-group-id="9237249407-1">(</span><span class="p" data-group-id="9237249407-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getNTestSamples() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNTrainSamples/1">
@@ -1332,7 +1316,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getNTrainSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L284" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L345" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1342,7 +1326,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNTrainSamples</span><span class="p" data-group-id="5850510208-1">(</span><span class="p" data-group-id="5850510208-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getNTrainSamples() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNVars/1">
@@ -1354,7 +1338,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getNVars(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L302" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L364" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1364,7 +1348,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNVars</span><span class="p" data-group-id="2746299982-1">(</span><span class="p" data-group-id="2746299982-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getNVars() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getResponses/1">
@@ -1376,7 +1360,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getResponses(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L377" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1386,7 +1370,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getResponses</span><span class="p" data-group-id="8880220640-1">(</span><span class="p" data-group-id="8880220640-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getResponses() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getResponseType/1">
@@ -1398,7 +1382,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getResponseType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L359" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L428" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1408,7 +1392,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getResponseType</span><span class="p" data-group-id="0895146879-1">(</span><span class="p" data-group-id="0895146879-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getResponseType() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getSample/4">
@@ -1420,7 +1404,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getSample(self, varIdx, sidx, buf)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L395" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L472" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1430,7 +1414,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSample</span><span class="p" data-group-id="9968520884-1">(</span><span class="n">varIdx</span><span class="p">,</span><span class="w"> </span><span class="n">sidx</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p" data-group-id="9968520884-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>varIdx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li><li><strong>sidx</strong>: <code class="inline">int</code></li><li><strong>buf</strong>: <code class="inline">float*</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getSample(varIdx, sidx, buf) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="getSamples/1">
@@ -1442,7 +1426,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L435" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L514" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1452,7 +1436,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSamples</span><span class="p" data-group-id="8641936526-1">(</span><span class="p" data-group-id="8641936526-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getSamples() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getSampleWeights/1">
@@ -1464,7 +1448,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getSampleWeights(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L417" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L495" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1474,7 +1458,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSampleWeights</span><span class="p" data-group-id="9341408331-1">(</span><span class="p" data-group-id="9341408331-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getSampleWeights() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getSubMatrix/3">
@@ -1486,7 +1470,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getSubMatrix(matrix, idx, layout)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L454" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L550" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1496,7 +1480,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Extract from matrix rows/cols specified by passed indexes.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSubMatrix</span><span class="p" data-group-id="5662192613-1">(</span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p" data-group-id="5662192613-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Extract from matrix rows/cols specified by passed indexes.</p><h5>Positional Arguments</h5><ul><li><p><strong>matrix</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>input matrix (supported types: CV_32S, CV_32F, CV_64F)</p></li><li><p><strong>idx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>1D index vector</p></li><li><p><strong>layout</strong>: <code class="inline">int</code>.</p><p>specifies to extract rows (cv::ml::ROW_SAMPLES) or to extract columns (cv::ml::COL_SAMPLES)</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getSubMatrix(matrix, idx, layout) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getSubVector/2">
@@ -1508,7 +1492,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getSubVector(vec, idx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L477" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L586" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1518,7 +1502,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Extract from 1D vector elements specified by passed indexes.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getSubVector</span><span class="p" data-group-id="0534102204-1">(</span><span class="n">vec</span><span class="p">,</span><span class="w"> </span><span class="n">idx</span><span class="p" data-group-id="0534102204-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Extract from 1D vector elements specified by passed indexes.</p><h5>Positional Arguments</h5><ul><li><p><strong>vec</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>input vector (supported types: CV_32S, CV_32F, CV_64F)</p></li><li><p><strong>idx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>1D index vector</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getSubVector(vec, idx) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTestNormCatResponses/1">
@@ -1530,7 +1514,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTestNormCatResponses(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L498" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L608" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1540,7 +1524,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTestNormCatResponses</span><span class="p" data-group-id="9692081774-1">(</span><span class="p" data-group-id="9692081774-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getTestNormCatResponses() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTestResponses/1">
@@ -1552,7 +1536,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTestResponses(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L516" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L627" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1562,7 +1546,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTestResponses</span><span class="p" data-group-id="5899713287-1">(</span><span class="p" data-group-id="5899713287-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getTestResponses() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTestSampleIdx/1">
@@ -1574,7 +1558,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTestSampleIdx(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L534" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L646" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1584,7 +1568,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTestSampleIdx</span><span class="p" data-group-id="0463609689-1">(</span><span class="p" data-group-id="0463609689-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getTestSampleIdx() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTestSamples/1">
@@ -1596,7 +1580,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTestSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L571" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L685" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1606,7 +1590,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns matrix of test samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTestSamples</span><span class="p" data-group-id="4516600065-1">(</span><span class="p" data-group-id="4516600065-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns matrix of test samples</p><p>Python prototype (for reference): </p><pre><code class="python3">getTestSamples() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTestSampleWeights/1">
@@ -1618,7 +1602,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTestSampleWeights(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L552" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L665" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1628,7 +1612,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTestSampleWeights</span><span class="p" data-group-id="2268173147-1">(</span><span class="p" data-group-id="2268173147-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getTestSampleWeights() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainNormCatResponses/1">
@@ -1640,7 +1624,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTrainNormCatResponses(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L593" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L708" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1650,9 +1634,8 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns the vector of normalized categorical responses
-  The function returns vector of responses. Each response is integer from <code class="inline">0</code> to <code class="inline">&lt;number of classes&gt;-1</code>. The actual label value can be retrieved then from the class label vector, see
-  TrainData::getClassLabels.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainNormCatResponses</span><span class="p" data-group-id="0820568163-1">(</span><span class="p" data-group-id="0820568163-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the vector of normalized categorical responses</p><p>The function returns vector of responses. Each response is integer from <code class="inline">0</code> to <code class="inline">&lt;number of classes&gt;-1</code>. The actual label value can be retrieved then from the class label vector, see
+TrainData::getClassLabels.</p><p>Python prototype (for reference): </p><pre><code class="python3">getTrainNormCatResponses() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainResponses/1">
@@ -1664,7 +1647,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTrainResponses(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L614" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L730" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1674,9 +1657,8 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns the vector of responses
-  The function returns ordered or the original categorical responses. Usually it's used in
-  regression algorithms.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainResponses</span><span class="p" data-group-id="2348736190-1">(</span><span class="p" data-group-id="2348736190-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the vector of responses</p><p>The function returns ordered or the original categorical responses. Usually it's used in
+regression algorithms.</p><p>Python prototype (for reference): </p><pre><code class="python3">getTrainResponses() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainSampleIdx/1">
@@ -1688,7 +1670,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTrainSampleIdx(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L632" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L749" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1698,7 +1680,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainSampleIdx</span><span class="p" data-group-id="3585143544-1">(</span><span class="p" data-group-id="3585143544-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getTrainSampleIdx() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainSamples/1">
@@ -1710,7 +1692,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTrainSamples(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L681" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L808" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1720,10 +1702,11 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><h5>Keyword Arguments</h5><ul><li><strong>layout</strong>: int.</li><li><strong>compressSamples</strong>: bool.</li><li><strong>compressVars</strong>: bool.</li></ul><p>Returns matrix of train samples</p><pre><code class="makeup elixir" translate="no"><span class="n">transposed</span><span class="o">.</span><span class="w"> </span><span class="nc">See</span><span class="w"> </span><span class="n">ml</span><span class="o">::</span><span class="nc">SampleTypes</span><span class="o">.</span><span class="w">
-</span><span class="n">sampleIdx</span><span class="p">)</span><span class="w">
-</span><span class="n">the</span><span class="w"> </span><span class="n">active</span><span class="w"> </span><span class="n">variables</span><span class="o">.</span></code></pre><p>  In current implementation the function tries to avoid physical data copying and returns the
-  matrix stored inside TrainData (unless the transposition or compression is needed).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainSamples</span><span class="p" data-group-id="2963426746-1">(</span><span class="p" data-group-id="2963426746-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p" data-group-id="2963426746-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">compressSamples</span><span class="p" data-group-id="2963426746-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">compressVars</span><span class="p" data-group-id="2963426746-4">]</span><span class="p" data-group-id="2963426746-3">]</span><span class="p" data-group-id="2963426746-2">]</span><span class="p" data-group-id="2963426746-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns matrix of train samples</p><h5>Keyword Arguments</h5><ul><li><p><strong>layout</strong>: <code class="inline">int</code>.</p><p>The requested layout. If it's different from the initial one, the matrix is
+transposed. See ml::SampleTypes.</p></li><li><p><strong>compressSamples</strong>: <code class="inline">bool</code>.</p><p>if true, the function returns only the training samples (specified by
+sampleIdx)</p></li><li><p><strong>compressVars</strong>: <code class="inline">bool</code>.</p><p>if true, the function returns the shorter training samples, containing only
+the active variables.</p></li></ul><p>In current implementation the function tries to avoid physical data copying and returns the
+matrix stored inside TrainData (unless the transposition or compression is needed).</p><p>Python prototype (for reference): </p><pre><code class="python3">getTrainSamples([, layout[, compressSamples[, compressVars]]]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getTrainSampleWeights/1">
@@ -1735,7 +1718,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getTrainSampleWeights(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L650" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L768" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1745,7 +1728,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getTrainSampleWeights</span><span class="p" data-group-id="9269574274-1">(</span><span class="p" data-group-id="9269574274-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getTrainSampleWeights() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getValues/4">
@@ -1757,7 +1740,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getValues(self, vi, sidx, values)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L699" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L833" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1767,7 +1750,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getValues</span><span class="p" data-group-id="3409268065-1">(</span><span class="n">vi</span><span class="p">,</span><span class="w"> </span><span class="n">sidx</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p" data-group-id="3409268065-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>vi</strong>: <code class="inline">int</code></li><li><strong>sidx</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a></li><li><strong>values</strong>: <code class="inline">float*</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">getValues(vi, sidx, values) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarIdx/1">
@@ -1779,7 +1762,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVarIdx(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L721" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L856" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1789,7 +1772,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarIdx</span><span class="p" data-group-id="3152150654-1">(</span><span class="p" data-group-id="3152150654-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getVarIdx() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarSymbolFlags/1">
@@ -1801,7 +1784,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVarSymbolFlags(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L739" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L875" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1811,7 +1794,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarSymbolFlags</span><span class="p" data-group-id="3476061300-1">(</span><span class="p" data-group-id="3476061300-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getVarSymbolFlags() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarType/1">
@@ -1823,7 +1806,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVarType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L757" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L894" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1833,7 +1816,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarType</span><span class="p" data-group-id="1693918136-1">(</span><span class="p" data-group-id="1693918136-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getVarType() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="setTrainTestSplit/2">
@@ -1845,7 +1828,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setTrainTestSplit(self, count)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L811" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L952" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1855,8 +1838,7 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>count</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-@sa TrainData::setTrainTestSplitRatio</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainTestSplit</span><span class="p" data-group-id="5503306035-1">(</span><span class="n">count</span><span class="p" data-group-id="5503306035-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">shuffle</span><span class="p" data-group-id="5503306035-2">]</span><span class="p" data-group-id="5503306035-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Splits the training data into the training and test parts</p><h5>Positional Arguments</h5><ul><li><strong>count</strong>: <code class="inline">int</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: <code class="inline">bool</code>.</li></ul><p>@sa TrainData::setTrainTestSplitRatio</p><p>Python prototype (for reference): </p><pre><code class="python3">setTrainTestSplit(count[, shuffle]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setTrainTestSplit/3">
@@ -1868,7 +1850,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setTrainTestSplit(self, count, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L783" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L922" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1878,8 +1860,7 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>count</strong>: int</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-@sa TrainData::setTrainTestSplitRatio</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainTestSplit</span><span class="p" data-group-id="2700901301-1">(</span><span class="n">count</span><span class="p" data-group-id="2700901301-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">shuffle</span><span class="p" data-group-id="2700901301-2">]</span><span class="p" data-group-id="2700901301-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Splits the training data into the training and test parts</p><h5>Positional Arguments</h5><ul><li><strong>count</strong>: <code class="inline">int</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: <code class="inline">bool</code>.</li></ul><p>@sa TrainData::setTrainTestSplitRatio</p><p>Python prototype (for reference): </p><pre><code class="python3">setTrainTestSplit(count[, shuffle]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setTrainTestSplitRatio/2">
@@ -1891,7 +1872,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setTrainTestSplitRatio(self, ratio)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L875" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L1020" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1901,12 +1882,11 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>ratio</strong>: double</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-  The function selects a subset of specified relative size and then returns it as the training
-  set. If the function is not called, all the data is used for training. Please, note that for
-  each of TrainData::getTrain* there is corresponding TrainData::getTest*, so that the test
-  subset can be retrieved and processed as well.
-@sa TrainData::setTrainTestSplit</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainTestSplitRatio</span><span class="p" data-group-id="9683899536-1">(</span><span class="n">ratio</span><span class="p" data-group-id="9683899536-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">shuffle</span><span class="p" data-group-id="9683899536-2">]</span><span class="p" data-group-id="9683899536-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Splits the training data into the training and test parts</p><h5>Positional Arguments</h5><ul><li><strong>ratio</strong>: <code class="inline">double</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: <code class="inline">bool</code>.</li></ul><p>The function selects a subset of specified relative size and then returns it as the training
+set. If the function is not called, all the data is used for training. Please, note that for
+each of TrainData::getTrain* there is corresponding TrainData::getTest*, so that the test
+subset can be retrieved and processed as well.
+@sa TrainData::setTrainTestSplit</p><p>Python prototype (for reference): </p><pre><code class="python3">setTrainTestSplitRatio(ratio[, shuffle]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setTrainTestSplitRatio/3">
@@ -1918,7 +1898,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setTrainTestSplitRatio(self, ratio, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L843" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L986" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1928,12 +1908,11 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>ratio</strong>: double</li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: bool.</li></ul><p>Splits the training data into the training and test parts
-  The function selects a subset of specified relative size and then returns it as the training
-  set. If the function is not called, all the data is used for training. Please, note that for
-  each of TrainData::getTrain* there is corresponding TrainData::getTest*, so that the test
-  subset can be retrieved and processed as well.
-@sa TrainData::setTrainTestSplit</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setTrainTestSplitRatio</span><span class="p" data-group-id="5136261461-1">(</span><span class="n">ratio</span><span class="p" data-group-id="5136261461-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">shuffle</span><span class="p" data-group-id="5136261461-2">]</span><span class="p" data-group-id="5136261461-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Splits the training data into the training and test parts</p><h5>Positional Arguments</h5><ul><li><strong>ratio</strong>: <code class="inline">double</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>shuffle</strong>: <code class="inline">bool</code>.</li></ul><p>The function selects a subset of specified relative size and then returns it as the training
+set. If the function is not called, all the data is used for training. Please, note that for
+each of TrainData::getTrain* there is corresponding TrainData::getTest*, so that the test
+subset can be retrieved and processed as well.
+@sa TrainData::setTrainTestSplit</p><p>Python prototype (for reference): </p><pre><code class="python3">setTrainTestSplitRatio(ratio[, shuffle]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="shuffleTrainTest/1">
@@ -1945,7 +1924,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">shuffleTrainTest(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L895" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L1041" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1955,7 +1934,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">shuffleTrainTest</span><span class="p" data-group-id="4112474862-1">(</span><span class="p" data-group-id="4112474862-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">shuffleTrainTest() -&gt; None</code></pre>
   </section>
 </section>
 
@@ -1980,7 +1959,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L134" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2002,7 +1981,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!(samples, layout, responses, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2024,7 +2003,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCatCount!(self, vi)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2046,7 +2025,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCatMap!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L178" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2068,7 +2047,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getCatOfs!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L144" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L197" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2090,7 +2069,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getClassLabels!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L164" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L218" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2112,7 +2091,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultSubstValues!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L182" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2134,7 +2113,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getLayout!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L200" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L256" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2156,7 +2135,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getMissing!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L218" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2178,7 +2157,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNAllVars!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L236" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2200,7 +2179,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNames!(self, names)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L329" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2222,7 +2201,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNormCatResponses!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L347" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L415" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2244,7 +2223,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L254" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L313" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2266,7 +2245,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNTestSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L272" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L332" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2288,7 +2267,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNTrainSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L290" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2310,7 +2289,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNVars!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L308" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L370" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2332,7 +2311,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getResponses!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L383" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L453" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2354,7 +2333,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getResponseType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L365" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L434" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2376,7 +2355,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSample!(self, varIdx, sidx, buf)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L405" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L482" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2398,7 +2377,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L441" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L520" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2420,7 +2399,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSampleWeights!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L423" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L501" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2442,7 +2421,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSubMatrix!(matrix, idx, layout)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L464" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L560" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2464,7 +2443,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getSubVector!(vec, idx)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L486" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L595" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2486,7 +2465,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTestNormCatResponses!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L504" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L614" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2508,7 +2487,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTestResponses!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L522" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L633" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2530,7 +2509,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTestSampleIdx!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L540" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L652" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2552,7 +2531,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTestSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L577" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L691" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2574,7 +2553,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTestSampleWeights!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L558" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L671" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2596,7 +2575,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainNormCatResponses!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L599" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L714" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2618,7 +2597,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainResponses!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L620" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L736" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2640,7 +2619,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainSampleIdx!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L638" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L755" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2662,7 +2641,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainSamples!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L687" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L814" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2684,7 +2663,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getTrainSampleWeights!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L656" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L774" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2706,7 +2685,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getValues!(self, vi, sidx, values)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L709" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L843" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2728,7 +2707,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarIdx!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L727" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L862" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2750,7 +2729,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarSymbolFlags!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L745" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L881" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2772,7 +2751,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L763" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L900" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2794,7 +2773,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTrainTestSplit!(self, count)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L819" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L960" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2816,7 +2795,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTrainTestSplit!(self, count, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L791" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L930" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2838,7 +2817,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTrainTestSplitRatio!(self, ratio)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L883" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L1028" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2860,7 +2839,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setTrainTestSplitRatio!(self, ratio, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L851" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L994" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2882,7 +2861,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">shuffleTrainTest!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_traindata.ex#L901" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_traindata.ex#L1047" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2905,10 +2884,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_traindata.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_ml_traindata.ex">(current file)</a>
 
             </span>
 

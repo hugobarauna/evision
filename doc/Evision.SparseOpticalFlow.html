@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.SparseOpticalFlow — Evision v0.1.7-dev</title>
+    <title>Evision.SparseOpticalFlow — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_sparseopticalflow.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_sparseopticalflow.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.SparseOpticalFlow</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>prevImg</strong>: UMat. </li><li><strong>nextImg</strong>: UMat. </li><li><strong>prevPts</strong>: UMat. </li><li><strong>nextPts</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>status</strong>: UMat.</li><li><strong>err</strong>: UMat.</li></ul><p>Calculates a sparse optical flow.</p></div>
+          <div class="summary-synopsis"><p>Calculates a sparse optical flow.</p></div>
 
       </div>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>prevImg</strong>: UMat. </li><li><strong>nextImg</strong>: UMat. </li><li><strong>prevPts</strong>: UMat. </li><li><strong>nextPts</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>status</strong>: UMat.</li><li><strong>err</strong>: UMat.</li></ul><p>Calculates a sparse optical flow.</p></div>
+          <div class="summary-synopsis"><p>Calculates a sparse optical flow.</p></div>
 
       </div>
 
@@ -190,7 +192,7 @@ cv
     </a>
     <h1 class="signature" translate="no">calc(self, prevImg, nextImg, prevPts, nextPts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_sparseopticalflow.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_sparseopticalflow.ex#L101" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -200,7 +202,8 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>prevImg</strong>: UMat. </li><li><strong>nextImg</strong>: UMat. </li><li><strong>prevPts</strong>: UMat. </li><li><strong>nextPts</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>status</strong>: UMat.</li><li><strong>err</strong>: UMat.</li></ul><p>Calculates a sparse optical flow.</p><pre><code class="makeup elixir" translate="no"><span class="n">flow</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">corresponding</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">found</span><span class="o">.</span><span class="w"> </span><span class="nc">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">0</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calc</span><span class="p" data-group-id="4273287775-1">(</span><span class="n">prevImg</span><span class="p">,</span><span class="w"> </span><span class="n">nextImg</span><span class="p">,</span><span class="w"> </span><span class="n">prevPts</span><span class="p">,</span><span class="w"> </span><span class="n">nextPts</span><span class="p" data-group-id="4273287775-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p" data-group-id="4273287775-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p" data-group-id="4273287775-3">]</span><span class="p" data-group-id="4273287775-2">]</span><span class="p" data-group-id="4273287775-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">nextPts</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="n">err</span></code></pre>
+<p>Calculates a sparse optical flow.</p><h5>Positional Arguments</h5><ul><li><p><strong>prevImg</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>First input image.</p></li><li><p><strong>nextImg</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Second input image of the same size and the same type as prevImg.</p></li><li><p><strong>prevPts</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Vector of 2D points for which the flow needs to be found.</p></li></ul><h5>Return</h5><ul><li><p><strong>nextPts</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Output vector of 2D points containing the calculated new positions of input features in the second image.</p></li><li><p><strong>status</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Output status vector. Each element of the vector is set to 1 if the
+flow for the corresponding features has been found. Otherwise, it is set to 0.</p></li><li><p><strong>err</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Optional output vector that contains error response for each point (inverse confidence).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">calc(prevImg, nextImg, prevPts, nextPts[, status[, err]]) -&gt; nextPts, status, err</code></pre>
   </section>
 </section>
 <section class="detail" id="calc/6">
@@ -212,7 +215,7 @@ cv
     </a>
     <h1 class="signature" translate="no">calc(self, prevImg, nextImg, prevPts, nextPts, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_sparseopticalflow.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_sparseopticalflow.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -222,7 +225,8 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>prevImg</strong>: UMat. </li><li><strong>nextImg</strong>: UMat. </li><li><strong>prevPts</strong>: UMat. </li><li><strong>nextPts</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>status</strong>: UMat.</li><li><strong>err</strong>: UMat.</li></ul><p>Calculates a sparse optical flow.</p><pre><code class="makeup elixir" translate="no"><span class="n">flow</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">corresponding</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">found</span><span class="o">.</span><span class="w"> </span><span class="nc">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">0</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calc</span><span class="p" data-group-id="3439027315-1">(</span><span class="n">prevImg</span><span class="p">,</span><span class="w"> </span><span class="n">nextImg</span><span class="p">,</span><span class="w"> </span><span class="n">prevPts</span><span class="p">,</span><span class="w"> </span><span class="n">nextPts</span><span class="p" data-group-id="3439027315-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p" data-group-id="3439027315-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p" data-group-id="3439027315-3">]</span><span class="p" data-group-id="3439027315-2">]</span><span class="p" data-group-id="3439027315-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">nextPts</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="n">err</span></code></pre>
+<p>Calculates a sparse optical flow.</p><h5>Positional Arguments</h5><ul><li><p><strong>prevImg</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>First input image.</p></li><li><p><strong>nextImg</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Second input image of the same size and the same type as prevImg.</p></li><li><p><strong>prevPts</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Vector of 2D points for which the flow needs to be found.</p></li></ul><h5>Return</h5><ul><li><p><strong>nextPts</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Output vector of 2D points containing the calculated new positions of input features in the second image.</p></li><li><p><strong>status</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Output status vector. Each element of the vector is set to 1 if the
+flow for the corresponding features has been found. Otherwise, it is set to 0.</p></li><li><p><strong>err</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Optional output vector that contains error response for each point (inverse confidence).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">calc(prevImg, nextImg, prevPts, nextPts[, status[, err]]) -&gt; nextPts, status, err</code></pre>
   </section>
 </section>
 
@@ -247,7 +251,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calc!(self, prevImg, nextImg, prevPts, nextPts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_sparseopticalflow.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_sparseopticalflow.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -269,7 +273,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calc!(self, prevImg, nextImg, prevPts, nextPts, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_sparseopticalflow.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_sparseopticalflow.ex#L57" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -292,10 +296,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_sparseopticalflow.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_sparseopticalflow.ex">(current file)</a>
 
             </span>
 

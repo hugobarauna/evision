@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.ML.KNearest — Evision v0.1.7-dev</title>
+    <title>Evision.ML.KNearest — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.ML.KNearest</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -136,8 +138,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Returns the algorithm string identifier.
-  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
+          <div class="summary-synopsis"><p>Returns the algorithm string identifier.
+This string is used as top level xml/yml node tag when the object is saved to a file or string.</p></div>
 
       </div>
 
@@ -157,8 +159,8 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>  Saves the algorithm to a file.
-  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>filename</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Saves the algorithm to a file.
+In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p></div>
 
       </div>
 
@@ -168,8 +170,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p></div>
+          <div class="summary-synopsis"><p>simplified API for language bindings</p></div>
 
       </div>
 
@@ -179,8 +180,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p></div>
+          <div class="summary-synopsis"><p>simplified API for language bindings</p></div>
 
       </div>
 
@@ -197,7 +197,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -207,7 +207,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p></div>
+          <div class="summary-synopsis"><p>Computes error on the training or test dataset</p></div>
 
       </div>
 
@@ -217,8 +217,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Creates the empty model
-  The static method creates empty %KNearest classifier. It should be then trained using StatModel::train method.</p></div>
+          <div class="summary-synopsis"><p>Creates the empty model</p></div>
 
       </div>
 
@@ -238,7 +237,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>neighborResponses</strong>: UMat.</li><li><strong>dist</strong>: UMat.</li></ul><p>Finds the neighbors and predicts responses for input vectors.</p></div>
+          <div class="summary-synopsis"><p>Finds the neighbors and predicts responses for input vectors.</p></div>
 
       </div>
 
@@ -248,7 +247,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>neighborResponses</strong>: UMat.</li><li><strong>dist</strong>: UMat.</li></ul><p>Finds the neighbors and predicts responses for input vectors.</p></div>
+          <div class="summary-synopsis"><p>Finds the neighbors and predicts responses for input vectors.</p></div>
 
       </div>
 
@@ -328,9 +327,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>Loads and creates a serialized knearest from a file
-   Use KNearest::save to serialize and store an KNearest to disk.
-   Load the KNearest from this file again, by calling this function with the path to the file.</p></div>
+          <div class="summary-synopsis"><p>Loads and creates a serialized knearest from a file</p></div>
 
       </div>
 
@@ -340,7 +337,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -350,7 +347,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p></div>
+          <div class="summary-synopsis"><p>Predicts response(s) for the provided sample(s)</p></div>
 
       </div>
 
@@ -360,7 +357,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getAlgorithmType @see getAlgorithmType</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getAlgorithmType @see getAlgorithmType</p></div>
 
       </div>
 
@@ -370,7 +367,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getDefaultK @see getDefaultK</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getDefaultK @see getDefaultK</p></div>
 
       </div>
 
@@ -380,7 +377,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getEmax @see getEmax</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getEmax @see getEmax</p></div>
 
       </div>
 
@@ -390,7 +387,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><p>@copybrief getIsClassifier @see getIsClassifier</p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getIsClassifier @see getIsClassifier</p></div>
 
       </div>
 
@@ -400,7 +397,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -410,7 +407,7 @@ Has overloading in C++</p></div>
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p></div>
+          <div class="summary-synopsis"><p>Trains the statistical model</p></div>
 
       </div>
 
@@ -744,7 +741,7 @@ cv
     </a>
     <h1 class="signature" translate="no">clear(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -754,7 +751,7 @@ cv
 
   <section class="docstring">
 
-<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">clear</span><span class="p" data-group-id="3156962059-1">(</span><span class="p" data-group-id="3156962059-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Clears the algorithm state</p><p>Python prototype (for reference): </p><pre><code class="python3">clear() -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultName/1">
@@ -766,7 +763,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDefaultName(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L269" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L335" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -776,8 +773,8 @@ cv
 
   <section class="docstring">
 
-<p>  Returns the algorithm string identifier.
-  This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultName</span><span class="p" data-group-id="5252715835-1">(</span><span class="p" data-group-id="5252715835-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the algorithm string identifier.
+This string is used as top level xml/yml node tag when the object is saved to a file or string.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDefaultName() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="read/2">
@@ -789,7 +786,7 @@ cv
     </a>
     <h1 class="signature" translate="no">read(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L462" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L571" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -799,7 +796,7 @@ cv
 
   <section class="docstring">
 
-<p>Reads algorithm parameters from a file storage</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">read</span><span class="p" data-group-id="8894840880-1">(</span><span class="n">fn_</span><span class="p" data-group-id="8894840880-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Reads algorithm parameters from a file storage</p><h5>Positional Arguments</h5><ul><li><strong>fn_</strong>: <code class="inline">FileNode</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">read(fn_) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="save/2">
@@ -811,7 +808,7 @@ cv
     </a>
     <h1 class="signature" translate="no">save(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L484" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L597" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -821,8 +818,8 @@ cv
 
   <section class="docstring">
 
-<p>  Saves the algorithm to a file.
-  In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">save</span><span class="p" data-group-id="4161419096-1">(</span><span class="n">filename</span><span class="p" data-group-id="4161419096-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>filename</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a></li></ul><p>Saves the algorithm to a file.
+In order to make this method work, the derived class must implement Algorithm::write(FileStorage&amp; fs).</p><p>Python prototype (for reference): </p><pre><code class="python3">save(filename) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="write/2">
@@ -834,7 +831,7 @@ cv
     </a>
     <h1 class="signature" translate="no">write(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L707" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L877" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -844,8 +841,7 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="6838458150-1">(</span><span class="n">fs</span><span class="p" data-group-id="6838458150-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="6838458150-2">]</span><span class="p" data-group-id="6838458150-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>simplified API for language bindings</p><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: <code class="inline">Ptr&lt;FileStorage&gt;</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">write(fs[, name]) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="write/3">
@@ -857,7 +853,7 @@ Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code cl
     </a>
     <h1 class="signature" translate="no">write(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L678" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L846" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -867,8 +863,7 @@ Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code cl
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>fs</strong>: Ptr&lt;FileStorage&gt;</li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: String.</li></ul><p>simplified API for language bindings
-Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">write</span><span class="p" data-group-id="3588874852-1">(</span><span class="n">fs</span><span class="p" data-group-id="3588874852-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="3588874852-2">]</span><span class="p" data-group-id="3588874852-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>simplified API for language bindings</p><h5>Positional Arguments</h5><ul><li><strong>fs</strong>: <code class="inline">Ptr&lt;FileStorage&gt;</code></li></ul><h5>Keyword Arguments</h5><ul><li><strong>name</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</li></ul><p>Has overloading in C++</p><p>Python prototype (for reference): </p><pre><code class="python3">write(fs[, name]) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -893,7 +888,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -903,11 +898,12 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
-</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
-</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
-</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
-  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="4666902325-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="4666902325-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="4666902325-2">]</span><span class="p" data-group-id="4666902325-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<p>Computes error on the training or test dataset</p><h5>Positional Arguments</h5><ul><li><p><strong>data</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>the training data</p></li><li><p><strong>test</strong>: <code class="inline">bool</code>.</p><p>if true, the error is computed over the test subset of the data, otherwise it's
+computed over the training subset of the data. Please note that if you loaded a completely
+different dataset to evaluate already trained classifier, you will probably want not to set
+the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
+that the error is computed for the whole new set. Yes, this sounds a bit confusing.</p></li></ul><h5>Return</h5><ul><li><p><strong>resp</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>the optional output responses.</p></li></ul><p>The method uses StatModel::predict to compute the error. For regression models the error is
+computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="python3">calcError(data, test[, resp]) -&gt; retval, resp</code></pre>
   </section>
 </section>
 <section class="detail" id="calcError/4">
@@ -919,7 +915,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">calcError(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -929,11 +925,12 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>data</strong>: Ptr&lt;TrainData&gt;. </li><li><strong>test</strong>: bool. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>resp</strong>: UMat.</li></ul><p>Computes error on the training or test dataset</p><pre><code class="makeup elixir" translate="no"><span class="n">computed</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="w"> </span><span class="nc">Please</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">completely</span><span class="w">
-</span><span class="n">different</span><span class="w"> </span><span class="n">dataset</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">trained</span><span class="w"> </span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">probably</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w">
-</span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">subset</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">setTrainTestSplitRatio</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="no">false</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w">
-</span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">set</span><span class="o">.</span><span class="w"> </span><span class="nc">Yes</span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">sounds</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">confusing</span><span class="o">.</span></code></pre><p>  The method uses StatModel::predict to compute the error. For regression models the error is
-  computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">calcError</span><span class="p" data-group-id="7247969472-1">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p" data-group-id="7247969472-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p" data-group-id="7247969472-2">]</span><span class="p" data-group-id="7247969472-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span></code></pre>
+<p>Computes error on the training or test dataset</p><h5>Positional Arguments</h5><ul><li><p><strong>data</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>the training data</p></li><li><p><strong>test</strong>: <code class="inline">bool</code>.</p><p>if true, the error is computed over the test subset of the data, otherwise it's
+computed over the training subset of the data. Please note that if you loaded a completely
+different dataset to evaluate already trained classifier, you will probably want not to set
+the test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so
+that the error is computed for the whole new set. Yes, this sounds a bit confusing.</p></li></ul><h5>Return</h5><ul><li><p><strong>resp</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>the optional output responses.</p></li></ul><p>The method uses StatModel::predict to compute the error. For regression models the error is
+computed as RMS, for classifiers - as a percent of missclassified samples (0%-100%).</p><p>Python prototype (for reference): </p><pre><code class="python3">calcError(data, test[, resp]) -&gt; retval, resp</code></pre>
   </section>
 </section>
 <section class="detail" id="create/0">
@@ -945,7 +942,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">create()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L131" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -955,8 +952,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Creates the empty model
-  The static method creates empty %KNearest classifier. It should be then trained using StatModel::train method.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">create</span><span class="p" data-group-id="8224617054-1">(</span><span class="p" data-group-id="8224617054-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Creates the empty model</p><p>The static method creates empty %KNearest classifier. It should be then trained using StatModel::train method.</p><p>Python prototype (for reference): </p><pre><code class="python3">create() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="empty/1">
@@ -968,7 +964,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">empty(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -978,7 +974,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">empty</span><span class="p" data-group-id="3808423347-1">(</span><span class="p" data-group-id="3808423347-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">empty() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="findNearest/3">
@@ -990,7 +986,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">findNearest(self, samples, k)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L271" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1000,18 +996,19 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>neighborResponses</strong>: UMat.</li><li><strong>dist</strong>: UMat.</li></ul><p>Finds the neighbors and predicts responses for input vectors.</p><pre><code class="makeup elixir" translate="no"><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="err">`</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
-</span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="o">-</span><span class="n">precision</span><span class="w"> </span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">elements</span><span class="o">.</span><span class="w">
-</span><span class="n">precision</span><span class="w"> </span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="err">`</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
-</span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="o">-</span><span class="n">precision</span><span class="w"> </span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="err">`</span><span class="w"> </span><span class="n">size</span><span class="o">.</span></code></pre><p>  For each input vector (a row of the matrix samples), the method finds the k nearest neighbors.
-  In case of regression, the predicted result is a mean value of the particular vector's neighbor
-  responses. In case of classification, the class is determined by voting.
-  For each input vector, the neighbors are sorted by their distances to the vector.
-  In case of C++ interface you can use output pointers to empty matrices and the function will
-  allocate memory itself.
-  If only a single input vector is passed, all output matrices are optional and the predicted
-  value is returned by the method.
-  The function is parallelized with the TBB library.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findNearest</span><span class="p" data-group-id="7031124408-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p" data-group-id="7031124408-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="7031124408-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">neighborResponses</span><span class="p" data-group-id="7031124408-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">dist</span><span class="p" data-group-id="7031124408-4">]</span><span class="p" data-group-id="7031124408-3">]</span><span class="p" data-group-id="7031124408-2">]</span><span class="p" data-group-id="7031124408-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p">,</span><span class="w"> </span><span class="n">neighborResponses</span><span class="p">,</span><span class="w"> </span><span class="n">dist</span></code></pre>
+<p>Finds the neighbors and predicts responses for input vectors.</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Input samples stored by rows. It is a single-precision floating-point matrix of
+<code class="inline">&lt;number_of_samples&gt; * k</code> size.</p></li><li><p><strong>k</strong>: <code class="inline">int</code>.</p><p>Number of used nearest neighbors. Should be greater than 1.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Vector with results of prediction (regression or classification) for each input
+sample. It is a single-precision floating-point vector with <code class="inline">&lt;number_of_samples&gt;</code> elements.</p></li><li><p><strong>neighborResponses</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Optional output values for corresponding neighbors. It is a single-
+precision floating-point matrix of <code class="inline">&lt;number_of_samples&gt; * k</code> size.</p></li><li><p><strong>dist</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Optional output distances from the input vectors to the corresponding neighbors. It
+is a single-precision floating-point matrix of <code class="inline">&lt;number_of_samples&gt; * k</code> size.</p></li></ul><p>For each input vector (a row of the matrix samples), the method finds the k nearest neighbors.
+In case of regression, the predicted result is a mean value of the particular vector's neighbor
+responses. In case of classification, the class is determined by voting.
+For each input vector, the neighbors are sorted by their distances to the vector.
+In case of C++ interface you can use output pointers to empty matrices and the function will
+allocate memory itself.
+If only a single input vector is passed, all output matrices are optional and the predicted
+value is returned by the method.
+The function is parallelized with the TBB library.</p><p>Python prototype (for reference): </p><pre><code class="python3">findNearest(samples, k[, results[, neighborResponses[, dist]]]) -&gt; retval, results, neighborResponses, dist</code></pre>
   </section>
 </section>
 <section class="detail" id="findNearest/4">
@@ -1023,7 +1020,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">findNearest(self, samples, k, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L164" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1033,18 +1030,19 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li><li><strong>k</strong>: int. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>neighborResponses</strong>: UMat.</li><li><strong>dist</strong>: UMat.</li></ul><p>Finds the neighbors and predicts responses for input vectors.</p><pre><code class="makeup elixir" translate="no"><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="err">`</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
-</span><span class="n">sample</span><span class="o">.</span><span class="w"> </span><span class="nc">It</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="o">-</span><span class="n">precision</span><span class="w"> </span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">elements</span><span class="o">.</span><span class="w">
-</span><span class="n">precision</span><span class="w"> </span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="err">`</span><span class="w"> </span><span class="n">size</span><span class="o">.</span><span class="w">
-</span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="o">-</span><span class="n">precision</span><span class="w"> </span><span class="n">floating</span><span class="o">-</span><span class="n">point</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">number_of_samples</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="err">`</span><span class="w"> </span><span class="n">size</span><span class="o">.</span></code></pre><p>  For each input vector (a row of the matrix samples), the method finds the k nearest neighbors.
-  In case of regression, the predicted result is a mean value of the particular vector's neighbor
-  responses. In case of classification, the class is determined by voting.
-  For each input vector, the neighbors are sorted by their distances to the vector.
-  In case of C++ interface you can use output pointers to empty matrices and the function will
-  allocate memory itself.
-  If only a single input vector is passed, all output matrices are optional and the predicted
-  value is returned by the method.
-  The function is parallelized with the TBB library.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">findNearest</span><span class="p" data-group-id="2887516878-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p" data-group-id="2887516878-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="2887516878-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">neighborResponses</span><span class="p" data-group-id="2887516878-4">[</span><span class="p">,</span><span class="w"> </span><span class="n">dist</span><span class="p" data-group-id="2887516878-4">]</span><span class="p" data-group-id="2887516878-3">]</span><span class="p" data-group-id="2887516878-2">]</span><span class="p" data-group-id="2887516878-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p">,</span><span class="w"> </span><span class="n">neighborResponses</span><span class="p">,</span><span class="w"> </span><span class="n">dist</span></code></pre>
+<p>Finds the neighbors and predicts responses for input vectors.</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Input samples stored by rows. It is a single-precision floating-point matrix of
+<code class="inline">&lt;number_of_samples&gt; * k</code> size.</p></li><li><p><strong>k</strong>: <code class="inline">int</code>.</p><p>Number of used nearest neighbors. Should be greater than 1.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Vector with results of prediction (regression or classification) for each input
+sample. It is a single-precision floating-point vector with <code class="inline">&lt;number_of_samples&gt;</code> elements.</p></li><li><p><strong>neighborResponses</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Optional output values for corresponding neighbors. It is a single-
+precision floating-point matrix of <code class="inline">&lt;number_of_samples&gt; * k</code> size.</p></li><li><p><strong>dist</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Optional output distances from the input vectors to the corresponding neighbors. It
+is a single-precision floating-point matrix of <code class="inline">&lt;number_of_samples&gt; * k</code> size.</p></li></ul><p>For each input vector (a row of the matrix samples), the method finds the k nearest neighbors.
+In case of regression, the predicted result is a mean value of the particular vector's neighbor
+responses. In case of classification, the class is determined by voting.
+For each input vector, the neighbors are sorted by their distances to the vector.
+In case of C++ interface you can use output pointers to empty matrices and the function will
+allocate memory itself.
+If only a single input vector is passed, all output matrices are optional and the predicted
+value is returned by the method.
+The function is parallelized with the TBB library.</p><p>Python prototype (for reference): </p><pre><code class="python3">findNearest(samples, k[, results[, neighborResponses[, dist]]]) -&gt; retval, results, neighborResponses, dist</code></pre>
   </section>
 </section>
 <section class="detail" id="getAlgorithmType/1">
@@ -1056,7 +1054,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getAlgorithmType(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L230" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1066,7 +1064,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setAlgorithmType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getAlgorithmType</span><span class="p" data-group-id="1628983741-1">(</span><span class="p" data-group-id="1628983741-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setAlgorithmType</p><p>Python prototype (for reference): </p><pre><code class="python3">getAlgorithmType() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getDefaultK/1">
@@ -1078,7 +1076,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getDefaultK(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L314" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1088,7 +1086,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setDefaultK</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDefaultK</span><span class="p" data-group-id="6582609824-1">(</span><span class="p" data-group-id="6582609824-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setDefaultK</p><p>Python prototype (for reference): </p><pre><code class="python3">getDefaultK() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getEmax/1">
@@ -1100,7 +1098,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getEmax(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L288" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L355" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1110,7 +1108,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setEmax</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getEmax</span><span class="p" data-group-id="2649067335-1">(</span><span class="p" data-group-id="2649067335-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setEmax</p><p>Python prototype (for reference): </p><pre><code class="python3">getEmax() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getIsClassifier/1">
@@ -1122,7 +1120,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getIsClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L307" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L375" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1132,7 +1130,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@see setIsClassifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getIsClassifier</span><span class="p" data-group-id="7033045325-1">(</span><span class="p" data-group-id="7033045325-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>@see setIsClassifier</p><p>Python prototype (for reference): </p><pre><code class="python3">getIsClassifier() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarCount/1">
@@ -1144,7 +1142,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">getVarCount(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L326" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L395" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1154,7 +1152,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarCount</span><span class="p" data-group-id="4429765387-1">(</span><span class="p" data-group-id="4429765387-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of variables in training samples</p><p>Python prototype (for reference): </p><pre><code class="python3">getVarCount() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isClassifier/1">
@@ -1166,7 +1164,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">isClassifier(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L345" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L415" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1176,7 +1174,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isClassifier</span><span class="p" data-group-id="6370220354-1">(</span><span class="p" data-group-id="6370220354-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if the model is classifier</p><p>Python prototype (for reference): </p><pre><code class="python3">isClassifier() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="isTrained/1">
@@ -1188,7 +1186,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">isTrained(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L364" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L435" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1198,7 +1196,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">isTrained</span><span class="p" data-group-id="8367228528-1">(</span><span class="p" data-group-id="8367228528-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns true if the model is trained</p><p>Python prototype (for reference): </p><pre><code class="python3">isTrained() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="load/1">
@@ -1210,7 +1208,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">load(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L385" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L465" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1220,9 +1218,8 @@ cv.ml
 
   <section class="docstring">
 
-<p>Loads and creates a serialized knearest from a file
-   Use KNearest::save to serialize and store an KNearest to disk.
-   Load the KNearest from this file again, by calling this function with the path to the file.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">load</span><span class="p" data-group-id="6953965923-1">(</span><span class="n">filepath</span><span class="p" data-group-id="6953965923-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Loads and creates a serialized knearest from a file</p><h5>Positional Arguments</h5><ul><li><p><strong>filepath</strong>: <a href="https://hexdocs.pm/elixir/String.html"><code class="inline">String</code></a>.</p><p>path to serialized KNearest</p></li></ul><p> Use KNearest::save to serialize and store an KNearest to disk.
+ Load the KNearest from this file again, by calling this function with the path to the file.</p><p>Python prototype (for reference): </p><pre><code class="python3">load(filepath) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="predict/2">
@@ -1234,7 +1231,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">predict(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L441" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L545" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1244,7 +1241,7 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="0790973537-1">(</span><span class="n">samples</span><span class="p" data-group-id="0790973537-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="0790973537-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="0790973537-3">]</span><span class="p" data-group-id="0790973537-2">]</span><span class="p" data-group-id="0790973537-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<p>Predicts response(s) for the provided sample(s)</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The input samples, floating-point matrix</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>The optional flags, model-dependent. See cv::ml::StatModel::Flags.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The optional output matrix of results.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">predict(samples[, results[, flags]]) -&gt; retval, results</code></pre>
   </section>
 </section>
 <section class="detail" id="predict/3">
@@ -1256,7 +1253,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">predict(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L413" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L505" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1266,7 +1263,7 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>samples</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>results</strong>: UMat.</li><li><strong>flags</strong>: int.</li></ul><p>Predicts response(s) for the provided sample(s)</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">predict</span><span class="p" data-group-id="8258553246-1">(</span><span class="n">samples</span><span class="p" data-group-id="8258553246-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">results</span><span class="p" data-group-id="8258553246-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="8258553246-3">]</span><span class="p" data-group-id="8258553246-2">]</span><span class="p" data-group-id="8258553246-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span><span class="p">,</span><span class="w"> </span><span class="n">results</span></code></pre>
+<p>Predicts response(s) for the provided sample(s)</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The input samples, floating-point matrix</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>The optional flags, model-dependent. See cv::ml::StatModel::Flags.</p></li></ul><h5>Return</h5><ul><li><p><strong>results</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The optional output matrix of results.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">predict(samples[, results[, flags]]) -&gt; retval, results</code></pre>
   </section>
 </section>
 <section class="detail" id="setAlgorithmType/2">
@@ -1278,7 +1275,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setAlgorithmType(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L505" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L623" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1288,7 +1285,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getAlgorithmType @see getAlgorithmType</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setAlgorithmType</span><span class="p" data-group-id="1718483123-1">(</span><span class="n">val</span><span class="p" data-group-id="1718483123-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getAlgorithmType @see getAlgorithmType</p><p>Python prototype (for reference): </p><pre><code class="python3">setAlgorithmType(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setDefaultK/2">
@@ -1300,7 +1297,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setDefaultK(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L526" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L649" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1310,7 +1307,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getDefaultK @see getDefaultK</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDefaultK</span><span class="p" data-group-id="9304954817-1">(</span><span class="n">val</span><span class="p" data-group-id="9304954817-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getDefaultK @see getDefaultK</p><p>Python prototype (for reference): </p><pre><code class="python3">setDefaultK(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setEmax/2">
@@ -1322,7 +1319,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setEmax(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L547" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L675" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1332,7 +1329,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getEmax @see getEmax</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setEmax</span><span class="p" data-group-id="1917600399-1">(</span><span class="n">val</span><span class="p" data-group-id="1917600399-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">int</code></li></ul><p>@copybrief getEmax @see getEmax</p><p>Python prototype (for reference): </p><pre><code class="python3">setEmax(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setIsClassifier/2">
@@ -1344,7 +1341,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">setIsClassifier(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L568" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L701" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1354,7 +1351,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>@copybrief getIsClassifier @see getIsClassifier</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setIsClassifier</span><span class="p" data-group-id="1770326169-1">(</span><span class="n">val</span><span class="p" data-group-id="1770326169-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>val</strong>: <code class="inline">bool</code></li></ul><p>@copybrief getIsClassifier @see getIsClassifier</p><p>Python prototype (for reference): </p><pre><code class="python3">setIsClassifier(val) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="train/2">
@@ -1366,7 +1363,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">train(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L649" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L815" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1376,8 +1373,9 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
-</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="2758975743-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="2758975743-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="4293822465-1">(</span><span class="n">trainData</span><span class="p" data-group-id="4293822465-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="4293822465-2">]</span><span class="p" data-group-id="4293822465-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>trainData</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>training data that can be loaded from file using TrainData::loadFromCSV or
+created with TrainData::create.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>optional flags, depending on the model. Some of the models can be updated with the
+new training samples, not completely overwritten (such as NormalBayesClassifier or ANN_MLP).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(trainData[, flags]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="train/3">
@@ -1389,7 +1387,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">train(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L620" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L778" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1399,8 +1397,9 @@ cv.ml
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>trainData</strong>: Ptr&lt;TrainData&gt;. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>flags</strong>: int.</li></ul><p>Trains the statistical model</p><pre><code class="makeup elixir" translate="no"><span class="n">created</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">TrainData</span><span class="o">::</span><span class="n">create</span><span class="o">.</span><span class="w">
-</span><span class="n">new</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">overwritten</span><span class="w"> </span><span class="p" data-group-id="2219232624-1">(</span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="nc">NormalBayesClassifier</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nc">ANN_MLP</span><span class="p" data-group-id="2219232624-1">)</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="6537484048-1">(</span><span class="n">trainData</span><span class="p" data-group-id="6537484048-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p" data-group-id="6537484048-2">]</span><span class="p" data-group-id="6537484048-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>trainData</strong>: <code class="inline">Ptr&lt;TrainData&gt;</code>.</p><p>training data that can be loaded from file using TrainData::loadFromCSV or
+created with TrainData::create.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>flags</strong>: <code class="inline">int</code>.</p><p>optional flags, depending on the model. Some of the models can be updated with the
+new training samples, not completely overwritten (such as NormalBayesClassifier or ANN_MLP).</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(trainData[, flags]) -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="train/4">
@@ -1412,7 +1411,7 @@ cv.ml
     </a>
     <h1 class="signature" translate="no">train(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L589" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L739" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1422,7 +1421,7 @@ cv.ml
 
   <section class="docstring">
 
-<p>Trains the statistical model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">train</span><span class="p" data-group-id="8018670466-1">(</span><span class="n">samples</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="p">,</span><span class="w"> </span><span class="n">responses</span><span class="p" data-group-id="8018670466-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Trains the statistical model</p><h5>Positional Arguments</h5><ul><li><p><strong>samples</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>training samples</p></li><li><p><strong>layout</strong>: <code class="inline">int</code>.</p><p>See ml::SampleTypes.</p></li><li><p><strong>responses</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>vector of responses associated with the training samples.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">train(samples, layout, responses) -&gt; retval</code></pre>
   </section>
 </section>
 
@@ -1447,7 +1446,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1469,7 +1468,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">calcError!(self, data, test, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L49" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1491,7 +1490,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">clear!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1513,7 +1512,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">create!()</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L137" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1535,7 +1534,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">empty!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L129" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1557,7 +1556,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">findNearest!(self, samples, k)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1579,7 +1578,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">findNearest!(self, samples, k, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L173" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L218" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1601,7 +1600,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getAlgorithmType!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L236" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L300" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1623,7 +1622,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultK!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1645,7 +1644,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDefaultName!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L275" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1667,7 +1666,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getEmax!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L294" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L361" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1689,7 +1688,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getIsClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L313" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1711,7 +1710,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarCount!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L332" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L401" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1733,7 +1732,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isClassifier!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L421" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1755,7 +1754,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">isTrained!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L370" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L441" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1777,7 +1776,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">load!(filepath)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L393" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L473" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1799,7 +1798,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L449" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L553" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1821,7 +1820,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">predict!(self, samples, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L421" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L513" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1843,7 +1842,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">read!(self, fn_)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L470" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L578" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1865,7 +1864,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">save!(self, filename)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L492" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L605" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1887,7 +1886,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setAlgorithmType!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L513" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L631" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1909,7 +1908,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDefaultK!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L534" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L657" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1931,7 +1930,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setEmax!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L555" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L683" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1953,7 +1952,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setIsClassifier!(self, val)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L576" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L709" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1975,7 +1974,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L657" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L823" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1997,7 +1996,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, trainData, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L628" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L786" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2019,7 +2018,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">train!(self, samples, layout, responses)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L599" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L749" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2041,7 +2040,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L715" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L885" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2063,7 +2062,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">write!(self, fs, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_ml_knearest.ex#L686" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_ml_knearest.ex#L854" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -2086,10 +2085,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_ml_knearest.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_ml_knearest.ex">(current file)</a>
 
             </span>
 

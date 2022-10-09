@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.28.5">
-    <meta name="project" content="Evision v0.1.7-dev">
+    <meta name="project" content="Evision v0.1.9">
 
-    <title>Evision.BackgroundSubtractorMOG2 — Evision v0.1.7-dev</title>
+    <title>Evision.BackgroundSubtractorMOG2 — Evision v0.1.9</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-85b1cfe249.js"></script>
+    <script src="dist/sidebar_items-b5082ebc44.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -66,7 +66,7 @@
 Evision
       </a>
       <strong class="sidebar-projectVersion" translate="no">
-        v0.1.7-dev
+        v0.1.9
       </strong>
     </div>
     <ul class="sidebar-listNav">
@@ -74,6 +74,8 @@ Evision
 
         <li><a id="modules-list-link" href="#full-list">Modules</a></li>
 
+
+        <li><a id="tasks-list-link" href="#full-list"><span translate="no">Mix</span> Tasks</a></li>
 
     </ul>
   </div>
@@ -94,13 +96,13 @@ Evision
 </button>
 
 
-    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
   <span translate="no">Evision.BackgroundSubtractorMOG2</span> 
-  <small class="app-vsn" translate="no">(Evision v0.1.7-dev)</small>
+  <small class="app-vsn" translate="no">(Evision v0.1.9)</small>
 
 </h1>
 
@@ -126,7 +128,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p></div>
+          <div class="summary-synopsis"><p>Computes a foreground mask.</p></div>
 
       </div>
 
@@ -136,7 +138,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p></div>
+          <div class="summary-synopsis"><p>Computes a foreground mask.</p></div>
 
       </div>
 
@@ -146,10 +148,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the &quot;background ratio&quot; parameter of the algorithm
-  If a foreground pixel keeps semi-constant value for about backgroundRatio*history frames, it's
-  considered background and added to the model as a center of a new component. It corresponds to TB
-  parameter in the paper.</p></div>
+          <div class="summary-synopsis"><p>Returns the &quot;background ratio&quot; parameter of the algorithm</p></div>
 
       </div>
 
@@ -159,10 +158,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the complexity reduction threshold
-  This parameter defines the number of samples needed to accept to prove the component exists. CT=0.05
-  is a default value for all the samples. By setting CT=0 you get an algorithm very similar to the
-  standard Stauffer&amp;Grimson algorithm.</p></div>
+          <div class="summary-synopsis"><p>Returns the complexity reduction threshold</p></div>
 
       </div>
 
@@ -172,9 +168,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the shadow detection flag
-  If true, the algorithm detects shadows and marks them. See createBackgroundSubtractorMOG2 for
-  details.</p></div>
+          <div class="summary-synopsis"><p>Returns the shadow detection flag</p></div>
 
       </div>
 
@@ -204,11 +198,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the shadow threshold
-  A shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in
-  the paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel
-  is more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,
-  Detecting Moving Shadows...*, IEEE PAMI,2003.</p></div>
+          <div class="summary-synopsis"><p>Returns the shadow threshold</p></div>
 
       </div>
 
@@ -218,9 +208,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the shadow value
-  Shadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0
-  in the mask always means background, 255 means foreground.</p></div>
+          <div class="summary-synopsis"><p>Returns the shadow value</p></div>
 
       </div>
 
@@ -260,9 +248,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the variance threshold for the pixel-model match
-  The main threshold on the squared Mahalanobis distance to decide if the sample is well described by
-  the background model or not. Related to Cthr from the paper.</p></div>
+          <div class="summary-synopsis"><p>Returns the variance threshold for the pixel-model match</p></div>
 
       </div>
 
@@ -272,12 +258,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Returns the variance threshold for the pixel-model match used for new mixture component generation
-  Threshold for the squared Mahalanobis distance that helps decide when a sample is close to the
-  existing components (corresponds to Tg in the paper). If a pixel is not close to any component, it
-  is considered foreground or added as a new component. 3 sigma =&gt; Tg=3*3=9 is default. A smaller Tg
-  value generates more components. A higher Tg value may result in a small number of components but
-  they can grow too large.</p></div>
+          <div class="summary-synopsis"><p>Returns the variance threshold for the pixel-model match used for new mixture component generation</p></div>
 
       </div>
 
@@ -327,8 +308,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Sets the number of gaussian components in the background model.
-  The model needs to be reinitalized to reserve memory.</p></div>
+          <div class="summary-synopsis"><p>Sets the number of gaussian components in the background model.</p></div>
 
       </div>
 
@@ -368,7 +348,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>varMax</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -378,7 +358,7 @@ Evision
 
         </div>
 
-          <div class="summary-synopsis"><p>Python prototype (for reference): </p></div>
+          <div class="summary-synopsis"><h5>Positional Arguments</h5><ul><li><strong>varMin</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p></div>
 
       </div>
 
@@ -692,7 +672,7 @@ cv
     </a>
     <h1 class="signature" translate="no">apply(self, image)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L80" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -702,9 +682,10 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p><pre><code class="makeup elixir" translate="no"><span class="n">learnt</span><span class="o">.</span><span class="w"> </span><span class="nc">Negative</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="n">learning</span><span class="w">
-</span><span class="n">rate</span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w">
-</span><span class="n">is</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">reinitialized</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">frame</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="5474890301-1">(</span><span class="n">image</span><span class="p" data-group-id="5474890301-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">fgmask</span><span class="p" data-group-id="5474890301-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">learningRate</span><span class="p" data-group-id="5474890301-3">]</span><span class="p" data-group-id="5474890301-2">]</span><span class="p" data-group-id="5474890301-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">fgmask</span></code></pre>
+<p>Computes a foreground mask.</p><h5>Positional Arguments</h5><ul><li><p><strong>image</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Next video frame. Floating point frame will be used without scaling and should be in range \f$[0,255]\f$.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>learningRate</strong>: <code class="inline">double</code>.</p><p>The value between 0 and 1 that indicates how fast the background model is
+learnt. Negative parameter value makes the algorithm to use some automatically chosen learning
+rate. 0 means that the background model is not updated at all, 1 means that the background model
+is completely reinitialized from the last frame.</p></li></ul><h5>Return</h5><ul><li><p><strong>fgmask</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The output foreground mask as an 8-bit binary image.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">apply(image[, fgmask[, learningRate]]) -&gt; fgmask</code></pre>
   </section>
 </section>
 <section class="detail" id="apply/3">
@@ -716,7 +697,7 @@ cv
     </a>
     <h1 class="signature" translate="no">apply(self, image, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -726,9 +707,10 @@ cv
 
   <section class="docstring">
 
-<h5>Positional Arguments</h5><ul><li><strong>image</strong>: UMat. </li></ul><h5>Keyword Arguments</h5><ul><li><strong>fgmask</strong>: UMat.</li><li><strong>learningRate</strong>: double.</li></ul><p>Computes a foreground mask.</p><pre><code class="makeup elixir" translate="no"><span class="n">learnt</span><span class="o">.</span><span class="w"> </span><span class="nc">Negative</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kn">use</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">chosen</span><span class="w"> </span><span class="n">learning</span><span class="w">
-</span><span class="n">rate</span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">all</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">background</span><span class="w"> </span><span class="n">model</span><span class="w">
-</span><span class="n">is</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">reinitialized</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">frame</span><span class="o">.</span></code></pre><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">apply</span><span class="p" data-group-id="5821738702-1">(</span><span class="n">image</span><span class="p" data-group-id="5821738702-2">[</span><span class="p">,</span><span class="w"> </span><span class="n">fgmask</span><span class="p" data-group-id="5821738702-3">[</span><span class="p">,</span><span class="w"> </span><span class="n">learningRate</span><span class="p" data-group-id="5821738702-3">]</span><span class="p" data-group-id="5821738702-2">]</span><span class="p" data-group-id="5821738702-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">fgmask</span></code></pre>
+<p>Computes a foreground mask.</p><h5>Positional Arguments</h5><ul><li><p><strong>image</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>Next video frame. Floating point frame will be used without scaling and should be in range \f$[0,255]\f$.</p></li></ul><h5>Keyword Arguments</h5><ul><li><p><strong>learningRate</strong>: <code class="inline">double</code>.</p><p>The value between 0 and 1 that indicates how fast the background model is
+learnt. Negative parameter value makes the algorithm to use some automatically chosen learning
+rate. 0 means that the background model is not updated at all, 1 means that the background model
+is completely reinitialized from the last frame.</p></li></ul><h5>Return</h5><ul><li><p><strong>fgmask</strong>: <a href="Evision.Mat.html"><code class="inline">Evision.Mat</code></a>.</p><p>The output foreground mask as an 8-bit binary image.</p></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">apply(image[, fgmask[, learningRate]]) -&gt; fgmask</code></pre>
   </section>
 </section>
 <section class="detail" id="getBackgroundRatio/1">
@@ -740,7 +722,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getBackgroundRatio(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -750,10 +732,9 @@ cv
 
   <section class="docstring">
 
-<p>Returns the &quot;background ratio&quot; parameter of the algorithm
-  If a foreground pixel keeps semi-constant value for about backgroundRatio*history frames, it's
-  considered background and added to the model as a center of a new component. It corresponds to TB
-  parameter in the paper.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getBackgroundRatio</span><span class="p" data-group-id="2573028718-1">(</span><span class="p" data-group-id="2573028718-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the &quot;background ratio&quot; parameter of the algorithm</p><p>If a foreground pixel keeps semi-constant value for about backgroundRatio*history frames, it's
+considered background and added to the model as a center of a new component. It corresponds to TB
+parameter in the paper.</p><p>Python prototype (for reference): </p><pre><code class="python3">getBackgroundRatio() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getComplexityReductionThreshold/1">
@@ -765,7 +746,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getComplexityReductionThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L128" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -775,10 +756,9 @@ cv
 
   <section class="docstring">
 
-<p>Returns the complexity reduction threshold
-  This parameter defines the number of samples needed to accept to prove the component exists. CT=0.05
-  is a default value for all the samples. By setting CT=0 you get an algorithm very similar to the
-  standard Stauffer&amp;Grimson algorithm.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getComplexityReductionThreshold</span><span class="p" data-group-id="8567089293-1">(</span><span class="p" data-group-id="8567089293-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the complexity reduction threshold</p><p>This parameter defines the number of samples needed to accept to prove the component exists. CT=0.05
+is a default value for all the samples. By setting CT=0 you get an algorithm very similar to the
+standard Stauffer&amp;Grimson algorithm.</p><p>Python prototype (for reference): </p><pre><code class="python3">getComplexityReductionThreshold() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getDetectShadows/1">
@@ -790,7 +770,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getDetectShadows(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -800,9 +780,8 @@ cv
 
   <section class="docstring">
 
-<p>Returns the shadow detection flag
-  If true, the algorithm detects shadows and marks them. See createBackgroundSubtractorMOG2 for
-  details.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getDetectShadows</span><span class="p" data-group-id="3194890290-1">(</span><span class="p" data-group-id="3194890290-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the shadow detection flag</p><p>If true, the algorithm detects shadows and marks them. See createBackgroundSubtractorMOG2 for
+details.</p><p>Python prototype (for reference): </p><pre><code class="python3">getDetectShadows() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getHistory/1">
@@ -814,7 +793,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getHistory(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L170" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -824,7 +803,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns the number of last frames that affect the background model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getHistory</span><span class="p" data-group-id="9046195102-1">(</span><span class="p" data-group-id="9046195102-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of last frames that affect the background model</p><p>Python prototype (for reference): </p><pre><code class="python3">getHistory() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getNMixtures/1">
@@ -836,7 +815,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getNMixtures(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L161" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L190" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -846,7 +825,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns the number of gaussian components in the background model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getNMixtures</span><span class="p" data-group-id="9786180522-1">(</span><span class="p" data-group-id="9786180522-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the number of gaussian components in the background model</p><p>Python prototype (for reference): </p><pre><code class="python3">getNMixtures() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getShadowThreshold/1">
@@ -858,7 +837,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getShadowThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L214" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -868,11 +847,10 @@ cv
 
   <section class="docstring">
 
-<p>Returns the shadow threshold
-  A shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in
-  the paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel
-  is more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,
-  Detecting Moving Shadows...*, IEEE PAMI,2003.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getShadowThreshold</span><span class="p" data-group-id="3228851011-1">(</span><span class="p" data-group-id="3228851011-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the shadow threshold</p><p>A shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in
+the paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel
+is more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,
+Detecting Moving Shadows...*, IEEE PAMI,2003.</p><p>Python prototype (for reference): </p><pre><code class="python3">getShadowThreshold() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getShadowValue/1">
@@ -884,7 +862,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getShadowValue(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L236" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -894,9 +872,8 @@ cv
 
   <section class="docstring">
 
-<p>Returns the shadow value
-  Shadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0
-  in the mask always means background, 255 means foreground.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getShadowValue</span><span class="p" data-group-id="5920618758-1">(</span><span class="p" data-group-id="5920618758-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the shadow value</p><p>Shadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0
+in the mask always means background, 255 means foreground.</p><p>Python prototype (for reference): </p><pre><code class="python3">getShadowValue() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarInit/1">
@@ -908,7 +885,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVarInit(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L256" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -918,7 +895,7 @@ cv
 
   <section class="docstring">
 
-<p>Returns the initial variance of each gaussian component</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarInit</span><span class="p" data-group-id="0907132032-1">(</span><span class="p" data-group-id="0907132032-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the initial variance of each gaussian component</p><p>Python prototype (for reference): </p><pre><code class="python3">getVarInit() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarMax/1">
@@ -930,7 +907,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVarMax(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L242" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -940,7 +917,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarMax</span><span class="p" data-group-id="8131636905-1">(</span><span class="p" data-group-id="8131636905-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getVarMax() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarMin/1">
@@ -952,7 +929,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVarMin(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -962,7 +939,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarMin</span><span class="p" data-group-id="2120696942-1">(</span><span class="p" data-group-id="2120696942-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Python prototype (for reference): </p><pre><code class="python3">getVarMin() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarThreshold/1">
@@ -974,7 +951,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVarThreshold(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L281" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -984,9 +961,8 @@ cv
 
   <section class="docstring">
 
-<p>Returns the variance threshold for the pixel-model match
-  The main threshold on the squared Mahalanobis distance to decide if the sample is well described by
-  the background model or not. Related to Cthr from the paper.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarThreshold</span><span class="p" data-group-id="0438911886-1">(</span><span class="p" data-group-id="0438911886-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the variance threshold for the pixel-model match</p><p>The main threshold on the squared Mahalanobis distance to decide if the sample is well described by
+the background model or not. Related to Cthr from the paper.</p><p>Python prototype (for reference): </p><pre><code class="python3">getVarThreshold() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="getVarThresholdGen/1">
@@ -998,7 +974,7 @@ cv
     </a>
     <h1 class="signature" translate="no">getVarThresholdGen(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1008,12 +984,11 @@ cv
 
   <section class="docstring">
 
-<p>Returns the variance threshold for the pixel-model match used for new mixture component generation
-  Threshold for the squared Mahalanobis distance that helps decide when a sample is close to the
-  existing components (corresponds to Tg in the paper). If a pixel is not close to any component, it
-  is considered foreground or added as a new component. 3 sigma =&gt; Tg=3*3=9 is default. A smaller Tg
-  value generates more components. A higher Tg value may result in a small number of components but
-  they can grow too large.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">getVarThresholdGen</span><span class="p" data-group-id="9419016234-1">(</span><span class="p" data-group-id="9419016234-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retval</span></code></pre>
+<p>Returns the variance threshold for the pixel-model match used for new mixture component generation</p><p>Threshold for the squared Mahalanobis distance that helps decide when a sample is close to the
+existing components (corresponds to Tg in the paper). If a pixel is not close to any component, it
+is considered foreground or added as a new component. 3 sigma =&gt; Tg=3*3=9 is default. A smaller Tg
+value generates more components. A higher Tg value may result in a small number of components but
+they can grow too large.</p><p>Python prototype (for reference): </p><pre><code class="python3">getVarThresholdGen() -&gt; retval</code></pre>
   </section>
 </section>
 <section class="detail" id="setBackgroundRatio/2">
@@ -1025,7 +1000,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setBackgroundRatio(self, ratio)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L324" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L365" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1035,7 +1010,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the &quot;background ratio&quot; parameter of the algorithm</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setBackgroundRatio</span><span class="p" data-group-id="1562119136-1">(</span><span class="n">ratio</span><span class="p" data-group-id="1562119136-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the &quot;background ratio&quot; parameter of the algorithm</p><h5>Positional Arguments</h5><ul><li><strong>ratio</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setBackgroundRatio(ratio) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setComplexityReductionThreshold/2">
@@ -1047,7 +1022,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setComplexityReductionThreshold(self, ct)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L345" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L391" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1057,7 +1032,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the complexity reduction threshold</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setComplexityReductionThreshold</span><span class="p" data-group-id="1150243603-1">(</span><span class="n">ct</span><span class="p" data-group-id="1150243603-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the complexity reduction threshold</p><h5>Positional Arguments</h5><ul><li><strong>ct</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setComplexityReductionThreshold(ct) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setDetectShadows/2">
@@ -1069,7 +1044,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setDetectShadows(self, detectShadows)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L366" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L417" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1079,7 +1054,7 @@ cv
 
   <section class="docstring">
 
-<p>Enables or disables shadow detection</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setDetectShadows</span><span class="p" data-group-id="3451201553-1">(</span><span class="n">detectShadows</span><span class="p" data-group-id="3451201553-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Enables or disables shadow detection</p><h5>Positional Arguments</h5><ul><li><strong>detectShadows</strong>: <code class="inline">bool</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setDetectShadows(detectShadows) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setHistory/2">
@@ -1091,7 +1066,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setHistory(self, history)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L387" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L443" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1101,7 +1076,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the number of last frames that affect the background model</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setHistory</span><span class="p" data-group-id="9907688963-1">(</span><span class="n">history</span><span class="p" data-group-id="9907688963-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the number of last frames that affect the background model</p><h5>Positional Arguments</h5><ul><li><strong>history</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setHistory(history) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setNMixtures/2">
@@ -1113,7 +1088,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setNMixtures(self, nmixtures)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L409" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L470" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1123,8 +1098,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the number of gaussian components in the background model.
-  The model needs to be reinitalized to reserve memory.</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setNMixtures</span><span class="p" data-group-id="4360440663-1">(</span><span class="n">nmixtures</span><span class="p" data-group-id="4360440663-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the number of gaussian components in the background model.</p><h5>Positional Arguments</h5><ul><li><strong>nmixtures</strong>: <code class="inline">int</code></li></ul><p>The model needs to be reinitalized to reserve memory.</p><p>Python prototype (for reference): </p><pre><code class="python3">setNMixtures(nmixtures) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setShadowThreshold/2">
@@ -1136,7 +1110,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setShadowThreshold(self, threshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L430" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L496" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1146,7 +1120,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the shadow threshold</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setShadowThreshold</span><span class="p" data-group-id="3134724518-1">(</span><span class="n">threshold</span><span class="p" data-group-id="3134724518-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the shadow threshold</p><h5>Positional Arguments</h5><ul><li><strong>threshold</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setShadowThreshold(threshold) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setShadowValue/2">
@@ -1158,7 +1132,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setShadowValue(self, value)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L451" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L522" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1168,7 +1142,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the shadow value</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setShadowValue</span><span class="p" data-group-id="8910475084-1">(</span><span class="n">value</span><span class="p" data-group-id="8910475084-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the shadow value</p><h5>Positional Arguments</h5><ul><li><strong>value</strong>: <code class="inline">int</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setShadowValue(value) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVarInit/2">
@@ -1180,7 +1154,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVarInit(self, varInit)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L472" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L548" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1190,7 +1164,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the initial variance of each gaussian component</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVarInit</span><span class="p" data-group-id="5123515249-1">(</span><span class="n">varInit</span><span class="p" data-group-id="5123515249-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the initial variance of each gaussian component</p><h5>Positional Arguments</h5><ul><li><strong>varInit</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setVarInit(varInit) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVarMax/2">
@@ -1202,7 +1176,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVarMax(self, varMax)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L492" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L573" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1212,7 +1186,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVarMax</span><span class="p" data-group-id="3470494742-1">(</span><span class="n">varMax</span><span class="p" data-group-id="3470494742-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>varMax</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setVarMax(varMax) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVarMin/2">
@@ -1224,7 +1198,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVarMin(self, varMin)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L512" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L598" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1234,7 +1208,7 @@ cv
 
   <section class="docstring">
 
-<p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVarMin</span><span class="p" data-group-id="4040471451-1">(</span><span class="n">varMin</span><span class="p" data-group-id="4040471451-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<h5>Positional Arguments</h5><ul><li><strong>varMin</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setVarMin(varMin) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVarThreshold/2">
@@ -1246,7 +1220,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVarThreshold(self, varThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L533" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L624" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1256,7 +1230,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the variance threshold for the pixel-model match</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVarThreshold</span><span class="p" data-group-id="3777883497-1">(</span><span class="n">varThreshold</span><span class="p" data-group-id="3777883497-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the variance threshold for the pixel-model match</p><h5>Positional Arguments</h5><ul><li><strong>varThreshold</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setVarThreshold(varThreshold) -&gt; None</code></pre>
   </section>
 </section>
 <section class="detail" id="setVarThresholdGen/2">
@@ -1268,7 +1242,7 @@ cv
     </a>
     <h1 class="signature" translate="no">setVarThresholdGen(self, varThresholdGen)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L554" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L650" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1278,7 +1252,7 @@ cv
 
   <section class="docstring">
 
-<p>Sets the variance threshold for the pixel-model match used for new mixture component generation</p><p>Python prototype (for reference): </p><pre><code class="makeup elixir" translate="no"><span class="n">setVarThresholdGen</span><span class="p" data-group-id="4677351699-1">(</span><span class="n">varThresholdGen</span><span class="p" data-group-id="4677351699-1">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">None</span></code></pre>
+<p>Sets the variance threshold for the pixel-model match used for new mixture component generation</p><h5>Positional Arguments</h5><ul><li><strong>varThresholdGen</strong>: <code class="inline">double</code></li></ul><p>Python prototype (for reference): </p><pre><code class="python3">setVarThresholdGen(varThresholdGen) -&gt; None</code></pre>
   </section>
 </section>
 
@@ -1303,7 +1277,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply!(self, image)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L88" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1325,7 +1299,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">apply!(self, image, opts)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1347,7 +1321,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getBackgroundRatio!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1369,7 +1343,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getComplexityReductionThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L134" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1391,7 +1365,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getDetectShadows!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L129" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1413,7 +1387,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getHistory!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L176" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1435,7 +1409,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getNMixtures!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L196" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1457,7 +1431,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getShadowThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L220" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1479,7 +1453,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getShadowValue!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L211" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L242" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1501,7 +1475,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarInit!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L230" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L262" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1523,7 +1497,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarMax!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L248" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L281" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1545,7 +1519,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarMin!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L266" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L300" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1567,7 +1541,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarThreshold!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L287" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L322" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1589,7 +1563,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">getVarThresholdGen!(self)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L311" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L347" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1611,7 +1585,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setBackgroundRatio!(self, ratio)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L332" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L373" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1633,7 +1607,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setComplexityReductionThreshold!(self, ct)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L353" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L399" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1655,7 +1629,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setDetectShadows!(self, detectShadows)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L374" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L425" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1677,7 +1651,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setHistory!(self, history)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L395" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L451" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1699,7 +1673,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setNMixtures!(self, nmixtures)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L417" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L478" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1721,7 +1695,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setShadowThreshold!(self, threshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L438" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L504" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1743,7 +1717,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setShadowValue!(self, value)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L459" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L530" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1765,7 +1739,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVarInit!(self, varInit)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L480" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L556" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1787,7 +1761,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVarMax!(self, varMax)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L500" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L581" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1809,7 +1783,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVarMin!(self, varMin)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L520" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L606" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1831,7 +1805,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVarThreshold!(self, varThreshold)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L541" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L632" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1853,7 +1827,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">setVarThresholdGen!(self, varThresholdGen)</h1>
 
-      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.7-dev/lib/generated/evision_backgroundsubtractormog2.ex#L562" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/cocoa-xu/evision/blob/v0.1.9/lib/generated/evision_backgroundsubtractormog2.ex#L658" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -1876,10 +1850,10 @@ Functions
             On Hex.pm:
 
             <span class="line">
-              <a href="https://hex.pm/packages/evision/0.1.7-dev" class="line footer-hex-package">Package</a>
-              <a href="https://preview.hex.pm/preview/evision/0.1.7-dev" class="line">Preview</a>
+              <a href="https://hex.pm/packages/evision/0.1.9" class="line footer-hex-package">Package</a>
+              <a href="https://preview.hex.pm/preview/evision/0.1.9" class="line">Preview</a>
 
-                <a href="https://preview.hex.pm/preview/evision/0.1.7-dev/show/lib/generated/evision_backgroundsubtractormog2.ex">(current file)</a>
+                <a href="https://preview.hex.pm/preview/evision/0.1.9/show/lib/generated/evision_backgroundsubtractormog2.ex">(current file)</a>
 
             </span>
 
